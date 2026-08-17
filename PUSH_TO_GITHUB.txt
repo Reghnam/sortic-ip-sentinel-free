@@ -1,0 +1,19 @@
+# Exact commands to push to GitHub (Reghnam)
+
+cd /Users/DaVe/SorticAI/sortic-ip-sentinel-free
+
+# 1. Add the remote (only once)
+git remote add origin https://github.com/Reghnam/sortic-ip-sentinel-free.git
+
+# 2. Rename branch to main (if needed)
+git branch -M main
+
+# 3. Push
+git push -u origin main
+
+# After first push, future updates:
+# git add .
+# git commit -m "update description"
+# git push
+
+Note: You will need to create the repo "sortic-ip-sentinel-free" on GitHub first (empty repo, no README).

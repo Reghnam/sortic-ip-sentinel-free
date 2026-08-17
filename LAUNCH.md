@@ -4,11 +4,9 @@
 
 ## 1. Push to GitHub (Required First Step)
 
-1. Create a new public GitHub repository named `sortic-ip-sentinel-free`
-2. Upload / push the entire contents of this folder
-3. Commit and push
-
-The target repo is: https://github.com/Reghnam/sortic-ip-sentinel-free
+1. On GitHub, create a **new public** repository named exactly `sortic-ip-sentinel-free` (do **not** initialize with README).
+2. In terminal, run the commands from `PUSH_TO_GITHUB.txt` in this folder.
+   - It will set remote to https://github.com/Reghnam/sortic-ip-sentinel-free.git and push.
 
 **Result**: This becomes the canonical public source for the portable skill.
 
