@@ -1,20 +1,20 @@
-# sortic-ip-sentinel-free
+# SorticAI Free IP Sentinel
 
-**Free portable IP-sensitive moment detector and hygiene sentinel (v0.5-free).**
+**The skill that quietly protects your IP at the exact moment you need it.**
 
-**Executive Launch Checklist (do in this order)**
+Free portable IP-sensitive moment detector + hygiene sentinel (v0.5-free).  
+Detects “protect the IP”, investor demos, pilot showcases, fundraising decks… and delivers only free procedural hygiene:
 
-See `LAUNCH.md` for the cleanest step-by-step.
+- Show / hold maps  
+- Staged disclosure ladders  
+- Investor & partner demo hygiene playbook  
+- AI / human contribution logs (USPTO 2025 aligned)  
+- Provisional readiness checklists  
+- Provenance & holdback audits  
 
-Quick version:
-1. Push this entire folder to public GitHub (`sortic-ip-sentinel-free`)
-2. Install as portable skill in Codex/ChatGPT (see below)
-3. Optionally create Custom GPT using `openai-gpt-package/`
-4. Verify triggers + disclaimers
+**Not legal advice. No guarantees. Free only.**
 
-Full details in `LAUNCH.md`.
-
-**Not legal advice. No guarantees.**
+Works on **Codex**, **Claude Code**, **Grok**, **ChatGPT Skills**, Cursor and any agentskills.io runtime.
 
 ---
 
