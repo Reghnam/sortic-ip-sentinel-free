@@ -1,63 +1,53 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.1-free
 
-**Status**: Ready for distribution. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.1-free patched 2026-09-02 (OpenAI → Anthropic → Grok Build). All files sanitized for free-only use. Strong disclaimers included.
 
-## 1. Push to GitHub (Required First Step)
+Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
-1. On GitHub, create a **new public** repository named exactly `sortic-ip-sentinel-free` (do **not** initialize with README).
-2. In terminal, run the commands from `PUSH_TO_GITHUB.txt` in this folder.
-   - It will set remote to https://github.com/Reghnam/sortic-ip-sentinel-free.git and push.
+## 1. OpenAI (primary distribution)
 
-**Result**: This becomes the canonical public source for the portable skill.
-
-## 2. Distribute as Portable Skill (Recommended Primary Path)
-
-OpenAI supports the `SKILL.md` standard (agentskills.io).
-
-**Codex CLI / Desktop:**
+**Codex CLI / IDE**
 ```bash
-$skill-installer https://github.com/Reghnam/sortic-ip-sentinel-free
+git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
+cp -r sortic-ip-sentinel-free/chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-free
+# fallback path still used by some Codex builds:
+# cp -r sortic-ip-sentinel-free/chatgpt-skill ~/.codex/skills/sortic-ip-sentinel-free
+```
+Project-local: copy to `.agents/skills/sortic-ip-sentinel-free`. Invoke with `$` or `/skills`. Implicit match uses the description.
+
+**ChatGPT Skills (Business / Enterprise / Edu)**
+1. Download ZIP of `chatgpt-skill/` (or clone and zip that folder so `SKILL.md` is at the zip root).
+2. Skills tab → upload. Invoke with `@`.
+
+**Custom GPT (fallback, hosted sharing)**
+See `openai-gpt-package/HOW_TO_CREATE_IN_OPENAI.md`.
+
+## 2. Anthropic Claude Code
+
+```bash
+git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
+cp -r sortic-ip-sentinel-free/claude-skill ~/.claude/skills/sortic-ip-sentinel-free
+cp -r sortic-ip-sentinel-free/references ~/.claude/skills/sortic-ip-sentinel-free/
 ```
 
-**ChatGPT (Business/Enterprise/Edu):**
-- Go to Skills tab → Upload a zip of this folder, or use "Create with chat" + the GitHub link.
+Project-local: `.claude/skills/sortic-ip-sentinel-free/`.
 
-The skill will automatically activate on "IP sensitive moment" language.
+## 3. Grok / Grok Build
 
-## 3. Create Custom GPT (for Hosted Sharing)
+```bash
+git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
+cp -r sortic-ip-sentinel-free/grok-skill ~/.grok/skills/sortic-ip-sentinel-free
+cp -r sortic-ip-sentinel-free/references ~/.grok/skills/sortic-ip-sentinel-free/
+```
 
-Use the pre-built package:
-
-1. Open ChatGPT → Create a new GPT
-2. Name: `SorticAI Free IP Sentinel (v0.5-free)`
-3. Paste the full content of `openai-gpt-package/instructions.txt` into **Instructions**
-4. Upload all files from `openai-gpt-package/knowledge/` as Knowledge files
-5. Add conversation starters:
-   - "IP sensitive moment on our new protocol before investor demo"
-   - "Help me create a show/hold map for this architecture"
-6. Test key flows
-7. Share via "Anyone with the link"
-
-**Note**: Full GPT Store publishing requires a Business/Enterprise/Edu workspace + verified Builder Profile.
+Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -p`) uses numbered options + optional JSON. Do not ask the Grok viewer to run shell commands.
 
 ## 4. Verification Checklist
 
-- [ ] GitHub repo is public
-- [ ] L3 triggers work ("protect the IP", "IP sensitive moment")
+- [ ] L3 triggers ("protect the IP", "IP sensitive moment")
 - [ ] L0 silence on privacy/config/meta work
+- [ ] Headless: stamp → numbered 1–8 → JSON schema `sorticai.hygiene_package.v1`
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
 
-## Files
-
-- `SKILL.md` — Portable skill definition (works in Codex, ChatGPT Skills, etc.)
-- `openai-gpt-package/` — Everything needed for Custom GPT
-- `references/` — Source templates
-
 **This is free procedural hygiene only. Not legal advice. No guarantees.**
-
-Sources (high-level): EPO Guidelines, USPTO 2025 AI inventorship guidance, WIPO principles.
-
----
-
-**Next action for you**: Push the folder to GitHub, then run the Codex installer command to test.
