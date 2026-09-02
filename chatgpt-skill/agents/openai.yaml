@@ -1,6 +1,8 @@
 interface:
   display_name: "SorticAI Free IP Sentinel"
-  short_description: "Detects IP-sensitive moments and delivers free hygiene (show/hold, demo playbook, contribution logs)"
+  short_description: "Detects IP-sensitive moments and delivers free hygiene (show/hold, demo playbook, contribution logs). Not legal advice."
+  brand_color: "#0F3D2E"
+  default_prompt: "IP sensitive moment. Protect the IP before an investor or partner demo. Deliver free hygiene only: show/hold map, demo playbook, AI contribution log. Not legal advice. No guarantees."
 
 policy:
   allow_implicit_invocation: true

@@ -1,72 +1,31 @@
-# How to Publish the SorticAI Free IP Sentinel (v0.5-free) to OpenAI
+# How to Publish the SorticAI Free IP Sentinel (v0.5.1-free) to OpenAI
 
-This package makes it easy to bring the free portable IP hygiene skill into OpenAI's ecosystem (2026).
+Primary path in 2026 is **ChatGPT Skills + Codex SKILL.md**, not a Custom GPT.
 
-## Two Recommended Paths
+## Path 1: Portable Skill (recommended)
 
-### Path 1: Portable Skill (SKILL.md) — Best for portability & developers (Recommended starting point)
-OpenAI supports the open agentskills.io standard in Codex and ChatGPT.
+Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
-**Steps:**
-1. Push this entire folder to a public GitHub repo (e.g. `Reghnam/sortic-ip-sentinel-free`).
-2. Install in Codex:
-   ```
-   $skill-installer https://github.com/Reghnam/sortic-ip-sentinel-free
-   ```
-   Or manually copy the folder to `~/.codex/skills/sortic-ip-sentinel-free/`.
+**Codex**
+```bash
+git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
+cp -r sortic-ip-sentinel-free/chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-free
+```
+Fallback: `~/.codex/skills/`. Project: `.agents/skills/`. Invoke `$` or `/skills`. Description is front-loaded so implicit match survives list truncation.
 
-3. In ChatGPT (Business/Enterprise/Edu):
-   - Skills tab → Upload zip of the folder or use "Create with chat" + GitHub link.
+**ChatGPT Skills (Business / Enterprise / Edu)**
+Zip `chatgpt-skill/` with `SKILL.md` at the zip root → Skills tab. Invoke `@`.
 
-See the root `LAUNCH.md` and `README.md` for the full executive checklist and install commands.
+`agents/openai.yaml` sets display name, default prompt, brand colour, and `allow_implicit_invocation: true`.
 
-### Path 2: Custom GPT (for hosted use + GPT Store)
-Use this package for a ready-to-paste GPT.
+Headless: "Output numbered options and hygiene package JSON."
 
-**Steps (requires eligible workspace for full Store publishing):**
+## Path 2: Custom GPT (fallback)
 
-1. Go to ChatGPT → Create a new GPT (or edit one).
-
-2. **Name:** SorticAI Free IP Sentinel (v0.5-free)
-
-3. **Description:** Free portable skill that detects IP-sensitive moments and delivers practical hygiene help (show/hold maps, contribution logs, demo hygiene, disclaimers). Not legal advice.
-
-4. **Instructions:** Paste the entire content of `instructions.txt` (in this folder).
-
-5. **Knowledge files** — Upload these from the `knowledge/` folder (recommended order):
-   - free-catalog.md
-   - demo-hygiene-playbook.md
-   - contribution-log.md
-   - ground-rules.md
-   (Optionally add more from the main references if you want extras.)
-
-6. **Conversation starters** (suggested):
-   - "IP sensitive moment on our new protocol before investor demo"
-   - "Help me create a show/hold map for this architecture"
-   - "We have a pilot showcase next month — what should I be careful sharing?"
-
-7. **Capabilities:** Turn on "Code interpreter" if you want it to help generate tables/docs.
-
-8. Test in Preview:
-   - Trigger L3: "How do I protect the IP before we share details with partners?"
-   - Check L0 silence on privacy/config questions.
-   - Verify disclaimers appear.
-
-9. Share:
-   - "Anyone with the link" for easy distribution.
-   - Or publish to GPT Store (if your workspace allows — complete Builder Profile first with verified domain).
-
-**Important 2026 notes:**
-- New GPT creation/publishing to the Store is restricted to Business, Enterprise, or Edu workspaces.
-- Personal accounts can often still create private/shared GPTs and use links.
-- Always keep the strong disclaimers.
-
-## After Publishing
-- Update knowledge files when the main skill improves (copy from the root references/).
-- The skill is kept fresh by the autonomous weekly research loop.
+1. Create a GPT named `SorticAI Free IP Sentinel (v0.5.1-free)`.
+2. Paste `instructions.txt` into Instructions.
+3. Upload `knowledge/` files.
+4. Starters: "IP sensitive moment on our new protocol before investor demo" / "Help me create a show/hold map".
+5. Share via link. GPT Store still needs an eligible workspace + Builder Profile.
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**
-
-For the full SorticAI IP Checkpoint (with paid options), see the main skill.
-
-Sources: agentskills.io standard, OpenAI Help Center (publishing GPTs, skills in ChatGPT), 2026 ecosystem reports.

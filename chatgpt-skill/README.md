@@ -1,40 +1,26 @@
-# SorticAI Free IP Sentinel (ChatGPT / Codex compatible)
+# SorticAI Free IP Sentinel — ChatGPT / Codex (v0.5.1-free)
 
-> This is a stripped-down, fully compatible variant for OpenAI tools.  
-> The rich canonical version lives in the root of this repo.
+OpenAI-first package. Minimal SKILL.md frontmatter (`name` + `description` + license/metadata). Display and invocation live in `agents/openai.yaml`.
 
-This is the OpenAI-compatible variant of the SorticAI Free IP Sentinel (v0.5-free).
+Canonical rich source: https://github.com/Reghnam/sortic-ip-sentinel-free
 
-**Important:** The canonical rich source (with full frontmatter for Claude, Grok, Cursor, etc.) lives at:
-https://github.com/Reghnam/sortic-ip-sentinel-free
+## Install
 
-This variant strips unsupported frontmatter for ChatGPT Skills / Codex compatibility and moves display/invocation policy into `agents/openai.yaml`.
-
-## Quick Install
-
-**OpenAI Codex CLI/Desktop**
+**Codex CLI / IDE (preferred path, 2026 docs)**
 ```bash
-# Recommended: clone the main repo and copy the subfolder
 git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
-cp -r sortic-ip-sentinel-free/chatgpt-skill ~/.codex/skills/sortic-ip-sentinel-free
+cp -r sortic-ip-sentinel-free/chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-free
 ```
+Also scanned: project `.agents/skills/`, `~/.codex/skills/`, `/etc/codex/skills`.
 
-**ChatGPT Skills (Business/Enterprise/Edu)**
-- Go directly to the folder on GitHub and click **"Download ZIP"** (top right when viewing the folder):
-  https://github.com/Reghnam/sortic-ip-sentinel-free/tree/main/chatgpt-skill
-- Or use "Create with chat" and paste the link above.
+Invoke: `$sortic-ip-sentinel-free` or `/skills`. Implicit match uses the description (front-loaded triggers). Headless `-p`: add "Output numbered options and hygiene package JSON."
 
-Then upload the downloaded zip in the Skills tab.
+**ChatGPT Skills (Business / Enterprise / Edu)**
+Zip **this folder** so `SKILL.md` is at the zip root. Skills tab → upload. Invoke with `@`.
 
-## Contents
-- `SKILL.md` — minimal compliant frontmatter + full behaviour
-- `agents/openai.yaml` — display name, short description, invocation policy
-- `references/` — all hygiene templates and playbooks
-- `LICENSE.md`
-
-## Attribution
-This is a distribution variant of the free portable edition. All core logic, disclaimers, and references are preserved from the canonical source.
+## Why this variant
+- OpenAI hosts may reject extra frontmatter keys (`when-to-use`, `user-invocable`, `compatibility`).
+- Descriptions can be truncated in the Codex skills list — triggers are in the first sentence.
+- `allow_implicit_invocation: true` so L2/L3 language can auto-load the skill.
 
 **Not legal advice. No guarantees. Free only.**
-
-See the main repo for full details, examples, and the richer version for other platforms.
