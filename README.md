@@ -45,3 +45,33 @@ Free hygiene at the moment of creation. File before you expose when it matters.
 **Disclaimer:** This is free procedural hygiene support only. **Not legal advice.** No guarantees. Consult qualified counsel.
 
 This public hub seed was produced through two autonomous iterations (implementation + review + fix) using sub-agents for rigor. See weekly research loop for ongoing updates.
+
+---
+
+## ChatGPT / Codex Compatible Variant
+
+For strict ChatGPT Skills and Codex compatibility, we provide a minimal-frontmatter variant inside this repo:
+
+**Location inside this repo:** `chatgpt-skill/`
+
+**Quick Install**
+
+**OpenAI Codex**
+```bash
+# Recommended: clone the main repo and copy the subfolder
+git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
+cp -r sortic-ip-sentinel-free/chatgpt-skill ~/.codex/skills/sortic-ip-sentinel-free
+```
+
+**ChatGPT Skills (Business/Enterprise/Edu)**
+1. Go to the folder on GitHub and click **"Download ZIP"** (top right when viewing the folder):
+   https://github.com/Reghnam/sortic-ip-sentinel-free/tree/main/chatgpt-skill
+2. Upload the zip in the Skills tab.
+
+This variant strips OpenAI-unsupported frontmatter keys and uses `agents/openai.yaml` for display + invocation policy.
+
+All behaviour, references, disclaimers, and licence text are identical to the canonical version.
+
+See `chatgpt-skill/README.md` inside the folder for the short install guide.
+
+The rich `SKILL.md` (root of this repo) is still the recommended version for Claude Code, Grok, Cursor, and other full agentskills.io runtimes.
