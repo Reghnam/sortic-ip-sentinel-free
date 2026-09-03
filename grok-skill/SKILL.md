@@ -1,22 +1,22 @@
 ---
 name: sortic-ip-sentinel-free
 description: >
-  Use when the user says protect the IP, patent, trade secret, NDA, prior art, inventorship, IP analysis, IP checkpoint, IP sensitive moment, how to protect this, investor demo, pilot showcase, or fundraising deck. Delivers free hygiene only: show/hold maps, staged disclosure, demo playbook, AI contribution logs, provenance audits, provisional checklists. Do not use for privacy, telemetry, generic security, debugging, CI, or editing this skill. Not legal advice. No paid paths.
+  Use when the user says protect the IP, patent, trade secret, NDA, prior art, inventorship, IP analysis, IP checkpoint, IP sensitive moment, how to protect this, investor demo, pilot showcase, or fundraising deck. Also use for headless one-shots (Codex/Claude/grok -p) that need a show/hold map or hygiene JSON. Delivers free builder-worksheet hygiene only: show/hold maps, staged disclosure, demo playbook, AI contribution logs, provenance audits, provisional checklists. Do not use for privacy, telemetry, generic security, debugging, CI, or editing this skill. Not legal advice. No paid paths.
 when-to-use: >
   protect the IP, IP sensitive moment, trade secret, NDA, patent, inventorship, investor demo,
   pilot showcase, fundraising deck. Silent on privacy/config/meta/skill-work. Free hygiene only.
 user-invocable: true
 metadata:
-  short-description: "SorticAI Free IP Sentinel v0.5.1-free — Grok / Grok Build"
-  version: "0.5.1-free"
+  short-description: "SorticAI Free IP Sentinel v0.5.2-free — Grok / Grok Build"
+  version: "0.5.2-free"
   release: "2026-08-17"
-  patched: "2026-09-02"
+  patched: "2026-09-03"
   author: "SorticAI (portable free tier)"
   category: "ip-hygiene"
 compatibility: "Grok (~/.grok/skills/), Grok Build (.grok/skills/), grok -p headless."
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.1-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.2-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -53,7 +53,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.1-free (portable)  ·  sorticai.com  ·  patched 2026-09-02              |
+|  v0.5.2-free (portable)  ·  sorticai.com  ·  patched 2026-09-03              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -110,12 +110,24 @@ This is the free Phase-0 shape: **skill → structured hygiene package**. No pai
    7. Lite prior-art pointers (not a search)
    8. Hygiene package JSON export (`references/headless-hygiene-package.md`)
 4. If the prompt already names a deliverable or says "export/json/package", deliver it in the **same turn**.
-5. End with the standing disclaimer + sources note (in both markdown and JSON).
+5. If headless and **no** deliverable is named: print 1–8, then **default-deliver 1 (show/hold) + 8 (JSON)** in the same turn. Never wait for a click. (Agent Skills: provide a default; do not stall on a picker.)
+6. End with the standing disclaimer + sources note (in both markdown and JSON). Apply `references/output-language-hygiene.md`.
 
-**JSON:** follow `references/headless-hygiene-package.md` schema `sorticai.hygiene_package.v1` exactly. Hygiene only. No prices, no counsel names, no protectability rulings.
+**JSON:** follow `references/headless-hygiene-package.md` schema `sorticai.hygiene_package.v1` exactly. Include `output_register: procedural_builder_worksheet` and `not_for_third_party: true`. Hygiene only. No prices, no counsel names, no protectability rulings.
 
 **Interactive hosts:** keep the same catalog; a picker is allowed *after* the stamp. Headless never waits for a click.
 
+## Output register (builder worksheet — not a client memo)
+
+Counsel review of adjacent SorticAI writing (2 Sep 2026) plus Agent Skills authoring practice: **procedural hygiene is not legal advice**. If a table looks like a filing instruction, the standing disclaimer becomes confusing.
+
+Hard rules for every deliverable (full list: `references/output-language-hygiene.md`):
+- Verbs: consider / document / list / hold / mark. Never "you must file", "to comply", "this is protectable".
+- Never invent deadlines (no "within 48 hours" unless the user stated them).
+- Never write "sources verified" / "links valid". Write "public URL located" and what you actually checked — or omit.
+- One idea per sentence. No stacked jargon without saying *of what*.
+- Every recommended step has a next action a builder can do today, or drop it.
+- Banner on exports: **Builder worksheet. Do not send these tables to third parties as legal analysis.**
 
 ## Guardrails & Boundaries (Critical)
 
@@ -144,6 +156,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - `references/v05-lite-prior-art-pointers.md`
 - `references/v05-provenance-holdback-template.md`
 - `references/headless-hygiene-package.md`
+- `references/output-language-hygiene.md` (writing register — load on every L3 deliverable)
 - `references/classification-matrix.md` (maintainers / tests)
 
 ## Examples (Usage)
@@ -152,9 +165,13 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 
 → L3 header → snapshot → free hygiene list (include demo hygiene playbook + contribution log + show/hold) → disclaimer.
 
-**Example L3 headless:** same prompt plus "Output numbered options and a hygiene package JSON."
+**Example L3 headless (named):** same prompt plus "Output numbered options and a hygiene package JSON."
 
 → stamp → snapshot → options 1–8 → JSON per `sorticai.hygiene_package.v1` → disclaimer.
+
+**Example L3 headless (unnamed, one-shot):** same L3 prompt with no picker and no named deliverable.
+
+→ stamp → snapshot → options 1–8 → **default-deliver 1 (show/hold) + 8 (JSON)** same turn → disclaimer.
 
 **Example L2:** "We have an investor demo in 10 days. Should I put the architecture diagrams in the deck?"
 
@@ -173,15 +190,17 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.1-free.
-- Headless: numbered options + optional JSON. Never block on UI.
+- Version in header: v0.5.2-free.
+- Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
+- Builder-worksheet register (`references/output-language-hygiene.md`).
 
 ## Failure Recovery
 
 - Header missing on L3 → print header first, then continue.
 - Over-fire on L0 → apologize briefly, finish real task, suppress further this session.
 - User dismisses → stop for session.
-- Headless host offered an interactive picker → ignore picker; print 1–8.
+- Headless host offered an interactive picker → ignore picker; print 1–8; default-deliver 1+8 if unnamed.
+- Invented deadline or "sources verified" in a deliverable → rewrite per `references/output-language-hygiene.md`.
 
 ## For Maintainers (This File)
 
@@ -193,7 +212,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - Grok / Grok Build: `grok-skill/` (`.grok/skills/` + headless numbered default)
 - Test against `references/classification-matrix.md` after any trigger change.
 - Keep disclaimers, plain labels, hygiene scope. No paid residue.
-- Current version: **v0.5.1-free** (patched 2026-09-02; first released 2026-08-17).
+- Current version: **v0.5.2-free** (patched 2026-09-03; first released 2026-08-17).
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 
