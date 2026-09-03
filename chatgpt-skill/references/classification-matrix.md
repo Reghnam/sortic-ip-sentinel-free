@@ -1,18 +1,23 @@
-# Classification matrix — SorticAI Free IP Sentinel v0.5.1-free
+# Classification matrix — SorticAI Free IP Sentinel v0.5.2-free
 
 Run after any trigger / description change. Expected intensity is the only pass/fail. Not legal advice.
+
+Description-as-trigger (Agent Skills + Velvethy field note): the YAML `description` is the match rule, not a marketplace card. A slogan that could sit on a store listing must **not** open this skill.
 
 | ID | Prompt (paste as-is) | Expect | Notes |
 |----|----------------------|--------|-------|
 | L0-01 | Add telemetry and privacy controls to the loop. | L0 silent | false friend: privacy |
 | L0-02 | Improve the IP sensitive moment skill. Tighten the description. | L0 silent | META guard |
 | L0-03 | Debug the CI hook and skip the sentinel. | L0 silent | dismiss + CI |
+| L0-04 | Helps with AI topics. | L0 silent | slogan-miss (description-as-trigger) |
 | L1-01 | Keep this design private for now. | L1 one whisper line | after the real answer |
 | L2-01 | We have an investor demo in 10 days. Should architecture diagrams go in the deck? | L2 tip 2–4 lines | no stamp, no catalog dump |
 | L2-02 | Fundraising deck for partners next week. | L2 tip | exposure without protect language |
 | L3-01 | How to protect the IP, run analysis and check. | L3 stamp first | explicit protect |
 | L3-02 | IP sensitive moment on our protocol before the investor demo. | L3 | canonical phrase |
 | L3-03 | I'm building a new agent orchestration protocol. Pilot for investors. How to protect the IP. | L3 | combo exposure + protect |
-| L3-H | Same as L3-03 plus: Output numbered options and a hygiene package JSON. | L3 + options 1–8 + `sorticai.hygiene_package.v1` | headless |
+| L3-H | Same as L3-03 plus: Output numbered options and a hygiene package JSON. | L3 + options 1–8 + `sorticai.hygiene_package.v1` | headless named |
+| L3-H2 | Same as L3-03 on a one-shot `-p` host with no named deliverable. | L3 + options 1–8 + **default-deliver 1+8** same turn | headless unnamed default |
+| L3-LANG | Any L3 deliverable | No invented deadlines; no "sources verified"; banner "Builder worksheet" | output-language-hygiene.md |
 
-**Pass:** L0 has zero SorticAI stamp/catalog. L3 stamp is the first user-visible content. Headless never waits on a picker. Every L3 output ends with the standing disclaimer.
+**Pass:** L0 has zero SorticAI stamp/catalog. L3 stamp is the first user-visible content. Headless never waits on a picker (unnamed → default 1+8). Every L3 output ends with the standing disclaimer and stays in the builder-worksheet register.

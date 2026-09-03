@@ -11,16 +11,19 @@ This is a **hygiene package**, not a commercial case file. No prices, no counsel
 - User says export, JSON, package, headless, "for my agent", "structured summary".
 - Host has no picker.
 - Option **8** from the numbered list.
+- **Default on unnamed headless L3:** emit this JSON together with a show/hold map (option 1) in the same turn.
 
-Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON.
+Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Apply `output-language-hygiene.md` (procedural verbs; no invented deadlines; no "verified").
 
 ## Schema (emit exactly these keys)
 
 ```json
 {
   "schema": "sorticai.hygiene_package.v1",
-  "edition": "0.5.1-free",
+  "edition": "0.5.2-free",
   "activation_level": "L3",
+  "output_register": "procedural_builder_worksheet",
+  "not_for_third_party": true,
   "noticed": "one plain sentence",
   "snapshot": {
     "building": "user's words, one line",
@@ -35,9 +38,9 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON.
   ],
   "holdbacks": ["exact parameters", "full source", "production data"],
   "contribution_log_started": false,
-  "next_hygiene_step": "one practical sentence",
-  "disclaimer": "SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is not legal advice and carries no guarantees. Consult qualified IP counsel.",
-  "sources_note": "High-level summaries only: EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles."
+  "next_hygiene_step": "one practical sentence a builder can do today",
+  "disclaimer": "Builder worksheet. Do not send these tables to third parties as legal analysis. SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is not legal advice and carries no guarantees. Consult qualified IP counsel.",
+  "sources_note": "High-level summaries only: EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles. Public URLs located are not 'verified sources'."
 }
 ```
 
@@ -47,5 +50,6 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON.
 - Prefer empty arrays over invented facts.
 - If context is thin, set `deliverables` to `offered` and still return the envelope.
 - Markdown above the JSON is allowed (stamp + snapshot). Do not wrap JSON in a story.
+- Never invent a deadline. Never claim links were "verified" unless you state the exact check.
 
-**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.1-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
+**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.2-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
