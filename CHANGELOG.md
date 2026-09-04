@@ -2,6 +2,40 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.3-free] — 2026-09-04
+
+Patched from: david@vmcorp.cz Task Extractor briefs 1–3 Sep 2026 (Grok Bot operating rules: do not invent status; do not email third parties unless named); Headless Agent topics job (multi-agent / computer-use / collectible agents / skill development); adjacent IP-lawyer hourly prompt (sentinel remains hygiene-only, not the US IP corpus); OpenAI ChatGPT Skills / Codex docs (learn.chatgpt.com/docs/build-skills, crawled 2026-09-04); Anthropic skill-authoring checklist (platform.claude.com, crawled 2026-09-04); agentskills.io specification (name ≤64 kebab, description ≤1024, compatibility is env-only); Grok Bot guides + David’s 29–31 Aug ingest notes (Jason Clip Bot, browser-use, Bot with own computer); this Grok Build run. **No Grok chat-history connector exists**; Grok-chat insights are from those X/Bot notes, `grok -p` / Grok Build headless contract, and live automations.
+
+### OpenAI (first)
+
+- Description still front-loaded; added Grok Bot / computer-use / email-push-post trigger words and an explicit do-not-use for the US IP corpus (564 chars, under Codex 8k / 2% list truncation and Anthropic 1024).
+- `agents/openai.yaml` `default_prompt` now names Bot/computer-use exposure + “never email third parties unless this turn names them”. Implicit invocation stays on. **No MCP `dependencies.tools`.**
+- ChatGPT zip path unchanged (`SKILL.md` at zip root). Codex paths unchanged: `~/.agents/skills`, `.agents/skills`, `~/.codex/skills`, `/etc/codex/skills`.
+- Prefer instructions over scripts (OpenAI 2026 authoring). Catalog stays 8 options — agent-exposure is folded into item 5, not a ninth picker.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description`. Name kebab-case ≤64. Description ≤1024, no XML. Body well under 500-line guidance (~231 lines).
+- New `references/evals.md`: ≥3 evals (L0 slogan-miss, L3 canonical, headless unnamed 1+8) plus optional Bot computer-use and corpus-L0. Description-as-trigger tests stay in `classification-matrix.md`.
+- Default option on unnamed headless unchanged (provide a default; do not stall on a picker). References still one level deep. Eight options, not nine.
+
+### Grok Build (third)
+
+- `grok-skill/` frontmatter adds `argument-hint` (slash autocomplete) and `disable-model-invocation: false` (implicit L2/L3 still works).
+- **Grok Bot is headless by default.** Persistent teammate with its own computer: email, GitHub push, browser-use, Clip-Bot, social post = live demo channels. Apply show/hold *before* the paste/send.
+- Never invent status. Never email/post to third parties unless this turn names the recipient.
+- `references/` still bundled. One folder = runnable skill.
+
+### Shared
+
+- New `references/agent-exposure-log.md` — what the agent showed / emailed / pushed / posted (folded into catalog item 5).
+- `sorticai.hygiene_package.v1` adds `agent_exposure` (emit the key; empty array is correct).
+- Output-language register: no invented status; no third-party send unless named this turn.
+- Classification: L0-05 corpus tick, L0-06 Bot ops without protect intent, L2-03 Bot/skill publish, L3-04 Bot email + protect, L3-H3 Bot unnamed.
+- Boundary: this skill does **not** ingest the US IP law ground-truth corpus.
+- Stamp: `v0.5.3-free` / patched 2026-09-04. First release date remains 2026-08-17.
+- Still free-only. Still not legal advice. Still silent on meta/privacy.
+
 ## [0.5.2-free] — 2026-09-03
 
 Patched from: emails (david@vmcorp.cz, 17 Aug–3 Sep 2026) including Task Extractor 2 Sep (this job), Kristína Chytrá counsel comments 2 Sep 12:48 UTC (Reg-Radar writing, applied as **hygiene language** only), LangChain Deep Agents v0.7 (26 Aug), OpenAI ChatGPT Skills / Codex docs (learn.chatgpt.com/docs/build-skills, crawled 2026-09-01), Anthropic Agent Skills best-practices checklist (platform.claude.com, crawled 2026-09-02), agentskills.io specification (name/description constraints; `compatibility` is env-only), Microsoft Agent Framework skills (25 Aug), Headless Agent topics automation prompt, Velvethy field note *The description is the trigger*, and this Grok Build run. **No Grok chat-history connector exists**; Grok-chat insights are from live automations (this job + adjacent 08:10 IP Radar / 08:40 SKILL.md best-practices schedules), `grok -p` / Grok Build headless contract, and X posts 21 Aug–2 Sep 2026 on skills.
