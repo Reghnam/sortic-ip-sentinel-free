@@ -2,13 +2,14 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.2-free**).
-Detects “protect the IP”, investor demos, pilot showcases, fundraising decks… and delivers only free procedural hygiene:
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.3-free**).
+Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
 - Staged disclosure ladders
 - Investor & partner demo hygiene playbook
 - AI / human contribution logs (USPTO 2025 aligned)
+- Agent / computer-use exposure logs (what the Bot showed, emailed, pushed, posted)
 - Provisional readiness checklists
 - Provenance & holdback audits
 - Headless hygiene package JSON (`sorticai.hygiene_package.v1`)
@@ -16,9 +17,9 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
-Works on **Codex**, **ChatGPT Skills**, **Claude Code**, **Grok / Grok Build**, Cursor, Microsoft Agent Framework, and any [agentskills.io](https://agentskills.io) runtime.
+Works on **Codex**, **ChatGPT Skills**, **Claude Code**, **Grok / Grok Build / Grok Bot**, Cursor, Microsoft Agent Framework, and any [agentskills.io](https://agentskills.io) runtime.
 
-See [CHANGELOG.md](CHANGELOG.md) for what landed in v0.5.2.
+Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). What landed: [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
@@ -29,7 +30,7 @@ See [CHANGELOG.md](CHANGELOG.md) for what landed in v0.5.2.
 | **OpenAI Codex** | [`chatgpt-skill/`](chatgpt-skill/) | `cp -r chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-free` (also works at `~/.codex/skills/` or project `.agents/skills/`) |
 | **ChatGPT Skills** | [`chatgpt-skill/`](chatgpt-skill/) | Zip that folder → Skills tab (Business / Enterprise / Edu). Invoke with `@`. |
 | **Anthropic Claude Code** | [`claude-skill/`](claude-skill/) | `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free` (`references/` is bundled) |
-| **Grok / Grok Build** | [`grok-skill/`](grok-skill/) | `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free` or project `.grok/skills/` (`references/` is bundled) |
+| **Grok / Grok Build / Grok Bot** | [`grok-skill/`](grok-skill/) | `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free` or project `.grok/skills/` (`references/` is bundled) |
 | **Any agentskills.io host** | repo root | Root `SKILL.md` + `references/` |
 
 Root `SKILL.md` is the canonical behaviour file (rich frontmatter). Platform folders tune **frontmatter and install only**. Hygiene behaviour is the same.
@@ -40,29 +41,29 @@ Custom GPT fallback: [`openai-gpt-package/`](openai-gpt-package/).
 
 ## Usage triggers (examples)
 
-- L3: "protect the IP", "IP sensitive moment", "trade secret before investor demo", "how to protect this before we file", "NDA before sharing the protocol".
-- L2 exposure: "investor demo in 10 days" → soft tip only.
-- L0: privacy, config, meta on this skill, slogan "Helps with AI topics" → silent.
+- L3: "protect the IP", "IP sensitive moment", "trade secret before investor demo", "how to protect this before we file", "NDA before sharing the protocol", "the Grok Bot will email the deck — protect the IP".
+- L2 exposure: "investor demo in 10 days" or "publish the Bot and post a clip" → soft tip only.
+- L0: privacy, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks → silent.
 
-Headless one-shot (Codex / Claude / grok `-p`): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank.
+Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. It will **not** email third parties unless this turn names the recipient.
 
 ---
 
-## Compatibility (v0.5.2)
+## Compatibility (v0.5.3)
 
-| Rule | OpenAI | Anthropic | Grok Build |
-|------|--------|-----------|------------|
-| Frontmatter | `name` + `description` (+ optional `license`/`metadata`); extra keys in `agents/openai.yaml` | **Only** `name` + `description`; name kebab-case ≤64; description ≤1024 | Rich keys ok (`when-to-use`, metadata) |
+| Rule | OpenAI | Anthropic | Grok Build / Bot |
+|------|--------|-----------|------------------|
+| Frontmatter | `name` + `description` (+ optional `license`/`metadata`); extra keys in `agents/openai.yaml` | **Only** `name` + `description`; name kebab-case ≤64; description ≤1024 | Rich keys ok (`when-to-use`, `argument-hint`, metadata) |
 | Description | Front-load triggers (list may be truncated to 8k / 2% context) | What + when + do-not-use; slogan-miss stays L0 | Same description |
-| Invocation | ChatGPT `@` · Codex `$` / `/skills` · implicit | implicit + `/skill` | implicit + `.grok/skills` |
-| Headless | Numbered 1–8; unnamed → default 1+8 JSON | Same | Numbered 1–8 **default** |
-| Progressive disclosure | Load `references/` on demand | One-level-deep; SKILL.md <500 lines | Same |
-| Package | `references/` bundled | `references/` bundled (v0.5.2) | `references/` bundled (v0.5.2) |
+| Invocation | ChatGPT `@` · Codex `$` / `/skills` · implicit | implicit + `/skill` | implicit + `.grok/skills` + slash `argument-hint` |
+| Headless | Numbered 1–8; unnamed → default 1+8 JSON | Same | Numbered 1–8 **default**; Bot = headless |
+| Progressive disclosure | Load `references/` on demand | One-level-deep; SKILL.md <500 lines; ≥3 evals | Same |
+| Package | `references/` bundled | `references/` bundled | `references/` bundled |
 
 ---
 
 **Weekly updates**
-This skill is kept current by a research loop (agentskills.io, USPTO/EPO high-level guidance, host skill specs). Changelog every patch.
+This skill is kept current by a research loop (agentskills.io, USPTO/EPO high-level guidance, host skill specs, Headless/Bot topics). Changelog every patch.
 
 **Sources (high-level)**
 EPO Guidelines, USPTO 2025 AI inventorship guidance, WIPO principles.

@@ -1,8 +1,8 @@
 interface:
   display_name: "SorticAI Free IP Sentinel"
-  short_description: "Detects IP-sensitive moments and delivers free hygiene (show/hold, demo playbook, contribution logs). Builder worksheet. Not legal advice."
+  short_description: "Detects IP-sensitive moments and delivers free hygiene (show/hold, demo playbook, contribution logs, agent-exposure). Builder worksheet. Not legal advice."
   brand_color: "#0F3D2E"
-  default_prompt: "IP sensitive moment. Protect the IP before an investor or partner demo. Deliver free hygiene only: show/hold map, demo playbook, AI contribution log. Numbered options. If headless, default-deliver 1+8 JSON. Builder worksheet — not legal advice. No guarantees."
+  default_prompt: "IP sensitive moment. Protect the IP before an investor or partner demo, or before a Bot/agent emails, pushes, or posts the work. Deliver free hygiene only: show/hold map, demo playbook, AI contribution log, agent-exposure log. Numbered options. If headless, default-deliver 1+8 JSON. Never email third parties unless this turn names them. Builder worksheet — not legal advice. No guarantees."
 
 policy:
   allow_implicit_invocation: true
