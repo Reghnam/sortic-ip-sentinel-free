@@ -2,6 +2,38 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.4-free] — 2026-09-05
+
+Patched from: david@vmcorp.cz Task Extractor brief **4 Sep 2026** (evidence-or-blocked: Drive root ≠ archived; do not invent status; do not email third parties unless the item names them; do not auto-publish / resend / send leftover drafts or empty signature replies; confirm message-id + recipients before claiming send; HiTL/UAT Thu 10 Sep and Grok Bot Galaxy livestream 15–17 Sep as demo channels); Headless Agent topics job (computer-use / skill development; leave as-is); adjacent US IP corpus hourly + EOD prompts (sentinel remains hygiene-only; disk==claim); OpenAI **plugins/build/skills** page crawled 2026-09-05 (do not invent, replace, or reroll; state what the model must not infer; when to stop or decline; incomplete inputs; a dependency does not replace workflow; optional plugin wrap); Anthropic Agent Skills best-practices + gotchas (description is the trigger; ≥3 evals; SKILL.md as TOC; avoid too many options); Grok Bot skills/routines docs (useful skill states what requires approval; report failure instead of stale data; sending/publishing needs approval; computer-use teaching records the screen). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, live automations (this 09:30 Prague job), and X/Bot ingest notes.
+
+### OpenAI (first)
+
+- Description now 691 chars (under Codex 8k / 2% truncation and Anthropic 1024). Front-loads HiTL / UAT / livestream / leftover-draft / auto-publish triggers. States “never invent status or send unless this turn names recipient and action.”
+- `agents/openai.yaml` `default_prompt` names HiTL/livestream, leftover-draft hold, evidence-or-blocked, recipient **and** action. Implicit invocation stays on. **No MCP `dependencies.tools`.** Instructions over scripts. A declared MCP would not replace this workflow (we still do not need one).
+- ChatGPT zip path unchanged (`SKILL.md` at zip root). Optional later plugin wrap (`skills: "./skills/"`) is documented; the install unit stays the skill folder.
+- New evals cover incomplete input (must not invent artifacts) and leftover-draft hold — OpenAI’s 2026-09-05 test inventory.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Name kebab-case ≤64. Description 691 chars, no XML. Body ~263–282 lines (under 500).
+- New **Gotchas** section in SKILL.md (highest-signal failures: evidence, invent/reroll, approval, leftover drafts, HiTL/livestream).
+- Evals now 7 (≥3 required). Eight options, not nine. References one level deep.
+
+### Grok Build (third)
+
+- Grok Bot skill anatomy baked in: when / inputs / sequence / **how to validate** / what to return / **what requires approval**.
+- Approval gate: sending, publishing, leftover drafts, empty signature replies. Claimed send needs message-id + recipients.
+- Stale-data policy: if source data is unavailable, report failure — do not reuse old data.
+- HiTL / UAT / livestream / Clip-Bot = live demo channels (same as email/push/browser).
+- `grok -p` / Grok Build headless default 1+8 unchanged. `argument-hint` unchanged.
+
+### Shared
+
+- JSON `sorticai.hygiene_package.v1` adds `approval_required` and `evidence_or_blocked`. `agent_exposure` rows may include `action_named` and `blocked_no_evidence`.
+- Classification: L2-04 HiTL/livestream, L3-H4 leftover draft, L3-EVID root ≠ archived.
+- Stamp: `v0.5.4-free` / patched 2026-09-05. First release date remains 2026-08-17.
+- Still free-only. Still not legal advice. Still silent on meta/privacy/corpus.
+
 ## [0.5.3-free] — 2026-09-04
 
 Patched from: david@vmcorp.cz Task Extractor briefs 1–3 Sep 2026 (Grok Bot operating rules: do not invent status; do not email third parties unless named); Headless Agent topics job (multi-agent / computer-use / collectible agents / skill development); adjacent IP-lawyer hourly prompt (sentinel remains hygiene-only, not the US IP corpus); OpenAI ChatGPT Skills / Codex docs (learn.chatgpt.com/docs/build-skills, crawled 2026-09-04); Anthropic skill-authoring checklist (platform.claude.com, crawled 2026-09-04); agentskills.io specification (name ≤64 kebab, description ≤1024, compatibility is env-only); Grok Bot guides + David’s 29–31 Aug ingest notes (Jason Clip Bot, browser-use, Bot with own computer); this Grok Build run. **No Grok chat-history connector exists**; Grok-chat insights are from those X/Bot notes, `grok -p` / Grok Build headless contract, and live automations.

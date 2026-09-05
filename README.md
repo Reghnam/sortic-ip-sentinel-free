@@ -2,14 +2,16 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.3-free**).
-Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use exposure**… and delivers only free procedural hygiene:
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.4-free**).
+Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
 - Staged disclosure ladders
 - Investor & partner demo hygiene playbook
 - AI / human contribution logs (USPTO 2025 aligned)
-- Agent / computer-use exposure logs (what the Bot showed, emailed, pushed, posted)
+- Agent / computer-use exposure logs (what the Bot showed, emailed, pushed, posted, livestreamed)
+- Approval gate (recipient AND action named this turn; leftover drafts unsent)
+- Evidence-or-blocked (done requires path+link)
 - Provisional readiness checklists
 - Provenance & holdback audits
 - Headless hygiene package JSON (`sorticai.hygiene_package.v1`)
@@ -45,18 +47,18 @@ Custom GPT fallback: [`openai-gpt-package/`](openai-gpt-package/).
 - L2 exposure: "investor demo in 10 days" or "publish the Bot and post a clip" → soft tip only.
 - L0: privacy, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks → silent.
 
-Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. It will **not** email third parties unless this turn names the recipient.
+Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. It will **not** email/post leftover drafts unless this turn names the recipient **and** the action. Done requires evidence.
 
 ---
 
-## Compatibility (v0.5.3)
+## Compatibility (v0.5.4)
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|
 | Frontmatter | `name` + `description` (+ optional `license`/`metadata`); extra keys in `agents/openai.yaml` | **Only** `name` + `description`; name kebab-case ≤64; description ≤1024 | Rich keys ok (`when-to-use`, `argument-hint`, metadata) |
 | Description | Front-load triggers (list may be truncated to 8k / 2% context) | What + when + do-not-use; slogan-miss stays L0 | Same description |
 | Invocation | ChatGPT `@` · Codex `$` / `/skills` · implicit | implicit + `/skill` | implicit + `.grok/skills` + slash `argument-hint` |
-| Headless | Numbered 1–8; unnamed → default 1+8 JSON | Same | Numbered 1–8 **default**; Bot = headless |
+| Headless | Numbered 1–8; unnamed → default 1+8 JSON; leftover drafts held | Same + gotchas | Numbered 1–8 **default**; Bot = headless; approval + evidence-or-blocked |
 | Progressive disclosure | Load `references/` on demand | One-level-deep; SKILL.md <500 lines; ≥3 evals | Same |
 | Package | `references/` bundled | `references/` bundled | `references/` bundled |
 

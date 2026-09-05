@@ -1,4 +1,4 @@
-# How to Publish the SorticAI Free IP Sentinel (v0.5.2-free) to OpenAI
+# How to Publish the SorticAI Free IP Sentinel (v0.5.4-free) to OpenAI
 
 Primary path in 2026 is **ChatGPT Skills + Codex SKILL.md**, not a Custom GPT.
 
@@ -22,7 +22,7 @@ Headless: "Output numbered options and hygiene package JSON."
 
 ## Path 2: Custom GPT (fallback)
 
-1. Create a GPT named `SorticAI Free IP Sentinel (v0.5.2-free)`.
+1. Create a GPT named `SorticAI Free IP Sentinel (v0.5.4-free)`.
 2. Paste `instructions.txt` into Instructions.
 3. Upload `knowledge/` files.
 4. Starters: "IP sensitive moment on our new protocol before investor demo" / "Help me create a show/hold map".
