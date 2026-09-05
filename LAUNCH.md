@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.3-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.4-free
 
-**Status**: Public on GitHub. v0.5.3-free patched 2026-09-04 (OpenAI → Anthropic → Grok Build). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.4-free patched 2026-09-05 (OpenAI → Anthropic → Grok Build). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 

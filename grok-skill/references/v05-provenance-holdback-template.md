@@ -1,4 +1,4 @@
-# Code / Output Provenance + Holdback Audit — Template (v0.5.3-free)
+# Code / Output Provenance + Holdback Audit — Template (v0.5.4-free)
 
 **Purpose:** Know what a model or **agent** saw, and what a demo / Bot / computer-use session must not leak. Hygiene only.
 
