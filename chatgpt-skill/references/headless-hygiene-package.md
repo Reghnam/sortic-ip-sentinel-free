@@ -20,7 +20,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 ```json
 {
   "schema": "sorticai.hygiene_package.v1",
-  "edition": "0.5.4-free",
+  "edition": "0.5.5-free",
   "activation_level": "L3",
   "output_register": "procedural_builder_worksheet",
   "not_for_third_party": true,
@@ -43,6 +43,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
   ],
   "approval_required": true,
   "evidence_or_blocked": "done requires path+link; promises and inbox-root dumps are not done",
+  "stop_or_decline": "ask | stop | decline | none",
   "next_hygiene_step": "one practical sentence a builder can do today",
   "disclaimer": "Builder worksheet. Do not send these tables to third parties as legal analysis. SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is not legal advice and carries no guarantees. Consult qualified IP counsel.",
   "sources_note": "High-level summaries only: EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles. Public URLs located are not 'verified sources'."
@@ -59,7 +60,10 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 - Never invent status. Do not invent, replace, or reroll a result. Never email/post/auto-publish the JSON or the work unless this turn names the recipient **and** the action (`not_for_third_party`, `approval_required`). Leftover drafts stay unsent.
 - Claimed send needs message-id + recipients, else `not_sent`.
 - `evidence_or_blocked`: write blocked when there is no path+link. Inbox-root dumps are not done.
+- `stop_or_decline`: `ask` (incomplete input), `stop` (leftover draft / truncated-as-original / clock-limited overshare), `decline` (unsupported login, unnamed public auto-push, client facts into public repo), or `none`.
+- Truncated/junk files are not originals. Do not emit them as work product.
+- Do not dump client/product facts into a public skill repo.
 - If source data is unavailable, report failure — do not reuse stale data.
 - `agent_exposure` **must be emitted**. Empty array is correct when the agent did not show/send anything this turn.
 
-**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.4-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
+**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.5-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.

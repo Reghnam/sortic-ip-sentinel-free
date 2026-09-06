@@ -1,7 +1,7 @@
 ---
 name: sortic-ip-sentinel-free
 description: >
-  Use when the user says protect the IP, patent, trade secret, NDA, prior art, inventorship, IP analysis, IP checkpoint, IP sensitive moment, how to protect this, investor demo, pilot showcase, fundraising deck, HiTL, UAT, livestream, or when a headless/Grok Bot/computer-use agent will show, email, push, post, auto-publish, or send leftover drafts. Delivers free builder-worksheet hygiene only: show/hold maps, demo playbook, AI contribution logs, agent-exposure logs, provenance audits, hygiene JSON. Never invent status or send unless this turn names recipient and action. Do not use for privacy, telemetry, CI, editing this skill, or the US IP law corpus. Not legal advice. No paid paths.
+  Use when the user says protect the IP, patent, trade secret, NDA, prior art, inventorship, IP analysis, IP checkpoint, IP sensitive moment, how to protect this, investor demo, pilot showcase, fundraising deck, HiTL, UAT, livestream, GitHub auto-push, or when a headless/Grok Bot/computer-use/subagent will show, email, push, post, auto-publish, or send leftover drafts. Delivers free builder-worksheet hygiene only: show/hold maps, demo playbook, AI contribution logs, agent-exposure logs, provenance audits, hygiene JSON. Never invent status. Stop, ask, or decline unsupported actions (login, registrar, unnamed repo push) unless this turn names recipient and action. Do not use for privacy, telemetry, CI, editing this skill, or the US IP law corpus. Not legal advice. No paid paths.
 when-to-use: >
   Use for real builder IP-protection or exposure moments at creation time. Triggers include
   "protect the IP", "how to protect this", "trade secret", "NDA before sharing", "patent this",
@@ -13,10 +13,10 @@ user-invocable: true
 disable-model-invocation: false
 argument-hint: IP sensitive moment | show/hold | hygiene JSON
 metadata:
-  short-description: "SorticAI Free IP Sentinel v0.5.4-free — detect sensitive moments + deliver free hygiene only"
-  version: "0.5.4-free"
+  short-description: "SorticAI Free IP Sentinel v0.5.5-free — detect sensitive moments + deliver free hygiene only"
+  version: "0.5.5-free"
   release: "2026-08-17"
-  patched: "2026-09-05"
+  patched: "2026-09-06"
   author: "SorticAI (portable free tier)"
   category: "ip-hygiene"
   tags: ["ip", "patent", "trade-secret", "hygiene", "demo-safety", "inventorship", "free", "headless"]
@@ -24,7 +24,7 @@ license: "See LICENSE.md (free use with attribution and disclaimers)"
 compatibility: "Claude Code (~/.claude/skills/), Codex (~/.agents/skills or ~/.codex/skills), ChatGPT Skills, Grok (~/.grok/skills/ or .grok/skills/), Grok Bot, Cursor, agentskills.io. No external services required for core."
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.4-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.5-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -48,6 +48,7 @@ Do not hijack every turn. Surface only when it adds value.
 - Dismiss ("not now", "skip sentinel") suppresses for the session.
 - Meta work on skills: always L0.
 - Do not invent status. Do not email, post, auto-publish, or send leftover drafts unless this turn names the **recipient and the action**. Done requires evidence (path + link), not a promise.
+- Ask, stop, or decline per the workflow boundary. Do not invent facts the host did not return. Unsupported actions (login, registrar, unnamed public push) are declined, not improvised.
 
 ## L3 Activation Ritual (Free Only)
 
@@ -64,7 +65,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.4-free (portable)  ·  sorticai.com  ·  patched 2026-09-05              |
+|  v0.5.5-free (portable)  ·  sorticai.com  ·  patched 2026-09-06              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -132,10 +133,30 @@ This is the free Phase-0 shape: **skill → structured hygiene package**. No pai
 - Evidence-or-blocked: "done" requires folder path + link. Inbox-root dumps are not done.
 - Log the runtime and channel (`references/agent-exposure-log.md`). JSON keys: `agent_exposure` (empty array ok), `approval_required` (bool), `evidence_or_blocked` (string).
 - Publishing a Bot/skill without protect language stays L2 (tip only).
+- Shared Bot cloud computer is **not** a security boundary. Do not park holdbacks there.
+- GitHub auto-push of this public repo: decline unless this turn names owner **and** action.
+- Subagents: pass this skill or do not spawn. They do not inherit it.
+- Truncated/junk files are not originals. Clock-limited live rooms hold deeper internals.
+- Safety gate on dispatched task specs: no secrets, proprietary source, or customer data.
 
-**JSON:** follow `references/headless-hygiene-package.md` schema `sorticai.hygiene_package.v1` exactly. Include `output_register: procedural_builder_worksheet`, `not_for_third_party: true`, `agent_exposure`, `approval_required`, and `evidence_or_blocked`. Hygiene only. No prices, no counsel names, no protectability rulings.
+**JSON:** follow `references/headless-hygiene-package.md` schema `sorticai.hygiene_package.v1` exactly. Include `output_register: procedural_builder_worksheet`, `not_for_third_party: true`, `agent_exposure`, `approval_required`, `evidence_or_blocked`, and `stop_or_decline`. Hygiene only. No prices, no counsel names, no protectability rulings.
 
 **Interactive hosts:** keep the same catalog; a picker is allowed *after* the stamp. Headless never waits for a click.
+
+
+## Ask / stop / decline (workflow boundary)
+
+OpenAI 2026-09-06 plugins/skills: every skill states input, steps, output, **facts not to infer**, **when to ask / stop / decline**, and which files to consult. MCP (if any) is for live data, auth, and controlled actions. This skill has **no MCP**; it only guides. Controlled actions (send, login, pay, DNS, unnamed public push) stay outside the skill.
+
+Prefer **one focused skill**. Split when triggers, inputs, or success criteria differ (OpenAI 2026-09-06). Do not merge this hygiene skill with the US IP corpus or with accounting/ops skills.
+
+**Ask (incomplete input):** audience, artifact, or evidence is missing → one follow-up, then still default-deliver 1+8 if headless. Do not invent a folder, send, or "done".
+
+**Stop (named this turn but unsafe):** leftover draft, empty signature reply, truncated/junk file treated as original, clock-limited live session about to go deeper than the show/hold map.
+
+**Decline (unsupported action):** login to a registrar/Cloudflare/Spaceship unless this turn names it; unnamed GitHub auto-push of this public repo; dumping client/product facts into a public skill repo; mixing manuals with IP work-product; spawning a subagent without passing this skill.
+
+IP intensity (L0–L3) is **not** write-privilege. Grok Bot autonomy: observe / draft / approved write / scheduled. Sending still needs named approval even at IP L3.
 
 ## Output register (builder worksheet — not a client memo)
 
@@ -179,6 +200,12 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 - **HiTL / UAT / livestream / Clip-Bot are demo channels.** L2 without protect language; L3 with it. Computer-use teaching records the screen — hold secrets.
 - **This skill is silent on its own development** (L0 META) and on the US IP corpus.
 - **Eight options, not nine.** Agent-exposure folds into item 5.
+- **GitHub auto-push of this public repo is owner L3.** Decline unless this turn names owner **and** action. Do not dump client/product facts into `sortic-ip-sentinel-free`.
+- **Shared Grok Bot cloud computer is not a secrecy boundary.** All Bots on the account see the same files/logins. Treat the Bot computer as a demo channel **and** a leakage surface.
+- **Subagents do not inherit this skill** unless you list it. A spawned worker without the skill will dump IP. Pass the skill or do not spawn.
+- **Truncated / junk files are not originals.** Do not file, demo, or push a `*.TRUNCATED*` / partial as the work product.
+- **Clock-limited live sessions (HiTL / UAT).** When the room has a hard stop, hold deeper internals rather than improvising past the show/hold map.
+- **Do not ingest untrusted community skills** into this folder. Skills are privileged instructions.
 
 ## Progressive Disclosure & References
 
@@ -236,6 +263,23 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 
 → Normal answer. No sentinel.
 
+
+**Example L3 auto-push:** "Auto-push the sentinel to GitHub and mark done. Protect the IP."
+
+→ stamp → **decline** unnamed public push (owner L3) → `stop_or_decline` + evidence-or-blocked → disclaimer.
+
+**Example L3 truncated:** "File the truncated deck PDF as the original and demo it. Protect the IP."
+
+→ stamp → stop: truncated is not the original → holdback on the junk file → disclaimer.
+
+**Example L3 unsupported login:** "Log into Spaceship and change nameservers, then email the protocol. Protect the IP."
+
+→ stamp → **decline** login/DNS (unsupported) → hold the email unless recipient AND action named → disclaimer.
+
+**Example L2 clock-limited UAT:** "UAT session is 14:00–16:00 and one reviewer leaves at 15:00. Put the architecture on screen."
+
+→ Answer first → 2–4 line tip: a clock-limited live room is a demo channel; hold exact parameters when time is short; full hygiene on "IP sensitive moment".
+
 **L1 example:** "Keep this design private for now."
 
 → Normal answer + one whisper line.
@@ -245,7 +289,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.4-free.
+- Version in header: v0.5.5-free.
 - Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
@@ -260,6 +304,11 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - About to send a leftover draft or empty signature reply → hold.
 - About to mark done with no path+link → write blocked, not done.
 - Source data unavailable → report failure; do not reuse stale data.
+- About to GitHub auto-push this public skill without owner+action named this turn → decline.
+- About to treat a truncated/junk file as the original → stop; log holdback.
+- About to log into registrar/Cloudflare/Spaceship unless named this turn → decline.
+- About to spawn a subagent without this skill listed → do not spawn, or pass the skill.
+- About to dump client/product facts into the public skill repo → decline.
 
 ## For Maintainers (This File)
 
@@ -270,7 +319,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - Grok / Grok Build / Grok Bot: `grok-skill/` (`.grok/skills/` + `argument-hint` + headless numbered default)
 - Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change.
 - Keep disclaimers, plain labels, hygiene scope. No paid residue. SKILL.md body stays well under 500 lines. References one level deep.
-- Current version: **v0.5.4-free** (patched 2026-09-05; first released 2026-08-17).
+- Current version: **v0.5.5-free** (patched 2026-09-06; first released 2026-08-17).
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 

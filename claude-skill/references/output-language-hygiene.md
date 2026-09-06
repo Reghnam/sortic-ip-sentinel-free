@@ -3,7 +3,7 @@
 **Free only · Not legal advice · No guarantees**
 
 Load this file when drafting any L3 deliverable (maps, checklists, JSON, slides).
-These rules come from counsel review of adjacent SorticAI writing (2 Sep 2026), Task Extractor / Grok Bot operating notes 1–4 Sep 2026 (do not invent status; do not email third parties unless the item names recipient **and** action; evidence-or-blocked), OpenAI plugins/skills 2026-09-05 (do not invent, replace, or reroll; state what the model must not infer), and Grok Bot skill anatomy (what requires approval; report failure instead of stale data). They are **writing rules**, not legal opinions.
+These rules come from counsel review of adjacent SorticAI writing (2 Sep 2026), Task Extractor / Grok Bot operating notes 1–4 Sep 2026 (do not invent status; do not email third parties unless the item names recipient **and** action; evidence-or-blocked), OpenAI plugins/skills 2026-09-06 (do not invent, replace, or reroll; state what the model must not infer), and Grok Bot skill anatomy (what requires approval; report failure instead of stale data). They are **writing rules**, not legal opinions.
 
 ## Banner (put on every export)
 
@@ -23,6 +23,9 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Not found / not in this turn. | Invented status ("filed", "cleared", "sent").
 | Blocked — no path+link. | "Done" with no artifact, or inbox-root dump as archived. |
 | Hold leftover draft. | Auto-publish / resend / empty signature reply. |
+| Stop: truncated file is not the original. | Demo / file / push a junk partial as the work. |
+| Decline unnamed public auto-push. | "Pushed to GitHub" with no owner+action this turn. |
+| Decline unsupported login/DNS. | "Logged into Spaceship / changed nameservers". |
 
 ## Hard rules
 
@@ -37,6 +40,9 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 8. **Priority ≠ impact.** If you rank items, say *why* this one is first (time-to-exposure, irreversibility), not a naked "P1".
 9. **Do not mix "a lawyer reviewed this" with "not legal advice".** This free skill never claims counsel review. If a later paid product does, that is a different document.
 10. **Plain labels.** Avoid internal codes (L0–L3, T0–T3) in user-visible text except this file and maintainer notes.
+11. **Truncated/junk is not the original.** Do not treat `*.TRUNCATED*` or partial downloads as the work product.
+12. **Do not dump client/product facts into a public skill repo.**
+13. **Ask / stop / decline.** Incomplete → ask. Unsafe named action → stop. Unsupported (login, unnamed public push) → decline. Do not improvise.
 
 ## Headless / JSON / Grok Bot
 
@@ -52,5 +58,8 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] Claiming sent? Message-id + recipients written?
 - [ ] Claiming done? Path + link, not inbox-root?
 - [ ] Banner + standing disclaimer present.
+- [ ] Truncated file treated as original? Stop.
+- [ ] About to auto-push a public repo without owner+action? Decline.
+- [ ] About to log into registrar/Cloudflare unless named? Decline.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.

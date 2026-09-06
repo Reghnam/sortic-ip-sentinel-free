@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.4-free)
+# Agent / computer-use exposure log — Template (v0.5.5-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -22,6 +22,11 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 - [ ] Public browser / Clip-Bot / livestream / HiTL / social post is treated as **public** exposure, not a private workspace.
 - [ ] If claiming a send: message-id + recipients are written. Else log `not_sent`.
 - [ ] If claiming done: folder path + link exist. Inbox-root dumps are `blocked_no_evidence`.
+- [ ] Shared Bot cloud computer is **not** a secrecy boundary — do not park holdbacks there.
+- [ ] GitHub auto-push of this public repo declined unless owner **and** action named this turn.
+- [ ] Truncated/junk files are not originals.
+- [ ] Subagent spawned only if this skill is listed on it.
+- [ ] Task specs dispatched to computer-use contain no secrets / proprietary source / customer data.
 
 ## Rules (from 4 Sep operator briefs + Grok Bot + OpenAI 2026-09-05)
 
@@ -32,6 +37,10 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 5. **Publishing a skill or Bot** without protect language is L2 (soft tip). With protect language it is L3. HiTL / UAT / livestream without protect language is L2.
 6. **Evidence-or-blocked.** Done requires path + link. If source data is unavailable, report failure — do not use stale data.
 7. **Claimed send needs message-id + recipients.**
+8. **Shared Bot computer ≠ vault.** All Bots on the account see the same files/logins.
+9. **Public-repo auto-push is owner L3.** Decline unnamed.
+10. **Subagents do not inherit this skill.** Pass it or do not spawn.
+11. **Truncated ≠ original.** Clock-limited live rooms hold deeper internals.
 
 JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-hygiene-package.md`). Prefer empty arrays over invented rows.
 

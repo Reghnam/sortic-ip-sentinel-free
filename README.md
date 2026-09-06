@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.4-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.5-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -12,6 +12,8 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Agent / computer-use exposure logs (what the Bot showed, emailed, pushed, posted, livestreamed)
 - Approval gate (recipient AND action named this turn; leftover drafts unsent)
 - Evidence-or-blocked (done requires path+link)
+- Ask / stop / decline (incomplete → ask; leftover/truncated → stop; login/unnamed public push → decline)
+- Shared Bot computer is not a secrecy boundary; subagents do not inherit this skill
 - Provisional readiness checklists
 - Provenance & holdback audits
 - Headless hygiene package JSON (`sorticai.hygiene_package.v1`)
@@ -47,11 +49,11 @@ Custom GPT fallback: [`openai-gpt-package/`](openai-gpt-package/).
 - L2 exposure: "investor demo in 10 days" or "publish the Bot and post a clip" → soft tip only.
 - L0: privacy, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks → silent.
 
-Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. It will **not** email/post leftover drafts unless this turn names the recipient **and** the action. Done requires evidence.
+Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. It will **not** email/post leftover drafts unless this turn names the recipient **and** the action. Unnamed GitHub auto-push and registrar logins are **declined**. Done requires evidence. Truncated files are not originals.
 
 ---
 
-## Compatibility (v0.5.4)
+## Compatibility (v0.5.5)
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|
