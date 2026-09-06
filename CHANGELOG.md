@@ -2,6 +2,39 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.5-free] — 2026-09-06
+
+Patched from: david@vmcorp.cz Task Extractor brief **5 Sep 2026** (Sentinel→GitHub auto-push is owner + L3 gate — do not dump client/product facts into the public repo; truncated/junk files are not originals; do not mix manuals with IP work-product; clock-limited HiTL/UAT is a demo channel; do not log into Spaceship/Cloudflare unless named; do not invent status; leftover drafts unsent); AI Agentic SKILL.md best-practices job 6 Sep 06:40 UTC (conversation `8d1b8589-7502-4528-9cee-9521583585a5` — body not readable: no Grok chat-history connector; sources re-crawled); Headless Agent topics last successful run 2 Sep ("Agent Skills & Headless Shift"); OpenAI **plugins/build/skills** crawled 2026-09-06 (workflow boundary: input / steps / output / facts not to infer / when to ask, stop, or decline; MCP = live data + auth + controlled actions, skill = sequences; test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported); Anthropic Agent Skills best-practices (subagents do not inherit skills; tool-specific frontmatter is non-portable; skills are privileged instructions; evals first; SKILL.md <500; references one level deep; TOC on long refs); Grok Bot skills/routines + DataCamp 2026-08-27 (shared cloud computer is not a security boundary; autonomy observe/draft/approved-write/scheduled; safety gate: no secrets in dispatched task specs). **No Grok chat-history connector exists**; Grok-chat insights are from those docs, this 09:30 Prague job, live automations, and X ingest 26 Aug–3 Sep 2026.
+
+### OpenAI (first)
+
+- Description 785 chars (under Codex 8k / 2% truncation and Anthropic 1024). Front-loads GitHub auto-push + subagent. States ask / stop / decline for unsupported actions (login, registrar, unnamed repo push).
+- `agents/openai.yaml` `default_prompt` names ask/stop/decline, truncated-not-original, unnamed auto-push. Implicit invocation stays on. **No MCP `dependencies.tools`.** Controlled actions stay outside the skill.
+- New evals 8–10 cover OpenAI’s 2026-09-06 test inventory: indirect request, unsupported action, truncated-as-original.
+- ChatGPT zip path unchanged (`SKILL.md` at zip root). Skill folder stays the install unit. Recrawl 6 Sep 08:23 CEST: prefer one focused skill; split when triggers, inputs, or success criteria differ. Skills-only plugin shape (no MCP). Optional Agent Plugins `plugin.json` wrap later — not this patch.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Name kebab-case ≤64. Description 785 chars, no XML. Body ~310 lines (under 500).
+- Gotchas: subagents do not inherit this skill; untrusted community skills not ingested; truncated ≠ original; clock-limited live rooms.
+- Evals now 10 (≥3 required). Eight options, not nine. `evals.md` has a TOC (file >100 lines). References one level deep.
+
+### Grok Build (third)
+
+- Shared Bot cloud computer is **not** a secrecy boundary. Holdbacks do not live there.
+- IP L0–L3 is signal intensity, not write-privilege. Sending still needs named approval.
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action.
+- Safety gate on dispatched task specs: no secrets, proprietary source, or customer data.
+- `grok -p` / Grok Build headless default 1+8 unchanged.
+
+### Shared
+
+- JSON `sorticai.hygiene_package.v1` adds `stop_or_decline` (`ask | stop | decline | none`). Edition `0.5.5-free`.
+- Classification: L3-PUSH, L3-JUNK, L3-LOGIN, L2-05 clock-limited UAT, L0-07 subagent/corpus.
+- Output-language rules 11–13: truncated ≠ original; no client facts in public skill repo; ask/stop/decline.
+- Stamp: `v0.5.5-free` / patched 2026-09-06. First release date remains 2026-08-17.
+- Still free-only. Still not legal advice. Still silent on meta/privacy/corpus.
+
 ## [0.5.4-free] — 2026-09-05
 
 Patched from: david@vmcorp.cz Task Extractor brief **4 Sep 2026** (evidence-or-blocked: Drive root ≠ archived; do not invent status; do not email third parties unless the item names them; do not auto-publish / resend / send leftover drafts or empty signature replies; confirm message-id + recipients before claiming send; HiTL/UAT Thu 10 Sep and Grok Bot Galaxy livestream 15–17 Sep as demo channels); Headless Agent topics job (computer-use / skill development; leave as-is); adjacent US IP corpus hourly + EOD prompts (sentinel remains hygiene-only; disk==claim); OpenAI **plugins/build/skills** page crawled 2026-09-05 (do not invent, replace, or reroll; state what the model must not infer; when to stop or decline; incomplete inputs; a dependency does not replace workflow; optional plugin wrap); Anthropic Agent Skills best-practices + gotchas (description is the trigger; ≥3 evals; SKILL.md as TOC; avoid too many options); Grok Bot skills/routines docs (useful skill states what requires approval; report failure instead of stale data; sending/publishing needs approval; computer-use teaching records the screen). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, live automations (this 09:30 Prague job), and X/Bot ingest notes.

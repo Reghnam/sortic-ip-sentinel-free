@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.4-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.5-free
 
-**Status**: Public on GitHub. v0.5.4-free patched 2026-09-05 (OpenAI → Anthropic → Grok Build). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.5-free patched 2026-09-06 (OpenAI → Anthropic → Grok Build, 2026-09-06). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -50,6 +50,8 @@ Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass
+- [ ] Evals in `references/evals.md` still pass (now 10: indirect, unsupported auto-push, truncated-as-original)
+- [ ] Unnamed GitHub auto-push / registrar login → decline
+- [ ] Truncated/junk files are not originals
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**

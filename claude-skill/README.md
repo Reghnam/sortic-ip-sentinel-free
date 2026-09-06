@@ -1,4 +1,4 @@
-# SorticAI Free IP Sentinel — Claude Code (v0.5.4-free)
+# SorticAI Free IP Sentinel — Claude Code (v0.5.5-free)
 
 Anthropic-strict package. SKILL.md YAML is **only** `name` + `description` (required). Name is kebab-case, ≤64 chars. Description is 691 chars (limit 1024), includes what + when + do-not-use + Bot/computer-use, no XML.
 
