@@ -20,14 +20,15 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 ```json
 {
   "schema": "sorticai.hygiene_package.v1",
-  "edition": "0.5.5-free",
+  "edition": "0.5.6-free",
   "activation_level": "L3",
   "output_register": "procedural_builder_worksheet",
   "not_for_third_party": true,
+  "owner_gated": true,
   "noticed": "one plain sentence",
   "snapshot": {
     "building": "user's words, one line",
-    "audience": "investors | partners | customers | pilot | public | other",
+    "audience": "investors | partners | customers | pilot | public | board | other",
     "exposure_risk_signal": "low | medium | high"
   },
   "show_hold": [
@@ -39,7 +40,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
   "holdbacks": ["exact parameters", "full source", "production data"],
   "contribution_log_started": false,
   "agent_exposure": [
-    {"runtime": "grok-bot | codex-p | claude-p | computer-use | other", "channel": "browser | email | github | social | livestream | hitl | file | none", "what": "redacted one line", "audience_named": false, "action_named": false, "evidence": "", "action": "hold | ok | not_sent | blocked_no_evidence"}
+    {"runtime": "grok-bot | grok-build | codex-p | claude-p | computer-use | other", "channel": "browser | email | github | social | livestream | hitl | board | backup | export | local-computer | file | none", "what": "redacted one line", "audience_named": false, "action_named": false, "evidence": "", "action": "hold | ok | not_sent | blocked_no_evidence | declined"}
   ],
   "approval_required": true,
   "evidence_or_blocked": "done requires path+link; promises and inbox-root dumps are not done",
@@ -57,13 +58,16 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 - If context is thin, set `deliverables` to `offered` and still return the envelope.
 - Markdown above the JSON is allowed (stamp + snapshot). Do not wrap JSON in a story.
 - Never invent a deadline. Never claim links were "verified" unless you state the exact check.
-- Never invent status. Do not invent, replace, or reroll a result. Never email/post/auto-publish the JSON or the work unless this turn names the recipient **and** the action (`not_for_third_party`, `approval_required`). Leftover drafts stay unsent.
+- Never invent status. Do not invent, replace, or reroll a result. Never email/post/auto-publish/pay the JSON or the work unless this turn names the recipient **and** the action (`not_for_third_party`, `approval_required`, `owner_gated`). Leftover drafts and partner pre-reads stay unsent.
 - Claimed send needs message-id + recipients, else `not_sent`.
 - `evidence_or_blocked`: write blocked when there is no path+link. Inbox-root dumps are not done.
-- `stop_or_decline`: `ask` (incomplete input), `stop` (leftover draft / truncated-as-original / clock-limited overshare), `decline` (unsupported login, unnamed public auto-push, client facts into public repo), or `none`.
+- `stop_or_decline`: `ask` (incomplete input), `stop` (leftover draft / truncated-as-original / clock-limited overshare / backup-tree growth), `decline` (unsupported login, unnamed public auto-push, client facts into public repo, partner send, pay, identity/live-copy, backup-as-publish), or `none`.
+- `owner_gated`: always `true` on this edition. Send / publish / pay / identity / live title-copy stay declined unless this turn names recipient **and** action. IP L3 is not write-privilege.
 - Truncated/junk files are not originals. Do not emit them as work product.
-- Do not dump client/product facts into a public skill repo.
+- Do not dump client/product facts into a public skill repo. ChatGPT/Codex skill zips are scanned — no secrets in the zip.
+- Backup ≠ publish. Project export is owner-desk.
+- Stale schedule metadata ≠ "didn't run".
 - If source data is unavailable, report failure — do not reuse stale data.
 - `agent_exposure` **must be emitted**. Empty array is correct when the agent did not show/send anything this turn.
 
-**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.5-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
+**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.6-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.

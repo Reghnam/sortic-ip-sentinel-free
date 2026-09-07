@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.5-free)
+# Agent / computer-use exposure log — Template (v0.5.6-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -8,41 +8,46 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 
 ## What the agent did (redact secrets in this table)
 
-| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / file) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked | Evidence (path+link or message-id) |
+| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / file) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
 |------|---------------------------|-----------------------------------------------------|------------------------|-------------------|-------------|------------------|
 |      |                           |                                                     |                        |                       |                       |                              |                                      |
 
 ## Pre-send checklist (computer-use)
 
 - [ ] Exact parameters / recipes / full source are **not** in the paste, email, commit, or public page.
-- [ ] Recipient **and** action were **named in this turn**. If either is missing, do not email, post, auto-publish, or send leftover drafts. (`approval_required`)
+- [ ] Recipient **and** action were **named in this turn**. If either is missing, do not email, post, auto-publish, pay, publish identity/live-copy, or send leftover drafts / partner pre-reads. (`approval_required`, `owner_gated`)
 - [ ] Not a leftover draft or empty signature reply.
-- [ ] No invented status ("filed", "cleared", "counsel approved", "sent").
+- [ ] No invented status ("filed", "cleared", "counsel approved", "sent", "didn't run").
 - [ ] Contribution log names the **human** who conceived vs the **runtime** that produced the bytes.
-- [ ] Public browser / Clip-Bot / livestream / HiTL / social post is treated as **public** exposure, not a private workspace.
+- [ ] Public browser / Clip-Bot / livestream / HiTL / board / social post is treated as **public** exposure, not a private workspace.
 - [ ] If claiming a send: message-id + recipients are written. Else log `not_sent`.
 - [ ] If claiming done: folder path + link exist. Inbox-root dumps are `blocked_no_evidence`.
-- [ ] Shared Bot cloud computer is **not** a secrecy boundary — do not park holdbacks there.
+- [ ] Shared Bot cloud computer is **not** a secrecy boundary — do not park holdbacks there. Local-computer execution is not a vault either.
 - [ ] GitHub auto-push of this public repo declined unless owner **and** action named this turn.
 - [ ] Truncated/junk files are not originals.
 - [ ] Subagent spawned only if this skill is listed on it.
 - [ ] Task specs dispatched to computer-use contain no secrets / proprietary source / customer data.
+- [ ] Backup pack is not treated as a publish. Project export is owner-desk.
+- [ ] Registrar "new device" alert from rotating Bot egress → decline login.
 
-## Rules (from 4 Sep operator briefs + Grok Bot + OpenAI 2026-09-05)
+## Rules (from 4–6 Sep operator briefs + Grok Bot + OpenAI 2026-09-06/07)
 
-1. **Do not invent, replace, or reroll a result.** Unknown = unknown. Write "not found" or "not in this turn".
-2. **Approval = recipient AND action named this turn.** Leftover drafts, empty signature replies, auto-publish, and resend stay on hold.
+1. **Do not invent, replace, or reroll a result.** Unknown = unknown. Write "not found" or "not in this turn". Stale nextRun ≠ didn't run.
+2. **Approval = recipient AND action named this turn.** Leftover drafts, empty signature replies, auto-publish, partner pre-reads, pay, identity/live-copy, and resend stay on hold.
 3. **Do not paste holdbacks into computer-use.** Browser-use, MCP servers, livestreams, and social schedulers are public-adjacent. Teaching records the screen — hold secrets.
 4. **Log the runtime.** "Grok Bot", "Codex `-p`", "Claude `-p`", plugin name. Helps later inventorship hygiene (human conception vs tool).
-5. **Publishing a skill or Bot** without protect language is L2 (soft tip). With protect language it is L3. HiTL / UAT / livestream without protect language is L2.
+5. **Publishing a skill or Bot** without protect language is L2 (soft tip). With protect language it is L3. HiTL / UAT / livestream / board without protect language is L2.
 6. **Evidence-or-blocked.** Done requires path + link. If source data is unavailable, report failure — do not use stale data.
 7. **Claimed send needs message-id + recipients.**
-8. **Shared Bot computer ≠ vault.** All Bots on the account see the same files/logins.
+8. **Shared Bot computer ≠ vault.** All Bots on the account see the same files/logins/cookies. Egress IP is not sticky.
 9. **Public-repo auto-push is owner L3.** Decline unnamed.
 10. **Subagents do not inherit this skill.** Pass it or do not spawn.
 11. **Truncated ≠ original.** Clock-limited live rooms hold deeper internals.
+12. **Backup ≠ publish.** Weekly backup / project export is owner-desk. Do not grow backup trees.
+13. **Owner-gated even at IP L3:** send, publish, pay, identity, live title/copy.
+14. **Skill zip is scanned.** No secrets, no client facts in ChatGPT/Codex uploads.
 
-JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-hygiene-package.md`). Prefer empty arrays over invented rows.
+JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-hygiene-package.md`). Prefer empty arrays over invented rows. Set `owner_gated: true`.
 
 > **Builder worksheet.** Do not send this table to third parties as legal analysis. Not legal advice. No guarantees.
 

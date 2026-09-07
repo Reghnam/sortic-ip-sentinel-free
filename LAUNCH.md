@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.5-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.6-free
 
-**Status**: Public on GitHub. v0.5.5-free patched 2026-09-06 (OpenAI → Anthropic → Grok Build, 2026-09-06). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.6-free patched 2026-09-07 (OpenAI → Anthropic → Grok Build, 2026-09-07). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -19,7 +19,7 @@ Project-local: copy to `.agents/skills/sortic-ip-sentinel-free`. Invoke with `$`
 
 **ChatGPT Skills (Business / Enterprise / Edu)**
 1. Download ZIP of `chatgpt-skill/` (or clone and zip that folder so `SKILL.md` is at the zip root).
-2. Skills tab → upload. Invoke with `@`.
+2. Skills tab → upload. Invoke with `@`. Zip is scanned — no secrets.
 
 **Custom GPT (fallback, hosted sharing)**
 See `openai-gpt-package/HOW_TO_CREATE_IN_OPENAI.md`.
@@ -40,18 +40,18 @@ git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
 cp -r sortic-ip-sentinel-free/grok-skill ~/.grok/skills/sortic-ip-sentinel-free
 ```
 
-Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -p`) and **Grok Bot** use numbered options + optional JSON. Do not ask the Grok viewer to run shell commands. Bot must not email third parties unless this turn names them.
+Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -p`) and **Grok Bot** use numbered options + optional JSON. Do not ask the Grok viewer to run shell commands. Bot must not email third parties unless this turn names them. Backup is not publish.
 
 ## 4. Verification Checklist
 
 - [ ] L3 triggers ("protect the IP", "IP sensitive moment", "Bot will email the deck — protect the IP")
-- [ ] L0 silence on privacy/config/meta work **and** US IP corpus ticks
-- [ ] Headless: stamp → numbered 1–8 → JSON schema `sorticai.hygiene_package.v1` (includes `agent_exposure`)
+- [ ] L0 silence on privacy/config/meta work, US IP corpus ticks, workspace renewal, weekly backup
+- [ ] Headless: stamp → numbered 1–8 → JSON schema `sorticai.hygiene_package.v1` (includes `agent_exposure`, `owner_gated`)
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 10: indirect, unsupported auto-push, truncated-as-original)
-- [ ] Unnamed GitHub auto-push / registrar login → decline
-- [ ] Truncated/junk files are not originals
+- [ ] Evals in `references/evals.md` still pass (now 13: partner send, backup-as-publish, workspace renewal L0)
+- [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity → decline
+- [ ] Backup ≠ publish; truncated/junk files are not originals
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**
