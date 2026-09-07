@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.5-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.6-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -11,9 +11,12 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - AI / human contribution logs (USPTO 2025 aligned)
 - Agent / computer-use exposure logs (what the Bot showed, emailed, pushed, posted, livestreamed)
 - Approval gate (recipient AND action named this turn; leftover drafts unsent)
+- Owner-gated even at IP L3 (send / publish / pay / identity / live-copy)
+- Backup ≠ publish; project export is owner-desk
 - Evidence-or-blocked (done requires path+link)
-- Ask / stop / decline (incomplete → ask; leftover/truncated → stop; login/unnamed public push → decline)
-- Shared Bot computer is not a secrecy boundary; subagents do not inherit this skill
+- Ask / stop / decline (incomplete → ask; leftover/truncated/backup-tree → stop; login/unnamed public push/partner send/pay/identity → decline)
+- Shared Bot computer is not a secrecy boundary; local-computer execution is not a vault; subagents do not inherit this skill
+- Bot egress IP is not sticky — registrar new-device alerts → decline login
 - Provisional readiness checklists
 - Provenance & holdback audits
 - Headless hygiene package JSON (`sorticai.hygiene_package.v1`)
@@ -46,14 +49,14 @@ Custom GPT fallback: [`openai-gpt-package/`](openai-gpt-package/).
 ## Usage triggers (examples)
 
 - L3: "protect the IP", "IP sensitive moment", "trade secret before investor demo", "how to protect this before we file", "NDA before sharing the protocol", "the Grok Bot will email the deck — protect the IP".
-- L2 exposure: "investor demo in 10 days" or "publish the Bot and post a clip" → soft tip only.
+- L2 exposure: "investor demo in 10 days", "publish the Bot and post a clip", or "board/partner weekly" → soft tip only.
 - L0: privacy, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks → silent.
 
-Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. It will **not** email/post leftover drafts unless this turn names the recipient **and** the action. Unnamed GitHub auto-push and registrar logins are **declined**. Done requires evidence. Truncated files are not originals.
+Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. It will **not** email/post leftover drafts, partner pre-reads, or treat a backup as publish unless this turn names the recipient **and** the action. Unnamed GitHub auto-push, registrar logins, pay, and identity publish are **declined**. Done requires evidence. Truncated files are not originals. Workspace renewal is silent.
 
 ---
 
-## Compatibility (v0.5.5)
+## Compatibility (v0.5.6)
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|

@@ -1,4 +1,4 @@
-# How to Publish the SorticAI Free IP Sentinel (v0.5.5-free) to OpenAI
+# How to Publish the SorticAI Free IP Sentinel (v0.5.6-free) to OpenAI
 
 Primary path in 2026 is **ChatGPT Skills + Codex SKILL.md**, not a Custom GPT.
 
@@ -14,15 +14,15 @@ cp -r sortic-ip-sentinel-free/chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-
 Fallback: `~/.codex/skills/`. Project: `.agents/skills/`. Invoke `$` or `/skills`. Description is front-loaded so implicit match survives list truncation.
 
 **ChatGPT Skills (Business / Enterprise / Edu)**
-Zip `chatgpt-skill/` with `SKILL.md` at the zip root → Skills tab. Invoke `@`.
+Zip `chatgpt-skill/` with `SKILL.md` at the zip root → Skills tab. Invoke `@`. The zip is scanned — no secrets, no client facts.
 
 `agents/openai.yaml` sets display name, default prompt, brand colour, and `allow_implicit_invocation: true`.
 
-Headless: "Output numbered options and hygiene package JSON."
+Headless: "Output numbered options and hygiene package JSON." Backup is not publish. Owner-gated send/pay/identity.
 
 ## Path 2: Custom GPT (fallback)
 
-1. Create a GPT named `SorticAI Free IP Sentinel (v0.5.5-free)`.
+1. Create a GPT named `SorticAI Free IP Sentinel (v0.5.6-free)`.
 2. Paste `instructions.txt` into Instructions.
 3. Upload `knowledge/` files.
 4. Starters: "IP sensitive moment on our new protocol before investor demo" / "Help me create a show/hold map".
