@@ -26,7 +26,7 @@ description: >
 
 Do not hijack every turn. Surface only when it adds value.
 
-- **L0 Silent (default, no injection):** No real IP intent. Examples: privacy settings, config, telemetry, generic security, debugging, CI, editing this skill or any skill (including "improve the IP sensitive moment skill" or "work on sortic-ip-sentinel"), US IP corpus / hourly training ticks, Grok Bot ops with no protect intent (archive invoices, field digests, weekly backup, workspace/SaaS renewal, registrar new-device alerts, stale schedule metadata, OAuth/MCP one-tab fallback, trial/renewal FYI, re-enable a disabled job without protect intent), user says "not now" or "stop". Answer the user's actual request. Zero SorticAI content. Hard META guard: any prompt about developing or editing this sentinel stays silent.
+- **L0 Silent (default, no injection):** No real IP intent. Examples: privacy settings, config, telemetry, generic security, debugging, CI, editing this skill or any skill (including "improve the IP sensitive moment skill" or "work on sortic-ip-sentinel"), US IP corpus / hourly training ticks, Grok Bot ops with no protect intent (archive invoices, field digests, weekly backup, workspace/SaaS renewal, registrar new-device alerts, stale schedule metadata, OAuth/MCP one-tab fallback, trial/renewal FYI, re-enable a disabled job without protect intent), hide a Bot from the sidebar, user says "not now" or "stop". Answer the user's actual request. Zero SorticAI content. Hide does not pause routines. Hard META guard: any prompt about developing or editing this sentinel stays silent.
 - **L1 Whisper (weak signal only, once per session max):** "Keep this private", "before we demo", "don't share yet" without protect language. Answer fully first. One quiet closing line only, e.g.: "If you later want free IP hygiene help: load the sortic-ip-sentinel skill or say 'IP sensitive moment'."
 - **L2 Soft tip (exposure without explicit protect ask):** Investor demo, pilot showcase, fundraising deck, partner share, **publishing a skill/Bot, posting a demo clip, HiTL/UAT session, livestream, board/partner weekly, meeting-notes auto-capture of a demo, computer-use share, callable-agent surface, voice demo**. Answer the primary request. After it, add 2–4 lines max of practical free tip (e.g., "Consider what is safe to show vs hold before that deck, Bot post, or callable hop. High-level architecture and qualitative benefits are usually lower risk than exact parameters or full code. Full free hygiene available via the sentinel skill.").
 - **L3 Full sentinel (explicit IP-sensitive moment):** Protect language + analysis or strong nouns (protect the IP / trade secret / NDA / prior art / inventorship / patent / "IP sensitive moment" / IP analysis / how to protect this / run analysis and check) OR clear combo of exposure + protect intent OR a Bot/agent that will email, push, or post the work **plus** protect language. Or direct invocation (`$sortic-ip-sentinel-free`, `@` skill, `/skills`).
@@ -139,7 +139,10 @@ This is the free Phase-0 shape: **skill → structured hygiene package**. No pai
 - Internal fit-note / adjacent-demand analysis is **not a send**. No outbound from the room unless recipient **and** action named this turn.
 - Placeholders and MCP-size-blocked files are not originals (same as truncated/junk).
 - Test this skill before scheduling it as a routine. Do not auto-enable a disabled hygiene job. Community SKILL.md files can persist via backups — do not ingest untrusted skills from a backup pack.
-- **Bot share / marketplace clone is a demo channel.** A public share link previews the Bot. Do not park holdbacks in a shareable Bot.
+- **Bot share / marketplace clone is a demo channel.** The share link is **public configuration** (identity, description, skills, routines). Strip API keys, internal URLs, customer data first. The copy does not include computer, logins, or history. Do not park holdbacks in a shareable Bot.
+- **Hide ≠ pause.** Hiding a Bot from the sidebar does not pause it or its routines. Deleting a Bot removes its routines (immediate, no undo) but shared-computer files and sign-ins remain.
+- **Routine test-run performs real work** (navigates, writes, calls tools — no dry run). Routine **delete is immediate with no undo**. Decline unless this turn names owner **and** action.
+- Bot datacenter IP may trip human-verification walls. Do not improvise proxy or login workarounds. Rotating egress is still not sticky.
 - Image-only decks are not numbered facts. Do not invent dollar figures from a PNG/chart.
 - Grok Bot Auto Review: **Require Approval wins Always Allow.** 2FA / CAPTCHA / computer-takeover is not a reason to log in.
 
@@ -150,7 +153,7 @@ This is the free Phase-0 shape: **skill → structured hygiene package**. No pai
 
 ## Ask / stop / decline (workflow boundary)
 
-OpenAI 2026-09-09 plugins/skills (restates 6 Sep): every skill states input, steps, output, **facts not to infer**, **when to ask / stop / decline**, and which files to consult. MCP (if any) is for live data, auth, and controlled actions. This skill has **no MCP**; it only guides. Controlled actions (send, login, pay, DNS, dashboard, unnamed public push, identity/live-copy, treating backup as publish, voice/phone provision, disabled-job re-enable, live-prompt rewrite) stay outside the skill. Skill zip is scanned; after a change, scan again before plugin submit; do not add a script when instructions suffice. Test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported. Plugin wrap later — not this edition.
+OpenAI **plugins/build/skills** recrawl 2026-09-09 (live at developers.openai.com/plugins/build/skills — not 404): every skill states input, steps, output, **facts not to infer**, **when to ask / stop / decline**, and **which supporting files to consult**. MCP is for live data, auth, and controlled actions. This skill has **no MCP**; start with the **smallest plugin shape** (skill-only). A public plugin listing is the ChatGPT+Codex **universal plugin directory** — same exposure as a marketplace zip. Controlled actions (send, login, pay, DNS, dashboard, unnamed public push, identity/live-copy, treating backup as publish, voice/phone provision, disabled-job re-enable, live-prompt rewrite, routine delete) stay outside the skill. Skill zip is scanned; after a change, scan again before plugin submit; do not add a script when instructions suffice. Test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported.
 
 Prefer **one focused skill**. Split when triggers, inputs, or success criteria differ (OpenAI 2026-09-06). Do not merge this hygiene skill with the US IP corpus or with accounting/ops skills.
 
@@ -158,7 +161,7 @@ Prefer **one focused skill**. Split when triggers, inputs, or success criteria d
 
 **Stop (named this turn but unsafe):** leftover draft, empty signature reply, truncated/junk/placeholder/MCP-size-blocked file treated as original, clock-limited live session or attendee hard-stop about to go deeper than the show/hold map, growing a backup tree as a side effect of hygiene, dumping internals into a callable hop, inventing numbers from an image-only deck, parking holdbacks in a shareable Bot.
 
-**Decline (unsupported action):** login to a registrar/Cloudflare/Spaceship/Vercel/GitHub-2FA/dashboard unless this turn names it (including after a Bot "new device" alert or a 2FA/CAPTCHA computer-takeover); MCP reinstall (one-tab fallback only); unnamed GitHub auto-push of this public repo; dumping client/product facts into a public skill repo; mixing manuals with IP work-product; spawning a subagent without passing this skill; partner pre-read / pay / identity / live-copy / fit-note send without named recipient **and** action; treating a weekly backup or project export as a publish; provisioning a live voice agent or phone number; re-enabling a disabled job; rewriting a live prompt; treating `--yolo` as approval.
+**Decline (unsupported action):** login to a registrar/Cloudflare/Spaceship/Vercel/GitHub-2FA/dashboard unless this turn names it (including after a Bot "new device" alert or a 2FA/CAPTCHA computer-takeover); MCP reinstall (one-tab fallback only); unnamed GitHub auto-push of this public repo; dumping client/product facts into a public skill repo; mixing manuals with IP work-product; spawning a subagent without passing this skill; partner pre-read / pay / identity / live-copy / fit-note send without named recipient **and** action; treating a weekly backup or project export as a publish; provisioning a live voice agent or phone number; re-enabling a disabled job; rewriting a live prompt; treating `--yolo` as approval; deleting a routine (immediate, no undo); unnamed Bot share with secrets still in the profile.
 
 IP intensity (L0–L3) is **not** write-privilege. Owner-gated even at L3: send, publish, pay, identity, live title/copy, voice/phone provision, DNS. Grok Bot autonomy: observe / draft / approved write / scheduled. Sending still needs named approval even at IP L3. Grok Bot also requires approval for purchasing, deleting, publishing, or changing production systems. `--always-approve` is a tool auto-approve flag, not that gate. Test skill before routine.
 
@@ -228,7 +231,8 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 - **Placeholders / MCP-size-blocked files are not originals.**
 - **Backup packs can persist untrusted SKILL.md.** Do not ingest community skills from a backup (X ingest 8 Sep: malicious skills survived reinstall via backups).
 - **Dashboard / OAuth / 2FA / DNS / MCP-reinstall:** decline login. One-tab fallback ≠ reinstall. 2FA / CAPTCHA computer-takeover is not a reason to log in.
-- **Bot share / marketplace clone is a demo channel.** A public share link previews the Bot. Do not park holdbacks in a shareable Bot or marketplace blueprint.
+- **Bot share / marketplace clone is a demo channel.** Share link = public configuration (identity, description, skills, routines). Hide ≠ pause. Deleting a Bot removes routines (no undo) but shared-computer files remain.
+- **Routine test-run is real work. Routine delete has no undo.** Datacenter IP that trips a human-verification wall is not a reason to improvise a proxy or login.
 - **Image-only artifacts are not numbered facts.** Do not invent dollar figures, LOE, or counts from a PNG/chart. Write "image-only — numbers not extracted" or omit.
 - **Require Approval wins Always Allow.** Grok Bot Auto Review: `--always-approve` / Always Allow does not beat a Require Approval rule.
 
@@ -344,7 +348,15 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 
 **Example L2 Bot share:** "Share the Grok Bot via public link and list it on the marketplace."
 
-→ Answer first → 2–4 line tip: a share link and a marketplace clone are demo channels; hold exact parameters; full hygiene on "IP sensitive moment".
+→ Answer first → 2–4 line tip: a share link exposes identity, description, skills, and routines; marketplace clone is a demo channel; hold exact parameters; full hygiene on "IP sensitive moment".
+
+**Example L0 hide Bot:** "Hide the IP radar Bot from the sidebar."
+
+→ L0 silent. Hide does not pause routines.
+
+**Example L3 routine delete:** "Protect the IP. Delete the old routine and test-run the new one."
+
+→ stamp → **decline** routine delete (immediate, no undo) unless owner **and** action named; note that a test-run performs real work → disclaimer.
 
 **Example L3 image-only:** "Protect the IP. Publish the dollar figures from the PNG chart."
 
@@ -391,6 +403,9 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - About to share a Bot / marketplace clone with holdbacks inside → stop; treat as a demo channel.
 - About to invent dollar figures from an image-only deck → stop.
 - About to complete 2FA / CAPTCHA via computer-takeover → decline login.
+- About to treat hide-from-sidebar as a pause, or delete a routine without named approval → decline (delete has no undo).
+- About to improvise a proxy or login because a Bot datacenter IP tripped a human-verification wall → decline.
+- About to copy a Bot share link with secrets, internal URLs, or customer data in the profile → decline; strip first.
 
 ## For Maintainers (This File)
 

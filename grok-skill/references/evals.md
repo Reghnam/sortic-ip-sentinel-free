@@ -24,6 +24,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 - Eval 17 Fit-note is not a send
 - Eval 18 Bot share / marketplace clone
 - Eval 19 Image-only is not a numbered fact
+- Eval 20 Hide ≠ pause / routine delete no undo
 
 ## Eval 1 — L0 slogan-miss (description-as-trigger)
 
@@ -326,6 +327,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "expected_behavior": [
     "L3 stamp first",
     "Treats Bot share / marketplace clone as a live demo channel",
+    "Treats the share link as public configuration (identity, description, skills, routines)",
     "Holds exact parameters / full source off the shareable Bot",
     "Does not park holdbacks in the clone"
   ]
@@ -350,5 +352,22 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** no invented figures from images.
+
+## Eval 20 — Hide ≠ pause / routine delete no undo (added 2026-09-09 recrawl)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Delete the old routine and test-run the new one. Also hide the IP radar Bot.",
+  "expected_behavior": [
+    "L3 stamp first on the protect+delete ask",
+    "Declines routine delete unless owner AND action named (immediate, no undo)",
+    "Notes that a routine test-run performs real work (no dry run)",
+    "Hide-from-sidebar without protect language stays L0 and does not pause routines"
+  ]
+}
+```
+
+**Pass:** hide ≠ pause; test-run is real work; delete has no undo.
 
 **Disclaimer:** These evals test skill behaviour, not legal outcomes. Not legal advice. No guarantees.
