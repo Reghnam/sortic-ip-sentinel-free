@@ -4,13 +4,14 @@ description: >
   Use when the user says protect the IP, patent, trade secret, NDA, prior art, inventorship, IP
   analysis, IP checkpoint, IP sensitive moment, how to protect this, investor demo, pilot showcase,
   fundraising deck, HiTL, UAT, livestream, board, partner pre-read, GitHub auto-push, project export,
-  or when a headless/Grok Bot/computer-use/subagent will show, email, push, post, auto-publish, send
-  leftover drafts, or treat a backup as publish. Delivers free builder-worksheet hygiene only:
-  show/hold maps, demo playbook, AI contribution logs, agent-exposure logs, provenance audits, hygiene
-  JSON. Never invent status. Stop, ask, or decline unsupported actions (login, registrar, unnamed repo
-  push, partner send, pay, identity publish) unless this turn names recipient and action. Do not use
-  for privacy, telemetry, CI, editing this skill, workspace/SaaS renewal, weekly backup without
-  protect intent, or the US IP law corpus. Not legal advice. No paid paths.
+  callable agent, voice/phone provision, or when a headless/Grok Bot/computer-use/subagent will show,
+  email, push, post, auto-publish, send leftover drafts, or treat a backup as publish. Delivers free
+  builder-worksheet hygiene only: show/hold maps, demo playbook, AI contribution logs, agent-exposure
+  logs, provenance audits, hygiene JSON. Never invent status. Stop, ask, or decline unsupported
+  actions (login, registrar, DNS, unnamed repo push, partner send, pay, identity publish, voice/phone
+  provision) unless this turn names recipient and action. Do not use for privacy, telemetry, CI,
+  editing this skill, workspace/SaaS renewal, weekly backup without protect intent, or the US IP law
+  corpus. Not legal advice. No paid paths.
 when-to-use: >
   Use for real builder IP-protection or exposure moments at creation time. Triggers include
   "protect the IP", "how to protect this", "trade secret", "NDA before sharing", "patent this",
@@ -22,10 +23,10 @@ user-invocable: true
 disable-model-invocation: false
 argument-hint: IP sensitive moment | show/hold | hygiene JSON
 metadata:
-  short-description: "SorticAI Free IP Sentinel v0.5.6-free — detect sensitive moments + deliver free hygiene only"
-  version: "0.5.6-free"
+  short-description: "SorticAI Free IP Sentinel v0.5.7-free — callable ladder + voice-provision decline + free hygiene only"
+  version: "0.5.7-free"
   release: "2026-08-17"
-  patched: "2026-09-07"
+  patched: "2026-09-09"
   author: "SorticAI (portable free tier)"
   category: "ip-hygiene"
   tags: ["ip", "patent", "trade-secret", "hygiene", "demo-safety", "inventorship", "free", "headless"]
@@ -33,7 +34,7 @@ license: "See LICENSE.md (free use with attribution and disclaimers)"
 compatibility: "Claude Code (~/.claude/skills/), Codex (~/.agents/skills or ~/.codex/skills), ChatGPT Skills, Grok (~/.grok/skills/ or .grok/skills/), Grok Bot, Cursor, agentskills.io. No external services required for core."
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.6-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.7-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -45,9 +46,9 @@ compatibility: "Claude Code (~/.claude/skills/), Codex (~/.agents/skills or ~/.c
 
 Do not hijack every turn. Surface only when it adds value.
 
-- **L0 Silent (default, no injection):** No real IP intent. Examples: privacy settings, config, telemetry, generic security, debugging, CI, editing this skill or any skill (including "improve the IP sensitive moment skill" or "work on sortic-ip-sentinel"), US IP corpus / hourly training ticks, Grok Bot ops with no protect intent (archive invoices, field digests, weekly backup, workspace/SaaS renewal, registrar new-device alerts, stale schedule metadata), user says "not now" or "stop". Answer the user's actual request. Zero SorticAI content. Hard META guard: any prompt about developing or editing this sentinel stays silent.
+- **L0 Silent (default, no injection):** No real IP intent. Examples: privacy settings, config, telemetry, generic security, debugging, CI, editing this skill or any skill (including "improve the IP sensitive moment skill" or "work on sortic-ip-sentinel"), US IP corpus / hourly training ticks, Grok Bot ops with no protect intent (archive invoices, field digests, weekly backup, workspace/SaaS renewal, registrar new-device alerts, stale schedule metadata, OAuth/MCP one-tab fallback, trial/renewal FYI, re-enable a disabled job without protect intent), user says "not now" or "stop". Answer the user's actual request. Zero SorticAI content. Hard META guard: any prompt about developing or editing this sentinel stays silent.
 - **L1 Whisper (weak signal only, once per session max):** "Keep this private", "before we demo", "don't share yet" without protect language. Answer fully first. One quiet closing line only, e.g.: "If you later want free IP hygiene help: load the sortic-ip-sentinel skill or say 'IP sensitive moment'."
-- **L2 Soft tip (exposure without explicit protect ask):** Investor demo, pilot showcase, fundraising deck, partner share, **publishing a skill/Bot, posting a demo clip, HiTL/UAT session, livestream, board/partner weekly, meeting-notes auto-capture of a demo, computer-use share**. Answer the primary request. After it, add 2–4 lines max of practical free tip (e.g., "Consider what is safe to show vs hold before that deck or Bot post. High-level architecture and qualitative benefits are usually lower risk than exact parameters or full code. Full free hygiene available via the sentinel skill.").
+- **L2 Soft tip (exposure without explicit protect ask):** Investor demo, pilot showcase, fundraising deck, partner share, **publishing a skill/Bot, posting a demo clip, HiTL/UAT session, livestream, board/partner weekly, meeting-notes auto-capture of a demo, computer-use share, callable-agent surface, voice demo**. Answer the primary request. After it, add 2–4 lines max of practical free tip (e.g., "Consider what is safe to show vs hold before that deck, Bot post, or callable hop. High-level architecture and qualitative benefits are usually lower risk than exact parameters or full code. Full free hygiene available via the sentinel skill.").
 - **L3 Full sentinel (explicit IP-sensitive moment):** Protect language + analysis or strong nouns (protect the IP / trade secret / NDA / prior art / inventorship / patent / "IP sensitive moment" / IP analysis / how to protect this / run analysis and check) OR clear combo of exposure + protect intent OR a Bot/agent that will email, push, or post the work **plus** protect language. Or direct invocation (`$sortic-ip-sentinel-free`, `@` skill, `/skills`).
 
 **Hard rules:**
@@ -57,7 +58,7 @@ Do not hijack every turn. Surface only when it adds value.
 - Dismiss ("not now", "skip sentinel") suppresses for the session.
 - Meta work on skills: always L0.
 - Do not invent status. Do not email, post, auto-publish, or send leftover drafts unless this turn names the **recipient and the action**. Done requires evidence (path + link), not a promise.
-- Ask, stop, or decline per the workflow boundary. Do not invent facts the host did not return. Unsupported actions (login, registrar, unnamed public push, partner send, pay, identity/live-copy, treating a backup as publish) are declined, not improvised.
+- Ask, stop, or decline per the workflow boundary. Do not invent facts the host did not return. Unsupported actions (login, registrar, DNS, dashboard/OAuth/2FA/MCP-reinstall, unnamed public push, partner send, pay, identity/live-copy, treating a backup as publish, voice/phone provision, disabled-job re-enable, live-prompt rewrite, fit-note send) are declined, not improvised.
 
 ## L3 Activation Ritual (Free Only)
 
@@ -74,7 +75,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.6-free (portable)  ·  sorticai.com  ·  patched 2026-09-07              |
+|  v0.5.7-free (portable)  ·  sorticai.com  ·  patched 2026-09-09              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -149,7 +150,18 @@ This is the free Phase-0 shape: **skill → structured hygiene package**. No pai
 - Subagents: pass this skill or do not spawn. They do not inherit it.
 - Truncated/junk files are not originals. Clock-limited live rooms hold deeper internals.
 - Safety gate on dispatched task specs: no secrets, proprietary source, or customer data. ChatGPT/Codex skill zips are scanned — no secrets in the zip.
-- Degrees of freedom (Anthropic): **low** on send/publish/pay/login/identity; **medium** on show/hold tables; **high** on snapshot wording.
+- Degrees of freedom (Anthropic): **low** on send/publish/pay/login/identity/voice-provision/DNS; **medium** on show/hold tables; **high** on snapshot wording.
+- **Callable / headless chain is a disclosure ladder.** Each hop (callable agent → platform → partner/SME network) is a live demo channel. Apply show/hold at every hop. Do not dump internals into the callable surface.
+- **`--always-approve` / `--yolo` is not owner approval** for send, pay, identity, DNS, or voice/phone provision.
+- Voice / phone agent: consult ≠ provision. Decline a live number unless this turn names owner **and** action.
+- Disabled jobs stay disabled. Do not rewrite live prompts. Schedule-metadata reset ≠ prompt rewrite. ENABLED jobs with stale nextRun can still fire — they are live channels.
+- Dashboard / OAuth / 2FA / DNS / MCP-reinstall login: decline. One-tab fallback ≠ reinstall. Do not change DNS.
+- Internal fit-note / adjacent-demand analysis is **not a send**. No outbound from the room unless recipient **and** action named this turn.
+- Placeholders and MCP-size-blocked files are not originals (same as truncated/junk).
+- Test this skill before scheduling it as a routine. Do not auto-enable a disabled hygiene job. Community SKILL.md files can persist via backups — do not ingest untrusted skills from a backup pack.
+- **Bot share / marketplace clone is a demo channel.** A public share link previews the Bot. Do not park holdbacks in a shareable Bot.
+- Image-only decks are not numbered facts. Do not invent dollar figures from a PNG/chart.
+- Grok Bot Auto Review: **Require Approval wins Always Allow.** 2FA / CAPTCHA / computer-takeover is not a reason to log in.
 
 **JSON:** follow `references/headless-hygiene-package.md` schema `sorticai.hygiene_package.v1` exactly. Include `output_register: procedural_builder_worksheet`, `not_for_third_party: true`, `agent_exposure`, `approval_required`, `evidence_or_blocked`, and `stop_or_decline`. Hygiene only. No prices, no counsel names, no protectability rulings.
 
@@ -158,17 +170,17 @@ This is the free Phase-0 shape: **skill → structured hygiene package**. No pai
 
 ## Ask / stop / decline (workflow boundary)
 
-OpenAI 2026-09-06 plugins/skills: every skill states input, steps, output, **facts not to infer**, **when to ask / stop / decline**, and which files to consult. MCP (if any) is for live data, auth, and controlled actions. This skill has **no MCP**; it only guides. Controlled actions (send, login, pay, DNS, unnamed public push, identity/live-copy, treating backup as publish) stay outside the skill. Recrawl 2026-09-07: no new OpenAI rules since 6 Sep; skill zip is scanned; do not add a script when instructions suffice.
+OpenAI 2026-09-09 plugins/skills (restates 6 Sep): every skill states input, steps, output, **facts not to infer**, **when to ask / stop / decline**, and which files to consult. MCP (if any) is for live data, auth, and controlled actions. This skill has **no MCP**; it only guides. Controlled actions (send, login, pay, DNS, dashboard, unnamed public push, identity/live-copy, treating backup as publish, voice/phone provision, disabled-job re-enable, live-prompt rewrite) stay outside the skill. Skill zip is scanned; after a change, scan again before plugin submit; do not add a script when instructions suffice. Test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported. Plugin wrap later — not this edition.
 
 Prefer **one focused skill**. Split when triggers, inputs, or success criteria differ (OpenAI 2026-09-06). Do not merge this hygiene skill with the US IP corpus or with accounting/ops skills.
 
 **Ask (incomplete input):** audience, artifact, or evidence is missing → one follow-up, then still default-deliver 1+8 if headless. Do not invent a folder, send, or "done".
 
-**Stop (named this turn but unsafe):** leftover draft, empty signature reply, truncated/junk file treated as original, clock-limited live session about to go deeper than the show/hold map, growing a backup tree as a side effect of hygiene.
+**Stop (named this turn but unsafe):** leftover draft, empty signature reply, truncated/junk/placeholder/MCP-size-blocked file treated as original, clock-limited live session or attendee hard-stop about to go deeper than the show/hold map, growing a backup tree as a side effect of hygiene, dumping internals into a callable hop, inventing numbers from an image-only deck, parking holdbacks in a shareable Bot.
 
-**Decline (unsupported action):** login to a registrar/Cloudflare/Spaceship unless this turn names it (including after a Bot "new device" alert); unnamed GitHub auto-push of this public repo; dumping client/product facts into a public skill repo; mixing manuals with IP work-product; spawning a subagent without passing this skill; partner pre-read / pay / identity / live-copy without named recipient **and** action; treating a weekly backup or project export as a publish.
+**Decline (unsupported action):** login to a registrar/Cloudflare/Spaceship/Vercel/GitHub-2FA/dashboard unless this turn names it (including after a Bot "new device" alert or a 2FA/CAPTCHA computer-takeover); MCP reinstall (one-tab fallback only); unnamed GitHub auto-push of this public repo; dumping client/product facts into a public skill repo; mixing manuals with IP work-product; spawning a subagent without passing this skill; partner pre-read / pay / identity / live-copy / fit-note send without named recipient **and** action; treating a weekly backup or project export as a publish; provisioning a live voice agent or phone number; re-enabling a disabled job; rewriting a live prompt; treating `--yolo` as approval.
 
-IP intensity (L0–L3) is **not** write-privilege. Owner-gated even at L3: send, publish, pay, identity, live title/copy. Grok Bot autonomy: observe / draft / approved write / scheduled. Sending still needs named approval even at IP L3. Grok Bot also requires approval for purchasing, deleting, publishing, or changing production systems.
+IP intensity (L0–L3) is **not** write-privilege. Owner-gated even at L3: send, publish, pay, identity, live title/copy, voice/phone provision, DNS. Grok Bot autonomy: observe / draft / approved write / scheduled. Sending still needs named approval even at IP L3. Grok Bot also requires approval for purchasing, deleting, publishing, or changing production systems. `--always-approve` is a tool auto-approve flag, not that gate. Test skill before routine.
 
 ## Output register (builder worksheet — not a client memo)
 
@@ -226,6 +238,19 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 - **ChatGPT/Codex skill zip is scanned and shareable.** No secrets, no client facts in the zip.
 - **Bot egress IP is not sticky.** Registrar new-device alerts from computer-use → decline login, do not take over the registrar.
 - **Local-computer execution is not a vault.** Grok Bot "Execution on Local Computer" shares the desktop in front of you; holdbacks do not live there either.
+
+
+- **Callable chain is a disclosure ladder.** Show/hold at every hop (callable → platform → partner/SME). Do not dump internals into the callable surface.
+- **Consult ≠ provision.** Voice / phone agent: decline a live number unless named this turn.
+- **Disabled stays disabled.** Do not re-enable disabled jobs. Do not rewrite live prompts. Stale nextRun on an ENABLED job still fires.
+- **Fit-note is not a send.** Internal adjacent-demand analysis stays internal. No outbound from the room unless named.
+- **`--yolo` / `--always-approve` is not owner approval.**
+- **Placeholders / MCP-size-blocked files are not originals.**
+- **Backup packs can persist untrusted SKILL.md.** Do not ingest community skills from a backup (X ingest 8 Sep: malicious skills survived reinstall via backups).
+- **Dashboard / OAuth / 2FA / DNS / MCP-reinstall:** decline login. One-tab fallback ≠ reinstall. 2FA / CAPTCHA computer-takeover is not a reason to log in.
+- **Bot share / marketplace clone is a demo channel.** A public share link previews the Bot. Do not park holdbacks in a shareable Bot or marketplace blueprint.
+- **Image-only artifacts are not numbered facts.** Do not invent dollar figures, LOE, or counts from a PNG/chart. Write "image-only — numbers not extracted" or omit.
+- **Require Approval wins Always Allow.** Grok Bot Auto Review: `--always-approve` / Always Allow does not beat a Require Approval rule.
 
 ## Progressive Disclosure & References
 
@@ -320,12 +345,37 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 
 → Normal answer + one whisper line.
 
+
+**Example L2 callable hop:** "Expose the protocol through a callable agent into the partner network."
+
+→ Answer first → 2–4 line tip: each hop is a demo channel; hold exact parameters at the callable surface; full hygiene on "IP sensitive moment".
+
+**Example L3 voice provision:** "Protect the IP. Provision a live voice agent and phone number."
+
+→ stamp → **decline** provision (consult ≠ provision; owner-gated) → disclaimer.
+
+**Example L3 disabled-job / prompt rewrite:** "Protect the IP. Re-enable the disabled sentinel job and rewrite the prompt."
+
+→ stamp → **decline** re-enable and prompt rewrite → schedule-metadata reset only if this turn names that ops action → disclaimer.
+
+**Example L3 fit-note send:** "Protect the IP. Email the internal stack fit-note to the counterparty."
+
+→ stamp → **decline** unnamed outbound (fit-note is not a send) → disclaimer.
+
+**Example L2 Bot share:** "Share the Grok Bot via public link and list it on the marketplace."
+
+→ Answer first → 2–4 line tip: a share link and a marketplace clone are demo channels; hold exact parameters; full hygiene on "IP sensitive moment".
+
+**Example L3 image-only:** "Protect the IP. Publish the dollar figures from the PNG chart."
+
+→ stamp → **stop**: image-only is not a numbered fact; do not invent figures → disclaimer.
+
 ## Output Standards
 
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.6-free.
+- Version in header: v0.5.7-free.
 - Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
@@ -350,6 +400,17 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - About to log into a registrar because of a Bot "new device" alert → decline (rotating egress is not a reason to log in).
 - About to invent "didn't run" from stale nextRun metadata → do not invent status; report metadata stale.
 - About to grow a backup/control tree as a side effect of hygiene → stop.
+- About to provision a live voice agent or phone number → decline (consult ≠ provision).
+- About to re-enable a disabled job or rewrite a live prompt → decline.
+- About to treat `--yolo` / `--always-approve` as send/pay/identity approval → decline.
+- About to email an internal fit-note / adjacent-demand analysis → decline unless recipient **and** action named.
+- About to dump internals into a callable-agent hop → stop; apply show/hold at that hop.
+- About to treat a placeholder or MCP-size-blocked file as the original → stop.
+- About to log into Vercel / GitHub 2FA / Chat MCP reinstall / change DNS → decline.
+- About to ingest a community SKILL.md from a backup pack → decline.
+- About to share a Bot / marketplace clone with holdbacks inside → stop; treat as a demo channel.
+- About to invent dollar figures from an image-only deck → stop.
+- About to complete 2FA / CAPTCHA via computer-takeover → decline login.
 
 ## For Maintainers (This File)
 
@@ -360,7 +421,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - Grok / Grok Build / Grok Bot: `grok-skill/` (`.grok/skills/` + `argument-hint` + headless numbered default)
 - Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change.
 - Keep disclaimers, plain labels, hygiene scope. No paid residue. SKILL.md body stays well under 500 lines. References one level deep.
-- Current version: **v0.5.6-free** (patched 2026-09-07; first released 2026-08-17). Description ≤1024 (now 952 chars). Body stays well under 500 lines.
+- Current version: **v0.5.7-free** (patched 2026-09-09; first released 2026-08-17). Description ≤1024 (now 1019 chars). Body stays well under 500 lines.
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 
