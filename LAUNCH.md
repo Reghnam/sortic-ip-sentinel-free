@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.6-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.7-free
 
-**Status**: Public on GitHub. v0.5.6-free patched 2026-09-07 (OpenAI → Anthropic → Grok Build, 2026-09-07). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.7-free patched 2026-09-09 (OpenAI → Anthropic → Grok Build, 2026-09-09). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -50,8 +50,9 @@ Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 13: partner send, backup-as-publish, workspace renewal L0)
-- [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity → decline
-- [ ] Backup ≠ publish; truncated/junk files are not originals
+- [ ] Evals in `references/evals.md` still pass (now 19: voice, callable chain, yolo, fit-note, Bot share, image-only)
+- [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity / voice provision / yolo-send → decline
+- [ ] Backup ≠ publish; truncated/junk/placeholder files are not originals; image-only ≠ numbered facts
+- [ ] Bot share / marketplace clone is a demo channel; callable hops hold internals
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**

@@ -3,7 +3,7 @@
 **Free only · Not legal advice · No guarantees**
 
 Load this file when drafting any L3 deliverable (maps, checklists, JSON, slides).
-These rules come from counsel review of adjacent SorticAI writing (2 Sep 2026), Task Extractor / Grok Bot operating notes 1–6 Sep 2026 (do not invent status; do not email third parties unless the item names recipient **and** action; evidence-or-blocked; backup ≠ publish; owner-gated send/pay/identity), OpenAI plugins/skills 2026-09-06/07 (do not invent, replace, or reroll; state what the model must not infer; zip is scanned), Anthropic degrees of freedom (low on send/publish/pay/login), and Grok Bot skill anatomy (what requires approval; report failure instead of stale data; purchasing/deleting/publishing need approval). They are **writing rules**, not legal opinions.
+These rules come from counsel review of adjacent SorticAI writing (2 Sep 2026), Task Extractor / Grok Bot operating notes 1–8 Sep 2026 (do not invent status; do not email third parties unless the item names recipient **and** action; evidence-or-blocked; backup ≠ publish; owner-gated send/pay/identity), OpenAI plugins/skills 2026-09-06/09 (do not invent, replace, or reroll; state what the model must not infer; zip is scanned), Anthropic degrees of freedom (low on send/publish/pay/login), and Grok Bot skill anatomy (what requires approval; report failure instead of stale data; purchasing/deleting/publishing need approval). They are **writing rules**, not legal opinions.
 
 ## Banner (put on every export)
 
@@ -29,6 +29,14 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Decline unnamed partner send / pay / identity. | "Emailed the pre-read" / "published live title" / "paid". |
 | Backup is owner-desk, not a publish. | "Published the weekly backup as the skill". |
 | Metadata stale — nextRun in the past. | "Didn't run" invented from stale nextRun. |
+| Consult ≠ provision. | "Provisioned a live voice number". |
+| Disabled stays disabled. | "Re-enabled the job" / "rewrote the prompt". |
+| Fit-note is not a send. | "Emailed the stack analysis from the room". |
+| `--yolo` is not approval. | "Sent under --always-approve". |
+| Placeholder / MCP-size-blocked ≠ original. | File a stub as the work product. |
+| Callable hop is a demo channel. | Dump internals into the callable surface. |
+| Image-only — numbers not extracted. | Invented dollar figures / LOE from a PNG. |
+| Bot share is a demo channel. | Park holdbacks in a marketplace clone. |
 
 ## Hard rules
 
@@ -48,6 +56,9 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 12. **Do not dump client/product facts into a public skill repo.** Skill zips are scanned.
 13. **Ask / stop / decline.** Incomplete → ask. Unsafe named action → stop. Unsupported (login, unnamed public push, partner send, pay, identity, backup-as-publish) → decline. Do not improvise.
 14. **Backup ≠ publish.** Weekly backup and project export are owner-desk. Do not grow backup/control trees as a side effect of hygiene.
+15. **Callable hops / voice / yolo.** Each hop is a demo channel. Consult ≠ provision. `--yolo` is not owner approval. Fit-note is not a send. Disabled jobs stay disabled.
+16. **Image-only ≠ numbered facts.** Do not invent dollar figures, LOE, or counts from a PNG/chart.
+17. **Bot share / marketplace clone is a demo channel.** Do not park holdbacks in a shareable Bot. Require Approval wins Always Allow. 2FA/CAPTCHA takeover → decline login.
 
 ## Headless / JSON / Grok Bot
 
@@ -68,5 +79,12 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to log into registrar/Cloudflare unless named? Decline. New-device alert from Bot egress is not a reason to log in.
 - [ ] About to treat a backup or project export as a publish? Stop.
 - [ ] About to invent "didn't run" from stale nextRun? Don't.
+- [ ] About to provision a live voice/phone agent? Decline unless named.
+- [ ] About to treat `--yolo` as approval, re-enable a disabled job, or rewrite a live prompt? Decline.
+- [ ] About to email an internal fit-note? Decline unless named.
+- [ ] About to invent figures from an image-only deck? Stop.
+- [ ] About to share a Bot / marketplace clone with holdbacks inside? Stop.
+- [ ] About to complete 2FA / CAPTCHA via computer-takeover? Decline.
+- [ ] About to dump internals into a callable hop? Stop.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.

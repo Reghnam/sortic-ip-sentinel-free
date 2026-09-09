@@ -2,6 +2,43 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.7-free] — 2026-09-09
+
+Patched from: david@vmcorp.cz Task Extractor briefs **7–8 Sep 2026** (callable / headless chain is a disclosure ladder; consult ≠ provision for voice/phone; disabled jobs stay disabled; do not rewrite live prompts; schedule-metadata reset ≠ prompt rewrite; ENABLED jobs with stale nextRun can still fire; internal fit-note is not a send; placeholders and MCP-size-blocked files are not originals; dashboard / OAuth / 2FA / DNS / MCP-reinstall login declined; one-tab fallback ≠ reinstall; leftover drafts unsent; do not invent status; owner-gated send/publish/pay/identity even at IP L3); OpenAI **learn.chatgpt.com/docs/build-skills** recrawl 2026-09-09 (plugins/build/skills 404; restates 6 Sep: description is the match rule; prefer instructions over scripts; keep each skill focused; Codex list may truncate to 8k / 2%; no MCP deps; test trigger accuracy and must-not-invent); Anthropic Agent Skills best-practices recrawl 2026-09-09 (no new limits: name kebab ≤64; description ≤1024; SKILL.md <500; references one level deep; ≥3 evals; degrees of freedom; avoid clock-dated trivia; TOC on long refs); Grok Bot recrawl 2026-09-09 (`docs.x.ai/grok-bot/skills-routines-and-automations`, approvals-security-and-privacy, permissions: **Require Approval wins Always Allow**; test skill before routine; read-and-prepare then approved write; Bot share link / marketplace clone is a preview; 2FA/CAPTCHA use computer-takeover — decline login; `--always-approve` / `grok --always-approve` is a tool-permission mode, not owner approval; purchasing / sending / deleting / publishing / changing production still need approval); X ingest 7–9 Sep 2026 (malicious skills can persist via backups — do not ingest untrusted SKILL.md from a backup pack). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this 09:30 Prague job, live automations, and X ingest. Do not dump client/product facts into the public repo.
+
+### OpenAI (first)
+
+- Description 1019 chars (under Codex 8k / 2% truncation and Anthropic 1024). Front-loads callable agent / voice-phone provision / backup-as-publish. States decline for login, DNS, unnamed repo push, partner send, pay, identity, voice/phone provision.
+- `agents/openai.yaml` `default_prompt` names callable ladder, `--yolo` ≠ approval, fit-note ≠ send, backup ≠ publish, scanned zip. Implicit invocation stays on. **No MCP `dependencies.tools`.** No new script. Recrawl: plugins/build/skills 404; build-skills page unchanged since 6 Sep.
+- New evals 14–19: voice/phone provision, callable chain, disabled-job / yolo-as-approval, fit-note send, Bot share / marketplace, image-only ≠ numbered facts.
+- ChatGPT zip path unchanged (`SKILL.md` at zip root). Zip is scanned — treat as shareable; scan again after change. Prefer one focused skill.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Name kebab-case ≤64. Description 1019 chars, no XML. Body ~430 lines (under 500).
+- Gotchas: callable chain; consult ≠ provision; disabled stays disabled; `--yolo` is not approval; Bot share / marketplace clone; image-only ≠ numbered facts; Require Approval wins Always Allow.
+- Evals now 19 (≥3 required). Eight options, not nine. `evals.md` has a TOC. References one level deep.
+
+### Grok Build (third)
+
+- Callable / headless chain is a **disclosure ladder**. Show/hold at every hop (callable → platform → partner/SME). Do not dump internals into the callable surface.
+- Voice / phone agent: consult ≠ provision. Decline a live number unless this turn names owner **and** action.
+- `--always-approve` / `--yolo` is a tool-permission flag, not owner approval. Require Approval wins Always Allow (Auto Review recrawl).
+- Disabled jobs stay disabled. Do not rewrite live prompts. Stale nextRun on an ENABLED job still fires — it is a live channel.
+- Bot share link / marketplace clone is a demo channel. Do not park holdbacks in a shareable Bot.
+- 2FA / CAPTCHA computer-takeover is not a reason to log in.
+- Image-only artifacts are not numbered facts. Do not invent dollar figures from a PNG/chart.
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This 09:30 Prague job *is* the named owner push of hygiene-only files.)
+- `grok -p` / Grok Build headless default 1+8 unchanged.
+
+### Shared
+
+- JSON `sorticai.hygiene_package.v1` edition `0.5.7-free`. `agent_exposure.channel` may be `callable | voice | routine | bot-share | marketplace`.
+- Classification: L0-11 MCP one-tab, L0-12 disabled-job ops, L2-07 callable hop, L2-08 Bot share, L3-VOICE, L3-CHAIN, L3-DISABLE, L3-FIT, L3-YOLO, L3-SHARE, L3-IMG.
+- Output-language rules 15–17: callable hops / voice / yolo; image-only ≠ numbered facts; Bot share / Require Approval wins Always Allow.
+- Stamp: `v0.5.7-free` / patched 2026-09-09. First release date remains 2026-08-17.
+- Still free-only. Still not legal advice. Still silent on meta/privacy/corpus.
+
 ## [0.5.6-free] — 2026-09-07
 
 Patched from: david@vmcorp.cz Task Extractor brief **6 Sep 2026** (backup ≠ publish; ChatGPT/project export is owner-desk; owner-gated even at IP L3: send / publish / pay / identity / live title-copy; partner pre-reads unsent unless this turn names recipient and action; do not grow backup/control trees; stale nextRun ≠ didn't run; workspace/SaaS renewal is L0; registrar new-device alerts are not a reason to log in; do not invent status; leftover drafts unsent); OpenAI **plugins/build/skills** recrawl 2026-09-07 (no new rules since 6 Sep; skill zip is scanned; do not add a script when instructions suffice; test inventory still: direct, indirect, incomplete, should-not-activate, must-not-invent); Anthropic Agent Skills best-practices recrawl 2026-09-07 (**degrees of freedom**: low on send/publish/pay/login/identity, medium on show/hold, high on snapshot wording; do not put clock-dated session trivia in the skill body; SKILL.md <500; description ≤1024; ≥3 evals; references one level deep); Grok Bot skills/routines recrawl 2026-09-07 (approval for sending / purchasing / deleting / publishing / changing production; test skill before routine; shared cookies/sessions; local-computer execution is another leakage surface; secure credential handoff — do not paste secrets in chat); X ingest 6–7 Sep 2026 (Bot egress IP is not sticky; registrar new-device friction). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this 09:30 Prague job, live automations, and X ingest. Do not dump client/product facts into the public repo.

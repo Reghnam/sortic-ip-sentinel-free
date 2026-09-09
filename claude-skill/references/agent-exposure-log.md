@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.6-free)
+# Agent / computer-use exposure log — Template (v0.5.7-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -8,7 +8,7 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 
 ## What the agent did (redact secrets in this table)
 
-| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / file) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
+| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / routine / file / bot-share / marketplace) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
 |------|---------------------------|-----------------------------------------------------|------------------------|-------------------|-------------|------------------|
 |      |                           |                                                     |                        |                       |                       |                              |                                      |
 
@@ -29,6 +29,12 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 - [ ] Task specs dispatched to computer-use contain no secrets / proprietary source / customer data.
 - [ ] Backup pack is not treated as a publish. Project export is owner-desk.
 - [ ] Registrar "new device" alert from rotating Bot egress → decline login.
+- [ ] Callable hop: exact parameters / full source are **not** on the callable surface.
+- [ ] Voice/phone provision declined unless owner **and** action named. `--yolo` is not that gate.
+- [ ] Placeholders / MCP-size-blocked files are not originals.
+- [ ] Bot share / marketplace clone: holdbacks are **not** in the shareable Bot.
+- [ ] Image-only decks: no invented dollar figures.
+- [ ] 2FA / CAPTCHA computer-takeover declined.
 
 ## Rules (from 4–6 Sep operator briefs + Grok Bot + OpenAI 2026-09-06/07)
 
@@ -46,6 +52,11 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 12. **Backup ≠ publish.** Weekly backup / project export is owner-desk. Do not grow backup trees.
 13. **Owner-gated even at IP L3:** send, publish, pay, identity, live title/copy.
 14. **Skill zip is scanned.** No secrets, no client facts in ChatGPT/Codex uploads.
+15. **Callable hops are demo channels.** Show/hold at every hop. Do not dump internals into the callable surface.
+16. **`--yolo` is not owner approval.** Voice/phone provision, disabled-job re-enable, live-prompt rewrite, and fit-note send stay declined unless named.
+17. **Placeholders / MCP-size-blocked files are not originals.**
+18. **Bot share / marketplace clone is a demo channel.** Do not park holdbacks in a shareable Bot. Require Approval wins Always Allow.
+19. **Image-only ≠ numbered facts.** Do not invent dollar figures from a PNG/chart. 2FA/CAPTCHA computer-takeover → decline login.
 
 JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-hygiene-package.md`). Prefer empty arrays over invented rows. Set `owner_gated: true`.
 
