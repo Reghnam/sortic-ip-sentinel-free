@@ -40,7 +40,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
   "holdbacks": ["exact parameters", "full source", "production data"],
   "contribution_log_started": false,
   "agent_exposure": [
-    {"runtime": "grok-bot | grok-build | codex-p | claude-p | computer-use | other", "channel": "browser | email | github | social | livestream | hitl | board | backup | export | local-computer | callable | voice | voice-screen | routine | file | bot-share | marketplace | grok-share | reviewer | mailbox | iam-screenshot | access-grant | legal-draft | webhook | bot-duplicate | lifecycle-hook | none", "what": "redacted one line", "audience_named": false, "action_named": false, "evidence": "", "action": "hold | ok | not_sent | blocked_no_evidence | declined"}
+    {"runtime": "grok-bot | grok-build | codex-p | claude-p | computer-use | other", "channel": "browser | email | github | social | livestream | hitl | board | backup | export | local-computer | callable | voice | voice-screen | routine | file | bot-share | marketplace | grok-share | reviewer | mailbox | iam-screenshot | access-grant | legal-draft | webhook | bot-duplicate | lifecycle-hook | astra-computer | console-shot | ci-apply | none", "what": "redacted one line", "audience_named": false, "action_named": false, "evidence": "", "action": "hold | ok | not_sent | blocked_no_evidence | declined"}
   ],
   "approval_required": true,
   "evidence_or_blocked": "done requires path+link; promises and inbox-root dumps are not done",
@@ -61,7 +61,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 - Never invent status. Do not invent, replace, or reroll a result. Never email/post/auto-publish/pay the JSON or the work unless this turn names the recipient **and** the action (`not_for_third_party`, `approval_required`, `owner_gated`). Leftover drafts and partner pre-reads stay unsent.
 - Claimed send needs message-id + recipients, else `not_sent`.
 - `evidence_or_blocked`: write blocked when there is no path+link. Inbox-root dumps are not done.
-- `stop_or_decline`: `ask` (incomplete input), `stop` (leftover draft / truncated-as-original / clock-limited overshare / backup-tree growth / image-only invented figures / holdbacks in a shareable Bot / public Grok-share of internals / IAM paste), `decline` (unsupported login, unnamed public auto-push, client facts into public repo, partner send, pay, identity/live-copy, backup-as-publish, access grant, mailbox MCP, production hooks, webhook secret, voice clone, voice/phone provision, exploit/PoC), or `none`.
+- `stop_or_decline`: `ask` (incomplete input), `stop` (leftover draft / truncated-as-original / clock-limited overshare / backup-tree growth / image-only invented figures / holdbacks in a shareable Bot / public Grok-share of internals / IAM paste / console-shot mail of internals), `decline` (unsupported login, unnamed public auto-push, client facts into public repo, partner send, pay, identity/live-copy, backup-as-publish, access grant, mailbox MCP, production hooks, webhook secret, voice clone, voice/phone provision, CI auto-apply, exploit/PoC), or `none`.
 - `owner_gated`: always `true` on this edition. Send / publish / pay / identity / live title-copy stay declined unless this turn names recipient **and** action. IP L3 is not write-privilege.
 - Truncated/junk files are not originals. Do not emit them as work product.
 - Do not dump client/product facts into a public skill repo. ChatGPT/Codex skill zips are scanned — no secrets in the zip.
@@ -76,7 +76,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 - Require Approval wins Always Allow. 2FA/CAPTCHA computer-takeover → decline login.
 - Reviewer hop is a disclosure hop. Mailbox connectors are MCP. Public Grok/Bot share URLs are cloneable config.
 - Access grant is owner-gated. IAM / webhook screenshots are holdbacks. Legal drafts ≠ send.
-- Voice screen-share sees the browser. Voice clone is identity publish.
+- Voice screen-share sees the browser. Voice clone is identity publish. Astra computer-use / write-across-apps is a live demo channel. Connectors are not a vault. Console-shot partner mail is a demo. CI auto-apply is a production change.
 - Plugin-bundled hooks are untrusted until reviewed. This skill has none. Pin `latest` is a live production channel.
 - Stale schedule metadata ≠ "didn't run".
 - If source data is unavailable, report failure — do not reuse stale data.

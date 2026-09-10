@@ -11,7 +11,7 @@ Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
 cp -r sortic-ip-sentinel-free/chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-free
 ```
-Fallback: `~/.codex/skills/`. Project: `.agents/skills/`. Invoke `$` or `/skills`. Description is front-loaded so implicit match survives list truncation.
+Fallback: `~/.codex/skills/`. Project: `.agents/skills/`. Invoke `$` or `/skills`. Description is front-loaded so implicit match survives list truncation. Astra computer-use is a live demo channel; connectors are not a vault.
 
 **ChatGPT Skills (Business / Enterprise / Edu)**
 Zip `chatgpt-skill/` with `SKILL.md` at the zip root → Skills tab. Invoke `@`. The zip is scanned — no secrets, no client facts.

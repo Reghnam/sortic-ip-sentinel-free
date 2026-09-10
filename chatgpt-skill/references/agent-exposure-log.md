@@ -8,7 +8,7 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 
 ## What the agent did (redact secrets in this table)
 
-| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
+| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
 |------|---------------------------|-----------------------------------------------------|------------------------|-------------------|-------------|------------------|
 |      |                           |                                                     |                        |                       |                       |                              |                                      |
 
@@ -43,6 +43,9 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 - [ ] Legal drafts not sent without named recipient AND action.
 - [ ] Voice screen-share: holdbacks off the shared screen. Voice clone declined (identity).
 - [ ] No production lifecycle hooks added.
+- [ ] Astra / computer-use write-across-apps: internals held; connectors not treated as a vault.
+- [ ] Console screenshots not attached to a partner mail unless NDA/show-hold and recipient AND action named.
+- [ ] CI auto-apply of infra PRs declined unless owner AND action named.
 
 ## Rules (from 4–10 Sep operator briefs + Grok Bot + OpenAI 2026-09-10 + Anthropic pin-latest)
 
@@ -69,6 +72,8 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 21. **Mailbox / share URL / Bot duplicate.** Mailbox is MCP. `x.com/i/grok/share/…` and `x.ai/bot/…` are public cloneable config. Duplicate copies skills and routines, not history.
 22. **Access grant / IAM / webhook / drafts.** Owner-gated identity. Screenshots are holdbacks. Drafts ≠ send. Two readings are not a verdict.
 23. **Voice screen-share sees the browser.** Voice clone is identity publish. Plugin-bundled hooks stay skipped until trusted. This skill has none.
+24. **Astra computer-use is a live demo.** Write-across-apps / browser-use without APIs is computer-use. Connectors are not a vault.
+25. **Console-shot mail / CI auto-apply.** Partner-mail console shots are a demo. CI auto-apply is a production change. One focused skill.
 
 JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-hygiene-package.md`). Prefer empty arrays over invented rows. Set `owner_gated: true`.
 
