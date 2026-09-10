@@ -44,6 +44,10 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Access grant is owner-gated. | "Granted cloud owner / org admin". |
 | IAM / webhook screenshots are holdbacks. | Paste secrets into the skill zip. |
 | Plugin hooks untrusted until reviewed. | "Added SessionStart hooks that write production". |
+| Astra computer-use is a demo channel. | Write internals across apps before show/hold. |
+| Connectors are not a vault. | "The connector keeps this private". |
+| Console-shot mail is a demo. | Attach console shots and send. |
+| CI auto-apply is a production change. | "Auto-applied the infra PR". |
 
 ## Hard rules
 
@@ -72,6 +76,8 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 21. **Voice screen-share / voice clone.** Voice mode that shares the screen is computer-use. Cloning a voice is identity publish (owner-gated).
 22. **Plugin hooks / pin latest.** This skill has no lifecycle hooks. Codex skips plugin-bundled hooks until the user trusts them; installing a plugin does not run lifecycle scripts. Anthropic `latest` immediately changes production agents.
 23. **Do not invent valuation / financial figures.** Image-only and narrative estimates are not numbered facts. Exploit/PoC stays declined.
+24. **Astra computer-use / connectors.** Write-across-apps is a live demo (model pick stays L0). Connectors use the signed-in account — they are not a vault. Astra declines unsupported conclusions from documents.
+25. **Console-shot mail / CI auto-apply.** Console screenshots in a partner mail are a demo. CI auto-apply of an infra PR is a production change. One focused skill — do not merge with correspondence/persona skills.
 
 ## Headless / JSON / Grok Bot
 

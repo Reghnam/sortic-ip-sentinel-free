@@ -30,6 +30,9 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Public Grok share / `x.ai/bot/…` is cloneable config; access grant is owner-gated
 - Legal drafts ≠ send; voice screen-share sees the browser; voice clone is identity
 - Plugin-bundled hooks untrusted until reviewed; pin `latest` is a live production channel
+- GPT-6 Astra computer+browser use is a live demo channel (model pick stays L0); connectors are not a vault
+- Console screenshots in a partner mail are a demo; CI auto-apply is a production change
+- One focused skill — do not merge with correspondence/persona skills
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
