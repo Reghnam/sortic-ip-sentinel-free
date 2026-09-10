@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.7-free)
+# Agent / computer-use exposure log — Template (v0.5.8-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -8,7 +8,7 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 
 ## What the agent did (redact secrets in this table)
 
-| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / routine / file / bot-share / marketplace) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
+| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
 |------|---------------------------|-----------------------------------------------------|------------------------|-------------------|-------------|------------------|
 |      |                           |                                                     |                        |                       |                       |                              |                                      |
 
@@ -35,8 +35,16 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 - [ ] Bot share / marketplace clone: holdbacks are **not** in the shareable Bot.
 - [ ] Image-only decks: no invented dollar figures.
 - [ ] 2FA / CAPTCHA computer-takeover declined.
+- [ ] Reviewer hop treated as a demo channel (not already private).
+- [ ] Mailbox / Outlook connector not enabled on this skill.
+- [ ] Public Grok share (`x.com/i/grok/share`) / Bot share (`x.ai/bot`) stripped of internals.
+- [ ] IAM / webhook / secret screenshots not in the zip.
+- [ ] Access grant declined unless named.
+- [ ] Legal drafts not sent without named recipient AND action.
+- [ ] Voice screen-share: holdbacks off the shared screen. Voice clone declined (identity).
+- [ ] No production lifecycle hooks added.
 
-## Rules (from 4–6 Sep operator briefs + Grok Bot + OpenAI 2026-09-06/07)
+## Rules (from 4–10 Sep operator briefs + Grok Bot + OpenAI 2026-09-10 + Anthropic pin-latest)
 
 1. **Do not invent, replace, or reroll a result.** Unknown = unknown. Write "not found" or "not in this turn". Stale nextRun ≠ didn't run.
 2. **Approval = recipient AND action named this turn.** Leftover drafts, empty signature replies, auto-publish, partner pre-reads, pay, identity/live-copy, and resend stay on hold.
@@ -57,6 +65,10 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 17. **Placeholders / MCP-size-blocked files are not originals.**
 18. **Bot share / marketplace clone is a demo channel.** Do not park holdbacks in a shareable Bot. Require Approval wins Always Allow.
 19. **Image-only ≠ numbered facts.** Do not invent dollar figures from a PNG/chart. 2FA/CAPTCHA computer-takeover → decline login.
+20. **Reviewer hop is a disclosure hop.** Human review before the customer is still a live channel.
+21. **Mailbox / share URL / Bot duplicate.** Mailbox is MCP. `x.com/i/grok/share/…` and `x.ai/bot/…` are public cloneable config. Duplicate copies skills and routines, not history.
+22. **Access grant / IAM / webhook / drafts.** Owner-gated identity. Screenshots are holdbacks. Drafts ≠ send. Two readings are not a verdict.
+23. **Voice screen-share sees the browser.** Voice clone is identity publish. Plugin-bundled hooks stay skipped until trusted. This skill has none.
 
 JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-hygiene-package.md`). Prefer empty arrays over invented rows. Set `owner_gated: true`.
 

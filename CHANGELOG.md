@@ -2,6 +2,42 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.8-free] — 2026-09-10
+
+Patched from: david@ mailbox 8–10 Sep 2026 (callable/headless chain is a disclosure ladder including the **human reviewer hop**; mailbox/Outlook connector is MCP live data; legal correspondence needs **two inputs**; drafts ≠ send; access grant is owner-gated identity; IAM/secret screenshots are holdbacks; fit-note ≠ send; leftover drafts unsent; least-privilege / no long-lived keys as generic hygiene — **no client/product/infra names in this repo**); OpenAI **plugins/build/skills** + plugin architecture + package recrawl **2026-09-10** (developers.openai.com/plugins/build/skills live; **smallest plugin shape is skill-only**; MCP "Scan Tools" is a **snapshot**, not a live fetch; public listing is the ChatGPT+Codex **universal plugin directory**; `enabled = false` is not uninstall; **plugin-bundled hooks stay skipped until the user trusts the current definition**; installing a plugin does not run lifecycle scripts; this skill has **no MCP and no lifecycle hooks**; zip scanned; test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported; GPT-6 Astra / Extra High model pick is L0 — decline exploit/PoC); Anthropic Agent Skills best-practices + enterprise recrawl 2026-09-10 (no new limits: name kebab ≤64; description ≤1024; SKILL.md <500; references one level deep; ≥3 evals; degrees of freedom; authors ≠ own reviewers; **pin skill version in production** — `latest` immediately changes production agents; keep Skills list order stable for prompt caching); Grok Bot recrawl 2026-09-10 (`docs.x.ai/grok-bot/bots` updated 7 Sep: share link is **public configuration**; **duplicate copies skills and routines**, not history/memory/attachments; hide ≠ pause; delete removes routines but shared-computer files remain) plus X ingest 9–10 Sep (voice screen-share sees the browser; public Bot share URL `x.ai/bot/…` is cloneable; voice clone is identity publish). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; disabled jobs stay disabled; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
+
+### OpenAI (first)
+
+- Description 1014 chars (under Codex 8k / 2% truncation and Anthropic 1024). Front-loads reviewer hop / mailbox connector / Grok share / access grant / webhook secret. States decline for login, DNS, unnamed repo push, partner send, pay, identity, access grant, webhook secret, voice/phone provision.
+- `agents/openai.yaml` `default_prompt` names reviewer hop, mailbox, Grok/Bot share URL, access grant, drafts ≠ send, voice screen-share, hooks untrusted until reviewed. Implicit invocation stays on. **No MCP `dependencies.tools`.** No lifecycle hooks. Smallest plugin shape is skill-only. Scan Tools snapshot — rescan after change. Public listing is the ChatGPT+Codex universal directory. `enabled = false` is not uninstall.
+- New evals 21–26: reviewer hop, mailbox/Grok share, access grant/IAM, legal drafts ≠ send, voice screen-share/voice clone, plugin hooks untrusted / pin latest.
+- ChatGPT zip path unchanged (`SKILL.md` at zip root). Zip is scanned — treat as shareable; scan again after change. Prefer one focused skill. Do not add a script when instructions suffice.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Name kebab-case ≤64. Description 1014 chars, no XML. Body ~473 lines (under 500).
+- Gotchas: reviewer hop; mailbox MCP; Grok/Bot share URL; access grant; IAM holdbacks; drafts ≠ send; voice screen-share; voice clone; plugin hooks untrusted until reviewed; pin `latest` is a live production channel; authors ≠ own reviewers.
+- Evals now 26 (≥3 required). Eight options, not nine. `evals.md` has a TOC. References one level deep. No scripts (enterprise: scripts = high risk).
+
+### Grok Build (third)
+
+- Callable / headless chain is a **disclosure ladder**. Show/hold at every hop (callable → platform → **human reviewer** → customer/partner/SME). A reviewer seeing the AI result before the customer is still a hop.
+- Voice screen-share sees the browser (computer-use). Voice clone is identity publish. Consult ≠ provision for a live number.
+- Public Grok share (`x.com/i/grok/share/…`) and Bot share (`x.ai/bot/…`) are cloneable public configuration. Duplicate copies skills and routines, not history.
+- Access grant (cloud owner/admin, GitHub org add) is owner-gated. IAM / webhook screenshots are holdbacks.
+- Legal drafts ≠ send. Two-input minimum. Two readings are not a verdict.
+- Plugin-bundled Codex hooks stay skipped until trusted. This skill has none.
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- `grok -p` / Grok Build headless default 1+8 unchanged.
+
+### Shared
+
+- JSON `sorticai.hygiene_package.v1` edition `0.5.8-free`. `agent_exposure.channel` may be `reviewer | mailbox | grok-share | iam-screenshot | access-grant | legal-draft | webhook | bot-duplicate | lifecycle-hook | voice-screen`.
+- Classification: L0-14 model pick; L2-09..11 reviewer/mailbox/voice-screen; L3-REVIEW, L3-MAILBOX, L3-SHAREURL, L3-IAM, L3-GRANT, L3-DRAFT, L3-HOOK, L3-WEBHOOK, L3-VOICECLONE.
+- Output-language rules 18–23: reviewer hop, mailbox/share URL, access grant/IAM/webhook, drafts ≠ send, voice screen-share/clone, hooks/pin-latest, no invented valuation, exploit/PoC declined.
+- Stamp: `v0.5.8-free` / patched 2026-09-10. First release date remains 2026-08-17.
+- Still free-only. Still not legal advice. Still silent on meta/privacy/corpus.
+
 ## [0.5.7-free] — 2026-09-09
 
 Patched from: david@vmcorp.cz Task Extractor briefs **7–8 Sep 2026** (callable / headless chain is a disclosure ladder; consult ≠ provision for voice/phone; disabled jobs stay disabled; do not rewrite live prompts; schedule-metadata reset ≠ prompt rewrite; ENABLED jobs with stale nextRun can still fire; internal fit-note is not a send; placeholders and MCP-size-blocked files are not originals; dashboard / OAuth / 2FA / DNS / MCP-reinstall login declined; one-tab fallback ≠ reinstall; leftover drafts unsent; do not invent status; owner-gated send/publish/pay/identity even at IP L3); OpenAI **plugins/build/skills** + plugin architecture recrawl **2026-09-09** (live at developers.openai.com/plugins/build/skills — earlier 404 note was stale; **smallest plugin shape is skill-only**; public listing is the ChatGPT+Codex **universal plugin directory**; workflow boundary names **which supporting files to consult**; test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported; prefer one focused skill; do not add a script when instructions suffice; skill zip is scanned); Anthropic Agent Skills best-practices recrawl 2026-09-09 (no new limits: name kebab ≤64; description ≤1024; SKILL.md <500; references one level deep; ≥3 evals; degrees of freedom; avoid clock-dated trivia; TOC on long refs); Grok Bot recrawl 2026-09-09 (`docs.x.ai/grok-bot/skills-routines-and-automations`, approvals-security-and-privacy, create-and-manage Bots: **Require Approval wins Always Allow**; **routine test-run performs real work**; **routine delete is immediate with no undo**; **Bot share link is public configuration** — identity, description, skills, routines; **hide ≠ pause**; deleting a Bot removes routines but shared-computer files remain; Bot datacenter IP may trip human-verification walls; `--always-approve` is a tool-permission mode, not owner approval); X ingest 7–9 Sep 2026 (malicious skills can persist via backups; third-party Bot marketplaces). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations, and X ingest. Do not dump client/product facts into the public repo.
