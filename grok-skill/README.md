@@ -1,4 +1,4 @@
-# SorticAI Free IP Sentinel — Grok / Grok Build / Grok Bot (v0.5.7-free)
+# SorticAI Free IP Sentinel — Grok / Grok Build / Grok Bot (v0.5.8-free)
 
 Grok-native package. Headless numbered options are the **default** (Grok Build viewers cannot run a TUI picker; `grok -p` is one-shot; **Grok Bot is unattended**). Unnamed L3 **default-delivers 1 (show/hold) + 8 (JSON)** so an unattended run is not blank.
 
@@ -16,7 +16,7 @@ cp -r sortic-ip-sentinel-free/grok-skill ~/.grok/skills/sortic-ip-sentinel-free
 
 Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/` (already includes `references/`).
 
-Grok Bot: same folder on the Bot’s machine. Treat email / GitHub push / browser-use / Clip-Bot / social post / board rooms / callable hops / voice demos as **live demo channels**. Apply show/hold before the paste/send. Never invent status. Never email leftover drafts or partner pre-reads unless this turn names recipient AND action. Backup is not publish. Bot egress IP is not sticky — decline registrar login on new-device alerts. Local-computer execution is not a vault. `--always-approve` / `--yolo` is not owner approval. Consult ≠ voice/phone provision. Disabled jobs stay disabled. Fit-note is not a send. Done requires path+link.
+Grok Bot: same folder on the Bot’s machine. Treat email / GitHub push / browser-use / Clip-Bot / social post / board rooms / callable hops / reviewer hops / voice demos / voice screen-share / public Grok or Bot share URLs as **live demo channels**. Apply show/hold before the paste/send. Never invent status. Never email leftover drafts or partner pre-reads unless this turn names recipient AND action. Backup is not publish. Bot egress IP is not sticky — decline registrar login on new-device alerts. Local-computer execution is not a vault. `--always-approve` / `--yolo` is not owner approval. Consult ≠ voice/phone provision. Voice clone is identity publish. Disabled jobs stay disabled. Fit-note is not a send. Drafts ≠ send. Access grant is owner-gated. Done requires path+link.
 
 ## Behaviour notes
 - Match L0–L3. Meta work on this skill stays L0. US IP corpus ticks stay L0.

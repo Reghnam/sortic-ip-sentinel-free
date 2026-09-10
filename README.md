@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.7-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.8-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -26,6 +26,10 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Placeholders and MCP-size-blocked files are not originals
 - Headless hygiene package JSON (`sorticai.hygiene_package.v1`)
 - Builder-worksheet language register (procedural, not advisory)
+- Reviewer hop is a disclosure hop; mailbox connector is MCP (this skill has none)
+- Public Grok share / `x.ai/bot/…` is cloneable config; access grant is owner-gated
+- Legal drafts ≠ send; voice screen-share sees the browser; voice clone is identity
+- Plugin-bundled hooks untrusted until reviewed; pin `latest` is a live production channel
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
@@ -61,7 +65,7 @@ Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered 
 
 ---
 
-## Compatibility (v0.5.7)
+## Compatibility (v0.5.8)
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|

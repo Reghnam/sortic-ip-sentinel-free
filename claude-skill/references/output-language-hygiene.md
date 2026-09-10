@@ -3,7 +3,7 @@
 **Free only · Not legal advice · No guarantees**
 
 Load this file when drafting any L3 deliverable (maps, checklists, JSON, slides).
-These rules come from counsel review of adjacent SorticAI writing (2 Sep 2026), Task Extractor / Grok Bot operating notes 1–8 Sep 2026 (do not invent status; do not email third parties unless the item names recipient **and** action; evidence-or-blocked; backup ≠ publish; owner-gated send/pay/identity), OpenAI plugins/skills 2026-09-06/09 (do not invent, replace, or reroll; state what the model must not infer; zip is scanned), Anthropic degrees of freedom (low on send/publish/pay/login), and Grok Bot skill anatomy (what requires approval; report failure instead of stale data; purchasing/deleting/publishing need approval). They are **writing rules**, not legal opinions.
+These rules come from counsel review of adjacent SorticAI writing (2 Sep 2026), Task Extractor / Grok Bot operating notes 1–8 Sep 2026 (do not invent status; do not email third parties unless the item names recipient **and** action; evidence-or-blocked; backup ≠ publish; owner-gated send/pay/identity), OpenAI plugins/skills 2026-09-06/10 (do not invent, replace, or reroll; state what the model must not infer; zip is scanned; plugin hooks untrusted until reviewed), Anthropic degrees of freedom (low on send/publish/pay/login/access-grant/hooks; pin latest is a live channel), and Grok Bot skill anatomy (what requires approval; report failure instead of stale data; purchasing/deleting/publishing need approval; voice screen-share sees the browser). They are **writing rules**, not legal opinions.
 
 ## Banner (put on every export)
 
@@ -37,6 +37,13 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Callable hop is a demo channel. | Dump internals into the callable surface. |
 | Image-only — numbers not extracted. | Invented dollar figures / LOE from a PNG. |
 | Bot share is a demo channel. | Park holdbacks in a marketplace clone. |
+| Reviewer hop is a demo channel. | "Already private because a lawyer saw it". |
+| Drafts ≠ send. | "Sent the ready-to-send legal drafts". |
+| Voice screen-share sees the browser. | Walk internals on a shared voice screen. |
+| Voice clone is identity publish. | "Cloned the voice onto the public Bot". |
+| Access grant is owner-gated. | "Granted cloud owner / org admin". |
+| IAM / webhook screenshots are holdbacks. | Paste secrets into the skill zip. |
+| Plugin hooks untrusted until reviewed. | "Added SessionStart hooks that write production". |
 
 ## Hard rules
 
@@ -59,6 +66,12 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 15. **Callable hops / voice / yolo.** Each hop is a demo channel. Consult ≠ provision. `--yolo` is not owner approval. Fit-note is not a send. Disabled jobs stay disabled.
 16. **Image-only ≠ numbered facts.** Do not invent dollar figures, LOE, or counts from a PNG/chart.
 17. **Bot share / marketplace clone is a demo channel.** Do not park holdbacks in a shareable Bot. Require Approval wins Always Allow. 2FA/CAPTCHA takeover → decline login.
+18. **Reviewer hop / mailbox / share URL.** A human reviewer is still a hop. Mailbox connectors are MCP live data. Public Grok share (`x.com/i/grok/share/…`) and Bot share (`x.ai/bot/…`) are public configuration.
+19. **Access grant / IAM / webhook.** Cloud owner/admin and GitHub org add stay declined unless named. IAM / secret / webhook screenshots are holdbacks. Webhook signing secret is shown once.
+20. **Legal drafts ≠ send.** Two-input minimum (briefing + artifact). Skip extremely sensitive lines. End-gate before claiming send. Two readings are not a verdict.
+21. **Voice screen-share / voice clone.** Voice mode that shares the screen is computer-use. Cloning a voice is identity publish (owner-gated).
+22. **Plugin hooks / pin latest.** This skill has no lifecycle hooks. Codex skips plugin-bundled hooks until the user trusts them; installing a plugin does not run lifecycle scripts. Anthropic `latest` immediately changes production agents.
+23. **Do not invent valuation / financial figures.** Image-only and narrative estimates are not numbered facts. Exploit/PoC stays declined.
 
 ## Headless / JSON / Grok Bot
 
@@ -86,5 +99,12 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to share a Bot / marketplace clone with holdbacks inside? Stop.
 - [ ] About to complete 2FA / CAPTCHA via computer-takeover? Decline.
 - [ ] About to dump internals into a callable hop? Stop.
+- [ ] About to treat a reviewer hop as already private? Stop.
+- [ ] About to enable a mailbox connector on this skill? Decline.
+- [ ] About to post a public Grok / Bot share of internals? Stop.
+- [ ] About to grant cloud/GitHub owner or paste IAM/webhook secrets? Decline.
+- [ ] About to send "ready-to-send" legal drafts without named recipient AND action? Hold.
+- [ ] About to share a voice screen that sees the browser? Apply show/hold first.
+- [ ] About to clone a voice or add production hooks? Decline.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
