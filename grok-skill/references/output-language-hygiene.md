@@ -3,7 +3,7 @@
 **Free only · Not legal advice · No guarantees**
 
 Load this file when drafting any L3 deliverable (maps, checklists, JSON, slides).
-These rules come from counsel review of adjacent SorticAI writing (2 Sep 2026), Task Extractor / Grok Bot operating notes 1–8 Sep 2026 (do not invent status; do not email third parties unless the item names recipient **and** action; evidence-or-blocked; backup ≠ publish; owner-gated send/pay/identity), OpenAI plugins/skills 2026-09-06/10 (do not invent, replace, or reroll; state what the model must not infer; zip is scanned; plugin hooks untrusted until reviewed), Anthropic degrees of freedom (low on send/publish/pay/login/access-grant/hooks; pin latest is a live channel), and Grok Bot skill anatomy (what requires approval; report failure instead of stale data; purchasing/deleting/publishing need approval; voice screen-share sees the browser). They are **writing rules**, not legal opinions.
+These rules come from counsel review of adjacent SorticAI writing (2 Sep 2026), Task Extractor / Grok Bot operating notes 1–11 Sep 2026 (do not invent status; do not email third parties unless the item names recipient **and** action; evidence-or-blocked; backup ≠ publish; owner-gated send/pay/identity), OpenAI plugins/skills 2026-09-06/10 (do not invent, replace, or reroll; state what the model must not infer; zip is scanned; plugin hooks untrusted until reviewed), Anthropic degrees of freedom (low on send/publish/pay/login/access-grant/hooks; pin latest is a live channel), and Grok Bot skill anatomy (what requires approval; report failure instead of stale data; purchasing/deleting/publishing need approval; voice screen-share sees the browser). They are **writing rules**, not legal opinions.
 
 ## Banner (put on every export)
 
@@ -48,6 +48,12 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Connectors are not a vault. | "The connector keeps this private". |
 | Console-shot mail is a demo. | Attach console shots and send. |
 | CI auto-apply is a production change. | "Auto-applied the infra PR". |
+| Sites URL is production. | "Private preview Site". |
+| User instructions beat skill guidelines. | Ignore named-recipient gate *or* skip quoting SKILL.md on decline. |
+| Async board packet is a demo. | Dump internals because the owner is absent. |
+| Project-repo skill commit is a publish. | "Just committed the skill into the customer tree". |
+| Fan-out is a disclosure multiplier. | One show/hold for the whole chain. |
+| Project hooks need /hooks-trust. | "Enabled .grok/hooks/ unsigned". |
 
 ## Hard rules
 
@@ -114,3 +120,7 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to clone a voice or add production hooks? Decline.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
+
+26. **Astra user-override / Sites.** Explicit user instructions this turn take precedence over skill guidelines. Named recipient AND action is that override. On L3 decline, quote SKILL.md. Complete authorized work first so approval is last. No unsolicited hypothetical-risk checklists on L0/L1. Every Sites deployment URL is production. Save-without-deploy to review. Default owner+admins. Workspace/public publish is a demo. Sites env/secrets are holdbacks. Computer-use speed is not a vault. Astra credits/seats stay L0.
+27. **Async board packet / leftover counsel draft.** A pack that goes out without the room is a demo channel. A leftover counsel draft that later sends is still a send. Do not invent valuation figures.
+28. **Project-repo skill / fan-out / hooks-trust.** Committing this skill into a customer tree is a publish. Workflow fan-out is a disclosure multiplier — show/hold at every hop. Project `.grok/hooks/` needs `/hooks-trust`.
