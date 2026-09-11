@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.8-free)
+# Agent / computer-use exposure log — Template (v0.5.9-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -8,7 +8,7 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 
 ## What the agent did (redact secrets in this table)
 
-| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
+| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
 |------|---------------------------|-----------------------------------------------------|------------------------|-------------------|-------------|------------------|
 |      |                           |                                                     |                        |                       |                       |                              |                                      |
 
@@ -46,8 +46,13 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 - [ ] Astra / computer-use write-across-apps: internals held; connectors not treated as a vault.
 - [ ] Console screenshots not attached to a partner mail unless NDA/show-hold and recipient AND action named.
 - [ ] CI auto-apply of infra PRs declined unless owner AND action named.
+- [ ] Sites deploy treated as production; save-without-deploy to review; env/secrets not in prompts or Site content.
+- [ ] Async board packet without the room treated as a demo; valuation/internals held.
+- [ ] Project-repo skill commit declined unless named publish.
+- [ ] Workflow fan-out: show/hold at every hop.
+- [ ] Project `.grok/hooks/` not enabled without `/hooks-trust`.
 
-## Rules (from 4–10 Sep operator briefs + Grok Bot + OpenAI 2026-09-10 + Anthropic pin-latest)
+## Rules (from 4–11 Sep operator briefs + Grok Bot + OpenAI 2026-09-10 + Anthropic pin-latest)
 
 1. **Do not invent, replace, or reroll a result.** Unknown = unknown. Write "not found" or "not in this turn". Stale nextRun ≠ didn't run.
 2. **Approval = recipient AND action named this turn.** Leftover drafts, empty signature replies, auto-publish, partner pre-reads, pay, identity/live-copy, and resend stay on hold.
@@ -74,6 +79,8 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 23. **Voice screen-share sees the browser.** Voice clone is identity publish. Plugin-bundled hooks stay skipped until trusted. This skill has none.
 24. **Astra computer-use is a live demo.** Write-across-apps / browser-use without APIs is computer-use. Connectors are not a vault.
 25. **Console-shot mail / CI auto-apply.** Partner-mail console shots are a demo. CI auto-apply is a production change. One focused skill.
+26. **Sites / user-override.** Every Sites URL is production. User instructions this turn beat skill guidelines; named recipient AND action is the override; quote SKILL.md on L3 decline. No unsolicited L0/L1 checklists.
+27. **Async board / repo-skill / fan-out / hooks-trust.** Packet without the room is a demo. Project-repo skill commit is a publish. Fan-out multiplies hops. Project hooks need `/hooks-trust`.
 
 JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-hygiene-package.md`). Prefer empty arrays over invented rows. Set `owner_gated: true`.
 

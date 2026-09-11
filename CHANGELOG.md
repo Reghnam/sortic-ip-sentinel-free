@@ -2,6 +2,43 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.9-free] — 2026-09-11
+
+Patched from: david@ mailbox 8–11 Sep 2026 (async board packet without the room is a demo channel; leftover counsel draft that later sends is still a send; callable/headless chain remains a disclosure ladder including the **human reviewer hop**; **sortic-ip-sentinel-free automation stays disabled**; Sentinel→GitHub auto-push is owner L3 — this Grok Build turn *is* the named owner push of hygiene-only files; weekly backup ≠ publish; disabled jobs stay disabled; fit-note ≠ send; image-only ≠ numbered facts — **no client/product/infra names, no valuation figures in this repo**); OpenAI **plugins/build/skills** + Astra instruction-following + Codex Sites recrawl **2026-09-11** (developers.openai.com/plugins/build/skills live; developers.openai.com/api/docs/guides/latest-model: **explicit user instructions this turn take precedence over skill guidelines**; if a skill would pause/diverge, **quote SKILL.md**; complete authorized work first so approval is last; **do not introduce unsolicited warnings / disclaimers / hypothetical-risk checklists**; every **Sites deployment URL is production**; save-without-deploy to review; default owner+admins; workspace/public publish are demo channels; keep secrets out of prompts, attached files, Site content, and `.openai/hosting.json`; Astra computer-use is a live demo; connectors are not a vault; computer-use speed is not a vault; Astra credits/seats stay L0; smallest plugin shape is skill-only; MCP Scan Tools is a snapshot; zip scanned); Anthropic Agent Skills best-practices recrawl 2026-09-11 (no new limits: name kebab ≤64; description ≤1024; SKILL.md body <500; references one level deep; ≥3 evals; degrees of freedom; authors ≠ own reviewers; pin `latest` is a live production channel; keep Skills list order stable for prompt caching); Grok Bot / Build recrawl 2026-09-11 (`docs.x.ai/grok-bot/bots` last updated 7 Sep: share link is **public configuration**; hide ≠ pause; duplicate copies skills and routines; `docs.x.ai/build/features/skills-plugins-marketplaces`: skills from `./.grok/skills/` walked up to repo root — **a project-repo skill commit is a publish**; project `.grok/hooks/` **requires `/hooks-trust`**; Grok also reads `.claude/` skills; subagents spawn independent child sessions and do not inherit). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; disabled jobs stay disabled; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
+
+### OpenAI (first)
+
+- Description 1019 chars (under Codex 8k / 2% truncation and Anthropic 1024). Front-loads Sites deploy. States decline for login, DNS, unnamed repo push, partner send, pay, identity, access grant, webhook, voice/phone, CI auto-apply, Sites public publish.
+- Astra instruction-following: user instructions this turn beat skill guidelines. Named recipient AND action is that override. On L3 decline, quote SKILL.md. Complete authorized work first. No unsolicited L0/L1 hypothetical-risk checklists.
+- Codex/ChatGPT Sites: every deployment URL is production. Save-without-deploy to review. Default owner+admins. Workspace/public publish are demo channels. Sites env/secrets are holdbacks. Computer-use speed is not a vault. Astra credits/seats stay L0.
+- `agents/openai.yaml` `default_prompt` names Sites=production, user-override, async board packet, project-repo skill commit, workflow fan-out, `/hooks-trust`. Implicit invocation stays on. **No MCP `dependencies.tools`.** No lifecycle hooks. Smallest plugin shape is skill-only.
+- New evals 30–36: Sites URL, user-override leftover send, unsolicited L0 checklist, async board packet, customer-repo skill commit, workflow fan-out, hooks-trust.
+- ChatGPT zip path unchanged (`SKILL.md` at zip root). Zip is scanned. Prefer one focused skill.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Name kebab-case ≤64. Description 1019 chars, no XML. Body under 500.
+- Gotchas: user-override; Sites=production; async board packet; project-repo skill commit; workflow fan-out; `/hooks-trust`; authors ≠ own reviewers; pin `latest`.
+- Evals now 36 (≥3 required). Eight options, not nine. References one level deep. No scripts.
+
+### Grok Build (third)
+
+- Async board packet without the room is a **demo channel**. Leftover counsel draft that later sends is still a send.
+- Project-repo skill commit (`.github/skills/`, `.claude/skills/`, `.grok/skills/` in a customer tree) is a **publish**. Grok walks `./.grok/skills/` to repo root and also reads `.claude/` skills.
+- Workflow fan-out is a **disclosure multiplier**. Show/hold at every hop.
+- Project `.grok/hooks/` needs `/hooks-trust`. Untrusted project hooks declined.
+- Subagents still do not inherit this skill. `--yolo` is not owner approval. Hide ≠ pause.
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.) `sortic-ip-sentinel-free` automation stays disabled.
+- `grok -p` / Grok Build headless default 1+8 unchanged.
+
+### Shared
+
+- JSON `sorticai.hygiene_package.v1` edition `0.5.9-free`. `agent_exposure.channel` may be `sites | async-board | repo-skill | fan-out | hooks-trust` (plus prior values).
+- Classification: L0-16 Astra credits; L2-13..15 Sites/async-board/repo-skill; L3-SITES, L3-OVERRIDE, L3-ASYNC, L3-REPO, L3-FANOUT, L3-HOOKSTRUST.
+- Output-language rules 26–28: Astra user-override / Sites; async board packet / leftover counsel draft; project-repo skill / fan-out / hooks-trust.
+- Stamp: `v0.5.9-free` / patched 2026-09-11. First release date remains 2026-08-17.
+- Still free-only. Still not legal advice. Still silent on meta/privacy/corpus.
+
 ## [0.5.8-free] — 2026-09-10
 
 Patched from: david@ mailbox 8–10 Sep 2026 (callable/headless chain is a disclosure ladder including the **human reviewer hop**; mailbox/Outlook connector is MCP live data; legal correspondence needs **two inputs**; drafts ≠ send; access grant is owner-gated identity; IAM/secret screenshots are holdbacks; fit-note ≠ send; leftover drafts unsent; least-privilege / no long-lived keys as generic hygiene — **no client/product/infra names in this repo**); OpenAI **plugins/build/skills** + plugin architecture + package recrawl **2026-09-10** (developers.openai.com/plugins/build/skills live; **smallest plugin shape is skill-only**; MCP "Scan Tools" is a **snapshot**, not a live fetch; public listing is the ChatGPT+Codex **universal plugin directory**; `enabled = false` is not uninstall; **plugin-bundled hooks stay skipped until the user trusts the current definition**; installing a plugin does not run lifecycle scripts; this skill has **no MCP and no lifecycle hooks**; zip scanned; test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported; GPT-6 Astra / Extra High **model pick is L0** — decline exploit/PoC; GPT-6 Astra **computer and browser use** is a **live demo channel**; connectors/plugins use the signed-in account — they are **not a secrecy boundary**; confirmation policies cover exposing confidential information, sharing a dashboard too broadly, deleting data; Astra declines unsupported conclusions from documents); Anthropic Agent Skills best-practices + enterprise recrawl 2026-09-10 (no new limits: name kebab ≤64; description ≤1024; SKILL.md <500; references one level deep; ≥3 evals; degrees of freedom; authors ≠ own reviewers; **pin skill version in production** — `latest` immediately changes production agents; keep Skills list order stable for prompt caching); Grok Bot recrawl 2026-09-10 (`docs.x.ai/grok-bot/bots` updated 7 Sep: share link is **public configuration**; **duplicate copies skills and routines**, not history/memory/attachments; hide ≠ pause; delete removes routines but shared-computer files remain; **changing production requires approval** — CI auto-apply of an infra PR is that class) plus X ingest 9–10 Sep (voice screen-share sees the browser; public Bot share URL `x.ai/bot/…` is cloneable; voice clone is identity publish). Follow-up same day: Astra computer-use write-across-apps ≠ model pick; console-shot partner mail is a demo; one focused skill (do not merge with correspondence/persona skills). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; disabled jobs stay disabled; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
