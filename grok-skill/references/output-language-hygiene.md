@@ -54,6 +54,10 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Project-repo skill commit is a publish. | "Just committed the skill into the customer tree". |
 | Fan-out is a disclosure multiplier. | One show/hold for the whole chain. |
 | Project hooks need /hooks-trust. | "Enabled .grok/hooks/ unsigned". |
+| Remote Mac is computer-use. | Drive the docked Mac / type Messages without named send. |
+| Live isEnabled is evidence. | "Disabled per last week's brief". |
+| Workspace plugin / Copilot skill is a publish. | "Shared the plugin / committed .github/skills/". |
+| Name and link SKILL.md on L3 decline. | Unsolicited approval flow or safety checklist on L0/L1. |
 
 ## Hard rules
 
@@ -118,9 +122,21 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to send "ready-to-send" legal drafts without named recipient AND action? Hold.
 - [ ] About to share a voice screen that sees the browser? Apply show/hold first.
 - [ ] About to clone a voice or add production hooks? Decline.
+- [ ] About to register a Mac as a Bot remote device, or let a Bot type Messages/Mail? Decline / hold send.
+- [ ] About to invent "disabled" from a prior brief? Read live isEnabled.
+- [ ] About to share a workspace plugin or commit .github/skills/ for Copilot unnamed? Decline.
+- [ ] About to add an unsolicited L0/L1 approval flow or safety checklist? Do not.
+- [ ] About to pin Responses API / Anthropic `latest` unnamed, or attach this public skill as an open catalog? Decline.
+- [ ] About to mix zip layouts or spawn a subagent without listing this skill? Decline / do not spawn.
+- [ ] About to treat workspace billing/payment as an IP moment? L0 silent.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
 26. **Astra user-override / Sites.** Explicit user instructions this turn take precedence over skill guidelines. Named recipient AND action is that override. On L3 decline, quote SKILL.md. Complete authorized work first so approval is last. No unsolicited hypothetical-risk checklists on L0/L1. Every Sites deployment URL is production. Save-without-deploy to review. Default owner+admins. Workspace/public publish is a demo. Sites env/secrets are holdbacks. Computer-use speed is not a vault. Astra credits/seats stay L0.
 27. **Async board packet / leftover counsel draft.** A pack that goes out without the room is a demo channel. A leftover counsel draft that later sends is still a send. Do not invent valuation figures.
-28. **Project-repo skill / fan-out / hooks-trust.** Committing this skill into a customer tree is a publish. Workflow fan-out is a disclosure multiplier — show/hold at every hop. Project `.grok/hooks/` needs `/hooks-trust`.
+28. **Project-repo skill / fan-out / hooks-trust.** Committing this skill into a customer tree is a publish (Copilot/VS Code load `.github/skills/` and `.claude/skills/` too). Workflow fan-out is a disclosure multiplier — show/hold at every hop. Project `.grok/hooks/` needs `/hooks-trust`.
+29. **Remote Mac / phone-driven desktop.** Registering a Mac as a Bot remote device is owner-gated. A Bot that drives the local desktop is computer-use. Phone screenshots are a demo. Messages/Mail typing is a send.
+30. **Live job-state / workspace plugin.** Do not invent disabled from a prior brief. Live `isEnabled` is evidence. Workspace-shared plugins are a demo/publish channel. On L3 decline, name and link SKILL.md; no unsolicited approval flows.
+
+31. **Responses API / two zip layouts.** Uploaded skills are versioned bundles. Pin an integer version in production; `latest` is a live channel. Do not expose this public repo as an open end-user catalog. ChatGPT Skills tab zip = `SKILL.md` at root; Agent Plugins zip = `plugin.json` + `skills/<name>/SKILL.md`. Exactly one `SKILL.md` per bundle.
+32. **Subagent `skills:` field.** Claude Code subagents auto-load listed skills only. They do not inherit this skill unless listed. Workspace billing/payment without protect intent stays L0.
