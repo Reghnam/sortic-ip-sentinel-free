@@ -1,8 +1,8 @@
-# SorticAI Free IP Sentinel — Claude Code (v0.5.9-free)
+# SorticAI Free IP Sentinel — Claude Code (v0.5.10-free)
 
 Anthropic-strict package. SKILL.md YAML is **only** `name` + `description` (required). Name is kebab-case, ≤64 chars. Description is 1019 chars (limit 1024), includes what + when + do-not-use + Bot/computer-use / Astra, no XML.
 
-`references/` is **bundled**. One copy is a complete skill. Evals: `references/evals.md` (36; ≥3 required). Degrees of freedom: low on send/publish/pay/login/access-grant/hooks/CI-apply. Pin `latest` is a live production channel. Authors ≠ own reviewers. No scripts. One focused skill.
+`references/` is **bundled**. One copy is a complete skill. Evals: `references/evals.md` (43; ≥3 required). Degrees of freedom: low on send/publish/pay/login/access-grant/hooks/CI-apply. Pin `latest` is a live production channel. Authors ≠ own reviewers. No scripts. One focused skill.
 
 ## Install
 

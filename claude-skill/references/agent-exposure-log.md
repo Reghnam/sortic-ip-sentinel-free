@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.9-free)
+# Agent / computer-use exposure log — Template (v0.5.10-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -8,7 +8,7 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 
 ## What the agent did (redact secrets in this table)
 
-| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
+| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust / remote-mac / workspace-plugin / responses-api / hosted-skill) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
 |------|---------------------------|-----------------------------------------------------|------------------------|-------------------|-------------|------------------|
 |      |                           |                                                     |                        |                       |                       |                              |                                      |
 
@@ -51,6 +51,11 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 - [ ] Project-repo skill commit declined unless named publish.
 - [ ] Workflow fan-out: show/hold at every hop.
 - [ ] Project `.grok/hooks/` not enabled without `/hooks-trust`.
+- [ ] Remote Mac / phone-driven desktop treated as computer-use; Mac-as-remote-device register declined unless named; Messages/Mail typing held as a send; phone screenshots treated as a demo.
+- [ ] Live isEnabled used as job-state evidence; prior brief not invented as disabled.
+- [ ] Workspace-shared plugin / Copilot `.github/skills/` commit declined unless named publish.
+- [ ] Responses API hosted skill / open catalog declined unless named publish; pin an integer version, not `latest`.
+- [ ] Subagent spawned only if this skill is listed (`skills:` field or equivalent).
 
 ## Rules (from 4–11 Sep operator briefs + Grok Bot + OpenAI 2026-09-10 + Anthropic pin-latest)
 
@@ -80,7 +85,10 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 24. **Astra computer-use is a live demo.** Write-across-apps / browser-use without APIs is computer-use. Connectors are not a vault.
 25. **Console-shot mail / CI auto-apply.** Partner-mail console shots are a demo. CI auto-apply is a production change. One focused skill.
 26. **Sites / user-override.** Every Sites URL is production. User instructions this turn beat skill guidelines; named recipient AND action is the override; quote SKILL.md on L3 decline. No unsolicited L0/L1 checklists.
-27. **Async board / repo-skill / fan-out / hooks-trust.** Packet without the room is a demo. Project-repo skill commit is a publish. Fan-out multiplies hops. Project hooks need `/hooks-trust`.
+27. **Async board / repo-skill / fan-out / hooks-trust.** Packet without the room is a demo. Project-repo skill commit is a publish (Copilot/VS Code included). Fan-out multiplies hops. Project hooks need `/hooks-trust`.
+28. **Remote Mac / phone-driven desktop.** Registering a Mac as a Bot remote device is owner-gated. Desktop drive + phone screenshot = demo. Messages/Mail typing = send.
+29. **Live isEnabled / workspace plugin.** Do not invent disabled from a prior brief. Workspace-shared plugins are a publish channel.
+30. **Responses API / two zip layouts / subagent skills.** Versioned bundles; pin integer, not `latest`. Do not expose this public repo as an open end-user catalog. Skills-tab zip ≠ plugin zip. Subagents do not inherit unless listed.
 
 JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-hygiene-package.md`). Prefer empty arrays over invented rows. Set `owner_gated: true`.
 

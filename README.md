@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.9-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.10-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -37,6 +37,11 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - User instructions this turn beat skill guidelines; named recipient AND action is the override
 - Async board packet without the room is a demo; project-repo skill commit is a publish
 - Workflow fan-out is a disclosure multiplier; project `.grok/hooks/` needs `/hooks-trust`
+- Remote Mac / phone-driven desktop is computer-use; Messages/Mail typing is a send
+- Live `isEnabled` is evidence — do not invent disabled from a prior brief
+- Workspace-shared plugin / Copilot `.github/skills/` is a publish
+- Responses API Skills are versioned bundles — pin an integer version, not `latest`
+- Two zip layouts (Skills tab = `SKILL.md` at root; Agent Plugins = `plugin.json` + `skills/<name>/SKILL.md`)
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
@@ -72,7 +77,7 @@ Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered 
 
 ---
 
-## Compatibility (v0.5.9)
+## Compatibility (v0.5.10)
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|
