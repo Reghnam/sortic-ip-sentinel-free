@@ -20,7 +20,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 ```json
 {
   "schema": "sorticai.hygiene_package.v1",
-  "edition": "0.5.10-free",
+  "edition": "0.5.11-free",
   "activation_level": "L3",
   "output_register": "procedural_builder_worksheet",
   "not_for_third_party": true,
@@ -40,7 +40,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
   "holdbacks": ["exact parameters", "full source", "production data"],
   "contribution_log_started": false,
   "agent_exposure": [
-    {"runtime": "grok-bot | grok-build | codex-p | claude-p | computer-use | other", "channel": "browser | email | github | social | livestream | hitl | board | backup | export | local-computer | callable | voice | voice-screen | routine | file | bot-share | marketplace | grok-share | reviewer | mailbox | iam-screenshot | access-grant | legal-draft | webhook | bot-duplicate | lifecycle-hook | astra-computer | console-shot | ci-apply | sites | async-board | repo-skill | fan-out | hooks-trust | remote-mac | workspace-plugin | responses-api | hosted-skill | none", "what": "redacted one line", "audience_named": false, "action_named": false, "evidence": "", "action": "hold | ok | not_sent | blocked_no_evidence | declined"}
+    {"runtime": "grok-bot | grok-build | codex-p | claude-p | computer-use | other", "channel": "browser | email | github | social | livestream | hitl | board | backup | export | local-computer | callable | voice | voice-screen | routine | file | bot-share | marketplace | grok-share | reviewer | mailbox | iam-screenshot | access-grant | legal-draft | webhook | bot-duplicate | lifecycle-hook | astra-computer | console-shot | ci-apply | sites | async-board | repo-skill | fan-out | hooks-trust | remote-mac | workspace-plugin | responses-api | hosted-skill | counsel-release | livestream | claude-plugin | demo-skill | meet-notes | judge-model | none", "what": "redacted one line", "audience_named": false, "action_named": false, "evidence": "", "action": "hold | ok | not_sent | blocked_no_evidence | declined"}
   ],
   "approval_required": true,
   "evidence_or_blocked": "done requires path+link; promises and inbox-root dumps are not done",
@@ -61,7 +61,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 - Never invent status. Do not invent, replace, or reroll a result. Never email/post/auto-publish/pay the JSON or the work unless this turn names the recipient **and** the action (`not_for_third_party`, `approval_required`, `owner_gated`). Leftover drafts and partner pre-reads stay unsent.
 - Claimed send needs message-id + recipients, else `not_sent`.
 - `evidence_or_blocked`: write blocked when there is no path+link. Inbox-root dumps are not done.
-- `stop_or_decline`: `ask` (incomplete input), `stop` (leftover draft / truncated-as-original / clock-limited overshare / backup-tree growth / image-only invented figures / holdbacks in a shareable Bot / public Grok-share of internals / IAM paste / console-shot mail of internals), `decline` (unsupported login, unnamed public auto-push, client facts into public repo, partner send, pay, identity/live-copy, backup-as-publish, access grant, mailbox MCP, production hooks, webhook secret, voice clone, voice/phone provision, CI auto-apply, Sites public publish, project-repo skill commit, untrusted project hooks, unnamed remote-Mac register, unnamed workspace plugin, unnamed Responses API open catalog / pin-latest, exploit/PoC), or `none`.
+- `stop_or_decline`: `ask` (incomplete input), `stop` (leftover draft / truncated-as-original / clock-limited overshare / backup-tree growth / image-only invented figures / holdbacks in a shareable Bot / public Grok-share of internals / IAM paste / console-shot mail of internals), `decline` (unsupported login, unnamed public auto-push, client facts into public repo, partner send, pay, identity/live-copy, backup-as-publish, access grant, mailbox MCP, production hooks, webhook secret, voice clone, voice/phone provision, CI auto-apply, Sites public publish, project-repo skill commit, untrusted project hooks, unnamed remote-Mac register, unnamed workspace plugin, unnamed Responses API open catalog / pin-latest, unnamed Claude-plugin submit, unnamed public livestream, unnamed demonstration-to-skill, unnamed counsel-unreviewed client send, exploit/PoC), or `none`.
 - `owner_gated`: always `true` on this edition. Send / publish / pay / identity / live title-copy stay declined unless this turn names recipient **and** action. IP L3 is not write-privilege.
 - Truncated/junk files are not originals. Do not emit them as work product.
 - Do not dump client/product facts into a public skill repo. ChatGPT/Codex skill zips are scanned — no secrets in the zip.
@@ -82,9 +82,12 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 - If source data is unavailable, report failure — do not reuse stale data.
 - `agent_exposure` **must be emitted**. Empty array is correct when the agent did not show/send anything this turn.
 
-**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.10-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
+**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.11-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 - Sites deploy URL is production. Save-without-deploy to review. Default owner+admins. Workspace/public publish is a demo. Sites env/secrets are holdbacks.
 - User instructions this turn beat skill guidelines. Named recipient AND action is the override. On L3 decline, quote SKILL.md. No unsolicited L0/L1 hypothetical-risk checklists.
 - Async board packet without the room is a demo. Project-repo skill commit is a publish. Workflow fan-out is a disclosure multiplier. Project `.grok/hooks/` needs `/hooks-trust`.
 - Responses API Skills are versioned bundles. Pin an integer version; `latest` is a live channel. Do not expose this public repo as an open end-user catalog. Two zip layouts; do not mix. Subagents do not inherit unless listed.
 - Remote Mac / phone-driven desktop is computer-use. Live `isEnabled` is evidence. Workspace-shared plugin / Copilot `.github/skills/` is a publish.
+
+- Counsel-release is a send. "Waiting for legal review" is an internal hold. A judge-model is not counsel. Meet auto-notes of an IP/AI session are a demo.
+- Three zip layouts; do not mix. Unnamed Claude-plugin submit is a publish. Public livestream of internals is a demo; attending is L0. Demonstration-to-skill is a publish (screen recorded).

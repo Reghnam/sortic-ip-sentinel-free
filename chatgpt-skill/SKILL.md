@@ -3,23 +3,22 @@ name: sortic-ip-sentinel-free
 description: >
   Use when the user says protect the IP, patent, trade secret, NDA, prior art, inventorship, IP
   analysis, IP sensitive moment, how to protect this, investor demo, fundraising
-  deck, HiTL, UAT, livestream, board, partner pre-read, callable agent, reviewer hop, Astra
-  computer-use, Sites deploy, voice screen-share, remote Mac, mailbox, or when a headless/Grok Bot/computer-use/subagent
+  deck, HiTL, UAT, livestream, board, partner pre-read, callable agent, reviewer hop, counsel-release,
+  Astra computer-use, Sites deploy, voice screen-share, remote Mac, mailbox, or when a headless/Grok Bot/computer-use/subagent
   will show, email, push, post, auto-publish, send leftover drafts, or treat a backup as publish.
-  Delivers free builder-worksheet hygiene only: show/hold, demo playbook, contribution logs,
-  agent-exposure, hygiene JSON. Never invent status. Stop, ask, or decline unsupported
+  Delivers free hygiene: show/hold, demo playbook, contribution logs, agent-exposure, JSON. Never invent status. Stop, ask, or decline unsupported
   actions (login, DNS, unnamed repo push, partner send, pay, identity, access grant, webhook,
-  voice/phone, CI auto-apply, Sites public publish) unless this turn names recipient and action. Do not use
+  voice/phone, CI auto-apply, Sites public publish, counsel-release) unless this turn names recipient and action. Do not use
   for privacy, telemetry, CI, editing this skill, workspace/SaaS renewal, weekly backup without
   protect intent, or the US IP law corpus. Not legal advice. No paid paths.
 license: See LICENSE.md
 metadata:
-  version: "0.5.10-free"
+  version: "0.5.11-free"
   author: "SorticAI"
   category: "ip-hygiene"
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.10-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.11-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -31,7 +30,7 @@ metadata:
 
 Do not hijack every turn. Surface only when it adds value.
 
-- **L0 Silent (default, no injection):** No real IP intent. Examples: privacy settings, config, telemetry, generic security, debugging, CI, editing this skill or any skill (including "improve the IP sensitive moment skill" or "work on sortic-ip-sentinel"), US IP corpus / hourly training ticks, Grok Bot ops with no protect intent (archive invoices, field digests, weekly backup, workspace/SaaS renewal or billing/payment, registrar new-device alerts, stale schedule metadata, OAuth/MCP one-tab fallback, trial/renewal FYI, re-enable a disabled job without protect intent), hide a Bot from the sidebar, workspace Extra High / connector seats / model pick / Astra credits (including GPT-6 Astra), merge this hygiene skill with a correspondence/persona skill, plugin `enabled = false`, user says "not now" or "stop". Answer the user's actual request. Zero SorticAI content. Hide does not pause routines. Plugin disable is not uninstall. Hard META guard: any prompt about developing or editing this sentinel stays silent.
+- **L0 Silent (default, no injection):** No real IP intent. Examples: privacy settings, config, telemetry, generic security, debugging, CI, editing this skill or any skill (including "improve the IP sensitive moment skill" or "work on sortic-ip-sentinel"), US IP corpus / hourly training ticks, Grok Bot ops with no protect intent (archive invoices, field digests, weekly backup, workspace/SaaS renewal or billing/payment, registrar new-device alerts, stale schedule metadata, OAuth/MCP one-tab fallback, trial/renewal FYI, re-enable a disabled job without protect intent), hide a Bot from the sidebar, workspace Extra High / connector seats / model pick / Astra credits (including GPT-6 Astra), merge this hygiene skill with a correspondence/persona skill, plugin `enabled = false`, register for a public Bot livestream with no protect intent, user says "not now" or "stop". Answer the user's actual request. Zero SorticAI content. Hide does not pause routines. Plugin disable is not uninstall. Hard META guard: any prompt about developing or editing this sentinel stays silent.
 - **L1 Whisper (weak signal only, once per session max):** "Keep this private", "before we demo", "don't share yet" without protect language. Answer fully first. One quiet closing line only, e.g.: "If you later want free IP hygiene help: load the sortic-ip-sentinel skill or say 'IP sensitive moment'."
 - **L2 Soft tip (exposure without explicit protect ask):** Investor demo, pilot showcase, fundraising deck, partner share, **publishing a skill/Bot, posting a demo clip, HiTL/UAT session, livestream, board/partner weekly, meeting-notes auto-capture of a demo, computer-use share, callable-agent surface, reviewer hop, mailbox connector, public Grok share URL, Bot duplicate, infra/IAM screenshot, console-shot partner mail, Astra write-across-apps, voice demo / voice screen-share, CI auto-apply, Sites deploy, async board packet, project-repo skill commit, workflow fan-out, remote Mac / phone-driven desktop, workspace-shared plugin, Responses API hosted skill**. Answer the primary request. After it, add 2–4 lines max of practical free tip (e.g., "Consider what is safe to show vs hold before that deck, Bot post, or callable hop. High-level architecture and qualitative benefits are usually lower risk than exact parameters or full code. Full free hygiene available via the sentinel skill.").
 - **L3 Full sentinel (explicit IP-sensitive moment):** Protect language + analysis or strong nouns (protect the IP / trade secret / NDA / prior art / inventorship / patent / "IP sensitive moment" / IP analysis / how to protect this / run analysis and check) OR clear combo of exposure + protect intent OR a Bot/agent that will email, push, or post the work **plus** protect language. Or direct invocation (`$sortic-ip-sentinel-free`, `@` skill, `/skills`).
@@ -60,7 +59,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.10-free (portable)  ·  sorticai.com  ·  patched 2026-09-11              |
+|  v0.5.11-free (portable)  ·  sorticai.com  ·  patched 2026-09-12              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -161,7 +160,9 @@ This is the free Phase-0 shape: **skill → structured hygiene package**. No pai
 - **Workspace-shared plugin is a demo/publish channel.** "Shared with you" ChatGPT/Codex plugins expose the skill inside the workspace. Copilot/VS Code also load project `.github/skills/` and `.claude/skills/`.
 - **Astra quote is exact.** On L3 decline, name and link the SKILL.md you read, quote the relevant instruction, and distinguish explicit skill requirements from interpretation. No unsolicited warnings, disclaimers, approval flows, or safety/compliance checklists on L0/L1.
 - **Responses API Skills are versioned bundles** (developers.openai.com/api/docs/guides/tools-skills). Pin an integer version in production; `latest` is a live channel. Hosted/container execution is a demo surface. Inspect before attach. Do not expose this public repo as an open end-user catalog. Local shell does not take `skill_reference` attachments.
-- **Two zip layouts.** ChatGPT Skills tab: `SKILL.md` at zip root. Agent Plugins: `plugin.json` + `skills/<name>/SKILL.md`. Exactly one `SKILL.md` per bundle (case-insensitive). Do not mix layouts.
+- **Three zip layouts.** (1) ChatGPT Skills tab: `SKILL.md` at zip root. (2) Agent Plugins: `plugin.json` + `skills/<name>/SKILL.md`. (3) Claude archive: `.claude-plugin/plugin.json` + `skills/<name>/SKILL.md` (portal converts to `.codex-plugin`). Exactly one `SKILL.md` per bundle. Do not mix. Inline base64 zip is a publish. Limits: 50 MB / 500 files / 25 MB uncompressed. No secrets in archive, manifest, or defaults.
+- **Counsel-release is a send.** AI output that leaves the room to a customer / HR / regulated audience needs named human-reviewer approval first. "Waiting for legal review" is an internal hold, never a customer-facing artifact. A second-model judge is another hop, not counsel. Confidence = certainty of a finding, not priority or impact. Meet auto-notes of an IP/AI session are a demo.
+- **Public Bot livestream / demonstration-to-skill is a demo.** Streaming your internals to a global audience is L2/L3. Attending a public livestream is L0. Walking a Bot through a path once and saving it as a skill is a publish. Subagent `permissionMode: bypassPermissions` is not owner approval. `user-invocable:` only literal `true` counts.
 
 **JSON:** follow `references/headless-hygiene-package.md` schema `sorticai.hygiene_package.v1` exactly. Include `output_register: procedural_builder_worksheet`, `not_for_third_party: true`, `agent_exposure`, `approval_required`, `evidence_or_blocked`, and `stop_or_decline`. Hygiene only. No prices, no counsel names, no protectability rulings.
 
@@ -169,15 +170,15 @@ This is the free Phase-0 shape: **skill → structured hygiene package**. No pai
 
 ## Ask / stop / decline (workflow boundary)
 
-OpenAI **plugins/build/skills** recrawl **2026-09-11** (developers.openai.com/plugins/build/skills ~07:36 CEST + **api/docs/guides/tools-skills** 08:40 CEST + latest-model Astra instruction-following + Codex Sites): every skill states input, steps, output, **facts not to infer**, **when to ask / stop / decline**, and **which supporting files to consult**. **Explicit user instructions this turn take precedence over skill guidelines**; named recipient AND action is that override. On L3 decline, **name and link** the SKILL.md you read and quote the relevant instruction (distinguish explicit requirement vs interpretation). Complete authorized work first so approval is the last step. Do not add unsolicited warnings, disclaimers, approval flows, or safety/compliance checklists on L0/L1. **Every Sites deployment URL is production** — save-without-deploy to review; default owner+admins; workspace/public publish are demo channels; Sites env/secrets are holdbacks. MCP is for live data, auth, and controlled actions (mailbox/Outlook included). This skill has **no MCP** and **no lifecycle hooks**; smallest plugin shape is skill-only. Plugin-bundled hooks stay skipped until trusted; installing a plugin does not run lifecycle scripts. MCP Scan Tools is a **snapshot** — rescan after change. Public listing is the ChatGPT+Codex **universal plugin directory**. `enabled = false` is not uninstall. Controlled actions (send, login, pay, DNS, dashboard, unnamed public push, identity/live-copy, access grant, webhook secret, backup-as-publish, voice/phone provision, disabled-job re-enable, live-prompt rewrite, routine delete, Sites public publish, untrusted project hooks, exploit/PoC) stay outside the skill. Zip is scanned; after a change, scan again; no script when instructions suffice. Test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported. Host model pick / Astra credits/seats stay L0. Astra **computer-use / write-across-apps** is a live demo (not L0). Connectors are **not a vault**. Computer-use speed is not a vault. Astra declines unsupported conclusions from documents.
+OpenAI **plugins/build/skills** recrawl **2026-09-12** (developers.openai.com/plugins/build/skills + **plugins/guides/submit-claude-plugin** + **api/docs/guides/tools-skills** + Astra blog *Rethinking skills and prompts for GPT-6 Astra* 11 Sep + Codex Sites): every skill states input, steps, output, **facts not to infer**, **when to ask / stop / decline**, and **which supporting files to consult**. **Explicit user instructions this turn take precedence over skill guidelines**; named recipient AND action is that override. On L3 decline, **name and link** the SKILL.md you read and quote the relevant instruction (distinguish explicit requirement vs interpretation). Complete authorized work first so approval is the last step. Do not add unsolicited warnings, disclaimers, approval flows, or safety/compliance checklists on L0/L1. **Every Sites deployment URL is production** — save-without-deploy to review; default owner+admins; workspace/public publish are demo channels; Sites env/secrets are holdbacks. MCP is for live data, auth, and controlled actions (mailbox/Outlook included). This skill has **no MCP** and **no lifecycle hooks**; smallest plugin shape is skill-only. Plugin-bundled hooks stay skipped until trusted; installing a plugin does not run lifecycle scripts. MCP Scan Tools is a **snapshot** — rescan after change. Public listing is the ChatGPT+Codex **universal plugin directory**. `enabled = false` is not uninstall. Controlled actions (send, login, pay, DNS, dashboard, unnamed public push, identity/live-copy, access grant, webhook secret, backup-as-publish, voice/phone provision, disabled-job re-enable, live-prompt rewrite, routine delete, Sites public publish, untrusted project hooks, exploit/PoC) stay outside the skill. Zip is scanned; after a change, scan again; no script when instructions suffice. Test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported. Host model pick / Astra credits/seats stay L0. Astra **computer-use / write-across-apps** is a live demo (not L0). Connectors are **not a vault**. Computer-use speed is not a vault. Astra declines unsupported conclusions from documents.
 
 Prefer **one focused skill**. Split when triggers, inputs, or success criteria differ (OpenAI 2026-09-06). Do not merge this hygiene skill with the US IP corpus, accounting/ops skills, or a correspondence/persona skill.
 
 **Ask (incomplete input):** audience, artifact, or evidence is missing → one follow-up, then still default-deliver 1+8 if headless. Legal/tense correspondence needs **two inputs** (short briefing + the artifact). Do not invent a folder, send, or "done".
 
-**Stop (named this turn but unsafe):** leftover draft, empty signature reply, truncated/junk/placeholder/MCP-size-blocked file treated as original, clock-limited live session or attendee hard-stop about to go deeper than the show/hold map, growing a backup tree as a side effect of hygiene, dumping internals into a callable hop, inventing numbers from an image-only deck, parking holdbacks in a shareable Bot, posting a public Grok share URL of the internals, pasting IAM/secret screenshots into a skill zip, attaching console screenshots to a partner mail, making demo objects public, dumping internals into an async board packet or workflow fan-out, treating a Sites deploy URL as a private preview, dumping internals onto a remote-Mac desktop or phone screenshot, parking holdbacks on a Mac registered as a Bot remote device.
+**Stop (named this turn but unsafe):** leftover draft, empty signature reply, truncated/junk/placeholder/MCP-size-blocked file treated as original, clock-limited live session or attendee hard-stop about to go deeper than the show/hold map, growing a backup tree as a side effect of hygiene, dumping internals into a callable hop, inventing numbers from an image-only deck, parking holdbacks in a shareable Bot, posting a public Grok share URL of the internals, pasting IAM/secret screenshots into a skill zip, attaching console screenshots to a partner mail, making demo objects public, dumping internals into an async board packet or workflow fan-out, treating a Sites deploy URL as a private preview, dumping internals onto a remote-Mac desktop or phone screenshot, parking holdbacks on a Mac registered as a Bot remote device, treating a "waiting for legal review" pack as customer-ready, streaming internals on a public Bot livestream, auto-deleting evidence/logs.
 
-**Decline (unsupported action):** login to a registrar/Cloudflare/Spaceship/Vercel/GitHub-2FA/dashboard unless this turn names it (including after a Bot "new device" alert or a 2FA/CAPTCHA computer-takeover); MCP reinstall (one-tab fallback only); unnamed GitHub auto-push of this public repo; dumping client/product facts into a public skill repo; mixing manuals with IP work-product; spawning a subagent without passing this skill; partner pre-read / pay / identity / live-copy / fit-note send without named recipient **and** action; treating a weekly backup or project export as a publish; provisioning a live voice agent or phone number; re-enabling a disabled job; rewriting a live prompt; treating `--yolo` as approval; deleting a routine (immediate, no undo); unnamed Bot share with secrets still in the profile; granting cloud/GitHub owner/admin; pasting a webhook signing secret into the skill; enabling a mailbox connector on this skill; adding Codex lifecycle hooks that write production; auto-applying an infra PR to production; Sites public publish; committing this skill into a customer repo; enabling project `.grok/hooks/` without `/hooks-trust`; registering a Mac as a Bot remote device unnamed; sharing a workspace plugin of this skill unnamed; pinning Responses API `latest` unnamed; attaching this public repo as an open end-user catalog; exploit/PoC / jailbreak work (out of scope, including on GPT-6 Astra).
+**Decline (unsupported action):** login to a registrar/Cloudflare/Spaceship/Vercel/GitHub-2FA/dashboard unless this turn names it (including after a Bot "new device" alert or a 2FA/CAPTCHA computer-takeover); MCP reinstall (one-tab fallback only); unnamed GitHub auto-push of this public repo; dumping client/product facts into a public skill repo; mixing manuals with IP work-product; spawning a subagent without passing this skill; partner pre-read / pay / identity / live-copy / fit-note send without named recipient **and** action; treating a weekly backup or project export as a publish; provisioning a live voice agent or phone number; re-enabling a disabled job; rewriting a live prompt; treating `--yolo` as approval; deleting a routine (immediate, no undo); unnamed Bot share with secrets still in the profile; granting cloud/GitHub owner/admin; pasting a webhook signing secret into the skill; enabling a mailbox connector on this skill; adding Codex lifecycle hooks that write production; auto-applying an infra PR to production; Sites public publish; committing this skill into a customer repo; enabling project `.grok/hooks/` without `/hooks-trust`; registering a Mac as a Bot remote device unnamed; sharing a workspace plugin of this skill unnamed; pinning Responses API `latest` unnamed; attaching this public repo as an open end-user catalog; unnamed Claude-plugin directory submit; unnamed public livestream of internals; unnamed demonstration-to-skill publish; unnamed counsel-unreviewed client send; exploit/PoC / jailbreak work (out of scope, including on GPT-6 Astra).
 
 IP intensity (L0–L3) is **not** write-privilege. Owner-gated even at L3: send, publish, pay, identity, live title/copy, voice/phone provision, DNS, access grant, webhook secret, lifecycle hooks, Sites public publish, project-repo skill commit. Grok Bot autonomy: observe / draft / approved write / scheduled. Sending still needs named approval even at IP L3. Grok Bot also requires approval for purchasing, deleting, publishing, or changing production systems. `--always-approve` is a tool auto-approve flag, not that gate. Test skill before routine.
 
@@ -195,6 +196,7 @@ Hard rules for every deliverable (full list: `references/output-language-hygiene
 - One idea per sentence. No stacked jargon without saying *of what*.
 - Every recommended step has a next action a builder can do today, or drop it.
 - Banner on exports: **Builder worksheet. Do not send these tables to third parties as legal analysis.**
+- Never send a "waiting for legal review" pack to a customer. Never claim this skill's output is counsel-reviewed. Never equate confidence with priority or impact.
 
 ## Guardrails & Boundaries (Critical)
 
@@ -233,7 +235,7 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 - **Degrees of freedom (Anthropic 2026-09-07):** low on send/publish/pay/login/identity (exact decline); medium on show/hold drafting; high on snapshot wording. Do not put clock-dated session trivia in this skill body.
 - **Stale schedule metadata ≠ job dead.** Do not invent "didn't run" from a past nextRun.
 - **Workspace/SaaS renewal is L0** unless IP is being shared through that workspace.
-- **ChatGPT/Codex skill zip is scanned and shareable.** No secrets, no client facts in the zip. Two layouts: Skills tab = `SKILL.md` at zip root; Agent Plugins = `plugin.json` + `skills/<name>/SKILL.md`. Exactly one `SKILL.md` per bundle.
+- **ChatGPT/Codex skill zip is scanned and shareable.** No secrets, no client facts in the zip. Three layouts: Skills tab = `SKILL.md` at zip root; Agent Plugins = `plugin.json` + `skills/<name>/SKILL.md`; Claude archive = `.claude-plugin/plugin.json` + `skills/<name>/SKILL.md`. Exactly one `SKILL.md` per bundle. Inline base64 zip is a publish.
 - **Bot egress IP is not sticky.** Registrar new-device alerts from computer-use → decline login, do not take over the registrar.
 - **Local-computer execution is not a vault.** Grok Bot "Execution on Local Computer" shares the desktop in front of you; holdbacks do not live there either.
 - **Callable chain is a disclosure ladder.** Show/hold at every hop (callable → platform → partner/SME). Do not dump internals into the callable surface.
@@ -248,7 +250,7 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 - **Routine test-run is real work. Routine delete has no undo.** Datacenter IP that trips a human-verification wall is not a reason to improvise a proxy or login.
 - **Image-only artifacts are not numbered facts.** Do not invent dollar figures, LOE, or counts from a PNG/chart. Write "image-only — numbers not extracted" or omit.
 - **Require Approval wins Always Allow.** Grok Bot Auto Review: `--always-approve` / Always Allow does not beat a Require Approval rule.
-- **Reviewer hop is a disclosure hop.** Human review of the AI result before the customer is still a live channel. Show/hold at that hop too.
+- **Reviewer hop is a disclosure hop.** Human review of the AI result before the customer is still a live channel. Show/hold at that hop too. Counsel-release: "waiting for legal review" is an internal hold — never a customer-facing artifact. A second-model judge is not counsel. Confidence ≠ priority ≠ impact.
 - **Mailbox / Outlook connector is MCP live data.** Enabling it on a skill that will see drafts is a hop. This skill has **no MCP**.
 - **Public Grok share URL is a demo channel** (`x.com/i/grok/share/…` or `x.ai/bot/…`). Same exposure as a Bot share — the conversation / Bot config is public and cloneable.
 - **Bot duplicate copies skills and routines.** Treat duplicate like share. Auto Review rules sync to the shared Bot computer — not a vault.
@@ -266,7 +268,7 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 - **Astra computer-use is a live demo.** Write-across-apps / browser-use without APIs is computer-use. Model pick stays L0; the write is L2/L3. Connectors use the signed-in account — they are **not a vault**. Confirmation policies cover exposing confidential information, sharing a dashboard too broadly, deleting data. Astra declines unsupported conclusions from documents.
 - **Console screenshots in a partner mail are a demo.** Distinct from pasting IAM into the zip. Hold internals. Send still needs recipient AND action.
 - **CI auto-apply is a production change.** Decline auto-apply of infra PRs unless this turn names owner AND action. Generic CI/debug without protect language stays L0.
-- **One focused skill.** Do not merge this hygiene skill with a correspondence/persona skill.
+- **One focused skill.** Do not merge this hygiene skill with a correspondence/persona skill. Managed Agents sessions cap at 20 skills total — do not pack this into a dump.
 - **User instructions this turn beat skill guidelines (Astra).** Named recipient AND action is that override. On L3 decline, quote SKILL.md. Complete authorized work first; approval is last. No unsolicited hypothetical-risk checklists on L0/L1. Computer-use speed is not a vault.
 - **Sites deploy URL is production.** Save-without-deploy to review. Default owner+admins. Workspace/public publish is a demo. Sites env/secrets are holdbacks.
 - **Async board packet without the room is a demo.** Valuation/internals in a board pack are holdbacks. A leftover counsel draft that later sends is still a send.
@@ -276,7 +278,8 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 - **Remote Mac / phone-driven desktop is computer-use.** Registering a Mac as a Bot remote device is owner-gated. A Bot that clicks Mail/Messages or sends a local screenshot to the phone is a send/demo. Holdbacks do not live on that Mac.
 - **Live job-state is evidence.** Do not invent "disabled" from a prior brief. Read live `isEnabled`. Stale nextRun ≠ didn't run.
 - **Workspace-shared plugin / Copilot project skill is a publish.** `.github/skills/` and `.claude/skills/` are discovered by Copilot/VS Code as well as Grok/Claude. "Shared with you" plugins are a workspace demo channel.
-- **Astra: name + link SKILL.md on decline.** Quote the instruction. No unsolicited approval flows or safety checklists on L0/L1. Windows paths: use forward slashes. Claude zip folder name must match `name`. Do not assume tools are installed.
+- **Astra: name + link SKILL.md on decline.** Quote the instruction. No unsolicited approval flows or safety checklists on L0/L1. Windows paths: use forward slashes. Claude zip folder name must match `name`. Do not assume tools are installed. Keep descriptions short (Codex truncates when many skills load). Root SKILL.md is a router, not an itinerary. Skill instructions are user-prompt. Subagent `bypassPermissions` is not owner approval.
+- **Public Bot livestream / demonstration-to-skill.** Streaming internals is a demo. Attending a public livestream is L0. Walking a Bot through a path (Teach-by-demonstration records the screen, ≤10 min) and saving it as a skill is a publish. `user-invocable:` only literal `true` counts. Extra YAML keys are ignored.
 
 ## Progressive Disclosure & References
 
@@ -397,12 +400,22 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 
 **Example L3 fan-out / hooks-trust:** "Protect the IP. Fan the protocol through the callable chain and enable project .grok/hooks/ without /hooks-trust." → stamp → show/hold at every hop (fan-out is a multiplier); **decline** untrusted project hooks → disclaimer.
 
+**Example L3 counsel-release:** "Protect the IP. Send the AI analysis to the customer; it is waiting for legal review." → stamp → **hold** (internal hold ≠ customer-ready; counsel-release is a send) → disclaimer.
+
+**Example L3 Bot livestream:** "Protect the IP. Livestream the Bot building the protocol for a public Galaxy session." → stamp → **decline** unnamed public livestream of internals → disclaimer.
+
+**Example L0 livestream attend:** "Register for the Grok Bot Galaxy livestream." → L0 silent. Attending a public livestream is not an IP moment.
+
+**Example L3 demo-to-skill:** "Protect the IP. Walk the Bot through the protocol once and save it as a skill." → stamp → **decline** unnamed demonstration-to-skill publish (screen is recorded) → disclaimer.
+
+**Example L3 Claude-plugin submit:** "Protect the IP. Submit this skill as a Claude plugin to the OpenAI directory." → stamp → **decline** unnamed publish (Claude-archive zip is a third layout / live channel) → disclaimer.
+
 ## Output Standards
 
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.10-free.
+- Version in header: v0.5.11-free.
 - Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
@@ -419,7 +432,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - About to treat backup/export as publish, grow a backup tree, park holdbacks in a shareable Bot, post a public Grok/Bot share of internals, or treat hide-from-sidebar as a pause / delete a routine unnamed → stop/decline.
 - About to dump internals into a callable hop, async board packet, workflow fan-out, Sites deploy URL (treat as private preview), voice screen-share, Astra write-across-apps, or a remote-Mac / phone-driven desktop → stop; show/hold at every hop. Fan-out is a multiplier. Every Sites URL is production; save-without-deploy to review. Phone screenshot of the local terminal is a demo.
 - About to invent "didn't run" from stale nextRun or "disabled" from a prior brief, invent dollar/valuation figures from an image-only deck, dump an unsolicited L0/L1 warning/disclaimer/approval-flow/checklist, or merge this skill with a correspondence/persona skill → do not. Credits/seats stay L0; computer-use speed is not a vault. Live `isEnabled` is evidence.
-- About to re-enable a disabled job, rewrite a live prompt, auto-apply an infra PR, publish `latest` into production agents, attach this public skill as an open end-user catalog, or run exploit/PoC → decline. Pin an integer version. One focused skill. Two zip layouts; do not mix.
+- About to re-enable a disabled job, rewrite a live prompt, auto-apply an infra PR, publish `latest` into production agents, attach this public skill as an open end-user catalog, submit a Claude-plugin archive unnamed, livestream internals, treat a judge-model as counsel, or run exploit/PoC → decline. Pin an integer version. One focused skill. Three zip layouts; do not mix. Counsel-unreviewed client send is a hold.
 
 ## For Maintainers (This File)
 
@@ -432,7 +445,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - Grok / Grok Build / Grok Bot: `grok-skill/` (`.grok/skills/` + `argument-hint` + headless numbered default)
 - Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change.
 - Keep disclaimers, plain labels, hygiene scope. No paid residue.
-- Current version: **v0.5.10-free** (patched 2026-09-11; first released 2026-08-17). Description ≤1024. Body stays well under 500 lines.
+- Current version: **v0.5.11-free** (patched 2026-09-12; first released 2026-08-17). Description ≤1024. Body stays well under 500 lines.
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 

@@ -1,4 +1,4 @@
-# SorticAI Free IP Sentinel — ChatGPT / Codex (v0.5.10-free)
+# SorticAI Free IP Sentinel — ChatGPT / Codex (v0.5.11-free)
 
 OpenAI-first package. Minimal SKILL.md frontmatter (`name` + `description` + license/metadata). Display and invocation live in `agents/openai.yaml`.
 
@@ -13,7 +13,7 @@ cp -r sortic-ip-sentinel-free/chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-
 ```
 Also scanned: project `.agents/skills/`, `~/.codex/skills/`, `/etc/codex/skills`.
 
-Invoke: `$sortic-ip-sentinel-free` or `/skills`. Implicit match uses the description (front-loaded triggers, 1019 chars). Headless `-p`: unnamed L3 **default-delivers 1 (show/hold) + 8 (JSON)**; or add "Output numbered options and hygiene package JSON."
+Invoke: `$sortic-ip-sentinel-free` or `/skills`. Implicit match uses the description (front-loaded triggers, 1022 chars). Headless `-p`: unnamed L3 **default-delivers 1 (show/hold) + 8 (JSON)**; or add "Output numbered options and hygiene package JSON."
 
 **ChatGPT Skills (Business / Enterprise / Edu)**
 Zip **this folder** so `SKILL.md` is at the zip root. Skills tab → upload. Invoke with `@`.

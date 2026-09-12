@@ -3,7 +3,7 @@
 **Free only · Not legal advice · No guarantees**
 
 Load this file when drafting any L3 deliverable (maps, checklists, JSON, slides).
-These rules come from counsel review of adjacent SorticAI writing (2 Sep 2026), Task Extractor / Grok Bot operating notes 1–11 Sep 2026 (do not invent status; do not email third parties unless the item names recipient **and** action; evidence-or-blocked; backup ≠ publish; owner-gated send/pay/identity), OpenAI plugins/skills 2026-09-06/10 (do not invent, replace, or reroll; state what the model must not infer; zip is scanned; plugin hooks untrusted until reviewed), Anthropic degrees of freedom (low on send/publish/pay/login/access-grant/hooks; pin latest is a live channel), and Grok Bot skill anatomy (what requires approval; report failure instead of stale data; purchasing/deleting/publishing need approval; voice screen-share sees the browser). They are **writing rules**, not legal opinions.
+These rules come from counsel review of adjacent SorticAI writing (2 Sep 2026), Task Extractor / Grok Bot operating notes 1–12 Sep 2026 (do not invent status; do not email third parties unless the item names recipient **and** action; evidence-or-blocked; backup ≠ publish; owner-gated send/pay/identity), OpenAI plugins/skills 2026-09-06/10 (do not invent, replace, or reroll; state what the model must not infer; zip is scanned; plugin hooks untrusted until reviewed), Anthropic degrees of freedom (low on send/publish/pay/login/access-grant/hooks; pin latest is a live channel), and Grok Bot skill anatomy (what requires approval; report failure instead of stale data; purchasing/deleting/publishing need approval; voice screen-share sees the browser). They are **writing rules**, not legal opinions.
 
 ## Banner (put on every export)
 
@@ -58,6 +58,12 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Live isEnabled is evidence. | "Disabled per last week's brief". |
 | Workspace plugin / Copilot skill is a publish. | "Shared the plugin / committed .github/skills/". |
 | Name and link SKILL.md on L3 decline. | Unsolicited approval flow or safety checklist on L0/L1. |
+| Counsel-release is a send. | "Waiting for legal review" pack sent to the customer. |
+| Three zip layouts stay distinct. | Mix Skills-tab / Agent-Plugins / Claude-archive zips. |
+| Public livestream of internals is a demo. | Stream the protocol build unnamed. |
+| Demonstration-to-skill is a publish. | Save a walked path as a skill unnamed. |
+| Meet auto-notes are a demo. | Forward auto-notes as customer-ready. |
+| A judge-model is not counsel. | "Second model cleared this for release". |
 
 ## Hard rules
 
@@ -129,6 +135,11 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to pin Responses API / Anthropic `latest` unnamed, or attach this public skill as an open catalog? Decline.
 - [ ] About to mix zip layouts or spawn a subagent without listing this skill? Decline / do not spawn.
 - [ ] About to treat workspace billing/payment as an IP moment? L0 silent.
+- [ ] About to send a waiting-for-legal-review pack to a customer? Hold (counsel-release).
+- [ ] About to livestream internals or save a walked path as a skill unnamed? Decline.
+- [ ] About to submit a Claude-plugin archive unnamed? Decline.
+- [ ] About to treat a second-model judge as counsel? Do not.
+- [ ] About to forward meet auto-notes as customer-ready? Stop.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
@@ -140,3 +151,8 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 
 31. **Responses API / two zip layouts.** Uploaded skills are versioned bundles. Pin an integer version in production; `latest` is a live channel. Do not expose this public repo as an open end-user catalog. ChatGPT Skills tab zip = `SKILL.md` at root; Agent Plugins zip = `plugin.json` + `skills/<name>/SKILL.md`. Exactly one `SKILL.md` per bundle.
 32. **Subagent `skills:` field.** Claude Code subagents auto-load listed skills only. They do not inherit this skill unless listed. Workspace billing/payment without protect intent stays L0.
+
+33. **Counsel-release.** AI output that leaves the room to a customer / HR / regulated audience needs named human-reviewer approval first. "Waiting for legal review" is an internal hold, never a customer-facing artifact. Never claim this skill's output is counsel-reviewed. A second-model judge is another hop, not counsel. Confidence = certainty of a finding, not priority or impact.
+34. **Three zip layouts / Claude-plugin submit.** Skills tab = `SKILL.md` at zip root. Agent Plugins = root `plugin.json` + `skills/<name>/SKILL.md`. Claude archive = `.claude-plugin/plugin.json` + `skills/<name>/SKILL.md` (portal converts to `.codex-plugin`). Do not mix. Unnamed directory submit is a publish. Zip limits 50 MB / 500 files / 25 MB uncompressed. No secrets in archive, manifest, or defaults. Inline base64 zip is a publish.
+35. **Livestream / demonstration-to-skill.** Streaming internals is a demo (L2/L3). Attending a public livestream is L0. Walking a Bot through a path (Teach-by-demonstration records the screen, ≤10 min) and saving it as a skill is a publish.
+36. **Meet auto-notes / 20-skill cap.** Auto-notes of an IP/AI session are a demo. Managed Agents sessions cap at 20 skills — one focused skill, do not pack this into a dump. `user-invocable:` only literal `true`. Extra YAML keys ignored. `bypassPermissions` is not owner approval.
