@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.10-free)
+# Agent / computer-use exposure log — Template (v0.5.11-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -8,7 +8,7 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 
 ## What the agent did (redact secrets in this table)
 
-| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust / remote-mac / workspace-plugin / responses-api / hosted-skill) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
+| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust / remote-mac / workspace-plugin / responses-api / hosted-skill / counsel-release / livestream / claude-plugin / demo-skill / meet-notes / judge-model) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
 |------|---------------------------|-----------------------------------------------------|------------------------|-------------------|-------------|------------------|
 |      |                           |                                                     |                        |                       |                       |                              |                                      |
 
@@ -95,3 +95,10 @@ JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-h
 > **Builder worksheet.** Do not send this table to third parties as legal analysis. Not legal advice. No guarantees.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance (human conception), WIPO principles.
+
+- [ ] Counsel-release: "waiting for legal review" pack is **not** sent to a customer.
+- [ ] Public livestream of internals declined unless named. Attending is L0.
+- [ ] Demonstration-to-skill (walk once, save as skill) declined unless named. Screen is recorded.
+- [ ] Claude-plugin directory submit declined unless named.
+- [ ] Meet auto-notes of an IP/AI session treated as a demo channel.
+- [ ] A second-model judge is **not** logged as counsel review.
