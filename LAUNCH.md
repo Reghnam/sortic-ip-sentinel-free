@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.12-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.13-free
 
-**Status**: Public on GitHub. v0.5.12-free patched 2026-09-13 (OpenAI → Anthropic → Grok Build: de-identified training is still a disclosure, `default_version` is a live pointer, shared Bot sessions are account-wide, marketplace job-taking is access grant + send, custom Skills do not sync across Anthropic surfaces). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.13-free patched 2026-09-13 (OpenAI → Anthropic → Grok Build: API no-train ≠ ChatGPT no-train; Skills/Agents/Files/Conversations/chatkit/batches/videos/fine-tuning are ZDR-ineligible; Anthropic Skills are not covered by ZDR; Bot screens ≠ security boundary; Bot-to-Bot DM is a hop; delete Bot ≠ wipe computer; protected-lane check is hygiene, not a product). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -45,14 +45,16 @@ Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -
 ## 4. Verification Checklist
 
 - [ ] L3 triggers ("protect the IP", "IP sensitive moment", "Bot will email the deck — protect the IP")
-- [ ] L0 silence on privacy/config/meta work, US IP corpus ticks, workspace renewal, weekly backup
+- [ ] L0 silence on privacy/config/meta work, US IP corpus ticks, workspace renewal, weekly backup, livestream attend
 - [ ] Headless: stamp → numbered 1–8 → JSON schema `sorticai.hygiene_package.v1` (includes `agent_exposure`, `owner_gated`)
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 55: de-id/ZDR, default_version, shared Bot session, marketplace job-taking, cross-surface Claude)
+- [ ] Evals in `references/evals.md` still pass (now 61: API≠chat, Skills-not-ZDR, Bot screens, Bot-to-Bot, protected-lane, capdir/ZDR-ineligible)
 - [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity / voice provision / yolo-send → decline
 - [ ] Backup ≠ publish; truncated/junk/placeholder files are not originals; image-only ≠ numbered facts
 - [ ] Bot share / marketplace clone is a demo channel; callable hops hold internals
+- [ ] API no-train is not treated as ChatGPT no-train; Skills execution is not treated as ZDR-covered
+- [ ] Bot screens are not treated as isolation; Bot-to-Bot DM is a hop
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**

@@ -149,6 +149,10 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to park holdbacks on a shared Bot computer other Bots can open? Stop.
 - [ ] About to install a marketplace job-taking skill unnamed? Decline.
 - [ ] About to upload this skill across claude.ai / API / Claude Code unnamed? Decline.
+- [ ] About to treat API-no-train as ChatGPT-no-train? Stop.
+- [ ] About to treat Skills / Agents / Files / Conversations as ZDR-covered? Stop.
+- [ ] About to park holdbacks on a Bot screen or DM them to another Bot? Stop.
+- [ ] About to claim a plan is the protected lane? Do not — map the lane only.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
@@ -164,9 +168,14 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 33. **Counsel-release.** AI output that leaves the room to a customer / HR / regulated audience needs named human-reviewer approval first. "Waiting for legal review" is an internal hold, never a customer-facing artifact. Never claim this skill's output is counsel-reviewed. A second-model judge is another hop, not counsel. Confidence = certainty of a finding, not priority or impact.
 34. **Three zip layouts / Claude-plugin submit.** Skills tab = `SKILL.md` at zip root. Agent Plugins = root `plugin.json` + `skills/<name>/SKILL.md`. Claude archive = `.claude-plugin/plugin.json` + `skills/<name>/SKILL.md` (portal converts to `.codex-plugin`). Do not mix. Unnamed directory submit is a publish. Zip limits 50 MB / 500 files / 25 MB uncompressed. No secrets in archive, manifest, or defaults. Inline base64 zip is a publish.
 35. **Livestream / demonstration-to-skill.** Streaming internals is a demo (L2/L3). Attending a public livestream is L0. Walking a Bot through a path (Teach-by-demonstration records the screen, ≤10 min) and saving it as a skill is a publish.
-36. **Meet auto-notes / 20-skill cap.** Auto-notes of an IP/AI session are a demo. Managed Agents sessions cap at 20 skills — one focused skill, do not pack this into a dump. `user-invocable:` only literal `true`. Extra YAML keys ignored. `bypassPermissions` is not owner approval.
+36. **Meet auto-notes / 20-skill cap.** Auto-notes of an IP/AI session are a demo. Plan downgrade (Basic/free) does not stop transcription or Slack auto-share. Managed Agents sessions cap at 20 skills — one focused skill, do not pack this into a dump. `user-invocable:` only literal `true`. Extra YAML keys ignored. `bypassPermissions` is not owner approval.
 
 37. **De-identified / ZDR.** Putting invention-grade content into a frontier chat is a disclosure even if PII is stripped, ZDR is claimed, or the plan is Business/Enterprise. Opt-out after the chat is not a rewind. A public clip about the industry issue is L0.
 38. **`default_version` / omit-version.** Same live channel as `latest`. Cannot delete the default version without setting another first. Skill instructions are user-prompt input; this-turn user instructions still beat skill guidelines. Inline base64 zip and curated first-party skills are a demo surface.
 39. **Shared Bot computer is account-wide.** Files, browser sessions, and app logins are available to every Bot you run. Isolation is between users, not between your Bots.
 40. **Marketplace job-taking / cross-surface Claude.** A skill that lets a Bot take jobs or get paid is access grant + send + computer-use. Custom Skills do not sync across Anthropic surfaces — each install is a separate publish.
+
+41. **API no-train ≠ ChatGPT no-train.** OpenAI API data is not used to train unless the org opts in. Consumer / Business / Enterprise chat is a different lane. Do not write "we're on Business so it's private."
+42. **Skills / Agents / Files / Conversations are ZDR-ineligible.** Even with org ZDR, those endpoints (also chatkit, batches, videos, fine-tuning) and Anthropic Skill definitions + execution data are retained. Covered-model 30-day safety retention can apply on ZDR orgs. Hosted container discarded ≠ abuse-monitor 30d gone. Model marketing ("most secure") is not a data-control change.
+43. **Bot screens ≠ security boundary.** Separate Bots are not a vault. Isolated credentials need a dedicated user. Delete Bot ≠ wipe computer. Enterprise terminate-computer keeps the durable disk. Bot-to-Bot DM / group chat is a hop. Auto Review does not review memory writes. Plan downgrade of a meeting-notes AI does not stop transcription or Slack auto-share.
+44. **Protected-lane check is hygiene.** Map consumer chat vs API / local / open-source. Do not invent a proof-of-no-train certificate or claim a plan is the protected lane.
