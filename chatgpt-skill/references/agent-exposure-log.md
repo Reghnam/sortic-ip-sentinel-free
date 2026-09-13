@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.11-free)
+# Agent / computer-use exposure log — Template (v0.5.12-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -8,7 +8,7 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 
 ## What the agent did (redact secrets in this table)
 
-| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust / remote-mac / workspace-plugin / responses-api / hosted-skill / counsel-release / livestream / claude-plugin / demo-skill / meet-notes / judge-model) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
+| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust / remote-mac / workspace-plugin / responses-api / hosted-skill / counsel-release / livestream / claude-plugin / demo-skill / meet-notes / judge-model / deid-train / default-version / shared-bot-session / job-skill / cross-surface) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
 |------|---------------------------|-----------------------------------------------------|------------------------|-------------------|-------------|------------------|
 |      |                           |                                                     |                        |                       |                       |                              |                                      |
 
@@ -88,7 +88,9 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 27. **Async board / repo-skill / fan-out / hooks-trust.** Packet without the room is a demo. Project-repo skill commit is a publish (Copilot/VS Code included). Fan-out multiplies hops. Project hooks need `/hooks-trust`.
 28. **Remote Mac / phone-driven desktop.** Registering a Mac as a Bot remote device is owner-gated. Desktop drive + phone screenshot = demo. Messages/Mail typing = send.
 29. **Live isEnabled / workspace plugin.** Do not invent disabled from a prior brief. Workspace-shared plugins are a publish channel.
-30. **Responses API / two zip layouts / subagent skills.** Versioned bundles; pin integer, not `latest`. Do not expose this public repo as an open end-user catalog. Skills-tab zip ≠ plugin zip. Subagents do not inherit unless listed.
+30. **Responses API / two zip layouts / subagent skills.** Versioned bundles; pin integer, not `latest` / `default_version` / omit-version. Do not expose this public repo as an open end-user catalog. Skills-tab zip ≠ plugin zip. Subagents do not inherit unless listed.
+31. **De-identified / ZDR.** Invention-grade chats into a frontier lab are a disclosure even if PII-stripped. Skills are not a ZDR boundary.
+32. **Shared Bot sessions / job-skill / cross-surface.** Account-wide files+logins. Marketplace job-taking is access grant + send. Each Anthropic surface is a separate publish.
 
 JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-hygiene-package.md`). Prefer empty arrays over invented rows. Set `owner_gated: true`.
 
@@ -102,3 +104,8 @@ JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-h
 - [ ] Claude-plugin directory submit declined unless named.
 - [ ] Meet auto-notes of an IP/AI session treated as a demo channel.
 - [ ] A second-model judge is **not** logged as counsel review.
+- [ ] De-identified / ZDR-claimed frontier chat of invention-grade content treated as a disclosure (opt-out is not a rewind).
+- [ ] Omit-version / default_version / latest treated as a live channel; pin an integer.
+- [ ] Shared Bot computer (files, sessions, logins) treated as account-wide.
+- [ ] Marketplace job-taking skill declined unless named (access grant + send).
+- [ ] Cross-surface Claude install declined unless named.
