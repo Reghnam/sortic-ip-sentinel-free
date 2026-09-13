@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.12-free)
+# Agent / computer-use exposure log — Template (v0.5.13-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -8,7 +8,7 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 
 ## What the agent did (redact secrets in this table)
 
-| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust / remote-mac / workspace-plugin / responses-api / hosted-skill / counsel-release / livestream / claude-plugin / demo-skill / meet-notes / judge-model / deid-train / default-version / shared-bot-session / job-skill / cross-surface) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
+| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust / remote-mac / workspace-plugin / responses-api / hosted-skill / counsel-release / livestream / claude-plugin / demo-skill / meet-notes / judge-model / deid-train / default-version / shared-bot-session / job-skill / cross-surface / protected-lane / skill-zdr / bot-dm / bot-screen / api-vs-chat / capdir) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
 |------|---------------------------|-----------------------------------------------------|------------------------|-------------------|-------------|------------------|
 |      |                           |                                                     |                        |                       |                       |                              |                                      |
 
@@ -22,7 +22,8 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 - [ ] Public browser / Clip-Bot / livestream / HiTL / board / social post is treated as **public** exposure, not a private workspace.
 - [ ] If claiming a send: message-id + recipients are written. Else log `not_sent`.
 - [ ] If claiming done: folder path + link exist. Inbox-root dumps are `blocked_no_evidence`.
-- [ ] Shared Bot cloud computer is **not** a secrecy boundary — do not park holdbacks there. Local-computer execution is not a vault either.
+- [ ] Shared Bot cloud computer is **not** a secrecy boundary — do not park holdbacks there. Screens ≠ isolation. Bot-to-Bot DM / group chat is a hop. Local-computer execution is not a vault either.
+- [ ] API no-train is not treated as ChatGPT no-train. Skills / Files / Conversations / Agents are not treated as ZDR-covered.
 - [ ] GitHub auto-push of this public repo declined unless owner **and** action named this turn.
 - [ ] Truncated/junk files are not originals.
 - [ ] Subagent spawned only if this skill is listed on it.
@@ -66,7 +67,7 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 5. **Publishing a skill or Bot** without protect language is L2 (soft tip). With protect language it is L3. HiTL / UAT / livestream / board without protect language is L2.
 6. **Evidence-or-blocked.** Done requires path + link. If source data is unavailable, report failure — do not use stale data.
 7. **Claimed send needs message-id + recipients.**
-8. **Shared Bot computer ≠ vault.** All Bots on the account see the same files/logins/cookies. Egress IP is not sticky.
+8. **Shared Bot computer ≠ vault.** All Bots on the account see the same files/logins/cookies. Screens are work surfaces, not security boundaries. Bot-to-Bot DM / group chat is a hop. Delete Bot ≠ wipe computer. Dedicated user for isolated credentials. Egress IP is not sticky. Auto Review does not review memory writes.
 9. **Public-repo auto-push is owner L3.** Decline unnamed.
 10. **Subagents do not inherit this skill.** Pass it or do not spawn.
 11. **Truncated ≠ original.** Clock-limited live rooms hold deeper internals.

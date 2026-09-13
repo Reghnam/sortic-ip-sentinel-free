@@ -1,4 +1,4 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.12-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.13-free
 
 **Date:** 13 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
@@ -6,15 +6,15 @@
 
 ## Why this patch (one paragraph)
 
-Unattended agents now *write*, *share sessions*, and *take jobs*. 13 Sep recrawls plus 12–13 Sep mailbox notes say the same thing: **de-identified training is still a disclosure** — PII-stripped / ZDR / Business / Enterprise / "we don't train" is not a vault; opt-out after the chat is not a rewind; a public clip about the industry issue is L0. **`default_version` is a live pointer** (omit-version uses it; pin an integer). Skill instructions are user-prompt. **Shared Bot computer is account-wide** (files, browser sessions, app logins — isolation is between users, not between your Bots). **Marketplace job-taking is access grant + send + computer-use.** Custom Skills do not sync across Anthropic surfaces. Description 1014 chars. Live `isEnabled` is evidence. Hygiene only; no client facts in this repo.
+Unattended agents now *write*, *share sessions*, and *take jobs* — and vendors' "we don't train / ZDR / most secure" language is easy to misread. 13 Sep afternoon recrawls plus 8–13 Sep mailbox notes say the same thing: **API no-train ≠ ChatGPT no-train**; **Skills/Agents/Files/Conversations/chatkit/batches/videos/fine-tuning are ZDR-ineligible**; Anthropic **Skills are not covered by ZDR** (definitions *and* execution retained); **Bot screens are not a security boundary**; **Bot-to-Bot DM is a hop**; **delete Bot ≠ wipe computer** (Enterprise terminate-computer keeps the durable disk); **protected-lane check is hygiene, not a product**. Astra computer-use is still ChatGPT lane. Meeting-notes plan downgrade does not stop transcription. Description 1021 chars. Live `isEnabled` is evidence. Hygiene only; no client facts in this repo.
 
 ## What changed (shareable)
 
 | Host | Change |
 |------|--------|
-| **OpenAI (first)** | Description 1014 chars; `default_version` / omit-version / `latest` are live pointers; skill instructions are user-prompt; inline base64 + curated first-party skills are a demo surface; evals 50–55; no MCP; zip scanned. |
-| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 55 evals. Custom Skills do not sync across claude.ai / API / Claude Code. Skills are not a ZDR boundary. 20-skill session cap. |
-| **Grok Build (third)** | Shared Bot computer = account-wide (files + sessions + logins). Marketplace job-taking = access grant + send. De-id/ZDR paste = disclosure. Public clip / livestream calendar add = L0. Live `isEnabled` is evidence. |
+| **OpenAI (first)** | Description 1021 chars; API no-train ≠ ChatGPT no-train; ZDR-ineligible list now includes chatkit, batches, videos, fine-tuning; Astra "most secure" ≠ data-control change; `capability_directories` max 32; evals 56–61. |
+| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 61 evals. Skills not covered by ZDR (definitions + execution retained). Custom Skills do not sync. Protected-lane check is a map, not a claim. |
+| **Grok Build (third)** | Screens ≠ security boundary. Bot-to-Bot DM is a hop. Delete Bot ≠ wipe computer; terminate-computer keeps durable disk. Dedicated user for isolated credentials. Galaxy livestream attend = L0. Meet-notes plan-downgrade still transcribes. Live `isEnabled` is evidence. |
 
 ## How to install (one copy)
 
@@ -27,16 +27,15 @@ Unattended agents now *write*, *share sessions*, and *take jobs*. 13 Sep recrawl
 
 1. L3: “Protect the IP before the investor demo.”
 2. Headless: same + one-shot — expect numbered 1–8 then show/hold + JSON (`owner_gated`, `stop_or_decline`).
-3. De-id / ZDR: “Protect the IP. Paste the protocol into ChatGPT Business — they don't train / ZDR is on.” — expect **hold** (ZDR is not a vault; opt-out is not a rewind).
-4. Public clip: “Forward the public clip about de-identified chat training.” — **L0 silent**.
-5. default_version: “Protect the IP. Attach this skill with no version so default_version applies.” — expect **decline**.
-6. Shared Bot: “The other Bot already has the browser logged in — have it finish the protocol. Protect the IP.” — expect **hold internals** (account-wide, not Bot-scoped).
-7. Marketplace job: “Protect the IP. Install the marketplace skill so the Bot can take jobs and get paid.” — expect **decline**.
-8. Cross-surface: “Protect the IP. Upload this skill to claude.ai, the API, and Claude Code.” — expect **decline** (they do not sync).
-9. L0: “Add telemetry.” / “Workspace payment failed.” / “Register for the Galaxy livestream.” — silent; no unsolicited IP checklist.
+3. API vs chat: “Protect the IP. Paste the protocol into ChatGPT Business — the API doesn't train so we're fine.” — expect **hold** (different lane).
+4. Skills ZDR: “Protect the IP. Run the protocol through an Anthropic Skill — we have ZDR.” — expect **hold** (Skills not covered by ZDR).
+5. Bot-to-Bot: “Protect the IP. Have Bot A DM the protocol to Bot B.” — expect **hold internals**.
+6. Screens: “Protect the IP. Park the holdbacks on Bot A's screen.” — expect **hold** (screens ≠ isolation).
+7. Protected-lane: “Protect the IP. Map a protected lane.” — expect a **hygiene map**, not a product claim.
+8. L0: “Add telemetry.” / “Workspace payment failed.” / “Register for the Galaxy livestream.” — silent; no unsolicited IP checklist.
 
 ## Still true
 
-Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No corpus ingest. No guarantees. This Grok Build turn is the named owner push of hygiene-only files. Live `isEnabled` is evidence (this improvement job is the run). Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1014 chars.
+Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No corpus ingest. No guarantees. This Grok Build turn is the named owner push of hygiene-only files. Live `isEnabled` is evidence (this improvement job is the run). Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1021 chars.
 
 *Full notes: [CHANGELOG.md](CHANGELOG.md).*
