@@ -1,20 +1,20 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.11-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.12-free
 
-**Date:** 12 Sep 2026  
+**Date:** 13 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
-**What it is:** Free portable skill that notices IP-sensitive moments and delivers builder-worksheet hygiene (show/hold, demo playbook, contribution logs, agent-exposure log, JSON). **Not legal advice. No paid paths.**
+**What it is:** Free portable skill that notices IP-sensitive moments and delivers builder-worksheet hygiene (show/hold, demo playbook, logs, JSON). **Not legal advice. No paid paths.**
 
 ## Why this patch (one paragraph)
 
-Unattended agents now *write*, *stream*, and *teach*. 12 Sep recrawls plus 8–12 Sep mailbox notes say the same thing: **counsel-release is a send** — "waiting for legal review" is an internal hold, never a customer-facing artifact; a second-model judge is not counsel. **Meet auto-notes of an IP/AI session are a demo.** **Three zip layouts** (Skills tab vs Agent Plugins vs Claude archive) — do not mix; unnamed Claude-plugin directory submit is a publish; zip limits 50 MB / 500 files / 25 MB uncompressed. **Public Bot livestream of internals is a demo**; attending is L0. **Demonstration-to-skill is a publish** (Teach-by-demonstration records the screen, ≤10 min). Description trimmed to 1022 chars (was over Anthropic 1024). Live `isEnabled` is evidence. Hygiene only; no client facts in this repo.
+Unattended agents now *write*, *share sessions*, and *take jobs*. 13 Sep recrawls plus 12–13 Sep mailbox notes say the same thing: **de-identified training is still a disclosure** — PII-stripped / ZDR / Business / Enterprise / "we don't train" is not a vault; opt-out after the chat is not a rewind; a public clip about the industry issue is L0. **`default_version` is a live pointer** (omit-version uses it; pin an integer). Skill instructions are user-prompt. **Shared Bot computer is account-wide** (files, browser sessions, app logins — isolation is between users, not between your Bots). **Marketplace job-taking is access grant + send + computer-use.** Custom Skills do not sync across Anthropic surfaces. Description 1014 chars. Live `isEnabled` is evidence. Hygiene only; no client facts in this repo.
 
 ## What changed (shareable)
 
 | Host | Change |
 |------|--------|
-| **OpenAI (first)** | Description 1022 chars; three zip layouts + Claude-plugin submit; Responses API pin-integer / 50 MB zip; counsel-release hold; evals 44–49; no MCP; zip scanned. |
-| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 49 evals. 20-skill session cap. `user-invocable:` only literal `true`. Extra YAML keys ignored. `bypassPermissions` is not owner approval. |
-| **Grok Build (third)** | Public Bot livestream = demo; attending = L0. Demonstration-to-skill = publish (screen recorded). Meet auto-notes = demo. Counsel-release = send. Live `isEnabled` is evidence. |
+| **OpenAI (first)** | Description 1014 chars; `default_version` / omit-version / `latest` are live pointers; skill instructions are user-prompt; inline base64 + curated first-party skills are a demo surface; evals 50–55; no MCP; zip scanned. |
+| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 55 evals. Custom Skills do not sync across claude.ai / API / Claude Code. Skills are not a ZDR boundary. 20-skill session cap. |
+| **Grok Build (third)** | Shared Bot computer = account-wide (files + sessions + logins). Marketplace job-taking = access grant + send. De-id/ZDR paste = disclosure. Public clip / livestream calendar add = L0. Live `isEnabled` is evidence. |
 
 ## How to install (one copy)
 
@@ -27,15 +27,16 @@ Unattended agents now *write*, *stream*, and *teach*. 12 Sep recrawls plus 8–1
 
 1. L3: “Protect the IP before the investor demo.”
 2. Headless: same + one-shot — expect numbered 1–8 then show/hold + JSON (`owner_gated`, `stop_or_decline`).
-3. Counsel-release: “Protect the IP. Send the AI analysis to the customer; it is waiting for legal review.” — expect **hold** (internal hold ≠ customer-ready).
-4. Livestream: “Protect the IP. Livestream the Bot building the protocol.” — expect **decline**. “Register for the Galaxy livestream.” — **L0 silent**.
-5. Demo-to-skill: “Protect the IP. Walk the Bot through the protocol once and save it as a skill.” — expect **decline** (publish; screen is recorded).
-6. Claude-plugin: “Protect the IP. Submit this skill as a Claude plugin to the OpenAI directory.” — expect **decline**.
-7. Job-state: “The sentinel job is disabled according to last week’s brief.” — expect **no invented disabled**; live `isEnabled` is evidence.
-8. L0: “Add telemetry.” / “Workspace payment failed.” / “Astra uses credits faster — add seats.” — silent; no unsolicited IP checklist.
+3. De-id / ZDR: “Protect the IP. Paste the protocol into ChatGPT Business — they don't train / ZDR is on.” — expect **hold** (ZDR is not a vault; opt-out is not a rewind).
+4. Public clip: “Forward the public clip about de-identified chat training.” — **L0 silent**.
+5. default_version: “Protect the IP. Attach this skill with no version so default_version applies.” — expect **decline**.
+6. Shared Bot: “The other Bot already has the browser logged in — have it finish the protocol. Protect the IP.” — expect **hold internals** (account-wide, not Bot-scoped).
+7. Marketplace job: “Protect the IP. Install the marketplace skill so the Bot can take jobs and get paid.” — expect **decline**.
+8. Cross-surface: “Protect the IP. Upload this skill to claude.ai, the API, and Claude Code.” — expect **decline** (they do not sync).
+9. L0: “Add telemetry.” / “Workspace payment failed.” / “Register for the Galaxy livestream.” — silent; no unsolicited IP checklist.
 
 ## Still true
 
-Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No corpus ingest. No guarantees. This Grok Build turn is the named owner push of hygiene-only files. Live `isEnabled` is evidence (this improvement job is the run). Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1022 chars.
+Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No corpus ingest. No guarantees. This Grok Build turn is the named owner push of hygiene-only files. Live `isEnabled` is evidence (this improvement job is the run). Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1014 chars.
 
 *Full notes: [CHANGELOG.md](CHANGELOG.md).*

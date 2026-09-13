@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.11-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.12-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -45,6 +45,11 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Counsel-release is a send; "waiting for legal review" is an internal hold
 - Public Bot livestream of internals is a demo; attending is L0
 - Demonstration-to-skill is a publish (Teach-by-demonstration records the screen)
+- De-identified / ZDR-claimed training is still a disclosure (opt-out is not a rewind)
+- `default_version` / omit-version / `latest` are live pointers — pin an integer
+- Shared Bot computer is account-wide (files, browser sessions, app logins)
+- Marketplace job-taking skill is access grant + send + computer-use
+- Custom Skills do not sync across Anthropic surfaces (each install is a publish)
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
@@ -80,7 +85,7 @@ Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered 
 
 ---
 
-## Compatibility (v0.5.11)
+## Compatibility (v0.5.12)
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|

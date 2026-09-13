@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.11-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.12-free
 
-**Status**: Public on GitHub. v0.5.11-free patched 2026-09-12 (OpenAI → Anthropic → Grok Build: counsel-release, three zip layouts, Claude-plugin submit, Bot livestream, demonstration-to-skill). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.12-free patched 2026-09-13 (OpenAI → Anthropic → Grok Build: de-identified training is still a disclosure, `default_version` is a live pointer, shared Bot sessions are account-wide, marketplace job-taking is access grant + send, custom Skills do not sync across Anthropic surfaces). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -50,7 +50,7 @@ Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 19: voice, callable chain, yolo, fit-note, Bot share, image-only)
+- [ ] Evals in `references/evals.md` still pass (now 55: de-id/ZDR, default_version, shared Bot session, marketplace job-taking, cross-surface Claude)
 - [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity / voice provision / yolo-send → decline
 - [ ] Backup ≠ publish; truncated/junk/placeholder files are not originals; image-only ≠ numbered facts
 - [ ] Bot share / marketplace clone is a demo channel; callable hops hold internals

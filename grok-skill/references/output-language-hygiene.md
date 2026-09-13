@@ -64,6 +64,10 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Demonstration-to-skill is a publish. | Save a walked path as a skill unnamed. |
 | Meet auto-notes are a demo. | Forward auto-notes as customer-ready. |
 | A judge-model is not counsel. | "Second model cleared this for release". |
+| De-identified / ZDR is not a vault. | "Safe to paste — they don't train". |
+| default_version is a live pointer. | "Omit version so default applies". |
+| Shared Bot sessions are account-wide. | "The other Bot's login keeps this private". |
+| Marketplace job-taking is access grant + send. | "Install the skill so the Bot can take jobs". |
 
 ## Hard rules
 
@@ -140,6 +144,11 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to submit a Claude-plugin archive unnamed? Decline.
 - [ ] About to treat a second-model judge as counsel? Do not.
 - [ ] About to forward meet auto-notes as customer-ready? Stop.
+- [ ] About to treat ZDR / we-don't-train as a vault? Stop (de-identified training is still a disclosure).
+- [ ] About to omit skill_reference.version / change default_version unnamed? Decline.
+- [ ] About to park holdbacks on a shared Bot computer other Bots can open? Stop.
+- [ ] About to install a marketplace job-taking skill unnamed? Decline.
+- [ ] About to upload this skill across claude.ai / API / Claude Code unnamed? Decline.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
@@ -156,3 +165,8 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 34. **Three zip layouts / Claude-plugin submit.** Skills tab = `SKILL.md` at zip root. Agent Plugins = root `plugin.json` + `skills/<name>/SKILL.md`. Claude archive = `.claude-plugin/plugin.json` + `skills/<name>/SKILL.md` (portal converts to `.codex-plugin`). Do not mix. Unnamed directory submit is a publish. Zip limits 50 MB / 500 files / 25 MB uncompressed. No secrets in archive, manifest, or defaults. Inline base64 zip is a publish.
 35. **Livestream / demonstration-to-skill.** Streaming internals is a demo (L2/L3). Attending a public livestream is L0. Walking a Bot through a path (Teach-by-demonstration records the screen, ≤10 min) and saving it as a skill is a publish.
 36. **Meet auto-notes / 20-skill cap.** Auto-notes of an IP/AI session are a demo. Managed Agents sessions cap at 20 skills — one focused skill, do not pack this into a dump. `user-invocable:` only literal `true`. Extra YAML keys ignored. `bypassPermissions` is not owner approval.
+
+37. **De-identified / ZDR.** Putting invention-grade content into a frontier chat is a disclosure even if PII is stripped, ZDR is claimed, or the plan is Business/Enterprise. Opt-out after the chat is not a rewind. A public clip about the industry issue is L0.
+38. **`default_version` / omit-version.** Same live channel as `latest`. Cannot delete the default version without setting another first. Skill instructions are user-prompt input; this-turn user instructions still beat skill guidelines. Inline base64 zip and curated first-party skills are a demo surface.
+39. **Shared Bot computer is account-wide.** Files, browser sessions, and app logins are available to every Bot you run. Isolation is between users, not between your Bots.
+40. **Marketplace job-taking / cross-surface Claude.** A skill that lets a Bot take jobs or get paid is access grant + send + computer-use. Custom Skills do not sync across Anthropic surfaces — each install is a separate publish.
