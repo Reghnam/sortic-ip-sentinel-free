@@ -2,6 +2,40 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.15-free] — 2026-09-14
+
+Patched from: operator mailbox 14 Sep 2026 (Grok Bot for Engineers livestream calendar add Tue 15 Sep 21:30–23:00 GMT+2 stays **L0 attend**; ChatGPT Business payment-failed notices stay **L0 billing**; weekly backup PARTIAL ≠ publish; leftover drafts — accounting reply, UAT reply, partner pre-read — **unsent**; infra/IAM partner mail stays out of this public repo — **no client/product/infra names, no valuation figures**); OpenAI recrawl 2026-09-14 (developers.openai.com/api/docs/guides/your-data + tools-skills: `/v1/videos` **48h processing + 30d abuse monitoring**, currently **blocked for MAM/ZDR**; Eyes Off / Safety Retention still retain; ZDR-ineligible made granular — `/v1/conversations` **and** `/v1/conversations/items`; `/v1/threads` **and** `/v1/threads/messages` `/runs` `/runs/steps`; agents, files, vector_stores, evals, assistants, chatkit, batches, fine_tuning unchanged; zip 50 MB / 500 files / 25 MB uncompressed; `capability_directories` max 32; pin integer version; inspect-before-attach); Anthropic Agent Skills recrawl 2026-09-14 (platform.claude.com + code.claude.com/docs/en/skills: kebab ≤64, description ≤1024, body <500, YAML **name + description only**, references one level deep, ≥3 evals, 20-skill cap, Skills not covered by ZDR, `allowed-tools` auto-approves listed tools — **do not add write grants**, claude.ai→Cowork/cloud sync unchanged); Grok Bot / Build recrawl 2026-09-14 (docs.x.ai/grok-bot/approvals-security-and-privacy last updated 2 Sep: **no Legacy Privacy Mode** — Grok Bot requires cloud storage; training opt-out follows the **Cursor** account; security-faq 3 Sep: screens ≠ boundary, terminate-computer keeps durable disk, Auto Review does not review memory writes; X ingest 14 Sep: **desktop-egress** — Settings → Updates → Update Grok Bot's Computer FIRST, then Settings → Computer → Route Computer traffic through this desktop; reverse order errors "Grok Bot's computer wasn't provisioned with the egress tunnel"; laptop closed stops routing; desktop becomes a CDN / residential IP vs datacenter; holdbacks on that desktop see Bot traffic; **ownership-pass** is access grant + hop — Bots on one account hand off tasks on the shared computer). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; this improvement job is enabled), and X ingest. Do not dump client/product facts into the public repo.
+
+### OpenAI (first)
+
+- Description **1019 chars** (under Codex 8k / 2% truncation and Anthropic 1024). Front-loads desktop-egress, ownership-pass. HiTL/UAT stay in the body, dropped from YAML to fit.
+- **`/v1/videos` 48h+30d.** Processing saves to disk 48h for download, then 30d abuse monitoring. Currently blocked for MAM/ZDR. Eyes Off / Safety Retention still retain. `/v1/live/sessions` is ZDR-yes with limits but Eyes Off no.
+- **ZDR-ineligible made granular:** conversations+items; threads+messages/runs/steps; plus agents, files, vector stores, evals, assistants, chatkit, batches, videos, fine-tuning. API no-train ≠ ChatGPT no-train.
+- `agents/openai.yaml` `default_prompt` names desktop-egress CDN, ownership-pass, videos 48h+30d, Eyes Off retain, no Legacy Privacy Mode, do not add allowed-tools.
+- New evals 68–73: desktop-egress, ownership-pass, videos/Eyes Off, allowed-tools write grants, Legacy Privacy Mode / Cursor opt-out, Engineers livestream L0.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Name kebab-case ≤64. Description **1019 chars**, no XML. Body under 500.
+- **`allowed-tools` auto-approves listed tools.** Write/Edit/Bash in that field is a write grant. This skill does not add `allowed-tools`. Extra YAML keys stay off the Claude copy.
+- Skills still not covered by ZDR. claude.ai→Cowork/cloud sync is still a publish. Evals now **73** (≥3 required). Eight options, not nine. References one level deep. No scripts.
+
+### Grok Build (third)
+
+- **Desktop-egress is a CDN, not a vault.** Update Grok Bot's Computer FIRST, then Route Computer traffic through this desktop. Reverse order errors. Laptop closed stops routing. Holdbacks on that desktop see Bot traffic. Decline unnamed enable. Livestream/invite copy that each Bot has its own computer is marketing, not isolation.
+- **Ownership-pass is access grant + hop.** Passing task ownership between Bots on one account is not just a DM. Decline unnamed. Isolated credentials still need a dedicated user.
+- **No Legacy Privacy Mode.** Grok Bot requires cloud storage. Training opt-out follows the Cursor account, not a vault. Do not invent the mode.
+- Engineers livestream calendar add is L0 attend. Streaming internals remains L2/L3.
+- Live `isEnabled` is evidence. Weekly backup ≠ publish. GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+
+### Shared
+
+- JSON `sorticai.hygiene_package.v1` edition `0.5.15-free`. `agent_exposure.channel` may be `desktop-egress | ownership-pass | videos-zdr | allowed-tools | legacy-privacy` (plus prior values).
+- Classification: L0-23 Engineers livestream calendar add; L2-27 desktop-egress; L2-28 ownership-pass; L3-EGRESS, L3-OWNPASS, L3-VIDEOS, L3-ALLOWED, L3-LEGACY.
+- Output-language rules 49–52: desktop-egress CDN; ownership-pass; videos 48h+30d / Eyes Off; no Legacy Privacy Mode / no allowed-tools write grants.
+- Stamp: `v0.5.15-free` / patched 2026-09-14. First release date remains 2026-08-17.
+- Still free-only. Still not legal advice. Still silent on meta/privacy/corpus.
+
 ## [0.5.14-free] — 2026-09-14
 
 Patched from: david@ mailbox 13–14 Sep 2026 (ChatGPT Business payment-failed notices stay **L0 billing**; Grok Bot Galaxy livestream calendar adds/updates stay **L0 attend**; weekly backup PARTIAL ≠ publish; leftover drafts unsent; infra/IAM partner mail stays out of this public repo — **no client/product/infra names, no valuation figures**); OpenAI recrawl 2026-09-14 (developers.openai.com/api/docs/guides/tools-skills + **blog/rethinking-skills-and-prompts-for-gpt-6-astra** 11 Sep: Astra can **over-refuse** ("take it too seriously") — do not pad extra refuse language; **define completion before starting** so Astra does not stop after a first stamp; inspect Skills before attach — privileged instructions, prompt-injection risk; zip/ZDR/`capability_directories` 32 unchanged); Anthropic Agent Skills recrawl 2026-09-14 (code.claude.com/docs/en/skills: **claude.ai enablement now syncs skills to Cowork/cloud**; `CLAUDE_CODE_SYNC_SKILLS=1` downloads to `~/.claude/skills/synced/` prefixed `/anthropic-skills:`; local `~/.claude/skills/` still does **not** auto-sync to Cowork; `disable-model-invocation` also blocks scheduled-task skill prompts v2.1.196+; listing truncate 1536 including `when_to_use`; `/skill-doctor` v2.1.252+; `skillOverrides`; synced `!` commands not run locally; frontmatter sanitization v2.1.228+); Grok Build / Bot recrawl 2026-09-14 (docs.x.ai skills-plugins: Grok discovers `~/.agents/skills/` and Claude Code plugins/skills/hooks/`AGENTS.md` with **zero config**; **App Builder live preview is a demo; Vercel deploy is a publish**; Grok 4.6 model pick stays L0). **No Grok chat-history connector exists**; Grok-chat insights are from those docs and this Grok Build turn. Do not dump client/product facts into the public repo.

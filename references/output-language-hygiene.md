@@ -157,6 +157,10 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to treat App Builder preview as production / Vercel as a private preview? Stop/decline.
 - [ ] About to enable this skill on claude.ai unnamed? Decline (sync is a publish).
 - [ ] About to pad extra refuse language for Astra? Do not.
+- [ ] About to enable unnamed desktop-egress / treat it as a vault? Decline.
+- [ ] About to pass task ownership unnamed? Decline (access grant + hop).
+- [ ] About to treat /v1/videos as ZDR or Eyes Off as a wipe? Stop.
+- [ ] About to add allowed-tools write grants or invent Legacy Privacy Mode? Decline.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
@@ -188,3 +192,7 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 46. **claude.ai sync is a publish.** Enablement syncs to Cowork/cloud. CLAUDE_CODE_SYNC_SKILLS=1 downloads to ~/.claude/skills/synced/. Local ~/.claude/skills/ still does not auto-sync. disable-model-invocation also blocks scheduled-task skill prompts (v2.1.196+).
 47. **App Builder preview ≠ Vercel deploy.** Live preview is a demo. Vercel deploy is a publish (owner-gated).
 48. **Grok zero-config discovery is a live channel.** ~/.agents/skills/ and Claude Code plugins/skills/hooks/AGENTS.md are discovered with zero config. No Grok chat-history connector exists.
+49. **Desktop-egress is a CDN, not a vault.** Update Grok Bot's Computer FIRST, then Route Computer traffic through this desktop. Reverse order errors. Laptop closed stops routing. Holdbacks on that desktop see Bot traffic. Decline unnamed enable.
+50. **Ownership-pass is access grant + hop.** Passing task ownership between Bots on one account grants access to the shared computer. Decline unnamed.
+51. **Videos 48h+30d / Eyes Off still retain.** `/v1/videos` is blocked for MAM/ZDR. Conversations+items and threads+messages/runs/steps are granular-ineligible. Do not treat videos as ZDR-covered.
+52. **No Legacy Privacy Mode. No allowed-tools write grants.** Grok Bot requires cloud storage; training opt-out follows the Cursor account. `allowed-tools` auto-approves listed tools — do not add Write/Edit/Bash to this skill. Claude YAML stays name+description only.
