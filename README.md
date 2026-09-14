@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.14-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.15-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -57,6 +57,11 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Astra define-completion: do not stop after the L3 stamp; do not pad extra refuse language
 - App Builder live preview is a demo; Vercel deploy is a publish
 - Grok discovers `~/.agents/skills/` and Claude Code plugins with zero config
+- Desktop-egress is a CDN, not a vault (update Grok Bot's Computer FIRST, then route; laptop closed stops routing)
+- Ownership-pass is access grant + hop (Bots on one account hand off tasks; decline unnamed)
+- `/v1/videos` is 48h+30d and blocked for MAM/ZDR; Eyes Off still retain; conversations+items and threads+messages/runs/steps are granular-ineligible
+- No Legacy Privacy Mode (Grok Bot requires cloud storage; training opt-out follows the Cursor account)
+- Do not add `allowed-tools` write grants; Claude YAML stays name+description only
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
@@ -92,7 +97,7 @@ Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered 
 
 ---
 
-## Compatibility (v0.5.14)
+## Compatibility (v0.5.15)
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|

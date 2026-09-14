@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.14-free)
+# Agent / computer-use exposure log — Template (v0.5.15-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -117,3 +117,13 @@ JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-h
 - [ ] claude.ai enablement / CLAUDE_CODE_SYNC_SKILLS=1 declined unless named (publish).
 - [ ] L3 completion defined (did not stop after the stamp).
 - [ ] Grok ~/.agents/skills/ / Claude Code plugin discovery treated as a live channel.
+- [ ] Desktop-egress unnamed enable declined (CDN, not a vault; update computer first).
+- [ ] Ownership-pass / task-ownership unnamed declined (access grant + hop).
+- [ ] /v1/videos not treated as ZDR (48h+30d; Eyes Off still retain).
+- [ ] allowed-tools write grants not added.
+- [ ] Legacy Privacy Mode not invented (Grok Bot requires cloud storage; Cursor opt-out).
+- [ ] Engineers / Galaxy livestream calendar add treated as L0 attend.
+
+36. **Desktop-egress CDN.** Settings → Updates → Update Grok Bot's Computer FIRST, then Settings → Computer → Route Computer traffic through this desktop. Reverse order errors. Laptop closed stops routing. Holdbacks on that desktop see Bot traffic.
+37. **Ownership-pass.** Passing task ownership between Bots is access grant + hop. Isolated credentials need a dedicated user.
+38. **Videos / Eyes Off / Legacy / allowed-tools.** Videos 48h+30d blocked for MAM/ZDR; Eyes Off still retain. No Legacy Privacy Mode. Do not add allowed-tools write grants. Conversations+items and threads+messages/runs/steps are granular-ineligible.

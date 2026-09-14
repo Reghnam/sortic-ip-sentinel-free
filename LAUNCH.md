@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.14-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.15-free
 
-**Status**: Public on GitHub. v0.5.14-free patched 2026-09-14 (OpenAI → Anthropic → Grok Build: Astra define-completion / over-refusal; claude.ai→Cowork/cloud sync is a publish; App Builder preview is a demo, Vercel deploy is a publish; Grok zero-config `~/.agents/skills/` discovery). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.15-free patched 2026-09-14 (OpenAI → Anthropic → Grok Build: desktop-egress CDN, ownership-pass hop, videos 48h+30d / Eyes Off retain, no Legacy Privacy Mode, no allowed-tools write grants; origin 0.5.14 Astra/claude.ai/App Builder content kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
