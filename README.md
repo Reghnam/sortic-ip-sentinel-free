@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.13-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.14-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -49,11 +49,14 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - `default_version` / omit-version / `latest` are live pointers — pin an integer
 - Shared Bot computer is account-wide (files, browser sessions, app logins)
 - Marketplace job-taking skill is access grant + send + computer-use
-- Custom Skills do not sync across Anthropic surfaces (each install is a publish)
+- claude.ai enablement syncs skills to Cowork/cloud (`CLAUDE_CODE_SYNC_SKILLS=1` → `~/.claude/skills/synced/`); local `~/.claude/skills/` still does not auto-sync
 - API no-train ≠ ChatGPT no-train; Skills/Agents/Files/Conversations/chatkit/batches/videos/fine-tuning are ZDR-ineligible
 - Anthropic Skills are not covered by ZDR (definitions and execution retained)
 - Bot screens ≠ security boundary; Bot-to-Bot DM is a hop; delete Bot ≠ wipe computer
 - Protected-lane check is hygiene, not a product; `capability_directories` max 32
+- Astra define-completion: do not stop after the L3 stamp; do not pad extra refuse language
+- App Builder live preview is a demo; Vercel deploy is a publish
+- Grok discovers `~/.agents/skills/` and Claude Code plugins with zero config
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
@@ -89,7 +92,7 @@ Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered 
 
 ---
 
-## Compatibility (v0.5.13)
+## Compatibility (v0.5.14)
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|
