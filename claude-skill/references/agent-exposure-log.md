@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.13-free)
+# Agent / computer-use exposure log — Template (v0.5.14-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -91,7 +91,10 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 29. **Live isEnabled / workspace plugin.** Do not invent disabled from a prior brief. Workspace-shared plugins are a publish channel.
 30. **Responses API / two zip layouts / subagent skills.** Versioned bundles; pin integer, not `latest` / `default_version` / omit-version. Do not expose this public repo as an open end-user catalog. Skills-tab zip ≠ plugin zip. Subagents do not inherit unless listed.
 31. **De-identified / ZDR.** Invention-grade chats into a frontier lab are a disclosure even if PII-stripped. Skills are not a ZDR boundary.
-32. **Shared Bot sessions / job-skill / cross-surface.** Account-wide files+logins. Marketplace job-taking is access grant + send. Each Anthropic surface is a separate publish.
+32. **Shared Bot sessions / job-skill / cross-surface.** Account-wide files+logins. Marketplace job-taking is access grant + send. claude.ai enablement syncs to Cowork/cloud; local folder still does not auto-sync. Each enablement is a publish.
+33. **Astra define-completion / over-refusal.** Do not stop after the stamp. Do not pad extra refuse language.
+34. **App Builder / Vercel.** Preview is a demo. Vercel deploy is a publish.
+35. **Grok zero-config discovery.** ~/.agents/skills/ and Claude Code plugins/skills/hooks/AGENTS.md are live channels.
 
 JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-hygiene-package.md`). Prefer empty arrays over invented rows. Set `owner_gated: true`.
 
@@ -110,3 +113,7 @@ JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-h
 - [ ] Shared Bot computer (files, sessions, logins) treated as account-wide.
 - [ ] Marketplace job-taking skill declined unless named (access grant + send).
 - [ ] Cross-surface Claude install declined unless named.
+- [ ] App Builder live preview treated as a demo; unnamed Vercel deploy declined.
+- [ ] claude.ai enablement / CLAUDE_CODE_SYNC_SKILLS=1 declined unless named (publish).
+- [ ] L3 completion defined (did not stop after the stamp).
+- [ ] Grok ~/.agents/skills/ / Claude Code plugin discovery treated as a live channel.

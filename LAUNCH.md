@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.13-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.14-free
 
-**Status**: Public on GitHub. v0.5.13-free patched 2026-09-13 (OpenAI → Anthropic → Grok Build: API no-train ≠ ChatGPT no-train; Skills/Agents/Files/Conversations/chatkit/batches/videos/fine-tuning are ZDR-ineligible; Anthropic Skills are not covered by ZDR; Bot screens ≠ security boundary; Bot-to-Bot DM is a hop; delete Bot ≠ wipe computer; protected-lane check is hygiene, not a product). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.14-free patched 2026-09-14 (OpenAI → Anthropic → Grok Build: Astra define-completion / over-refusal; claude.ai→Cowork/cloud sync is a publish; App Builder preview is a demo, Vercel deploy is a publish; Grok zero-config `~/.agents/skills/` discovery). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -50,11 +50,14 @@ Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 61: API≠chat, Skills-not-ZDR, Bot screens, Bot-to-Bot, protected-lane, capdir/ZDR-ineligible)
+- [ ] Evals in `references/evals.md` still pass (now 67: Astra define-completion, claude.ai sync, App Builder vs Vercel, Grok discovery, scheduled-task flag, inspect-before-attach)
 - [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity / voice provision / yolo-send → decline
 - [ ] Backup ≠ publish; truncated/junk/placeholder files are not originals; image-only ≠ numbered facts
 - [ ] Bot share / marketplace clone is a demo channel; callable hops hold internals
 - [ ] API no-train is not treated as ChatGPT no-train; Skills execution is not treated as ZDR-covered
 - [ ] Bot screens are not treated as isolation; Bot-to-Bot DM is a hop
+- [ ] Astra define-completion: do not stop after the L3 stamp; do not pad extra refuse language
+- [ ] App Builder live preview is a demo; unnamed Vercel deploy is declined
+- [ ] claude.ai enablement / CLAUDE_CODE_SYNC_SKILLS=1 is a publish; local ~/.claude/skills/ still does not auto-sync
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**

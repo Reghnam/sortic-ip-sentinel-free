@@ -153,6 +153,10 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to treat Skills / Agents / Files / Conversations as ZDR-covered? Stop.
 - [ ] About to park holdbacks on a Bot screen or DM them to another Bot? Stop.
 - [ ] About to claim a plan is the protected lane? Do not — map the lane only.
+- [ ] About to stop after the L3 stamp without delivering 1–8? Do not — define completion.
+- [ ] About to treat App Builder preview as production / Vercel as a private preview? Stop/decline.
+- [ ] About to enable this skill on claude.ai unnamed? Decline (sync is a publish).
+- [ ] About to pad extra refuse language for Astra? Do not.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
@@ -173,9 +177,14 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 37. **De-identified / ZDR.** Putting invention-grade content into a frontier chat is a disclosure even if PII is stripped, ZDR is claimed, or the plan is Business/Enterprise. Opt-out after the chat is not a rewind. A public clip about the industry issue is L0.
 38. **`default_version` / omit-version.** Same live channel as `latest`. Cannot delete the default version without setting another first. Skill instructions are user-prompt input; this-turn user instructions still beat skill guidelines. Inline base64 zip and curated first-party skills are a demo surface.
 39. **Shared Bot computer is account-wide.** Files, browser sessions, and app logins are available to every Bot you run. Isolation is between users, not between your Bots.
-40. **Marketplace job-taking / cross-surface Claude.** A skill that lets a Bot take jobs or get paid is access grant + send + computer-use. Custom Skills do not sync across Anthropic surfaces — each install is a separate publish.
+40. **Marketplace job-taking / cross-surface Claude.** A skill that lets a Bot take jobs or get paid is access grant + send + computer-use. claude.ai enablement syncs to Cowork/cloud (each enablement is a publish); local ~/.claude/skills/ still does not auto-sync; API is a separate publish.
 
 41. **API no-train ≠ ChatGPT no-train.** OpenAI API data is not used to train unless the org opts in. Consumer / Business / Enterprise chat is a different lane. Do not write "we're on Business so it's private."
 42. **Skills / Agents / Files / Conversations are ZDR-ineligible.** Even with org ZDR, those endpoints (also chatkit, batches, videos, fine-tuning) and Anthropic Skill definitions + execution data are retained. Covered-model 30-day safety retention can apply on ZDR orgs. Hosted container discarded ≠ abuse-monitor 30d gone. Model marketing ("most secure") is not a data-control change.
 43. **Bot screens ≠ security boundary.** Separate Bots are not a vault. Isolated credentials need a dedicated user. Delete Bot ≠ wipe computer. Enterprise terminate-computer keeps the durable disk. Bot-to-Bot DM / group chat is a hop. Auto Review does not review memory writes. Plan downgrade of a meeting-notes AI does not stop transcription or Slack auto-share.
 44. **Protected-lane check is hygiene.** Map consumer chat vs API / local / open-source. Do not invent a proof-of-no-train certificate or claim a plan is the protected lane.
+
+45. **Astra define-completion / over-refusal.** Do not pad extra refuse language (Astra can take it too seriously). Define L3 completion before starting: stamp + snapshot + 1–8 + named deliverable or default 1+8 + disclaimer in the same turn. Do not stop after the stamp.
+46. **claude.ai sync is a publish.** Enablement syncs to Cowork/cloud. CLAUDE_CODE_SYNC_SKILLS=1 downloads to ~/.claude/skills/synced/. Local ~/.claude/skills/ still does not auto-sync. disable-model-invocation also blocks scheduled-task skill prompts (v2.1.196+).
+47. **App Builder preview ≠ Vercel deploy.** Live preview is a demo. Vercel deploy is a publish (owner-gated).
+48. **Grok zero-config discovery is a live channel.** ~/.agents/skills/ and Claude Code plugins/skills/hooks/AGENTS.md are discovered with zero config. No Grok chat-history connector exists.

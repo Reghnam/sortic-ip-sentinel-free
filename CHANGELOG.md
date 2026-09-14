@@ -2,6 +2,42 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.14-free] — 2026-09-14
+
+Patched from: david@ mailbox 13–14 Sep 2026 (ChatGPT Business payment-failed notices stay **L0 billing**; Grok Bot Galaxy livestream calendar adds/updates stay **L0 attend**; weekly backup PARTIAL ≠ publish; leftover drafts unsent; infra/IAM partner mail stays out of this public repo — **no client/product/infra names, no valuation figures**); OpenAI recrawl 2026-09-14 (developers.openai.com/api/docs/guides/tools-skills + **blog/rethinking-skills-and-prompts-for-gpt-6-astra** 11 Sep: Astra can **over-refuse** ("take it too seriously") — do not pad extra refuse language; **define completion before starting** so Astra does not stop after a first stamp; inspect Skills before attach — privileged instructions, prompt-injection risk; zip/ZDR/`capability_directories` 32 unchanged); Anthropic Agent Skills recrawl 2026-09-14 (code.claude.com/docs/en/skills: **claude.ai enablement now syncs skills to Cowork/cloud**; `CLAUDE_CODE_SYNC_SKILLS=1` downloads to `~/.claude/skills/synced/` prefixed `/anthropic-skills:`; local `~/.claude/skills/` still does **not** auto-sync to Cowork; `disable-model-invocation` also blocks scheduled-task skill prompts v2.1.196+; listing truncate 1536 including `when_to_use`; `/skill-doctor` v2.1.252+; `skillOverrides`; synced `!` commands not run locally; frontmatter sanitization v2.1.228+); Grok Build / Bot recrawl 2026-09-14 (docs.x.ai skills-plugins: Grok discovers `~/.agents/skills/` and Claude Code plugins/skills/hooks/`AGENTS.md` with **zero config**; **App Builder live preview is a demo; Vercel deploy is a publish**; Grok 4.6 model pick stays L0). **No Grok chat-history connector exists**; Grok-chat insights are from those docs and this Grok Build turn. Do not dump client/product facts into the public repo.
+
+### OpenAI (first)
+
+- Description **998 chars** (under Codex 8k / 2% truncation and Anthropic 1024). Front-loads App Builder preview, claude.ai sync, Astra computer-use.
+- **Astra define-completion.** Do not stop after the L3 stamp. Same-turn completion = stamp + snapshot + 1–8 + named deliverable or default 1+8 + disclaimer.
+- **Astra over-refusal.** "Take it too seriously" — do not pad extra refuse language on top of existing gates.
+- Inspect-before-attach unchanged and restated (prompt-injection / data-exfiltration risk). Three zip layouts, `default_version` / `latest`, ZDR-ineligible list, `capability_directories` max 32 unchanged.
+- `agents/openai.yaml` `default_prompt` names define-completion, over-refusal, App Builder≠Vercel, claude.ai sync, Grok `~/.agents/skills/` discovery.
+- New evals 62–67: Astra complete, claude.ai sync, App Builder vs Vercel, Grok discovery, scheduled-task flag, inspect-before-attach.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Name kebab-case ≤64. Description **998 chars**, no XML. Body under 500.
+- **claude.ai → Cowork/cloud sync is a publish.** Enablement on claude.ai loads the skill in Cowork and cloud sessions. `CLAUDE_CODE_SYNC_SKILLS=1 claude -p …` downloads to `~/.claude/skills/synced/`. Local `~/.claude/skills/` still does not auto-sync.
+- Eval 55 / rule 40 / L3-XSURFACE restated: claude.ai→Cowork/cloud syncs; local folder and API stay separate. `disable-model-invocation` also blocks scheduled-task skill prompts (v2.1.196+). Synced skills: no local `!` commands; frontmatter sanitized.
+- Listing budget: description + `when_to_use` truncated at 1536. `/skill-doctor`. `skillOverrides`.
+- Skills still not covered by ZDR. Evals now **67** (≥3 required). Eight options, not nine. References one level deep. No scripts.
+
+### Grok Build (third)
+
+- **App Builder live preview is a demo; Vercel deploy is a publish.** The in-browser preview is not production.
+- **Grok discovers `~/.agents/skills/` and Claude Code plugins/skills/hooks/`AGENTS.md` with zero config.** A skill sitting in those paths is a live channel.
+- Grok 4.6 model pick stays L0. Screens ≠ security boundary. Bot-to-Bot DM is a hop. Terminate-computer keeps durable disk. No Grok chat-history connector.
+- Live `isEnabled` is evidence. Weekly backup ≠ publish. GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+
+### Shared
+
+- JSON `sorticai.hygiene_package.v1` edition `0.5.14-free`. `agent_exposure.channel` may be `app-builder | vercel-deploy | claude-sync | astra-complete | grok-discover` (plus prior values).
+- Classification: L2-25 App Builder preview, L2-26 claude.ai sync; L0-22 Grok 4.6 model pick; L3-ASTRADEF, L3-CLAUDESYNC, L3-APPBLD, L3-GROKDISC, L3-SCHEDFLAG.
+- Output-language rules 45–48: define-completion / over-refusal; claude.ai sync; App Builder≠Vercel; Grok zero-config discovery.
+- Stamp: `v0.5.14-free` / patched 2026-09-14. First release date remains 2026-08-17.
+- Still free-only. Still not legal advice. Still silent on meta/privacy/corpus.
+
 ## [0.5.13-free] — 2026-09-13
 
 Patched from: david@ mailbox 8–13 Sep 2026 (All-In de-id note already in 0.5.12; GPT-6 Astra "most capable and secure" + workspace-wide computer/browser use is still ChatGPT lane, not API ZDR; Grok Bot Galaxy livestreams 15–17 Sep — attending is L0, streaming internals is L2/L3; meeting-notes AI plan downgrade does not stop transcription or Slack auto-share; leftover drafts unsent; weekly backup PARTIAL ≠ publish; live `isEnabled` is evidence — this improvement job is enabled even with a stale nextRun; Sentinel→GitHub auto-push is owner L3 — this Grok Build turn *is* the named owner push of hygiene-only files — **no client/product/infra names, no valuation figures in this repo**); OpenAI recrawl 2026-09-13 afternoon (developers.openai.com/api/docs/guides/tools-skills + **api/docs/guides/your-data**: API no-train since 2023 is opt-in only and is **not** ChatGPT/Business no-train; ZDR-ineligible even when the org has ZDR: `/v1/conversations`, `/v1/agents`, `/v1/files`, `/v1/vector_stores`, `/v1/evals`, `/v1/assistants`, `/v1/threads`, **`/v1/chatkit/threads`**, **`/v1/batches`**, **`/v1/videos`**, **`/v1/fine_tuning/jobs`**; hosted container discarded ≠ abuse-monitor 30d gone; `default_version` / `latest` / omit-version are live pointers; zip 50 MB / 500 files / 25 MB uncompressed; `capability_directories` max **32**; inspect Skills before attach; do not expose this public repo as an open end-user catalog; model marketing "most secure" is not a data-control change); Anthropic Agent Skills recrawl 2026-09-13 afternoon (platform.claude.com Agent Skills overview + best-practices: kebab ≤64, description ≤1024 — this patch **trims description to 1021 chars**; SKILL.md body <500 / <5k tokens; **Skills are not covered by ZDR** — skill definitions *and* execution data are retained under standard policy; covered-model 30-day safety retention can apply even on ZDR orgs; custom Skills do not sync across claude.ai / API / Claude Code; references one level deep; ≥3 evals; 20-skill session cap); Grok Bot / Build recrawl 2026-09-13 afternoon (`docs.x.ai/grok-bot/overview` published 11 Sep; **security-faq** last updated 3 Sep: screens are work surfaces, not security boundaries; all of your Bots share one Firecracker computer; isolated credentials need a **dedicated user**; delete Bot ≠ wipe computer; **Enterprise terminate-computer keeps the durable disk** (next session remounts it); Bot-to-Bot DM / group chat is a hop; Auto Review does not review memory writes / most settings changes; shared static egress, no dedicated per-customer IPs). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; weekly backup ≠ publish), and X ingest (voice screen-share sees the browser; public Bot share is cloneable config). Do not dump client/product facts into the public repo.
