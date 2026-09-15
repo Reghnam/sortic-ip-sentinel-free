@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.16-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.17-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -68,6 +68,12 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - `allowed-tools` grant is one-turn then clears — grant-clear is not a vault
 - Auto Review rules are desktop-local; Update Agent Computer preserves durable state; Reset drops unsynced work
 - Galaxy / role livestream calendar add and Claude magic-link stay L0 attend
+- `disallowed-tools` restriction-clear is one-turn, not a vault (do not add the field)
+- Skill security scanning is not a vault (misses API / already-uploaded / ZDR/CMEK/HIPAA)
+- Grok Bot computers run in the United States today — not on-prem, not BYO image
+- Sign-out ≠ wipe of claude.ai-synced skills (cleanupPeriodDays, then trash)
+- Dist-path: extra YAML keys error on claude.ai / Skills API; `claude-skill/` stays name+description only
+- Invention screenshots/diagrams are still CSAM-scanned
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
@@ -103,7 +109,7 @@ Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered 
 
 ---
 
-## Compatibility (v0.5.15)
+## Compatibility (v0.5.17)
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|

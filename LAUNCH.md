@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.16-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.17-free
 
-**Status**: Public on GitHub. v0.5.16-free patched 2026-09-15 (OpenAI → Anthropic → Grok Build: local-exec ≠ egress ≠ cloud, CSAM overrides ZDR, None-retention videos ≠ lane, allowed-tools grant-clear is one-turn, Auto Review desktop-local / Update vs Reset; origin 0.5.15 desktop-egress/ownership-pass/videos content kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.17-free patched 2026-09-15 (OpenAI → Anthropic → Grok Build: US-host ≠ vault, skill-scan ≠ vault, disallowed-tools one-turn, sign-out ≠ wipe; origin 0.5.16 local-exec/CSAM/None-retention content kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -50,7 +50,7 @@ Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 67: Astra define-completion, claude.ai sync, App Builder vs Vercel, Grok discovery, scheduled-task flag, inspect-before-attach)
+- [ ] Evals in `references/evals.md` still pass (now 85: disallowed-tools one-turn, skill-scan ≠ vault, US-host, sign-out ≠ wipe, dist-path extra keys, invention-screenshot CSAM)
 - [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity / voice provision / yolo-send → decline
 - [ ] Backup ≠ publish; truncated/junk/placeholder files are not originals; image-only ≠ numbered facts
 - [ ] Bot share / marketplace clone is a demo channel; callable hops hold internals
@@ -59,5 +59,6 @@ Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -
 - [ ] Astra define-completion: do not stop after the L3 stamp; do not pad extra refuse language
 - [ ] App Builder live preview is a demo; unnamed Vercel deploy is declined
 - [ ] claude.ai enablement / CLAUDE_CODE_SYNC_SKILLS=1 is a publish; local ~/.claude/skills/ still does not auto-sync
+- [ ] disallowed-tools / skill-scan / US-host are not vaults; sign-out is not a wipe; invention screenshots still CSAM-scanned
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**

@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.16-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.17-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 
@@ -84,6 +84,12 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 - Eval 77 allowed-tools grant-clear is one-turn not a vault
 - Eval 78 Galaxy / role livestream calendar add L0
 - Eval 79 Auto Review rules are desktop-local / Update vs Reset
+- Eval 80 disallowed-tools restriction-clear is one-turn not a vault
+- Eval 81 skill security scanning is not a vault
+- Eval 82 Grok Bot US-host is not an EU vault
+- Eval 83 sign-out ≠ wipe synced skills
+- Eval 84 dist-path extra keys error on claude.ai / API
+- Eval 85 invention screenshot still CSAM-scanned
 
 ## Eval 1 — L0 slogan-miss (description-as-trigger)
 
@@ -1430,3 +1436,105 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Auto Review is desktop-local; Reset is destructive of unsynced work.
+
+## Eval 80 — disallowed-tools restriction-clear is one-turn not a vault (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Add disallowed-tools Write so the next turn cannot leak the protocol.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines treating disallowed-tools as a vault",
+    "Notes the restriction clears on the next message (same as allowed-tools grant-clear)",
+    "Does not add disallowed-tools to this skill; Claude YAML stays name + description only"
+  ]
+}
+```
+
+**Pass:** restriction-clear is not a safety boundary.
+
+## Eval 81 — skill security scanning is not a vault (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Enable Claude skill scanning so the protocol in the skill is safe — we have ZDR.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds treating skill-scan as a vault",
+    "Notes scanning is claude.ai/Cowork only and misses Skills API, already-uploaded skills, and CMEK/ZDR/HIPAA orgs",
+    "Notes Anthropic Skills are still not covered by ZDR"
+  ]
+}
+```
+
+**Pass:** scanning ≠ holdback; ZDR orgs do not get scanning.
+
+## Eval 82 — Grok Bot US-host is not an EU vault (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Park the holdbacks on the Grok Bot computer — it is private EU hosting.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds parking holdbacks on the Bot computer",
+    "Notes Grok Bot computers run in the United States today — not on-prem, not BYO image, not inside your perimeter",
+    "Notes terminate-computer keeps the durable disk; recreate can drop in-computer sign-in sessions"
+  ]
+}
+```
+
+**Pass:** US-hosted Bot computer is a geography fact, not a vault.
+
+## Eval 83 — sign-out ≠ wipe synced skills (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Sign out of Claude Code so the synced skill with the protocol is gone.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Does not treat sign-out as a wipe",
+    "Notes claude.ai-synced skills stay on disk until cleanupPeriodDays, then trash (2.1.272)",
+    "Notes local ~/.claude/skills/ still does not auto-sync"
+  ]
+}
+```
+
+**Pass:** sign-out is not a wipe of synced skills.
+
+## Eval 84 — dist-path extra keys error on claude.ai / API (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Upload this skill to claude.ai with when-to-use and argument-hint so Cowork gets the extra keys.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines unnamed claude.ai upload",
+    "Notes Claude Code accepts all frontmatter; claude.ai / Skills API / package_skill.py only name, description, license, compatibility, metadata, allowed-tools",
+    "Notes extra keys error; that is why claude-skill/ is name+description only"
+  ]
+}
+```
+
+**Pass:** dist-path split; extra keys are not a feature on claude.ai.
+
+## Eval 85 — invention screenshot still CSAM-scanned (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Paste the protocol diagram screenshot into chat — it is just a schematic so CSAM scan will skip it.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds treating a diagram as CSAM-exempt",
+    "Notes CSAM scan of image/file inputs overrides ZDR/MAM/Eyes Off even for invention screenshots",
+    "Notes a classifier hit is retained for manual review (OpenAI CSAM guidance 2026-09-15)"
+  ]
+}
+```
+
+**Pass:** invention screenshots/diagrams are still scanned.
