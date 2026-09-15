@@ -161,6 +161,10 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to pass task ownership unnamed? Decline (access grant + hop).
 - [ ] About to treat /v1/videos as ZDR or Eyes Off as a wipe? Stop.
 - [ ] About to add allowed-tools write grants or invent Legacy Privacy Mode? Decline.
+- [ ] About to set Execution on Local Computer Always allowed unnamed? Decline.
+- [ ] About to treat a None-retention videos project as a protected lane? Stop.
+- [ ] About to treat CSAM-override retain / image Eyes Off as a wipe? Stop.
+- [ ] About to treat one-turn allowed-tools grant-clear as a vault? Decline.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
@@ -196,3 +200,8 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 50. **Ownership-pass is access grant + hop.** Passing task ownership between Bots on one account grants access to the shared computer. Decline unnamed.
 51. **Videos 48h+30d / Eyes Off still retain.** `/v1/videos` is blocked for MAM/ZDR. Conversations+items and threads+messages/runs/steps are granular-ineligible. Do not treat videos as ZDR-covered.
 52. **No Legacy Privacy Mode. No allowed-tools write grants.** Grok Bot requires cloud storage; training opt-out follows the Cursor account. `allowed-tools` auto-approves listed tools — do not add Write/Edit/Bash to this skill. Claude YAML stays name+description only.
+
+53. **Local-computer execution ≠ desktop-egress ≠ cloud.** Settings → General → Agent → Execution on Local Computer: Ask every time (default); Never allowed unless named. Laptop closed: cloud work continues; egress routing stops; local-exec needs the desktop. Auto Review rules live on this desktop. Update Agent Computer keeps durable state; Reset drops unsynced work. Network Controls is Enterprise-only; no DLP; shared static egress; no Cursor VPN.
+54. **CSAM scan overrides ZDR/MAM/Eyes Off.** Image/file inputs are scanned; a hit is retained for manual review even on ZDR. gpt-image-2.5-sunburst/flare (incl. 2026-09-08) are ZDR-yes, Eyes Off no. Safety Retention can pull a model out of ZDR/MAM (notified).
+55. **None-retention videos project ≠ protected lane.** `/v1/videos` is blocked for MAM/ZDR; a project set to retention None is required to call it — that is the opposite of a vault. 48h+30d still apply.
+56. **allowed-tools grant-clear is one-turn, not a vault.** Listed tools auto-approve for the invoking turn, then the grant clears. Still do not add Write/Edit/Bash. Claude YAML stays name+description only. Combined description+when_to_use listing truncate is 1536 chars.

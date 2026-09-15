@@ -1,8 +1,8 @@
-# SorticAI Free IP Sentinel — Claude Code (v0.5.15-free)
+# SorticAI Free IP Sentinel — Claude Code (v0.5.16-free)
 
-Anthropic-strict package. SKILL.md YAML is **only** `name` + `description` (required). Name is kebab-case, ≤64 chars. Description is 998 chars (limit 1024), includes what + when + do-not-use + Bot/computer-use / Astra / de-identified training / ZDR / API≠chat, no XML.
+Anthropic-strict package. SKILL.md YAML is **only** `name` + `description` (required). Name is kebab-case, ≤64 chars. Description is 1019 chars (limit 1024), includes what + when + do-not-use + Bot/computer-use / Astra / de-identified training / ZDR / API≠chat / local-exec / CSAM-override / none-retention videos, no XML.
 
-`references/` is **bundled**. One copy is a complete skill. Evals: `references/evals.md` (67; ≥3 required). Degrees of freedom: low on send/publish/pay/login/access-grant/hooks/CI-apply. Pin `latest` is a live production channel. claude.ai enablement syncs to Cowork/cloud (a publish); local `~/.claude/skills/` still does not auto-sync; API is a separate publish. **Skills are not covered by ZDR** (definitions and execution retained). Authors ≠ own reviewers. No scripts. One focused skill.
+`references/` is **bundled**. One copy is a complete skill. Evals: `references/evals.md` (79; ≥3 required). Degrees of freedom: low on send/publish/pay/login/access-grant/hooks/CI-apply. Pin `latest` is a live production channel. `allowed-tools` grant is one-turn then clears — this skill does not add write grants. Custom claude.ai Skills are per-user and do not auto-sync; settings enablement may sync to Cowork — neither is a vault. **Skills are not covered by ZDR** (definitions and execution retained). Authors ≠ own reviewers. No scripts. One focused skill.
 
 ## Install
 

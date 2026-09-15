@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.15-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.16-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -62,6 +62,12 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - `/v1/videos` is 48h+30d and blocked for MAM/ZDR; Eyes Off still retain; conversations+items and threads+messages/runs/steps are granular-ineligible
 - No Legacy Privacy Mode (Grok Bot requires cloud storage; training opt-out follows the Cursor account)
 - Do not add `allowed-tools` write grants; Claude YAML stays name+description only
+- Cloud computer ≠ desktop-egress ≠ local-computer execution (Ask every time default; Never allowed unless named)
+- CSAM scan of image/file inputs overrides ZDR/MAM/Eyes Off; gpt-image-2.5-sunburst/flare is ZDR-yes / Eyes Off no
+- A None-retention project to call `/v1/videos` is not a protected lane
+- `allowed-tools` grant is one-turn then clears — grant-clear is not a vault
+- Auto Review rules are desktop-local; Update Agent Computer preserves durable state; Reset drops unsynced work
+- Galaxy / role livestream calendar add and Claude magic-link stay L0 attend
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
