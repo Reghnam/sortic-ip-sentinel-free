@@ -165,6 +165,11 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to treat a None-retention videos project as a protected lane? Stop.
 - [ ] About to treat CSAM-override retain / image Eyes Off as a wipe? Stop.
 - [ ] About to treat one-turn allowed-tools grant-clear as a vault? Decline.
+- [ ] About to treat disallowed-tools restriction-clear as a vault? Decline.
+- [ ] About to treat skill-scan or a US-hosted Bot computer as a vault? Stop.
+- [ ] About to treat sign-out as a wipe of synced skills? Do not.
+- [ ] About to treat an invention screenshot/diagram as CSAM-exempt? Stop.
+- [ ] About to upload extra YAML keys to claude.ai / Skills API? Decline (dist-path error).
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
@@ -205,3 +210,7 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 54. **CSAM scan overrides ZDR/MAM/Eyes Off.** Image/file inputs are scanned; a hit is retained for manual review even on ZDR. gpt-image-2.5-sunburst/flare (incl. 2026-09-08) are ZDR-yes, Eyes Off no. Safety Retention can pull a model out of ZDR/MAM (notified).
 55. **None-retention videos project ≠ protected lane.** `/v1/videos` is blocked for MAM/ZDR; a project set to retention None is required to call it — that is the opposite of a vault. 48h+30d still apply.
 56. **allowed-tools grant-clear is one-turn, not a vault.** Listed tools auto-approve for the invoking turn, then the grant clears. Still do not add Write/Edit/Bash. Claude YAML stays name+description only. Combined description+when_to_use listing truncate is 1536 chars.
+57. **disallowed-tools restriction-clear is one-turn, not a vault.** Same clock as allowed-tools grant-clear. Cannot remove EndConversation if other tools remain. Do not add the field to this skill.
+58. **Skill security scanning is not a vault.** claude.ai/Cowork only. Misses Skills API, already-uploaded skills, CMEK/ZDR/HIPAA orgs. ZDR orgs do not get scanning. Inspect-before-attach still applies.
+59. **Grok Bot computer is US-hosted.** Not on-prem, not BYO image, not inside your perimeter. Holdbacks on that computer are a US geography fact. Recreate can drop in-computer sign-in sessions; terminate-computer keeps the durable disk. Auto Review still does not review memory writes or most settings changes.
+60. **Dist-path / sign-out.** Claude Code accepts all frontmatter; claude.ai / Skills API / package_skill.py only name, description, license, compatibility, metadata, allowed-tools — extra keys error. Sign-out does not wipe claude.ai-synced skills (stay on disk until cleanupPeriodDays, then trash). `context: fork` is a hop. Invention screenshots/diagrams are still CSAM-scanned.

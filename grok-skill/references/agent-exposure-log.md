@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.16-free)
+# Agent / computer-use exposure log — Template (v0.5.17-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -8,7 +8,7 @@ An agent with its own computer is a **live demo channel**. Treat it like an inve
 
 ## What the agent did (redact secrets in this table)
 
-| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust / remote-mac / workspace-plugin / responses-api / hosted-skill / counsel-release / livestream / claude-plugin / demo-skill / meet-notes / judge-model / deid-train / default-version / shared-bot-session / job-skill / cross-surface / protected-lane / skill-zdr / bot-dm / bot-screen / api-vs-chat / capdir) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
+| When | Runtime (Bot / CLI / MCP) | Channel (browser / email / GitHub / social / livestream / HiTL / board / backup / export / local-computer / callable / voice / voice-screen / routine / file / bot-share / marketplace / grok-share / reviewer / mailbox / iam-screenshot / access-grant / legal-draft / webhook / bot-duplicate / lifecycle-hook / astra-computer / console-shot / ci-apply / sites / async-board / repo-skill / fan-out / hooks-trust / remote-mac / workspace-plugin / responses-api / hosted-skill / counsel-release / livestream / claude-plugin / demo-skill / meet-notes / judge-model / deid-train / default-version / shared-bot-session / job-skill / cross-surface / protected-lane / skill-zdr / bot-dm / bot-screen / api-vs-chat / capdir / disallowed-tools / skill-scan / us-host / sign-out-wipe / dist-path / csam-shot) | What was shown or sent | Audience named this turn? | Action named this turn? | Hold / ok / not_sent / blocked / declined | Evidence (path+link or message-id) |
 |------|---------------------------|-----------------------------------------------------|------------------------|-------------------|-------------|------------------|
 |      |                           |                                                     |                        |                       |                       |                              |                                      |
 
@@ -135,3 +135,7 @@ JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-h
 
 39. **Local-computer execution.** Settings → General → Agent → Execution on Local Computer. Default Ask every time. Never allowed unless named. Distinct from desktop-egress and from the cloud computer.
 40. **CSAM / None-retention / grant-clear.** CSAM scan overrides ZDR. None-retention project to call videos is not a lane. allowed-tools grant clears next message — still do not add write grants.
+- [ ] Grok Bot computer not treated as EU/on-prem vault (US-hosted today; not BYO).
+- [ ] Sign-out not treated as wipe of claude.ai-synced skills.
+- [ ] disallowed-tools / skill-scan not treated as a vault.
+- [ ] Invention screenshots not treated as CSAM-exempt.
