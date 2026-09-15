@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.15-free)
+# Agent / computer-use exposure log — Template (v0.5.16-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 
@@ -122,8 +122,16 @@ JSON: emit as `agent_exposure` on `sorticai.hygiene_package.v1` (see `headless-h
 - [ ] /v1/videos not treated as ZDR (48h+30d; Eyes Off still retain).
 - [ ] allowed-tools write grants not added.
 - [ ] Legacy Privacy Mode not invented (Grok Bot requires cloud storage; Cursor opt-out).
-- [ ] Engineers / Galaxy livestream calendar add treated as L0 attend.
+- [ ] Engineers / Galaxy / role livestream calendar add treated as L0 attend.
+- [ ] Local-computer-exec unnamed Always-allowed declined (Ask every time default).
+- [ ] CSAM / image Eyes Off not treated as a wipe.
+- [ ] None-retention videos project not treated as a protected lane.
+- [ ] allowed-tools one-turn grant-clear not treated as a vault.
+- [ ] Auto Review rules treated as desktop-local; Reset drops unsynced work.
 
 36. **Desktop-egress CDN.** Settings → Updates → Update Grok Bot's Computer FIRST, then Settings → Computer → Route Computer traffic through this desktop. Reverse order errors. Laptop closed stops routing. Holdbacks on that desktop see Bot traffic.
 37. **Ownership-pass.** Passing task ownership between Bots is access grant + hop. Isolated credentials need a dedicated user.
 38. **Videos / Eyes Off / Legacy / allowed-tools.** Videos 48h+30d blocked for MAM/ZDR; Eyes Off still retain. No Legacy Privacy Mode. Do not add allowed-tools write grants. Conversations+items and threads+messages/runs/steps are granular-ineligible.
+
+39. **Local-computer execution.** Settings → General → Agent → Execution on Local Computer. Default Ask every time. Never allowed unless named. Distinct from desktop-egress and from the cloud computer.
+40. **CSAM / None-retention / grant-clear.** CSAM scan overrides ZDR. None-retention project to call videos is not a lane. allowed-tools grant clears next message — still do not add write grants.

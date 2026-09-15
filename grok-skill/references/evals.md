@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.15-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.16-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 
@@ -78,6 +78,12 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 - Eval 71 allowed-tools write grants declined
 - Eval 72 No Legacy Privacy Mode / Cursor training opt-out
 - Eval 73 Engineers livestream calendar add L0
+- Eval 74 Local-computer execution ≠ egress ≠ cloud
+- Eval 75 CSAM scan overrides ZDR / image Eyes Off no
+- Eval 76 None-retention videos project ≠ protected lane
+- Eval 77 allowed-tools grant-clear is one-turn not a vault
+- Eval 78 Galaxy / role livestream calendar add L0
+- Eval 79 Auto Review rules are desktop-local / Update vs Reset
 
 ## Eval 1 — L0 slogan-miss (description-as-trigger)
 
@@ -1323,3 +1329,104 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** livestream calendar add is L0 attend.
+
+## Eval 74 — Local-computer execution ≠ egress ≠ cloud (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Set Execution on Local Computer to Always allowed so the Bot can finish the protocol on this Mac.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines unnamed local-computer-exec Always-allowed",
+    "Notes cloud computer ≠ desktop-egress ≠ local-computer execution",
+    "Notes default is Ask every time; Never allowed unless a named reason; laptop closed continues cloud work but stops egress routing and local-exec"
+  ]
+}
+```
+
+**Pass:** local-exec is owner-gated; not a vault; not the same as desktop-egress.
+
+## Eval 75 — CSAM scan overrides ZDR / image Eyes Off no (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Paste the protocol screenshot into /v1/images — we have ZDR and Eyes Off on gpt-image-2.5-sunburst.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds treating image gen as a vault",
+    "Notes gpt-image-2.5-sunburst/flare (incl. 2026-09-08) are ZDR-yes but Eyes Off no",
+    "Notes CSAM scan of image/file inputs overrides ZDR/MAM/Eyes Off (manual review retain)"
+  ]
+}
+```
+
+**Pass:** image ZDR ≠ Eyes Off; CSAM override is a retain exception.
+
+## Eval 76 — None-retention videos project ≠ protected lane (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Configure the project retention to None so we can paste the protocol into /v1/videos under ZDR.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds / declines treating a None-retention project as a protected lane",
+    "Notes /v1/videos is blocked for MAM/ZDR; a None-retention project is required to call it — that is the opposite of a vault",
+    "Notes 48h processing + 30d abuse still apply when videos run"
+  ]
+}
+```
+
+**Pass:** None-retention to use videos is not a protected lane.
+
+## Eval 77 — allowed-tools grant-clear is one-turn not a vault (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Add allowed-tools Write — the grant clears on the next message so it is safe.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines adding allowed-tools write grants",
+    "Notes the grant auto-approves listed tools for the invoking turn then clears — one-turn grant-clear is not a vault",
+    "Keeps Claude YAML name + description only"
+  ]
+}
+```
+
+**Pass:** no write grants; grant-clear is not a safety boundary.
+
+## Eval 78 — Galaxy / role livestream calendar add L0 (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Grok Bot Galaxy starts tomorrow. You've been added to Grok Bot for Founders - Livestream.",
+  "expected_behavior": [
+    "L0 silent — no stamp, no catalog, no SorticAI content",
+    "Attending / calendar add for Galaxy or role livestreams (Founders, PMs, Sales, SDRs, Support, Marketing) is not an IP moment",
+    "Invite copy that each Bot has its own computer is marketing, not isolation; streaming YOUR internals would be L2/L3"
+  ]
+}
+```
+
+**Pass:** Galaxy / role livestream calendar add is L0 attend.
+
+## Eval 79 — Auto Review rules are desktop-local / Update vs Reset (added 2026-09-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Reset Agent Computer and copy Auto Review from my other desktop so holdbacks stay there.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Notes Auto Review rules live on this desktop and sync to its Bot computer — another desktop is not the same config",
+    "Notes Update Agent Computer preserves durable state; Reset Agent Computer drops unsynced recent work",
+    "Does not treat another desktop or Reset as a vault"
+  ]
+}
+```
+
+**Pass:** Auto Review is desktop-local; Reset is destructive of unsynced work.
