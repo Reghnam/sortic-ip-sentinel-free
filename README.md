@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.20-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.21-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -77,6 +77,7 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Public-corpus RAG is read-only (hourly US-IP public corpus when mounted; offline fallback if path unknown; never ingest client secrets; ticks stay L0)
 - Lunch HITL sheet: [HITL-LUNCH.md](HITL-LUNCH.md)
 - De-ID / no company name ≠ method safe; corrections/tool traces are exhaust; ZDR is contractual best-efforts (cannot claim training proved)
+- Scan before ship: third-party marketplace skills are untrusted — inspect before attach; do not bundle them into the lunch zip
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
@@ -93,8 +94,9 @@ Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). Lunch HITL: [HITL-LUNCH
 | **OpenAI Codex** | [`chatgpt-skill/`](chatgpt-skill/) | `cp -r chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-free` (also works at `~/.codex/skills/` or project `.agents/skills/`) |
 | **ChatGPT Skills** | [`chatgpt-skill/`](chatgpt-skill/) | Zip that folder → Skills tab (Business / Enterprise / Edu). Invoke with `@`. |
 | **Anthropic Claude Code** | [`claude-skill/`](claude-skill/) | `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free` (`references/` is bundled) |
-| **Grok / Grok Build / Grok Bot** | [`grok-skill/`](grok-skill/) | `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free` or project `.grok/skills/` (`references/` is bundled) |
-| **Cursor** | [`chatgpt-skill/`](chatgpt-skill/) or root | Project `.cursor/skills/sortic-ip-sentinel-free/` and/or `.agents/skills/`. User `~/.cursor/skills/`. Cloud Agents need project skills or Sync Skills for `~/.cursor/skills/` only (not `~/.agents/skills/`). |
+| **Grok / Grok Build** | [`grok-skill/`](grok-skill/) | `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free` or project `.grok/skills/` |
+| **Grok Bot** | [`grok-skill/`](grok-skill/) zip | Save / Plugins → **enable per-Bot**. Not `cp` to `~/.grok/skills/` (that is Build). Do not Teach-to-install. |
+| **Cursor** | [`chatgpt-skill/`](chatgpt-skill/) or root | Cloud Agents: project `.cursor/skills/`. Sync Skills = `~/.cursor/skills/` only. Custom Modes = pin skill. |
 | **Any agentskills.io host** | repo root | Root `SKILL.md` + `references/` |
 
 Root `SKILL.md` is the canonical behaviour file (rich frontmatter). Platform folders tune **frontmatter and install only**. Hygiene behaviour is the same.

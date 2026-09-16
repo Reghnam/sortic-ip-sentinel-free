@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.20-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.21-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 

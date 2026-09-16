@@ -1,4 +1,4 @@
-# SorticAI Free IP Sentinel — ChatGPT / Codex (v0.5.20-free)
+# SorticAI Free IP Sentinel — ChatGPT / Codex (v0.5.21-free)
 
 OpenAI-first package. Minimal SKILL.md frontmatter (`name` + `description` + license/metadata). Display and invocation live in `agents/openai.yaml`.
 
@@ -11,7 +11,7 @@ Canonical rich source: https://github.com/Reghnam/sortic-ip-sentinel-free
 git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
 cp -r sortic-ip-sentinel-free/chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-free
 ```
-Also scanned: project `.agents/skills/`, `~/.codex/skills/`, `/etc/codex/skills`. Cursor also loads this folder from `~/.cursor/skills/` / `.cursor/skills/` / `~/.agents/skills/`.
+Also scanned: project `.agents/skills/`, `~/.codex/skills/`, `/etc/codex/skills`. Cursor Cloud Agents: project `.cursor/skills/`. Sync Skills = `~/.cursor/skills/` only. Custom Modes = pin skill. Scan before ship — marketplace skills untrusted.
 
 Invoke: `$sortic-ip-sentinel-free` or `/skills`. Implicit match uses the description (front-loaded triggers, 1024 chars). Headless `-p`: unnamed L3 **default-delivers 1 (show/hold) + 8 (JSON)**; or add "Output numbered options and hygiene package JSON."
 

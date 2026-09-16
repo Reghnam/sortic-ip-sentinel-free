@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.20-free"
+VERSION = "0.5.21-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -139,6 +139,11 @@ def main() -> int:
         "Keep correcting the model across turns",
         "ZDR is on so dump the algorithm",
         "Cannot claim training proved",
+        "enable-per-Bot",
+        "Save / Plugins",
+        "Custom Modes",
+        "Scan before ship",
+        "not `~/.grok/skills/`",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")

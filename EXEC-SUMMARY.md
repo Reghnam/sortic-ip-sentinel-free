@@ -1,4 +1,4 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.20-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.21-free
 
 **Date:** 16 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
@@ -6,7 +6,7 @@
 
 ## Why this patch (one paragraph)
 
-Origin **v0.5.19-free** already shipped Cursor Cloud paths, Grok `allowed-tools` hygiene, and read-only RAG. This patch folds Friedberg × Satya research: **de-ID / no company name ≠ method safe**; **corrections / tool traces are intelligence exhaust** (Satya Reverse Information Paradox); **ZDR is contractual best-efforts, not a vault**. Lunch F1–F3 on every stack. **Cannot claim training proved.** Still free-only. No secrets. No second Reg-Radar. Description **1024 chars**.
+Origin **v0.5.20-free** already shipped Friedberg × Satya L3 callouts and F1–F3. This patch folds upgraded SKILL-surface research (handoff file was not in this workspace): **Grok Bot install = Save / Plugins enable-per-Bot** (not `cp ~/.grok/skills/` — that is Grok Build); **Cursor Cloud Agents = project `.cursor/skills/`**; Sync Skills copies `~/.cursor/skills/` only; Custom Modes = pin skill; **scan before ship** (third-party marketplace skills are untrusted). Friedberg/Satya evals 90–92 and F1–F3 kept. Still free-only. No secrets. No second Reg-Radar. Description **1024 chars**.
 
 ## What changed (shareable)
 
@@ -14,8 +14,8 @@ Origin **v0.5.19-free** already shipped Cursor Cloud paths, Grok `allowed-tools`
 |------|--------|
 | **OpenAI (first)** | Same 1024-char description. `default_prompt` names public-corpus RAG read-only + offline fallback. Cursor/Codex paths restated. Evals 86–88. |
 | **Anthropic (second)** | Still `name` + `description` only. Body under 500. 88 evals. Dist-path extra keys still error on claude.ai/API. |
-| **Grok Build (third)** | Same grok-skill body as root. Bot computers still US-hosted. Viewer still must not be asked to run shell. |
-| **Cursor** | Project `.cursor/skills/sortic-ip-sentinel-free/` and/or `.agents/skills/`. Sync Skills = `~/.cursor/skills/` only, not `~/.agents/skills/`. |
+| **Grok Build (third)** | `cp` to `~/.grok/skills/` is **Build/CLI only**. Grok Bot = Save / Plugins enable-per-Bot. Teach is not the install path. |
+| **Cursor** | Cloud Agents: project `.cursor/skills/`. Sync Skills = `~/.cursor/skills/` only. Custom Modes = pin skill. **Scan before ship** — marketplace skills untrusted. |
 
 ## How to install (one copy)
 
@@ -23,8 +23,9 @@ Origin **v0.5.19-free** already shipped Cursor Cloud paths, Grok `allowed-tools`
 - ChatGPT Skills: zip `chatgpt-skill/` with `SKILL.md` at zip root
 - Claude Code: `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free`
 - Claude.ai: zip `claude-skill/` with `SKILL.md` at zip root
-- Grok / Grok Build / Bot: `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free`
-- Cursor: `cp -r chatgpt-skill ~/.cursor/skills/sortic-ip-sentinel-free` (or root `SKILL.md` + `references/`)
+- Grok / Grok Build: `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free`
+- Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`)
+- Cursor Cloud: project `.cursor/skills/sortic-ip-sentinel-free/`; pin on Custom Mode; Sync only `~/.cursor/skills/`
 
 ## Try in 30 seconds
 
