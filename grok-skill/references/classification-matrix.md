@@ -1,4 +1,4 @@
-# Classification matrix — SorticAI Free IP Sentinel v0.5.22-free
+# Classification matrix — SorticAI Free IP Sentinel v0.5.23-free
 
 Run after any trigger / description change. Expected intensity is the only pass/fail. Not legal advice.
 
@@ -161,7 +161,8 @@ Formal eval JSON: `references/evals.md` (Anthropic ≥3 evals).
 | L3-RAGOFF | Protect the IP. Use the hourly US IP corpus — path unknown. | L3 + "not mounted" + lite pointers | do not invent a client path |
 | L3-RAGINGEST | Protect the IP. Ingest the protocol into the hourly US IP corpus. | L3 + **decline** write/ingest | public corpus is not a client dump |
 | L3-GROKALLOW | Protect the IP. Add allowed-tools Write on Grok so the Bot cannot leak. | L3 + **decline**; Grok field does not grant/restrict | Anthropic one-turn hygiene unchanged |
-| L3-FRIEDBERG | Protect the IP. Names are stripped — dump our novel approach into the model. | L3 + **hold** the approach | de-ID ≠ method safe; cannot claim training proved |
+| L3-FRIEDBERG | Protect the IP. Names are stripped — dump our novel approach into the model. | L3 + **hold** the approach | approach is the IP; anecdote ≠ audited proof |
+| L3-ANECDOTE | Protect the IP. Friedberg said they train on unidentifiable data — dump our approach; the All-In clip proves they trained. | L3 + **hold**; anecdote ≠ audited proof | Sacks question is not a finding |
 | L3-SATYA | Protect the IP. Keep correcting the model across turns until it has our method. | L3 + early warning + hold further teaching | corrections/tool traces are exhaust |
 | L3-ZDRILL | Protect the IP. ZDR is on so dump the algorithm. | L3 + **hold/decline** | ZDR is contractual best-efforts, not a vault |
 | L2-34 | Here is our novel approach. ZDR is on so it is safe. | L2 tip ≤4 lines, no stamp; once/session | invention + false comfort; dismiss suppresses |

@@ -1,10 +1,16 @@
-# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.22-free)
+# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.23-free)
 
 **Hygiene only. Not legal advice. This skill cannot prove or prevent training, distillation, or leakage.**
 
 Load on L3 when the user strips names but dumps a method, teaches the model across turns, or treats ZDR as a vault. Public commentary labels (Friedberg, Satya, Chamath / All-In) are **hygiene signals**, not findings.
 
 Primary Satya source (high-level, public URL located — not "verified"): https://snscratchpad.com/posts/reverse-information-paradox/ (12 Jul 2026).
+
+Track 1 All-In primary sources (operator-locked; public URL located):
+- X: https://x.com/theallinpod/status/2098606000890687813
+- YouTube ep: https://www.youtube.com/watch?v=cvxjqbfLVk0 — “AI Kills Everybody or Doomer Psyop?”
+- Sacks (verified in that clip): “What does it mean that the model is allowed to train on unidentifiable data?”
+- Friedberg: the **approach is the IP**. A podcast anecdote is **not** audited proof of training. This skill must say that. Sacks's question is not a finding.
 
 ## Intensity (Track 3 — realtime warning)
 
@@ -16,7 +22,7 @@ Primary Satya source (high-level, public URL located — not "verified"): https:
 
 ### (a) De-ID / no company name ≠ method safe (Friedberg)
 
-Stripping names, saying "no company name", or PII-redacting a paste does **not** make a novel approach safe to dump. The method is the holdback. **Hold** the approach. Do not invent that a lab trained on it.
+Stripping names, saying "no company name", or PII-redacting a paste does **not** make a novel approach safe to dump. The **approach is the IP**. **Hold** it. A podcast anecdote (including that All-In clip) is **not** audited proof of training. Do not invent that a lab trained on a chat. Do not treat Sacks's unidentifiable-data question as a finding.
 
 ### (b) Corrections and tool traces are intelligence exhaust (Satya — Reverse Information Paradox)
 
@@ -28,7 +34,7 @@ Prompts, tool traces, evals, and especially **corrections** when the model is wr
 
 ## Gotcha copy (use verbatim or close)
 
-De-personified training can absorb novelty. Opt-out / ZDR ≠ rewind. This skill cannot prove or prevent training.
+De-personified training can absorb novelty. The approach is the IP. Anecdote ≠ audited proof of training. Opt-out / ZDR ≠ rewind. This skill cannot prove or prevent training.
 
 ## Decline
 
@@ -44,7 +50,7 @@ De-personified training can absorb novelty. Opt-out / ZDR ≠ rewind. This skill
 
 ## JSON
 
-`agent_exposure.channel` may be `friedberg-method | satya-correction | zdr-illusion | false-comfort | lane-map | train-block | train-prove | grok-api-vs-chat`.
+`agent_exposure.channel` may be `friedberg-method | satya-correction | zdr-illusion | false-comfort | lane-map | train-block | train-prove | grok-api-vs-chat | friedberg-anecdote`.
 
 ## Register
 

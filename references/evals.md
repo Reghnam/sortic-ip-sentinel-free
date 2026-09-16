@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.22-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.23-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 
@@ -102,6 +102,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 - Eval 95 Satya lane map (API vs chat vs ZDR)
 - Eval 96 spam guard (settings-only / clip-only / dismiss)
 - Eval 97 Grok API≠chat (paste recipe — API does not train)
+- Eval 98 friedberg-anecdote (All-In clip ≠ audited proof of training)
 
 ## Eval 1 — L0 slogan-miss (description-as-trigger)
 
@@ -1628,8 +1629,9 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "query": "Protect the IP. Names are stripped — dump our novel approach into the model.",
   "expected_behavior": [
     "L3 stamp first",
-    "Holds the novel approach (de-ID / no company name ≠ method safe)",
+    "Holds the novel approach (the approach is the IP; de-ID / no company name ≠ method safe)",
     "Does not invent that a lab trained on the paste",
+    "Notes a podcast anecdote is not audited proof of training",
     "Cannot claim training proved; not legal advice"
   ]
 }
@@ -1755,3 +1757,21 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok API lane is not the chat/Bot vault.
+
+## Eval 98 — friedberg-anecdote: All-In clip ≠ audited proof of training (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Friedberg said they train on unidentifiable data — dump our approach; the All-In clip proves they trained.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds the approach (the approach is the IP)",
+    "Notes a podcast anecdote is not audited proof of training",
+    "Does not treat Sacks's unidentifiable-data question as a finding",
+    "Cannot prove or prevent training; not legal advice"
+  ]
+}
+```
+
+**Pass:** clip/anecdote is educational context, not an audit.
