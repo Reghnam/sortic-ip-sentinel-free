@@ -1,4 +1,4 @@
-# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.26-free)
+# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.27-free)
 
 **Hygiene only. Not legal advice. This skill cannot prove or prevent training, distillation, or leakage.**
 
@@ -55,6 +55,16 @@ Satya **Summit** (frame 2) is privacy / weights I control / “My IP shouldn't l
 
 De-personified training can absorb novelty (**Friedberg hosts clip**). The approach is the IP. Anecdote ≠ audited proof of training. Satya Summit ≠ that de-ID claim. Satya blog = exhaust/corrections; buyer pays twice. Opt-out / ZDR ≠ rewind. This skill cannot prove or prevent training.
 
+## Screenshot-first / Extra High (this turn)
+
+A screenshot of client correspondence into consumer Extra High is a **next-paste**. Invention/legal screenshots are still CSAM-scanned. Extra High / model pick stays **L0**; the paste is L2/L3. Extra High is not a vault. Skip extremely sensitive lines. Drafts ≠ send.
+
+SDK / Agents `skills="all"` loads every discovered skill including untrusted marketplace ones — a **hop**. Prefer an exact name list. Scan before ship.
+
+Mailed HITL pack **v0.5.25** is stale. Testers use this branch. Marketplace publish still Hold. Public AI-native webinar / Galaxy recording **attendance** is L0. Do not name firms or networks.
+
+AI crawler Search / Training / Agent toggles stay **L0**. **Disallow AI Training is not a vault** — search index is still public; a public page is still a disclosure. Standalone skills = ChatGPT desktop + Codex CLI/IDE; **Chat/Work web+mobile need a plugin** (Hold; do not invent `plugin.json` overnight).
+
 ## Decline
 
 "Block training" and "prove they trained on us" are unsupported. Decline. Do not invent a training event or a block.
@@ -62,14 +72,14 @@ De-personified training can absorb novelty (**Friedberg hosts clip**). The appro
 ## When not to fire
 
 - Public clip / industry commentary **without** sharing your work stays **L0** (hosts clip and Summit clip both).
-- Settings-only ZDR / Business / opt-out toggles stay **L0**.
+- Settings-only ZDR / Business / opt-out / AI-crawler Search-Training-Agent toggles stay **L0**.
 - After dismiss, do not replay the L2 false-comfort tip (spam guard).
 - Corpus ticks stay L0.
 - Do not name clients, products, infra, or valuations.
 
 ## JSON
 
-`agent_exposure.channel` may be `friedberg-method | satya-correction | zdr-illusion | false-comfort | lane-map | train-block | train-prove | grok-api-vs-chat | friedberg-anecdote | satya-summit | satya-blog | frame-conflate`.
+`agent_exposure.channel` may be `friedberg-method | satya-correction | zdr-illusion | false-comfort | lane-map | train-block | train-prove | grok-api-vs-chat | friedberg-anecdote | satya-summit | satya-blog | frame-conflate | screenshot-first | extra-high-not-vault | skills-all-hop | hitl-zip-stale | webinar-attend | crawler-disallow | chat-work-plugin`.
 
 ## Register
 
@@ -121,7 +131,17 @@ Dropping an IP-sensitive research memo into a **consumer** chat with “improve 
 
 Using AI on own drawings / files / code in daily office work **without** protect language is **L2** (once/session tip, no stamp). With protect language it is L3. Do not name the office, the firm, or the network.
 
-### Decline (same as before, restated)
+### Screenshot-first / Extra High (this turn)
+
+A screenshot of client correspondence into consumer Extra High is a **next-paste**. Invention/legal screenshots are still CSAM-scanned. Extra High / model pick stays **L0**; the paste is L2/L3. Extra High is not a vault. Skip extremely sensitive lines. Drafts ≠ send.
+
+SDK / Agents `skills="all"` loads every discovered skill including untrusted marketplace ones — a **hop**. Prefer an exact name list. Scan before ship.
+
+Mailed HITL pack **v0.5.25** is stale. Testers use this branch. Marketplace publish still Hold. Public AI-native webinar / Galaxy recording **attendance** is L0. Do not name firms or networks.
+
+AI crawler Search / Training / Agent toggles stay **L0**. **Disallow AI Training is not a vault** — search index is still public; a public page is still a disclosure. Standalone skills = ChatGPT desktop + Codex CLI/IDE; **Chat/Work web+mobile need a plugin** (Hold; do not invent `plugin.json` overnight).
+
+## Decline (same as before, restated)
 
 “Block training”, “prove they trained on us”, “watch every tool”, and “the consumer terms are our NDA so dump it” are unsupported. Decline or hold. Do not invent a training event.
 
