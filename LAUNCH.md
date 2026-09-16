@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.21-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.22-free
 
-**Status**: Public on GitHub. v0.5.21-free patched 2026-09-16 (Grok Bot = Save / Plugins enable-per-Bot, not `~/.grok/skills/`; Cursor Cloud = project `.cursor/skills/` + Custom Modes pin; Sync = `~/.cursor/skills/` only; scan before ship; Friedberg × Satya F1–F3 kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.22-free patched 2026-09-16 (Track 3 realtime warning: L2 false-comfort tip, L3 hold-recipe + lane map, L0 settings/clip/chatter; decline block/prove training; evals 93–97; origin 0.5.21 install cards + F1–F3 kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -73,7 +73,7 @@ Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behav
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 92: friedberg-method, satya-correction, zdr-illusion; cannot claim training proved)
+- [ ] Evals in `references/evals.md` still pass (now 97: 90–92 Friedberg × Satya kept; 93–97 false-comfort L3/L2, lane map, spam guard, Grok API≠chat)
 - [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity / voice provision / yolo-send → decline
 - [ ] Backup ≠ publish; truncated/junk/placeholder files are not originals; image-only ≠ numbered facts
 - [ ] Bot share / marketplace clone is a demo channel; callable hops hold internals
@@ -85,7 +85,7 @@ Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behav
 - [ ] disallowed-tools / skill-scan / US-host are not vaults; sign-out is not a wipe; invention screenshots still CSAM-scanned
 - [ ] Public-corpus RAG is read-only; unknown path → offline fallback; ingest of client work is declined; ticks stay L0
 - [ ] Cursor Cloud Agents use project `.cursor/skills/` / `.agents/skills/` or Sync of `~/.cursor/skills/` only (not `~/.agents/skills/`)
-- [ ] Lunch HITL eight prompts plus F1–F3 (Friedberg × Satya) in HITL-LUNCH.md pass on each claimed stack
+- [ ] Lunch HITL eight prompts plus F1–F3 and T1–T5 (Track 3 realtime warning) in HITL-LUNCH.md pass on each claimed stack
 - [ ] Grok Bot install is Save / Plugins enable-per-Bot — not `cp ~/.grok/skills/` (Build)
 - [ ] Scan before ship: third-party marketplace skills untrusted; inspect-before-attach
 

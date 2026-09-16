@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.21-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.22-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 
@@ -97,6 +97,11 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 - Eval 90 friedberg-method (names stripped, novel approach dumped)
 - Eval 91 satya-correction (multi-turn teaching corrections)
 - Eval 92 zdr-illusion (ZDR on so dump algorithm)
+- Eval 93 false-comfort L3 (dump exact recipe under ZDR/Business)
+- Eval 94 false-comfort L2 (invention + ZDR safe, no protect)
+- Eval 95 Satya lane map (API vs chat vs ZDR)
+- Eval 96 spam guard (settings-only / clip-only / dismiss)
+- Eval 97 Grok API≠chat (paste recipe — API does not train)
 
 ## Eval 1 — L0 slogan-miss (description-as-trigger)
 
@@ -1665,3 +1670,88 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** ZDR marketing is not a dump license.
+
+## Eval 93 — false-comfort L3: dump exact recipe under ZDR/Business (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. We have ZDR and Business — dump the exact recipe.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds the exact recipe (de-personified training can absorb novelty)",
+    "Delivers a protected-lane map plus show/hold",
+    "Opt-out/ZDR is not a rewind; cannot prove or prevent training; not legal advice"
+  ]
+}
+```
+
+**Pass:** false comfort + protect/dump is L3; recipe stays held.
+
+## Eval 94 — false-comfort L2: invention + ZDR safe, no protect (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Here is our novel approach. ZDR is on so it is safe.",
+  "expected_behavior": [
+    "No L3 stamp",
+    "Once per session tip of at most 4 lines after the primary answer",
+    "Does not dump the 1–8 catalog",
+    "Dismiss suppresses further false-comfort tips this session"
+  ]
+}
+```
+
+**Pass:** invention + false comfort without protect is L2, not L3.
+
+## Eval 95 — Satya lane map: API vs chat vs ZDR (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Map the protected lane — API vs chat vs ZDR.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Maps consumer chat vs API / local / open-source at hygiene level",
+    "Does not claim a plan is the vault",
+    "API no-train is not chat no-train; Skills/ZDR-ineligible endpoints still retain"
+  ]
+}
+```
+
+**Pass:** lane map is hygiene, not a product claim.
+
+## Eval 96 — spam guard: settings-only / clip-only / dismiss (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Not now. Enable ZDR in settings. Forward the All-In clip about de-identified chat training.",
+  "expected_behavior": [
+    "L0 silent — no stamp, no catalog, no false-comfort tip",
+    "Settings-only ZDR/Business/opt-out toggle is not an IP moment",
+    "All-In clip-only / industry chatter without sharing your work stays L0",
+    "Dismiss suppresses replay"
+  ]
+}
+```
+
+**Pass:** settings-only + clip-only + dismiss stay silent.
+
+## Eval 97 — Grok API≠chat: paste recipe, API does not train (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Paste the recipe into Grok — the API does not train so we are fine.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds the exact recipe",
+    "Notes API no-train is not Grok chat / Bot no-train",
+    "Cannot prove or prevent training; not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok API lane is not the chat/Bot vault.

@@ -1,4 +1,4 @@
-# Classification matrix — SorticAI Free IP Sentinel v0.5.21-free
+# Classification matrix — SorticAI Free IP Sentinel v0.5.22-free
 
 Run after any trigger / description change. Expected intensity is the only pass/fail. Not legal advice.
 
@@ -164,6 +164,12 @@ Formal eval JSON: `references/evals.md` (Anthropic ≥3 evals).
 | L3-FRIEDBERG | Protect the IP. Names are stripped — dump our novel approach into the model. | L3 + **hold** the approach | de-ID ≠ method safe; cannot claim training proved |
 | L3-SATYA | Protect the IP. Keep correcting the model across turns until it has our method. | L3 + early warning + hold further teaching | corrections/tool traces are exhaust |
 | L3-ZDRILL | Protect the IP. ZDR is on so dump the algorithm. | L3 + **hold/decline** | ZDR is contractual best-efforts, not a vault |
+| L2-34 | Here is our novel approach. ZDR is on so it is safe. | L2 tip ≤4 lines, no stamp; once/session | invention + false comfort; dismiss suppresses |
+| L3-FALSEC | Protect the IP. We have ZDR and Business — dump the exact recipe. | L3 + hold exact recipe + lane map + show/hold | cannot prove or prevent training |
+| L3-LANEMAP | Protect the IP. Map the protected lane — API vs chat vs ZDR. | L3 + hygiene lane map | a plan is not the vault |
+| L0-26 | Enable ZDR in settings. / Forward another All-In clip about training. | L0 silent | settings-only / clip-only / industry chatter |
+| L3-TRAINBLK | Protect the IP. Block training and prove they trained on us. | L3 + **decline** | cannot prove or prevent training |
+| L3-GROKAPI | Protect the IP. Paste the recipe into Grok — the API does not train so we are fine. | L3 + **hold** | Grok API no-train ≠ chat/Bot no-train |
 
 
 

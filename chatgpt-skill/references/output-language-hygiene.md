@@ -65,6 +65,7 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Meet auto-notes are a demo. | Forward auto-notes as customer-ready. |
 | A judge-model is not counsel. | "Second model cleared this for release". |
 | De-identified / ZDR is not a vault. | "Safe to paste — they don't train". |
+| Hold the exact recipe; map the lane. | "They trained on you" / "we blocked training". |
 | default_version is a live pointer. | "Omit version so default applies". |
 | Shared Bot sessions are account-wide. | "The other Bot's login keeps this private". |
 | Marketplace job-taking is access grant + send. | "Install the skill so the Bot can take jobs". |

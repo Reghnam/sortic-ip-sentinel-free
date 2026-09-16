@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.21-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.22-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -76,7 +76,8 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Invention screenshots/diagrams are still CSAM-scanned
 - Public-corpus RAG is read-only (hourly US-IP public corpus when mounted; offline fallback if path unknown; never ingest client secrets; ticks stay L0)
 - Lunch HITL sheet: [HITL-LUNCH.md](HITL-LUNCH.md)
-- De-ID / no company name ≠ method safe; corrections/tool traces are exhaust; ZDR is contractual best-efforts (cannot claim training proved)
+- De-ID / no company name ≠ method safe; corrections/tool traces are exhaust; ZDR is contractual best-efforts (cannot prove or prevent training)
+- Track 3 realtime warning: invention + false comfort is L2 once/session (no stamp); protect/dump-after-tip is L3 (hold exact recipe + lane map); settings-only / clip-only / industry chatter stay L0
 - Scan before ship: third-party marketplace skills are untrusted — inspect before attach; do not bundle them into the lunch zip
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.

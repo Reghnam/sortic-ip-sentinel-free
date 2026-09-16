@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.21-free"
+VERSION = "0.5.22-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -99,11 +99,11 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 93):
+    for n in range(1, 98):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 92:
-        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 92)")
+    if evals.count("## Eval ") < 97:
+        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 97)")
 
     for rel in (
         "HITL-LUNCH.md",
@@ -144,6 +144,14 @@ def main() -> int:
         "Custom Modes",
         "Scan before ship",
         "not `~/.grok/skills/`",
+        "We have ZDR and Business — dump the exact recipe.",
+        "Here is our novel approach. ZDR is on so it is safe.",
+        "Map the protected lane",
+        "Enable ZDR in settings",
+        "Block training",
+        "prove they trained",
+        "Paste the recipe into Grok",
+        "Cannot prove or prevent training",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")
@@ -159,7 +167,7 @@ def main() -> int:
         return 1
     print(
         f"hygiene check OK: {VERSION}; description {len(root_desc)} chars; "
-        f"body {body_lines} lines; {len(refs)} references; 92 evals"
+        f"body {body_lines} lines; {len(refs)} references; 97 evals"
     )
     return 0
 
