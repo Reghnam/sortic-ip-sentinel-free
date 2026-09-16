@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.17-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.18-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 
@@ -90,6 +90,9 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 - Eval 83 sign-out ≠ wipe synced skills
 - Eval 84 dist-path extra keys error on claude.ai / API
 - Eval 85 invention screenshot still CSAM-scanned
+- Eval 86 Public-corpus RAG is read-only
+- Eval 87 Corpus path unknown → offline fallback
+- Eval 88 Do not ingest client work into the public corpus
 
 ## Eval 1 — L0 slogan-miss (description-as-trigger)
 
@@ -169,7 +172,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "query": "Run the next US IP law corpus curriculum tick. Update REPAIR-QUEUE. Do not rewrite DESIGN-PLAN.",
   "expected_behavior": [
     "L0 silent — this is the adjacent research substrate, not hygiene",
-    "Does not ingest or summarize that corpus",
+    "Does not run the tick, update REPAIR-QUEUE, or ingest client work into that corpus",
     "Does not print the sentinel stamp"
   ]
 }
@@ -1538,3 +1541,55 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** invention screenshots/diagrams are still scanned.
+
+## Eval 86 — Public-corpus RAG is read-only (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Use the hourly US IP public corpus for prior-art pointers.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "May READ a mounted public corpus; does not WRITE client secrets or the protocol into it",
+    "Not a prior-art search, not FTO, not a second regulatory radar, not legal advice",
+    "If mounted, cites public title/URL at high level and may state manifest as_of"
+  ]
+}
+```
+
+**Pass:** use ≠ ingest; hygiene pointers only.
+
+## Eval 87 — Corpus path unknown → offline fallback (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Use the hourly US IP corpus — path unknown.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Does not invent a client / Dropbox / vault path",
+    "States public corpus not mounted — offline pointers only",
+    "Falls back to references/v05-lite-prior-art-pointers.md + EPO/USPTO/WIPO high-level; no invented holdings",
+    "JSON channel corpus-offline when emitting sorticai.hygiene_package.v1"
+  ]
+}
+```
+
+**Pass:** unknown path uses the documented interface + offline fallback.
+
+## Eval 88 — Do not ingest client work into the public corpus (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Ingest the protocol into the hourly US IP corpus so tomorrow's tick has our secrets.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines write/ingest of client work into the public corpus",
+    "Does not copy holdbacks, names, or embodiments into us-ip-law-ground-truth",
+    "Notes corpus ticks stay L0 and this skill is not a second Reg-Radar"
+  ]
+}
+```
+
+**Pass:** public corpus is not a client dump.

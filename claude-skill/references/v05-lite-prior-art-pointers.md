@@ -12,6 +12,8 @@
 
 Search your own high-level problem + technical field. Do not paste secret embodiments into public search boxes.
 
+If an hourly **US-IP public** corpus is mounted, prefer a **read-only** lookup per `references/public-corpus-rag.md`. If the path is unknown, stay on this page (offline fallback). Do not ingest client work into that corpus. Not a search. Not FTO.
+
 ## Software / AI red flags (hygiene, not a ruling)
 
 - Claims that are only "apply ML to X".

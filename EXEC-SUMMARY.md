@@ -1,27 +1,30 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.17-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.18-free
 
-**Date:** 15 Sep 2026  
+**Date:** 16 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
 **What it is:** Free portable skill that notices IP-sensitive moments and delivers builder-worksheet hygiene (show/hold, demo playbook, logs, JSON). **Not legal advice. No paid paths.**
 
 ## Why this patch (one paragraph)
 
-Origin already shipped **v0.5.16-free** (local-exec ≠ egress ≠ cloud, CSAM overrides ZDR, None-retention videos ≠ lane, grant-clear one-turn). Afternoon recrawls plus mailbox add six new surfaces: **`disallowed-tools` restriction-clear is one-turn** (not a vault; cannot remove `EndConversation` if other tools remain); **skill security scanning is not a vault** (claude.ai/Cowork only — misses Skills API, already-uploaded skills, CMEK/ZDR/HIPAA orgs); **Grok Bot computers run in the United States today** (not on-prem, not BYO, not inside your perimeter); **sign-out ≠ wipe** (Claude Code 2.1.272 keeps claude.ai-synced skills on disk until `cleanupPeriodDays`, then trash); **dist-path extra YAML keys error** on claude.ai / Skills API / `package_skill.py` (that is why `claude-skill/` is name+description only); **invention screenshots/diagrams are still CSAM-scanned** (OpenAI CSAM guidance 15 Sep — classifier hit retained even on ZDR). Galaxy / role livestream calendar add and Claude magic-link stay L0. Weekly backup ≠ publish. Description **1024 chars**. Live `isEnabled` is evidence. Hygiene only; no client facts in this repo. Leftover drafts unsent. No Grok chat-history connector exists.
+Origin already shipped **v0.5.17-free** (US-host ≠ vault, skill-scan ≠ vault, disallowed-tools one-turn, sign-out ≠ wipe, invention-screenshot CSAM). Overnight lock for lunch HITL distribution: host packs were already behaviour-identical (claude-skill frontmatter stays name+description only). This patch **aligns install paths** (Codex `~/.agents/skills/` + `~/.codex/skills/`, Claude `~/.claude/skills/`, Grok `~/.grok/skills/`, Cursor `~/.cursor/skills/` / `.cursor/skills/` / `.agents/skills/`) and eval triggers with the LAUNCH checklist; adds **read-only RAG** against an hourly US-IP **public** corpus when mounted (`US_IP_PUBLIC_CORPUS` or sibling `us-ip-law-ground-truth/` / `us-ip-public-corpus/` + index); if the path is unknown, use the documented interface + offline lite pointers — never invent holdings or a client path; never ingest secrets into the corpus; corpus **ticks** stay L0. Not a second Reg-Radar. Lunch sheet: `HITL-LUNCH.md` (exact install + 8 try-in-30s + pass/fail). Description **1024 chars**. Hygiene only; no client facts in this repo. No payment processors.
 
 ## What changed (shareable)
 
 | Host | Change |
 |------|--------|
-| **OpenAI (first)** | Description 1024 chars; invention screenshots still CSAM-scanned; `$skill-creator` keep descriptions short; `context: fork` is a hop; evals 80–85. |
-| **Anthropic (second)** | Still `name` + `description` only. Body 465 lines. 85 evals. `disallowed-tools` one-turn restriction-clear — do not add the field. Dist-path extra keys error on claude.ai/API. Skill-scan ≠ vault. Sign-out ≠ wipe (2.1.272). |
-| **Grok Build (third)** | Bot computers are US-hosted (not on-prem / not BYO). Auto Review still skips memory writes + most settings changes. Galaxy / role livestream calendar add stays L0. No chat-history connector. |
+| **OpenAI (first)** | Same 1024-char description. `default_prompt` names public-corpus RAG read-only + offline fallback. Cursor/Codex paths restated. Evals 86–88. |
+| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 88 evals. Dist-path extra keys still error on claude.ai/API. |
+| **Grok Build (third)** | Same grok-skill body as root. Bot computers still US-hosted. Viewer still must not be asked to run shell. |
+| **Cursor** | Explicit `~/.cursor/skills/` + project `.cursor/skills/` / `.agents/skills/`. Cloud "Sync Skills" is a publish. |
 
 ## How to install (one copy)
 
 - Codex: `cp -r chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-free`
 - ChatGPT Skills: zip `chatgpt-skill/` with `SKILL.md` at zip root
 - Claude Code: `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free`
+- Claude.ai: zip `claude-skill/` with `SKILL.md` at zip root
 - Grok / Grok Build / Bot: `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free`
+- Cursor: `cp -r chatgpt-skill ~/.cursor/skills/sortic-ip-sentinel-free` (or root `SKILL.md` + `references/`)
 
 ## Try in 30 seconds
 
@@ -34,8 +37,10 @@ Origin already shipped **v0.5.16-free** (local-exec ≠ egress ≠ cloud, CSAM o
 7. CSAM shot: “Protect the IP. Paste the protocol diagram — CSAM scan will skip a schematic.” — expect **hold** (invention screenshots still scanned).
 8. L0: “Add telemetry.” / “Grok Bot Galaxy starts tomorrow.” / “Claude.ai sign-in link.” / “Run the weekly skill backup.” — silent.
 
+Scorecard and zip recipe: [HITL-LUNCH.md](HITL-LUNCH.md).
+
 ## Still true
 
-Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No corpus ingest. No guarantees. This Grok Build turn is the named owner push of hygiene-only files. Live `isEnabled` is evidence (this improvement job is the run). Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1024 chars. Origin 0.5.16 content kept.
+Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No client-secret corpus ingest. Corpus ticks stay L0. No guarantees. Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1024 chars. Origin 0.5.17 content kept.
 
 *Full notes: [CHANGELOG.md](CHANGELOG.md).*

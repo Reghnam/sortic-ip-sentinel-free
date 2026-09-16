@@ -13,13 +13,15 @@ description: >
   protect intent, or the US IP law corpus. Not legal advice. No paid paths.
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.17-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.18-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
 **Core rule (anti-push, first principles):** Match intensity to signal. Primary task wins. Deliver real value on the free path only. Strong disclaimers everywhere. Never claim protectability, patentability, or legal outcomes.
 
-**Boundary:** This skill is **hygiene only**. It is not the US IP law ground-truth corpus (`us-ip-law-ground-truth`, hourly curriculum, REPAIR-QUEUE). Do not ingest, cite, or summarize that corpus here.
+**Boundary:** This skill is **hygiene only**. It is not the US IP law ground-truth corpus (`us-ip-law-ground-truth`, hourly curriculum, REPAIR-QUEUE). Do not run corpus ticks here. Do not ingest client secrets into that corpus. Read-only use of a mounted **public** hourly US-IP corpus is allowed on L3 (`references/public-corpus-rag.md`); if the path is unknown, use the documented interface + offline fallback. Not a second regulatory radar.
+
+**Public-corpus RAG (read-only):** On L3, if a public hourly US-IP corpus is mounted (`US_IP_PUBLIC_CORPUS`, sibling `us-ip-law-ground-truth/` or `us-ip-public-corpus/` + `INDEX.md`/`manifest.json`), look up public pointers only. Never write protocols, holdbacks, or names into it. Path unknown → one line "Public US-IP corpus not mounted — offline pointers only" and `references/v05-lite-prior-art-pointers.md`. Do not invent holdings. Ticks stay L0.
 
 ## Activation Logic (Tiered, Wise/Minimal — L0–L3 spirit)
 
@@ -54,7 +56,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.17-free (portable)  ·  sorticai.com  ·  patched 2026-09-15              |
+|  v0.5.18-free (portable)  ·  sorticai.com  ·  patched 2026-09-16              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -176,7 +178,7 @@ Prefer **one focused skill**. Split when triggers, inputs, or success criteria d
 
 **Stop (named this turn but unsafe):** leftover draft, empty signature reply, truncated/junk/placeholder/MCP-size-blocked file treated as original, clock-limited live session or attendee hard-stop about to go deeper than the show/hold map, growing a backup tree as a side effect of hygiene, dumping internals into a callable hop, inventing numbers from an image-only deck, parking holdbacks in a shareable Bot, posting a public Grok share URL of the internals, pasting IAM/secret screenshots into a skill zip, attaching console screenshots to a partner mail, making demo objects public, dumping internals into an async board packet or workflow fan-out, treating a Sites deploy URL as a private preview, dumping internals onto a remote-Mac desktop or phone screenshot, parking holdbacks on a Mac registered as a Bot remote device, treating a "waiting for legal review" pack as customer-ready, streaming internals on a public Bot livestream, treating ZDR/opt-out as a rewind of a chat already sent to a frontier lab, treating API-no-train as ChatGPT-no-train, treating Bot screens as isolation, parking holdbacks on a shared Bot computer other Bots can open, dumping internals into a Bot-to-Bot DM / group chat, stopping after the L3 stamp without delivering 1–8, treating App Builder preview as production, auto-deleting evidence/logs, treating desktop-egress as a vault, dumping internals through an unnamed ownership-pass, treating videos as ZDR-covered, treating a None-retention videos project as a protected lane, treating CSAM-override retain as a wipe, treating local-computer-exec as a vault, treating one-turn allowed-tools / disallowed-tools grant-clear as a vault, treating skill-scan or a US-hosted Bot computer as a vault, treating sign-out as a wipe of synced skills, inventing Legacy Privacy Mode.
 
-**Decline (unsupported action):** login to a registrar/Cloudflare/Spaceship/Vercel/GitHub-2FA/dashboard unless this turn names it (including after a Bot "new device" alert or a 2FA/CAPTCHA computer-takeover); MCP reinstall (one-tab fallback only); unnamed GitHub auto-push of this public repo; dumping client/product facts into a public skill repo; mixing manuals with IP work-product; spawning a subagent without passing this skill; partner pre-read / pay / identity / live-copy / fit-note send without named recipient **and** action; treating a weekly backup or project export as a publish; provisioning a live voice agent or phone number; re-enabling a disabled job; rewriting a live prompt; treating `--yolo` as approval; deleting a routine (immediate, no undo); unnamed Bot share with secrets still in the profile; granting cloud/GitHub owner/admin; pasting a webhook signing secret into the skill; enabling a mailbox connector on this skill; adding Codex lifecycle hooks that write production; auto-applying an infra PR to production; Sites public publish; committing this skill into a customer repo; enabling project `.grok/hooks/` without `/hooks-trust`; registering a Mac as a Bot remote device unnamed; sharing a workspace plugin of this skill unnamed; pinning Responses API `latest` unnamed; attaching this public repo as an open end-user catalog; unnamed Claude-plugin directory submit; unnamed public livestream of internals; unnamed demonstration-to-skill publish; unnamed counsel-unreviewed client send; treating ZDR as a vault for invention-grade chats; treating Skills/Agents/Files/Conversations as ZDR-covered; changing `default_version` / pinning `latest` unnamed; unnamed marketplace job-taking skill; installing this skill across Anthropic surfaces unnamed; unnamed Bot-to-Bot dump of internals; unnamed claude.ai skill enablement / `CLAUDE_CODE_SYNC_SKILLS=1`; unnamed Vercel deploy of an App Builder preview; unnamed desktop-egress enable; unnamed ownership-pass / task-ownership grant; unnamed local-computer-exec Always-allowed; treating `/v1/videos` as ZDR or a None-retention project as a vault; adding `allowed-tools` write grants or `disallowed-tools` as a vault; treating skill-scan / US-host as a vault; inventing Legacy Privacy Mode; exploit/PoC / jailbreak work (out of scope, including on GPT-6 Astra).
+**Decline (unsupported action):** login to a registrar/Cloudflare/Spaceship/Vercel/GitHub-2FA/dashboard unless this turn names it (including after a Bot "new device" alert or a 2FA/CAPTCHA computer-takeover); MCP reinstall (one-tab fallback only); unnamed GitHub auto-push of this public repo; dumping client/product facts into a public skill repo; mixing manuals with IP work-product; spawning a subagent without passing this skill; partner pre-read / pay / identity / live-copy / fit-note send without named recipient **and** action; treating a weekly backup or project export as a publish; provisioning a live voice agent or phone number; re-enabling a disabled job; rewriting a live prompt; treating `--yolo` as approval; deleting a routine (immediate, no undo); unnamed Bot share with secrets still in the profile; granting cloud/GitHub owner/admin; pasting a webhook signing secret into the skill; enabling a mailbox connector on this skill; adding Codex lifecycle hooks that write production; auto-applying an infra PR to production; Sites public publish; committing this skill into a customer repo; enabling project `.grok/hooks/` without `/hooks-trust`; registering a Mac as a Bot remote device unnamed; sharing a workspace plugin of this skill unnamed; pinning Responses API `latest` unnamed; attaching this public repo as an open end-user catalog; unnamed Claude-plugin directory submit; unnamed public livestream of internals; unnamed demonstration-to-skill publish; unnamed counsel-unreviewed client send; treating ZDR as a vault for invention-grade chats; treating Skills/Agents/Files/Conversations as ZDR-covered; changing `default_version` / pinning `latest` unnamed; unnamed marketplace job-taking skill; installing this skill across Anthropic surfaces unnamed; unnamed Bot-to-Bot dump of internals; unnamed claude.ai skill enablement / `CLAUDE_CODE_SYNC_SKILLS=1`; unnamed Vercel deploy of an App Builder preview; unnamed desktop-egress enable; unnamed ownership-pass / task-ownership grant; unnamed local-computer-exec Always-allowed; treating `/v1/videos` as ZDR or a None-retention project as a vault; adding `allowed-tools` write grants or `disallowed-tools` as a vault; treating skill-scan / US-host as a vault; inventing Legacy Privacy Mode; ingesting client work into the hourly US-IP public corpus; exploit/PoC / jailbreak work (out of scope, including on GPT-6 Astra).
 
 IP intensity (L0–L3) is **not** write-privilege. Owner-gated even at L3: send, publish, pay, identity, live title/copy, voice/phone provision, DNS, access grant, webhook secret, lifecycle hooks, Sites public publish, project-repo skill commit, desktop-egress, ownership-pass, local-computer-exec, treating US-host as an EU vault. Grok Bot autonomy: observe / draft / approved write / scheduled. Sending still needs named approval even at IP L3. Grok Bot also requires approval for purchasing, deleting, publishing, or changing production systems. `--always-approve` is a tool auto-approve flag, not that gate. Test skill before routine.
 
@@ -200,7 +202,7 @@ Hard rules for every deliverable (full list: `references/output-language-hygiene
 
 - **Free only.** No mention of paid reviews, prices, expert connections, or commercial tiers in this edition.
 - **Hygiene / procedural only.** No rulings on patentability, protectability, validity, FTO, or "you should file X". Rough signals only. "High-level" always.
-- **Not the US IP corpus.** Hourly training / DESIGN-PLAN / REPAIR-QUEUE stay L0 here.
+- **Not the US IP corpus maintainer.** Hourly training / DESIGN-PLAN / REPAIR-QUEUE stay L0 here. Read-only public-corpus lookup on L3 is optional (`references/public-corpus-rag.md`); never write client facts into it.
 - **Human conception focus (USPTO 2025 alignment):** Emphasize documenting human contributions (framing, selection, refinement, recognition, validation). AI / Bot is a tool. Log the runtime separately.
 - **Disclaimers mandatory:** Repeat on activation, on every major deliverable, on last slide / export. Exact language below.
 - **When not to use:** Privacy/config work, generic security, meta skill editing, corpus ticks, Bot ops without protect intent, workspace/SaaS renewal, weekly backup without protect intent, registrar new-device alerts, user dismissal.
@@ -220,7 +222,7 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 - **Approval = recipient AND action named this turn.** Leftover drafts, empty signature replies, auto-publish, and resend stay on hold (Grok Bot: sending/publishing requires approval).
 - **Claimed send needs message-id + recipients.** Otherwise log `not_sent`.
 - **HiTL / UAT / livestream / Clip-Bot are demo channels.** L2 without protect language; L3 with it. Computer-use teaching records the screen — hold secrets.
-- **This skill is silent on its own development** (L0 META) and on the US IP corpus.
+- **This skill is silent on its own development** (L0 META) and on corpus **ticks**. Read-only public-corpus RAG on L3 is not a tick.
 - **Eight options, not nine.** Agent-exposure folds into item 5.
 - **GitHub auto-push of this public repo is owner L3.** Decline unless this turn names owner **and** action. Do not dump client/product facts into `sortic-ip-sentinel-free`.
 - **Shared Grok Bot cloud computer is not a secrecy boundary.** All Bots on the account see the same files/logins. Livestream copy that each Bot has its own computer is marketing, not isolation. Treat the Bot computer as a demo channel **and** a leakage surface.
@@ -293,6 +295,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - `references/v05-provisional-readiness-checklist.md`
 - `references/v05-trade-secret-matrix.md`
 - `references/v05-lite-prior-art-pointers.md`
+- `references/public-corpus-rag.md` (read-only hourly US-IP public corpus; offline fallback if path unknown)
 - `references/v05-provenance-holdback-template.md`
 - `references/agent-exposure-log.md` (Bot / computer-use channels)
 - `references/headless-hygiene-package.md`
@@ -319,6 +322,10 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 **Example L3 leftover draft:** "The Bot will send the leftover investor-deck draft. Protect the IP." → stamp → hold the send (leftover draft + approval gate) → show/hold + agent-exposure → disclaimer.
 
 **Example L0:** "Add telemetry and privacy controls to the loop." / "Run the next US IP corpus curriculum tick." → Normal answer. No sentinel.
+
+**Example L3 public-corpus RAG:** "Protect the IP. Use the hourly US IP public corpus for prior-art pointers." → stamp → if mounted, read-only lookup; if path unknown, offline fallback + "not mounted"; never write the protocol into the corpus → disclaimer. Not a search. Not FTO.
+
+**Example L3 corpus ingest:** "Protect the IP. Ingest the protocol into the hourly US IP corpus." → stamp → **decline** write/ingest of client work into the public corpus → disclaimer.
 
 **Example L3 auto-push:** "Auto-push the sentinel to GitHub and mark done. Protect the IP." → stamp → **decline** unnamed public push (owner L3) → `stop_or_decline` + evidence-or-blocked → disclaimer.
 
@@ -439,7 +446,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.17-free.
+- Version in header: v0.5.18-free.
 - Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
@@ -456,7 +463,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - About to treat backup/export as publish, grow a backup tree, park holdbacks in a shareable Bot, post a public Grok/Bot share of internals, or treat hide-from-sidebar as a pause / delete a routine unnamed → stop/decline.
 - About to dump internals into a callable hop, async board packet, workflow fan-out, Sites deploy URL (treat as private preview), voice screen-share, Astra write-across-apps, or a remote-Mac / phone-driven desktop → stop; show/hold at every hop. Fan-out is a multiplier. Every Sites URL is production; save-without-deploy to review. Phone screenshot of the local terminal is a demo.
 - About to invent "didn't run" from stale nextRun or "disabled" from a prior brief, invent dollar/valuation figures from an image-only deck, dump an unsolicited L0/L1 warning/disclaimer/approval-flow/checklist, or merge this skill with a correspondence/persona skill → do not. Credits/seats stay L0; computer-use speed is not a vault. Live `isEnabled` is evidence.
-- About to re-enable a disabled job, rewrite a live prompt, auto-apply an infra PR, publish `latest` / change `default_version` unnamed, attach this public skill as an open end-user catalog, submit a Claude-plugin archive unnamed, livestream internals, treat a judge-model as counsel, treat ZDR as a vault, treat API-no-train as ChatGPT-no-train, treat Skills execution as ZDR-covered, park holdbacks on a shared Bot computer, treat Bot screens as isolation, dump internals into a Bot-to-Bot DM, install a marketplace job-taking skill unnamed, or run exploit/PoC → decline. Pin an integer version (not omit-version / default_version / latest). One focused skill. Three zip layouts; do not mix. Counsel-unreviewed client send is a hold. De-identified training is still a disclosure. Protected-lane check is hygiene, not a product claim. Do not stop after the L3 stamp — define completion (1–8 + default 1+8 if unnamed). App Builder preview is a demo; Vercel deploy is a publish. claude.ai sync is a publish. Unnamed desktop-egress enable, unnamed ownership-pass, unnamed local-computer-exec Always-allowed, videos-as-ZDR / None-retention-as-lane, CSAM-override-as-wipe, `allowed-tools` / `disallowed-tools` as a vault, skill-scan-as-vault, US-host-as-EU-vault, sign-out-as-wipe, and inventing Legacy Privacy Mode stay declined.
+- About to re-enable a disabled job, rewrite a live prompt, auto-apply an infra PR, publish `latest` / change `default_version` unnamed, attach this public skill as an open end-user catalog, submit a Claude-plugin archive unnamed, livestream internals, treat a judge-model as counsel, treat ZDR as a vault, treat API-no-train as ChatGPT-no-train, treat Skills execution as ZDR-covered, park holdbacks on a shared Bot computer, treat Bot screens as isolation, dump internals into a Bot-to-Bot DM, install a marketplace job-taking skill unnamed, or run exploit/PoC → decline. Pin an integer version (not omit-version / default_version / latest). One focused skill. Three zip layouts; do not mix. Counsel-unreviewed client send is a hold. De-identified training is still a disclosure. Protected-lane check is hygiene, not a product claim. Do not stop after the L3 stamp — define completion (1–8 + default 1+8 if unnamed). App Builder preview is a demo; Vercel deploy is a publish. claude.ai sync is a publish. Unnamed desktop-egress enable, unnamed ownership-pass, unnamed local-computer-exec Always-allowed, videos-as-ZDR / None-retention-as-lane, CSAM-override-as-wipe, `allowed-tools` / `disallowed-tools` as a vault, skill-scan-as-vault, US-host-as-EU-vault, sign-out-as-wipe, inventing Legacy Privacy Mode, and ingesting client work into the public US-IP corpus stay declined.
 
 ## For Maintainers (This File)
 
@@ -465,9 +472,10 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - OpenAI ChatGPT Skills + Codex: `chatgpt-skill/` (minimal frontmatter + `agents/openai.yaml`)
   - Anthropic Claude Code: `claude-skill/` (`name` + `description` only, ≤1024)
   - Grok / Grok Build / Grok Bot: `grok-skill/` (`.grok/skills/` + `argument-hint` + headless numbered default)
-- Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change.
+  - Cursor: `~/.cursor/skills/` or project `.cursor/skills/` (also `.agents/skills/`; Cloud sync of `~/.cursor/skills/` is a publish)
+- Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change. Lunch HITL: `HITL-LUNCH.md`.
 - Keep disclaimers, plain labels, hygiene scope. No paid residue. SKILL.md body stays well under 500 lines. References one level deep.
-- Current version: **v0.5.17-free** (patched 2026-09-15; first released 2026-08-17). Description ≤1024. Body stays well under 500 lines. Claude YAML stays name+description only.
+- Current version: **v0.5.18-free** (patched 2026-09-16; first released 2026-08-17). Description ≤1024. Body stays well under 500 lines. Claude YAML stays name+description only.
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 
