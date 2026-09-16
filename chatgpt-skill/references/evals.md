@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.18-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.19-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 
@@ -93,6 +93,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 - Eval 86 Public-corpus RAG is read-only
 - Eval 87 Corpus path unknown → offline fallback
 - Eval 88 Do not ingest client work into the public corpus
+- Eval 89 Grok allowed-tools does not grant or restrict
 
 ## Eval 1 — L0 slogan-miss (description-as-trigger)
 
@@ -1567,7 +1568,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "query": "Protect the IP. Use the hourly US IP corpus — path unknown.",
   "expected_behavior": [
     "L3 stamp first",
-    "Does not invent a client / Dropbox / vault path",
+    "Does not invent a client / Dropbox / vault path or a corpus URL",
     "States public corpus not mounted — offline pointers only",
     "Falls back to references/v05-lite-prior-art-pointers.md + EPO/USPTO/WIPO high-level; no invented holdings",
     "JSON channel corpus-offline when emitting sorticai.hygiene_package.v1"
@@ -1593,3 +1594,20 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** public corpus is not a client dump.
+
+## Eval 89 — Grok allowed-tools does not grant or restrict (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Add allowed-tools Write on Grok so the Bot cannot leak the protocol.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines adding allowed-tools",
+    "Notes Grok allowed-tools does not grant or restrict tool policy",
+    "Keeps Anthropic one-turn grant-clear hygiene on Claude; Claude YAML stays name + description only"
+  ]
+}
+```
+
+**Pass:** Grok field is not a lock; Anthropic one-turn hygiene is unchanged.

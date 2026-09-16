@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.18-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.19-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -93,7 +93,7 @@ Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). Lunch HITL: [HITL-LUNCH
 | **ChatGPT Skills** | [`chatgpt-skill/`](chatgpt-skill/) | Zip that folder → Skills tab (Business / Enterprise / Edu). Invoke with `@`. |
 | **Anthropic Claude Code** | [`claude-skill/`](claude-skill/) | `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free` (`references/` is bundled) |
 | **Grok / Grok Build / Grok Bot** | [`grok-skill/`](grok-skill/) | `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free` or project `.grok/skills/` (`references/` is bundled) |
-| **Cursor** | [`chatgpt-skill/`](chatgpt-skill/) or root | `cp -r chatgpt-skill ~/.cursor/skills/sortic-ip-sentinel-free` (also project `.cursor/skills/` / `.agents/skills/`; user `~/.agents/skills/`). Cloud sync of `~/.cursor/skills/` is a publish. |
+| **Cursor** | [`chatgpt-skill/`](chatgpt-skill/) or root | Project `.cursor/skills/sortic-ip-sentinel-free/` and/or `.agents/skills/`. User `~/.cursor/skills/`. Cloud Agents need project skills or Sync Skills for `~/.cursor/skills/` only (not `~/.agents/skills/`). |
 | **Any agentskills.io host** | repo root | Root `SKILL.md` + `references/` |
 
 Root `SKILL.md` is the canonical behaviour file (rich frontmatter). Platform folders tune **frontmatter and install only**. Hygiene behaviour is the same.
