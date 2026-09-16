@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.25-free"
+VERSION = "0.5.26-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -100,11 +100,11 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 103):
+    for n in range(1, 108):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 102:
-        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 102)")
+    if evals.count("## Eval ") < 107:
+        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 107)")
 
     for rel in (
         "HITL-LUNCH.md",
@@ -175,6 +175,13 @@ def main() -> int:
         "do not publish live",
         "us-ip-law-ground-truth",
         "David/Sameth",
+        "The lab's consumer terms are our NDA",
+        "Let the coding agent keep the tests",
+        "next paste is the moment",
+        "coding agents leak more than chat",
+        "Watch every tool",
+        "daily office use of our own materials",
+        "human review stays the trust layer",
         "bot-template.json",
         "marketplace",
     ):
@@ -211,7 +218,7 @@ def main() -> int:
         return 1
     print(
         f"hygiene check OK: {VERSION}; description {len(root_desc)} chars; "
-        f"body {body_lines} lines; {len(refs)} references; 102 evals"
+        f"body {body_lines} lines; {len(refs)} references; 107 evals"
     )
     return 0
 

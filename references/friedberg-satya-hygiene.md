@@ -1,4 +1,4 @@
-# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.25-free)
+# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.26-free)
 
 **Hygiene only. Not legal advice. This skill cannot prove or prevent training, distillation, or leakage.**
 
@@ -76,3 +76,55 @@ De-personified training can absorb novelty (**Friedberg hosts clip**). The appro
 Verbs: consider / hold / list. Never "they trained on you", "this leaked to the frontier lab", "ZDR is illegal", "you must file", "we blocked training", "Satya said de-ID trains the next version". **Cannot prove or prevent training. Do not conflate frames.**
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles; public URLs located: All-In hosts clip 12 Sep; All-In Summit LA hdcsTeCFE0I; snscratchpad Reverse Information Paradox (2026-07-12).
+
+
+## Mailbox 15–16 Sep — next paste / consumer terms / coding-agent / scope honesty
+
+Hygiene only. Not legal advice. **Cannot prove or prevent training.** Do not name clients, firms, webinars, products, infra, or valuations.
+
+### Next paste, not only the investor deck
+
+The sensitive moment **moved left**. It is the **next paste** into chat, API, a coding agent, or a Bot — not only the investor deck. L3 with protect language; L2 if invention-grade work is being pasted under false comfort without protect language.
+
+### Consumer terms with a lab are not an NDA
+
+A consumer / Business / “we don’t train” / de-ID clause is **not** a confidentiality counterparty. “We don’t have an NDA with them being a service provider” is the hygiene line. **Hold** the method. Do not treat ToS as clearance.
+
+### De-ID hides the person, not the method
+
+Stripping names, PII, or company identity does **not** hide the approach. The **approach is the IP**. Drawings, batches, code, and “how we fixed it” are **know-how**, not employee privacy.
+
+### Coding agents leak more than chat
+
+A coding / computer-use agent leaks **corrections, tool traces, tests, evals, and how-we-fixed-it** — more surface than a chat paste. Multi-turn “keep the tests until it has our method” is the Satya-blog exhaust pattern on a louder channel. **Hold** further method teaching.
+
+### Scope honesty (print on L3 when asked to watch / prove / block)
+
+This skill:
+- flags the **next paste** when the turn looks invention-grade or someone says protect this;
+- delivers show/hold + lane check;
+- **does not watch every tool in the building**;
+- **does not see the lab train**;
+- cannot prove or prevent training.
+
+**Human review stays the trust layer.**
+
+### What we are not saying
+
+This skill does **not** claim a lab stole a file, that a trade secret is automatically dead, or that we can see inside a training run. **Cannot prove or prevent training.**
+
+### Do not demonstrate the problem while describing it
+
+Dropping an IP-sensitive research memo into a **consumer** chat with “improve the model” still on is itself a next-paste. Use a **no-train / firm** lane, or hold. Consumer terms with a lab are still not an NDA. Leftover drafts stay unsent.
+
+### Daily office use of own materials
+
+Using AI on own drawings / files / code in daily office work **without** protect language is **L2** (once/session tip, no stamp). With protect language it is L3. Do not name the office, the firm, or the network.
+
+### Decline (same as before, restated)
+
+“Block training”, “prove they trained on us”, “watch every tool”, and “the consumer terms are our NDA so dump it” are unsupported. Decline or hold. Do not invent a training event.
+
+## JSON (added channels)
+
+`agent_exposure.channel` may also be `next-paste | consumer-terms | coding-agent-exhaust | scope-honesty | know-how-not-privacy`.

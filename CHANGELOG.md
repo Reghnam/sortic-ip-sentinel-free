@@ -2,6 +2,38 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.26-free] — 2026-09-16
+
+Absorbed operator mailbox 15–16 Sep 2026 (All-In / Satya follow-up + AI-native daily-use notes) and **this Grok Build turn** (Gmail/Drive/GitHub live; named owner GitHub push). Origin **v0.5.25-free** PRIVATE sidecar / Cursor pack / Grok Bot share-pack holds kept. **No client / product / infra / firm / webinar names** in this public repo. No Grok chat-history connector exists.
+
+### OpenAI (first)
+
+- Codex skills recrawl 2026-09-16: skills = authoring format; plugins = distribution unit; progressive disclosure (name+description first; full `SKILL.md` on use); list may truncate at 2% / 8k. Prefer instructions over scripts. One focused skill. Description still **1024 chars**.
+- `agents/openai.yaml` `default_prompt` names next-paste, consumer-terms ≠ NDA, coding-agent exhaust, scope honesty.
+- Evals **103–107**. JSON channels `next-paste | consumer-terms | coding-agent-exhaust | scope-honesty | know-how-not-privacy`.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Body stays under 500. Dist-path extra keys still error. `allowed-tools` / `disallowed-tools` still one-turn — this skill adds neither. SDK `skills` list is exact names. 107 evals.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Bot computers still US-hosted. `cp` to `~/.grok/skills/` is Build/CLI; Bot = Save / Plugins enable-per-Bot. This Grok Build turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files. Galaxy recording 16 Sep stays **L0 attend**. Share pack still do-not-publish-live.
+
+### Shared
+
+- **Next paste, not only the investor deck.** The sensitive moment moved left.
+- **Consumer terms with a lab are not an NDA.** De-ID hides the person, not the method.
+- **Coding agents leak more than chat** (corrections, tool traces, tests, evals, “how we fixed it”).
+- **Scope honesty:** this skill does not watch every tool and does not see the lab train. Human review stays the trust layer.
+- Daily office use of own materials without protect language stays **L2** (no firm names).
+- Know-how (drawings, batches, code, how-we-fixed-it) is not employee privacy.
+- **What we are not saying:** a lab stole a file, a trade secret is automatically dead, or we can see inside a training run.
+- **Do not demonstrate the problem while describing it.** Consumer chat with “improve the model” still on is a next-paste. Leftover mailbox drafts stay unsent.
+- Evals now **107**. HITL F5–F6 + T6 required on every claimed stack.
+- Host zip filenames **v0.5.26**. HITL pack mailed as v0.5.25 is stale — rebuild from this branch.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.25-free] — 2026-09-16
 
 Absorbed overnight research (handoff `/workspace/handoffs/sorticai-ip-sentinel-overnight-2026-09-16.md` and Grok Heavy https://grok.com/c/1251d871-4c72-41a9-a52c-56af0c9a9a1b were not usable in this workspace; applied the user-locked constraints). Origin **v0.5.24-free** three frames + Track 3 + vault-myth holds kept.
