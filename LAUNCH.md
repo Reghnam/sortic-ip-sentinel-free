@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.24-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.25-free
 
-**Status**: Public on GitHub. v0.5.24-free patched 2026-09-16 (three frames separated: Friedberg hosts clip ≠ Satya Summit ≠ Satya blog; origin 0.5.23 citations kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.25-free patched 2026-09-16 (PRIVATE corpus = sidecar/offline only; Cursor `cursor-skill/` pack; Drive Sep-2 zips stale; origin 0.5.24 frames kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -46,18 +46,22 @@ Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -
 
 **Grok Bot:** Save / Plugins → enable `sortic-ip-sentinel-free` **per Bot**. Do not `cp` to `~/.grok/skills/`. Do not use Teach-by-demonstration as the install path (publish). Bot must not email third parties unless this turn names them. Backup is not publish.
 
+**Share pack (prepare only):** `grok-bot-share/` is profile/skills/routines config only — no secrets, no corpus paths, no API keys. **Do not publish live overnight.** Live marketplace publish stays L3 for the owners. Never park `us-ip-law-ground-truth` (PRIVATE) on the Bot disk.
+
 ## 4. Cursor
 
 **Cloud Agents — project `.cursor/skills/`:**
 
 ```bash
 mkdir -p .cursor/skills/sortic-ip-sentinel-free
-cp -r chatgpt-skill/. .cursor/skills/sortic-ip-sentinel-free/
+cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
+
+Zip: `sortic-ip-sentinel-free-cursor-v0.5.25.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
-**User-global:** `cp -r chatgpt-skill ~/.cursor/skills/sortic-ip-sentinel-free`
+**User-global:** `cp -r cursor-skill ~/.cursor/skills/sortic-ip-sentinel-free`
 
 **Sync Skills** copies `~/.cursor/skills/` only — not `~/.agents/skills/`. Treat Sync as a publish; lunch default off.
 
@@ -73,7 +77,7 @@ Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behav
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 99: frames separated; 90–98 kept; 99 Summit ≠ Friedberg de-ID)
+- [ ] Evals in `references/evals.md` still pass (now 102: sidecar/offline + never-bundle 100–102; leftover L3 stamps aligned to v0.5.17-free; 90–99 kept)
 - [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity / voice provision / yolo-send → decline
 - [ ] Backup ≠ publish; truncated/junk/placeholder files are not originals; image-only ≠ numbered facts
 - [ ] Bot share / marketplace clone is a demo channel; callable hops hold internals
@@ -83,10 +87,11 @@ Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behav
 - [ ] App Builder live preview is a demo; unnamed Vercel deploy is declined
 - [ ] claude.ai enablement / CLAUDE_CODE_SYNC_SKILLS=1 is a publish; local ~/.claude/skills/ still does not auto-sync
 - [ ] disallowed-tools / skill-scan / US-host are not vaults; sign-out is not a wipe; invention screenshots still CSAM-scanned
-- [ ] Public-corpus RAG is read-only; unknown path → offline fallback; ingest of client work is declined; ticks stay L0
-- [ ] Cursor Cloud Agents use project `.cursor/skills/` / `.agents/skills/` or Sync of `~/.cursor/skills/` only (not `~/.agents/skills/`)
+- [ ] Private-corpus RAG is sidecar/offline; unknown sidecar → offline fixtures; ingest / bundle / Bot disk declined; ticks stay L0; Drive Sep-2 zips are stale
+- [ ] Cursor Cloud Agents use `cursor-skill/` → project `.cursor/skills/` or Sync of `~/.cursor/skills/` only (not `~/.agents/skills/`)
 - [ ] Lunch HITL eight prompts plus F1–F4 and T1–T5 in HITL-LUNCH.md pass on each claimed stack; do not conflate Friedberg hosts clip / Satya Summit / Satya blog
 - [ ] Grok Bot install is Save / Plugins enable-per-Bot — not `cp ~/.grok/skills/` (Build)
+- [ ] Grok Bot share pack (`grok-bot-share/`) is config only; do not publish live overnight
 - [ ] Scan before ship: third-party marketplace skills untrusted; inspect-before-attach
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**

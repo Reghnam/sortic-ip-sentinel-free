@@ -1,0 +1,30 @@
+{
+  "schema": "sorticai.us_ip_sidecar.v1",
+  "mode": "retrieve_only",
+  "status": "stub",
+  "note": "No live endpoint ships in the free skill, Bot template, or Drive pack. Do not invent a URL. User never downloads the KB. Corpus Reghnam/us-ip-law-ground-truth stays PRIVATE.",
+  "env": "SORTICAI_US_IP_SIDECAR",
+  "request": {
+    "q": "user-typed keywords only",
+    "max_snippets": 3
+  },
+  "response": {
+    "citations": [
+      {
+        "title": "",
+        "url": "",
+        "snippet": ""
+      }
+    ],
+    "as_of": ""
+  },
+  "never": [
+    "download_kb",
+    "list_all",
+    "write",
+    "ingest",
+    "bundle_corpus",
+    "bot_disk",
+    "drive_free_pack"
+  ]
+}

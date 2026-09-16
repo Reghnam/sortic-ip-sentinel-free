@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.24-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.25-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -74,7 +74,7 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Sign-out ≠ wipe of claude.ai-synced skills (cleanupPeriodDays, then trash)
 - Dist-path: extra YAML keys error on claude.ai / Skills API; `claude-skill/` stays name+description only
 - Invention screenshots/diagrams are still CSAM-scanned
-- Public-corpus RAG is read-only (hourly US-IP public corpus when mounted; offline fallback if path unknown; never ingest client secrets; ticks stay L0)
+- Private-corpus RAG is sidecar/offline (`Reghnam/us-ip-law-ground-truth` is PRIVATE; never bundle / never Bot disk; retrieve-only stub; ticks stay L0)
 - Lunch HITL sheet: [HITL-LUNCH.md](HITL-LUNCH.md)
 - De-ID / no company name ≠ method safe; the approach is the IP; anecdote ≠ audited proof of training; ZDR is contractual best-efforts (cannot prove or prevent training)
 - Track 3 realtime warning: invention + false comfort is L2 once/session (no stamp); protect/dump-after-tip is L3 (hold exact recipe + lane map); settings-only / clip-only / industry chatter stay L0
@@ -97,7 +97,8 @@ Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). Lunch HITL: [HITL-LUNCH
 | **Anthropic Claude Code** | [`claude-skill/`](claude-skill/) | `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free` (`references/` is bundled) |
 | **Grok / Grok Build** | [`grok-skill/`](grok-skill/) | `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free` or project `.grok/skills/` |
 | **Grok Bot** | [`grok-skill/`](grok-skill/) zip | Save / Plugins → **enable per-Bot**. Not `cp` to `~/.grok/skills/` (that is Build). Do not Teach-to-install. |
-| **Cursor** | [`chatgpt-skill/`](chatgpt-skill/) or root | Cloud Agents: project `.cursor/skills/`. Sync Skills = `~/.cursor/skills/` only. Custom Modes = pin skill. |
+| **Cursor** | [`cursor-skill/`](cursor-skill/) | Cloud Agents: `cp -r cursor-skill .cursor/skills/sortic-ip-sentinel-free/`. Sync Skills = `~/.cursor/skills/` only. Custom Modes = pin skill. |
+| **Grok Bot share pack** | [`grok-bot-share/`](grok-bot-share/) | Profile/skills/routines config only. **Do not publish live.** Never on the skill zip. |
 | **Any agentskills.io host** | repo root | Root `SKILL.md` + `references/` |
 
 Root `SKILL.md` is the canonical behaviour file (rich frontmatter). Platform folders tune **frontmatter and install only**. Hygiene behaviour is the same.
@@ -110,7 +111,7 @@ Custom GPT fallback: [`openai-gpt-package/`](openai-gpt-package/).
 
 - L3: "protect the IP", "IP sensitive moment", "trade secret before investor demo", "how to protect this before we file", "NDA before sharing the protocol", "the Grok Bot will email the deck — protect the IP", "callable agent into the partner network — protect the IP".
 - L2 exposure: "investor demo in 10 days", "publish the Bot and post a clip", or "board/partner weekly" → soft tip only.
-- L0: privacy, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks → silent.
+- L0: privacy, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks → silent. Drive Sep-2 zips are stale — use this PR branch.
 
 Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. It will **not** email/post leftover drafts, partner pre-reads, or treat a backup as publish unless this turn names the recipient **and** the action. Unnamed GitHub auto-push, registrar/DNS/dashboard logins, pay, identity publish, voice/phone provision, disabled-job re-enable, live-prompt rewrite, and fit-note send are **declined**. `--yolo` is not approval. Done requires evidence. Truncated files are not originals. Workspace renewal is silent.
 

@@ -1,4 +1,4 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.24-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.25-free
 
 **Date:** 16 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
@@ -6,16 +6,16 @@
 
 ## Why this patch (one paragraph)
 
-Origin **v0.5.24-free** locked the Friedberg hosts clip. This patch **separates three frames** (handoff file was not in this workspace): (1) Friedberg All-In **hosts clip** 12 Sep (cvxjqbfLVk0 / X 2098606000890687813) — de-ID can absorb method novelty; (2) Satya All-In **Summit LA** 13–15 Sep (https://www.youtube.com/watch?v=hdcsTeCFE0I) — privacy + weights I control + “My IP shouldn't leak” + exhaust ownership, **not** the de-ID→next-version claim; (3) Satya **blog** 12 Jul — exhaust/corrections; buyer pays twice. **Do not conflate.** Eval 99. F4. Still free-only. Description **1024 chars**.
+Origin **v0.5.24-free** kept three Friedberg/Satya frames. This patch absorbs overnight research (handoff file was not in this workspace): `Reghnam/us-ip-law-ground-truth` is **PRIVATE** — RAG is a retrieve-only sidecar / offline interface; **never bundle** the corpus into the public zip, Bot disk, or Drive pack; ticks stay L0. Cursor now has `cursor-skill/` → `.cursor/skills/`. Leftover eval L3 stamps aligned to **v0.5.17-free**. Drive Sep-2 zips are **stale**. Grok Bot share pack is config-only; **do not publish live**. Vault-myth holds and Friedberg/Satya L2/L3 UX kept. Still free-only. Description **1024 chars**.
 
 ## What changed (shareable)
 
 | Host | Change |
 |------|--------|
-| **OpenAI (first)** | Same 1024-char description. `default_prompt` names public-corpus RAG read-only + offline fallback. Cursor/Codex paths restated. Evals 86–88. |
-| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 99 evals. Dist-path extra keys still error on claude.ai/API. |
-| **Grok Build (third)** | `cp` to `~/.grok/skills/` is **Build/CLI only**. Grok Bot = Save / Plugins enable-per-Bot. Teach is not the install path. |
-| **Cursor** | Cloud Agents: project `.cursor/skills/`. Sync Skills = `~/.cursor/skills/` only. Custom Modes = pin skill. **Scan before ship** — marketplace skills untrusted. |
+| **OpenAI (first)** | Same 1024-char description. `default_prompt` names PRIVATE sidecar/offline RAG. Evals 86–88 rewritten; 100–102 added. |
+| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 102 evals. Dist-path extra keys still error on claude.ai/API. |
+| **Grok Build (third)** | `cp` to `~/.grok/skills/` is **Build/CLI only**. Grok Bot = Save / Plugins enable-per-Bot. Share pack `grok-bot-share/` is profile/skills/routines only — no secrets; do not publish live. |
+| **Cursor** | Dedicated `cursor-skill/` zip → project `.cursor/skills/sortic-ip-sentinel-free/`. Sync Skills = `~/.cursor/skills/` only. Custom Modes = pin skill. |
 
 ## How to install (one copy)
 
@@ -24,8 +24,10 @@ Origin **v0.5.24-free** locked the Friedberg hosts clip. This patch **separates 
 - Claude Code: `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free`
 - Claude.ai: zip `claude-skill/` with `SKILL.md` at zip root
 - Grok / Grok Build: `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free`
-- Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`)
-- Cursor Cloud: project `.cursor/skills/sortic-ip-sentinel-free/`; pin on Custom Mode; Sync only `~/.cursor/skills/`
+- Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`); share pack beside the zip, not inside it
+- Cursor Cloud: `cp -r cursor-skill .cursor/skills/sortic-ip-sentinel-free/`; pin on Custom Mode; Sync only `~/.cursor/skills/`
+
+**Drive Sep-2 zips are stale.** Use this PR branch.
 
 ## Try in 30 seconds
 
@@ -55,6 +57,6 @@ Scorecard and zip recipe: [HITL-LUNCH.md](HITL-LUNCH.md).
 
 ## Still true
 
-Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No client-secret corpus ingest. Corpus ticks stay L0. No guarantees. Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1024 chars. Origin 0.5.17 content kept.
+Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No client-secret corpus ingest. Corpus ticks stay L0. PRIVATE corpus never in the zip / Bot disk. No guarantees. Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1024 chars. Origin 0.5.17 content kept. Vault-myth holds kept.
 
 *Full notes: [CHANGELOG.md](CHANGELOG.md).*
