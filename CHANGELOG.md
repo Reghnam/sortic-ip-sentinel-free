@@ -2,6 +2,17 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.21-free] — 2026-09-16
+
+Absorbed upgraded SKILL-surface research (handoff `/workspace/handoffs/skill-deeper-research-cursor-grokbot-grok-2026-09-16.md` was not in this workspace; applied the user summary). Origin **v0.5.20-free** Friedberg × Satya L3 callouts, evals 90–92, and HITL F1–F3 kept.
+
+### Shared
+
+- **Grok Bot install card:** Save / Plugins **enable-per-Bot**. Do **not** `cp` to `~/.grok/skills/` — that path is **Grok Build**. Teach-by-demonstration is not the install path (publish).
+- **Cursor:** Cloud Agents use project `.cursor/skills/sortic-ip-sentinel-free/`. **Sync Skills** copies `~/.cursor/skills/` only (not `~/.agents/skills/`). **Custom Modes = pin skill**.
+- **Scan before ship.** Zip is scanned; inspect `SKILL.md` + `references/` before upload. Third-party **marketplace** skills are untrusted — do not bundle them into the lunch zip or enable them on the HITL Bot / Cursor Mode.
+- Friedberg × Satya evals **90–92** and F1–F3 unchanged. Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.20-free] — 2026-09-16
 
 Folded Friedberg × Satya deeper research into the lunch HITL skill (Sameth handoff files were not in this workspace; applied the user summary + Satya SoT https://snscratchpad.com/posts/reverse-information-paradox/ ). Origin **v0.5.19-free** Cursor Cloud / Grok allowed-tools / RAG kept.

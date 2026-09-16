@@ -22,8 +22,8 @@ user-invocable: true
 disable-model-invocation: false
 argument-hint: IP sensitive moment | show/hold | hygiene JSON
 metadata:
-  short-description: "SorticAI Free IP Sentinel v0.5.20-free — public-corpus RAG read-only; corpus ticks L0; free hygiene only"
-  version: "0.5.20-free"
+  short-description: "SorticAI Free IP Sentinel v0.5.21-free — public-corpus RAG read-only; corpus ticks L0; free hygiene only"
+  version: "0.5.21-free"
   release: "2026-08-17"
   patched: "2026-09-16"
   author: "SorticAI (portable free tier)"
@@ -33,7 +33,7 @@ license: "See LICENSE.md (free use with attribution and disclaimers)"
 compatibility: "Claude Code (~/.claude/skills/), Codex (~/.agents/skills or ~/.codex/skills), ChatGPT Skills, Grok (~/.grok/skills/ or .grok/skills/), Grok Bot, Cursor (~/.cursor/skills/ or .cursor/skills/), agentskills.io. No external services required for core."
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.20-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.21-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -78,7 +78,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.20-free (portable)  ·  sorticai.com  ·  patched 2026-09-16              |
+|  v0.5.21-free (portable)  ·  sorticai.com  ·  patched 2026-09-16              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -245,7 +245,8 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 - **Claimed send needs message-id + recipients.** Otherwise log `not_sent`.
 - **HiTL / UAT / livestream / Clip-Bot are demo channels.** L2 without protect language; L3 with it. Computer-use teaching records the screen — hold secrets.
 - **This skill is silent on its own development** (L0 META) and on corpus **ticks**. Read-only public-corpus RAG on L3 is not a tick. Do not invent a corpus URL.
-- **Grok `allowed-tools` does not grant or restrict.** Keep the Anthropic one-turn hygiene; do not invent a Grok tool lock.
+- **Grok `allowed-tools` does not grant or restrict.** Keep the Anthropic one-turn hygiene; do not invent a Grok tool lock. Grok Bot install is Save / Plugins enable-per-Bot — not `~/.grok/skills/` (Build).
+- **Scan before ship.** Third-party marketplace skills are untrusted. Inspect-before-attach. Do not bundle them into this zip.
 - **De-ID ≠ method safe. Corrections are exhaust. ZDR is best-efforts.** Cannot claim training proved. Public clip without your work stays L0.
 - **Eight options, not nine.** Agent-exposure folds into item 5.
 - **GitHub auto-push of this public repo is owner L3.** Decline unless this turn names owner **and** action. Do not dump client/product facts into `sortic-ip-sentinel-free`.
@@ -479,7 +480,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.20-free.
+- Version in header: v0.5.21-free.
 - Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
@@ -504,11 +505,11 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Platform packages (same behaviour, host-specific frontmatter / install):
   - OpenAI ChatGPT Skills + Codex: `chatgpt-skill/` (minimal frontmatter + `agents/openai.yaml`)
   - Anthropic Claude Code: `claude-skill/` (`name` + `description` only, ≤1024)
-  - Grok / Grok Build / Grok Bot: `grok-skill/` (`.grok/skills/` + `argument-hint` + headless numbered default)
-  - Cursor: project `.cursor/skills/sortic-ip-sentinel-free/` and/or `.agents/skills/`; user `~/.cursor/skills/`. Cloud Agents need project skills or Sync Skills for `~/.cursor/skills/` only (not `~/.agents/skills/`)
+  - Grok / Grok Build: `grok-skill/` via `~/.grok/skills/` or `.grok/skills/`. **Grok Bot:** Save / Plugins enable-per-Bot — not that `cp`. Do not Teach-to-install.
+  - Cursor: Cloud Agents use project `.cursor/skills/`; Sync Skills is `~/.cursor/skills/` only; Custom Modes = pin skill.
 - Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change. Lunch HITL: `HITL-LUNCH.md`.
 - Keep disclaimers, plain labels, hygiene scope. No paid residue. SKILL.md body stays well under 500 lines. References one level deep.
-- Current version: **v0.5.20-free** (patched 2026-09-16; first released 2026-08-17). Description ≤1024. Body stays well under 500 lines. Claude YAML stays name+description only.
+- Current version: **v0.5.21-free** (patched 2026-09-16; first released 2026-08-17). Description ≤1024. Body stays well under 500 lines. Claude YAML stays name+description only.
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 

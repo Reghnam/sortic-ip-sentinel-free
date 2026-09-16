@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.20-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.21-free
 
-**Status**: Public on GitHub. v0.5.20-free patched 2026-09-16 (Friedberg × Satya L3 callouts; F1–F3 on every stack; cannot claim training proved; origin 0.5.19 Cursor/Grok/RAG kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.21-free patched 2026-09-16 (Grok Bot = Save / Plugins enable-per-Bot, not `~/.grok/skills/`; Cursor Cloud = project `.cursor/skills/` + Custom Modes pin; Sync = `~/.cursor/skills/` only; scan before ship; Friedberg × Satya F1–F3 kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -35,35 +35,33 @@ Project-local: `.claude/skills/sortic-ip-sentinel-free/`. `references/` is alrea
 
 **Claude.ai / Cowork:** zip `claude-skill/` with `SKILL.md` at the zip root. Local `~/.claude/skills/` still does not auto-sync. Enablement / `CLAUDE_CODE_SYNC_SKILLS=1` is a publish.
 
-## 3. Grok / Grok Build / Grok Bot
+## 3. Grok / Grok Build
 
 ```bash
 git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
 cp -r sortic-ip-sentinel-free/grok-skill ~/.grok/skills/sortic-ip-sentinel-free
 ```
 
-Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -p`) and **Grok Bot** use numbered options + optional JSON. Do not ask the Grok viewer to run shell commands. Bot must not email third parties unless this turn names them. Backup is not publish.
+Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -p`) uses numbered options + optional JSON. Do not ask the Grok viewer to run shell commands. **This `cp` is Grok Build / CLI — not Grok Bot.**
+
+**Grok Bot:** Save / Plugins → enable `sortic-ip-sentinel-free` **per Bot**. Do not `cp` to `~/.grok/skills/`. Do not use Teach-by-demonstration as the install path (publish). Bot must not email third parties unless this turn names them. Backup is not publish.
 
 ## 4. Cursor
 
-**Project** (local Agent and Cloud Agents, no Sync required):
+**Cloud Agents — project `.cursor/skills/`:**
 
 ```bash
-git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
-mkdir -p sortic-ip-sentinel-free/.cursor/skills/sortic-ip-sentinel-free
-# from inside a project that should load the skill:
+mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r chatgpt-skill/. .cursor/skills/sortic-ip-sentinel-free/
-# and/or:
-cp -r chatgpt-skill/. .agents/skills/sortic-ip-sentinel-free/
 ```
 
-**User-global** (this machine only):
+**Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
-```bash
-cp -r chatgpt-skill ~/.cursor/skills/sortic-ip-sentinel-free
-```
+**User-global:** `cp -r chatgpt-skill ~/.cursor/skills/sortic-ip-sentinel-free`
 
-Cloud Agents need **project skills** (`.cursor/skills/sortic-ip-sentinel-free/` and/or `.agents/skills/`) **or** Sync Skills. Sync Skills copies `~/.cursor/skills/` only — not `~/.agents/skills/`. Treat Sync as a publish; lunch default off.
+**Sync Skills** copies `~/.cursor/skills/` only — not `~/.agents/skills/`. Treat Sync as a publish; lunch default off.
+
+**Scan before ship.** Third-party marketplace skills are untrusted — inspect before attach; do not bundle them into the lunch zip.
 
 Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behaviour, rich frontmatter).
 
@@ -88,5 +86,7 @@ Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behav
 - [ ] Public-corpus RAG is read-only; unknown path → offline fallback; ingest of client work is declined; ticks stay L0
 - [ ] Cursor Cloud Agents use project `.cursor/skills/` / `.agents/skills/` or Sync of `~/.cursor/skills/` only (not `~/.agents/skills/`)
 - [ ] Lunch HITL eight prompts plus F1–F3 (Friedberg × Satya) in HITL-LUNCH.md pass on each claimed stack
+- [ ] Grok Bot install is Save / Plugins enable-per-Bot — not `cp ~/.grok/skills/` (Build)
+- [ ] Scan before ship: third-party marketplace skills untrusted; inspect-before-attach
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**

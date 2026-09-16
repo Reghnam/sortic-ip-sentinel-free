@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.20-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.21-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -20,19 +20,21 @@ cd sortic-ip-sentinel-free
 # use this PR branch if lunch is before merge:
 # git fetch origin cursor/hitl-lunch-rag-2add && git checkout cursor/hitl-lunch-rag-2add
 
-( cd chatgpt-skill && zip -r ../sortic-ip-sentinel-free-chatgpt-v0.5.20.zip . -x '*.DS_Store' )
-( cd claude-skill  && zip -r ../sortic-ip-sentinel-free-claude-v0.5.20.zip  . -x '*.DS_Store' )
-( cd grok-skill    && zip -r ../sortic-ip-sentinel-free-grok-v0.5.20.zip    . -x '*.DS_Store' )
+( cd chatgpt-skill && zip -r ../sortic-ip-sentinel-free-chatgpt-v0.5.21.zip . -x '*.DS_Store' )
+( cd claude-skill  && zip -r ../sortic-ip-sentinel-free-claude-v0.5.21.zip  . -x '*.DS_Store' )
+( cd grok-skill    && zip -r ../sortic-ip-sentinel-free-grok-v0.5.21.zip    . -x '*.DS_Store' )
 ```
 
 | Zip / folder | Stacks that install it |
 |--------------|------------------------|
-| `sortic-ip-sentinel-free-chatgpt-v0.5.20.zip` (`chatgpt-skill/`) | ChatGPT Skills, Codex, Cursor fallback |
-| `sortic-ip-sentinel-free-claude-v0.5.20.zip` (`claude-skill/`) | Claude.ai, Claude Code |
-| `sortic-ip-sentinel-free-grok-v0.5.20.zip` (`grok-skill/`) | Grok, Grok Build, Grok Bot |
+| `sortic-ip-sentinel-free-chatgpt-v0.5.21.zip` (`chatgpt-skill/`) | ChatGPT Skills, Codex, Cursor fallback |
+| `sortic-ip-sentinel-free-claude-v0.5.21.zip` (`claude-skill/`) | Claude.ai, Claude Code |
+| `sortic-ip-sentinel-free-grok-v0.5.21.zip` (`grok-skill/`) | Grok / Grok Build (`~/.grok/skills/`). Grok Bot uses Save / Plugins enable-per-Bot — not that `cp`. |
 | Root `SKILL.md` + `references/` + `LICENSE.md` (not a fourth product) | Cursor / any agentskills.io host |
 
-**Do not put in the skill zip:** this file, `LAUNCH.md`, `EXEC-SUMMARY.md`, `CHANGELOG.md`, `openai-gpt-package/`, `.git`, secrets, corpus trees, client files.
+**Scan before ship.** Zip is scanned; inspect `SKILL.md` + `references/` before upload. Third-party **marketplace** skills are untrusted — do not bundle them into the lunch zip, do not enable them on the Grok Bot / Cursor Mode used for HITL, and do not treat a marketplace listing as this skill. Inspect-before-attach still applies.
+
+**Do not put in the skill zip:** this file, `LAUNCH.md`, `EXEC-SUMMARY.md`, `CHANGELOG.md`, `openai-gpt-package/`, `.git`, secrets, corpus trees, client files, third-party marketplace skills.
 
 Operator copies (keep beside the zips, not inside them): `HITL-LUNCH.md`, `LAUNCH.md`, `EXEC-SUMMARY.md`.
 
@@ -54,7 +56,7 @@ Project-local: `.agents/skills/sortic-ip-sentinel-free/`. Invoke `$sortic-ip-sen
 
 ### 2. ChatGPT Skills (Business / Enterprise / Edu)
 
-1. Upload `sortic-ip-sentinel-free-chatgpt-v0.5.20.zip` (SKILL.md at zip root).
+1. Upload `sortic-ip-sentinel-free-chatgpt-v0.5.21.zip` (SKILL.md at zip root).
 2. Skills tab → enable. Invoke with `@`.
 3. Zip is scanned — no secrets. Do not mix Agent Plugins layout (`plugin.json` + `skills/<name>/SKILL.md`).
 
@@ -68,7 +70,7 @@ Project-local: `.claude/skills/sortic-ip-sentinel-free/`. `references/` is alrea
 
 ### 4. Claude (claude.ai / Cowork)
 
-Upload `sortic-ip-sentinel-free-claude-v0.5.20.zip`. Local `~/.claude/skills/` does **not** auto-sync. Enablement on claude.ai / `CLAUDE_CODE_SYNC_SKILLS=1` is a **publish** — lunch testers leave that off unless this turn names owner AND action.
+Upload `sortic-ip-sentinel-free-claude-v0.5.21.zip`. Local `~/.claude/skills/` does **not** auto-sync. Enablement on claude.ai / `CLAUDE_CODE_SYNC_SKILLS=1` is a **publish** — lunch testers leave that off unless this turn names owner AND action.
 
 ### 5. Grok / Grok Build
 
@@ -76,37 +78,41 @@ Upload `sortic-ip-sentinel-free-claude-v0.5.20.zip`. Local `~/.claude/skills/` d
 cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free
 ```
 
-Project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -p`) uses numbered 1–8. Do not ask the Grok viewer to run shell.
+Project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -p`) uses numbered 1–8. Do not ask the Grok viewer to run shell. **This `cp` is Grok Build / CLI only.**
 
 ### 6. Grok Bot
 
-Same folder on the **Bot computer**. Treat email / push / post as live demo channels. Bot must not email third parties unless this turn names them. Backup is not publish. Computers run in the United States today — not an EU vault.
+**Do not** `cp` to `~/.grok/skills/` — that path is **Grok Build**.
+
+Install card (this Bot only):
+
+1. Open the Bot → **Plugins** (or Skills).
+2. **Save** / upload `sortic-ip-sentinel-free-grok-v0.5.21.zip` (or the `grok-skill/` folder) so `SKILL.md` is the skill root.
+3. **Enable per-Bot.** One Bot's enablement is not isolation from other Bots on the shared computer.
+4. Do **not** use **Teach**-by-demonstration as the install path (screen is recorded — that is a publish). Teach is not a substitute for Save / Plugins enable.
+
+Treat email / push / post as live demo channels. Bot must not email third parties unless this turn names them. Backup is not publish. Computers run in the United States today — not an EU vault.
 
 ### 7. Cursor
 
-**Project skills** — local Agent **and** Cloud Agents (no Sync required):
+**Cloud Agents — project path** (preferred; no Sync required):
 
 ```bash
 mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r chatgpt-skill/. .cursor/skills/sortic-ip-sentinel-free/
-# and/or Codex-compatible project path:
-mkdir -p .agents/skills/sortic-ip-sentinel-free
-cp -r chatgpt-skill/. .agents/skills/sortic-ip-sentinel-free/
 ```
+
+**Custom Modes = pin skill.** If the lunch seat uses a Custom Mode, pin `sortic-ip-sentinel-free` on that mode so implicit match is not the only load path.
 
 **User-global** — this machine only:
 
 ```bash
 cp -r chatgpt-skill ~/.cursor/skills/sortic-ip-sentinel-free
-# canonical rich pack also works:
-# mkdir -p ~/.cursor/skills/sortic-ip-sentinel-free
-# cp SKILL.md LICENSE.md ~/.cursor/skills/sortic-ip-sentinel-free/
-# cp -r references ~/.cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Cloud Agents need **project skills** (`.cursor/skills/sortic-ip-sentinel-free/` and/or `.agents/skills/`) **or** Sync Skills. Sync Skills copies `~/.cursor/skills/` only. It does **not** copy `~/.agents/skills/`. Treat Sync as a publish. Lunch default: leave Sync off; use the project path.
+**Sync Skills** copies `~/.cursor/skills/` only. It does **not** copy `~/.agents/skills/`. Treat Sync as a publish. Lunch default: leave Sync off; use project `.cursor/skills/`.
 
-Local compatibility still loads `~/.claude/skills/` and `~/.codex/skills/` — those are not Cloud Agent sync sources.
+Optional Codex-compat project path `.agents/skills/` is discovered locally; Cloud Agents should still have `.cursor/skills/sortic-ip-sentinel-free/`. Local compatibility still loads `~/.claude/skills/` and `~/.codex/skills/` — those are not Cloud Agent sync sources.
 
 ---
 
@@ -116,7 +122,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.20-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.21-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -168,8 +174,8 @@ Run F1–F3 on **each** stack you mark P in the scorecard below (Claude.ai, Clau
 | Codex | `~/.agents/skills/…` | | | | | | | | | | | | |
 | ChatGPT Skills | chatgpt zip | | | | | | | | | | | | |
 | Grok / Build | `~/.grok/skills/…` | | | | | | | | | | | | |
-| Grok Bot | Bot computer folder | | | | | | | | | | | | |
-| Cursor | `.cursor/skills/…` or `.agents/skills/…` (Cloud) / `~/.cursor/skills/…` (local) | | | | | | | | | | | | |
+| Grok Bot | Save / Plugins enable-per-Bot (not `~/.grok/skills/`) | | | | | | | | | | | | |
+| Cursor | project `.cursor/skills/…` (Cloud) / Custom Mode pin / `~/.cursor/skills/…` (local; Sync only this path) | | | | | | | | | | | | |
 
 Mark **P** or **F**. One F on a claimed stack = that stack is not lunch-ready. F1–F3 are required on every claimed stack.
 
