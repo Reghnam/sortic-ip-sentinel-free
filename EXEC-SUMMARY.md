@@ -13,7 +13,7 @@ Origin **v0.5.23-free** already shipped Track 3 realtime warning. This patch loc
 | Host | Change |
 |------|--------|
 | **OpenAI (first)** | Same 1024-char description. `default_prompt` names public-corpus RAG read-only + offline fallback. Cursor/Codex paths restated. Evals 86–88. |
-| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 97 evals. Dist-path extra keys still error on claude.ai/API. |
+| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 98 evals. Dist-path extra keys still error on claude.ai/API. |
 | **Grok Build (third)** | `cp` to `~/.grok/skills/` is **Build/CLI only**. Grok Bot = Save / Plugins enable-per-Bot. Teach is not the install path. |
 | **Cursor** | Cloud Agents: project `.cursor/skills/`. Sync Skills = `~/.cursor/skills/` only. Custom Modes = pin skill. **Scan before ship** — marketplace skills untrusted. |
 
