@@ -6,7 +6,7 @@
 
 ## Why this patch (one paragraph)
 
-Origin **v0.5.24-free** kept three Friedberg/Satya frames. This patch absorbs overnight research (handoff file was not in this workspace): `Reghnam/us-ip-law-ground-truth` is **PRIVATE** — RAG is a retrieve-only sidecar / offline interface; **never bundle** the corpus into the public zip, Bot disk, or Drive pack; ticks stay L0. Cursor now has `cursor-skill/` → `.cursor/skills/`. Leftover eval L3 stamps aligned to **v0.5.17-free**. Drive Sep-2 zips are **stale**. Grok Bot share pack is config-only; **do not publish live**. Vault-myth holds and Friedberg/Satya L2/L3 UX kept. Still free-only. Description **1024 chars**.
+Origin **v0.5.24-free** kept three Friedberg/Satya frames. This patch absorbs overnight research (handoff file was not in this workspace): `Reghnam/us-ip-law-ground-truth` is **PRIVATE** — RAG is a retrieve-only sidecar / offline interface; **never bundle** the corpus into the public zip, Bot disk, or Drive pack; ticks stay L0. Cursor now has `cursor-skill/` → `.cursor/skills/`. Leftover eval L3 stamps aligned to **v0.5.17-free**. Drive Sep-2 zips are **stale**. Grok Bot share pack is config-only (`bot-template.json`); **do not publish live** — marketplace stays **L3 for David/Sameth**. Vault-myth holds and Friedberg/Satya L2/L3 UX kept. Still free-only. Description **1024 chars**.
 
 ## What changed (shareable)
 
@@ -24,7 +24,7 @@ Origin **v0.5.24-free** kept three Friedberg/Satya frames. This patch absorbs ov
 - Claude Code: `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free`
 - Claude.ai: zip `claude-skill/` with `SKILL.md` at zip root
 - Grok / Grok Build: `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free`
-- Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`); share pack beside the zip, not inside it
+- Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`); share pack `grok-bot-share/bot-template.json` beside the zip; live marketplace publish stays L3 for David/Sameth — do not publish live
 - Cursor Cloud: `cp -r cursor-skill .cursor/skills/sortic-ip-sentinel-free/`; pin on Custom Mode; Sync only `~/.cursor/skills/`
 
 **Drive Sep-2 zips are stale.** Use this PR branch.

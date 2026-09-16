@@ -1,0 +1,34 @@
+{
+  "schema": "sorticai.grok_bot_share.v1",
+  "edition": "0.5.25-free",
+  "status": "prepare_only",
+  "do_not_publish_live": true,
+  "live_marketplace_publish": "L3 David/Sameth only",
+  "export": "profile/skills/routines config only",
+  "profile": {
+    "name": "IP Sentinel (free)",
+    "blurb": "Notices IP-sensitive moments and delivers free builder-worksheet hygiene (show/hold, demo playbook, logs, JSON). Not legal advice. No paid paths.",
+    "secrets": [],
+    "internal_urls": [],
+    "corpus_paths": [],
+    "api_keys": []
+  },
+  "skills": [
+    {
+      "name": "sortic-ip-sentinel-free",
+      "source_zip": "sortic-ip-sentinel-free-grok-v0.5.25.zip",
+      "enable": "per-Bot",
+      "not": "~/.grok/skills/"
+    }
+  ],
+  "routines": [],
+  "never": [
+    "secrets",
+    "internal_urls",
+    "corpus_paths",
+    "api_keys",
+    "us-ip-law-ground-truth",
+    "sidecar_host",
+    "live_publish_overnight"
+  ]
+}

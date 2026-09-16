@@ -46,7 +46,7 @@ Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -
 
 **Grok Bot:** Save / Plugins → enable `sortic-ip-sentinel-free` **per Bot**. Do not `cp` to `~/.grok/skills/`. Do not use Teach-by-demonstration as the install path (publish). Bot must not email third parties unless this turn names them. Backup is not publish.
 
-**Share pack (prepare only):** `grok-bot-share/` is profile/skills/routines config only — no secrets, no corpus paths, no API keys. **Do not publish live overnight.** Live marketplace publish stays L3 for the owners. Never park `us-ip-law-ground-truth` (PRIVATE) on the Bot disk.
+**Share pack (prepare only):** `grok-bot-share/` export = profile/skills/routines config only (`bot-template.json`) — no secrets, no corpus paths, no API keys. **Do not publish live overnight.** Live marketplace publish stays **L3 for David/Sameth**. Never park `us-ip-law-ground-truth` (PRIVATE) on the Bot disk.
 
 ## 4. Cursor
 

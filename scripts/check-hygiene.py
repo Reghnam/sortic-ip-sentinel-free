@@ -174,9 +174,31 @@ def main() -> int:
         "retrieve-only",
         "do not publish live",
         "us-ip-law-ground-truth",
+        "David/Sameth",
+        "bot-template.json",
+        "marketplace",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")
+
+    share = ROOT / "grok-bot-share"
+    for name in ("README.md", "profile.md", "skills.md", "routines.md", "bot-template.json"):
+        if not (share / name).is_file():
+            errors.append(f"grok-bot-share missing {name}")
+    if share.is_dir():
+        export = (share / "bot-template.json").read_text(encoding="utf-8") if (share / "bot-template.json").is_file() else ""
+        if '"do_not_publish_live": true' not in export:
+            errors.append("grok-bot-share/bot-template.json missing do_not_publish_live")
+        if "David/Sameth" not in export:
+            errors.append("grok-bot-share/bot-template.json missing David/Sameth L3 gate")
+        if '"api_keys": []' not in export or '"corpus_paths": []' not in export:
+            errors.append("grok-bot-share/bot-template.json must ship empty api_keys and corpus_paths")
+        for rel in share.iterdir():
+            if rel.is_file():
+                lower = rel.read_text(encoding="utf-8").lower()
+                for banned in ("api_key=", "sk-", "whsec", "bearer "):
+                    if banned in lower:
+                        errors.append(f"{rel.name} contains secret-shaped token: {banned}")
 
     edition = (ROOT / "references" / "headless-hygiene-package.md").read_text(encoding="utf-8")
     if f'"edition": "{VERSION}"' not in edition:

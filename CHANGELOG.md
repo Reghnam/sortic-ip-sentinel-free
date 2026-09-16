@@ -13,7 +13,7 @@ Absorbed overnight research (handoff `/workspace/handoffs/sorticai-ip-sentinel-o
 - **Cursor install package.** `cursor-skill/` zip → project `.cursor/skills/sortic-ip-sentinel-free/`. Sync still `~/.cursor/skills/` only.
 - **Eval stamps.** Leftover `v0.5.14-free` L3 stamp strings aligned to **v0.5.17-free**. Current lunch stamp is `v0.5.25-free`.
 - **Drive Sep-2 zips are stale.** Lunch source is this PR branch.
-- **Grok Bot share pack.** `grok-bot-share/` = profile/skills/routines config only. No secrets. Do not publish live overnight. Live marketplace publish stays L3 for the owners.
+- **Grok Bot share pack.** `grok-bot-share/` = profile/skills/routines config only (`bot-template.json`). No secrets. Do not publish live overnight. Live marketplace publish stays **L3 for David/Sameth**.
 - Evals **102** (100 never-bundle; 101 sidecar retrieve-only; 102 share-pack no secrets). Friedberg/Satya F1–F4 and T1–T5 unchanged.
 - Still free-only. Still not legal advice. No secrets.
 

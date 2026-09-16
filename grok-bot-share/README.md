@@ -4,17 +4,18 @@
 
 This folder is a **shareable Bot template** (profile + skills + routines **config only**). It is **not** a live marketplace listing.
 
-**Do not publish live overnight.** Live marketplace publish stays **L3 for the owners**. Lunch testers install from this PR branch; they do not press marketplace publish.
+**Do not publish live overnight.** Live marketplace publish stays **L3 for David/Sameth**. Lunch testers install from this PR branch; they do not press marketplace publish.
 
 ## What this pack is
 
 | File | Purpose |
 |------|---------|
+| [bot-template.json](bot-template.json) | Sanitized export (profile + skills + routines config only). |
 | [profile.md](profile.md) | Public-safe Bot profile (name, blurb, boundaries). No secrets. |
 | [skills.md](skills.md) | Which skill to enable (this free zip). No corpus paths. |
 | [routines.md](routines.md) | Safe routine stubs only. No webhooks, no API keys. |
 
-Export = these three surfaces. Strip secrets, internal URLs, corpus paths, and API keys before any share.
+Export = `bot-template.json` plus these three surfaces. Strip secrets, internal URLs, corpus paths, and API keys before any share. This pack ships already stripped.
 
 ## Install (this Bot only — not marketplace)
 
@@ -43,6 +44,6 @@ Drive Sep-2 zips are **stale**. Use this PR branch.
 
 ## Live publish
 
-Marketplace / public Bot share of this template is a **publish**. Decline unnamed. Owners only, L3, not overnight.
+Marketplace / public Bot share of this template is a **publish**. Decline unnamed. **David/Sameth** only, L3, not overnight.
 
 **Not legal advice. No guarantees. Free only.**
