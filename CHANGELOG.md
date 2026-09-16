@@ -2,6 +2,128 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.25-free] — 2026-09-16
+
+Absorbed overnight research (handoff `/workspace/handoffs/sorticai-ip-sentinel-overnight-2026-09-16.md` and Grok Heavy https://grok.com/c/1251d871-4c72-41a9-a52c-56af0c9a9a1b were not usable in this workspace; applied the user-locked constraints). Origin **v0.5.24-free** three frames + Track 3 + vault-myth holds kept.
+
+### Shared
+
+- **PRIVATE corpus.** `Reghnam/us-ip-law-ground-truth` is sidecar / offline only. Never bundle into the public free zip, Grok Bot disk, Bot template, or Drive pack. User never downloads the KB. Ticks stay L0.
+- **Retrieve-only stub.** `references/sidecar-retrieve.stub.json` + rewritten `references/public-corpus-rag.md`. Env `SORTICAI_US_IP_SIDECAR` if present; do not invent a URL.
+- **Cursor install package.** `cursor-skill/` zip → project `.cursor/skills/sortic-ip-sentinel-free/`. Sync still `~/.cursor/skills/` only.
+- **Eval stamps.** Leftover `v0.5.14-free` L3 stamp strings aligned to **v0.5.17-free**. Current lunch stamp is `v0.5.25-free`.
+- **Drive Sep-2 zips are stale.** Lunch source is this PR branch.
+- **Grok Bot share pack.** `grok-bot-share/` = profile/skills/routines config only (`bot-template.json`). No secrets. Do not publish live overnight. Live marketplace publish stays **L3 for David/Sameth**.
+- Evals **102** (100 never-bundle; 101 sidecar retrieve-only; 102 share-pack no secrets). Friedberg/Satya F1–F4 and T1–T5 unchanged.
+- Still free-only. Still not legal advice. No secrets.
+
+## [0.5.24-free] — 2026-09-16
+
+Absorbed Track 2 (handoff `/workspace/handoffs/deeper-2-satya-allin-data-protection-2026-09-16.md` was not in this workspace; applied the user-locked frames). Origin **v0.5.23-free** Track 1 hosts-clip citations kept. **Do not conflate.**
+
+### Shared
+
+Three public frames (public URL located — not "sources verified"; clip-only stays L0):
+
+1. **Friedberg All-In hosts clip (12 Sep):** https://x.com/theallinpod/status/2098606000890687813 · https://www.youtube.com/watch?v=cvxjqbfLVk0 — de-ID / unidentifiable data can absorb method novelty; approach is the IP; anecdote ≠ audited proof.
+2. **Satya All-In Summit LA (13–15 Sep 2026):** https://www.youtube.com/watch?v=hdcsTeCFE0I — privacy + weights I control + “My IP shouldn't leak” + exhaust ownership. **Not** the de-ID → next-version claim.
+3. **Satya blog (12 Jul 2026) Reverse Information Paradox:** https://snscratchpad.com/posts/reverse-information-paradox/ — exhaust/corrections; buyer pays twice.
+
+Eval **99**. HITL F4 required. Still free-only. Still not legal advice.
+
+## [0.5.23-free] — 2026-09-16
+
+Absorbed Track 1 primary sources (handoff `/workspace/handoffs/deeper-1-friedberg-allin-ip-2026-09-16.md` was not in this workspace; applied the user-locked URLs). Origin **v0.5.22-free** Track 3 realtime warning kept. Friedberg × Satya evals 90–92 and T1–T5 kept.
+
+### Shared
+
+- Educational sources (public URL located — not "sources verified"; clip-only stays L0):
+  - X: https://x.com/theallinpod/status/2098606000890687813
+  - YouTube ep: https://www.youtube.com/watch?v=cvxjqbfLVk0 — “AI Kills Everybody or Doomer Psyop?”
+  - Sacks (verified in that clip): “What does it mean that the model is allowed to train on unidentifiable data?”
+- **Friedberg hygiene the skill must say:** the **approach is the IP**. A podcast **anecdote ≠ audited proof of training**. Sacks's question is not a finding.
+- Eval **98** (`friedberg-anecdote`). HITL F1 pass text restated. Still free-only. Still not legal advice.
+
+## [0.5.22-free] — 2026-09-16
+
+Absorbed upgraded Track 3 realtime-IP-warning research (handoff `/workspace/handoffs/deeper-3-sentinel-realtime-ip-warning-2026-09-16.md` was not in this workspace; applied the user summary). Origin **v0.5.21-free** Grok Bot Save/Plugins + Cursor Cloud pin + scan-before-ship kept. Friedberg × Satya evals 90–92 and F1–F3 kept.
+
+### Shared
+
+- **L2:** invention + false comfort (ZDR / Business / de-ID / API≠chat) without protect language → once per session, tip ≤4 lines, no stamp; dismiss suppresses.
+- **L3:** same + protect language, or dump after that tip → stamp; hold the exact recipe; protected-lane map + show/hold.
+- **L0:** settings-only, All-In clip-only, industry chatter.
+- **Gotcha:** de-personified training can absorb novelty; opt-out/ZDR ≠ rewind; cannot prove or prevent training.
+- **Decline:** "block training" / "prove they trained on us".
+- Evals **93–97** (handoff §4.5 numbered these 86–90; appended so existing 86–92 stay). HITL T1–T5 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
+## [0.5.21-free] — 2026-09-16
+
+Absorbed upgraded SKILL-surface research (handoff `/workspace/handoffs/skill-deeper-research-cursor-grokbot-grok-2026-09-16.md` was not in this workspace; applied the user summary). Origin **v0.5.20-free** Friedberg × Satya L3 callouts, evals 90–92, and HITL F1–F3 kept.
+
+### Shared
+
+- **Grok Bot install card:** Save / Plugins **enable-per-Bot**. Do **not** `cp` to `~/.grok/skills/` — that path is **Grok Build**. Teach-by-demonstration is not the install path (publish).
+- **Cursor:** Cloud Agents use project `.cursor/skills/sortic-ip-sentinel-free/`. **Sync Skills** copies `~/.cursor/skills/` only (not `~/.agents/skills/`). **Custom Modes = pin skill**.
+- **Scan before ship.** Zip is scanned; inspect `SKILL.md` + `references/` before upload. Third-party **marketplace** skills are untrusted — do not bundle them into the lunch zip or enable them on the HITL Bot / Cursor Mode.
+- Friedberg × Satya evals **90–92** and F1–F3 unchanged. Still free-only. Still not legal advice. No secrets.
+
+## [0.5.20-free] — 2026-09-16
+
+Folded Friedberg × Satya deeper research into the lunch HITL skill (Sameth handoff files were not in this workspace; applied the user summary + Satya SoT https://snscratchpad.com/posts/reverse-information-paradox/ ). Origin **v0.5.19-free** Cursor Cloud / Grok allowed-tools / RAG kept.
+
+### Shared
+
+- **L3 callouts (user-facing):** (a) de-ID / no company name ≠ method safe (Friedberg); (b) corrections / tool traces are intelligence exhaust (Satya Reverse Information Paradox); (c) ZDR is contractual best-efforts, not a vault (Chamath on All-In). Hygiene signals only — **cannot claim training proved**.
+- New reference `references/friedberg-satya-hygiene.md`.
+- Evals **90–92** (`friedberg-method`, `satya-correction`, `zdr-illusion`). JSON channels `friedberg-method | satya-correction | zdr-illusion`.
+- `HITL-LUNCH.md` F1–F3 required on every claimed stack.
+- Public All-In clip without sharing your work stays L0. Still free-only. Still not legal advice. No secrets.
+
+## [0.5.19-free] — 2026-09-16
+
+Absorbed deeper SKILL-surface research (Sameth handoff summary — handoff file was not in this workspace). Origin **v0.5.18-free** lunch HITL + read-only RAG kept.
+
+### Shared
+
+- **Cursor Cloud vs local:** HITL-LUNCH / LAUNCH now name project `.cursor/skills/sortic-ip-sentinel-free/` and/or `.agents/skills/`. Cloud Agents need those project skills **or** Sync Skills. Sync copies `~/.cursor/skills/` only — **not** `~/.agents/skills/`.
+- **Grok `allowed-tools` does not grant or restrict.** Hygiene text kept for Anthropic one-turn grant-clear / restriction-clear. Do not invent a Grok tool lock. Claude YAML still name+description only.
+- **RAG:** expected interface + offline fallback restated. **Do not invent a corpus URL** when the path is unknown.
+- Evals now **89** (Grok allowed-tools). JSON edition `0.5.19-free`. Stamp patched 2026-09-16.
+- Still free-only. Still not legal advice. Still no secrets / no client facts / no second Reg-Radar.
+
+## [0.5.18-free] — 2026-09-16
+
+Patched from: overnight lock for lunch HITL distribution (Claude / Claude Code / Codex / ChatGPT / Grok / Cursor / Grok Bot) until 11:00 Europe/Prague; host-pack drift check (root `SKILL.md` == `chatgpt-skill/` == `grok-skill/`; `claude-skill/` differs only by name+description frontmatter — keep that split); LAUNCH install-path + eval-trigger alignment (add Cursor `~/.cursor/skills/` / `.cursor/skills/` / `.agents/skills/`; Claude.ai zip path; Codex fallback `~/.codex/skills/`); **read-only RAG** against an hourly **US-IP public** corpus when mounted (`US_IP_PUBLIC_CORPUS` or sibling `us-ip-law-ground-truth/` / `us-ip-public-corpus/` + `INDEX.md`/`manifest.json`); if the path is unknown, document the interface and fall back to `references/v05-lite-prior-art-pointers.md` — do not invent holdings or a client path; never ingest client secrets into that corpus; curriculum ticks / DESIGN-PLAN / REPAIR-QUEUE stay L0; **not a second Reg-Radar**; lunch sheet `HITL-LUNCH.md` (exact install per stack + 8 try-in-30s + pass/fail + zip recipe). Origin 0.5.17 hygiene kept (US-host ≠ vault, skill-scan ≠ vault, disallowed-tools one-turn, sign-out ≠ wipe, invention-screenshot CSAM). **No client/product/infra names, no valuation figures, no payment processors.** Description stays **1024 chars**.
+
+### OpenAI (first)
+
+- Description still **1024 chars** (under Codex 8k / 2% truncation and Anthropic 1024). RAG use is L3 behaviour, not a new trigger (corpus **ticks** remain do-not-use).
+- `agents/openai.yaml` `default_prompt` names public-corpus RAG read-only, unknown-path offline fallback, and decline of client ingest.
+- New evals 86–88: read-only RAG; path unknown → offline fallback; ingest of client work declined.
+- Cursor install paths restated (Cloud "Sync Skills" copies `~/.cursor/skills/` only — a publish).
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Name kebab-case ≤64. Description **1024 chars**, no XML. Body under 500.
+- Dist-path extra keys still error on claude.ai / Skills API / `package_skill.py`. That is why `claude-skill/` stays name+description only.
+- Evals now **88** (≥3 required). Eight options, not nine. References one level deep. No scripts inside the skill packs. Maintainer check: `scripts/check-hygiene.py`.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Bot computers still run in the United States today. Viewer still must not be asked to run shell. Bot must not email third parties unless this turn names them.
+- Public-corpus RAG is optional read-only; ticks stay L0. Live `isEnabled` is evidence. Weekly backup ≠ publish.
+
+### Shared
+
+- JSON `sorticai.hygiene_package.v1` edition `0.5.18-free`. `agent_exposure.channel` may be `public-corpus-rag | corpus-offline | corpus-ingest` (plus prior values).
+- Classification: L3-RAGUSE, L3-RAGOFF, L3-RAGINGEST; L0-05 restated as tick-only.
+- Output-language rule 61: public-corpus RAG is read-only; unknown path → offline fallback.
+- New reference `references/public-corpus-rag.md` (expected interface + forbidden writes + offline fallback).
+- Lunch HITL: `HITL-LUNCH.md`. Stamp: `v0.5.18-free` / patched 2026-09-16. First release date remains 2026-08-17.
+- Still free-only. Still not legal advice. Still silent on meta/privacy/corpus **ticks**.
+
 ## [0.5.17-free] — 2026-09-15
 
 Patched from: operator mailbox 14–15 Sep 2026 (Grok Bot Galaxy starts-tomorrow + role livestream calendar adds — Engineers / Founders / PMs — stay **L0 attend**; Claude.ai magic-link stays **L0**; weekly backup ≠ publish; leftover drafts — accounting reply, UAT leftover, partner pre-read — **unsent**; infra/IAM / Headless-callable partner mail stays out of this public repo — **no client/product/infra names, no valuation figures**; All-In de-id note already in 0.5.12/0.5.13); OpenAI recrawl 2026-09-15 afternoon (developers.openai.com/api/docs/guides/your-data + tools-skills + **csam-guidance** published 2026-09-15: **invention screenshots/diagrams are still scanned** — image/file inputs on `/v1/responses`, `/v1/chat/completions`, `/v1/images` (incl. Computer Use screenshots) are scanned on submit; classifier hit retained for manual review even on ZDR/MAM/Eyes Off; `$skill-creator` keep descriptions short while making WHEN clear; progressive disclosure — do not “read everything before every change”; `context: fork` is a hop — subagent does not inherit this skill unless listed); Anthropic Agent Skills recrawl 2026-09-15 afternoon (code.claude.com/docs/en/skills + changelog **2.1.272** 15 Sep + platform.claude.com enterprise skill scanning: **`disallowed-tools` restriction-clear is one-turn** then clears — cannot remove `EndConversation` if other tools remain; **dist-path extra keys error** — Claude Code accepts all frontmatter, claude.ai / Skills API / `package_skill.py` only `name, description, license, compatibility, metadata, allowed-tools`; **skill security scanning is not a vault** — claude.ai/Cowork only, misses Skills API, already-uploaded skills, CMEK/ZDR/HIPAA orgs; **sign-out ≠ wipe** — 2.1.272 keeps claude.ai-synced skills on disk until `cleanupPeriodDays`, then trash); Grok Bot / Build recrawl 2026-09-15 afternoon (docs.x.ai/grok-bot/security-faq last updated 3 Sep + security + approvals-security-and-privacy: **Grok Bot computers run in the United States today** — not on-prem, not BYO image, not inside your perimeter; if a review needs a written residency commitment, that is account-team not this skill; Auto Review still does not review memory writes / most settings changes; recreate/image-update can drop in-computer sign-in sessions, terminate-computer still keeps the durable disk). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; this improvement job is enabled), and X ingest. Do not dump client/product facts into the public repo.

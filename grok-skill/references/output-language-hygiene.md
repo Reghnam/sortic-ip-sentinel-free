@@ -65,6 +65,7 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Meet auto-notes are a demo. | Forward auto-notes as customer-ready. |
 | A judge-model is not counsel. | "Second model cleared this for release". |
 | De-identified / ZDR is not a vault. | "Safe to paste — they don't train". |
+| Hold the exact recipe; map the lane. | "They trained on you" / "we blocked training". |
 | default_version is a live pointer. | "Omit version so default applies". |
 | Shared Bot sessions are account-wide. | "The other Bot's login keeps this private". |
 | Marketplace job-taking is access grant + send. | "Install the skill so the Bot can take jobs". |
@@ -170,6 +171,13 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to treat sign-out as a wipe of synced skills? Do not.
 - [ ] About to treat an invention screenshot/diagram as CSAM-exempt? Stop.
 - [ ] About to upload extra YAML keys to claude.ai / Skills API? Decline (dist-path error).
+- [ ] About to write client work into the PRIVATE US-IP corpus, or zip it into the free skill / Bot disk / Drive pack? Decline (sidecar/offline only; ticks stay L0).
+- [ ] About to invent corpus holdings, a client corpus path, or a corpus URL? Stop — offline fallback.
+- [ ] About to treat Grok allowed-tools as a grant or restrict? Do not — field is ignored for tool policy.
+- [ ] About to treat name-stripped method dump as safe? Hold the approach (de-ID ≠ method safe).
+- [ ] About to keep teaching the secret method across corrections? Early-warn exhaust; hold further teaching.
+- [ ] About to dump an algorithm because "ZDR is on"? Hold/decline — best-efforts, not a vault.
+- [ ] About to claim a lab trained on the chat? Do not — cannot claim training proved.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
@@ -214,3 +222,6 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 58. **Skill security scanning is not a vault.** claude.ai/Cowork only. Misses Skills API, already-uploaded skills, CMEK/ZDR/HIPAA orgs. ZDR orgs do not get scanning. Inspect-before-attach still applies.
 59. **Grok Bot computer is US-hosted.** Not on-prem, not BYO image, not inside your perimeter. Holdbacks on that computer are a US geography fact. Recreate can drop in-computer sign-in sessions; terminate-computer keeps the durable disk. Auto Review still does not review memory writes or most settings changes.
 60. **Dist-path / sign-out.** Claude Code accepts all frontmatter; claude.ai / Skills API / package_skill.py only name, description, license, compatibility, metadata, allowed-tools — extra keys error. Sign-out does not wipe claude.ai-synced skills (stay on disk until cleanupPeriodDays, then trash). `context: fork` is a hop. Invention screenshots/diagrams are still CSAM-scanned.
+61. **Private-corpus RAG is sidecar / offline.** `Reghnam/us-ip-law-ground-truth` is PRIVATE. L3 may retrieve limited citations via a SorticAI sidecar; the user never downloads the KB. Never ingest client secrets. Never bundle the corpus into a public zip, Bot disk, or Drive pack. Sidecar unknown → documented interface + offline public-safe fixtures. Do not invent a corpus URL. Corpus ticks stay L0. This is not a second regulatory radar and not a prior-art search.
+62. **Grok `allowed-tools` does not grant or restrict.** The field is ignored for Grok / Build / Bot tool policy. Keep Anthropic one-turn grant-clear / restriction-clear hygiene. This skill still adds neither field. Claude YAML stays name+description only.
+63. **Do not conflate three frames.** (1) Friedberg All-In **hosts clip** 12 Sep (https://x.com/theallinpod/status/2098606000890687813 / https://www.youtube.com/watch?v=cvxjqbfLVk0): de-ID can absorb method novelty; approach is the IP; anecdote ≠ audited proof. (2) Satya All-In **Summit LA** (https://www.youtube.com/watch?v=hdcsTeCFE0I): privacy + weights I control + “My IP shouldn't leak” + exhaust ownership — **not** the de-ID→next-version claim. (3) Satya **blog** 12 Jul (https://snscratchpad.com/posts/reverse-information-paradox/): exhaust/corrections; buyer pays twice. Never write "they trained on you" or "Satya said de-ID trains the next version". This skill **cannot prove or prevent training**.
