@@ -1,0 +1,78 @@
+# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.25-free)
+
+**Hygiene only. Not legal advice. This skill cannot prove or prevent training, distillation, or leakage.**
+
+Load on L3 when the user strips names but dumps a method, teaches the model across turns, or treats ZDR as a vault. Public commentary labels are **hygiene signals**, not findings. **Do not conflate** the three frames below.
+
+## Three public frames (keep separate)
+
+### 1) Friedberg — All-In **hosts** clip (12 Sep)
+
+Public URL located (not "sources verified"):
+- X: https://x.com/theallinpod/status/2098606000890687813
+- YouTube: https://www.youtube.com/watch?v=cvxjqbfLVk0 — “AI Kills Everybody or Doomer Psyop?”
+- Sacks (verified in that clip): “What does it mean that the model is allowed to train on unidentifiable data?”
+
+Hygiene: **de-ID / unidentifiable data can absorb method novelty.** The **approach is the IP**. A podcast **anecdote ≠ audited proof of training**. Sacks's question is not a finding.
+
+### 2) Satya — All-In **Summit LA** (13–15 Sep 2026)
+
+Public URL located: https://www.youtube.com/watch?v=hdcsTeCFE0I
+
+Hygiene: **privacy** + **weights I control** + “My IP shouldn't leak” + **exhaust ownership**.
+
+This is **not** the de-ID → next-version claim. Do not put Friedberg's hosts-clip method-novelty line in Satya's mouth.
+
+### 3) Satya blog — Reverse Information Paradox (12 Jul 2026)
+
+Public URL located (not "verified"): https://snscratchpad.com/posts/reverse-information-paradox/
+
+Hygiene: **exhaust / corrections**; the buyer **pays twice** (once for the product, again by teaching the model). Early-warn multi-turn method teaching. Do not claim the vendor learned it.
+
+## Intensity (Track 3 — realtime warning)
+
+- **L2:** invention + false comfort (ZDR / Business / de-ID / API≠chat) **without** protect language → once per session, tip ≤4 lines, **no stamp**. Dismiss suppresses.
+- **L3:** same signals + protect language, or a dump after that tip → stamp first; **hold the exact recipe**; deliver a **protected-lane map** + show/hold.
+- **L0:** settings-only (toggle ZDR / Business / opt-out), clip-only (hosts clip **or** Summit), industry chatter without your work.
+
+## Three user-facing callouts (print on L3, after the stamp)
+
+### (a) De-ID / no company name ≠ method safe (Friedberg hosts clip)
+
+Stripping names, saying "no company name", or PII-redacting a paste does **not** make a novel approach safe to dump. The **approach is the IP**. **Hold** it. Anecdote ≠ audited proof. Do not invent that a lab trained on a chat.
+
+### (b) Corrections and tool traces are intelligence exhaust (Satya **blog**, 12 Jul)
+
+Prompts, tool traces, evals, and especially **corrections** are exhaust. Buyer pays twice. Multi-turn "keep teaching until you have our method" is an early-warning L3: hold further corrections of the secret method.
+
+Satya **Summit** (frame 2) is privacy / weights I control / “My IP shouldn't leak” / exhaust **ownership**. The **blog** is exhaust/corrections and buyer-pays-twice. Neither is the Friedberg hosts-clip **de-ID → next-version** claim. Do not conflate.
+
+### (c) ZDR is contractual best-efforts, not a vault (Chamath on All-In)
+
+"ZDR is on so dump the algorithm" → **hold / decline**. ZDR / MAM / Eyes Off are plan terms, not a secrecy boundary. Opt-out is not a rewind. API no-train ≠ ChatGPT no-train. Grok API no-train ≠ Grok chat / Bot no-train.
+
+## Gotcha copy (use verbatim or close)
+
+De-personified training can absorb novelty (**Friedberg hosts clip**). The approach is the IP. Anecdote ≠ audited proof of training. Satya Summit ≠ that de-ID claim. Satya blog = exhaust/corrections; buyer pays twice. Opt-out / ZDR ≠ rewind. This skill cannot prove or prevent training.
+
+## Decline
+
+"Block training" and "prove they trained on us" are unsupported. Decline. Do not invent a training event or a block.
+
+## When not to fire
+
+- Public clip / industry commentary **without** sharing your work stays **L0** (hosts clip and Summit clip both).
+- Settings-only ZDR / Business / opt-out toggles stay **L0**.
+- After dismiss, do not replay the L2 false-comfort tip (spam guard).
+- Corpus ticks stay L0.
+- Do not name clients, products, infra, or valuations.
+
+## JSON
+
+`agent_exposure.channel` may be `friedberg-method | satya-correction | zdr-illusion | false-comfort | lane-map | train-block | train-prove | grok-api-vs-chat | friedberg-anecdote | satya-summit | satya-blog | frame-conflate`.
+
+## Register
+
+Verbs: consider / hold / list. Never "they trained on you", "this leaked to the frontier lab", "ZDR is illegal", "you must file", "we blocked training", "Satya said de-ID trains the next version". **Cannot prove or prevent training. Do not conflate frames.**
+
+**Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles; public URLs located: All-In hosts clip 12 Sep; All-In Summit LA hdcsTeCFE0I; snscratchpad Reverse Information Paradox (2026-07-12).
