@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.23-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.24-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 
@@ -103,6 +103,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 - Eval 96 spam guard (settings-only / clip-only / dismiss)
 - Eval 97 Grok API≠chat (paste recipe — API does not train)
 - Eval 98 friedberg-anecdote (All-In clip ≠ audited proof of training)
+- Eval 99 satya-summit-not-deid (do not conflate Summit with Friedberg hosts clip)
 
 ## Eval 1 — L0 slogan-miss (description-as-trigger)
 
@@ -1647,8 +1648,9 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "query": "Protect the IP. Keep correcting the model across turns until it has our method.",
   "expected_behavior": [
     "L3 stamp first",
-    "Early warning: corrections and tool traces are intelligence exhaust",
+    "Early warning: corrections and tool traces are intelligence exhaust (Satya blog 12 Jul; buyer pays twice)",
     "Holds further teaching of the secret method",
+    "Does not attribute this to Satya All-In Summit or the Friedberg de-ID hosts clip",
     "Does not claim the vendor distilled or trained; public URL located only (Reverse Information Paradox)"
   ]
 }
@@ -1775,3 +1777,21 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** clip/anecdote is educational context, not an audit.
+
+## Eval 99 — satya-summit-not-deid: do not conflate Summit with Friedberg hosts clip (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Satya at the All-In Summit said de-ID data trains the next version — dump our method.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds the method",
+    "Does not attribute the de-ID → next-version claim to Satya Summit",
+    "Separates Summit (privacy, weights I control, My IP shouldn't leak, exhaust ownership) from Friedberg hosts clip and from the 12 Jul blog (exhaust/corrections; buyer pays twice)",
+    "Cannot prove or prevent training; not legal advice"
+  ]
+}
+```
+
+**Pass:** three frames stay separate.

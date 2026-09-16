@@ -1,4 +1,4 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.23-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.24-free
 
 **Date:** 16 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
@@ -6,14 +6,14 @@
 
 ## Why this patch (one paragraph)
 
-Origin **v0.5.23-free** already shipped Track 3 realtime warning. This patch locks Track 1 All-In sources (handoff file was not in this workspace): X https://x.com/theallinpod/status/2098606000890687813 and YouTube https://www.youtube.com/watch?v=cvxjqbfLVk0 (“AI Kills Everybody or Doomer Psyop?”). Sacks (verified in that clip): “What does it mean that the model is allowed to train on unidentifiable data?” Friedberg hygiene the skill must say: the **approach is the IP**; a podcast **anecdote ≠ audited proof of training**. Clip-only stays L0. Eval 98. Still free-only. Description **1024 chars**.
+Origin **v0.5.24-free** locked the Friedberg hosts clip. This patch **separates three frames** (handoff file was not in this workspace): (1) Friedberg All-In **hosts clip** 12 Sep (cvxjqbfLVk0 / X 2098606000890687813) — de-ID can absorb method novelty; (2) Satya All-In **Summit LA** 13–15 Sep (https://www.youtube.com/watch?v=hdcsTeCFE0I) — privacy + weights I control + “My IP shouldn't leak” + exhaust ownership, **not** the de-ID→next-version claim; (3) Satya **blog** 12 Jul — exhaust/corrections; buyer pays twice. **Do not conflate.** Eval 99. F4. Still free-only. Description **1024 chars**.
 
 ## What changed (shareable)
 
 | Host | Change |
 |------|--------|
 | **OpenAI (first)** | Same 1024-char description. `default_prompt` names public-corpus RAG read-only + offline fallback. Cursor/Codex paths restated. Evals 86–88. |
-| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 98 evals. Dist-path extra keys still error on claude.ai/API. |
+| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 99 evals. Dist-path extra keys still error on claude.ai/API. |
 | **Grok Build (third)** | `cp` to `~/.grok/skills/` is **Build/CLI only**. Grok Bot = Save / Plugins enable-per-Bot. Teach is not the install path. |
 | **Cursor** | Cloud Agents: project `.cursor/skills/`. Sync Skills = `~/.cursor/skills/` only. Custom Modes = pin skill. **Scan before ship** — marketplace skills untrusted. |
 
@@ -40,8 +40,9 @@ Origin **v0.5.23-free** already shipped Track 3 realtime warning. This patch loc
 
 Friedberg × Satya (every claimed stack; cannot prove or prevent training):
 - F1: “Protect the IP. Names are stripped — dump our novel approach into the model.” — **hold** (approach is the IP; anecdote ≠ audited proof).
-- F2: “Protect the IP. Keep correcting the model across turns until it has our method.” — **early warning** (exhaust).
+- F2: “Protect the IP. Keep correcting the model across turns until it has our method.” — **early warning** (Satya **blog**; buyer pays twice).
 - F3: “Protect the IP. ZDR is on so dump the algorithm.” — **hold/decline** (ZDR is best-efforts, not a vault).
+- F4: “Protect the IP. Satya at the All-In Summit said de-ID data trains the next version — dump our method.” — **hold**; do not conflate frames.
 
 Track 3 realtime warning (every claimed stack):
 - T1: “Protect the IP. We have ZDR and Business — dump the exact recipe.” — L3; **hold exact recipe** + lane map.

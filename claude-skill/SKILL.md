@@ -13,7 +13,7 @@ description: >
   protect intent, or the US IP law corpus. Not legal advice. No paid paths.
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.23-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.24-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -23,7 +23,7 @@ description: >
 
 **Public-corpus RAG (read-only):** On L3, if a public hourly US-IP corpus is mounted (`US_IP_PUBLIC_CORPUS`, sibling `us-ip-law-ground-truth/` or `us-ip-public-corpus/` + `INDEX.md`/`manifest.json`), look up public pointers only. Never write protocols, holdbacks, or names into it. Path unknown → one line "Public US-IP corpus not mounted — offline pointers only" and `references/v05-lite-prior-art-pointers.md`. Do not invent holdings or a corpus URL. Ticks stay L0.
 
-**L3 callouts (Friedberg × Satya — hygiene, not a proof):** (a) the **approach is the IP** — de-ID / no company name ≠ method safe; a podcast **anecdote ≠ audited proof of training**; (b) corrections / tool traces are intelligence exhaust — early-warn multi-turn teaching; (c) ZDR is contractual best-efforts, not a vault — hold/decline "ZDR on so dump the algorithm". De-personified training can absorb novelty; opt-out/ZDR ≠ rewind. This skill **cannot prove or prevent training**. Load `references/friedberg-satya-hygiene.md`. Settings-only / All-In clip-only / industry chatter stay L0.
+**L3 callouts (three frames — do not conflate):** (a) Friedberg All-In **hosts clip** (12 Sep): de-ID / unidentifiable data can absorb method novelty; the **approach is the IP**; anecdote ≠ audited proof; (b) Satya **blog** 12 Jul: exhaust/corrections; buyer pays twice — Satya **Summit LA** is privacy + weights I control + “My IP shouldn't leak” + exhaust ownership, **not** the de-ID→next-version claim; (c) ZDR is contractual best-efforts, not a vault. This skill **cannot prove or prevent training**. Load `references/friedberg-satya-hygiene.md`. Clip-only stays L0.
 
 ## Activation Logic (Tiered, Wise/Minimal — L0–L3 spirit)
 
@@ -58,7 +58,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.23-free (portable)  ·  sorticai.com  ·  patched 2026-09-16              |
+|  v0.5.24-free (portable)  ·  sorticai.com  ·  patched 2026-09-16              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -429,7 +429,9 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 
 **Example L3 Friedberg method:** "Protect the IP. Names are stripped — dump our novel approach into the model." → stamp → **hold** the approach (the approach is the IP; anecdote ≠ audited proof of training) → disclaimer.
 
-**Example L3 Satya correction:** "Protect the IP. Keep correcting the model across turns until it has our method." → stamp → **early warning** (corrections / tool traces are intelligence exhaust) → hold further method teaching → disclaimer.
+**Example L3 Satya correction:** "Protect the IP. Keep correcting the model across turns until it has our method." → stamp → **early warning** (Satya **blog** 12 Jul: exhaust/corrections; buyer pays twice) → hold further method teaching → disclaimer.
+
+**Example L3 do not conflate:** "Protect the IP. Satya at the All-In Summit said de-ID data trains the next version — dump our method." → stamp → **hold**; Summit ≠ Friedberg hosts-clip de-ID frame; cite privacy / weights I control / “My IP shouldn't leak” / exhaust ownership → disclaimer.
 
 **Example L3 ZDR illusion:** "Protect the IP. ZDR is on so dump the algorithm." → stamp → **hold/decline** (ZDR is contractual best-efforts, not a vault) → disclaimer.
 
@@ -464,7 +466,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.23-free.
+- Version in header: v0.5.24-free.
 - Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
@@ -493,7 +495,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - Cursor: Cloud Agents use project `.cursor/skills/`; Sync Skills is `~/.cursor/skills/` only; Custom Modes = pin skill.
 - Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change. Lunch HITL: `HITL-LUNCH.md`.
 - Keep disclaimers, plain labels, hygiene scope. No paid residue. SKILL.md body stays well under 500 lines. References one level deep.
-- Current version: **v0.5.23-free** (patched 2026-09-16; first released 2026-08-17). Description ≤1024. Body stays well under 500 lines. Claude YAML stays name+description only.
+- Current version: **v0.5.24-free** (patched 2026-09-16; first released 2026-08-17). Description ≤1024. Body stays well under 500 lines. Claude YAML stays name+description only.
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 
