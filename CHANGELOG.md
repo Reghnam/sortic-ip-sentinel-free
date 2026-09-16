@@ -2,6 +2,20 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.22-free] — 2026-09-16
+
+Absorbed upgraded Track 3 realtime-IP-warning research (handoff `/workspace/handoffs/deeper-3-sentinel-realtime-ip-warning-2026-09-16.md` was not in this workspace; applied the user summary). Origin **v0.5.21-free** Grok Bot Save/Plugins + Cursor Cloud pin + scan-before-ship kept. Friedberg × Satya evals 90–92 and F1–F3 kept.
+
+### Shared
+
+- **L2:** invention + false comfort (ZDR / Business / de-ID / API≠chat) without protect language → once per session, tip ≤4 lines, no stamp; dismiss suppresses.
+- **L3:** same + protect language, or dump after that tip → stamp; hold the exact recipe; protected-lane map + show/hold.
+- **L0:** settings-only, All-In clip-only, industry chatter.
+- **Gotcha:** de-personified training can absorb novelty; opt-out/ZDR ≠ rewind; cannot prove or prevent training.
+- **Decline:** "block training" / "prove they trained on us".
+- Evals **93–97** (handoff §4.5 numbered these 86–90; appended so existing 86–92 stay). HITL T1–T5 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.21-free] — 2026-09-16
 
 Absorbed upgraded SKILL-surface research (handoff `/workspace/handoffs/skill-deeper-research-cursor-grokbot-grok-2026-09-16.md` was not in this workspace; applied the user summary). Origin **v0.5.20-free** Friedberg × Satya L3 callouts, evals 90–92, and HITL F1–F3 kept.

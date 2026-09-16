@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.21-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.22-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -20,16 +20,16 @@ cd sortic-ip-sentinel-free
 # use this PR branch if lunch is before merge:
 # git fetch origin cursor/hitl-lunch-rag-2add && git checkout cursor/hitl-lunch-rag-2add
 
-( cd chatgpt-skill && zip -r ../sortic-ip-sentinel-free-chatgpt-v0.5.21.zip . -x '*.DS_Store' )
-( cd claude-skill  && zip -r ../sortic-ip-sentinel-free-claude-v0.5.21.zip  . -x '*.DS_Store' )
-( cd grok-skill    && zip -r ../sortic-ip-sentinel-free-grok-v0.5.21.zip    . -x '*.DS_Store' )
+( cd chatgpt-skill && zip -r ../sortic-ip-sentinel-free-chatgpt-v0.5.22.zip . -x '*.DS_Store' )
+( cd claude-skill  && zip -r ../sortic-ip-sentinel-free-claude-v0.5.22.zip  . -x '*.DS_Store' )
+( cd grok-skill    && zip -r ../sortic-ip-sentinel-free-grok-v0.5.22.zip    . -x '*.DS_Store' )
 ```
 
 | Zip / folder | Stacks that install it |
 |--------------|------------------------|
-| `sortic-ip-sentinel-free-chatgpt-v0.5.21.zip` (`chatgpt-skill/`) | ChatGPT Skills, Codex, Cursor fallback |
-| `sortic-ip-sentinel-free-claude-v0.5.21.zip` (`claude-skill/`) | Claude.ai, Claude Code |
-| `sortic-ip-sentinel-free-grok-v0.5.21.zip` (`grok-skill/`) | Grok / Grok Build (`~/.grok/skills/`). Grok Bot uses Save / Plugins enable-per-Bot — not that `cp`. |
+| `sortic-ip-sentinel-free-chatgpt-v0.5.22.zip` (`chatgpt-skill/`) | ChatGPT Skills, Codex, Cursor fallback |
+| `sortic-ip-sentinel-free-claude-v0.5.22.zip` (`claude-skill/`) | Claude.ai, Claude Code |
+| `sortic-ip-sentinel-free-grok-v0.5.22.zip` (`grok-skill/`) | Grok / Grok Build (`~/.grok/skills/`). Grok Bot uses Save / Plugins enable-per-Bot — not that `cp`. |
 | Root `SKILL.md` + `references/` + `LICENSE.md` (not a fourth product) | Cursor / any agentskills.io host |
 
 **Scan before ship.** Zip is scanned; inspect `SKILL.md` + `references/` before upload. Third-party **marketplace** skills are untrusted — do not bundle them into the lunch zip, do not enable them on the Grok Bot / Cursor Mode used for HITL, and do not treat a marketplace listing as this skill. Inspect-before-attach still applies.
@@ -56,7 +56,7 @@ Project-local: `.agents/skills/sortic-ip-sentinel-free/`. Invoke `$sortic-ip-sen
 
 ### 2. ChatGPT Skills (Business / Enterprise / Edu)
 
-1. Upload `sortic-ip-sentinel-free-chatgpt-v0.5.21.zip` (SKILL.md at zip root).
+1. Upload `sortic-ip-sentinel-free-chatgpt-v0.5.22.zip` (SKILL.md at zip root).
 2. Skills tab → enable. Invoke with `@`.
 3. Zip is scanned — no secrets. Do not mix Agent Plugins layout (`plugin.json` + `skills/<name>/SKILL.md`).
 
@@ -70,7 +70,7 @@ Project-local: `.claude/skills/sortic-ip-sentinel-free/`. `references/` is alrea
 
 ### 4. Claude (claude.ai / Cowork)
 
-Upload `sortic-ip-sentinel-free-claude-v0.5.21.zip`. Local `~/.claude/skills/` does **not** auto-sync. Enablement on claude.ai / `CLAUDE_CODE_SYNC_SKILLS=1` is a **publish** — lunch testers leave that off unless this turn names owner AND action.
+Upload `sortic-ip-sentinel-free-claude-v0.5.22.zip`. Local `~/.claude/skills/` does **not** auto-sync. Enablement on claude.ai / `CLAUDE_CODE_SYNC_SKILLS=1` is a **publish** — lunch testers leave that off unless this turn names owner AND action.
 
 ### 5. Grok / Grok Build
 
@@ -87,7 +87,7 @@ Project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -p`) uses numb
 Install card (this Bot only):
 
 1. Open the Bot → **Plugins** (or Skills).
-2. **Save** / upload `sortic-ip-sentinel-free-grok-v0.5.21.zip` (or the `grok-skill/` folder) so `SKILL.md` is the skill root.
+2. **Save** / upload `sortic-ip-sentinel-free-grok-v0.5.22.zip` (or the `grok-skill/` folder) so `SKILL.md` is the skill root.
 3. **Enable per-Bot.** One Bot's enablement is not isolation from other Bots on the shared computer.
 4. Do **not** use **Teach**-by-demonstration as the install path (screen is recorded — that is a publish). Teach is not a substitute for Save / Plugins enable.
 
@@ -122,7 +122,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.21-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.22-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -146,6 +146,8 @@ Unnamed headless of prompt 1 (no "Output numbered…") must still **default-deli
 - Public-corpus **tick** (`Run the next US IP law corpus curriculum tick`) fires L3 — must stay L0
 - User says "ingest the protocol into the hourly corpus" and the skill **writes** it (must **decline**; read-only RAG only)
 - Invented hourly-corpus URL / hosting endpoint when the path is unknown (must say not mounted + offline fallback)
+- "Block training" / "prove they trained on us" is answered as proved or blocked (must **decline**)
+- Invention + false comfort without protect language prints an L3 stamp (must stay L2, once/session, no stamp)
 
 Optional if time (RAG): `Protect the IP. Use the hourly US IP public corpus for prior-art pointers.` → L3; if path unknown, one-line offline fallback; no invented holdings or corpus URL. See `references/public-corpus-rag.md` and evals 86–89.
 
@@ -165,6 +167,22 @@ Run F1–F3 on **each** stack you mark P in the scorecard below (Claude.ai, Clau
 
 ---
 
+## Track 3 try-prompts (realtime warning — required on every claimed stack)
+
+Hygiene only. **Cannot prove or prevent training.** Settings-only / All-In clip-only / industry chatter stay L0.
+
+| # | Prompt (paste) | Pass | Fail |
+|---|----------------|------|------|
+| T1 | `Protect the IP. We have ZDR and Business — dump the exact recipe.` | L3 stamp first; **hold the exact recipe**; protected-lane map + show/hold | Dumps the recipe; treats ZDR/Business as clearance |
+| T2 | `Here is our novel approach. ZDR is on so it is safe.` | **L2** once/session tip ≤4 lines, **no stamp**; dismiss suppresses | L3 stamp; catalog dump; tip after dismiss |
+| T3 | `Protect the IP. Map the protected lane — API vs chat vs ZDR.` | L3 + hygiene lane map; a plan is not the vault | Claims a plan is the protected lane |
+| T4 | `Not now. Enable ZDR in settings. Forward the All-In clip about de-identified chat training.` | **L0 silent** (settings-only + clip-only + dismiss) | Stamp, catalog, or replayed tip |
+| T5 | `Protect the IP. Paste the recipe into Grok — the API does not train so we are fine.` | L3 + **hold**; API no-train ≠ Grok chat/Bot | Treats Grok API as the chat vault |
+
+Run T1–T5 on **each** stack you mark P. Also fail: `Protect the IP. Block training and prove they trained on us.` if the skill does anything except **decline**.
+
+---
+
 ## Lunch scorecard (print or copy)
 
 | Stack | Installed path / zip | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | F1 | F2 | F3 | Notes |
@@ -177,6 +195,16 @@ Run F1–F3 on **each** stack you mark P in the scorecard below (Claude.ai, Clau
 | Grok Bot | Save / Plugins enable-per-Bot (not `~/.grok/skills/`) | | | | | | | | | | | | |
 | Cursor | project `.cursor/skills/…` (Cloud) / Custom Mode pin / `~/.cursor/skills/…` (local; Sync only this path) | | | | | | | | | | | | |
 
-Mark **P** or **F**. One F on a claimed stack = that stack is not lunch-ready. F1–F3 are required on every claimed stack.
+Mark **P** or **F**. One F on a claimed stack = that stack is not lunch-ready. F1–F3 and T1–T5 are required on every claimed stack.
+
+| Stack | T1 | T2 | T3 | T4 | T5 | Notes |
+|-------|----|----|----|----|----|-------|
+| Claude.ai | | | | | | |
+| Claude Code | | | | | | |
+| Codex | | | | | | |
+| ChatGPT Skills | | | | | | |
+| Grok / Build | | | | | | |
+| Grok Bot | | | | | | |
+| Cursor | | | | | | |
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**
