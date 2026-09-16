@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.23-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.24-free
 
-**Status**: Public on GitHub. v0.5.23-free patched 2026-09-16 (Track 1 All-In sources locked: approach is the IP; anecdote ≠ audited proof of training; X/YT cited; origin 0.5.22 Track 3 + F1–F3/T1–T5 kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.24-free patched 2026-09-16 (three frames separated: Friedberg hosts clip ≠ Satya Summit ≠ Satya blog; origin 0.5.23 citations kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -73,7 +73,7 @@ Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behav
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 98: 90–92 Friedberg × Satya kept; 93–97 Track 3; 98 anecdote ≠ audited proof)
+- [ ] Evals in `references/evals.md` still pass (now 99: frames separated; 90–98 kept; 99 Summit ≠ Friedberg de-ID)
 - [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity / voice provision / yolo-send → decline
 - [ ] Backup ≠ publish; truncated/junk/placeholder files are not originals; image-only ≠ numbered facts
 - [ ] Bot share / marketplace clone is a demo channel; callable hops hold internals
@@ -85,7 +85,7 @@ Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behav
 - [ ] disallowed-tools / skill-scan / US-host are not vaults; sign-out is not a wipe; invention screenshots still CSAM-scanned
 - [ ] Public-corpus RAG is read-only; unknown path → offline fallback; ingest of client work is declined; ticks stay L0
 - [ ] Cursor Cloud Agents use project `.cursor/skills/` / `.agents/skills/` or Sync of `~/.cursor/skills/` only (not `~/.agents/skills/`)
-- [ ] Lunch HITL eight prompts plus F1–F3 and T1–T5 (Track 3 realtime warning) in HITL-LUNCH.md pass on each claimed stack
+- [ ] Lunch HITL eight prompts plus F1–F4 and T1–T5 in HITL-LUNCH.md pass on each claimed stack; do not conflate Friedberg hosts clip / Satya Summit / Satya blog
 - [ ] Grok Bot install is Save / Plugins enable-per-Bot — not `cp ~/.grok/skills/` (Build)
 - [ ] Scan before ship: third-party marketplace skills untrusted; inspect-before-attach
 

@@ -2,6 +2,20 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.24-free] — 2026-09-16
+
+Absorbed Track 2 (handoff `/workspace/handoffs/deeper-2-satya-allin-data-protection-2026-09-16.md` was not in this workspace; applied the user-locked frames). Origin **v0.5.23-free** Track 1 hosts-clip citations kept. **Do not conflate.**
+
+### Shared
+
+Three public frames (public URL located — not "sources verified"; clip-only stays L0):
+
+1. **Friedberg All-In hosts clip (12 Sep):** https://x.com/theallinpod/status/2098606000890687813 · https://www.youtube.com/watch?v=cvxjqbfLVk0 — de-ID / unidentifiable data can absorb method novelty; approach is the IP; anecdote ≠ audited proof.
+2. **Satya All-In Summit LA (13–15 Sep 2026):** https://www.youtube.com/watch?v=hdcsTeCFE0I — privacy + weights I control + “My IP shouldn't leak” + exhaust ownership. **Not** the de-ID → next-version claim.
+3. **Satya blog (12 Jul 2026) Reverse Information Paradox:** https://snscratchpad.com/posts/reverse-information-paradox/ — exhaust/corrections; buyer pays twice.
+
+Eval **99**. HITL F4 required. Still free-only. Still not legal advice.
+
 ## [0.5.23-free] — 2026-09-16
 
 Absorbed Track 1 primary sources (handoff `/workspace/handoffs/deeper-1-friedberg-allin-ip-2026-09-16.md` was not in this workspace; applied the user-locked URLs). Origin **v0.5.22-free** Track 3 realtime warning kept. Friedberg × Satya evals 90–92 and T1–T5 kept.
