@@ -2,6 +2,18 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.20-free] — 2026-09-16
+
+Folded Friedberg × Satya deeper research into the lunch HITL skill (Sameth handoff files were not in this workspace; applied the user summary + Satya SoT https://snscratchpad.com/posts/reverse-information-paradox/ ). Origin **v0.5.19-free** Cursor Cloud / Grok allowed-tools / RAG kept.
+
+### Shared
+
+- **L3 callouts (user-facing):** (a) de-ID / no company name ≠ method safe (Friedberg); (b) corrections / tool traces are intelligence exhaust (Satya Reverse Information Paradox); (c) ZDR is contractual best-efforts, not a vault (Chamath on All-In). Hygiene signals only — **cannot claim training proved**.
+- New reference `references/friedberg-satya-hygiene.md`.
+- Evals **90–92** (`friedberg-method`, `satya-correction`, `zdr-illusion`). JSON channels `friedberg-method | satya-correction | zdr-illusion`.
+- `HITL-LUNCH.md` F1–F3 required on every claimed stack.
+- Public All-In clip without sharing your work stays L0. Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.19-free] — 2026-09-16
 
 Absorbed deeper SKILL-surface research (Sameth handoff summary — handoff file was not in this workspace). Origin **v0.5.18-free** lunch HITL + read-only RAG kept.

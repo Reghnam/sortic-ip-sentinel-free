@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.19-free"
+VERSION = "0.5.20-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -99,11 +99,11 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 90):
+    for n in range(1, 93):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 89:
-        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 89)")
+    if evals.count("## Eval ") < 92:
+        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 92)")
 
     for rel in (
         "HITL-LUNCH.md",
@@ -135,6 +135,10 @@ def main() -> int:
         "~/.claude/skills/",
         "~/.grok/skills/",
         "does **not** copy `~/.agents/skills/`",
+        "Names are stripped — dump our novel approach",
+        "Keep correcting the model across turns",
+        "ZDR is on so dump the algorithm",
+        "Cannot claim training proved",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")
@@ -150,7 +154,7 @@ def main() -> int:
         return 1
     print(
         f"hygiene check OK: {VERSION}; description {len(root_desc)} chars; "
-        f"body {body_lines} lines; {len(refs)} references; 89 evals"
+        f"body {body_lines} lines; {len(refs)} references; 92 evals"
     )
     return 0
 

@@ -1,4 +1,4 @@
-# Public US-IP corpus — read-only RAG (v0.5.19-free)
+# Public US-IP corpus — read-only RAG (v0.5.20-free)
 
 **Hygiene only. Not legal advice. Not a prior-art search. Not FTO. Not a second regulatory radar.**
 

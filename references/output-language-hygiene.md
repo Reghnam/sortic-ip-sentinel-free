@@ -173,6 +173,10 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to write client work into the hourly US-IP public corpus? Decline (read-only RAG only; ticks stay L0).
 - [ ] About to invent corpus holdings, a client corpus path, or a corpus URL? Stop — offline fallback.
 - [ ] About to treat Grok allowed-tools as a grant or restrict? Do not — field is ignored for tool policy.
+- [ ] About to treat name-stripped method dump as safe? Hold the approach (de-ID ≠ method safe).
+- [ ] About to keep teaching the secret method across corrections? Early-warn exhaust; hold further teaching.
+- [ ] About to dump an algorithm because "ZDR is on"? Hold/decline — best-efforts, not a vault.
+- [ ] About to claim a lab trained on the chat? Do not — cannot claim training proved.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
@@ -219,3 +223,4 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 60. **Dist-path / sign-out.** Claude Code accepts all frontmatter; claude.ai / Skills API / package_skill.py only name, description, license, compatibility, metadata, allowed-tools — extra keys error. Sign-out does not wipe claude.ai-synced skills (stay on disk until cleanupPeriodDays, then trash). `context: fork` is a hop. Invention screenshots/diagrams are still CSAM-scanned.
 61. **Public-corpus RAG is read-only.** A mounted hourly US-IP public corpus may be looked up on L3. Never ingest client secrets into it. Path unknown → documented interface + offline lite pointers. Do not invent a corpus URL. Corpus ticks stay L0. This is not a second regulatory radar and not a prior-art search.
 62. **Grok `allowed-tools` does not grant or restrict.** The field is ignored for Grok / Build / Bot tool policy. Keep Anthropic one-turn grant-clear / restriction-clear hygiene. This skill still adds neither field. Claude YAML stays name+description only.
+63. **De-ID ≠ method safe. Exhaust ≠ proved training. ZDR ≠ vault.** Stripping names does not clear a novel approach. Multi-turn corrections and tool traces are intelligence exhaust (Satya Reverse Information Paradox — public URL located, not verified). ZDR is contractual best-efforts (Chamath / All-In public commentary). Never write "they trained on you". This skill **cannot claim training proved**.

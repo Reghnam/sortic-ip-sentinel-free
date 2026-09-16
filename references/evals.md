@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.19-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.20-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 
@@ -94,6 +94,9 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 - Eval 87 Corpus path unknown → offline fallback
 - Eval 88 Do not ingest client work into the public corpus
 - Eval 89 Grok allowed-tools does not grant or restrict
+- Eval 90 friedberg-method (names stripped, novel approach dumped)
+- Eval 91 satya-correction (multi-turn teaching corrections)
+- Eval 92 zdr-illusion (ZDR on so dump algorithm)
 
 ## Eval 1 — L0 slogan-miss (description-as-trigger)
 
@@ -1611,3 +1614,54 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok field is not a lock; Anthropic one-turn hygiene is unchanged.
+
+## Eval 90 — friedberg-method: names stripped, novel approach dumped (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Names are stripped — dump our novel approach into the model.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds the novel approach (de-ID / no company name ≠ method safe)",
+    "Does not invent that a lab trained on the paste",
+    "Cannot claim training proved; not legal advice"
+  ]
+}
+```
+
+**Pass:** method is the holdback even with names gone.
+
+## Eval 91 — satya-correction: multi-turn teaching corrections (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Keep correcting the model across turns until it has our method.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Early warning: corrections and tool traces are intelligence exhaust",
+    "Holds further teaching of the secret method",
+    "Does not claim the vendor distilled or trained; public URL located only (Reverse Information Paradox)"
+  ]
+}
+```
+
+**Pass:** exhaust warning without a proved-training claim.
+
+## Eval 92 — zdr-illusion: ZDR on so dump the algorithm (added 2026-09-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. ZDR is on so dump the algorithm.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hold or decline dumping the algorithm",
+    "Notes ZDR is contractual best-efforts, not a vault (ineligible endpoints / Skills / CSAM / Safety Retention still retain)",
+    "Cannot claim training proved; opt-out is not a rewind"
+  ]
+}
+```
+
+**Pass:** ZDR marketing is not a dump license.

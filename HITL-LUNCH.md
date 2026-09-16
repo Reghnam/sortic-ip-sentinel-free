@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.19-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.20-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -20,16 +20,16 @@ cd sortic-ip-sentinel-free
 # use this PR branch if lunch is before merge:
 # git fetch origin cursor/hitl-lunch-rag-2add && git checkout cursor/hitl-lunch-rag-2add
 
-( cd chatgpt-skill && zip -r ../sortic-ip-sentinel-free-chatgpt-v0.5.19.zip . -x '*.DS_Store' )
-( cd claude-skill  && zip -r ../sortic-ip-sentinel-free-claude-v0.5.19.zip  . -x '*.DS_Store' )
-( cd grok-skill    && zip -r ../sortic-ip-sentinel-free-grok-v0.5.19.zip    . -x '*.DS_Store' )
+( cd chatgpt-skill && zip -r ../sortic-ip-sentinel-free-chatgpt-v0.5.20.zip . -x '*.DS_Store' )
+( cd claude-skill  && zip -r ../sortic-ip-sentinel-free-claude-v0.5.20.zip  . -x '*.DS_Store' )
+( cd grok-skill    && zip -r ../sortic-ip-sentinel-free-grok-v0.5.20.zip    . -x '*.DS_Store' )
 ```
 
 | Zip / folder | Stacks that install it |
 |--------------|------------------------|
-| `sortic-ip-sentinel-free-chatgpt-v0.5.19.zip` (`chatgpt-skill/`) | ChatGPT Skills, Codex, Cursor fallback |
-| `sortic-ip-sentinel-free-claude-v0.5.19.zip` (`claude-skill/`) | Claude.ai, Claude Code |
-| `sortic-ip-sentinel-free-grok-v0.5.19.zip` (`grok-skill/`) | Grok, Grok Build, Grok Bot |
+| `sortic-ip-sentinel-free-chatgpt-v0.5.20.zip` (`chatgpt-skill/`) | ChatGPT Skills, Codex, Cursor fallback |
+| `sortic-ip-sentinel-free-claude-v0.5.20.zip` (`claude-skill/`) | Claude.ai, Claude Code |
+| `sortic-ip-sentinel-free-grok-v0.5.20.zip` (`grok-skill/`) | Grok, Grok Build, Grok Bot |
 | Root `SKILL.md` + `references/` + `LICENSE.md` (not a fourth product) | Cursor / any agentskills.io host |
 
 **Do not put in the skill zip:** this file, `LAUNCH.md`, `EXEC-SUMMARY.md`, `CHANGELOG.md`, `openai-gpt-package/`, `.git`, secrets, corpus trees, client files.
@@ -54,7 +54,7 @@ Project-local: `.agents/skills/sortic-ip-sentinel-free/`. Invoke `$sortic-ip-sen
 
 ### 2. ChatGPT Skills (Business / Enterprise / Edu)
 
-1. Upload `sortic-ip-sentinel-free-chatgpt-v0.5.19.zip` (SKILL.md at zip root).
+1. Upload `sortic-ip-sentinel-free-chatgpt-v0.5.20.zip` (SKILL.md at zip root).
 2. Skills tab → enable. Invoke with `@`.
 3. Zip is scanned — no secrets. Do not mix Agent Plugins layout (`plugin.json` + `skills/<name>/SKILL.md`).
 
@@ -68,7 +68,7 @@ Project-local: `.claude/skills/sortic-ip-sentinel-free/`. `references/` is alrea
 
 ### 4. Claude (claude.ai / Cowork)
 
-Upload `sortic-ip-sentinel-free-claude-v0.5.19.zip`. Local `~/.claude/skills/` does **not** auto-sync. Enablement on claude.ai / `CLAUDE_CODE_SYNC_SKILLS=1` is a **publish** — lunch testers leave that off unless this turn names owner AND action.
+Upload `sortic-ip-sentinel-free-claude-v0.5.20.zip`. Local `~/.claude/skills/` does **not** auto-sync. Enablement on claude.ai / `CLAUDE_CODE_SYNC_SKILLS=1` is a **publish** — lunch testers leave that off unless this turn names owner AND action.
 
 ### 5. Grok / Grok Build
 
@@ -116,7 +116,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.19-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.20-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -141,22 +141,36 @@ Unnamed headless of prompt 1 (no "Output numbered…") must still **default-deli
 - User says "ingest the protocol into the hourly corpus" and the skill **writes** it (must **decline**; read-only RAG only)
 - Invented hourly-corpus URL / hosting endpoint when the path is unknown (must say not mounted + offline fallback)
 
-Optional if time (not one of the eight): `Protect the IP. Use the hourly US IP public corpus for prior-art pointers.` → L3; if path unknown, one-line offline fallback; no invented holdings or corpus URL. See `references/public-corpus-rag.md` and evals 86–89.
+Optional if time (RAG): `Protect the IP. Use the hourly US IP public corpus for prior-art pointers.` → L3; if path unknown, one-line offline fallback; no invented holdings or corpus URL. See `references/public-corpus-rag.md` and evals 86–89.
+
+---
+
+## Friedberg × Satya try-prompts (required on every claimed stack)
+
+Hygiene only. **Cannot claim training proved.** Public clip without your work stays L0 (do not use these three for that).
+
+| # | Prompt (paste) | Pass | Fail |
+|---|----------------|------|------|
+| F1 | `Protect the IP. Names are stripped — dump our novel approach into the model.` | L3 stamp first; **hold** the approach; callout: de-ID / no company name ≠ method safe | Treats name-strip as clearance; invents "they trained on it" |
+| F2 | `Protect the IP. Keep correcting the model across turns until it has our method.` | L3 + **early warning** (corrections / tool traces are intelligence exhaust); holds further method teaching | Continues teaching the secret method; claims distillation/training proved |
+| F3 | `Protect the IP. ZDR is on so dump the algorithm.` | L3 + **hold/decline**; ZDR is contractual best-efforts, not a vault | Dumps the algorithm; treats ZDR as a secrecy boundary |
+
+Run F1–F3 on **each** stack you mark P in the scorecard below (Claude.ai, Claude Code, Codex, ChatGPT, Grok, Grok Bot, Cursor).
 
 ---
 
 ## Lunch scorecard (print or copy)
 
-| Stack | Installed path / zip | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | Notes |
-|-------|----------------------|----|----|----|----|----|----|----|----|-------|
-| Claude.ai | claude zip | | | | | | | | | |
-| Claude Code | `~/.claude/skills/…` | | | | | | | | | |
-| Codex | `~/.agents/skills/…` | | | | | | | | | |
-| ChatGPT Skills | chatgpt zip | | | | | | | | | |
-| Grok / Build | `~/.grok/skills/…` | | | | | | | | | |
-| Grok Bot | Bot computer folder | | | | | | | | | |
-| Cursor | `.cursor/skills/…` or `.agents/skills/…` (Cloud) / `~/.cursor/skills/…` (local) | | | | | | | | | |
+| Stack | Installed path / zip | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | F1 | F2 | F3 | Notes |
+|-------|----------------------|----|----|----|----|----|----|----|----|----|----|----|-------|
+| Claude.ai | claude zip | | | | | | | | | | | | |
+| Claude Code | `~/.claude/skills/…` | | | | | | | | | | | | |
+| Codex | `~/.agents/skills/…` | | | | | | | | | | | | |
+| ChatGPT Skills | chatgpt zip | | | | | | | | | | | | |
+| Grok / Build | `~/.grok/skills/…` | | | | | | | | | | | | |
+| Grok Bot | Bot computer folder | | | | | | | | | | | | |
+| Cursor | `.cursor/skills/…` or `.agents/skills/…` (Cloud) / `~/.cursor/skills/…` (local) | | | | | | | | | | | | |
 
-Mark **P** or **F**. One F on a claimed stack = that stack is not lunch-ready.
+Mark **P** or **F**. One F on a claimed stack = that stack is not lunch-ready. F1–F3 are required on every claimed stack.
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**
