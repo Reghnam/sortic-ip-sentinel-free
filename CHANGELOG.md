@@ -2,6 +2,21 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.25-free] — 2026-09-16
+
+Absorbed overnight research (handoff `/workspace/handoffs/sorticai-ip-sentinel-overnight-2026-09-16.md` and Grok Heavy https://grok.com/c/1251d871-4c72-41a9-a52c-56af0c9a9a1b were not usable in this workspace; applied the user-locked constraints). Origin **v0.5.24-free** three frames + Track 3 + vault-myth holds kept.
+
+### Shared
+
+- **PRIVATE corpus.** `Reghnam/us-ip-law-ground-truth` is sidecar / offline only. Never bundle into the public free zip, Grok Bot disk, Bot template, or Drive pack. User never downloads the KB. Ticks stay L0.
+- **Retrieve-only stub.** `references/sidecar-retrieve.stub.json` + rewritten `references/public-corpus-rag.md`. Env `SORTICAI_US_IP_SIDECAR` if present; do not invent a URL.
+- **Cursor install package.** `cursor-skill/` zip → project `.cursor/skills/sortic-ip-sentinel-free/`. Sync still `~/.cursor/skills/` only.
+- **Eval stamps.** Leftover `v0.5.14-free` L3 stamp strings aligned to **v0.5.17-free**. Current lunch stamp is `v0.5.25-free`.
+- **Drive Sep-2 zips are stale.** Lunch source is this PR branch.
+- **Grok Bot share pack.** `grok-bot-share/` = profile/skills/routines config only. No secrets. Do not publish live overnight. Live marketplace publish stays L3 for the owners.
+- Evals **102** (100 never-bundle; 101 sidecar retrieve-only; 102 share-pack no secrets). Friedberg/Satya F1–F4 and T1–T5 unchanged.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.24-free] — 2026-09-16
 
 Absorbed Track 2 (handoff `/workspace/handoffs/deeper-2-satya-allin-data-protection-2026-09-16.md` was not in this workspace; applied the user-locked frames). Origin **v0.5.23-free** Track 1 hosts-clip citations kept. **Do not conflate.**

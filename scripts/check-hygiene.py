@@ -8,8 +8,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.24-free"
-PACKS = ("chatgpt-skill", "claude-skill", "grok-skill")
+VERSION = "0.5.25-free"
+PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
     "stripe",
@@ -81,6 +81,7 @@ def main() -> int:
     required = {
         "evals.md",
         "public-corpus-rag.md",
+        "sidecar-retrieve.stub.json",
         "classification-matrix.md",
         "headless-hygiene-package.md",
         "v05-lite-prior-art-pointers.md",
@@ -99,11 +100,11 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 100):
+    for n in range(1, 103):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 99:
-        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 99)")
+    if evals.count("## Eval ") < 102:
+        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 102)")
 
     for rel in (
         "HITL-LUNCH.md",
@@ -163,6 +164,16 @@ def main() -> int:
         "weights I control",
         "shouldn't leak",
         "Satya at the All-In Summit",
+        "Drive Sep-2 zips are stale",
+        "never bundle",
+        "never Bot disk",
+        "cursor-skill",
+        "sidecar",
+        "PRIVATE",
+        "grok-bot-share",
+        "retrieve-only",
+        "do not publish live",
+        "us-ip-law-ground-truth",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")
@@ -178,7 +189,7 @@ def main() -> int:
         return 1
     print(
         f"hygiene check OK: {VERSION}; description {len(root_desc)} chars; "
-        f"body {body_lines} lines; {len(refs)} references; 99 evals"
+        f"body {body_lines} lines; {len(refs)} references; 102 evals"
     )
     return 0
 
