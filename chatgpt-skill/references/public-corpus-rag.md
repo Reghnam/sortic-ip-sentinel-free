@@ -1,4 +1,4 @@
-# Public US-IP corpus — read-only RAG (v0.5.18-free)
+# Public US-IP corpus — read-only RAG (v0.5.19-free)
 
 **Hygiene only. Not legal advice. Not a prior-art search. Not FTO. Not a second regulatory radar.**
 
@@ -18,7 +18,7 @@ Do not invent a private client path. Probe, in order, then stop:
    - `us-ip-public-corpus/`
 3. Optional index inside that directory: `INDEX.md` or `manifest.json`.
 
-If none of those resolve, use **offline fallback**. Do not guess a Dropbox / client / Lorenc / vault path.
+If none of those resolve, use **offline fallback**. Do not guess a Dropbox / client / Lorenc / vault path. **Do not invent a corpus URL** or hosting endpoint.
 
 ### Manifest (`manifest.json` or a leading `INDEX.md` block)
 
@@ -50,13 +50,14 @@ A usable lookup is: read the index → match high-level keywords the **user alre
 - Claim holdings, validity, FTO, or patentability
 - Build a second regulatory-radar product from this skill
 - Copy the corpus into the skill zip or ChatGPT/Claude upload
+- Invent a corpus URL, API host, or "hourly feed" link when none was returned
 
 ## Offline fallback (path unknown or unreadable)
 
 1. One line: "Public US-IP corpus not mounted — offline pointers only."
 2. Use `references/v05-lite-prior-art-pointers.md` (USPTO / Google Patents / Espacenet / PATENTSCOPE / Lens.org).
 3. Keep the standing high-level sources note (EPO G-II 3.3.1, USPTO 2025 AI inventorship, WIPO).
-4. Do not invent cases, holdings, or corpus rows.
+4. Do not invent cases, holdings, corpus rows, or a corpus URL.
 5. JSON: `agent_exposure.channel` = `corpus-offline`.
 
 ## If the user asks to ingest / train / write

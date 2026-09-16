@@ -2,6 +2,18 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.19-free] — 2026-09-16
+
+Absorbed deeper SKILL-surface research (Sameth handoff summary — handoff file was not in this workspace). Origin **v0.5.18-free** lunch HITL + read-only RAG kept.
+
+### Shared
+
+- **Cursor Cloud vs local:** HITL-LUNCH / LAUNCH now name project `.cursor/skills/sortic-ip-sentinel-free/` and/or `.agents/skills/`. Cloud Agents need those project skills **or** Sync Skills. Sync copies `~/.cursor/skills/` only — **not** `~/.agents/skills/`.
+- **Grok `allowed-tools` does not grant or restrict.** Hygiene text kept for Anthropic one-turn grant-clear / restriction-clear. Do not invent a Grok tool lock. Claude YAML still name+description only.
+- **RAG:** expected interface + offline fallback restated. **Do not invent a corpus URL** when the path is unknown.
+- Evals now **89** (Grok allowed-tools). JSON edition `0.5.19-free`. Stamp patched 2026-09-16.
+- Still free-only. Still not legal advice. Still no secrets / no client facts / no second Reg-Radar.
+
 ## [0.5.18-free] — 2026-09-16
 
 Patched from: overnight lock for lunch HITL distribution (Claude / Claude Code / Codex / ChatGPT / Grok / Cursor / Grok Bot) until 11:00 Europe/Prague; host-pack drift check (root `SKILL.md` == `chatgpt-skill/` == `grok-skill/`; `claude-skill/` differs only by name+description frontmatter — keep that split); LAUNCH install-path + eval-trigger alignment (add Cursor `~/.cursor/skills/` / `.cursor/skills/` / `.agents/skills/`; Claude.ai zip path; Codex fallback `~/.codex/skills/`); **read-only RAG** against an hourly **US-IP public** corpus when mounted (`US_IP_PUBLIC_CORPUS` or sibling `us-ip-law-ground-truth/` / `us-ip-public-corpus/` + `INDEX.md`/`manifest.json`); if the path is unknown, document the interface and fall back to `references/v05-lite-prior-art-pointers.md` — do not invent holdings or a client path; never ingest client secrets into that corpus; curriculum ticks / DESIGN-PLAN / REPAIR-QUEUE stay L0; **not a second Reg-Radar**; lunch sheet `HITL-LUNCH.md` (exact install per stack + 8 try-in-30s + pass/fail + zip recipe). Origin 0.5.17 hygiene kept (US-host ≠ vault, skill-scan ≠ vault, disallowed-tools one-turn, sign-out ≠ wipe, invention-screenshot CSAM). **No client/product/infra names, no valuation figures, no payment processors.** Description stays **1024 chars**.

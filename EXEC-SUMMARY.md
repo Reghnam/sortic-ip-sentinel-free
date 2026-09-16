@@ -1,4 +1,4 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.18-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.19-free
 
 **Date:** 16 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
@@ -6,7 +6,7 @@
 
 ## Why this patch (one paragraph)
 
-Origin already shipped **v0.5.17-free** (US-host ≠ vault, skill-scan ≠ vault, disallowed-tools one-turn, sign-out ≠ wipe, invention-screenshot CSAM). Overnight lock for lunch HITL distribution: host packs were already behaviour-identical (claude-skill frontmatter stays name+description only). This patch **aligns install paths** (Codex `~/.agents/skills/` + `~/.codex/skills/`, Claude `~/.claude/skills/`, Grok `~/.grok/skills/`, Cursor `~/.cursor/skills/` / `.cursor/skills/` / `.agents/skills/`) and eval triggers with the LAUNCH checklist; adds **read-only RAG** against an hourly US-IP **public** corpus when mounted (`US_IP_PUBLIC_CORPUS` or sibling `us-ip-law-ground-truth/` / `us-ip-public-corpus/` + index); if the path is unknown, use the documented interface + offline lite pointers — never invent holdings or a client path; never ingest secrets into the corpus; corpus **ticks** stay L0. Not a second Reg-Radar. Lunch sheet: `HITL-LUNCH.md` (exact install + 8 try-in-30s + pass/fail). Description **1024 chars**. Hygiene only; no client facts in this repo. No payment processors.
+Origin **v0.5.18-free** already shipped lunch HITL + read-only public-corpus RAG. This patch absorbs deeper SKILL-surface research: **Cursor Cloud Agents** need project `.cursor/skills/sortic-ip-sentinel-free/` and/or `.agents/skills/` **or** Sync Skills of `~/.cursor/skills/` only (Sync does **not** copy `~/.agents/skills/`); **Grok `allowed-tools` does not grant or restrict** (keep Anthropic one-turn hygiene; Claude YAML stays name+description only); RAG stays interface + offline fallback — **do not invent a corpus URL**. Still free-only. No secrets. No second Reg-Radar. Lunch sheet: `HITL-LUNCH.md`. Description **1024 chars**.
 
 ## What changed (shareable)
 
@@ -15,7 +15,7 @@ Origin already shipped **v0.5.17-free** (US-host ≠ vault, skill-scan ≠ vault
 | **OpenAI (first)** | Same 1024-char description. `default_prompt` names public-corpus RAG read-only + offline fallback. Cursor/Codex paths restated. Evals 86–88. |
 | **Anthropic (second)** | Still `name` + `description` only. Body under 500. 88 evals. Dist-path extra keys still error on claude.ai/API. |
 | **Grok Build (third)** | Same grok-skill body as root. Bot computers still US-hosted. Viewer still must not be asked to run shell. |
-| **Cursor** | Explicit `~/.cursor/skills/` + project `.cursor/skills/` / `.agents/skills/`. Cloud "Sync Skills" is a publish. |
+| **Cursor** | Project `.cursor/skills/sortic-ip-sentinel-free/` and/or `.agents/skills/`. Sync Skills = `~/.cursor/skills/` only, not `~/.agents/skills/`. |
 
 ## How to install (one copy)
 

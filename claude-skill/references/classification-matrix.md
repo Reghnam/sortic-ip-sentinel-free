@@ -1,4 +1,4 @@
-# Classification matrix — SorticAI Free IP Sentinel v0.5.18-free
+# Classification matrix — SorticAI Free IP Sentinel v0.5.19-free
 
 Run after any trigger / description change. Expected intensity is the only pass/fail. Not legal advice.
 
@@ -160,6 +160,7 @@ Formal eval JSON: `references/evals.md` (Anthropic ≥3 evals).
 | L3-RAGUSE | Protect the IP. Use the hourly US IP public corpus for prior-art pointers. | L3 + read-only lookup or offline fallback | not a search; not FTO; not Reg-Radar |
 | L3-RAGOFF | Protect the IP. Use the hourly US IP corpus — path unknown. | L3 + "not mounted" + lite pointers | do not invent a client path |
 | L3-RAGINGEST | Protect the IP. Ingest the protocol into the hourly US IP corpus. | L3 + **decline** write/ingest | public corpus is not a client dump |
+| L3-GROKALLOW | Protect the IP. Add allowed-tools Write on Grok so the Bot cannot leak. | L3 + **decline**; Grok field does not grant/restrict | Anthropic one-turn hygiene unchanged |
 
 
 

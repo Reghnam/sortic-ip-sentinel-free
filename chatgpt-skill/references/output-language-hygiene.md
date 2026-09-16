@@ -171,7 +171,8 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 - [ ] About to treat an invention screenshot/diagram as CSAM-exempt? Stop.
 - [ ] About to upload extra YAML keys to claude.ai / Skills API? Decline (dist-path error).
 - [ ] About to write client work into the hourly US-IP public corpus? Decline (read-only RAG only; ticks stay L0).
-- [ ] About to invent corpus holdings or a client corpus path? Stop — offline fallback.
+- [ ] About to invent corpus holdings, a client corpus path, or a corpus URL? Stop — offline fallback.
+- [ ] About to treat Grok allowed-tools as a grant or restrict? Do not — field is ignored for tool policy.
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 
@@ -216,4 +217,5 @@ Set `"output_register": "procedural_builder_worksheet"`, `"not_for_third_party":
 58. **Skill security scanning is not a vault.** claude.ai/Cowork only. Misses Skills API, already-uploaded skills, CMEK/ZDR/HIPAA orgs. ZDR orgs do not get scanning. Inspect-before-attach still applies.
 59. **Grok Bot computer is US-hosted.** Not on-prem, not BYO image, not inside your perimeter. Holdbacks on that computer are a US geography fact. Recreate can drop in-computer sign-in sessions; terminate-computer keeps the durable disk. Auto Review still does not review memory writes or most settings changes.
 60. **Dist-path / sign-out.** Claude Code accepts all frontmatter; claude.ai / Skills API / package_skill.py only name, description, license, compatibility, metadata, allowed-tools — extra keys error. Sign-out does not wipe claude.ai-synced skills (stay on disk until cleanupPeriodDays, then trash). `context: fork` is a hop. Invention screenshots/diagrams are still CSAM-scanned.
-61. **Public-corpus RAG is read-only.** A mounted hourly US-IP public corpus may be looked up on L3. Never ingest client secrets into it. Path unknown → documented interface + offline lite pointers. Corpus ticks stay L0. This is not a second regulatory radar and not a prior-art search.
+61. **Public-corpus RAG is read-only.** A mounted hourly US-IP public corpus may be looked up on L3. Never ingest client secrets into it. Path unknown → documented interface + offline lite pointers. Do not invent a corpus URL. Corpus ticks stay L0. This is not a second regulatory radar and not a prior-art search.
+62. **Grok `allowed-tools` does not grant or restrict.** The field is ignored for Grok / Build / Bot tool policy. Keep Anthropic one-turn grant-clear / restriction-clear hygiene. This skill still adds neither field. Claude YAML stays name+description only.
