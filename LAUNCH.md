@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.25-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.26-free
 
-**Status**: Public on GitHub. v0.5.25-free patched 2026-09-16 (PRIVATE corpus = sidecar/offline only; Cursor `cursor-skill/` pack; Drive Sep-2 zips stale; origin 0.5.24 frames kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.26-free patched 2026-09-16 (PRIVATE corpus = sidecar/offline only; Cursor `cursor-skill/` pack; Drive Sep-2 zips stale; origin 0.5.24 frames kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `sortic-ip-sentinel-free-cursor-v0.5.25.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `sortic-ip-sentinel-free-cursor-v0.5.26.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
@@ -77,7 +77,7 @@ Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behav
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 102: sidecar/offline + never-bundle 100–102; leftover L3 stamps aligned to v0.5.17-free; 90–99 kept)
+- [ ] Evals in `references/evals.md` still pass (now 107: sidecar/offline + never-bundle 100–102; leftover L3 stamps aligned to v0.5.17-free; 90–99 kept)
 - [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity / voice provision / yolo-send → decline
 - [ ] Backup ≠ publish; truncated/junk/placeholder files are not originals; image-only ≠ numbered facts
 - [ ] Bot share / marketplace clone is a demo channel; callable hops hold internals

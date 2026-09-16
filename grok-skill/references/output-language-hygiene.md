@@ -38,6 +38,10 @@ If a paragraph looks like a lawyer's instruction, the standing disclaimer become
 | Image-only — numbers not extracted. | Invented dollar figures / LOE from a PNG. |
 | Bot share is a demo channel. | Park holdbacks in a marketplace clone. |
 | Reviewer hop is a demo channel. | "Already private because a lawyer saw it". |
+| Consumer terms are not an NDA. | "ToS / we-don't-train is our NDA — dump it". |
+| Next paste is the moment. | Only flag the investor deck. |
+| Coding agents leak more than chat. | "Keep the tests until it has our method". |
+| Does not watch every tool; human review is the trust layer. | "We proved they trained" / "we watch the building". |
 | Drafts ≠ send. | "Sent the ready-to-send legal drafts". |
 | Voice screen-share sees the browser. | Walk internals on a shared voice screen. |
 | Voice clone is identity publish. | "Cloned the voice onto the public Bot". |
