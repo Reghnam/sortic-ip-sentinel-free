@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.26-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.27-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -19,6 +19,10 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Bot egress IP is not sticky — registrar new-device alerts → decline login
 - Provisional readiness checklists
 - Provenance & holdback audits
+- Screenshot-first of client correspondence into Extra High is a next-paste (Extra High ≠ vault)
+- SDK `skills=all` is a hop; mailed HITL v0.5.25 zip is stale; marketplace still Hold
+- Standalone skills = ChatGPT desktop + Codex CLI/IDE; Chat/Work web+mobile need a plugin (Hold)
+- Disallow AI Training is not a vault; crawler Search/Training/Agent toggles stay L0
 - Callable / headless chain is a disclosure ladder (show/hold at every hop)
 - Voice/phone provision: consult ≠ provision (owner-gated decline)
 - `--yolo` / `--always-approve` is not owner approval; disabled jobs stay disabled

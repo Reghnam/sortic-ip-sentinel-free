@@ -1,4 +1,4 @@
-# Grok Bot share pack — IP Sentinel (prepare only, v0.5.26-free)
+# Grok Bot share pack — IP Sentinel (prepare only, v0.5.27-free)
 
 **Hygiene only. Not legal advice. Free only. No secrets.**
 
@@ -20,7 +20,7 @@ Export = `bot-template.json` plus these three surfaces. Strip secrets, internal 
 ## Install (this Bot only — not marketplace)
 
 1. Open the Grok Bot → **Plugins** (or Skills).
-2. **Save** / upload `sortic-ip-sentinel-free-grok-v0.5.26.zip` so `SKILL.md` is the skill root.
+2. **Save** / upload `sortic-ip-sentinel-free-grok-v0.5.27.zip` so `SKILL.md` is the skill root.
 3. **Enable per-Bot.** One Bot's enablement is not isolation from other Bots on the shared computer.
 4. Paste `profile.md` into the Bot profile. Do **not** paste corpus paths or sidecar URLs.
 5. Leave routines as the stubs in `routines.md` unless this turn names owner **and** action.

@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.26-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.27-free
 
-**Status**: Public on GitHub. v0.5.26-free patched 2026-09-16 (PRIVATE corpus = sidecar/offline only; Cursor `cursor-skill/` pack; Drive Sep-2 zips stale; origin 0.5.24 frames kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.27-free patched 2026-09-16 (screenshot-first next-paste; skills=all hop; mailed HITL v0.5.25 zip stale; Chat/Work plugin Hold; Disallow AI Training ≠ vault; marketplace Hold; origin 0.5.26 frames kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `sortic-ip-sentinel-free-cursor-v0.5.26.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `sortic-ip-sentinel-free-cursor-v0.5.27.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
@@ -65,7 +65,7 @@ Zip: `sortic-ip-sentinel-free-cursor-v0.5.26.zip` from `cursor-skill/`. See `.cu
 
 **Sync Skills** copies `~/.cursor/skills/` only — not `~/.agents/skills/`. Treat Sync as a publish; lunch default off.
 
-**Scan before ship.** Third-party marketplace skills are untrusted — inspect before attach; do not bundle them into the lunch zip.
+**Scan before ship.** Third-party marketplace skills are untrusted — inspect before attach; do not bundle them into the lunch zip. SDK `skills=all` is a hop. **Mailed HITL pack v0.5.25 is stale** — testers use this branch. Marketplace publish still Hold.
 
 Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behaviour, rich frontmatter).
 

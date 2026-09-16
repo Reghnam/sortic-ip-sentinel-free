@@ -2,6 +2,40 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.27-free] — 2026-09-16
+
+Absorbed this Grok Build turn's live mailbox (HITL review pack mailed as v0.5.25; AI-native webinar attendance; screenshot-first correspondence prompt; Headless/callable stack note) plus vendor recrawl 16 Sep afternoon. **No Grok chat-history connector exists** — Grok-chat insights are from Bot/Build docs, this turn, and live automations. Origin **v0.5.26-free** next-paste / consumer-terms / coding-agent / scope-honesty holds kept. **No client / product / infra / firm / webinar names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+
+### OpenAI (first)
+
+- Codex recrawl 2026-09-16: **skills = authoring; plugins = distribution**. Standalone skills = ChatGPT desktop + Codex CLI/IDE; **Chat/Work web+mobile need a plugin** (Hold; do not invent `plugin.json` overnight). Prefer instructions over scripts. Description still **1024 chars**. Progressive disclosure (name+description first; full `SKILL.md` on use). Codex may omit skills from the initial list when many are installed.
+- **Screenshot-first of client correspondence into Extra High consumer ChatGPT is a next-paste.** Invention/legal screenshots are still CSAM-scanned. Extra High / model pick stays **L0**; the paste is L2/L3. Extra High is not a vault.
+- SDK / Agents `skills="all"` is a **hop** — loads every discovered skill including untrusted marketplace ones. Prefer exact name list.
+- `agents/openai.yaml` `default_prompt` names screenshot-first, Extra High ≠ vault, `skills=all` hop, mailed HITL zip stale.
+- Evals **108–115**. JSON channels `screenshot-first | extra-high-not-vault | skills-all-hop | hitl-zip-stale | webinar-attend | crawler-disallow | chat-work-plugin`.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Body stays under 500. Dist-path extra keys still error. `allowed-tools` / `disallowed-tools` still one-turn — this skill adds neither.
+- Agent SDK `skills="all"` + `setting_sources=["user","project"]` is a hop (same as OpenAI exact-name preference). 115 evals. Combined description + when_to_use still truncated at 1536.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored** (unlike Claude dist-path which **errors**). Keep the split.
+- Bot computers still US-hosted. `cp` to `~/.grok/skills/` is Build/CLI; Bot = Save / Plugins enable-per-Bot.
+- This turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files.
+- Galaxy recording / public AI-native webinar **attendance** stays **L0**. Staging your method on a public AI-native showcase is L3 demo hygiene. Share pack still do-not-publish-live.
+
+### Shared
+
+- **Screenshot-first is a next-paste.** A screenshot of client correspondence into consumer Extra High is CSAM-scanned **and** know-how. Skip extremely sensitive lines. Two-input (briefing + artifact) still required. Drafts ≠ send.
+- **Mailed HITL pack v0.5.25 is stale.** Testers use this branch. Rebuild host zips as **v0.5.27**. Marketplace publish still Hold.
+- **Callable / headless one-shot without owner gate is the next paste.** Do not stop after the stamp. JSON still `owner_gated` + `stop_or_decline`.
+- Public AI-native webinar attendance is L0. No firm / network names in this repo.
+- **AI crawler Search/Training/Agent toggles stay L0.** Disallow AI Training is not a vault — a public page is still a disclosure; search index is still public.
+- Evals now **115**. HITL F5–F8 + T6–T8 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.26-free] — 2026-09-16
 
 Absorbed operator mailbox 15–16 Sep 2026 (All-In / Satya follow-up + AI-native daily-use notes) and **this Grok Build turn** (Gmail/Drive/GitHub live; named owner GitHub push). Origin **v0.5.25-free** PRIVATE sidecar / Cursor pack / Grok Bot share-pack holds kept. **No client / product / infra / firm / webinar names** in this public repo. No Grok chat-history connector exists.

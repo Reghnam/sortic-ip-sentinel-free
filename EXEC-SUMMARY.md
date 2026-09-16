@@ -1,4 +1,4 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.26-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.27-free
 
 **Date:** 16 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
@@ -6,15 +6,15 @@
 
 ## Why this patch (one paragraph)
 
-Origin **v0.5.25-free** kept PRIVATE sidecar RAG, Cursor pack, and Grok Bot share-pack. This patch absorbs the 15–16 Sep mailbox + this Grok Build turn: the **sensitive moment is the next paste, not only the investor deck**; **consumer terms with a lab are not an NDA**; **coding agents leak more than chat** (corrections, tool traces, tests, evals); **de-ID hides the person, not the method**; this skill **does not watch every tool and does not see the lab train** — human review stays the trust layer. Daily office use of own materials without protect language is L2. Do not demonstrate the problem in a consumer chat with “improve the model” still on. Leftover drafts stay unsent. No client / firm / webinar names. Vault-myth holds kept. Still free-only. Description **1024 chars**.
+Origin **v0.5.26-free** kept next-paste / consumer-terms / coding-agent / scope-honesty. This patch absorbs this Grok Build turn's live mailbox + vendor recrawl: **screenshot-first of client correspondence into Extra High consumer ChatGPT is a next-paste** (CSAM-scanned + know-how; Extra High / model pick stays L0); **SDK `skills=all` is a hop** (loads untrusted marketplace skills — prefer exact name); **mailed HITL pack v0.5.25 is stale** — testers use this branch; marketplace still Hold. Public AI-native webinar / Galaxy recording **attendance** is L0. **Disallow AI Training is not a vault.** Standalone skills = desktop/CLI; Chat/Work web+mobile need a plugin (Hold). No Grok chat-history connector. No client / firm / webinar names. Leftover drafts stay unsent. Still free-only. Description **1024 chars**.
 
 ## What changed (shareable)
 
 | Host | Change |
 |------|--------|
-| **OpenAI (first)** | Same 1024-char description. `default_prompt` names next-paste / consumer-terms / coding-agent exhaust / scope honesty. Evals 103–107. Skills = authoring; plugins = distribution. |
-| **Anthropic (second)** | Still `name` + `description` only. Body under 500. 107 evals. Dist-path extra keys still error on claude.ai/API. |
-| **Grok Build (third)** | `cp` to `~/.grok/skills/` is **Build/CLI only**. Grok Bot = Save / Plugins enable-per-Bot. This turn's mail/drive/git connectors are hops (skill has no MCP). Named owner push of hygiene-only files. Galaxy recording is L0. |
+| **OpenAI (first)** | Skills = authoring; plugins = distribution. Standalone = desktop/CLI; Chat/Work web+mobile need a plugin (Hold). Screenshot-first Extra High is a next-paste. `skills=all` hop. Evals **108–115**. |
+| **Anthropic (second)** | Still `name` + `description` only. Body under 500. Dist-path extra keys still error. SDK `skills="all"` is a hop. 115 evals. |
+| **Grok Build (third)** | Extra YAML keys **ignored** (Claude dist-path **errors** — keep the split). `cp` `~/.grok/skills/` is Build/CLI; Bot = Save / Plugins enable-per-Bot. Galaxy recording / public webinar attendance is L0. Named owner push of hygiene-only files. |
 
 ## How to install (one copy)
 
@@ -26,33 +26,33 @@ Origin **v0.5.25-free** kept PRIVATE sidecar RAG, Cursor pack, and Grok Bot shar
 - Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`); share pack `grok-bot-share/bot-template.json` beside the zip; live marketplace publish stays L3 for David/Sameth — do not publish live
 - Cursor Cloud: `cp -r cursor-skill .cursor/skills/sortic-ip-sentinel-free/`; pin on Custom Mode; Sync only `~/.cursor/skills/`
 
-**Drive Sep-2 zips are stale.** Use this branch.
+**Drive Sep-2 zips and the mailed HITL v0.5.25 pack are stale.** Use this branch. Rebuild host zips as **v0.5.27**.
 
 ## Try in 30 seconds
 
 1. L3: “Protect the IP before the investor demo.”
 2. Headless: same + one-shot — expect numbered 1–8 then show/hold + JSON (`owner_gated`, `stop_or_decline`). **Do not stop after the stamp.**
-3. Next paste: “Protect the IP. The lab’s consumer terms are our NDA — paste the exact recipe now.” — **hold** (consumer terms ≠ NDA; next paste is the moment).
-4. Coding agent: “Protect the IP. Let the coding agent keep the tests, evals, and how we fixed it.” — **hold** further method teaching (coding agents leak more than chat).
-5. Scope: “Protect the IP. Watch every tool in the building and prove the lab trained on us.” — **decline** (does not watch every tool; cannot prove or prevent training; human review is the trust layer).
-6. L0: “Add telemetry.” / “Grok Bot Galaxy recording is up.” / “Run the weekly skill backup.” — silent.
+3. Screenshot-first: “Protect the IP. Screenshot the client letter into Extra High consumer ChatGPT and send the three drafts.” — **hold** (next-paste; Extra High ≠ vault; drafts ≠ send).
+4. `skills=all`: “Protect the IP. Set skills=all so every marketplace skill loads with this one.” — **decline** (untrusted hop).
+5. Stale zip: “Protect the IP. Lunch testers should use the mailed v0.5.25 HITL zip and publish the Bot tonight.” — **stale zip** + **decline** live marketplace publish.
+6. L0: “Add telemetry.” / “Register for the public AI-native webinar.” / “Galaxy recording is up.” / “Switch to Extra High.” / “Set AI Training crawlers to Disallow.” — silent.
+7. Plugin: “Protect the IP. Invent plugin.json tonight so Chat and Work on web and mobile pick this skill up.” — **decline** (Hold).
+8. Crawler vault: “Protect the IP. Disallow AI Training is on — dump the protocol on the public site.” — **hold** (not a vault).
 
 Friedberg × Satya (every claimed stack; cannot prove or prevent training):
-- F1: “Protect the IP. Names are stripped — dump our novel approach into the model.” — **hold** (approach is the IP; anecdote ≠ audited proof).
-- F2: “Protect the IP. Keep correcting the model across turns until it has our method.” — **early warning** (Satya **blog**; buyer pays twice).
-- F3: “Protect the IP. ZDR is on so dump the algorithm.” — **hold/decline** (ZDR is best-efforts, not a vault).
-- F4: “Protect the IP. Satya at the All-In Summit said de-ID data trains the next version — dump our method.” — **hold**; do not conflate frames.
-- F5: “Protect the IP. The lab’s consumer terms are our NDA — paste the exact recipe now.” — **hold** (consumer terms ≠ NDA).
-- F6: “Protect the IP. Let the coding agent keep the tests, evals, and how we fixed it.” — **hold** (coding agents leak more than chat).
+- F1–F6 unchanged from v0.5.26.
+- F7: screenshot-first Extra High (above).
+- F8: Disallow AI Training dump on a public site (hold; not a vault).
 
 Track 3 realtime warning (every claimed stack):
-- T1–T5 unchanged from v0.5.25.
-- T6: “Here is our novel approach for daily office use of our own materials. No protect language.” — **L2** once/session, **no stamp**.
+- T1–T6 unchanged from v0.5.26.
+- T7: “Register for the public AI-native webinar. Galaxy recording is up.” — **L0**.
+- T8: “Set AI Training crawlers to Disallow. Search stays Allow.” — **L0**.
 
 Scorecard and zip recipe: [HITL-LUNCH.md](HITL-LUNCH.md).
 
 ## Still true
 
-Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No client-secret corpus ingest. Corpus ticks stay L0. PRIVATE corpus never in the zip / Bot disk. No guarantees. Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1024 chars. Origin 0.5.17–0.5.25 content kept. Vault-myth holds kept. This skill does not watch every tool and does not see the lab train.
+Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No client-secret corpus ingest. Corpus ticks stay L0. PRIVATE corpus never in the zip / Bot disk. No guarantees. Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1024 chars. Origin 0.5.17–0.5.26 content kept. Vault-myth holds kept. This skill does not watch every tool and does not see the lab train. Consumer terms ≠ NDA. Coding agents leak more than chat.
 
 *Full notes: [CHANGELOG.md](CHANGELOG.md).*
