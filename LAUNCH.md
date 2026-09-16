@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.22-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.23-free
 
-**Status**: Public on GitHub. v0.5.22-free patched 2026-09-16 (Track 3 realtime warning: L2 false-comfort tip, L3 hold-recipe + lane map, L0 settings/clip/chatter; decline block/prove training; evals 93–97; origin 0.5.21 install cards + F1–F3 kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.23-free patched 2026-09-16 (Track 1 All-In sources locked: approach is the IP; anecdote ≠ audited proof of training; X/YT cited; origin 0.5.22 Track 3 + F1–F3/T1–T5 kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -73,7 +73,7 @@ Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behav
 - [ ] Unnamed headless default-delivers 1+8 same turn
 - [ ] Disclaimers appear on all outputs
 - [ ] All deliverables are free-only (no paid language)
-- [ ] Evals in `references/evals.md` still pass (now 97: 90–92 Friedberg × Satya kept; 93–97 false-comfort L3/L2, lane map, spam guard, Grok API≠chat)
+- [ ] Evals in `references/evals.md` still pass (now 98: 90–92 Friedberg × Satya kept; 93–97 Track 3; 98 anecdote ≠ audited proof)
 - [ ] Unnamed GitHub auto-push / registrar login / partner send / pay / identity / voice provision / yolo-send → decline
 - [ ] Backup ≠ publish; truncated/junk/placeholder files are not originals; image-only ≠ numbered facts
 - [ ] Bot share / marketplace clone is a demo channel; callable hops hold internals

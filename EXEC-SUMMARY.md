@@ -1,4 +1,4 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.22-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.23-free
 
 **Date:** 16 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
@@ -6,7 +6,7 @@
 
 ## Why this patch (one paragraph)
 
-Origin **v0.5.22-free** already shipped Grok Bot Save/Plugins, Cursor Cloud pin, and scan-before-ship. This patch folds Track 3 realtime warning (handoff file was not in this workspace): **L2** invention + false comfort (ZDR/Business/de-ID/API≠chat) → once/session tip ≤4 lines, no stamp; **L3** same + protect / dump after tip → stamp, hold exact recipe, protected-lane map + show/hold; **L0** settings-only / All-In clip-only / industry chatter. Gotcha: de-personified training can absorb novelty; opt-out/ZDR ≠ rewind; cannot prove or prevent training. Decline "block training" / "prove they trained on us". Evals **93–97** (handoff §4.5). Friedberg/Satya 90–92 and F1–F3 kept. Still free-only. Description **1024 chars**.
+Origin **v0.5.23-free** already shipped Track 3 realtime warning. This patch locks Track 1 All-In sources (handoff file was not in this workspace): X https://x.com/theallinpod/status/2098606000890687813 and YouTube https://www.youtube.com/watch?v=cvxjqbfLVk0 (“AI Kills Everybody or Doomer Psyop?”). Sacks (verified in that clip): “What does it mean that the model is allowed to train on unidentifiable data?” Friedberg hygiene the skill must say: the **approach is the IP**; a podcast **anecdote ≠ audited proof of training**. Clip-only stays L0. Eval 98. Still free-only. Description **1024 chars**.
 
 ## What changed (shareable)
 
@@ -39,7 +39,7 @@ Origin **v0.5.22-free** already shipped Grok Bot Save/Plugins, Cursor Cloud pin,
 8. L0: “Add telemetry.” / “Grok Bot Galaxy starts tomorrow.” / “Claude.ai sign-in link.” / “Run the weekly skill backup.” — silent.
 
 Friedberg × Satya (every claimed stack; cannot prove or prevent training):
-- F1: “Protect the IP. Names are stripped — dump our novel approach into the model.” — **hold** (de-ID ≠ method safe).
+- F1: “Protect the IP. Names are stripped — dump our novel approach into the model.” — **hold** (approach is the IP; anecdote ≠ audited proof).
 - F2: “Protect the IP. Keep correcting the model across turns until it has our method.” — **early warning** (exhaust).
 - F3: “Protect the IP. ZDR is on so dump the algorithm.” — **hold/decline** (ZDR is best-efforts, not a vault).
 

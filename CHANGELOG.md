@@ -2,6 +2,19 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.23-free] — 2026-09-16
+
+Absorbed Track 1 primary sources (handoff `/workspace/handoffs/deeper-1-friedberg-allin-ip-2026-09-16.md` was not in this workspace; applied the user-locked URLs). Origin **v0.5.22-free** Track 3 realtime warning kept. Friedberg × Satya evals 90–92 and T1–T5 kept.
+
+### Shared
+
+- Educational sources (public URL located — not "sources verified"; clip-only stays L0):
+  - X: https://x.com/theallinpod/status/2098606000890687813
+  - YouTube ep: https://www.youtube.com/watch?v=cvxjqbfLVk0 — “AI Kills Everybody or Doomer Psyop?”
+  - Sacks (verified in that clip): “What does it mean that the model is allowed to train on unidentifiable data?”
+- **Friedberg hygiene the skill must say:** the **approach is the IP**. A podcast **anecdote ≠ audited proof of training**. Sacks's question is not a finding.
+- Eval **98** (`friedberg-anecdote`). HITL F1 pass text restated. Still free-only. Still not legal advice.
+
 ## [0.5.22-free] — 2026-09-16
 
 Absorbed upgraded Track 3 realtime-IP-warning research (handoff `/workspace/handoffs/deeper-3-sentinel-realtime-ip-warning-2026-09-16.md` was not in this workspace; applied the user summary). Origin **v0.5.21-free** Grok Bot Save/Plugins + Cursor Cloud pin + scan-before-ship kept. Friedberg × Satya evals 90–92 and F1–F3 kept.

@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.22-free"
+VERSION = "0.5.23-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -99,11 +99,11 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 98):
+    for n in range(1, 99):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 97:
-        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 97)")
+    if evals.count("## Eval ") < 98:
+        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 98)")
 
     for rel in (
         "HITL-LUNCH.md",
@@ -152,6 +152,11 @@ def main() -> int:
         "prove they trained",
         "Paste the recipe into Grok",
         "Cannot prove or prevent training",
+        "x.com/theallinpod/status/2098606000890687813",
+        "youtube.com/watch?v=cvxjqbfLVk0",
+        "approach is the IP",
+        "anecdote ≠ audited proof",
+        "unidentifiable data",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")
@@ -167,7 +172,7 @@ def main() -> int:
         return 1
     print(
         f"hygiene check OK: {VERSION}; description {len(root_desc)} chars; "
-        f"body {body_lines} lines; {len(refs)} references; 97 evals"
+        f"body {body_lines} lines; {len(refs)} references; 98 evals"
     )
     return 0
 
