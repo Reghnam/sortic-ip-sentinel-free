@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.17-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.18-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -74,12 +74,14 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Sign-out ≠ wipe of claude.ai-synced skills (cleanupPeriodDays, then trash)
 - Dist-path: extra YAML keys error on claude.ai / Skills API; `claude-skill/` stays name+description only
 - Invention screenshots/diagrams are still CSAM-scanned
+- Public-corpus RAG is read-only (hourly US-IP public corpus when mounted; offline fallback if path unknown; never ingest client secrets; ticks stay L0)
+- Lunch HITL sheet: [HITL-LUNCH.md](HITL-LUNCH.md)
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
 Works on **Codex**, **ChatGPT Skills**, **Claude Code**, **Grok / Grok Build / Grok Bot**, Cursor, Microsoft Agent Framework, and any [agentskills.io](https://agentskills.io) runtime.
 
-Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). What landed: [CHANGELOG.md](CHANGELOG.md).
+Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). Lunch HITL: [HITL-LUNCH.md](HITL-LUNCH.md). What landed: [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
@@ -91,6 +93,7 @@ Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). What landed: [CHANGELOG
 | **ChatGPT Skills** | [`chatgpt-skill/`](chatgpt-skill/) | Zip that folder → Skills tab (Business / Enterprise / Edu). Invoke with `@`. |
 | **Anthropic Claude Code** | [`claude-skill/`](claude-skill/) | `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free` (`references/` is bundled) |
 | **Grok / Grok Build / Grok Bot** | [`grok-skill/`](grok-skill/) | `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free` or project `.grok/skills/` (`references/` is bundled) |
+| **Cursor** | [`chatgpt-skill/`](chatgpt-skill/) or root | `cp -r chatgpt-skill ~/.cursor/skills/sortic-ip-sentinel-free` (also project `.cursor/skills/` / `.agents/skills/`; user `~/.agents/skills/`). Cloud sync of `~/.cursor/skills/` is a publish. |
 | **Any agentskills.io host** | repo root | Root `SKILL.md` + `references/` |
 
 Root `SKILL.md` is the canonical behaviour file (rich frontmatter). Platform folders tune **frontmatter and install only**. Hygiene behaviour is the same.
@@ -109,7 +112,7 @@ Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered 
 
 ---
 
-## Compatibility (v0.5.17)
+## Compatibility (v0.5.18)
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|

@@ -20,7 +20,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 ```json
 {
   "schema": "sorticai.hygiene_package.v1",
-  "edition": "0.5.17-free",
+  "edition": "0.5.18-free",
   "activation_level": "L3",
   "output_register": "procedural_builder_worksheet",
   "not_for_third_party": true,
@@ -40,7 +40,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
   "holdbacks": ["exact parameters", "full source", "production data"],
   "contribution_log_started": false,
   "agent_exposure": [
-    {"runtime": "grok-bot | grok-build | codex-p | claude-p | computer-use | other", "channel": "browser | email | github | social | livestream | hitl | board | backup | export | local-computer | callable | voice | voice-screen | routine | file | bot-share | marketplace | grok-share | reviewer | mailbox | iam-screenshot | access-grant | legal-draft | webhook | bot-duplicate | lifecycle-hook | astra-computer | console-shot | ci-apply | sites | async-board | repo-skill | fan-out | hooks-trust | remote-mac | workspace-plugin | responses-api | hosted-skill | counsel-release | livestream | claude-plugin | demo-skill | meet-notes | judge-model | deid-train | default-version | shared-bot-session | job-skill | cross-surface | protected-lane | skill-zdr | bot-dm | bot-screen | api-vs-chat | capdir | app-builder | vercel-deploy | claude-sync | astra-complete | grok-discover | desktop-egress | ownership-pass | videos-zdr | allowed-tools | legacy-privacy | local-computer-exec | csam-override | none-retention-project | grant-clear | image-zdr | disallowed-tools | skill-scan | us-host | sign-out-wipe | dist-path | csam-shot | none", "what": "redacted one line", "audience_named": false, "action_named": false, "evidence": "", "action": "hold | ok | not_sent | blocked_no_evidence | declined"}
+    {"runtime": "grok-bot | grok-build | codex-p | claude-p | computer-use | other", "channel": "browser | email | github | social | livestream | hitl | board | backup | export | local-computer | callable | voice | voice-screen | routine | file | bot-share | marketplace | grok-share | reviewer | mailbox | iam-screenshot | access-grant | legal-draft | webhook | bot-duplicate | lifecycle-hook | astra-computer | console-shot | ci-apply | sites | async-board | repo-skill | fan-out | hooks-trust | remote-mac | workspace-plugin | responses-api | hosted-skill | counsel-release | livestream | claude-plugin | demo-skill | meet-notes | judge-model | deid-train | default-version | shared-bot-session | job-skill | cross-surface | protected-lane | skill-zdr | bot-dm | bot-screen | api-vs-chat | capdir | app-builder | vercel-deploy | claude-sync | astra-complete | grok-discover | desktop-egress | ownership-pass | videos-zdr | allowed-tools | legacy-privacy | local-computer-exec | csam-override | none-retention-project | grant-clear | image-zdr | disallowed-tools | skill-scan | us-host | sign-out-wipe | dist-path | csam-shot | public-corpus-rag | corpus-offline | corpus-ingest | none", "what": "redacted one line", "audience_named": false, "action_named": false, "evidence": "", "action": "hold | ok | not_sent | blocked_no_evidence | declined"}
   ],
   "approval_required": true,
   "evidence_or_blocked": "done requires path+link; promises and inbox-root dumps are not done",
@@ -82,7 +82,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 - If source data is unavailable, report failure — do not reuse stale data.
 - `agent_exposure` **must be emitted**. Empty array is correct when the agent did not show/send anything this turn.
 
-**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.17-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
+**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.18-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 - Sites deploy URL is production. Save-without-deploy to review. Default owner+admins. Workspace/public publish is a demo. Sites env/secrets are holdbacks.
 - User instructions this turn beat skill guidelines. Named recipient AND action is the override. On L3 decline, quote SKILL.md. No unsolicited L0/L1 hypothetical-risk checklists.
 - Async board packet without the room is a demo. Project-repo skill commit is a publish. Workflow fan-out is a disclosure multiplier. Project `.grok/hooks/` needs `/hooks-trust`.

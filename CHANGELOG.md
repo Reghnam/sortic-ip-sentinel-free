@@ -2,6 +2,37 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.18-free] — 2026-09-16
+
+Patched from: overnight lock for lunch HITL distribution (Claude / Claude Code / Codex / ChatGPT / Grok / Cursor / Grok Bot) until 11:00 Europe/Prague; host-pack drift check (root `SKILL.md` == `chatgpt-skill/` == `grok-skill/`; `claude-skill/` differs only by name+description frontmatter — keep that split); LAUNCH install-path + eval-trigger alignment (add Cursor `~/.cursor/skills/` / `.cursor/skills/` / `.agents/skills/`; Claude.ai zip path; Codex fallback `~/.codex/skills/`); **read-only RAG** against an hourly **US-IP public** corpus when mounted (`US_IP_PUBLIC_CORPUS` or sibling `us-ip-law-ground-truth/` / `us-ip-public-corpus/` + `INDEX.md`/`manifest.json`); if the path is unknown, document the interface and fall back to `references/v05-lite-prior-art-pointers.md` — do not invent holdings or a client path; never ingest client secrets into that corpus; curriculum ticks / DESIGN-PLAN / REPAIR-QUEUE stay L0; **not a second Reg-Radar**; lunch sheet `HITL-LUNCH.md` (exact install per stack + 8 try-in-30s + pass/fail + zip recipe). Origin 0.5.17 hygiene kept (US-host ≠ vault, skill-scan ≠ vault, disallowed-tools one-turn, sign-out ≠ wipe, invention-screenshot CSAM). **No client/product/infra names, no valuation figures, no payment processors.** Description stays **1024 chars**.
+
+### OpenAI (first)
+
+- Description still **1024 chars** (under Codex 8k / 2% truncation and Anthropic 1024). RAG use is L3 behaviour, not a new trigger (corpus **ticks** remain do-not-use).
+- `agents/openai.yaml` `default_prompt` names public-corpus RAG read-only, unknown-path offline fallback, and decline of client ingest.
+- New evals 86–88: read-only RAG; path unknown → offline fallback; ingest of client work declined.
+- Cursor install paths restated (Cloud "Sync Skills" copies `~/.cursor/skills/` only — a publish).
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Name kebab-case ≤64. Description **1024 chars**, no XML. Body under 500.
+- Dist-path extra keys still error on claude.ai / Skills API / `package_skill.py`. That is why `claude-skill/` stays name+description only.
+- Evals now **88** (≥3 required). Eight options, not nine. References one level deep. No scripts inside the skill packs. Maintainer check: `scripts/check-hygiene.py`.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Bot computers still run in the United States today. Viewer still must not be asked to run shell. Bot must not email third parties unless this turn names them.
+- Public-corpus RAG is optional read-only; ticks stay L0. Live `isEnabled` is evidence. Weekly backup ≠ publish.
+
+### Shared
+
+- JSON `sorticai.hygiene_package.v1` edition `0.5.18-free`. `agent_exposure.channel` may be `public-corpus-rag | corpus-offline | corpus-ingest` (plus prior values).
+- Classification: L3-RAGUSE, L3-RAGOFF, L3-RAGINGEST; L0-05 restated as tick-only.
+- Output-language rule 61: public-corpus RAG is read-only; unknown path → offline fallback.
+- New reference `references/public-corpus-rag.md` (expected interface + forbidden writes + offline fallback).
+- Lunch HITL: `HITL-LUNCH.md`. Stamp: `v0.5.18-free` / patched 2026-09-16. First release date remains 2026-08-17.
+- Still free-only. Still not legal advice. Still silent on meta/privacy/corpus **ticks**.
+
 ## [0.5.17-free] — 2026-09-15
 
 Patched from: operator mailbox 14–15 Sep 2026 (Grok Bot Galaxy starts-tomorrow + role livestream calendar adds — Engineers / Founders / PMs — stay **L0 attend**; Claude.ai magic-link stays **L0**; weekly backup ≠ publish; leftover drafts — accounting reply, UAT leftover, partner pre-read — **unsent**; infra/IAM / Headless-callable partner mail stays out of this public repo — **no client/product/infra names, no valuation figures**; All-In de-id note already in 0.5.12/0.5.13); OpenAI recrawl 2026-09-15 afternoon (developers.openai.com/api/docs/guides/your-data + tools-skills + **csam-guidance** published 2026-09-15: **invention screenshots/diagrams are still scanned** — image/file inputs on `/v1/responses`, `/v1/chat/completions`, `/v1/images` (incl. Computer Use screenshots) are scanned on submit; classifier hit retained for manual review even on ZDR/MAM/Eyes Off; `$skill-creator` keep descriptions short while making WHEN clear; progressive disclosure — do not “read everything before every change”; `context: fork` is a hop — subagent does not inherit this skill unless listed); Anthropic Agent Skills recrawl 2026-09-15 afternoon (code.claude.com/docs/en/skills + changelog **2.1.272** 15 Sep + platform.claude.com enterprise skill scanning: **`disallowed-tools` restriction-clear is one-turn** then clears — cannot remove `EndConversation` if other tools remain; **dist-path extra keys error** — Claude Code accepts all frontmatter, claude.ai / Skills API / `package_skill.py` only `name, description, license, compatibility, metadata, allowed-tools`; **skill security scanning is not a vault** — claude.ai/Cowork only, misses Skills API, already-uploaded skills, CMEK/ZDR/HIPAA orgs; **sign-out ≠ wipe** — 2.1.272 keeps claude.ai-synced skills on disk until `cleanupPeriodDays`, then trash); Grok Bot / Build recrawl 2026-09-15 afternoon (docs.x.ai/grok-bot/security-faq last updated 3 Sep + security + approvals-security-and-privacy: **Grok Bot computers run in the United States today** — not on-prem, not BYO image, not inside your perimeter; if a review needs a written residency commitment, that is account-team not this skill; Auto Review still does not review memory writes / most settings changes; recreate/image-update can drop in-computer sign-in sessions, terminate-computer still keeps the durable disk). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; this improvement job is enabled), and X ingest. Do not dump client/product facts into the public repo.
