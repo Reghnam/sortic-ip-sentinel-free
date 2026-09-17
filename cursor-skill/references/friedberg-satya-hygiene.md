@@ -1,4 +1,4 @@
-# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.27-free)
+# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.28-free)
 
 **Hygiene only. Not legal advice. This skill cannot prove or prevent training, distillation, or leakage.**
 
@@ -64,6 +64,13 @@ SDK / Agents `skills="all"` loads every discovered skill including untrusted mar
 Mailed HITL pack **v0.5.25** is stale. Testers use this branch. Marketplace publish still Hold. Public AI-native webinar / Galaxy recording **attendance** is L0. Do not name firms or networks.
 
 AI crawler Search / Training / Agent toggles stay **L0**. **Disallow AI Training is not a vault** — search index is still public; a public page is still a disclosure. Standalone skills = ChatGPT desktop + Codex CLI/IDE; **Chat/Work web+mobile need a plugin** (Hold; do not invent `plugin.json` overnight).
+
+
+## Firm / no-train lane (this turn)
+
+Satya Summit (other side of the table): the firm must keep knowledge in **weights it controls**. “My IP shouldn’t leak.” Reviewing a research memo in Extra High / “improve the model” consumer chat **demonstrates the problem while describing it**. Use a **firm / no-train lane**. Consumer terms are not an NDA. Human review stays the trust layer. Invent with AI, keep the method. Clip-only stays L0. Do not name clients, firms, or industrial groups.
+
+GPT-5.5 retirement / switch to gpt-5.6-sol is **L0 model pick**. Pets Quick Chat `$` skills into Extra High is still a next-paste if you dump the method. `grok plugin install --trust` is a hop; SHA-pin is not a vault; marketplace PR stays Hold. Grok Build project skills live at `.grok/skills/` (does not scan `.agents/skills/`). Galaxy Day 2 / role livestream **attendance** is L0. Leftover drafts stay unsent. No Grok chat-history connector — this turn only.
 
 ## Decline
 
