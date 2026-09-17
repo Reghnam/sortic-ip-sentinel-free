@@ -1,6 +1,6 @@
 {
   "schema": "sorticai.grok_bot_share.v1",
-  "edition": "0.5.28-free",
+  "edition": "0.5.29-free",
   "status": "prepare_only",
   "do_not_publish_live": true,
   "live_marketplace_publish": "L3 David/Sameth only",
@@ -16,7 +16,7 @@
   "skills": [
     {
       "name": "sortic-ip-sentinel-free",
-      "source_zip": "sortic-ip-sentinel-free-grok-v0.5.28.zip",
+      "source_zip": "sortic-ip-sentinel-free-grok-v0.5.29.zip",
       "enable": "per-Bot",
       "not": "~/.grok/skills/"
     }
