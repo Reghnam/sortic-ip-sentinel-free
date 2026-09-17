@@ -2,6 +2,38 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.29-free] — 2026-09-17
+
+Absorbed this Grok Build turn's live mailbox (leftover tester UAT invite still **DRAFT/unsent**; Galaxy Day 3 / remaining role livestream calendar) plus vendor recrawl 17 Sep late morning. **No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, and live automations. Origin **v0.5.28-free** no-train lane / grok plugin --trust / GPT-5.5→gpt-5.6-sol L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-17 **developers.openai.com/plugins/build/skills** + **plugins/build/mcp-server** (public URL located): a skill complements an MCP server; instruction-only skills need no MCP. **Scan Tools** imports skill files as a **snapshot in the draft**. **ChatGPT and Codex do not fetch them from your MCP server at runtime.** Published plugins do **not** live-update those skills. Import caps: ≤5 skills / 256 KiB SKILL.md / 1 MiB supporting / 5 MiB per skill / 8 MiB archives. Failed scan returns tools but does **not** update imported skills. SEP-2640 is **draft**. Snapshot = **method paste** — **Hold**; do not invent `plugin.json` overnight.
+- Skills = authoring; plugins = distribution. Standalone = ChatGPT desktop + Codex CLI/IDE; **Chat/Work web+desktop+mobile need a plugin**. Description still **1024 chars**. Prefer instructions over scripts. SDK `skills="all"` hop kept.
+- `agents/openai.yaml` `default_prompt` names Scan Tools snapshot Hold, leftover tester UAT invites unsent, Galaxy Day 3 L0.
+- Evals **121–123**. JSON channels `scan-tools-snapshot | galaxy-day3 | leftover-uat-invite`.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Body stays under 500. Dist-path allowlist is `name, description, license, compatibility, metadata, allowed-tools` — extra keys still **error**. This skill still adds **neither** `allowed-tools` nor `disallowed-tools` (one-turn grant-clear / restriction-clear is a hop, not a vault). Combined description + when_to_use still truncated at 1536. 123 evals.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored** (unlike Claude dist-path which **errors**). Keep the split.
+- **Project skills live at `.grok/skills/`** — Grok Build does **not** scan `.agents/skills/` for project skills. Home `~/.grok/skills/` is Build/CLI. Bot = Save / Plugins enable-per-Bot.
+- `grok plugin install <name> --trust` stays a hop. Marketplace still Hold. Bot computers still US-hosted.
+- Galaxy Day 2–3 / remaining role livestream **attendance** stays **L0**. Share pack still do-not-publish-live.
+- This turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED (inner-circle wrap only; no partner mail, no tweet, no marketplace).
+
+### Shared
+
+- **MCP Scan Tools snapshot is a method paste.** ChatGPT/Codex do not live-fetch MCP skills. Plugin-portal submit stays Hold.
+- **Leftover tester UAT invites stay unsent.** Registering testers is L0. Dumping client/know-how into a live UAT tenant is a next-paste. No tester / firm / module names.
+- **Callable / headless chain is still a disclosure ladder** (callable → platform → reviewer → customer). Do not stop after the stamp.
+- **Mailed HITL pack v0.5.25 is stale.** Testers use this branch. Rebuild host zips as **v0.5.29**. Marketplace publish still Hold.
+- Evals now **123**. HITL F9–F11 + T9–T11 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.28-free] — 2026-09-17
 
 Absorbed this Grok Build turn's live mailbox (16 Sep evening Satya follow-up after v0.5.27; leftover upskilling draft unsent; Galaxy Day 2 / role livestream calendar) plus vendor recrawl 17 Sep morning. **No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, and live automations. Origin **v0.5.27-free** screenshot-first / skills=all / HITL-zip-stale / Chat-Work-plugin Hold kept. **No client / product / infra / firm / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
