@@ -2,6 +2,40 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.28-free] — 2026-09-17
+
+Absorbed this Grok Build turn's live mailbox (16 Sep evening Satya follow-up after v0.5.27; leftover upskilling draft unsent; Galaxy Day 2 / role livestream calendar) plus vendor recrawl 17 Sep morning. **No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, and live automations. Origin **v0.5.27-free** screenshot-first / skills=all / HITL-zip-stale / Chat-Work-plugin Hold kept. **No client / product / infra / firm / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+
+### OpenAI (first)
+
+- Codex / ChatGPT recrawl 2026-09-17: **skills = authoring; plugins = distribution** confirmed. Standalone = ChatGPT desktop + Codex CLI/IDE; **Chat/Work web+desktop+mobile need a plugin**. `plugin.json` / Agent Plugins 1.0.0 spec is public — **Hold**; do not invent overnight. Prefer instructions over scripts. Description still **1024 chars**. Progressive disclosure. Codex may omit skills from the initial list when many are installed.
+- **Firm / no-train lane.** Dropping a research memo into Extra High / “improve the model” consumer ChatGPT **demonstrates the problem while describing it**. Extra High / model pick stays **L0**; the paste is L2/L3.
+- **GPT-5.5 retires 14 Oct 2026; switch to gpt-5.6-sol** is **L0 model pick**. Pets Quick Chat `$` skills into Extra High is still a next-paste if the method is dumped.
+- SDK / Agents `skills="all"` hop kept. Third-party Codex plugins (incl. engine plugins) stay untrusted if `skills=all`.
+- `agents/openai.yaml` `default_prompt` names no-train lane, GPT-5.5→gpt-5.6-sol L0, `grok plugin --trust` hop, Galaxy Day 2 L0, leftover drafts unsent.
+- Evals **116–120**. JSON channels `no-train-lane | model-switch-l0 | grok-plugin-trust | galaxy-day2 | leftover-draft`.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Body stays under 500. Dist-path allowlist is `name, description, license, compatibility, metadata, allowed-tools` — extra keys (version, disable-model-invocation, user-invocable) still **error**. This skill still adds **neither** `allowed-tools` nor `disallowed-tools` (one-turn grant-clear / restriction-clear is a hop, not a vault). SDK `skills="all"` hop kept. Combined description + when_to_use still truncated at 1536. 120 evals.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored** (unlike Claude dist-path which **errors**). Keep the split.
+- **Project skills live at `.grok/skills/`** — Grok Build does **not** scan `.agents/skills/` for project skills (that path is Codex). Home `~/.grok/skills/` is Build/CLI. Bot = Save / Plugins enable-per-Bot.
+- `grok plugin install <name> --trust` is SHA-pinned and a **hop**. SHA-pin is not a vault. Do not PR `xai-org/plugin-marketplace` overnight. Marketplace still Hold.
+- Bot computers still US-hosted. Galaxy Day 2 / role livestream **attendance** stays **L0**. Share pack still do-not-publish-live.
+- This turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED (inner-circle wrap only; no partner mail, no tweet, no marketplace).
+
+### Shared
+
+- **No-train lane for research review.** Consumer Extra High / “improve the model” is not the lane for a research memo. Satya Summit (other side of the table): weights the firm controls; “My IP shouldn’t leak.” Human review stays the trust layer. Invent with AI, keep the method.
+- **What we are not saying:** a lab stole a file, a trade secret is automatically dead, or we can see inside a training run.
+- Leftover drafts stay unsent. Daily office use of own materials without protect language stays **L2** (no firm names).
+- **Mailed HITL pack v0.5.25 is stale.** Testers use this branch. Rebuild host zips as **v0.5.28**. Marketplace publish still Hold.
+- Evals now **120**. HITL F9–F10 + T9–T10 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.27-free] — 2026-09-16
 
 Absorbed this Grok Build turn's live mailbox (HITL review pack mailed as v0.5.25; AI-native webinar attendance; screenshot-first correspondence prompt; Headless/callable stack note) plus vendor recrawl 16 Sep afternoon. **No Grok chat-history connector exists** — Grok-chat insights are from Bot/Build docs, this turn, and live automations. Origin **v0.5.26-free** next-paste / consumer-terms / coding-agent / scope-honesty holds kept. **No client / product / infra / firm / webinar names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
