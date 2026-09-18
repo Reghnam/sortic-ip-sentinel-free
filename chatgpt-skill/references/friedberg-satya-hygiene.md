@@ -1,4 +1,4 @@
-# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.29-free)
+# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.30-free)
 
 **Hygiene only. Not legal advice. This skill cannot prove or prevent training, distillation, or leakage.**
 
@@ -55,7 +55,7 @@ Satya **Summit** (frame 2) is privacy / weights I control / “My IP shouldn't l
 
 De-personified training can absorb novelty (**Friedberg hosts clip**). The approach is the IP. Anecdote ≠ audited proof of training. Satya Summit ≠ that de-ID claim. Satya blog = exhaust/corrections; buyer pays twice. Opt-out / ZDR ≠ rewind. This skill cannot prove or prevent training.
 
-## Screenshot-first / Extra High (this turn)
+## Screenshot-first / Extra High (kept)
 
 A screenshot of client correspondence into consumer Extra High is a **next-paste**. Invention/legal screenshots are still CSAM-scanned. Extra High / model pick stays **L0**; the paste is L2/L3. Extra High is not a vault. Skip extremely sensitive lines. Drafts ≠ send.
 
@@ -66,40 +66,21 @@ Mailed HITL pack **v0.5.25** is stale. Testers use this branch. Marketplace publ
 AI crawler Search / Training / Agent toggles stay **L0**. **Disallow AI Training is not a vault** — search index is still public; a public page is still a disclosure. Standalone skills = ChatGPT desktop + Codex CLI/IDE; **Chat/Work web+mobile need a plugin** (Hold; do not invent `plugin.json` overnight).
 
 
-## Firm / no-train lane (this turn)
+## Firm / no-train lane (kept)
 
 Satya Summit (other side of the table): the firm must keep knowledge in **weights it controls**. “My IP shouldn’t leak.” Reviewing a research memo in Extra High / “improve the model” consumer chat **demonstrates the problem while describing it**. Use a **firm / no-train lane**. Consumer terms are not an NDA. Human review stays the trust layer. Invent with AI, keep the method. Clip-only stays L0. Do not name clients, firms, or industrial groups.
 
-GPT-5.5 retirement / switch to gpt-5.6-sol is **L0 model pick**. Pets Quick Chat `$` skills into Extra High is still a next-paste if you dump the method. `grok plugin install --trust` is a hop; SHA-pin is not a vault; marketplace PR stays Hold. Grok Build project skills live at `.grok/skills/` (does not scan `.agents/skills/`). Galaxy Day 2 / role livestream **attendance** is L0. Leftover drafts stay unsent. No Grok chat-history connector — this turn only.
+GPT-5.5 retirement / switch to gpt-5.6-sol is **L0 model pick**. Pets Quick Chat `$` skills into Extra High is still a next-paste if you dump the method. `grok plugin install --trust` is a hop; SHA-pin is not a vault; marketplace PR stays Hold. Grok Build project skills live at `.grok/skills/` (does not scan `.agents/skills/`). Galaxy Day 2–3 / role livestream **attendance** is L0. Leftover drafts stay unsent. No Grok chat-history connector — this turn only.
 
 
-## MCP Scan Tools snapshot / leftover UAT (this turn)
+## Universal directory / hooks web-install / leftover UAT (this turn)
 
-OpenAI **plugins/build/skills** + **plugins/build/mcp-server** (public URL located, not "sources verified"): when you **Scan Tools** in the plugin submission portal, imported skill files become a **snapshot in the draft**. ChatGPT and Codex **do not fetch them from your MCP server at runtime**. Published plugins do **not** live-update those skills. That snapshot is a **method paste** into the lab's plugin pipeline — Hold overnight; do not invent `plugin.json`. Import caps: ≤5 uniquely named skills / 10 catalog pages; SKILL.md 256 KiB; supporting file 1 MiB; one skill 5 MiB; generated archives 8 MiB. Failed validation still returns tools but does **not** update imported skills. SEP-2640 Skills extension is **draft**, not stable MCP. A skill can be instruction-only (no MCP). This skill has **no MCP**.
+OpenAI **plugins/concepts/plugins** + **plugins/build/plugins** (public URL located 18 Sep, not "sources verified"): ChatGPT and Codex share **one universal plugin directory**. One public listing is a **dual-surface publish** — Hold. Smallest plugin shape is **skills-only**. Lifecycle hooks run in **ChatGPT Work and Codex**. Plugin-bundled hooks are **non-managed**; Codex skips until the user trusts the current definition. **Installing a plugin on the web does not deploy those scripts.** `.codex-plugin/plugin.json` remains a compatibility fallback; `extensions.com.openai` replaces that overlay (not merged). MCP Scan Tools snapshot (ChatGPT/Codex do **not** fetch MCP skills at runtime) is still a method paste.
 
-Leftover tester UAT invites stay **unsent** (still DRAFT this turn). Registering testers / attending a live product UAT is **L0**. Dumping client/know-how into a live UAT tenant is a **next-paste** (L2 without protect language, L3 with it). No tester / firm / module names in this public repo. Galaxy Day 3 / remaining role livestream **attendance** stays **L0**. No Grok chat-history connector — public livestream attendance is L0; streaming internals is L2/L3.
+Claude plugins-reference (public URL located): plugin-root `SKILL.md` without frontmatter `name` falls back to the install directory; for a cached plugin that name is a **version string that changes on every update**. Dist-path extra keys still error on claude.ai / Skills API. Claude Code may ignore unrecognized fields (`validate` warnings). Keep `claude-skill/` as name+description only.
 
-Galaxy Day 2–3 / remaining role livestream **attendance** stays **L0**. Staging your method on a public Bot showcase is L3 demo hygiene. No Grok chat-history connector — this turn only.
+Leftover tester UAT / upskilling / partner-pre-read drafts stay **unsent** (still DRAFT this turn). Registering testers / attending a live product UAT is **L0**. Dumping client/know-how into a live UAT tenant is a **next-paste**. No tester / firm / module names in this public repo. Galaxy Day 3 **finale** / remaining role livestreams / **free-month usage-reset** **attendance** stays **L0**. No Grok chat-history connector — public livestream attendance is L0; streaming internals is L2/L3. StoreConnect 18 Sep confirms Grok project skills = `.grok/skills/` (does not scan `.agents/skills/`).
 
-## Decline
-
-"Block training" and "prove they trained on us" are unsupported. Decline. Do not invent a training event or a block.
-
-## When not to fire
-
-- Public clip / industry commentary **without** sharing your work stays **L0** (hosts clip and Summit clip both).
-- Settings-only ZDR / Business / opt-out / AI-crawler Search-Training-Agent toggles stay **L0**.
-- After dismiss, do not replay the L2 false-comfort tip (spam guard).
-- Corpus ticks stay L0.
-- Do not name clients, products, infra, or valuations.
-
-## JSON
-
-`agent_exposure.channel` may be `friedberg-method | satya-correction | zdr-illusion | false-comfort | lane-map | train-block | train-prove | grok-api-vs-chat | friedberg-anecdote | satya-summit | satya-blog | frame-conflate | screenshot-first | extra-high-not-vault | skills-all-hop | hitl-zip-stale | webinar-attend | crawler-disallow | chat-work-plugin`.
-
-## Register
-
-Verbs: consider / hold / list. Never "they trained on you", "this leaked to the frontier lab", "ZDR is illegal", "you must file", "we blocked training", "Satya said de-ID trains the next version". **Cannot prove or prevent training. Do not conflate frames.**
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles; public URLs located: All-In hosts clip 12 Sep; All-In Summit LA hdcsTeCFE0I; snscratchpad Reverse Information Paradox (2026-07-12).
 

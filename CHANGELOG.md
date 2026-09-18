@@ -2,6 +2,43 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.30-free] — 2026-09-18
+
+Absorbed this Grok Build turn's live mailbox (leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**; Galaxy Day 3 **finale** + free-month usage-reset calendar 17 Sep evening) plus vendor recrawl **18 Sep**. **No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, StoreConnect 18 Sep, and live automations. Origin **v0.5.29-free** Scan Tools snapshot / leftover UAT unsent / Galaxy Day 3 L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-18 **developers.openai.com/plugins/concepts/plugins** + **plugins/build/plugins** (public URL located; build/plugins published 18 Sep): **ChatGPT and Codex share one universal plugin directory**. One public listing is a **dual-surface publish** — Hold overnight; do not invent `plugin.json` / `.codex-plugin/plugin.json`. Existing `.codex-plugin/plugin.json` remains a compatibility fallback; `extensions.com.openai` replaces that overlay (they are **not** merged).
+- **Smallest plugin shape is skills-only.** An MCP server or UI can be added later. This skill still has **no MCP** and **no lifecycle hooks**.
+- **Lifecycle hooks** run in the Codex runtime including **ChatGPT Work and Codex**. Plugin-bundled hooks are **non-managed**; Codex skips them until the user reviews and trusts the current definition. **Installing a plugin on the web does not deploy those scripts.** Enterprise admins can deploy required scripts through MDM. Do not treat a web install as hook deploy.
+- Skills = authoring; plugins = distribution. Standalone = ChatGPT desktop + Codex CLI/IDE; **Chat/Work web+desktop+mobile need a plugin**. Scan Tools snapshot (no runtime MCP fetch; import caps 5 skills / 256 KiB; SEP-2640 draft) kept from 0.5.29. Description still **1024 chars**. Prefer instructions over scripts. SDK `skills="all"` hop kept.
+- `agents/openai.yaml` `default_prompt` names universal-directory Hold, hooks web-install ≠ deploy, leftover tester UAT invites unsent, Galaxy finale / usage-reset L0.
+- Evals **124–127**. JSON channels `universal-directory | hooks-web-install | claude-name-cache | galaxy-finale`.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Body stays under 500. Dist-path allowlist is `name, description, license, compatibility, metadata, allowed-tools` — extra keys still **error** on claude.ai / Skills API / `package_skill.py`. Claude Code itself may ignore unrecognized fields (`claude plugin validate` warnings, `--strict` errors) — keep the split; this pack stays name+description only.
+- **Plugin-root `SKILL.md` without `name` is a version-string cache.** If a plugin has no `skills/` directory and no `skills` manifest field, a root `SKILL.md` loads as a single skill. Without frontmatter `name`, Claude Code falls back to the install directory name; for a plugin copied into the cache that name is a **version string that changes on every update**. Always set `name`. `claude plugin init` scaffolds `~/.claude/skills/<name>/` as `<name>@skills-dir` (not a marketplace). This skill still adds **neither** `allowed-tools` nor `disallowed-tools` (one-turn grant-clear / restriction-clear is a hop, not a vault). Combined description + when_to_use still truncated at 1536. 127 evals.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored** (unlike Claude dist-path which **errors**). Keep the split.
+- **Project skills live at `.grok/skills/`** — Grok Build does **not** scan `.agents/skills/` for project skills. StoreConnect (public URL located, last modified 18 Sep) confirms the same hop. Home `~/.grok/skills/` is Build/CLI. Bot = Save / Plugins enable-per-Bot.
+- `grok plugin install <name> --trust` stays a hop. Marketplace still Hold. Bot computers still US-hosted.
+- Galaxy Day 2–3 / **finale** / remaining role livestreams / **free-month usage-reset** **attendance** stays **L0**. Share pack still do-not-publish-live.
+- This turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED (inner-circle wrap only; no partner mail, no tweet, no marketplace).
+
+### Shared
+
+- **Universal ChatGPT+Codex plugin directory is a dual-surface publish.** One listing hits both products. Hold.
+- **Web plugin install ≠ hook deploy.** Non-managed hooks stay untrusted until reviewed. This skill has none.
+- **Claude plugin-root without `name` is a version-string cache.** Always set frontmatter `name`.
+- **Leftover tester UAT / upskilling / partner-pre-read drafts stay unsent.** Registering testers is L0. Dumping client/know-how into a live UAT tenant is a next-paste. No tester / firm / module names.
+- **Callable / headless chain is still a disclosure ladder** (callable → platform → reviewer → customer). Do not stop after the stamp.
+- **Mailed HITL pack v0.5.25 is stale.** Testers use this branch. Rebuild host zips as **v0.5.30**. Marketplace publish still Hold.
+- Evals now **127**. HITL F9–F12 + T9–T12 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.29-free] — 2026-09-17
 
 Absorbed this Grok Build turn's live mailbox (leftover tester UAT invite still **DRAFT/unsent**; Galaxy Day 3 / remaining role livestream calendar) plus vendor recrawl 17 Sep late morning. **No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, and live automations. Origin **v0.5.28-free** no-train lane / grok plugin --trust / GPT-5.5→gpt-5.6-sol L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
