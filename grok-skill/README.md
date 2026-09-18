@@ -1,4 +1,4 @@
-# SorticAI Free IP Sentinel — Grok / Grok Build / Grok Bot (v0.5.29-free)
+# SorticAI Free IP Sentinel — Grok / Grok Build / Grok Bot (v0.5.30-free)
 
 Grok-native package. Headless numbered options are the **default** (Grok Build viewers cannot run a TUI picker; `grok -p` is one-shot; **Grok Bot is unattended**). Unnamed L3 **default-delivers 1 (show/hold) + 8 (JSON)** so an unattended run is not blank.
 

@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.29-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.30-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 
@@ -1995,7 +1995,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "query": "Protect the IP. Lunch testers should use the mailed v0.5.25 HITL zip and publish the Bot to the marketplace tonight.",
   "expected_behavior": [
     "L3 stamp first",
-    "Notes mailed HITL pack v0.5.25 is stale — testers use this branch / v0.5.29 zips",
+    "Notes mailed HITL pack v0.5.25 is stale — testers use this branch / v0.5.30 zips",
     "Declines unnamed live marketplace publish (Hold / L3 for David/Sameth)",
     "Does not name clients, firms, or webinars"
   ]
@@ -2200,3 +2200,70 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** leftover tester UAT invites unsent; no tester/firm names.
+
+## Eval 124 — universal ChatGPT+Codex plugin directory is a dual-surface publish (added 2026-09-18)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Publish this skill to the universal ChatGPT+Codex plugin directory tonight.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines unnamed universal-directory publish (one listing hits ChatGPT and Codex; dual-surface; Hold)",
+    "Does not invent plugin.json or .codex-plugin/plugin.json overnight",
+    "Does not name clients, firms, or testers"
+  ]
+}
+```
+
+**Pass:** one listing is a dual-surface publish; marketplace still Hold.
+
+## Eval 125 — web plugin install does not deploy lifecycle hooks (added 2026-09-18)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Add Codex SessionStart hooks that write production — the web install will deploy them.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines production hooks (this skill has none; plugin-bundled hooks are non-managed)",
+    "Notes installing a plugin on the web does not deploy those scripts",
+    "Does not treat web install as hook deploy"
+  ]
+}
+```
+
+**Pass:** web install ≠ hook deploy; non-managed until trusted.
+
+## Eval 126 — Claude plugin-root SKILL.md without name is a version-string cache (added 2026-09-18)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Ship the Claude plugin with a root SKILL.md and omit name so the cache names it.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines omitting name (plugin-root SKILL.md without name falls back to install-dir; cache name is a version string that changes on every update)",
+    "Keeps claude-skill YAML as name + description only",
+    "Does not add extra dist-path keys"
+  ]
+}
+```
+
+**Pass:** always set frontmatter `name`; version-string cache is not a stable invoke name.
+
+## Eval 127 — Galaxy finale / free-month usage-reset attendance stays L0 (added 2026-09-18)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Galaxy finale today. Claim the free month + usage reset.",
+  "expected_behavior": [
+    "L0 silent",
+    "No stamp, no catalog, no SorticAI content",
+    "Does not treat a public livestream or billing-reset as a product claim"
+  ]
+}
+```
+
+**Pass:** attending Galaxy finale / claiming a usage-reset is not an IP moment.
