@@ -1,4 +1,4 @@
-# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.30-free)
+# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.31-free)
 
 **Hygiene only. Not legal advice. This skill cannot prove or prevent training, distillation, or leakage.**
 
@@ -145,3 +145,13 @@ AI crawler Search / Training / Agent toggles stay **L0**. **Disallow AI Training
 ## JSON (added channels)
 
 `agent_exposure.channel` may also be `next-paste | consumer-terms | coding-agent-exhaust | scope-honesty | know-how-not-privacy`.
+
+## Office add-in / custom-GPT migrate / host-stripped forks (this turn)
+
+OpenAI Business admin (public URL located 18 Sep evening, not "sources verified") + recrawl **19 Sep** **plugins/concepts/plugins** / **learn/developers-codex-plugin**:
+
+- **Office add-in (Word / Excel / PowerPoint)** is a **next-paste**. "Draft a client memo from your notes" dumps know-how into a lab surface. Business add-in is **not** a vault. Firm / no-train lane still applies. gpt-5.6-sol Word preview until 30 Sep is **L0 model/preview pick**.
+- **Custom GPTs retire 11 Dec 2026.** Migrate-to-plugin from **22 Sep**; new custom-GPT creation ends **26 Oct**. Migrating a knowledge-bearing GPT into a plugin is a **dual-surface publish** (universal ChatGPT+Codex directory). Hold. Do not dump GPT instructions/knowledge into a public listing. `openai-gpt-package/` is the retiring path.
+- **Host-stripped adaptations:** a universal listing can appear on ChatGPT and Codex; Claude Code / Cursor adaptations bundle portable skills + public Docs MCP **without** the Codex Platform connector — a **hop**. Hold overnight.
+- GPT-5.5 retires 14 Oct from ChatGPT, Work, and Codex (not the API) — L0. Public Box/ChatGPT content-summit **23 Sep attendance** is L0; dumping Box content is a next-paste.
+- Leftover tester UAT / upskilling / partner-pre-read drafts stay **unsent**. No tester / firm / module names. No Grok chat-history connector — this turn only.
