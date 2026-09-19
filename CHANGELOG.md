@@ -2,6 +2,44 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.32-free] — 2026-09-19
+
+Absorbed this Grok Build turn's live mailbox (SteerCo IP-risk brief 16 Sep already in origin; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**) plus vendor recrawl **19 Sep afternoon** and the **readable** grok-export W38 zip (previous turn called it binary). **No conversation_search** — Grok-chat coverage is PARTIAL (12 files: 1 verified Build session + 11 automation metadata-only; interactive project chats missing). Origin **v0.5.31-free** Office add-in / custom-GPT migrate / host-stripped / Word preview L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-19 afternoon **developers.openai.com/plugins/build/skills** + **learn.chatgpt.com/docs/extend/record-and-replay** (public URL located): **Record & Replay** observes window content and turns a Mac workflow into a reusable skill (Computer Use / browser / plugins). "Use realistic inputs, but avoid secrets and sensitive data." Unnamed Record & Replay is **demonstration-to-skill** — Hold / decline. Same family as Grok Teach-a-task.
+- **Scan Tools rescan-after-change is another method paste.** "After changing the skill, deploy the server and scan it again before submitting a new plugin version." Rescan ≠ a new private lane. Hold.
+- GPT-5.3-Codex-Spark removed 14 Sep from ChatGPT desktop / Codex CLI / IDE — **L0 model pick**. GPT-5.5 retire 14 Oct stays L0.
+- Office add-in / custom GPT→plugin dual-surface / universal directory / hooks web-install ≠ deploy / host-stripped forks kept from 0.5.31.
+- `agents/openai.yaml` `default_prompt` names Record & Replay, Teach-a-task 10 min, rescan-after-change, grok-export PARTIAL, leftover drafts unsent.
+- Evals **132–135**. JSON channels `record-replay | teach-a-task | rescan-snapshot | grok-export-partial | spark-retire-l0`.
+
+### Anthropic (second)
+
+- Recrawl 19 Sep: YAML still **only** `name` + `description` on `claude-skill/`. Body stays 499. Dist-path extra keys still **error**. Boolean aliases (`yes`/`no`/`on`/`off`/`1`/`0`) since Claude Code v2.1.218 — this skill still adds **neither** `allowed-tools` nor `disallowed-tools`. Frontmatter must start on line 1. Plugin-root without `name` is still a version-string cache. Combined description + when_to_use still truncated at 1536. 135 evals.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- **Grok-export W38 is now readable** (was binary last turn). Coverage **PARTIAL**: 1 verified Build session + 11 automation conversations (metadata + conversationId; bodies not retrieved). Interactive project chats still missing. Do **not** dump those chats into this public repo. `conversation_search` still not in this harness.
+- **Teach a task** (FAQ last updated 18 Sep): records one browser workflow from the computer view, **10-minute** limit, draft skill to review. Same demonstration-to-skill Hold as Record & Replay. Private skills are one library shared by all Bots (hop).
+- Project skills still `.grok/skills/` (does not scan `.agents/skills/`). `grok plugin install --trust` hop. Marketplace still Hold. Bot computers still US-hosted.
+- Galaxy / Office-preview / content-summit / Spark-retire **attendance / model pick** stays **L0**.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **Record & Replay / Teach-a-task is demonstration-to-skill.** Window content is recorded. Secrets/methods do not belong in the take. Unnamed save-as-skill is a publish.
+- **Scan Tools rescan-after-change is another snapshot.** Do not treat a second scan as a private lane.
+- **Grok-export PARTIAL ≠ full chat absorb.** Metadata-only automation chats are not transcripts. Do not publish chat bodies.
+- **Office add-in / custom-GPT migrate / universal directory** holds kept.
+- Leftover tester UAT / upskilling / partner-pre-read drafts stay unsent.
+- Callable / headless chain is still a disclosure ladder.
+- Mailed HITL pack v0.5.25 is stale. Rebuild host zips as **v0.5.32**. Marketplace still Hold.
+- Evals now **135**. HITL F9–F14 + T9–T14 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.31-free] — 2026-09-19
 
 Absorbed this Grok Build turn's live mailbox (OpenAI Business admin 18 Sep evening: Office add-in + custom-GPT retirement + GPT-5.5 dates; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**) plus vendor recrawl **19 Sep**. **No Grok chat-history connector exists** — grok-export zip is binary/unreadable here; Grok-chat insights are from this turn, Bot/Build docs, StoreConnect 18 Sep, and live automations. Origin **v0.5.30-free** universal-directory / hooks web-install / Claude name-cache / Galaxy finale L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
