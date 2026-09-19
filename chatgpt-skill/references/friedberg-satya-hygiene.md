@@ -1,4 +1,4 @@
-# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.31-free)
+# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.32-free)
 
 **Hygiene only. Not legal advice. This skill cannot prove or prevent training, distillation, or leakage.**
 
@@ -155,3 +155,18 @@ OpenAI Business admin (public URL located 18 Sep evening, not "sources verified"
 - **Host-stripped adaptations:** a universal listing can appear on ChatGPT and Codex; Claude Code / Cursor adaptations bundle portable skills + public Docs MCP **without** the Codex Platform connector — a **hop**. Hold overnight.
 - GPT-5.5 retires 14 Oct from ChatGPT, Work, and Codex (not the API) — L0. Public Box/ChatGPT content-summit **23 Sep attendance** is L0; dumping Box content is a next-paste.
 - Leftover tester UAT / upskilling / partner-pre-read drafts stay **unsent**. No tester / firm / module names. No Grok chat-history connector — this turn only.
+
+
+## Record & Replay / Teach-a-task / rescan / grok-export (this turn)
+
+Hygiene only. Not legal advice. Public URL located 19 Sep afternoon, not "sources verified".
+
+- **Record & Replay** (ChatGPT / Codex, learn.chatgpt.com/docs/extend/record-and-replay): observes window content on the Mac and turns a workflow into a reusable skill (Computer Use / browser / plugins). "Use realistic inputs, but avoid secrets and sensitive data." Unnamed Record & Replay is **demonstration-to-skill**. Hold / decline.
+- **Teach a task** (Grok Bot FAQ, last updated 18 Sep): records one browser workflow from the computer view. **10-minute** limit. Draft skill to review and test. Same Hold. Private skills are one library shared by all Bots — a hop, not a vault.
+- **Scan Tools rescan-after-change** (plugins/build/skills): after changing a skill, deploy and scan again before a new plugin version. The second snapshot is still a **method paste**. Hold. Do not invent `plugin.json`.
+- **GPT-5.3-Codex-Spark** removed 14 Sep from ChatGPT desktop / Codex CLI / IDE — **L0 model pick**. GPT-5.5 retire 14 Oct stays L0.
+- **Grok-export W38 is readable** and still **PARTIAL**. No `conversation_search`. 11 automation chats are metadata + conversationId only. Interactive project chats missing. Do not dump chat bodies into this public repo. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Leftover tester UAT / upskilling / partner-pre-read drafts stay **unsent**. No tester / firm / module names.
+- Office add-in next-paste, custom GPT→plugin dual-surface, host-stripped forks, universal directory, web-install ≠ hook deploy kept from 0.5.31.
+
+JSON channels: `record-replay | teach-a-task | rescan-snapshot | grok-export-partial | spark-retire-l0`.
