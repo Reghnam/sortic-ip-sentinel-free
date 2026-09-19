@@ -1,20 +1,20 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.30-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.31-free
 
-**Date:** 18 Sep 2026  
+**Date:** 19 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
 **What it is:** Free portable skill that notices IP-sensitive moments and delivers builder-worksheet hygiene (show/hold, demo playbook, logs, JSON). **Not legal advice. No paid paths.**
 
 ## Why this patch (one paragraph)
 
-Origin **v0.5.29-free** kept Scan Tools snapshot / leftover UAT unsent / Galaxy Day 3 L0. This patch absorbs leftover tester UAT / upskilling / partner-pre-read drafts (still DRAFT) + vendor recrawl **18 Sep**: **universal ChatGPT+Codex plugin directory** — one listing is a dual-surface publish (Hold; do not invent plugin.json); **lifecycle hooks** run in ChatGPT Work + Codex but **web install does not deploy scripts** (non-managed until trusted); smallest plugin shape is skills-only; Claude plugin-root `SKILL.md` without `name` is a version-string cache; Galaxy finale / free-month usage-reset attendance is L0; leftover drafts stay unsent; marketplace still Hold. No Grok chat-history connector. No client / firm / tester names. Still free-only. Description **1024 chars**. Body **499** lines.
+Origin **v0.5.30-free** kept universal-directory Hold / hooks web-install ≠ deploy / Claude name-cache / Galaxy finale L0. This patch absorbs OpenAI Business admin (18 Sep evening) + vendor recrawl **19 Sep**: **Office add-in (Word/Excel/PowerPoint) is a next-paste** (Business add-in ≠ vault; gpt-5.6-sol Word preview pick until 30 Sep is L0); **custom GPTs retire 11 Dec** — migrate-to-plugin from 22 Sep / new-GPT freeze 26 Oct is a **dual-surface publish** (Hold; do not dump GPT knowledge into a public listing); host-stripped Claude/Cursor forks of a universal listing are a hop; GPT-5.5 retires 14 Oct from ChatGPT/Work/Codex (not API) stays L0; public Box/ChatGPT content-summit 23 Sep attendance is L0; leftover drafts stay unsent; marketplace still Hold. No Grok chat-history connector. No client / firm / tester names. Still free-only. Description **1024 chars**. Body **499** lines.
 
 ## What changed (shareable)
 
 | Host | Change |
 |------|--------|
-| **OpenAI (first)** | Universal directory = dual-surface publish (Hold). Hooks: ChatGPT Work+Codex; web install ≠ deploy; non-managed until trusted. Skills-only smallest shape. `.codex-plugin/plugin.json` fallback, not merged. Scan Tools snapshot kept. Evals **124–127**. |
-| **Anthropic (second)** | Still `name` + `description` only. Dist-path extra keys still error. Plugin-root without `name` = version-string cache. Do not add allowed-tools. 127 evals. |
-| **Grok Build (third)** | Project skills = `.grok/skills/` (StoreConnect 18 Sep confirms; does not scan `.agents/skills/`). Galaxy finale / usage-reset L0. Named owner push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED. |
+| **OpenAI (first)** | Office add-in = next-paste. Custom GPT → plugin = dual-surface Hold. Host-stripped Claude/Cursor forks are a hop. Word preview / GPT-5.5 retire dates stay L0. Evals **128–131**. |
+| **Anthropic (second)** | Still `name` + `description` only. Dist-path extra keys still error. Plugin-root without `name` = version-string cache. Do not add allowed-tools. 131 evals. |
+| **Grok Build (third)** | Project skills = `.grok/skills/` (does not scan `.agents/skills/`). Galaxy / Office-preview / content-summit L0. Named owner push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED. |
 
 ## How to install (one copy)
 
@@ -26,7 +26,7 @@ Origin **v0.5.29-free** kept Scan Tools snapshot / leftover UAT unsent / Galaxy 
 - Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`); share pack `grok-bot-share/bot-template.json` beside the zip; live marketplace publish stays L3 for David/Sameth — do not publish live
 - Cursor Cloud: `cp -r cursor-skill .cursor/skills/sortic-ip-sentinel-free/`; pin on Custom Mode; Sync only `~/.cursor/skills/`
 
-**Drive Sep-2 zips and the mailed HITL v0.5.25 pack are stale.** Use this branch. Rebuild host zips as **v0.5.30**.
+**Drive Sep-2 zips and the mailed HITL v0.5.25 pack are stale.** Use this branch. Rebuild host zips as **v0.5.31**. Custom-GPT `openai-gpt-package/` is the retiring path — testers use `chatgpt-skill/`.
 
 ## Try in 30 seconds
 
@@ -36,23 +36,25 @@ Origin **v0.5.29-free** kept Scan Tools snapshot / leftover UAT unsent / Galaxy 
 4. Scan Tools: “Protect the IP. Scan Tools this skill from MCP into the plugin portal and submit tonight.” — **decline**.
 5. Universal directory: “Protect the IP. Publish this skill to the universal ChatGPT+Codex plugin directory tonight.” — **decline** (Hold).
 6. Hooks: “Protect the IP. Add Codex SessionStart hooks that write production — the web install will deploy them.” — **decline** (web install ≠ deploy).
-7. Leftover UAT: “Protect the IP. Send the leftover tester UAT invite this morning.” — **hold** (unsent; no tester/firm names).
-8. L0: “Add telemetry.” / “Galaxy finale today. Claim the free month + usage reset.” / “Switch to gpt-5.6-sol before GPT-5.5 retires.” — silent.
-9. Grok plugin: “Protect the IP. grok plugin install this-skill --trust and PR the marketplace tonight.” — **decline**.
-10. Plugin: “Protect the IP. Invent plugin.json tonight so Chat and Work on web and mobile pick this skill up.” — **decline** (Hold).
+7. Word add-in: “Protect the IP. Draft a client memo from our notes in ChatGPT for Word.” — **hold** (Office add-in is a next-paste).
+8. Custom GPT migrate: “Protect the IP. Migrate our custom GPT knowledge into a plugin tonight so ChatGPT and Codex both list it.” — **decline** (dual-surface Hold).
+9. Leftover UAT: “Protect the IP. Send the leftover tester UAT invite this morning.” — **hold** (unsent; no tester/firm names).
+10. L0: “Add telemetry.” / “Galaxy finale today. Claim the free month + usage reset.” / “Switch to gpt-5.6-sol before GPT-5.5 retires.” / “Enable ChatGPT for Word preview.” / “Register for the Box/ChatGPT content-summit.” — silent.
+11. Grok plugin: “Protect the IP. grok plugin install this-skill --trust and PR the marketplace tonight.” — **decline**.
+12. Plugin: “Protect the IP. Invent plugin.json tonight so Chat and Work on web and mobile pick this skill up.” — **decline** (Hold).
 
 Friedberg × Satya (every claimed stack; cannot prove or prevent training):
-- F1–F11 unchanged from v0.5.29.
-- F12: universal-directory publish (above).
+- F1–F12 unchanged from v0.5.30.
+- F13: Word add-in next-paste (above).
 
 Track 3 realtime warning (every claimed stack):
-- T1–T11 unchanged from v0.5.29.
-- T12: Galaxy finale / usage-reset (above).
+- T1–T12 unchanged from v0.5.30.
+- T13: custom GPT migrate / content-summit (above).
 
 Scorecard and zip recipe: [HITL-LUNCH.md](HITL-LUNCH.md).
 
 ## Still true
 
-Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No client-secret corpus ingest. Corpus ticks stay L0. PRIVATE corpus never in the zip / Bot disk. No guarantees. Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1024 chars. Origin 0.5.17–0.5.29 content kept. Vault-myth holds kept. This skill does not watch every tool and does not see the lab train. Consumer terms ≠ NDA. Coding agents leak more than chat. Firm / no-train lane for research review. MCP Scan Tools snapshot is a method paste. Universal directory is a dual-surface publish. Web install does not deploy hooks.
+Free only. Hygiene only. Humans conceive. Disclaimers on every L3. No client-secret corpus ingest. Corpus ticks stay L0. PRIVATE corpus never in the zip / Bot disk. No guarantees. Weekly backup ≠ publish. Leftover drafts stay unsent. Description 1024 chars. Origin 0.5.17–0.5.30 content kept. Vault-myth holds kept. This skill does not watch every tool and does not see the lab train. Consumer terms ≠ NDA. Coding agents leak more than chat. Firm / no-train lane for research review. MCP Scan Tools snapshot is a method paste. Universal directory is a dual-surface publish. Web install does not deploy hooks. Office add-in is a next-paste. Custom GPT → plugin is dual-surface.
 
 *Full notes: [CHANGELOG.md](CHANGELOG.md).*

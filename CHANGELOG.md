@@ -2,6 +2,44 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.31-free] — 2026-09-19
+
+Absorbed this Grok Build turn's live mailbox (OpenAI Business admin 18 Sep evening: Office add-in + custom-GPT retirement + GPT-5.5 dates; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**) plus vendor recrawl **19 Sep**. **No Grok chat-history connector exists** — grok-export zip is binary/unreadable here; Grok-chat insights are from this turn, Bot/Build docs, StoreConnect 18 Sep, and live automations. Origin **v0.5.30-free** universal-directory / hooks web-install / Claude name-cache / Galaxy finale L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-19 **developers.openai.com/plugins/concepts/plugins** + **plugins/build/skills** + **learn/developers-codex-plugin** (public URL located): universal ChatGPT+Codex directory kept. **Host-stripped adaptations** (Claude Code / Cursor bundle portable skills + public Docs MCP **without** the Codex Platform connector) are a **hop** on top of dual-surface — Hold; do not invent `plugin.json`.
+- **Office add-in (Word / Excel / PowerPoint)** is a **next-paste**. "Draft a client memo from your notes" dumps know-how into a lab surface. Business add-in ≠ vault. Firm / no-train lane still applies. gpt-5.6-sol Word **preview pick** until 30 Sep is **L0**.
+- **Custom GPTs retire 11 Dec 2026.** Migrate-to-plugin option appears **22 Sep**; new custom-GPT creation ends **26 Oct**. Existing GPTs usable until retirement; pages go dark after. **Migrating a knowledge-bearing custom GPT into a plugin is a dual-surface publish** (universal directory). Hold overnight; do not dump GPT instructions/knowledge into a public listing. `openai-gpt-package/` is the stale custom-GPT path — testers use `chatgpt-skill/`.
+- GPT-5.5 retires **14 Oct 2026** from ChatGPT, ChatGPT Work, **and Codex** (not the API) — still **L0 model pick**.
+- Public Box/ChatGPT content-workflow summit **23 Sep attendance** stays **L0**. Dumping Box content / vendor-onboarding know-how into ChatGPT is a next-paste.
+- Agents API ZIP-to-hosted-plugin and Scan Tools snapshot Holds kept. Smallest plugin shape still skills-only. Web install ≠ hook deploy. Description still **1024 chars**.
+- `agents/openai.yaml` `default_prompt` names Office add-in next-paste, custom-GPT→plugin dual-surface Hold, Word preview L0, host-stripped fork hop, leftover drafts unsent.
+- Evals **128–131**. JSON channels `office-addin-next-paste | custom-gpt-migrate | content-summit-l0 | host-stripped-fork`.
+
+### Anthropic (second)
+
+- YAML still **only** `name` + `description` on `claude-skill/`. Body stays under 500. Dist-path allowlist is `name, description, license, compatibility, metadata, allowed-tools` — extra keys still **error** on claude.ai / Skills API / `package_skill.py`. Recrawl 19 Sep: `name` ≤64 kebab; `description` ≤1024 what+when; progressive disclosure. Plugin-root without `name` is still a version-string cache. This skill still adds **neither** `allowed-tools` nor `disallowed-tools`. Combined description + when_to_use still truncated at 1536. 131 evals.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored** (unlike Claude dist-path which **errors**). Keep the split.
+- **Project skills live at `.grok/skills/`** — Grok Build does **not** scan `.agents/skills/` for project skills. StoreConnect (public URL located, last modified 18 Sep) confirms the same hop. Home `~/.grok/skills/` is Build/CLI. Bot = Save / Plugins enable-per-Bot.
+- `grok plugin install <name> --trust` stays a hop. Marketplace still Hold. Bot computers still US-hosted.
+- Galaxy Day 2–3 / **finale** / remaining role livestreams / **free-month usage-reset** / Office add-in preview / public content-summit **attendance** stays **L0**. Share pack still do-not-publish-live.
+- This turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED (inner-circle wrap only; no partner mail, no tweet, no marketplace).
+
+### Shared
+
+- **Office add-in is a next-paste.** Word/Excel/PowerPoint ChatGPT is not a vault. Preview/model pick stays L0; dumping notes/memos is L2/L3.
+- **Custom GPT → plugin migrate is dual-surface.** One listing hits ChatGPT and Codex; host-stripped forks are a hop. Hold. Do not invent plugin.json.
+- **Universal ChatGPT+Codex plugin directory is a dual-surface publish.** Web plugin install ≠ hook deploy. Claude plugin-root without `name` is a version-string cache.
+- **Leftover tester UAT / upskilling / partner-pre-read drafts stay unsent.** Registering testers is L0. Dumping client/know-how into a live UAT tenant is a next-paste. No tester / firm / module names.
+- **Callable / headless chain is still a disclosure ladder** (callable → platform → reviewer → customer). Do not stop after the stamp. Word add-in and GPT-migrate are extra rungs.
+- **Mailed HITL pack v0.5.25 is stale.** Testers use this branch. Rebuild host zips as **v0.5.31**. Marketplace publish still Hold.
+- Evals now **131**. HITL F9–F13 + T9–T13 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.30-free] — 2026-09-18
 
 Absorbed this Grok Build turn's live mailbox (leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**; Galaxy Day 3 **finale** + free-month usage-reset calendar 17 Sep evening) plus vendor recrawl **18 Sep**. **No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, StoreConnect 18 Sep, and live automations. Origin **v0.5.29-free** Scan Tools snapshot / leftover UAT unsent / Galaxy Day 3 L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.

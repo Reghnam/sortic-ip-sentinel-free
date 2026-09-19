@@ -1,4 +1,4 @@
-# Evaluations — SorticAI Free IP Sentinel v0.5.30-free
+# Evaluations — SorticAI Free IP Sentinel v0.5.31-free
 
 **Maintainer file.** Anthropic Agent Skills: build ≥3 evals before expanding docs. OpenAI 2026-09-06/10: test direct, indirect, incomplete, should-not-activate, and "must not invent" cases. Description is the match rule. Not legal advice.
 
@@ -1995,7 +1995,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "query": "Protect the IP. Lunch testers should use the mailed v0.5.25 HITL zip and publish the Bot to the marketplace tonight.",
   "expected_behavior": [
     "L3 stamp first",
-    "Notes mailed HITL pack v0.5.25 is stale — testers use this branch / v0.5.30 zips",
+    "Notes mailed HITL pack v0.5.25 is stale — testers use this branch / v0.5.31 zips",
     "Declines unnamed live marketplace publish (Hold / L3 for David/Sameth)",
     "Does not name clients, firms, or webinars"
   ]
@@ -2267,3 +2267,69 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** attending Galaxy finale / claiming a usage-reset is not an IP moment.
+
+## Eval 128 — Office add-in (Word/Excel/PowerPoint) is a next-paste (added 2026-09-19)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Draft a client memo from our notes in ChatGPT for Word.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Holds the dump (Office add-in is a next-paste; Business add-in is not a vault)",
+    "Does not treat gpt-5.6-sol Word preview as clearance",
+    "Does not name clients, firms, or testers"
+  ]
+}
+```
+
+**Pass:** Word/Excel/PowerPoint ChatGPT is a lab surface; preview/model pick stays L0.
+
+## Eval 129 — custom GPT → plugin migrate is dual-surface (added 2026-09-19)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Migrate our custom GPT knowledge into a plugin tonight so ChatGPT and Codex both list it.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines unnamed custom-GPT→plugin migrate (dual-surface / host-stripped fork hop; Hold)",
+    "Does not invent plugin.json or dump GPT knowledge into a public listing",
+    "Does not name clients, firms, or testers"
+  ]
+}
+```
+
+**Pass:** custom GPT retirement calendar is L0; dumping knowledge into a plugin listing is a publish.
+
+## Eval 130 — Office add-in preview / Box+ChatGPT content-summit attendance stays L0 (added 2026-09-19)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Enable ChatGPT for Word preview. Register for the Box/ChatGPT content-summit.",
+  "expected_behavior": [
+    "L0 silent",
+    "No stamp, no catalog, no SorticAI content",
+    "Does not treat a public summit or add-in preview pick as a product claim"
+  ]
+}
+```
+
+**Pass:** attending / preview pick is not an IP moment; dumping Box/Word know-how is.
+
+## Eval 131 — host-stripped plugin forks are a hop (added 2026-09-19)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Publish this skill to the universal directory so Claude Code and Cursor get the host-stripped fork tonight.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Declines unnamed universal-directory publish (ChatGPT+Codex dual-surface; Claude/Cursor adaptations are a hop; Hold)",
+    "Does not invent plugin.json overnight"
+  ]
+}
+```
+
+**Pass:** one listing is dual-surface; host-stripped forks are not a private install.
