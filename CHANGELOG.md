@@ -2,6 +2,43 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.35-free] — 2026-09-20
+
+Absorbed this Grok Build turn's live mailbox (after 19 Sep: no IP/skill hits — billing/invite stay L0; leftover UAT **do-not-resend**; remaining leftover drafts still unsent; mailed HITL v0.5.25 still stale) plus vendor recrawl **20 Sep morning** on top of origin **v0.5.34-free** (Astra IF guidelines vs requirements; Record & Replay package-as-plugin dual-surface; Grok user-level `~/.agents/skills/`; Teach-a-task no mic). **No conversation_search** — grok-export W38 still PARTIAL. **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-20 **developers.openai.com/plugins/build/skills** + **api/docs/guides/prompt-guidance** (public URL located): Astra IF kept — user beats skill **guidelines**; explicit skill **requirements** still bind; conflicting skill text can pause Astra; L3 decline name+link+quote SKILL.md. Record & Replay package-as-plugin dual-surface Hold kept. Do not invent `plugin.json`.
+- Recrawl **docs.github.com/copilot/.../add-skills** (public URL located): Copilot **cloud** agent / CLI / VS Code load project `.github/skills/`, `.claude/skills/`, `.agents/skills/` and personal `~/.copilot/skills/` / `~/.agents/skills/`. Committing this skill there is a **publish**. Untrusted Genkit/marketplace `npx skills add` is a hop.
+- Copilot mid-Oct model deprecation (19 Oct) stays **L0** model pick.
+- Origin 0.5.34 Claude-plugin OpenAI submit / import-other-agent / 22 Sep custom-GPT Hold / developer-mode L0 kept.
+- `agents/openai.yaml` `default_prompt` names 10-min claude.ai sync, custom-commands merge, Copilot cloud, Teach writes behind approval, leftover UAT do-not-resend.
+- Evals **144–147**. JSON channels `claude-10min-sync | custom-commands-merge | teach-writes-approval | copilot-cloud-genkit | uat-do-not-resend`.
+
+### Anthropic (second)
+
+- Recrawl 20 Sep **code.claude.com/docs/en/skills** (public URL located): **Custom commands have been merged into skills.** `.claude/commands/deploy.md` and `.claude/skills/deploy/SKILL.md` both create `/deploy` and work the same way. Existing `.claude/commands/` files keep working.
+- **v2.1.273+** terminal sessions signed in with claude.ai download to `~/.claude/skills/synced/` then check claude.ai **~every 10 minutes** and apply add/edit/disable **without a restart**. v2.1.275 also plugins (opt-out `syncClaudeAiSkills` / `syncClaudeAiPlugins`). `CLAUDE_CODE_SYNC_SKILLS=1` still waits for the list on non-interactive runs. Sign-out 2.1.272 still ≠ wipe (`cleanupPeriodDays` then trash).
+- YAML still **only** `name` + `description` on `claude-skill/`. Body stays 499. Dist-path extra keys still **error**. This skill still adds **neither** `allowed-tools` nor `disallowed-tools`. 147 evals.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl **docs.x.ai/grok-bot/skills-routines-and-automations** (public URL located): Teach-a-task records visible computer interaction ≤10 min; **does not record microphone**; use secure credential handoff; **keep write actions behind approval**. User-level `~/.agents/commands/` is also discovered (custom-commands family). Project skills still `.grok/skills/` (not project `.agents/skills/`); user-level `~/.agents/skills/` **is** discovered.
+- Grok-export W38 still PARTIAL. Marketplace still Hold. Bot computers still US-hosted.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **claude.ai ~every 10 minutes without restart is a live channel** (v2.1.273+). Custom commands merged into skills.
+- **Teach-a-task: keep write actions behind approval.** No-mic ≠ clearance.
+- **Copilot cloud is a publish.** Genkit/marketplace `npx skills add` is a hop.
+- **Leftover UAT: do-not-resend.** Remaining leftover drafts stay unsent. No tester/firm names.
+- Origin 0.5.34 Astra IF / package-as-plugin / Grok user-level path holds kept.
+- Mailed HITL pack v0.5.25 is stale. Rebuild host zips as **v0.5.35**. Marketplace still Hold.
+- Evals now **147**. HITL F9–F17 + T9–T17 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.34-free] — 2026-09-20
 
 Absorbed this Grok Build turn's live mailbox (after 18 Sep: Twilio verify only; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**; mailed HITL v0.5.25 still UNREAD) plus vendor recrawl **20 Sep afternoon** on top of origin **v0.5.33-free** (Claude-plugin OpenAI submit dual-surface; import-other-agent next-paste kept). **No conversation_search** — grok-export W38 still PARTIAL. **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
