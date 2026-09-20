@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.32-free"
+VERSION = "0.5.33-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -100,11 +100,11 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 136):
+    for n in range(1, 140):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 135:
-        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 135)")
+    if evals.count("## Eval ") < 139:
+        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 139)")
 
     for rel in (
         "HITL-LUNCH.md",
@@ -252,7 +252,7 @@ def main() -> int:
         return 1
     print(
         f"hygiene check OK: {VERSION}; description {len(root_desc)} chars; "
-        f"body {body_lines} lines; {len(refs)} references; 135 evals"
+        f"body {body_lines} lines; {len(refs)} references; 139 evals"
     )
     return 0
 

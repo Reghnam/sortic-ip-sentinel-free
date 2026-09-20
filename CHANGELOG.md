@@ -1,5 +1,47 @@
 # Changelog — SorticAI Free IP Sentinel
 
+## [0.5.33-free] — 2026-09-20
+
+Absorbed this Grok Build turn's live mailbox (SteerCo IP-risk 12/16 Sep already in origin; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**) plus vendor recrawl **20 Sep morning**. **No conversation_search** — grok-export W38 still PARTIAL (12 files: 1 verified Build session + 11 automation metadata-only). Origin **v0.5.32-free** Record & Replay / Teach-a-task / Scan Tools rescan / Spark-retire L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-20 **developers.openai.com/plugins/guides/submit-claude-plugin** (public URL located; published 19 Sep 23:04 CEST): **submitting a Claude Code plugin to OpenAI is a dual-surface publish.** Claude marketplace listings and approvals **do not transfer**. The portal converts `.claude-plugin/plugin.json` to `.codex-plugin/plugin.json`. Commands and agents become skills. **Hooks do not run in ordinary Chat.** Live artifacts unsupported. Skills-only upload **excludes MCP**. Hold overnight; do not invent `plugin.json`.
+- Recrawl **learn.chatgpt.com/docs/import** (public URL located): **Import from Claude Code / Claude Cowork / Cursor** into ChatGPT desktop (and Codex CLI) copies instructions, settings, **skills, plugins, projects, memories, hooks, slash commands, subagents, MCP config, and last-30-day chats (CLI ≤50)**. Importing invention-grade chats/skills/memories is a **next-paste** into another lab. Settings-only import without chats stays L0. **Keep-in-Sync** auto-updates after import is an ongoing hop. Hold unnamed import.
+- Recrawl **openai/skills migrate-to-codex** (public URL located 20 Sep): CLI copies Claude instructions/skills/hooks/MCP into Codex `.agents/skills/` and `.codex/`. Plugins stay manual-review. Same next-paste family as import-other-agent. Hold unnamed migrate.
+- Custom GPT migrate option still **22 Sep**; new-GPT freeze **26 Oct**; retire **11 Dec**. Two days out is still Hold — do not dump GPT knowledge into a public listing.
+- ChatGPT **developer mode / Secure MCP Tunnel** local testing is **L0** (not a vault, not a submission). Enterprise **plugin CSV export** (names/descriptions catalog) is L0.
+- GPT-6 Astra instruction-following kept: user instructions this turn beat skill guidelines; on L3 decline quote SKILL.md; keep descriptions short while making WHEN clear (`$skill-creator`).
+- Record & Replay / Scan Tools rescan / Office add-in / universal directory / Spark-retire L0 kept.
+- `agents/openai.yaml` `default_prompt` names Claude-plugin OpenAI submit dual-surface, import-other-agent next-paste, leftover drafts unsent.
+- Evals **136–139**. JSON channels `claude-plugin-openai-submit | import-other-agent | developer-mode-l0 | migrate-22sep-hold`.
+
+### Anthropic (second)
+
+- Recrawl 20 Sep: YAML still **only** `name` + `description` on `claude-skill/`. Body stays 499. Dist-path extra keys still **error**. Boolean aliases (`yes`/`no`/`on`/`off`/`1`/`0`) since Claude Code v2.1.218 — this skill still adds **neither** `allowed-tools` nor `disallowed-tools`. Frontmatter must start on line 1.
+- **v2.1.228** synced-skill display-text sanitization (control characters stripped; angle brackets escaped) is **not a vault**. **v2.1.273** skill syncing in terminal sessions is a hop. Combined description + when_to_use still truncated at 1536. Plugin-root without `name` is still a version-string cache. 139 evals.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl 20 Sep **docs.x.ai/build/features/skills-plugins-marketplaces**: Grok auto-reads Claude Code marketplaces, plugins, skills, MCPs, agents, hooks, and `CLAUDE.md` / `.claude/rules/` with zero config. Home `~/.agents/skills/` is discovered; **project** `.agents/skills/` is still **not** scanned — keep skills at `.grok/skills/` for project. Teach-a-task ≤10 min = demonstration-to-skill Hold. Private skills = one library across Bots (hop). `grok plugin install --trust` hop. Marketplace still Hold. Bot computers still US-hosted.
+- Grok-export W38 still PARTIAL. Do **not** dump those chats into this public repo. `conversation_search` still not in this harness.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **Claude-plugin submit to OpenAI is dual-surface.** Approvals do not transfer. Hooks do not run in ordinary Chat. Hold.
+- **Import-other-agent last-30-day chats/skills/memories is a next-paste.** Settings-only without chats stays L0. Keep-in-Sync and `migrate-to-codex` CLI are the same family.
+- **Custom GPT migrate option 22 Sep is still Hold.** Do not dump overnight.
+- **Developer mode / Secure MCP Tunnel testing is L0.** Not a vault. Not a submission.
+- **Record & Replay / Teach-a-task is demonstration-to-skill.** Scan Tools rescan is another paste. Office add-in is a next-paste.
+- Leftover tester UAT / upskilling / partner-pre-read drafts stay unsent.
+- Callable / headless chain is still a disclosure ladder.
+- Mailed HITL pack v0.5.25 is stale. Rebuild host zips as **v0.5.33**. Marketplace still Hold.
+- Evals now **139**. HITL F9–F15 + T9–T15 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
+
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
 ## [0.5.32-free] — 2026-09-19
