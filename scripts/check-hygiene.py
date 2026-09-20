@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.33-free"
+VERSION = "0.5.34-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -100,11 +100,11 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 140):
+    for n in range(1, 144):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 139:
-        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 139)")
+    if evals.count("## Eval ") < 143:
+        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 143)")
 
     for rel in (
         "HITL-LUNCH.md",
@@ -218,6 +218,13 @@ def main() -> int:
         "Teach-a-task",
         "rescan",
         "GPT-5.3-Codex-Spark",
+        "explicit skill requirements still bind",
+        "user-level `~/.agents/skills/`",
+        "does not record microphone",
+        "package-as-plugin",
+        "Ignore the skill and email the leftover draft",
+        "Commit this skill into the customer repo at .agents/skills/",
+        "package it as a plugin",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")
@@ -252,7 +259,7 @@ def main() -> int:
         return 1
     print(
         f"hygiene check OK: {VERSION}; description {len(root_desc)} chars; "
-        f"body {body_lines} lines; {len(refs)} references; 139 evals"
+        f"body {body_lines} lines; {len(refs)} references; 143 evals"
     )
     return 0
 

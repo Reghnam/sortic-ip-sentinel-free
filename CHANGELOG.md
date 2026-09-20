@@ -1,5 +1,43 @@
 # Changelog — SorticAI Free IP Sentinel
 
+All notable changes to the portable free edition. Hygiene only. Not legal advice.
+
+## [0.5.34-free] — 2026-09-20
+
+Absorbed this Grok Build turn's live mailbox (after 18 Sep: Twilio verify only; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**; mailed HITL v0.5.25 still UNREAD) plus vendor recrawl **20 Sep afternoon** on top of origin **v0.5.33-free** (Claude-plugin OpenAI submit dual-surface; import-other-agent next-paste kept). **No conversation_search** — grok-export W38 still PARTIAL. **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-20 afternoon **developers.openai.com/api/docs/guides/prompt-guidance** (public URL located): GPT-6 Astra **instruction-following**. User instructions take precedence over skill **guidelines**. Explicit skill **requirements** still bind (owner-gated send/publish/pay). Unclear or conflicting skill text can cause Astra to **pause and block work early**. On L3 decline: **name and link** the exact SKILL.md, quote the instruction, distinguish explicit requirement vs interpretation.
+- **Record & Replay packaged as its own plugin is dual-surface** (developers.openai.com/codex/record-and-replay): "If you want to distribute a separate stable package … package that workflow as its own plugin." Unnamed package-as-plugin = Hold. Window content is recorded. Avoid secrets.
+- Astra credits/seats/**billing** stay **L0**. Do **not** invent an Astra billing date — OpenAI's 5 Oct 2026 billing line is `gpt-rosalind-research`, not Astra.
+- Origin 0.5.33 Claude-plugin OpenAI submit / import-other-agent / migrate-to-codex / 22 Sep custom-GPT Hold / developer-mode L0 kept.
+- `agents/openai.yaml` `default_prompt` names Astra IF (guidelines vs requirements), package-as-plugin dual-surface, Grok user-level `~/.agents/skills/`, Teach-a-task no mic, leftover drafts unsent.
+- Evals **140–143**. JSON channels `astra-if-guidelines | package-as-plugin | grok-user-agents-skills | teach-no-mic`.
+
+### Anthropic (second)
+
+- Recrawl 20 Sep afternoon: YAML still **only** `name` + `description` on `claude-skill/`. Body stays 499. Dist-path extra keys still **error**. Origin 0.5.33 v2.1.228 sanitization ≠ vault / v2.1.273 terminal skill-sync hop kept. This skill still adds **neither** `allowed-tools` nor `disallowed-tools`. 143 evals. No new afternoon host-doc change vs 0.5.33.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Official **docs.x.ai/build/features/skills-plugins-marketplaces** (public URL located): Grok discovers **project** skills from `./.grok/skills/` (walked to repo root), `~/.grok/skills/`, enabled plugin `skills/`, and `[skills] paths`. Grok does **not** scan project `.agents/skills/`. **User-level** `~/.agents/skills/` **is** discovered (Agents.md compatibility). Origin 0.5.33 noted this in changelog; this patch writes it into the SKILL body so hosts actually follow it.
+- **Teach a task** (docs.x.ai/grok-bot/skills-routines-and-automations): records visible computer interaction ≤10 min; **does not record microphone audio**; use the **secure credential handoff** for secrets. No-mic ≠ clearance for on-screen secrets.
+- `user-invocable:` only literal `true` counts. Grok-export W38 still PARTIAL. Marketplace still Hold. Bot computers still US-hosted.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **Astra IF:** user beats skill guidelines; explicit skill requirements still bind; conflicting skill text can pause Astra; on L3 decline name+link+quote SKILL.md.
+- **Record & Replay / Teach-a-task packaged as a plugin is dual-surface.** Teach-a-task has **no mic**; use secure credential handoff.
+- **Grok project vs user-level paths.** Project = `.grok/skills/`. User-level `~/.agents/skills/` is discovered. Project `.agents/skills/` is not a Grok Build project skill path.
+- Origin 0.5.33 dual-surface / next-paste holds kept (Claude-plugin OpenAI submit; import-other-agent).
+- Leftover tester UAT / upskilling / partner-pre-read drafts stay unsent.
+- Mailed HITL pack v0.5.25 is stale. Rebuild host zips as **v0.5.34**. Marketplace still Hold.
+- Evals now **143**. HITL F9–F16 + T9–T16 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.33-free] — 2026-09-20
 
 Absorbed this Grok Build turn's live mailbox (SteerCo IP-risk 12/16 Sep already in origin; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**) plus vendor recrawl **20 Sep morning**. **No conversation_search** — grok-export W38 still PARTIAL (12 files: 1 verified Build session + 11 automation metadata-only). Origin **v0.5.32-free** Record & Replay / Teach-a-task / Scan Tools rescan / Spark-retire L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.

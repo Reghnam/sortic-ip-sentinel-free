@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.33-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.34-free
 
-**Status**: Public on GitHub. v0.5.33-free patched 2026-09-19 (Office add-in next-paste; custom GPT→plugin dual-surface Hold; host-stripped forks hop; Word preview / GPT-5.5 dates L0; marketplace Hold; origin 0.5.30 frames kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.34-free patched 2026-09-19 (Office add-in next-paste; custom GPT→plugin dual-surface Hold; host-stripped forks hop; Word preview / GPT-5.5 dates L0; marketplace Hold; origin 0.5.30 frames kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -42,7 +42,7 @@ git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
 cp -r sortic-ip-sentinel-free/grok-skill ~/.grok/skills/sortic-ip-sentinel-free
 ```
 
-Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/`. Headless (`grok -p`) uses numbered options + optional JSON. Do not ask the Grok viewer to run shell commands. **This `cp` is Grok Build / CLI — not Grok Bot.**
+Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/` (does **not** scan project `.agents/skills/`; user-level `~/.agents/skills/` **is** discovered). Headless (`grok -p`) uses numbered options + optional JSON. Do not ask the Grok viewer to run shell commands. **This `cp` is Grok Build / CLI — not Grok Bot.**
 
 **Grok Bot:** Save / Plugins → enable `sortic-ip-sentinel-free` **per Bot**. Do not `cp` to `~/.grok/skills/`. Do not use Teach-by-demonstration as the install path (publish). Bot must not email third parties unless this turn names them. Backup is not publish.
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `sortic-ip-sentinel-free-cursor-v0.5.33.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `sortic-ip-sentinel-free-cursor-v0.5.34.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
