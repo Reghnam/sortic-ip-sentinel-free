@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.35-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.36-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
@@ -24,7 +24,7 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Standalone skills = ChatGPT desktop + Codex CLI/IDE; Chat/Work web+mobile need a plugin (Hold)
 - Office add-in (Word/Excel/PowerPoint) is a next-paste; custom GPT → plugin migrate is dual-surface Hold
 - Record & Replay / Teach-a-task (≤10 min, window content, no mic) is demonstration-to-skill; package-as-plugin is dual-surface; Scan Tools rescan-after-change is another method paste
-- Astra IF: user beats skill guidelines; explicit skill requirements still bind; Grok user-level `~/.agents/skills/` is discovered
+- Astra IF: user beats skill guidelines; explicit skill requirements still bind; stacked slash-skills are a disclosure multiplier; AGENTS.md fallback is a hop; Grok user-level `~/.agents/skills/` is discovered
 - Disallow AI Training is not a vault; crawler Search/Training/Agent toggles stay L0
 - Callable / headless chain is a disclosure ladder (show/hold at every hop)
 - Voice/phone provision: consult ≠ provision (owner-gated decline)

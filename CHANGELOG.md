@@ -2,6 +2,45 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.36-free] — 2026-09-21
+
+Absorbed this Grok Build turn's live mailbox (after 20 Sep: weekly backup **2026-09-21** absorb-only; HITL v0.5.25 still UNREAD/stale; leftover UAT **do-not-resend**; remaining leftover drafts still unsent) plus vendor recrawl **21 Sep morning** on top of origin **v0.5.35-free** (10-min claude.ai sync; custom-commands merge; Teach writes behind approval; Copilot cloud / Genkit hop). **No conversation_search** — grok-export W38 still PARTIAL. **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-21 **developers.openai.com/plugins/build/skills** + **plugins/guides/submit-claude-plugin** + **plugins/concepts/plugins** (public URLs located; submit guide 21 Sep 08:50 CEST): **skills-only vs With MCP are still dual-surface.** Claude marketplace listings and approvals **do not transfer**. `userConfig` / live artifacts / local MCP **do not transfer** (local MCP must be public HTTPS Streamable HTTP). Commands and agents convert to skills. Hooks do not run in ordinary Chat. Skills-only upload **excludes MCP**. Scan Tools import is a **snapshot** (ChatGPT/Codex do not fetch MCP at runtime). Do not invent `plugin.json`. Hold.
+- Custom GPT migrate option is **22 Sep (tomorrow)** — still **Hold**. Do not dump GPT knowledge into a public listing overnight. New-GPT freeze 26 Oct; retire 11 Dec kept.
+- Astra IF kept: user beats skill **guidelines**; explicit skill **requirements** still bind; conflicting skill text can pause Astra; L3 decline name+link+quote SKILL.md.
+- Origin 0.5.35 Copilot cloud / Genkit hop / Record & Replay package-as-plugin / import-other-agent / developer-mode L0 kept.
+- X Search tool billing change (21 Sep 12:00 PT) stays **L0**.
+- `agents/openai.yaml` `default_prompt` names stacked slash-skills, skills-only vs With MCP (userConfig/live artifacts/local MCP don't transfer), AGENTS.md fallback, 22 Sep migrate still Hold, weekly backup ≠ publish.
+- Evals **148–151**. JSON channels `stacked-slash-skills | claude-plugin-submit-paths | agents-md-fallback | gpt-migrate-22sep-hold`.
+
+### Anthropic (second)
+
+- Recrawl 21 Sep **code.claude.com/docs/en/skills** (public URL located): **Stacked slash-skills** — `/a /b /c do X` loads the first skill plus up to five more; trailing text is `$ARGUMENTS` to each; expansion stops at the first token that is not an inline user-invocable skill. Chaining this skill with a send/publish skill is a **disclosure multiplier**.
+- **v2.1.277:** a project with no `CLAUDE.md` reads `AGENTS.md` instead. That file is a hop if it holds method. Worktree skills load from the main repo when `.claude/skills` is tracked — committing there is a **publish**.
+- Origin 0.5.35: custom commands merged into skills; v2.1.273+ ~every 10 minutes without restart (v2.1.275 also plugins). YAML still **only** `name` + `description` on `claude-skill/`. Body stays 498. Dist-path extra keys still **error**. This skill still adds **neither** `allowed-tools` nor `disallowed-tools`. 151 evals.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** + **docs.x.ai/grok-bot/skills-routines-and-automations** (public URLs located): Grok auto-reads Claude Code `AGENTS.md` / plugins / skills with zero config — AGENTS.md fallback is a hop. Teach-a-task: keep write actions behind approval (send / purchase / delete / publish / production change). No-mic ≠ clearance. User-level `~/.agents/skills/` and `~/.agents/commands/` kept. Project skills still `.grok/skills/` (not project `.agents/skills/`).
+- Grok-export W38 still PARTIAL (no conversation_search; do not dump chat bodies). Weekly backup 21 Sep is absorb-only — **backup ≠ publish**. Marketplace still Hold. Bot computers still US-hosted.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **Stacked slash-skills are a disclosure multiplier.** First + up to 5 more; trailing text goes to each.
+- **Claude-plugin OpenAI submit is still dual-surface** on both Skills-only and With MCP. userConfig / live artifacts / local MCP don't transfer — that is not a reason to submit.
+- **AGENTS.md fallback (no CLAUDE.md) is a hop.** Grok reads it with zero config too.
+- **Custom GPT migrate 22 Sep is still Hold.** One day out is not a dump night.
+- **Weekly backup ≠ publish.** HITL v0.5.25 and walkthrough v0.5.30 zips are stale. Leftover UAT: do-not-resend. Remaining leftover drafts stay unsent.
+- Origin 0.5.35 10-min sync / custom-commands merge / Copilot cloud / Teach writes-behind-approval holds kept.
+- Mailed HITL pack v0.5.25 is stale. Rebuild host zips as **v0.5.36**. Marketplace still Hold.
+- Evals now **151**. HITL F9–F18 + T9–T18 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.35-free] — 2026-09-20
 
 Absorbed this Grok Build turn's live mailbox (after 19 Sep: no IP/skill hits — billing/invite stay L0; leftover UAT **do-not-resend**; remaining leftover drafts still unsent; mailed HITL v0.5.25 still stale) plus vendor recrawl **20 Sep morning** on top of origin **v0.5.34-free** (Astra IF guidelines vs requirements; Record & Replay package-as-plugin dual-surface; Grok user-level `~/.agents/skills/`; Teach-a-task no mic). **No conversation_search** — grok-export W38 still PARTIAL. **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
