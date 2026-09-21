@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.35-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.36-free
 
-**Status**: Public on GitHub. v0.5.35-free patched 2026-09-20 (claude.ai ~every 10 minutes without restart; custom commands merged into skills; Teach-a-task writes behind approval; Copilot cloud / Genkit hop; leftover UAT do-not-resend; marketplace Hold; origin 0.5.34 frames kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.36-free patched 2026-09-21 (stacked slash-skills disclosure multiplier; Claude-plugin skills-only vs With MCP still dual-surface; AGENTS.md fallback hop; custom GPT migrate 22 Sep still Hold; weekly backup ≠ publish; leftover UAT do-not-resend; marketplace Hold; origin 0.5.35 frames kept). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `sortic-ip-sentinel-free-cursor-v0.5.35.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `sortic-ip-sentinel-free-cursor-v0.5.36.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
