@@ -2,6 +2,42 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.37-free] — 2026-09-23
+
+Absorbed this Grok Build turn's live mailbox (22 Sep try-pack **v0.5.36 sent** — feedback asked, do not resend; infra follow-up is scheduling only) plus vendor recrawl **23 Sep** on top of origin **v0.5.36-free**. **No conversation_search** — grok-export W38 re-read, still PARTIAL (cover + metadata; no chat bodies dumped). **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-23 **developers.openai.com/plugins/concepts/plugins** (public URL located): plugin **lifecycle hooks run in the Codex runtime, including ChatGPT Work and Codex**. Ordinary Chat is not that sentence. This skill still has **no hooks**. Do not add hooks so Work picks it up. Web install still does not deploy hooks.
+- Recrawl **developers.openai.com/plugins/deploy/connect-chatgpt** (public URL located): skills-only plugins skip the MCP section. **Local marketplace install** is the test path (direct, indirect, follow-up, negative, boundary). Secure MCP Tunnel does **not** replace the public HTTPS required for submission. Published plugins use **continuous review** for tool updates; skill or submitted-info changes still need a **new version**. Developer mode stays L0 (not a vault, not a submission).
+- Custom GPT **migrate option date has passed** (was 22 Sep). Still **Hold**. Freeze 26 Oct and retire 11 Dec kept. A calendar flip is not a reason to dump GPT knowledge into a public listing.
+- Mailed try pack **v0.5.36** is stale. Do not resend. Testers use this branch. Scenario generation stays local.
+- Evals **152–155**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/skills** (public URL located): claude.ai synced skills are **read-only** and download **on invoke**. **Bare mode** and **safe mode** skip sync. `/config` Project instructions can load **both** `AGENTS.md` and `CLAUDE.md` — both are hops if they hold method.
+- Dist-path allowed keys unchanged (`name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools`). This pack still ships **name + description only** and still adds neither `allowed-tools` nor `disallowed-tools`. 155 evals.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl **docs.x.ai/grok-bot/skills-routines-and-automations** + **docs.x.ai/build/features/skills-plugins-marketplaces** (public URLs located): paths unchanged. **Private skills are one library** shared by all Bots. **Broad event listeners** are a disclosure multiplier. Test-run-is-real-work hold kept.
+- Grok-export W38 still PARTIAL. Marketplace still Hold. Bot computers still US-hosted.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **ChatGPT Work hooks are an execution surface.** Ordinary Chat is not that sentence. This skill still has none.
+- **Local marketplace test ≠ public submit.** Tunnel ≠ submission endpoint.
+- **Migrate date passed is still Hold.**
+- **Mailed try pack v0.5.36 is stale.** Do not resend.
+- **Synced skills are read-only.** Bare mode and safe mode skip sync. Both instruction files are hops.
+- **Infra or access overview paste is a next-paste.** No names in this repo.
+- **Weekly backup ≠ publish.** grok-export stays PARTIAL.
+- Evals now **155**. HITL F1–F19 + T1–T19 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.36-free] — 2026-09-21
 
 Absorbed this Grok Build turn's live mailbox (after 20 Sep: weekly backup **2026-09-21** absorb-only; HITL v0.5.25 still UNREAD/stale; leftover UAT **do-not-resend**; remaining leftover drafts still unsent) plus vendor recrawl **21 Sep morning** on top of origin **v0.5.35-free** (10-min claude.ai sync; custom-commands merge; Teach writes behind approval; Copilot cloud / Genkit hop). **No conversation_search** — grok-export W38 still PARTIAL. **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.

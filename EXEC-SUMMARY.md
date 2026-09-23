@@ -1,20 +1,20 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.36-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.37-free
 
-**Date:** 21 Sep 2026  
+**Date:** 23 Sep 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
 **What it is:** Free portable skill that notices IP-sensitive moments and delivers builder-worksheet hygiene (show/hold, demo playbook, logs, JSON). **Not legal advice. No paid paths.**
 
 ## Why this patch (one paragraph)
 
-Origin **v0.5.35-free** kept 10-min claude.ai sync, custom-commands merge, Teach writes behind approval, Copilot cloud / Genkit hop. This morning patch absorbs vendor recrawl plus a quiet mailbox (weekly backup **2026-09-21** absorb-only; HITL v0.5.25 still unread/stale; leftover UAT **do-not-resend**): **stacked slash-skills** (first + up to 5 more) are a disclosure multiplier; **Claude-plugin OpenAI submit** is still dual-surface on both Skills-only and With MCP (`userConfig` / live artifacts / local MCP don't transfer); **AGENTS.md fallback** (no CLAUDE.md, Claude Code v2.1.277) is a hop; **custom GPT migrate 22 Sep (tomorrow) still Hold**; weekly backup ≠ publish; grok-export still **PARTIAL**; leftover drafts stay unsent; marketplace still Hold. No client / firm / tester names. Still free-only. Description **1024 chars**. Body **498** lines.
+Origin **v0.5.36-free** kept stacked slash-skills, Claude-plugin submit paths, and AGENTS.md fallback. This patch absorbs the 23 Sep mailbox and vendor recrawl: **plugin lifecycle hooks run in the Codex runtime including ChatGPT Work and Codex** (ordinary Chat is not that sentence; this skill still has none); **local marketplace install is the test path**, not a public submit (Secure MCP Tunnel does not replace the public HTTPS required for submission); **custom-GPT migrate option date has passed (was 22 Sep) — still Hold** (freeze 26 Oct; retire 11 Dec); the **mailed try pack v0.5.36 is stale — do not resend**; claude.ai **synced skills are read-only** (download on invoke; bare mode and safe mode skip sync); `/config` can load **both AGENTS.md and CLAUDE.md**; an **infra or access overview pasted into a public skill or consumer chat is a next-paste** (no names); grok-export W38 still **PARTIAL**; marketplace still Hold. Still free-only. Description ≤1024. Body stays under 500 lines.
 
 ## What changed (shareable)
 
 | Host | Change |
 |------|--------|
-| **OpenAI (first)** | Skills-only vs With MCP submit still dual-surface. userConfig / live artifacts / local MCP don't transfer. Custom GPT migrate 22 Sep still Hold. Astra IF kept. Origin 0.5.35 Copilot cloud / package-as-plugin / import-other-agent kept. X Search billing L0. Evals **148–151**. |
-| **Anthropic (second)** | Stacked slash-skills (first + up to 5 more) = disclosure multiplier. v2.1.277 AGENTS.md fallback hop. Origin 0.5.35 10-min sync / custom-commands merge kept. Still `name` + `description` only. Dist-path extra keys still error. Body 498. 151 evals. |
-| **Grok Build (third)** | AGENTS.md zero-config hop. Teach-a-task keep write actions behind approval. Weekly backup ≠ publish. `chatroom_send` unavailable → NOTIFY_BLOCKED. |
+| **OpenAI (first)** | Work + Codex hook runtime. Local marketplace = test, not submit. Migrate date passed, still Hold. Mailed try zip v0.5.36 stale. Evals **152–155**. |
+| **Anthropic (second)** | Synced copies read-only; bare/safe mode skip sync. Both AGENTS.md and CLAUDE.md are hops. Still `name` + `description` only on `claude-skill/`. |
+| **Grok Build (third)** | Private skills are one library. Broad listeners are a multiplier. `chatroom_send` unavailable → NOTIFY_BLOCKED. Export still PARTIAL. |
 
 ## How to install (one copy)
 
