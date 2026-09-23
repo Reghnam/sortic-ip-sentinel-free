@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.36-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.37-free
 
-**Status**: Public on GitHub. v0.5.36-free patched 2026-09-21 (stacked slash-skills disclosure multiplier; Claude-plugin skills-only vs With MCP still dual-surface; AGENTS.md fallback hop; custom GPT migrate 22 Sep still Hold; weekly backup ≠ publish; leftover UAT do-not-resend; marketplace Hold; origin 0.5.35 frames kept). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.37-free patched 2026-09-23 (ChatGPT Work hooks in the Codex runtime; local-marketplace test ≠ submit; custom-GPT migrate date passed still Hold; mailed try pack v0.5.36 stale; synced skills read-only; infra overview is a next-paste; marketplace Hold). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 

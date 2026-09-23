@@ -1,4 +1,4 @@
-# How to Publish the SorticAI Free IP Sentinel (v0.5.36-free) to OpenAI
+# How to Publish the SorticAI Free IP Sentinel (v0.5.37-free) to OpenAI
 
 Primary path in 2026 is **ChatGPT Skills + Codex SKILL.md**, not a Custom GPT.
 
@@ -25,7 +25,7 @@ Headless: "Output numbered options and hygiene package JSON." Backup is not publ
 **Hold.** Custom GPTs retire **11 Dec 2026**. Migrate-to-plugin appears **22 Sep**; new custom-GPT creation ends **26 Oct**. Migrating a knowledge-bearing GPT into a plugin is a **dual-surface publish** (ChatGPT + Codex universal directory; host-stripped Claude/Cursor forks are a hop). Do not dump GPT instructions/knowledge into a public listing overnight. Testers use Path 1 (`chatgpt-skill/`).
 
 
-1. Create a GPT named `SorticAI Free IP Sentinel (v0.5.36-free)`.
+1. Create a GPT named `SorticAI Free IP Sentinel (v0.5.37-free)`.
 2. Paste `instructions.txt` into Instructions.
 3. Upload `knowledge/` files.
 4. Starters: "IP sensitive moment on our new protocol before investor demo" / "Help me create a show/hold map".
