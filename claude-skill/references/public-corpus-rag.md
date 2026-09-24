@@ -1,4 +1,4 @@
-# Private US-IP corpus — sidecar / offline RAG (v0.5.37-free)
+# Private US-IP corpus — sidecar / offline RAG (v0.5.38-free)
 
 **Hygiene only. Not legal advice. Not a prior-art search. Not FTO. Not a second regulatory radar.**
 

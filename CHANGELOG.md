@@ -2,6 +2,43 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.38-free] — 2026-09-24
+
+Absorbed this Grok Build turn's live mailbox (after the 23 Sep v0.5.37 patch: late execution brief still **DRAFT/unsent**; a counsel working-picture and an internal scan briefing are **not** this skill; mailed try pack **v0.5.36** stays stale — do not resend) plus vendor recrawl **24 Sep** on top of origin **v0.5.37-free**. **No conversation_search** — grok-export W38 re-checked, still PARTIAL (cover + metadata; no chat bodies dumped; no newer export). **No client / product / infra / firm / tester / architecture names.** Leftover drafts stay unsent. Marketplace still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-24 **developers.openai.com/plugins/build/plugins** + **plugins/concepts/plugins** + **plugins/deploy/connect-chatgpt** (public URLs located): installing or enabling a plugin does **not** automatically trust its hooks. Plugin-bundled hooks are **non-managed**. Codex **skips them until the user reviews and trusts the current hook definition**. Trust-review of a hook that holds method is itself a **paste**. Hooks still run in the Codex runtime including ChatGPT Work and Codex. Ordinary Chat is not that sentence. Web install still does not deploy them. This skill still has **none**. Do not add hooks so Work picks it up.
+- Local marketplace remains the test path. Secure MCP Tunnel still does not replace public HTTPS for submission. Custom-GPT migrate date (was 22 Sep) still **Hold** (freeze 26 Oct; retire 11 Dec).
+- Evals **156**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/headless** (public URL located): headless `--bare` skips auto-discovery of hooks, skills, custom commands, subagents, plugins, MCP, auto memory, and `CLAUDE.md`. That skip is **not a vault**. `--add-dir` still loads skills from that directory's `.claude/skills/`. A headless job that adds a folder holding method is still a hop. Bare mode never reads OAuth credentials or the system keychain — not clearance to paste invention text into CI.
+- `--allowedTools`, `--permission-mode dontAsk`, and `--permission-prompts none` are unattended grants, not owner approval. This skill still adds neither `allowed-tools` nor `disallowed-tools` nor frontmatter hooks. `claude-skill/` stays **name + description** only.
+- Synced-skill rules from 0.5.37 kept (read-only, download on invoke, bare mode and safe mode skip sync, both instruction files are hops).
+- Evals **157**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026) (public URLs located): **no new host path this turn**. Project skills stay `.grok/skills/`. User-level `~/.agents/skills/` still discovered. Private skills remain one library. Broad listeners remain a disclosure multiplier. Teach-a-task writes stay behind approval.
+- Grok-export W38 still PARTIAL. Do not dump chat bodies. Marketplace still Hold. Bot computers still US-hosted.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **159**.
+
+### Shared
+
+- **Hook trust-review is a paste** if the hook holds method. Enable ≠ trust.
+- **Headless `--bare` is not a vault.** `--add-dir` still loads skills. `dontAsk` is not owner approval.
+- **Research-lock / decision-schema paste is a next-paste.** Missing source file: wait. Do not invent replacements.
+- **Routing internals stay off leave-behinds.** This skill does not claim a legal opinion, freedom-to-operate, or a filing. A counsel working-picture is not a product. An internal scan briefing is not a leave-behind.
+- **Do not send invention-grade text to an external lab API.** Do not deploy, request quota, or set always-on from this skill.
+- **Unsent execution briefs stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
+- **Grok host docs unchanged.** Weekly backup ≠ publish. grok-export stays PARTIAL.
+- Evals now **159**. HITL F1–F19 + T1–T19 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.37-free] — 2026-09-23
 
 Absorbed this Grok Build turn's live mailbox (22 Sep try-pack **v0.5.36 sent** — feedback asked, do not resend; infra follow-up is scheduling only) plus vendor recrawl **23 Sep** on top of origin **v0.5.36-free**. **No conversation_search** — grok-export W38 re-read, still PARTIAL (cover + metadata; no chat bodies dumped). **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
