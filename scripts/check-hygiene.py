@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.37-free"
+VERSION = "0.5.38-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -100,10 +100,10 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 156):
+    for n in range(1, 160):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 155:
+    if evals.count("## Eval ") < 159:
         errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 147)")
 
     for rel in (
@@ -236,6 +236,11 @@ def main() -> int:
         "mailed try pack v0.5.36",
         "bare mode",
         "both AGENTS.md and CLAUDE.md",
+        "Hook trust-review is a paste",
+        "Headless --bare is not a vault",
+        "--add-dir still loads skills",
+        "do not invent replacements",
+        "This skill does not file",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")
@@ -268,9 +273,10 @@ def main() -> int:
         for err in errors:
             print(f"- {err}")
         return 1
+    n_evals = evals.count("## Eval ")
     print(
         f"hygiene check OK: {VERSION}; description {len(root_desc)} chars; "
-        f"body {body_lines} lines; {len(refs)} references; 155 evals"
+        f"body {body_lines} lines; {len(refs)} references; {n_evals} evals"
     )
     return 0
 

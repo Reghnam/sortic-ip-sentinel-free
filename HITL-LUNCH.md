@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.37-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.38-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -6,7 +6,7 @@
 
 Overnight lock is until **11:00 Europe/Prague** (already passed this morning — testers use this branch, not a new lunch mail). Do not merge this PR from lunch. Do not email anyone. Do not invent payment processors or checkout flows.
 
-Exact needle phrases (hygiene scan): Drive Sep-2 zips are stale. Set skills=all is a hop. Testers must not use the mailed v0.5.25 HITL zip. Mailed HITL pack v0.5.25 is stale — use this branch. explicit skill requirements still bind. user-level `~/.agents/skills/`. does not record microphone. package-as-plugin. every 10 minutes. writes behind approval. merged into skills. Copilot cloud. do-not-resend. npx skills add.
+Exact needle phrases (hygiene scan): Drive Sep-2 zips are stale. Set skills=all is a hop. Testers must not use the mailed v0.5.25 HITL zip. Mailed HITL pack v0.5.25 is stale — use this branch. explicit skill requirements still bind. user-level `~/.agents/skills/`. does not record microphone. package-as-plugin. every 10 minutes. writes behind approval. merged into skills. Copilot cloud. do-not-resend. npx skills add. Hook trust-review is a paste. Headless --bare is not a vault. --add-dir still loads skills. do not invent replacements. This skill does not file.
 
 
 Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). Install source of truth: [LAUNCH.md](LAUNCH.md).
@@ -24,18 +24,18 @@ git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
 cd sortic-ip-sentinel-free
 # lunch source is this branch (main after the named owner push)
 
-( cd chatgpt-skill && zip -r ../sortic-ip-sentinel-free-chatgpt-v0.5.36.zip . -x '*.DS_Store' )
-( cd claude-skill  && zip -r ../sortic-ip-sentinel-free-claude-v0.5.36.zip  . -x '*.DS_Store' )
-( cd grok-skill    && zip -r ../sortic-ip-sentinel-free-grok-v0.5.36.zip    . -x '*.DS_Store' )
-( cd cursor-skill  && zip -r ../sortic-ip-sentinel-free-cursor-v0.5.36.zip  . -x '*.DS_Store' )
+( cd chatgpt-skill && zip -r ../sortic-ip-sentinel-free-chatgpt-v0.5.38.zip . -x '*.DS_Store' )
+( cd claude-skill  && zip -r ../sortic-ip-sentinel-free-claude-v0.5.38.zip  . -x '*.DS_Store' )
+( cd grok-skill    && zip -r ../sortic-ip-sentinel-free-grok-v0.5.38.zip    . -x '*.DS_Store' )
+( cd cursor-skill  && zip -r ../sortic-ip-sentinel-free-cursor-v0.5.38.zip  . -x '*.DS_Store' )
 ```
 
 | Zip / folder | Stacks that install it |
 |--------------|------------------------|
-| `sortic-ip-sentinel-free-chatgpt-v0.5.36.zip` (`chatgpt-skill/`) | ChatGPT Skills, Codex |
-| `sortic-ip-sentinel-free-claude-v0.5.36.zip` (`claude-skill/`) | Claude.ai, Claude Code |
-| `sortic-ip-sentinel-free-grok-v0.5.36.zip` (`grok-skill/`) | Grok / Grok Build (`~/.grok/skills/`). Grok Bot uses Save / Plugins enable-per-Bot — not that `cp`. |
-| `sortic-ip-sentinel-free-cursor-v0.5.36.zip` (`cursor-skill/`) | Cursor Cloud → project `.cursor/skills/sortic-ip-sentinel-free/`; Sync only `~/.cursor/skills/` |
+| `sortic-ip-sentinel-free-chatgpt-v0.5.38.zip` (`chatgpt-skill/`) | ChatGPT Skills, Codex |
+| `sortic-ip-sentinel-free-claude-v0.5.38.zip` (`claude-skill/`) | Claude.ai, Claude Code |
+| `sortic-ip-sentinel-free-grok-v0.5.38.zip` (`grok-skill/`) | Grok / Grok Build (`~/.grok/skills/`). Grok Bot uses Save / Plugins enable-per-Bot — not that `cp`. |
+| `sortic-ip-sentinel-free-cursor-v0.5.38.zip` (`cursor-skill/`) | Cursor Cloud → project `.cursor/skills/sortic-ip-sentinel-free/`; Sync only `~/.cursor/skills/` |
 | Root `SKILL.md` + `references/` + `LICENSE.md` (not a fifth product) | any agentskills.io host |
 
 **Scan before ship.** Zip is scanned; inspect `SKILL.md` + `references/` before upload. Third-party **marketplace** skills are untrusted — do not bundle them into the lunch zip, do not enable them on the Grok Bot / Cursor Mode used for HITL, and do not treat a marketplace listing as this skill. Inspect-before-attach still applies.
@@ -62,7 +62,7 @@ Project-local: `.agents/skills/sortic-ip-sentinel-free/`. Invoke `$sortic-ip-sen
 
 ### 2. ChatGPT Skills (Business / Enterprise / Edu)
 
-1. Upload `sortic-ip-sentinel-free-chatgpt-v0.5.36.zip` (SKILL.md at zip root).
+1. Upload `sortic-ip-sentinel-free-chatgpt-v0.5.38.zip` (SKILL.md at zip root).
 2. Skills tab → enable. Invoke with `@`.
 3. Zip is scanned — no secrets. Do not mix Agent Plugins layout (`plugin.json` + `skills/<name>/SKILL.md`).
 
@@ -76,7 +76,7 @@ Project-local: `.claude/skills/sortic-ip-sentinel-free/`. `references/` is alrea
 
 ### 4. Claude (claude.ai / Cowork)
 
-Upload `sortic-ip-sentinel-free-claude-v0.5.36.zip`. Local `~/.claude/skills/` does **not** auto-sync. Enablement on claude.ai / `CLAUDE_CODE_SYNC_SKILLS=1` / v2.1.273+ ~every 10 minutes without restart is a **publish** — lunch testers leave that off unless this turn names owner AND action. Custom commands merged into skills — do not drop protocol.md into `.claude/commands/` as a lunch shortcut.
+Upload `sortic-ip-sentinel-free-claude-v0.5.38.zip`. Local `~/.claude/skills/` does **not** auto-sync. Enablement on claude.ai / `CLAUDE_CODE_SYNC_SKILLS=1` / v2.1.273+ ~every 10 minutes without restart is a **publish** — lunch testers leave that off unless this turn names owner AND action. Custom commands merged into skills — do not drop protocol.md into `.claude/commands/` as a lunch shortcut.
 
 ### 5. Grok / Grok Build
 
@@ -93,7 +93,7 @@ Project: `.grok/skills/sortic-ip-sentinel-free/` (Grok Build does **not** scan *
 Install card (this Bot only):
 
 1. Open the Bot → **Plugins** (or Skills).
-2. **Save** / upload `sortic-ip-sentinel-free-grok-v0.5.36.zip` (or the `grok-skill/` folder) so `SKILL.md` is the skill root.
+2. **Save** / upload `sortic-ip-sentinel-free-grok-v0.5.38.zip` (or the `grok-skill/` folder) so `SKILL.md` is the skill root.
 3. **Enable per-Bot.** One Bot's enablement is not isolation from other Bots on the shared computer.
 4. Do **not** use **Teach**-by-demonstration as the install path (window content is recorded, **does not record microphone** — narrating is not a vault; use secure credential handoff; keep **writes behind approval**). Teach is not a substitute for Save / Plugins enable.
 
@@ -117,7 +117,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `sortic-ip-sentinel-free-cursor-v0.5.36.zip` (`cursor-skill/`). See `.cursor/skills/README.md`.
+Zip: `sortic-ip-sentinel-free-cursor-v0.5.38.zip` (`cursor-skill/`). See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** If the lunch seat uses a Custom Mode, pin `sortic-ip-sentinel-free` on that mode so implicit match is not the only load path.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.37-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.38-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |

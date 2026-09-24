@@ -2,7 +2,7 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.37-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.38-free**).
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
