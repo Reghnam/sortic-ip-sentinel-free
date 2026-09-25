@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.38-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.39-free
 
-**Status**: Public on GitHub. v0.5.38-free patched 2026-09-23 (ChatGPT Work hooks in the Codex runtime; local-marketplace test ≠ submit; custom-GPT migrate date passed still Hold; mailed try pack v0.5.36 stale; synced skills read-only; infra overview is a next-paste; marketplace Hold). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.39-free patched 2026-09-25 (hook trust is hash-scoped; untrusted projects still load user/system hooks; managed hooks are not owner review; headless --bare still writes; acceptEdits and .jsonl resume are not a vault; cold compute-spend pitch is L0; grok-export W38 still PARTIAL; marketplace Hold). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 

@@ -2,6 +2,49 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.39-free] — 2026-09-25
+
+Absorbed this Grok Build turn's live mailbox (after the 24 Sep v0.5.38 patch: no owner mail after 24 Sep; a cold compute-spend pitch forwarded internally is **L0** — do not reply; unsent execution brief stays **DRAFT**; mailed try pack **v0.5.36** stays stale — do not resend) plus vendor recrawl **25 Sep** on top of origin **v0.5.38-free**. **No conversation_search** — grok-export W38 re-checked (18 Sep, cover-sized, unreadable here); no newer export; no chat bodies dumped. **No client / product / infra / firm / tester / vendor names.** Marketplace still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-25 **developers.openai.com/codex/hooks** (public URL located): Codex records trust against the hook's **current hash**. A new or changed hook is marked for review and **skipped until trusted**. Inherited trust after an edit is a paste if the hook holds method.
+- Project-local hooks load only when the project `.codex/` layer is trusted. In an **untrusted project**, Codex still loads **user and system hooks** from their own active config layers. Untrusted project ≠ no hooks.
+- **Managed hooks** (system, MDM, cloud, or `requirements.toml`) are trusted by policy and **cannot be disabled** from the user hook browser. Managed ≠ owner review.
+- Plugin hooks still default to `hooks/hooks.json`; a manifest `hooks` entry can point at a path or inline object. This skill still ships **none**. Do not add a manifest so hooks ride along. Enable ≠ trust. Web install still does not deploy hooks. Ordinary Chat is still not that sentence.
+- Evals **160**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/headless** (public URL located): `--bare` is the recommended mode for scripted and SDK calls and **will become the default for `-p`** in a future release. That future default is not clearance today.
+- Bare mode still has **Bash, file read, and file edit**. Not a vault.
+- `--resume` may take the absolute path of a session `.jsonl` transcript. That resume is a next-paste.
+- `acceptEdits` auto-approves mkdir, touch, mv, and cp. Unattended writes, not owner approval.
+- Explicit `--plugin-dir`, `--plugin-url`, `--mcp-config`, `--settings`, `--agents`, and `--append-system-prompt-file` still load under bare. `/skill-name` in the prompt still expands.
+- `--forward-subagent-text` (and forked-skill forwarding, v2.1.275+) reconstructs transcripts. Disclosure multiplier.
+- On SIGTERM, SessionEnd hooks still run. Skipping auto-discovery is not "no hooks at exit."
+- Piped stdin is capped at 10MB. Piping invention text is still a paste.
+- Evals **161**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026) (public URLs located): **no new host path this turn**. Extra `[skills] paths` in `~/.grok/config.toml` remains a hop. Private skills remain one library. Broad listeners remain a disclosure multiplier. Teach-a-task writes stay behind approval.
+- Grok-export W38 still PARTIAL. Do not dump chat bodies. Marketplace still Hold. Bot computers still US-hosted.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **162**.
+
+### Shared
+
+- **Hook trust is hash-scoped.** A changed hook is a new review. Untrusted project ≠ no hooks. Managed ≠ owner review.
+- **Bare mode still writes.** `acceptEdits` is not owner approval. A `.jsonl` resume is a next-paste. A future `-p` default is not clearance. SessionEnd hooks still run.
+- **A cold compute-spend pitch is L0.** Do not reply. Do not paste per-project metrics. No vendor names.
+- **Research-lock / decision-schema paste stays a next-paste.** Missing source file: wait. This skill does not file.
+- **Unsent execution briefs stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
+- **Grok host docs unchanged.** Weekly backup ≠ publish. grok-export stays PARTIAL.
+- Evals now **162**. HITL F1–F20 + T1–T20 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.38-free] — 2026-09-24
 
 Absorbed this Grok Build turn's live mailbox (after the 23 Sep v0.5.37 patch: late execution brief still **DRAFT/unsent**; a counsel working-picture and an internal scan briefing are **not** this skill; mailed try pack **v0.5.36** stays stale — do not resend) plus vendor recrawl **24 Sep** on top of origin **v0.5.37-free**. **No conversation_search** — grok-export W38 re-checked, still PARTIAL (cover + metadata; no chat bodies dumped; no newer export). **No client / product / infra / firm / tester / architecture names.** Leftover drafts stay unsent. Marketplace still Hold.
