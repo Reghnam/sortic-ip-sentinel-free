@@ -1,4 +1,4 @@
-# Grok Bot share pack — IP Sentinel (prepare only, v0.5.38-free)
+# Grok Bot share pack — IP Sentinel (prepare only, v0.5.39-free)
 
 **Hygiene only. Not legal advice. Free only. No secrets.**
 
