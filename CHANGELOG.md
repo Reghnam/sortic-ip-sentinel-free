@@ -2,6 +2,40 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.40-free] — 2026-09-26
+
+Absorbed this Grok Build turn's live mailbox (after the 25 Sep v0.5.39 push: weekly backup **2026-W39** arrived later the same day, STATUS **PARTIAL**; no newer owner skill-feedback mail; mailed try pack **v0.5.36** stays stale — do not resend; unsent execution briefs stay unsent) plus vendor recrawl **26 Sep** on top of origin **v0.5.39-free**. **No conversation_search.** W39 memory snapshot is pointers only — project chats were not exported. Do not dump chat bodies. Do not treat the snapshot or the memory-repo tree as a transcript or a publish. **No client / product / infra / firm / tester names.** Marketplace still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-26 **learn.chatgpt.com/docs/hooks** (public URL located; developers.openai.com/codex/hooks redirects): `--dangerously-bypass-hook-trust` runs enabled hooks **without persisted hook trust** for that invocation. A one-off bypass of a hook that holds method is a paste. Not owner review. Not clearance.
+- Pinning `[features].hooks = true` in `requirements.toml` **force-enables** hooks even if the user turned hooks off locally. Force-on is not consent.
+- `allow_managed_hooks_only = true` skips user, project, session, and plugin hooks and **still runs administrator managed hooks**. Managed-only is not owner review of the method.
+- Hash-scoped trust, untrusted-project user/system hooks, and “managed cannot be disabled from the user hook browser” from v0.5.39 stay. This skill still ships **no hooks**. Ordinary Chat is still not that sentence. Web install still does not deploy hooks.
+- Evals **163**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/headless** (public URL located, markdown): **NO_DELTA** vs v0.5.39. `--bare` is still not a vault and still has Bash, file read, and file edit. A future `-p` default is still not clearance. `acceptEdits`, `.jsonl` resume, explicit plugin/MCP/prompt-file flags, `/skill-name`, forked-skill forwarding, SIGTERM SessionEnd, and the 10MB stdin cap stay.
+- Evals **164**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (public URLs located): bot page **NO_DELTA**. Skills page still last-updated 11 Aug, but this turn records a path v0.5.39 did not name: extra hook roots via `~/.grok/hooks-paths` are a **hop** (same class as extra `[skills] paths`). Project `.grok/hooks/` still needs `/hooks-trust`. Plugin hooks receive `GROK_PLUGIN_ROOT` / `GROK_PLUGIN_DATA` — not a vault.
+- W39 chat coverage is **PARTIAL**. conversation_search cannot export Grok project chats. A memory snapshot is not a transcript. Marketplace still Hold. Bot computers still US-hosted.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **165**.
+
+### Shared
+
+- **Bypass-trust is not owner review.** Force-on hooks is not consent. Managed-only is not owner review.
+- **Headless page unchanged.** Bare mode still writes.
+- **Extra `~/.grok/hooks-paths` is a hop.** W39 backup ≠ publish. Do not dump chats.
+- **Unsent execution briefs stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Cold compute-spend pitch stays L0.
+- Evals now **165**. HITL F1–F21 + T1–T21 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.39-free] — 2026-09-25
 
 Absorbed this Grok Build turn's live mailbox (after the 24 Sep v0.5.38 patch: no owner mail after 24 Sep; a cold compute-spend pitch forwarded internally is **L0** — do not reply; unsent execution brief stays **DRAFT**; mailed try pack **v0.5.36** stays stale — do not resend) plus vendor recrawl **25 Sep** on top of origin **v0.5.38-free**. **No conversation_search** — grok-export W38 re-checked (18 Sep, cover-sized, unreadable here); no newer export; no chat bodies dumped. **No client / product / infra / firm / tester / vendor names.** Marketplace still Hold.

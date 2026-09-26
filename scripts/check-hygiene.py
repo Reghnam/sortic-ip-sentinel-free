@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.39-free"
+VERSION = "0.5.40-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -100,10 +100,10 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 163):
+    for n in range(1, 166):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 162:
+    if evals.count("## Eval ") < 165:
         errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 147)")
 
     for rel in (
@@ -247,6 +247,12 @@ def main() -> int:
         "SessionEnd hooks still run",
         "per-project metrics",
         "cold compute-spend pitch is L0",
+        "dangerously-bypass-hook-trust is not owner review",
+        "force-on is not consent",
+        "allow_managed_hooks_only is not owner review",
+        "headless page unchanged",
+        "extra hook roots are a hop",
+        "memory snapshot is not a transcript",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")

@@ -1,6 +1,6 @@
 {
   "schema": "sorticai.grok_bot_share.v1",
-  "edition": "0.5.39-free",
+  "edition": "0.5.40-free",
   "status": "prepare_only",
   "do_not_publish_live": true,
   "live_marketplace_publish": "L3 David/Sameth only",
