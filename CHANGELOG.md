@@ -2,6 +2,40 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.41-free] — 2026-09-27
+
+Absorbed this Grok Build turn's live mailbox (after the 26 Sep v0.5.40 push: a mark-filing use-case pre-read went out the same morning **after** that push; on 27 Sep the owner personally forwarded the **stale** mailed try pack v0.5.36 and, separately, a platform-access / UAT note — neither is a publish of this tip) plus vendor recrawl **27 Sep** on top of origin **v0.5.40-free**. **No conversation_search.** grok-export still **W38** only (cover-sized). No newer export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel names.** Marketplace still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-27 **developers.openai.com/codex/hooks** (same document as learn.chatgpt.com/docs/hooks): prior v0.5.40 rules stay (hash-scoped trust, bypass-trust, force-on, managed-only).
+- **New:** oversized hook output **spills**. Codex saves the full text under a temp `hook_outputs/<session_id>/<uuid>.txt` and gives the model a head-and-tail preview **plus that path**. A failed write still sends a truncated preview. `additionalContext` is model-visible. Spill is a paste, not a private lane. This skill still ships **no hooks**.
+- Evals **166**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/headless**: bare mode, `acceptEdits`, `.jsonl` resume, SessionEnd, 10MB stdin, and the future `-p` default are **unchanged** — not a vault.
+- **New:** `--permission-mode auto` has a **classifier** review most actions instead of you. Classifier review is not owner approval. `dontAsk` and `--permission-prompts none` stay unattended grants.
+- Evals **167**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026): **NO_DELTA**. Extra `~/.grok/hooks-paths` remains a hop. `GROK_PLUGIN_ROOT` is not a vault.
+- No newer grok-export than W38. W39 stays PARTIAL. A memory snapshot is not a transcript. Marketplace still Hold.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **168**.
+
+### Shared
+
+- **Hook-output spill is a paste.** Classifier review is not owner approval.
+- **A stale try-pack forward is not this tip.** Do not resend. Do not chase with the current zip.
+- **A platform-access forward is not this skill.** Do not copy register steps. Leftover UAT stays do-not-resend.
+- **A mark-filing pre-read is not this skill.** Do not ingest the slides. Do not file. No names.
+- **Unsent execution briefs stay unsent.** Mailed try pack v0.5.36 is stale. Cold compute-spend pitch stays L0.
+- Evals now **168**. HITL F1–F22 + T1–T23 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.40-free] — 2026-09-26
 
 Absorbed this Grok Build turn's live mailbox (after the 25 Sep v0.5.39 push: weekly backup **2026-W39** arrived later the same day, STATUS **PARTIAL**; no newer owner skill-feedback mail; mailed try pack **v0.5.36** stays stale — do not resend; unsent execution briefs stay unsent) plus vendor recrawl **26 Sep** on top of origin **v0.5.39-free**. **No conversation_search.** W39 memory snapshot is pointers only — project chats were not exported. Do not dump chat bodies. Do not treat the snapshot or the memory-repo tree as a transcript or a publish. **No client / product / infra / firm / tester names.** Marketplace still Hold.

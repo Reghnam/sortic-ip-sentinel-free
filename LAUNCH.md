@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.40-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.41-free
 
-**Status**: Public on GitHub. v0.5.40-free patched 2026-09-26 (OpenAI `--dangerously-bypass-hook-trust` is not owner review; `[features].hooks = true` force-on is not consent; `allow_managed_hooks_only` is not owner review; Anthropic headless page unchanged — bare still writes; extra `~/.grok/hooks-paths` is a hop; W39 backup PARTIAL is not a transcript; marketplace Hold). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.41-free patched 2026-09-27 (OpenAI hook-output spill is a paste; Anthropic `--permission-mode auto` classifier review is not owner approval; headless page otherwise unchanged — bare still writes; Grok host docs unchanged — extra hook roots stay a hop; a stale try-pack forward is not this tip; a platform-access forward and a mark-filing pre-read are not this skill; no newer grok-export than W38; marketplace Hold). All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
