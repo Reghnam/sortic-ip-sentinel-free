@@ -2,6 +2,39 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.42-free] — 2026-09-28
+
+Absorbed this Grok Build turn's live mailbox (after the 27 Sep v0.5.41 push: a counsel reply on the mark-filing pre-read arrived the same evening; a 28 Sep absorb-only backup arrived this morning — Platform / pitch hubs, blocked drafts, empty artifacts, empty week hub) plus vendor recrawl **28 Sep** on top of origin **v0.5.41-free**. **No conversation_search.** grok-export still **W38** only. No newer export. Do not dump chat bodies. A memory snapshot is not a transcript. **No client / product / infra / firm / tester / counsel names.** Marketplace still Hold.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-28 **developers.openai.com/codex/hooks**: **NO_DELTA**. Hook-output spill is still a paste. A failed write still sends a truncated preview. `additionalContext` is still model-visible. This skill still ships **no hooks**. A NO_DELTA recrawl is not a reason to add hooks.
+- **New from the mailbox, unnamed:** a counsel reply on a mark-filing pre-read is not this skill. Do not ingest the reply. Do not ingest the slides. Do not file. Do not paste the mark, specimens, or strategy into Codex (or any consumer chat) to fill filing basis. An identical-mark knockout is not a confusion opinion. Nice wording is not an ID Manual acceptance. A model percentage is not clearance. A name or surname distinctiveness flag is not a refusal prediction. Do not invent an office-action clock.
+- Evals **169**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/headless**: **NO_DELTA**. Bare mode still writes. `--permission-mode auto` is still classifier review, not owner approval. A future `-p` default is still not clearance.
+- **Named on that page, now explicit in this skill:** under `--permission-prompts none`, anything that would prompt is denied unless a PermissionRequest hook allows it. That allow is not owner approval. `dontAsk` stays an unattended grant.
+- Evals **170**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026): **NO_DELTA**. Extra `~/.grok/hooks-paths` remains a hop. `GROK_PLUGIN_ROOT` is not a vault.
+- No newer grok-export than W38. W39 stays PARTIAL. The 28 Sep absorb-only backup is not a publish and not a transcript. Empty artifacts and an empty week hub are not a transcript. Review/Blocked drafts stay unsent. This free skill is not the platform — no prices, no client names. Never bundle `Reghnam/eu-ip-law-ground-truth` (do not invent a second sidecar).
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **171**.
+
+### Shared
+
+- **Counsel reply is not a filing.** Identical-mark knockout is not a confusion opinion. Do not invent an office-action clock.
+- **PermissionRequest hook allow is not owner approval.** Bare mode still writes.
+- **Absorb-only backup is not a publish.** Do not dump chats. Do not bundle the EU corpus.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not chase a stale forward with this zip.
+- Evals now **171**. HITL F1–F23 + T1–T24 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.41-free] — 2026-09-27
 
 Absorbed this Grok Build turn's live mailbox (after the 26 Sep v0.5.40 push: a mark-filing use-case pre-read went out the same morning **after** that push; on 27 Sep the owner personally forwarded the **stale** mailed try pack v0.5.36 and, separately, a platform-access / UAT note — neither is a publish of this tip) plus vendor recrawl **27 Sep** on top of origin **v0.5.40-free**. **No conversation_search.** grok-export still **W38** only (cover-sized). No newer export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel names.** Marketplace still Hold.

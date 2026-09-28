@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.41-free"
+VERSION = "0.5.42-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -100,11 +100,11 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 169):
+    for n in range(1, 172):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 168:
-        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 168)")
+    if evals.count("## Eval ") < 171:
+        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 171)")
 
     for rel in (
         "HITL-LUNCH.md",
@@ -258,6 +258,12 @@ def main() -> int:
         "do not chase with the current zip",
         "platform-access forward is not this skill",
         "mark-filing pre-read is not this skill",
+        "counsel reply is not this skill",
+        "identical-mark knockout is not a confusion opinion",
+        "do not invent an office-action clock",
+        "PermissionRequest hook is not owner approval",
+        "absorb-only backup is not a publish",
+        "eu-ip-law-ground-truth",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")

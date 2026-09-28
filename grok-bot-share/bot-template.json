@@ -1,6 +1,6 @@
 {
   "schema": "sorticai.grok_bot_share.v1",
-  "edition": "0.5.41-free",
+  "edition": "0.5.42-free",
   "status": "prepare_only",
   "do_not_publish_live": true,
   "live_marketplace_publish": "L3 [redacted-p11]/[redacted-p9] only",
@@ -28,6 +28,7 @@
     "corpus_paths",
     "api_keys",
     "us-ip-law-ground-truth",
+    "eu-ip-law-ground-truth",
     "sidecar_host",
     "live_publish_overnight"
   ]
