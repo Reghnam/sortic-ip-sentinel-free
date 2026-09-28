@@ -1,14 +1,16 @@
-# Private US-IP corpus — sidecar / offline RAG (v0.5.41-free)
+# Private US-IP corpus — sidecar / offline RAG (v0.5.42-free)
 
 **Hygiene only. Not legal advice. Not a prior-art search. Not FTO. Not a second regulatory radar.**
 
 `Reghnam/us-ip-law-ground-truth` is **PRIVATE**. It is the source of truth for hourly US-IP curriculum. This free skill must **never** ship that tree.
 
+`Reghnam/eu-ip-law-ground-truth` is also **PRIVATE**. Same never-bundle rule. Do **not** invent a second sidecar or a second radar. Hourly curriculum ticks stay L0.
+
 This skill may **retrieve** limited citation/snippet answers through a SorticAI-controlled **sidecar** on L3. The user **never downloads the KB**. It must never **ingest** client secrets, work-product, holdbacks, or private facts into that corpus. Curriculum ticks / DESIGN-PLAN / REPAIR-QUEUE stay L0 (Eval 5).
 
 ## Never bundle / never Bot disk
 
-Do **not** copy, zip, upload, or park `us-ip-law-ground-truth` (or any private law dump) into:
+Do **not** copy, zip, upload, or park `us-ip-law-ground-truth` or `eu-ip-law-ground-truth` (or any private law dump) into:
 
 - this public free skill zip (`chatgpt-skill/`, `claude-skill/`, `grok-skill/`, `cursor-skill/`)
 - a Grok Bot disk / Computer / share template
