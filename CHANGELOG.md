@@ -2,6 +2,42 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.43-free] — 2026-09-29
+
+Absorbed this Grok Build turn's live mailbox (after the 28 Sep v0.5.42 push: one chat catch-up arrived 29 Sep; no newer skill-feedback mail; no newer grok-export) plus vendor recrawl **29 Sep** on top of origin **v0.5.42-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy of a team chat is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No terms text. No payment status. No personal health.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-29 **developers.openai.com/codex/hooks** (public page on learn.chatgpt.com/docs/hooks): **NO_DELTA**. Hook-output spill is still a paste. A failed write still sends a truncated preview. `additionalContext` is still model-visible. This skill still ships **no hooks**. A NO_DELTA recrawl is not a reason to add hooks.
+- **New from the mailbox, unnamed:** asking a model to read counterparty terms and draft an official notice is a next paste. A model draft is not a filing and not a send. I'll-process-it-after is not owner approval. Do not paste the terms, the notice, or who the counterparty is into Codex.
+- A private-stack model sunset (retire date + replacement id) is **not this skill**. Do not paste client-validated prompts into a consumer chat to retest. A model id change is not clearance and not a publish.
+- Counsel-reply holds from v0.5.42 stand (do not file; identical-mark knockout is not a confusion opinion).
+- Evals **172**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/headless**: **NO_DELTA**. Bare mode still writes. `--permission-mode auto` is still classifier review, not owner approval. Under `--permission-prompts none`, a PermissionRequest hook allow is still not owner approval. `dontAsk` stays an unattended grant. A future `-p` default is still not clearance.
+- Piping counterparty terms plus “propose next steps, then send” into headless `-p` is a paste. The draft on disk is not a send.
+- Evals **173**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026): **NO_DELTA**. Extra `~/.grok/hooks-paths` remains a hop. `GROK_PLUGIN_ROOT` is not a vault.
+- No newer grok-export than W38. A 29 Sep chat catch-up is not a transcript. Payment-status asides stay L0 and unsent. Personal scheduling and health stay out. Review/Blocked drafts stay unsent. This free skill is not the platform.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **174**.
+
+### Shared
+
+- **Official notice is not a send.** I'll-process-it-after is not owner approval.
+- **Private-stack model sunset is not this skill.**
+- **Chat catch-up is not a transcript.**
+- **Counsel reply is still not a filing.** Spill is still a paste. Classifier review is still not owner approval.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
+- Evals now **174**. HITL F1–F24 + T1–T25 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.42-free] — 2026-09-28
 
 Absorbed this Grok Build turn's live mailbox (after the 27 Sep v0.5.41 push: a counsel reply on the mark-filing pre-read arrived the same evening; a 28 Sep absorb-only backup arrived this morning — Platform / pitch hubs, blocked drafts, empty artifacts, empty week hub) plus vendor recrawl **28 Sep** on top of origin **v0.5.41-free**. **No conversation_search.** grok-export still **W38** only. No newer export. Do not dump chat bodies. A memory snapshot is not a transcript. **No client / product / infra / firm / tester / counsel names.** Marketplace still Hold.
