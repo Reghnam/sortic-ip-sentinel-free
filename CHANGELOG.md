@@ -2,6 +2,45 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.44-free] — 2026-09-30
+
+Absorbed this Grok Build turn's live mailbox (after the 29 Sep v0.5.43 push: an inbound official completeness receipt, and a later partner-deck note; no skill-feedback mail; no newer grok-export) plus vendor recrawl **30 Sep** on top of origin **v0.5.43-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy of a deck or a receipt is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No personal health.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners.
+
+### OpenAI (first)
+
+- Recrawl 2026-09-30 **developers.openai.com/codex/hooks** (same document as learn.chatgpt.com/docs/hooks): **NO_DELTA**. Hook-output spill is still a paste. A failed write still sends a truncated preview. `additionalContext` is still model-visible. This skill still ships **no hooks**. A NO_DELTA recrawl is not a reason to add hooks.
+- **New from the mailbox, unnamed:** an inbound official completeness receipt is not a transcript and not a reply. Do not paste the receipt, the protocol text, or the filing reference into Codex. A receipt is not owner approval to reply or to send. I'll-process-it-after is not owner approval.
+- A later partner-deck version in the mailbox is not this skill and not a tip bump. Do not ingest the slides. Do not send. Deck mail is not a publish of this pack.
+- Counsel-reply holds from v0.5.42 stand (do not file; identical-mark knockout is not a confusion opinion). Official-notice holds from v0.5.43 stand.
+- Evals **175**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/headless**: **NO_DELTA**. Bare mode still writes. `claude -p` and the Agent SDK still start in `default`. `--permission-mode auto` is still classifier review, not owner approval. Under `--permission-prompts none`, a PermissionRequest hook allow is still not owner approval.
+- **New from code.claude.com/docs/en/permission-modes:** interactive terminal and VS Code sessions on Claude Code **v2.1.283+** start in **auto**. On earlier versions, auto only when Pro/Max/Team feature flags fetch; otherwise Manual. Built-in auto also needs v2.1.228+ (macOS, Linux, WSL) or v2.1.233+ (native Windows); before that, the built-in default is Manual. Opening the interactive app on an IP-sensitive repo is classifier review until Manual is set. Do not conflate that start mode with headless.
+- A project `.claude/settings.json` `defaultMode` of `auto` does not take effect (falls through to the built-in default). A project `bypassPermissions` does not take effect (the session starts Manual). Other values apply from any settings file. `disableAutoMode: "disable"` forces `default`. The `manual` alias (v2.1.200+) is `default`, not a vault.
+- Evals **176**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026): **NO_DELTA**.
+- Recrawl **docs.x.ai/build/features/permissions** (footer 21 Jul 2026): **NO_DELTA**. Ask is still the documented default. `--always-approve` is still not owner approval.
+- **docs.x.ai/build/features/headless is 404.** Headless remains `grok -p` (docs.x.ai/build/cli/headless-scripting). A 404 is not a new private lane.
+- **New:** docs MCP page last updated 29 Sep 2026. `grok mcp add` of `https://docs.x.ai/api/mcp` is a network hop, not a vault and not a transcript. Do not point it at a private corpus. Do not paste keys into `~/.grok/config.toml`.
+- No newer grok-export than W38. Deck mail is not a transcript. Review/Blocked drafts stay unsent. This free skill is not the platform.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **177**.
+
+### Shared
+
+- **An inbound official receipt is not a send.** A partner-deck version is not a tip bump.
+- **Interactive Claude auto is not owner approval.** `claude -p` still starts in default. A project bypass is not a grant.
+- **A docs MCP is a hop.** Spill is still a paste. Classifier review is still not owner approval.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
+- Evals now **177**. HITL F1–F25 + T1–T26 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.43-free] — 2026-09-29
 
 Absorbed this Grok Build turn's live mailbox (after the 28 Sep v0.5.42 push: one chat catch-up arrived 29 Sep; no newer skill-feedback mail; no newer grok-export) plus vendor recrawl **29 Sep** on top of origin **v0.5.42-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy of a team chat is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No terms text. No payment status. No personal health.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners.
