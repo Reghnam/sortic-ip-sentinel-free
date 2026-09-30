@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.43-free"
+VERSION = "0.5.44-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -100,11 +100,11 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 175):
+    for n in range(1, 178):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 174:
-        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 171)")
+    if evals.count("## Eval ") < 177:
+        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 177)")
 
     for rel in (
         "HITL-LUNCH.md",
@@ -268,6 +268,11 @@ def main() -> int:
         "I'll-process-it-after is not owner approval",
         "private-stack model sunset is not this skill",
         "chat catch-up is not a transcript",
+        "inbound official receipt is not a transcript",
+        "partner-deck version is not this skill",
+        "v2.1.283+",
+        "claude -p and the Agent SDK still start in default",
+        "a docs MCP add is a hop",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")
