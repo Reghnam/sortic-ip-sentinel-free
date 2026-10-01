@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.44-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.45-free
 
-**Status**: Public on GitHub. v0.5.44-free patched 2026-09-30 (OpenAI first: Codex hooks recrawl NO_DELTA — do not add hooks; an inbound official receipt is not a Codex reply; a partner-deck version is not a tip bump. Anthropic second: interactive terminal/VS Code v2.1.283+ starts in auto — not owner approval; claude -p still starts in default; a project bypassPermissions is not a grant. Grok Build third: permissions page 21 Jul NO_DELTA; headless URL 404; a docs MCP is a hop; deck mail is not a transcript; marketplace Hold). All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.45-free patched 2026-10-01 (OpenAI first: additionalContextLimit 0 is a full paste; Work Cloud remote MCP hooks are not owner review; this skill still ships no hooks; a later completeness notice is not a reply; a vendor legal-terms notice is not a paste. Anthropic second: a claude -p session that fetches feature flags still starts in default; flag-off sessions start in auto on v2.1.285+ — not owner approval. Grok Build third: Auto is a classifier, not a project-file grant; sandbox off is not a vault; session resume is a next-paste; marketplace Hold). Origin v0.5.44-free stands except the unconditional headless-default claim, which this patch amends. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 

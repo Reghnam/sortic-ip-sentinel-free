@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.44-free"
+VERSION = "0.5.45-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -100,10 +100,10 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 178):
+    for n in range(1, 181):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 177:
+    if evals.count("## Eval ") < 180:
         errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 177)")
 
     for rel in (
@@ -271,7 +271,7 @@ def main() -> int:
         "inbound official receipt is not a transcript",
         "partner-deck version is not this skill",
         "v2.1.283+",
-        "claude -p and the Agent SDK still start in default",
+        "a claude -p session that fetches feature flags still starts in default",
         "a docs MCP add is a hop",
     ):
         if needle not in hitl:
