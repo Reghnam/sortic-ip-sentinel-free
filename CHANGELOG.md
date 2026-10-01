@@ -2,6 +2,45 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.45-free] — 2026-10-01
+
+Absorbed this Grok Build turn's live mailbox (after the 30 Sep v0.5.44 push: a later official completeness notice, a vendor legal-terms notice, and billing / invoice / trial / credit-note mail; one chat catch-up; no skill-feedback mail; no newer grok-export) plus vendor recrawl **1 Oct** on top of origin **v0.5.44-free**. **No conversation_search.** Drive title search found no newer grok-export. grok-export still **W38** only. A mailbox copy of a notice is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No personal health.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs.
+
+### OpenAI (first)
+
+- Recrawl 2026-10-01 **developers.openai.com/codex/hooks** (same document as learn.chatgpt.com/docs/hooks). Spill is still a paste. A failed write still sends a truncated preview. This skill still ships **no hooks**.
+- **New:** `additionalContextLimit` defaults to **2500** tokens. A positive integer raises the spill threshold. **`0` passes the handler's complete additionalContext to the model.** Limit 0 is a full paste, not a private lane. The docs say avoid 0 unless the hook caps its own output. Do not return secrets in hook output (spill writes a temp file).
+- **New:** when managed policy and remote hooks are enabled, Work Cloud with local access runs **admin-managed remote MCP hooks** on the cloud orchestrator. That is not owner review. Command and shell hooks do not run under cloud orchestration. Do not turn on local computer access to treat those hooks as a vault.
+- **Mailbox, unnamed:** a later official completeness notice is the same class as v0.5.44 — still not a transcript and not a reply. Do not paste the protocol or the filing reference. A vendor legal-terms notice is not this skill. Do not paste the terms. Do not accept them from this skill. Billing, invoice, trial, and credit-note mail stays L0. No amounts.
+- Evals **178**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/headless** and **code.claude.com/docs/en/permission-modes** (fetched 1 Oct 2026). Bare mode still writes. Interactive terminal and VS Code (v2.1.283+) still start in auto. Classifier review is still not owner approval. A project `bypassPermissions` is still not a grant.
+- **Amends v0.5.44:** `claude -p` and the Agent SDK do **not** unconditionally start in `default`. A run where nothing sets a mode takes the built-in start, **which can be auto**. Sessions that **fetch feature flags** still start in `default`. Sessions that do **not** (third-party provider or telemetry off) start in **auto on Claude Code v2.1.285+** and in `default` before that. An org policy that withholds the auto default starts in `default`. Pass `--permission-mode default` when you mean Manual. That auto is still not owner approval.
+- **New:** `CLAUDE_CODE_AUTO_MODE_SERVER=1` turns server review on in a `-p` or Agent SDK session that did not have it. Not owner approval.
+- Evals **179**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Permissions page fetched 1 Oct. **Ask remains the documented default.** v0.5.44 recorded that and `--always-approve`, and left the Auto row implicit. **Now explicit:** Auto (`/auto`, Shift+Tab when the feature is on) is a **classifier**, not owner approval. `permission_mode` is **user config or managed/requirements only** — not project `.grok/config.toml`. Legacy `yolo = true` still works; `permission_mode` wins. A remembered always-allow still prompts for `rm` and `git push`. An explicit allow rule auto-approves them. That rule is not owner approval.
+- Sandbox is **separate** and **off by default**. Off is not a vault.
+- Headless scripting: `grok -p --resume` and `--continue` read `~/.grok/sessions`. Resume is a next-paste. `--always-approve` on `grok -p` is still not owner approval. `docs.x.ai/build/features/headless` stays **404**.
+- No newer grok-export than W38. A chat catch-up is not a transcript. Marketplace still Hold.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **180**.
+
+### Shared
+
+- **Limit 0 is a paste.** Remote MCP hooks are not owner review.
+- **Flag-off headless auto is not owner approval.** Feature-flag sessions still start in default.
+- **Grok Auto is not a project-file grant.** Sandbox off is not a vault. Session resume is a next-paste.
+- **A later completeness notice is not a send.** A vendor legal-terms notice is not a paste. Billing mail stays L0. No amounts.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs.
+- Evals now **180**. HITL F1–F26 + T1–T27 required on every claimed stack. T26 amended for the headless start rule.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.44-free] — 2026-09-30
 
 Absorbed this Grok Build turn's live mailbox (after the 29 Sep v0.5.43 push: an inbound official completeness receipt, and a later partner-deck note; no skill-feedback mail; no newer grok-export) plus vendor recrawl **30 Sep** on top of origin **v0.5.43-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy of a deck or a receipt is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No personal health.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners.
