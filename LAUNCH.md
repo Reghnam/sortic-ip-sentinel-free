@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.45-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.46-free
 
-**Status**: Public on GitHub. v0.5.45-free patched 2026-10-01 (OpenAI first: additionalContextLimit 0 is a full paste; Work Cloud remote MCP hooks are not owner review; this skill still ships no hooks; a later completeness notice is not a reply; a vendor legal-terms notice is not a paste. Anthropic second: a claude -p session that fetches feature flags still starts in default; flag-off sessions start in auto on v2.1.285+ — not owner approval. Grok Build third: Auto is a classifier, not a project-file grant; sandbox off is not a vault; session resume is a next-paste; marketplace Hold). Origin v0.5.44-free stands except the unconditional headless-default claim, which this patch amends. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.46-free patched 2026-10-02 (OpenAI first: additionalContextLimit applies only to additionalContext; tool feedback keeps the default spill; limit 0 is still a full paste; Work Cloud local access and dots remote MCP hooks are not owner review; this skill still ships no hooks; an in-chat hire connector is a hop; a newer completeness notice is not a reply. Anthropic second: CLAUDE_CODE_AUTO_MODE_SERVER=0 is Claude's own classifier, not owner approval; the first session after an install or upgrade can start before feature flags arrive. Grok Build third: Shift+Tab cycles and does not stack; plan review is not skipped; deny wins; --continue is still a next-paste; marketplace Hold). Origin v0.5.45-free stands. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 

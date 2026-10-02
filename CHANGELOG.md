@@ -2,6 +2,45 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.46-free] — 2026-10-02
+
+Absorbed this Grok Build turn's live mailbox (after the 1 Oct v0.5.45 push: a newer official completeness notice, an in-chat hire/marketplace pitch, and bank-document / payment-reminder / billing-summary mail; no skill-feedback mail; no newer grok-export) plus vendor recrawl **2 Oct** on top of origin **v0.5.45-free**. **No conversation_search.** Drive title search found no newer grok-export. grok-export still **W38** only. A mailbox copy of a notice is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs.
+
+### OpenAI (first)
+
+- Recrawl 2026-10-02 **learn.chatgpt.com/docs/hooks** (same document as developers.openai.com/codex/hooks). Spill is still a paste. A failed write still sends a truncated preview. This skill still ships **no hooks**.
+- **New:** `additionalContextLimit` applies **only** to `additionalContext`. Tool feedback and continuation prompts **keep the default** spill. Limit 0 still passes the handler's complete additionalContext to the model. That is a full paste. It is not a private lane for tool traces.
+- **New:** when managed policy and remote hooks are enabled, Work Cloud with local access **and dots** use admin-managed remote MCP hooks on the cloud orchestrator. Personal accounts and Work Cloud without local access do not use those enterprise hooks. Not owner review.
+- **Amends v0.5.45:** not only command and shell hooks. Prompt and agent handlers, environment-scoped hooks, and SessionEnd MCP hooks do not run under cloud orchestration, even when tools execute locally. A background async hook uses the same spill and cannot approve. Local-only orchestration is not a vault.
+- **Mailbox, unnamed:** a newer official completeness notice is the same class as v0.5.45 — still not a transcript and not a reply. Do not paste the protocol or the filing reference. An in-chat hire or marketplace connector is a hop and a paste — not owner approval to send the method out. Do not name the vendor. Bank-document, payment-reminder, and billing-summary mail stays L0. No amounts.
+- Evals **181**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/permission-modes** and **code.claude.com/docs/en/headless** (fetched 2 Oct 2026). The flag-fetch start rule is **NO_DELTA**. Flag-fetching `claude -p` still starts in `default`. Flag-off sessions still start in auto on v2.1.285+. Interactive auto (v2.1.283+) stands. A project bypass is still not a grant. Bare mode still writes.
+- **New:** `CLAUDE_CODE_AUTO_MODE_SERVER=0` skips asking the server and always uses Claude Code's own classifier. That local classifier is not owner approval. `=1` still turns server review on in a session that does not have it, unless `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1`. Setting that disable and leaving the server variable unset also stops asking the server. Not a vault. On a direct API connection the variable needs Claude Code v2.1.281+.
+- **New:** the first session after an install or upgrade can choose the starting permission mode before feature flags arrive. That session can differ from the table. The next session matches the table. If auto is selected but unavailable, the session starts Manual.
+- Evals **182**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Permissions page fetched 2 Oct. Footer still **21 Jul 2026**. Ask remains the documented default. v0.5.45 recorded Auto and left the cycle implicit. **Now explicit:** Shift+Tab cycles Normal → Plan → Auto (when the feature is on) → Always-approve. `/auto` while always-approve is on **switches**. It does not stack. Plan review is not skipped under auto or always-approve. deny wins over allow. `--allow` and `--deny` are per invocation, not a vault. Headless dontAsk and locking always-approve off are an enterprise control, not a free-skill grant.
+- Headless scripting page still **10 Jun 2026**. `--continue` is the latest session in the current directory. It still reads `~/.grok/sessions`. Resume is a next-paste. `--always-approve` on `grok -p` is still not owner approval. `docs.x.ai/build/features/headless` stays **404**.
+- No newer grok-export than W38. A mailbox copy is not a transcript. Marketplace still Hold.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **183**.
+
+### Shared
+
+- **Limit 0 does not cover tool feedback.** Dots remote MCP hooks are not owner review.
+- **Server-skip is not owner approval.** The first session after upgrade can differ from the table.
+- **Shift+Tab does not stack modes.** Plan review is not skipped. deny wins. `--continue` is a next-paste.
+- **A newer completeness notice is not a send.** An in-chat hire connector is a hop. Bank-document mail stays L0. No amounts.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs.
+- Evals now **183**. HITL F1–F27 + T1–T28 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.45-free] — 2026-10-01
 
 Absorbed this Grok Build turn's live mailbox (after the 30 Sep v0.5.44 push: a later official completeness notice, a vendor legal-terms notice, and billing / invoice / trial / credit-note mail; one chat catch-up; no skill-feedback mail; no newer grok-export) plus vendor recrawl **1 Oct** on top of origin **v0.5.44-free**. **No conversation_search.** Drive title search found no newer grok-export. grok-export still **W38** only. A mailbox copy of a notice is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No personal health.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs.
