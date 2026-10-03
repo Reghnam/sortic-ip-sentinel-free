@@ -13,7 +13,7 @@ description: >
   protect intent, or the US IP law corpus. Not legal advice. No paid paths.
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.46-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.47-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -58,7 +58,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.46-free (portable)  ·  sorticai.com  ·  patched 2026-10-02              |
+|  v0.5.47-free (portable)  ·  sorticai.com  ·  patched 2026-10-03              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -135,7 +135,7 @@ This is the free Phase-0 shape: **skill → structured hygiene package**. No pai
 - Safety gate on dispatched task specs: no secrets, proprietary source, or customer data. ChatGPT/Codex skill zips are scanned — no secrets in the zip.
 - Degrees of freedom (Anthropic): **low** on send/publish/pay/login/identity/voice-provision/DNS/access-grant/webhook/hooks/CI-apply; **medium** on show/hold tables; **high** on snapshot wording.
 - **Callable / headless chain is a disclosure ladder.** Each hop (callable agent → platform → **human reviewer** → customer/partner/SME) is a live demo channel. Apply show/hold at every hop. Do not dump internals into the callable surface. A reviewer seeing the AI result before the customer is still a hop.
-- **`--always-approve` / `--yolo` is not owner approval** for send, pay, identity, DNS, or voice/phone provision.
+- **`--always-approve` / `--yolo` is not owner approval** for send, pay, identity, DNS, or voice/phone provision. A compact is not a wipe (SessionStart `clear`/`compact`, including mid-turn, delivers additionalContext to the immediate continuation). A PostToolUse block is not a rollback. Prompt and agent handlers are parsed but skipped (`command` and `mcp_tool` run). A chat-while-away digest is a paste. A new-sign-in alert is not a rotate. `/loop` is a standing paste.
 - Voice / phone agent: consult ≠ provision. Decline a live number unless this turn names owner **and** action.
 - Disabled jobs stay disabled. Do not rewrite live prompts. Schedule-metadata reset ≠ prompt rewrite. ENABLED jobs with stale nextRun can still fire — they are live channels.
 - Dashboard / OAuth / 2FA / DNS / MCP-reinstall login: decline. One-tab fallback ≠ reinstall. Do not change DNS.
@@ -474,7 +474,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.46-free. Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
+- Version in header: v0.5.47-free. Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
 ## Failure Recovery
@@ -502,7 +502,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - Cursor: `cursor-skill/` → project `.cursor/skills/sortic-ip-sentinel-free/`; Sync Skills is `~/.cursor/skills/` only; Custom Modes = pin skill.
   - Grok Bot share pack: `grok-bot-share/` (profile/skills/routines config only; do not publish live).
 - Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change. Lunch HITL: `HITL-LUNCH.md`.
-- Keep disclaimers, plain labels, hygiene scope. No paid residue. Current version: **v0.5.46-free** (patched 2026-10-02; first released 2026-08-17). Description ≤1024. Body 499 lines. Claude YAML stays name+description only.
+- Keep disclaimers, plain labels, hygiene scope. No paid residue. Current version: **v0.5.47-free** (patched 2026-10-03; first released 2026-08-17). Description ≤1024. Body 499 lines. Claude YAML stays name+description only.
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 

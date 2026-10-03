@@ -2,6 +2,43 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.47-free] — 2026-10-03
+
+Absorbed this Grok Build turn's live mailbox (after the 2 Oct v0.5.46 push: a chat-while-away digest and a new-sign-in alert; no skill-feedback mail; no newer grok-export) plus vendor recrawl **3 Oct** on top of origin **v0.5.46-free**. **No conversation_search.** Drive title search found no newer grok-export. grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No medical.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs.
+
+### OpenAI (first)
+
+- Recrawl 2026-10-03 **learn.chatgpt.com/docs/hooks** (same document as developers.openai.com/codex/hooks). Spill is still a paste. Limit 0 is still a full paste of `additionalContext` only. Tool feedback still keeps the default spill. This skill still ships **no hooks**.
+- **New:** SessionStart matcher values are `startup`, `resume`, `clear`, and `compact`. After Codex compacts a root session, SessionStart hooks that match `source: compact` run before the next model request. Automatic compaction in the middle of a turn delivers that `additionalContext` to the **immediate continuation**, not a later user turn. A compact is not a wipe and not a private lane.
+- **New:** for PostToolUse, `decision: block` does **not** undo the completed command. Codex records the feedback, replaces the tool result with that feedback, and continues. A block is not a rollback. The method already ran.
+- **New:** `command` and `mcp_tool` handlers are supported. Prompt and agent handlers are **parsed but skipped**, not only absent under cloud orchestration. A parsed handler is not a running gate.
+- Evals **184**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/permission-modes** and **code.claude.com/docs/en/headless** (fetched 3 Oct 2026). **NO_DELTA.** Flag-fetching `claude -p` still starts in `default`. Flag-off sessions still start in auto on v2.1.285+. `CLAUDE_CODE_AUTO_MODE_SERVER=0` is still Claude Code's own classifier, not owner approval. The first session after upgrade can still differ from the table. Do not import a third-party gateway cutoff the official pages did not state.
+- **Mailbox, unnamed:** a chat-while-away digest arrived after the 2 Oct push. It mixes a private-stack model sunset (already L0-SUNSET / L3-SUNSET: minimal local swap is not a publish; do not paste client-validated prompts; client validation stays hold) with an account aside and a medical aside. A digest is a paste. Do not copy it into this skill, another model, or this public repo. No names. No amounts. No medical. No client.
+- A new-sign-in alert the next morning is L0 identity. Not a rotate. Not a skill input. Do not paste the alert.
+- Evals **185**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Permissions page fetched 3 Oct. Footer still **21 Jul 2026**. Ask remains the documented default. The Shift+Tab cycle recorded in v0.5.46 is **NO_DELTA**. `/auto` still switches and does not stack. Ctrl+O toggles always-approve and does not stack on `/auto`. Neither is owner approval.
+- **New:** `/loop [interval] <prompt>` repeats a prompt on an interval (modes-and-commands). That is a standing paste, not a vault, and not owner approval to repeat the method.
+- Headless feature URL stays **404**. `--continue` still reads `~/.grok/sessions`. No newer grok-export than W38. A digest is not a transcript. Marketplace still Hold.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **186**.
+
+### Shared
+
+- **A compact is not a wipe.** A block is not a rollback. Parsed-but-skipped is not a gate.
+- **A chat-while-away digest is a paste.** A new-sign-in alert is not a rotate. No amounts. No medical. No names.
+- **`/loop` is a standing paste.** Permissions footer unchanged. Anthropic 3 Oct recrawl is NO_DELTA.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs.
+- Evals now **186**. HITL F1–F28 + T1–T29 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.46-free] — 2026-10-02
 
 Absorbed this Grok Build turn's live mailbox (after the 1 Oct v0.5.45 push: a newer official completeness notice, an in-chat hire/marketplace pitch, and bank-document / payment-reminder / billing-summary mail; no skill-feedback mail; no newer grok-export) plus vendor recrawl **2 Oct** on top of origin **v0.5.45-free**. **No conversation_search.** Drive title search found no newer grok-export. grok-export still **W38** only. A mailbox copy of a notice is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs.

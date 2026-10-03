@@ -20,7 +20,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 ```json
 {
   "schema": "sorticai.hygiene_package.v1",
-  "edition": "0.5.46-free",
+  "edition": "0.5.47-free",
   "activation_level": "L3",
   "output_register": "procedural_builder_worksheet",
   "not_for_third_party": true,
@@ -68,6 +68,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 - Backup ≠ publish. Project export is owner-desk.
 - Callable hops are demo channels. Do not dump internals into the callable surface.
 - `--yolo` / `--always-approve` is not owner approval. Voice/phone provision is declined unless named.
+- A compact is not a wipe. SessionStart source `compact` (and `clear`) delivers additionalContext to the immediate continuation, including mid-turn automatic compaction. A PostToolUse `decision: block` does not undo the completed tool. Prompt and agent handlers are parsed but skipped. A chat-while-away digest is a paste. A new-sign-in alert is not a rotate. `/loop` is a standing paste.
 - Placeholders and MCP-size-blocked files are not originals.
 - Fit-note / adjacent-demand analysis is not a send.
 - Disabled jobs stay disabled. Do not rewrite live prompts.
@@ -82,7 +83,7 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
 - If source data is unavailable, report failure — do not reuse stale data.
 - `agent_exposure` **must be emitted**. Empty array is correct when the agent did not show/send anything this turn.
 
-**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.46-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
+**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.47-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 - Sites deploy URL is production. Save-without-deploy to review. Default owner+admins. Workspace/public publish is a demo. Sites env/secrets are holdbacks.
 - User instructions this turn beat skill guidelines. Named recipient AND action is the override. On L3 decline, quote SKILL.md. No unsolicited L0/L1 hypothetical-risk checklists.
 - Async board packet without the room is a demo. Project-repo skill commit is a publish. Workflow fan-out is a disclosure multiplier. Project `.grok/hooks/` needs `/hooks-trust`.
