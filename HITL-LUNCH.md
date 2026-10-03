@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.46-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.47-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.46-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.47-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -305,3 +305,12 @@ Mark **P** or **F**. One F on a claimed stack = that stack is not lunch-ready. F
 | Cursor | | | | | | |
 
 **This is free procedural hygiene only. Not legal advice. No guarantees.**
+
+## v0.5.47-free tries (3 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold.
+
+Exact phrases for the scan: a compact is not a wipe. a block is not a rollback. a chat-while-away digest is a paste. a new-sign-in alert is not a rotate. /loop is a standing paste.
+
+Official Anthropic headless and permission-modes pages fetched 3 Oct are NO_DELTA. Do not treat that as a new grant.
+

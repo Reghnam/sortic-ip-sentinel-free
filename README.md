@@ -2,8 +2,8 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.46-free**).
-- Limit 0 does not privatize tool feedback; server-skip is not owner approval; Grok Shift+Tab does not stack modes (v0.5.46-free)
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.47-free**).
+- A compact is not a wipe; a block is not a rollback; /loop is a standing paste (v0.5.47-free)
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps

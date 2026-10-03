@@ -1,4 +1,4 @@
-# SorticAI Free IP Sentinel — ChatGPT / Codex (v0.5.46-free)
+# SorticAI Free IP Sentinel — ChatGPT / Codex (v0.5.47-free)
 
 OpenAI-first package. Minimal SKILL.md frontmatter (`name` + `description` + license/metadata). Display and invocation live in `agents/openai.yaml`.
 
