@@ -100,12 +100,11 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    n_evals = evals.count("## Eval ")
-    for n in range(1, n_evals + 1):
+    for n in range(1, 187):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if n_evals < 1:
-        errors.append("evals.md has no eval headings")
+    if evals.count("## Eval ") < 186:
+        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 177)")
 
     for rel in (
         "HITL-LUNCH.md",
@@ -311,6 +310,7 @@ def main() -> int:
         for err in errors:
             print(f"- {err}")
         return 1
+    n_evals = evals.count("## Eval ")
     print(
         f"hygiene check OK: {VERSION}; description {len(root_desc)} chars; "
         f"body {body_lines} lines; {len(refs)} references; {n_evals} evals"
