@@ -60,6 +60,8 @@ class FreshnessTests(unittest.TestCase):
                     self.assertTrue(any("days old" in problem for problem in problems))
 
     def test_future_and_grace(self) -> None:
+        source = (SCRIPTS / "claim_rules.py").read_text(encoding="utf-8")
+        self.assertIn("timezone grace", source)
         data = baseline()
         data["last_verified"] = "2026-12-01"
         problems = claim_rules.freshness_problems(data, TODAY)
