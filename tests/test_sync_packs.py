@@ -22,6 +22,18 @@ def _load_sync():
 SYNC = _load_sync()
 
 
+def _eval_headings(root: Path) -> int:
+    return (root / "references" / "evals.md").read_text(encoding="utf-8").count("## Eval ")
+
+
+def _knowledge_copies(root: Path) -> int:
+    names = {path.name for path in (root / "references").iterdir() if path.is_file()}
+    knowledge = root / "openai-gpt-package" / "knowledge"
+    if not knowledge.is_dir():
+        return 0
+    return sum(1 for path in knowledge.iterdir() if path.is_file() and path.name in names)
+
+
 def _write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
@@ -139,12 +151,31 @@ class SyncPackTests(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 SYNC.build_plan(root)
 
+    def test_split_skill_keeps_dashes_inside_frontmatter(self) -> None:
+        text = (
+            "---\n"
+            "name: demo\n"
+            "description: >\n"
+            "  a --- token stays in frontmatter\n"
+            "note: keep\n"
+            "---\n"
+            "body keeps a --- token too\n"
+        )
+        front, body = SYNC.split_skill(text)
+        self.assertIn("a --- token stays in frontmatter", front)
+        self.assertIn("note: keep", front)
+        self.assertEqual(body, "\nbody keeps a --- token too\n")
+        self.assertEqual(front + body, text)
+        real = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        real_front, real_body = SYNC.split_skill(real)
+        self.assertEqual(real_front + real_body, real)
+
     def test_real_tree_check_is_clean(self) -> None:
         plan = SYNC.build_plan(ROOT)
         self.assertEqual(plan.diffs(), [])
-        self.assertEqual(plan.version, "0.5.47-free")
-        self.assertEqual(len(plan.packs), 4)
-        self.assertEqual(plan.knowledge_count, 2)
+        self.assertEqual(plan.version, SYNC.read_version(ROOT))
+        self.assertEqual(len(plan.packs), len(SYNC.read_packs(ROOT)))
+        self.assertEqual(plan.knowledge_count, _knowledge_copies(ROOT))
         code = SYNC.main(["--check", "--root", str(ROOT)])
         self.assertEqual(code, 0)
 
@@ -157,8 +188,10 @@ class SyncPackTests(unittest.TestCase):
             text=True,
         )
         self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
-        self.assertIn("hygiene check OK: 0.5.47-free", completed.stdout)
-        self.assertIn("186 evals", completed.stdout)
+        version = SYNC.read_version(ROOT)
+        evals = _eval_headings(ROOT)
+        self.assertIn(f"hygiene check OK: {version}", completed.stdout)
+        self.assertIn(f"{evals} evals", completed.stdout)
 
 
 if __name__ == "__main__":

@@ -3,7 +3,8 @@
 
 Zips land in dist/ (gitignored). SKILL.md is at the zip root.
 Member names are sorted and timestamps are fixed, so a second build
-of the same tree is byte-identical.
+of the same tree is byte-identical on the same zlib. Byte identity
+depends on the zlib version that deflates the members.
 """
 
 from __future__ import annotations
