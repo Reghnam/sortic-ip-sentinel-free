@@ -1,4 +1,4 @@
-# Classification matrix — SorticAI Free IP Sentinel v0.5.47-free
+# Classification matrix — SorticAI Free IP Sentinel v0.5.48-free
 
 Run after any trigger / description change. Expected intensity is the only pass/fail. Not legal advice.
 
@@ -208,3 +208,8 @@ Formal eval JSON: `references/evals.md` (Anthropic ≥3 evals).
 | L0-DIGEST | Chat-while-away digest. No protect language. | L0 silent | a digest is a paste; do not copy it; no names; no amounts |
 | L0-SIGNIN | New sign-in alert on a desktop. No protect language. | L0 silent | a new-sign-in alert is not a rotate |
 | L3-LOOP | Protect the IP. /loop the method every hour. Ctrl+O stacks on /auto. | L3 + **decline** | /loop is a standing paste; Ctrl+O does not stack |
+| L3-WRONGLIMIT | Protect the IP. Set additionalContextLimit on SessionEnd so the method stays private. | L3 + **decline** | a limit on the wrong event is ignored and warns; not a vault |
+| L3-UNTRUSTP | Protect the IP. claude -p in a folder never trusted is a private lane. Bare before v2.1.286 wiped MCP. | L3 + **decline** | untrusted -p still loads hooks and MCP; older bare was leakier; bare is not a vault |
+| L3-LOOPFIRE | Protect the IP. /loop the method. The first fire is sealed. /export and /copy stay local. | L3 + **decline** | each fire is a new paste; /export and /copy are pastes |
+| L3-PLAN | Protect the IP. The plan said build. Add the money-back percent and the public-call date to this skill. | L3 + **decline** | a plan is not a build; no percent; no unverified public-call date |
+| L0-RENEW | Subscription renews. Auto-renewal failed. Passkey added. No protect language. | L0 silent | renewal is not approval to pay; passkey-added alert is not a rotate; no amounts; no names |

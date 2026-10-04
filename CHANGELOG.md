@@ -2,6 +2,45 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.48-free] — 2026-10-04
+
+Absorbed this Grok Build turn's live mailbox (after the 3 Oct v0.5.47 push: a second sign-in alert, a passkey-added alert copy, a subscription renewal notice, a failed auto-renewal, a travel receipt, a public API announcement thread, and an SSO pitch; no skill-feedback mail; no newer grok-export) plus one bot transcript tail (not an export) plus vendor recrawl **4 Oct** on top of origin **v0.5.47-free**. **No conversation_search.** Drive title search not required: no newer export was in the mailbox. grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A bot transcript tail is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No medical.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Recrawl 2026-10-04 **learn.chatgpt.com/docs/hooks**. Spill is still a paste. Compact is still not a wipe. A PostToolUse block is still not a rollback. Prompt and agent handlers are still parsed but skipped. `command` and `mcp_tool` still run. This skill still ships **no hooks**.
+- **New:** for events that cannot produce additional context, Codex ignores `additionalContextLimit` and reports a configuration warning. A limit on the wrong event is not a vault and not a wipe. Limit 0 on `additionalContext` is still a full paste.
+- **Mailbox, unnamed:** a second new-sign-in alert is still L0 identity, not a rotate. Do not paste the device or the place. A subscription renewal notice is billing. No seat counts. A renewal is not owner approval to pay.
+- Evals **187**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/permission-modes** (fetched 4 Oct 2026). **NO_DELTA** on the start table. Flag-fetching `claude -p` still starts in `default`. Flag-off sessions still start in auto on v2.1.285+. `CLAUDE_CODE_AUTO_MODE_SERVER=0` is still Claude Code's own classifier, not owner approval. The first session after upgrade can still differ from the table.
+- **New (headless page):** without `--bare`, `claude -p` runs the hooks in a project's `.claude/settings.json` and connects the servers in `.mcp.json` even in a folder never trusted. A `-p` session shows no workspace trust dialog and no per-server approval prompt. Untrusted `-p` is not a private lane.
+- **New:** before v2.1.286, bare limits held only partly. An interactive `--bare` session connected the MCP servers a normal session would. Every `--bare` session sent system reminders. Background tasks stayed available. Current bare is tighter and is still not a vault. An older bare session is not a wipe.
+- **Mailbox, unnamed:** a passkey-added security alert copied to a recovery mailbox is L0 identity. Not a rotate. Not a transcript. Do not paste the account.
+- Evals **188**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Permissions page fetched 4 Oct. Footer date **not shown**. A missing footer is not a policy change. Ask remains the documented default. The Shift+Tab cycle (Normal → Plan → Auto when available → Always-approve) is **NO_DELTA**. `/auto` still switches and does not stack. Ctrl+O still does not stack on `/auto`. Neither is owner approval. `permission_mode` is still user or managed/requirements only, not project `.grok/config.toml`.
+- **New:** `/loop` fires immediately, then repeats. Each firing is a new agent turn. Interval minimum 60s. Loops expire after 7 days. At most 50. That is a standing paste, not one sealed job, and not owner approval to repeat the method. `/export` and `/copy` are pastes. `/transcript` is not a private lane.
+- **Transcript, unnamed:** a plan is not a build. This tip does not add an intake sheet, a money-back line, a percent, a hosting claim, a compliance claim, or a guarantee, or a positive legal-advice claim. "Not legal advice" stays. Unverified public-call dates stay out. The durable ChatGPT route remains `chatgpt-skill/`. `openai-gpt-package/` stays the retiring path (freeze 26 Oct; retire 11 Dec) — a chat restatement is not a new date. A repeated correction of the same paste class does not grow a product. Corpus ticks stay L0.
+- Headless feature URL stays **404**. No newer grok-export than W38. Marketplace still Hold.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **189**.
+
+### Shared
+
+- **A limit on the wrong event is not a vault.** A compact is still not a wipe. A block is still not a rollback.
+- **Untrusted `claude -p` is not a private lane.** Older bare was leakier. Bare is still not a vault.
+- **Each `/loop` fire is a new paste.** `/export` and `/copy` are pastes. A missing permissions footer is not a policy change.
+- **A plan is not a build.** No percent. No unverified public-call date. A renewal is not approval to pay. A passkey-added alert is not a rotate.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **189**. HITL F1–F28 + T1–T30 required on every claimed stack.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.47-free] — 2026-10-03
 
 Absorbed this Grok Build turn's live mailbox (after the 2 Oct v0.5.46 push: a chat-while-away digest and a new-sign-in alert; no skill-feedback mail; no newer grok-export) plus vendor recrawl **3 Oct** on top of origin **v0.5.46-free**. **No conversation_search.** Drive title search found no newer grok-export. grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No medical.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs.
