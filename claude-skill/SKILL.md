@@ -220,7 +220,7 @@ Hard rules for every deliverable (full list: `references/output-language-hygiene
 Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load `references/output-language-hygiene.md` + `references/agent-exposure-log.md` when any of these fire.
 
 - **Done without evidence is not done.** Inbox-root dumps and promises are not archived. Require folder path + link, or write blocked.
-- **Do not invent, replace, or reroll a result** (OpenAI 2026-09-05). Do not infer sent / filed / cleared. Grok Bot: if source data is unavailable, report failure — do not use stale data.
+- **Do not invent, replace, or reroll a result**. Do not infer sent / filed / cleared. Grok Bot: if source data is unavailable, report failure — do not use stale data.
 - **Approval = recipient AND action named this turn.** Leftover drafts, empty signature replies, auto-publish, and resend stay on hold (Grok Bot: sending/publishing requires approval). Leftover UAT: **do-not-resend** (no tester/firm names).
 - **Claimed send needs message-id + recipients.** Otherwise log `not_sent`.
 - **HiTL / UAT / livestream / Clip-Bot are demo channels.** L2 without protect language; L3 with it. Computer-use teaching records the screen — hold secrets.
@@ -291,7 +291,7 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 
 ## Progressive Disclosure & References
 
-Load **one level deep** from SKILL.md only (do not nest). Now, read that file.
+Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest). When the user selects a deliverable, read that file now and apply its structure exactly.
 
 - `references/investor-demo-hygiene-playbook.md`
 - `references/free-tier-outcomes.md`
@@ -303,7 +303,7 @@ Load **one level deep** from SKILL.md only (do not nest). Now, read that file.
 - `references/public-corpus-rag.md` (PRIVATE corpus; retrieve-only sidecar / offline fixtures; never bundle / never Bot disk)
 - `references/friedberg-satya-hygiene.md` (de-ID ≠ method safe; next paste; screenshot-first; Extra High ≠ vault; skills=all hop; consumer-terms ≠ NDA; coding-agent exhaust; scope honesty; ZDR best-efforts)
 - `references/v05-provenance-holdback-template.md`
-- `references/agent-exposure-log.md` (Bot / computer-use channels)
+- `references/agent-exposure-log.md`
 - `references/headless-hygiene-package.md`
 - `references/output-language-hygiene.md` (writing register — load on every L3 deliverable)
 - `references/classification-matrix.md`
@@ -496,7 +496,7 @@ Load **one level deep** from SKILL.md only (do not nest). Now, read that file.
 
 ## For Maintainers (This File)
 
-- Portable free tier. Extracted from sortic-ip-checkpoint (v1.6) **free outcomes only**.
+- Portable free tier. **free outcomes only**.
 - Platform packages (same behaviour, host-specific frontmatter / install):
   - OpenAI ChatGPT Skills + Codex: `chatgpt-skill/` (minimal frontmatter + `agents/openai.yaml`)
   - Anthropic Claude Code: `claude-skill/` (`name` + `description` only, ≤1024)
