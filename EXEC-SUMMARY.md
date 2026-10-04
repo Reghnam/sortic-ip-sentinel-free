@@ -1,4 +1,4 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.48-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.49-free
 
 **Date:** 4 Oct 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
@@ -26,7 +26,7 @@ Origin **v0.5.48-free** starts from **v0.5.47-free** (a compact is not a wipe; a
 - Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`); share pack `grok-bot-share/bot-template.json` beside the zip; live marketplace publish stays L3 for [redacted-p11]/[redacted-p9] — do not publish live
 - Cursor Cloud: `cp -r cursor-skill .cursor/skills/sortic-ip-sentinel-free/`; pin on Custom Mode; Sync only `~/.cursor/skills/`
 
-**Drive Sep-2 zips, walkthrough v0.5.30, the mailed HITL v0.5.25 pack, and the mailed try pack v0.5.36 are stale.** Use this branch. Rebuild host zips from this branch as **v0.5.48-free**. Custom-GPT `openai-gpt-package/` is the retiring path — testers use `chatgpt-skill/`.
+**Drive Sep-2 zips, walkthrough v0.5.30, the mailed HITL v0.5.25 pack, and the mailed try pack v0.5.36 are stale.** Use this branch. Rebuild host zips from this branch as **v0.5.49-free**. Custom-GPT `openai-gpt-package/` is the retiring path — testers use `chatgpt-skill/`.
 
 ## Try in 30 seconds
 

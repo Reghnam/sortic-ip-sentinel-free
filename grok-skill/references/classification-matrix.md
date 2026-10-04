@@ -1,4 +1,4 @@
-# Classification matrix — SorticAI Free IP Sentinel v0.5.48-free
+# Classification matrix — SorticAI Free IP Sentinel v0.5.49-free
 
 Run after any trigger / description change. Expected intensity is the only pass/fail. Not legal advice.
 
