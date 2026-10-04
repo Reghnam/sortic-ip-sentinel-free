@@ -2,6 +2,18 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.49-free] — 2026-10-04
+
+Pointer data and a readiness intake sheet. The skill prepares materials only. It does not apply, submit, pay, file, or give a verdict. The verified date is unset. A human sets it after reading both live pages. Every EUIPO date and the call text GR/001/26 are UNVERIFIED. No refund line. No percent. No amount. No names. Evals stay 189.
+
+### Shared
+
+- A voucher or SME Fund question without protect language is a short pointer. The readiness intake sheet follows when it is asked by name, or when protect language arrives with that intent, after the existing stamp.
+- If the verified date is unset or older than 14 days, say the status may be out of date and open the live page first. Do not print a confident closed.
+- Only a provider listed by the national office can deliver the official IP Scan. The sheet is not that report, not a filing, and not legal advice.
+- Apply, file, submit, pay, or a request to do the step for the user stays declined. Network or port-scan wording stays silent.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.48-free] — 2026-10-04
 
 Absorbed this Grok Build turn's live mailbox (after the 3 Oct v0.5.47 push: a second sign-in alert, a passkey-added alert copy, a subscription renewal notice, a failed auto-renewal, a travel receipt, a public API announcement thread, and an SSO pitch; no skill-feedback mail; no newer grok-export) plus one bot transcript tail (not an export) plus vendor recrawl **4 Oct** on top of origin **v0.5.47-free**. **No conversation_search.** Drive title search not required: no newer export was in the mailbox. grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A bot transcript tail is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No medical.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

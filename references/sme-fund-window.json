@@ -1,0 +1,39 @@
+{
+  "schema": "sorticai.sme_fund_pointer.v1",
+  "scope": "pointer_only_not_advice",
+  "instrument_label": "EUIPO SME Fund, IP Scan voucher",
+  "window_status": "closed_reopening_expected",
+  "window_note": "When the national office page was read on 2026-10-04, it described vouchers 1 and 2 as closed on 23 April 2026 and described a reopening as expected in November 2026 with no day published, while the EUIPO side is UNVERIFIED.",
+  "last_verified": null,
+  "last_verified_note": "UNVERIFIED: a human sets this after reading both live pages",
+  "last_verified_by": "human",
+  "stale_after_days": 14,
+  "sources": [
+    {
+      "label": "EUIPO SME Fund 2026 page",
+      "url": "https://www.euipo.europa.eu/en/sme-corner/sme-fund/2026"
+    },
+    {
+      "label": "national office page",
+      "url": "https://www.upv.gov.cz/sluzby/cosme-fund"
+    }
+  ],
+  "unverified": [
+    "UNVERIFIED: every EUIPO date",
+    "UNVERIFIED: the status on the EUIPO side",
+    "UNVERIFIED: the call text GR/001/26"
+  ],
+  "facts_allowed": [
+    "Only a provider listed by the national office can deliver the official IP Scan.",
+    "The voucher comes before the activity.",
+    "Check the live page."
+  ],
+  "never_state": [
+    "percentages",
+    "currency amounts",
+    "provider names",
+    "firm names",
+    "refund or reimbursement lines"
+  ],
+  "footer_template": "Status as of {last_verified}. Re-check the live EUIPO and national office pages before applying. Not legal advice."
+}

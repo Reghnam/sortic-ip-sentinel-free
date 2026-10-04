@@ -22,8 +22,8 @@ user-invocable: true
 disable-model-invocation: false
 argument-hint: IP sensitive moment | show/hold | hygiene JSON
 metadata:
-  short-description: "SorticAI Free IP Sentinel v0.5.48-free — a limit on the wrong event is not a vault"
-  version: "0.5.48-free"
+  short-description: "SorticAI Free IP Sentinel v0.5.49-free — a limit on the wrong event is not a vault"
+  version: "0.5.49-free"
   release: "2026-08-17"
   patched: "2026-10-04"
   author: "SorticAI (portable free tier)"
@@ -33,7 +33,7 @@ license: "See LICENSE.md (free use with attribution and disclaimers)"
 compatibility: "Claude Code (~/.claude/skills/), Codex (~/.agents/skills or ~/.codex/skills), ChatGPT Skills, Grok (~/.grok/skills/ or .grok/skills/), Grok Bot, Cursor (~/.cursor/skills/ or .cursor/skills/), agentskills.io. No external services required for core."
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.48-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.49-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -78,7 +78,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.48-free (portable)  ·  sorticai.com  ·  patched 2026-10-04              |
+|  v0.5.49-free (portable)  ·  sorticai.com  ·  patched 2026-10-04              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -107,7 +107,7 @@ Use the list below. Deliver practical artifacts (maps, checklists, text, tables)
 | 7 | Lite prior-art pointers | technical field | public search pointers + red flags — **not a search** (`references/v05-lite-prior-art-pointers.md`) |
 | 8 | Hygiene package JSON | same as snapshot | `sorticai.hygiene_package.v1` (`references/headless-hygiene-package.md`) |
 
-Also available: session ground rules, pre-meeting pack, slides (disclaimer last slide), standalone disclaimer, Q&A armor, hold-back checklist (`references/v05-demo-ground-rules-template.md`, `references/free-tier-outcomes.md`).
+Also available: session ground rules, pre-meeting pack, slides (disclaimer last slide), standalone disclaimer, Q&A armor, hold-back checklist (`references/v05-demo-ground-rules-template.md`, `references/free-tier-outcomes.md`), readiness intake sheet (`references/sme-fund-pointer-and-intake.md`, `references/sme-fund-window.json`).
 
 **When user chooses free help:**
 1. Confirm audience in one line.
@@ -311,13 +311,13 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 
 ## Progressive Disclosure & References
 
-Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest). When the user selects a deliverable, read that file now and apply its structure exactly.
+Load **one level deep** from SKILL.md only (do not nest). Now, read that file.
 
 - `references/investor-demo-hygiene-playbook.md`
 - `references/free-tier-outcomes.md`
 - `references/v05-contribution-log-template.md`
 - `references/v05-demo-ground-rules-template.md`
-- `references/v05-provisional-readiness-checklist.md`
+- `references/v05-provisional-readiness-checklist.md`; `references/sme-fund-window.json`; `references/sme-fund-pointer-and-intake.md` (readiness intake sheet)
 - `references/v05-trade-secret-matrix.md`
 - `references/v05-lite-prior-art-pointers.md`
 - `references/public-corpus-rag.md` (PRIVATE corpus; retrieve-only sidecar / offline fixtures; never bundle / never Bot disk)
@@ -326,8 +326,8 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - `references/agent-exposure-log.md` (Bot / computer-use channels)
 - `references/headless-hygiene-package.md`
 - `references/output-language-hygiene.md` (writing register — load on every L3 deliverable)
-- `references/classification-matrix.md` (maintainers / tests)
-- `references/evals.md` (Anthropic ≥3 evals; OpenAI description-as-trigger)
+- `references/classification-matrix.md`
+- `references/evals.md`
 
 ## Examples (Usage)
 
@@ -496,7 +496,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.48-free. Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
+- Version in header: v0.5.49-free. Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
 ## Failure Recovery
@@ -524,7 +524,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - Cursor: `cursor-skill/` → project `.cursor/skills/sortic-ip-sentinel-free/`; Sync Skills is `~/.cursor/skills/` only; Custom Modes = pin skill.
   - Grok Bot share pack: `grok-bot-share/` (profile/skills/routines config only; do not publish live).
 - Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change. Lunch HITL: `HITL-LUNCH.md`.
-- Keep disclaimers, plain labels, hygiene scope. No paid residue. Current version: **v0.5.48-free** (patched 2026-10-04; first released 2026-08-17). Description ≤1024. Body 499 lines. Claude YAML stays name+description only.
+- Keep disclaimers, plain labels, hygiene scope. No paid residue. Current version: **v0.5.49-free** (patched 2026-10-04). Description ≤1024. Claude YAML stays name+description only.
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 
