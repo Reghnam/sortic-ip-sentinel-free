@@ -34,8 +34,8 @@ _COMMON_LEGACY = frozenset(
     }
 )
 
-# Pack-relative paths that already mention a private corpus repo on v0.5.47-free.
-# Do not add paths for files created after that tree.
+# Pack-relative paths that already mention a private corpus repo.
+# Do not add paths for files created by this tooling.
 LEGACY_CORPUS_PATHS = {
     "chatgpt-skill": _COMMON_LEGACY | {"agents/openai.yaml"},
     "claude-skill": _COMMON_LEGACY,
@@ -93,7 +93,7 @@ PUBLIC_MAILBOX_DOMAINS = frozenset(
 _EMAIL_RE = re.compile(
     r"(?i)(?<![A-Za-z0-9._%+\-])[A-Za-z0-9._%+\-]+@((?:[A-Za-z0-9\-]+\.)+[A-Za-z]{2,})"
 )
-_PATH_RE = re.compile(r"/Users/|/home/|C:\\Users|C:/Users|handoffs/")
+_PATH_RE = re.compile(r"/Users/|/home/|C:\\Users|C:/Users|handoffs/|/workspace/")
 
 
 def _secret_re() -> re.Pattern[str]:
@@ -140,6 +140,22 @@ def legacy_paths_for(pack: str | None) -> set[str]:
     if pack is None:
         return set()
     return set(LEGACY_CORPUS_PATHS.get(pack, ()))
+
+
+def _member_name_failures(arcname: str) -> list[str]:
+    failures: list[str] = []
+    if "\\" in arcname:
+        failures.append(f"backslash: {arcname}")
+    if ".." in arcname:
+        failures.append(f"parent-segment: {arcname}")
+    if arcname.startswith("/") or arcname.startswith("\\"):
+        failures.append(f"absolute-path: {arcname}")
+    elif len(arcname) >= 3 and arcname[0].isalpha() and arcname[1] == ":" and arcname[2] in "/\\":
+        failures.append(f"absolute-path: {arcname}")
+    normalized = arcname.replace("\\", "/")
+    if "/workspace/" in normalized:
+        failures.append(f"workspace-path: {arcname}")
+    return failures
 
 
 def forbidden_name(arcname: str) -> str | None:
@@ -200,8 +216,20 @@ def scan_zip(
 ) -> ScanResult:
     result = ScanResult()
     legacy = set(legacy_paths) if legacy_paths is not None else legacy_paths_for(pack)
-    with zipfile.ZipFile(path) as zf:
+    try:
+        archive = zipfile.ZipFile(path)
+    except (zipfile.BadZipFile, OSError):
+        result.failures.append("unreadable-zip")
+        return result
+    with archive as zf:
         infos = list(zf.infolist())
+        counts: dict[str, int] = {}
+        for info in infos:
+            counts[info.filename] = counts.get(info.filename, 0) + 1
+        for raw_name in sorted(counts):
+            result.failures.extend(_member_name_failures(raw_name))
+            if counts[raw_name] > 1:
+                result.failures.append(f"duplicate-name: {raw_name} ({counts[raw_name]})")
         files = []
         for info in infos:
             name = info.filename.replace("\\", "/")
@@ -231,7 +259,14 @@ def scan_zip(
             why = forbidden_name(name)
             if why:
                 result.failures.append(f"{why}: {name}")
-            data = zf.read(info)
+            if info.flag_bits & 0x1:
+                result.failures.append(f"encrypted: {info.filename}")
+                continue
+            try:
+                data = zf.read(info)
+            except (RuntimeError, zipfile.BadZipFile, OSError):
+                result.failures.append(f"unreadable-member: {info.filename}")
+                continue
             if b"\x00" in data:
                 result.failures.append(f"binary: {name}")
                 continue

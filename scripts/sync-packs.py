@@ -7,7 +7,8 @@ each pack. Folded descriptions are copied too, because the hygiene check
 requires them to match. Pack frontmatter other than that description is kept.
 openai-gpt-package/knowledge/ files that already share a name with a root
 reference are the hand-synced knowledge copies. Same-name files are updated.
-Other knowledge files are left alone.
+Other knowledge files are left alone. A file under a pack references/
+directory that is absent from root references/ is deleted.
 
 Edition slots are stamped only when they still carry the previous edition.
 Historical pins, LICENSE titles, and CHANGELOG.md are not rewritten.
@@ -69,8 +70,11 @@ class Plan:
     deletes: list[str] = field(default_factory=list)
 
     def diffs(self) -> list[str]:
-        lines = [f"would write {rel}" for rel in sorted(self.writes)]
-        lines.extend(f"would delete {rel}" for rel in sorted(self.deletes))
+        lines = [f"drift: {rel}" for rel in sorted(self.writes)]
+        lines.extend(
+            f"delete: {rel} (absent from root references/)"
+            for rel in sorted(self.deletes)
+        )
         return lines
 
 
@@ -153,13 +157,33 @@ def detect_from_version(texts: dict[str, str], target: str) -> str | None:
 
 
 def split_skill(text: str) -> tuple[str, str]:
-    if not text.startswith("---\n"):
+    """Split YAML frontmatter from the body.
+
+    The closer is a line whose text is exactly ``---``. A ``---`` token
+    inside a frontmatter value stays in the frontmatter.
+    """
+    if text.startswith("---\r\n"):
+        newline = "\r\n"
+    elif text.startswith("---\n"):
+        newline = "\n"
+    else:
         raise SystemExit("SKILL.md is missing YAML frontmatter")
-    parts = text.split("---", 2)
-    if len(parts) < 3:
+    lines = text.split(newline)
+    if not lines or lines[0] != "---":
+        raise SystemExit("SKILL.md is missing YAML frontmatter")
+    close = None
+    for index in range(1, len(lines)):
+        if lines[index] == "---":
+            close = index
+            break
+    if close is None:
         raise SystemExit("SKILL.md frontmatter is not closed")
-    front = "---" + parts[1] + "---"
-    return front, parts[2]
+    front = newline.join(lines[: close + 1])
+    if close == len(lines) - 1:
+        body = ""
+    else:
+        body = newline + newline.join(lines[close + 1 :])
+    return front, body
 
 
 def description_block(text: str, label: str) -> str:
