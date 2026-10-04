@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import re
 import zipfile
+import zlib
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -142,11 +143,20 @@ def legacy_paths_for(pack: str | None) -> set[str]:
     return set(LEGACY_CORPUS_PATHS.get(pack, ()))
 
 
+def _is_symlink(info: zipfile.ZipInfo) -> bool:
+    mode = info.external_attr >> 16
+    return (mode & 0o170000) == 0o120000
+
+
+def _has_parent_segment(arcname: str) -> bool:
+    return any(part == ".." for part in arcname.replace("\\", "/").split("/"))
+
+
 def _member_name_failures(arcname: str) -> list[str]:
     failures: list[str] = []
     if "\\" in arcname:
         failures.append(f"backslash: {arcname}")
-    if ".." in arcname:
+    if _has_parent_segment(arcname):
         failures.append(f"parent-segment: {arcname}")
     if arcname.startswith("/") or arcname.startswith("\\"):
         failures.append(f"absolute-path: {arcname}")
@@ -230,6 +240,14 @@ def scan_zip(
             result.failures.extend(_member_name_failures(raw_name))
             if counts[raw_name] > 1:
                 result.failures.append(f"duplicate-name: {raw_name} ({counts[raw_name]})")
+        folded: dict[str, list[str]] = {}
+        for raw_name in counts:
+            key = raw_name.replace("\\", "/").casefold()
+            folded.setdefault(key, []).append(raw_name)
+        for names in folded.values():
+            distinct = sorted(set(names))
+            if len(distinct) > 1:
+                result.failures.append("case-duplicate: " + ", ".join(distinct))
         files = []
         for info in infos:
             name = info.filename.replace("\\", "/")
@@ -262,9 +280,15 @@ def scan_zip(
             if info.flag_bits & 0x1:
                 result.failures.append(f"encrypted: {info.filename}")
                 continue
+            if _is_symlink(info):
+                result.failures.append(f"symlink: {info.filename}")
+                continue
             try:
                 data = zf.read(info)
-            except (RuntimeError, zipfile.BadZipFile, OSError):
+            except zlib.error:
+                result.failures.append(f"unreadable-member: {info.filename}")
+                continue
+            except Exception:
                 result.failures.append(f"unreadable-member: {info.filename}")
                 continue
             if b"\x00" in data:

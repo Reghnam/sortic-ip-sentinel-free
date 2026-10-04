@@ -189,6 +189,62 @@ class ZipScanTests(unittest.TestCase):
         self.assertIn("workspace-path: /workspace/note.md", blob)
         self.assertFalse(result.ok)
 
+    def test_double_dot_inside_a_name_is_not_a_parent_segment(self) -> None:
+        with self._tmp() as tmp:
+            path = _zip(tmp, {"SKILL.md": b"ok\n", "references/a..b.md": b"plain\n"})
+            result = zipscan.scan_zip(path, legacy_paths=set())
+        self.assertTrue(result.ok, result.failures)
+        self.assertFalse(any(line.startswith("parent-segment:") for line in result.failures))
+
+    def test_case_variant_names_are_caught(self) -> None:
+        with self._tmp() as tmp:
+            dest = Path(tmp) / "case.zip"
+            with __import__("zipfile").ZipFile(dest, "w") as zf:
+                zf.writestr("SKILL.md", b"one\n")
+                zf.writestr("skill.md", b"two\n")
+            result = zipscan.scan_zip(dest, legacy_paths=set())
+        blob = "\n".join(result.failures)
+        self.assertIn("case-duplicate:", blob)
+        self.assertIn("SKILL.md", blob)
+        self.assertIn("skill.md", blob)
+        self.assertFalse(result.ok)
+
+    def test_symlink_member_is_caught(self) -> None:
+        with self._tmp() as tmp:
+            dest = Path(tmp) / "link.zip"
+            with __import__("zipfile").ZipFile(dest, "w") as zf:
+                zf.writestr("SKILL.md", b"ok\n")
+                info = __import__("zipfile").ZipInfo("link.md")
+                info.compress_type = __import__("zipfile").ZIP_STORED
+                info.create_system = 3
+                info.external_attr = 0o120777 << 16
+                zf.writestr(info, b"SKILL.md")
+            result = zipscan.scan_zip(dest, legacy_paths=set())
+        self.assertTrue(any(line.startswith("symlink: link.md") for line in result.failures))
+        self.assertFalse(result.ok)
+
+    def test_corrupt_deflate_member_is_a_fail_line(self) -> None:
+        import struct
+
+        with self._tmp() as tmp:
+            dest = Path(tmp) / "bad-deflate.zip"
+            with __import__("zipfile").ZipFile(dest, "w") as zf:
+                info = __import__("zipfile").ZipInfo("SKILL.md")
+                info.compress_type = __import__("zipfile").ZIP_DEFLATED
+                zf.writestr(info, b"hello skill\n" * 80, compresslevel=9)
+            data = bytearray(dest.read_bytes())
+            name_len, extra_len = struct.unpack_from("<HH", data, 26)
+            comp_size = struct.unpack_from("<I", data, 18)[0]
+            start = 30 + name_len + extra_len
+            data[start + max(comp_size // 2, 1)] ^= 0xFF
+            dest.write_bytes(data)
+            result = zipscan.scan_zip(dest, legacy_paths=set())
+        self.assertTrue(any(line.startswith("unreadable-member: SKILL.md") for line in result.failures))
+        report = zipscan.format_report(result)
+        self.assertIn("FAIL unreadable-member: SKILL.md", report)
+        self.assertIn("zip scan FAILED", report)
+        self.assertFalse(result.ok)
+
     def test_duplicate_names_are_caught(self) -> None:
         with self._tmp() as tmp:
             dest = Path(tmp) / "dup.zip"
