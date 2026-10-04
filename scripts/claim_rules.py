@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import NamedTuple
@@ -73,6 +74,8 @@ _BINARY_EXT = frozenset(
 )
 
 _ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+# One UTC day after today stays valid (timezone grace for a local evening).
+_FUTURE_GRACE_DAYS = 1
 _MONTH = (
     r"(?:January|February|March|April|May|June|July|August|September|October|November|December"
     r"|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)"
@@ -84,9 +87,19 @@ _DATE = (
     r"|" + _MONTH + r"\s+\d{1,2},?\s+\d{4}"
     r"|" + _MONTH + r"\s+\d{4})"
 )
-_PCT = r"(?:\d+(?:[.,]\d+)?\s*(?:%|percent\b)|%\s*\d+(?:[.,]\d+)?)"
+# Digit runs are bounded and must start at a non-digit so a long digit line cannot backtrack.
+_NUM = r"(?<!\d)\d{1,18}(?:[.,]\d{1,6})?(?!\d)"
+_ONES = r"one|two|three|four|five|six|seven|eight|nine"
+_TEENS = r"ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen"
+_TENS = r"twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety"
+_WORD_NUM = rf"(?:zero|{_TEENS}|{_TENS}(?:[-\s](?:{_ONES}))?|{_ONES})"
+_WORD_PCT = rf"(?=[A-Za-z]){_WORD_NUM}\s+percent\b"
+_PCT = (
+    r"(?:(?<!\d)\d{1,6}(?:[.,]\d{1,4})?(?!\d)\s*(?:%|percent\b)"
+    r"|%\s*(?<!\d)\d{1,6}(?:[.,]\d{1,4})?(?!\d)"
+    rf"|{_WORD_PCT})"
+)
 _NEAR = r"(?:\brefund\w*\b|\breimburse\w*\b|\bcover(?:s|ed|ing)?\b|\bpaid by the eu\b)"
-_NUM = r"\d+(?:[.,]\d+)?"
 
 _LINE_MARKERS = (
     "do not say",
@@ -98,16 +111,44 @@ _LINE_MARKERS = (
 _CUE = re.compile(
     r"(?i)(?:\b(?:not|no|never|without|cannot|ban(?:ned)?|forbidden|avoid|decline)\b|n't\b)"
 )
-_BOUNDARY = re.compile(r"[.;!?,]|\b(?:but|and|yet|however)\b", re.IGNORECASE)
+# A cue stops at punctuation, a spaced hyphen, an en or em dash, "(", "|", or a clause word.
+_BOUNDARY = re.compile(
+    r"[.;!?,:|(\u2013\u2014]|\s-+\s|\b(?:but|and|yet|however|so|then|or|because|since|while|although)\b",
+    re.IGNORECASE,
+)
+_SENTENCE_END = re.compile(r"[.!?]")
 _HEDGE = re.compile(r"(?i)\b(?:expected|described|says|unverified)\b")
 _HEDGE_MAY = re.compile(r"\bmay\b")
 _DISCLAIMER = re.compile(r"(?i)not legal advice")
 _URL = re.compile(r"https?://[^\s<>\"')\]]+")
-_DIGIT_PERCENT = re.compile(r"(?i)\d+(?:[.,]\d+)?\s*(?:%|percent\b)|%\s*\d")
+_DIGIT_PERCENT = re.compile(
+    r"(?i)(?<!\d)\d{1,6}(?:[.,]\d{1,4})?(?!\d)\s*(?:%|percent\b)|%\s*(?<!\d)\d{1,6}(?!\d)"
+)
+_MARKER_RE = re.compile("|".join(re.escape(item) for item in _LINE_MARKERS), re.IGNORECASE)
+_STRIP_MAP = {ord(ch): None for ch in "\u00ad\u200b\u200c\u200d\u2060\ufeff\u180e"}
+_MIXED_STEMS = (
+    "guarant",
+    "legal",
+    "advice",
+    "lawyer",
+    "attorney",
+    "refund",
+    "reimburse",
+    "eligible",
+    "qualify",
+    "novelty",
+    "reopen",
+    "voucher",
+    "gdpr",
+    "residency",
+    "verified",
+    "counsel",
+)
 
+_CODES = r"EUR|CZK|USD|CHF|GBP"
 CURRENCY_RE = re.compile(
-    r"(?:[€$]\s*" + _NUM + r"|" + _NUM + r"\s*[€$]"
-    r"|(?i:\b(?:EUR|CZK|USD)\s*" + _NUM + r"|" + _NUM + r"\s*(?:EUR|CZK|USD)\b)"
+    r"(?:[€$£]\s*" + _NUM + r"|" + _NUM + r"\s*[€$£]"
+    r"|(?i:\b(?:" + _CODES + r")\s*" + _NUM + r"|" + _NUM + r"\s*(?:" + _CODES + r")\b)"
     r"|(?i:\b(?:euro|euros)\s*" + _NUM + r"|" + _NUM + r"\s*(?:euro|euros)\b)"
     r"|(?:Kč|kč)\s*" + _NUM + r"|" + _NUM + r"\s*(?:Kč|kč))"
 )
@@ -169,7 +210,7 @@ CLAIM_RULES: tuple[ClaimRule, ...] = (
     ),
     ClaimRule(
         "legal-advice-positive",
-        re.compile(r"(?i)\blegal advice\b|\byour lawyer\b|\battorney-client\b"),
+        re.compile(r"(?i)\blegal advice\b|\byour lawyer\b|\battorney[\s-]client\b"),
         'State it as "not legal advice".',
         True,
     ),
@@ -208,7 +249,7 @@ CLAIM_RULES: tuple[ClaimRule, ...] = (
     ),
     ClaimRule(
         "reopen-date-fact",
-        re.compile(r"(?i)\breopen\w*\b.{0,100}" + _DATE),
+        re.compile(r"(?i)\bre[\s\-\u2013\u2014]?open\w*\b.{0,100}" + _DATE),
         "Hedge a reopening date, or mark the line UNVERIFIED.",
         True,
     ),
@@ -362,10 +403,11 @@ LEGACY_CORPUS_FILES: frozenset[str] = frozenset(
 
 
 def normalize_line(line: str) -> str:
-    """Strip emphasis and backticks, and fold apostrophes and non-breaking spaces."""
+    """Fold width, invisibles, emphasis, and a hyphen that joins two words."""
+    line = unicodedata.normalize("NFKC", line)
+    line = line.translate(_STRIP_MAP)
     line = (
-        line.replace("\u00a0", " ")
-        .replace("\u2019", "'")
+        line.replace("\u2019", "'")
         .replace("\u2018", "'")
         .replace("\u201c", '"')
         .replace("\u201d", '"')
@@ -374,7 +416,36 @@ def normalize_line(line: str) -> str:
     line = line.replace("**", "").replace("__", "")
     line = re.sub(r"(?<!\w)\*(?=\w)|(?<=\w)\*(?!\w)", "", line)
     line = re.sub(r"(?<!\w)_(?=\w)|(?<=\w)_(?!\w)", "", line)
+    line = re.sub(r"(?<=\w)-(?=\w)", " ", line)
+    line = re.sub(r"\s+", " ", line)
     return line
+
+
+def mixed_script_line(norm: str) -> bool:
+    """True when a non-ASCII letter is mixed into an ASCII claim word.
+
+    A letter that replaces an ASCII letter is not mapped, so it is not a hit.
+    """
+    if norm.isascii():
+        return False
+    for token in norm.split():
+        has_ascii = False
+        has_other = False
+        skeleton: list[str] = []
+        for ch in token:
+            if not ch.isalpha():
+                continue
+            if ch.isascii():
+                has_ascii = True
+                skeleton.append(ch.lower())
+            else:
+                has_other = True
+        if not has_ascii or not has_other:
+            continue
+        folded = "".join(skeleton)
+        if any(stem in folded for stem in _MIXED_STEMS):
+            return True
+    return False
 
 
 def pack_relative(rel: str) -> str:
@@ -385,17 +456,23 @@ def pack_relative(rel: str) -> str:
     return rel
 
 
-def prev_line_negates(prev: str) -> bool:
-    stripped = prev.strip()
-    if not stripped.endswith(":"):
+def _marker_still_open(text: str) -> bool:
+    """A line marker covers only the text up to the next sentence end."""
+    last = -1
+    for match in _MARKER_RE.finditer(text):
+        last = match.end()
+    if last < 0:
         return False
-    folded = normalize_line(stripped).lower()
-    return any(marker in folded for marker in _LINE_MARKERS)
+    return _SENTENCE_END.search(text, last) is None
 
 
-def marker_before(norm: str, start: int) -> bool:
-    head = norm[:start].lower()
-    return any(marker in head for marker in _LINE_MARKERS)
+def marker_clears(norm: str, start: int, prev_raw: str) -> bool:
+    if _marker_still_open(norm[:start]):
+        return True
+    prev = normalize_line(prev_raw).strip()
+    if not prev.endswith(":") or not _marker_still_open(prev):
+        return False
+    return _SENTENCE_END.search(norm[:start]) is None
 
 
 def locally_negated(norm: str, start: int) -> bool:
@@ -423,7 +500,6 @@ class LineHit(NamedTuple):
 def classify_line(raw: str, prev_raw: str = "") -> list[LineHit]:
     """Rule hits on one line. Negation is applied. The allow-list is not."""
     norm = normalize_line(raw)
-    prev_neg = prev_line_negates(prev_raw)
     hits: list[LineHit] = []
     for rule in CLAIM_RULES:
         if rule.id == "reopen-date-fact" and reopen_hedged(norm):
@@ -432,8 +508,7 @@ def classify_line(raw: str, prev_raw: str = "") -> list[LineHit]:
             cleared = bool(
                 rule.negatable
                 and (
-                    prev_neg
-                    or marker_before(norm, match.start())
+                    marker_clears(norm, match.start(), prev_raw)
                     or locally_negated(norm, match.start())
                 )
             )
@@ -507,6 +582,8 @@ def scan_claims(root: Path, patterns: list[re.Pattern[str]] | None = None) -> Cl
         for index, raw in enumerate(lines):
             prev = lines[index - 1] if index else ""
             lineno = index + 1
+            if mixed_script_line(normalize_line(raw)):
+                warnings.append(f"WARNING mixed-script in {rel}:{lineno}")
             for hit in classify_line(raw, prev):
                 found[hit.rule_id] += 1
                 if hit.cleared:
@@ -587,6 +664,8 @@ def load_extra_patterns(flag: str | None, env: str | None, root: Path) -> Patter
         return PatternLoad([], ["extra patterns file is missing"], False)
     try:
         text = path.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        return PatternLoad([], [f"extra patterns file is not valid text: {path.name}"], False)
     except OSError:
         return PatternLoad([], ["extra patterns file is unreadable"], False)
     patterns: list[re.Pattern[str]] = []
@@ -765,7 +844,7 @@ def validate_window(data: object, today: date) -> list[str]:
         parsed = _parse_stored_date(verified)
         if parsed is None:
             errors.append("window last_verified must be null or a real YYYY-MM-DD date")
-        elif parsed > today + timedelta(days=1):
+        elif parsed > today + timedelta(days=_FUTURE_GRACE_DAYS):
             errors.append("window last_verified is later than tomorrow")
     if verified is None and "last_verified_note" in data:
         stored_note = data.get("last_verified_note")
@@ -841,7 +920,7 @@ def freshness_problems(data: object, today: date) -> list[str]:
             "last_verified is not a real YYYY-MM-DD date: a human must set the date they read the pages"
         )
         return problems
-    if parsed > today + timedelta(days=1):
+    if parsed > today + timedelta(days=_FUTURE_GRACE_DAYS):
         problems.append(
             "last_verified is in the future: a human must set the date they actually read the pages"
         )

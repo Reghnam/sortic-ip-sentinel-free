@@ -261,6 +261,113 @@ class ClaimRuleTests(unittest.TestCase):
         self.assertIn("extra pattern #1 in README.md:1", blob)
         self.assertNotIn(token, blob)
 
+    def test_clause_boundaries_block_a_cue(self) -> None:
+        flagged = (
+            ("Not legal advice - this is guaranteed", "guaranteed"),
+            ("Not legal advice: it is guaranteed", "guaranteed"),
+            ("Not legal advice (it is guaranteed)", "guaranteed"),
+            ("No guarantees because we say it is guaranteed", "guaranteed"),
+            ("Not legal advice then apply now", "apply-now"),
+            ("not a lawyer so this is legal advice", "legal-advice-positive"),
+            ("no | guaranteed", "guaranteed"),
+            ("Not legal advice\u2014it is guaranteed", "guaranteed"),
+            ("Not legal advice \u2013 guaranteed", "guaranteed"),
+            ("No guarantees since it is guaranteed", "guaranteed"),
+            ("Not legal advice while it is guaranteed", "guaranteed"),
+            ("Not legal advice although it is guaranteed", "guaranteed"),
+            ("Not legal advice or it is guaranteed", "guaranteed"),
+        )
+        for line, rule_id in flagged:
+            with self.subTest(line=line):
+                self.assertIn(rule_id, claim_rules.uncleared_rule_ids(line))
+        allowed = (
+            "No guarantees. Not legal advice",
+            "This is not legal advice",
+            "do not say guaranteed",
+            "not an IP Scan provider",
+        )
+        for line in allowed:
+            with self.subTest(line=line):
+                self.assertEqual(claim_rules.uncleared_rule_ids(line), [])
+
+    def test_line_marker_stops_at_the_sentence_end(self) -> None:
+        flagged = "Banned phrases: none. We guarantee protection"
+        self.assertIn("guaranteed", claim_rules.uncleared_rule_ids(flagged))
+        self.assertEqual(claim_rules.uncleared_rule_ids("Banned phrases: guaranteed"), [])
+        self.assertEqual(claim_rules.uncleared_rule_ids("guaranteed protection", "banned phrases:"), [])
+        carried = claim_rules.uncleared_rule_ids("none. We guarantee protection", "Banned phrases:")
+        self.assertEqual(carried, ["guaranteed"])
+
+    def test_normalize_folds_spaces_hyphens_and_width(self) -> None:
+        self.assertIn("legal-advice-positive", claim_rules.uncleared_rule_ids("this is legal  advice"))
+        self.assertIn("legal-advice-positive", claim_rules.uncleared_rule_ids("this is legal-advice"))
+        self.assertIn("guaranteed", claim_rules.uncleared_rule_ids("a guaran\u00adtee"))
+        full_width = "reimbursed at \uff19\uff10\uff05"
+        self.assertIn("percent-near-refund", claim_rules.uncleared_rule_ids(full_width))
+        self.assertIn("guaranteed", claim_rules.uncleared_rule_ids("a guar\u200bantee"))
+
+    def test_currency_word_percent_and_reopen_spellings(self) -> None:
+        for line in ("10 CHF", "GBP 5", "10 USD", "\u00a310"):
+            with self.subTest(line=line):
+                self.assertIn("currency-amount", claim_rules.uncleared_rule_ids(line))
+        self.assertIn(
+            "percent-near-refund",
+            claim_rules.uncleared_rule_ids("reimbursed at ninety percent"),
+        )
+        self.assertNotIn(
+            "percent-near-refund",
+            claim_rules.uncleared_rule_ids("ninety percent complete"),
+        )
+        self.assertIn(
+            "reopen-date-fact",
+            claim_rules.uncleared_rule_ids("vouchers re-open on 1 May 2027"),
+        )
+        self.assertIn(
+            "reopen-date-fact",
+            claim_rules.uncleared_rule_ids("vouchers reopen on 1 May 2027"),
+        )
+
+    def test_mixed_script_warns_without_mapping_a_lookalike(self) -> None:
+        inserted = "guarant" + "\u0430" + "eed"
+        swapped = "guar" + "\u0430" + "nteed"
+        self.assertTrue(claim_rules.mixed_script_line("see " + inserted))
+        self.assertFalse(claim_rules.mixed_script_line(swapped))
+        self.assertFalse(claim_rules.mixed_script_line("guaranteed"))
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            (root / "README.md").write_text("see " + inserted + "\n", encoding="utf-8")
+            (root / "SKILL.md").write_text("not legal advice\n", encoding="utf-8")
+            for pack in claim_rules.PACK_DIRS:
+                (root / pack).mkdir()
+                (root / pack / "SKILL.md").write_text("not legal advice\n", encoding="utf-8")
+            scan = claim_rules.scan_claims(root)
+        self.assertTrue(any(item.startswith("WARNING mixed-script in README.md:") for item in scan.warnings))
+        self.assertFalse(any("mixed-script" in item for item in scan.errors))
+
+    def test_long_digit_line_stays_fast(self) -> None:
+        import time
+
+        line = "9" * 20000
+        started = time.perf_counter()
+        found = claim_rules.uncleared_rule_ids(line)
+        elapsed = time.perf_counter() - started
+        self.assertEqual(found, [])
+        self.assertLess(elapsed, 2.0)
+        started = time.perf_counter()
+        claim_rules.uncleared_rule_ids("9" * 10000)
+        self.assertLess(time.perf_counter() - started, 0.1)
+
+    def test_extra_pattern_file_rejects_undecodable_bytes(self) -> None:
+        outside = Path(tempfile.mkdtemp())
+        raw = outside / "patterns.txt"
+        raw.write_bytes(b"\xff\xfe\x80")
+        loaded = claim_rules.load_extra_patterns(str(raw), None, ROOT)
+        blob = "\n".join(loaded.errors)
+        self.assertIn(raw.name, blob)
+        self.assertNotIn("Traceback", blob)
+        self.assertNotIn("UnicodeDecodeError", blob)
+        self.assertNotIn(str(outside), blob)
+
 
 if __name__ == "__main__":
     unittest.main()
