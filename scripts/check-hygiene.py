@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.47-free"
+VERSION = "0.5.49-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -100,10 +100,10 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 187):
+    for n in range(1, 193):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 186:
+    if evals.count("## Eval ") < 192:
         errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 177)")
 
     for rel in (
