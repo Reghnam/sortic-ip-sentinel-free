@@ -176,17 +176,17 @@ class ZipScanTests(unittest.TestCase):
         self.assertTrue(result.ok, result.failures)
 
     def test_extra_pattern_reports_number_and_member_only(self) -> None:
-        token = "zz-unique-marker-9f3a"
-        patterns = [re.compile("nope-zz-absent"), re.compile(token)]
+        marker = "zz-unique-marker-9f3a"
+        patterns = [re.compile("nope-zz-absent"), re.compile(marker)]
         with self._tmp() as tmp:
             path = _zip(
                 tmp,
-                {"SKILL.md": b"ok\n", "references/note.md": (token + "\n").encode()},
+                {"SKILL.md": b"ok\n", "references/note.md": (marker + "\n").encode()},
             )
             result = zipscan.scan_zip(path, legacy_paths=set(), extra_patterns=patterns)
         self.assertEqual(result.failures, ["extra-pattern #2: references/note.md"])
         report = zipscan.format_report(result)
-        self.assertNotIn(token, report)
+        self.assertNotIn(marker, report)
         self.assertNotIn("nope-zz-absent", report)
 
     def test_legacy_corpus_mention_warns_and_new_file_fails(self) -> None:
