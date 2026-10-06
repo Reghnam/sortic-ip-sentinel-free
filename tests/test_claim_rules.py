@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import shutil
 import sys
 import tempfile
 import unittest
@@ -413,6 +414,32 @@ class ClaimRuleTests(unittest.TestCase):
         self.assertNotIn("Traceback", blob)
         self.assertNotIn("UnicodeDecodeError", blob)
         self.assertNotIn(str(outside), blob)
+
+    def test_tip_scan_reports_seeded_address(self) -> None:
+        address = "person@example.com"
+        cases = (
+            ("CHANGELOG.md", "# log\nplain line\n", 3),
+            ("PUSH_TO_GITHUB.txt", "push the branch\n", 2),
+        )
+        for name, starter, lineno in cases:
+            with self.subTest(name=name):
+                with tempfile.TemporaryDirectory() as raw:
+                    src = Path(raw) / "src"
+                    src.mkdir()
+                    (src / "SKILL.md").write_text("Not legal advice.\n", encoding="utf-8")
+                    for pack in claim_rules.PACK_DIRS:
+                        (src / pack).mkdir()
+                        (src / pack / "SKILL.md").write_text("not legal advice\n", encoding="utf-8")
+                    (src / "CHANGELOG.md").write_text("# log\nplain line\n", encoding="utf-8")
+                    (src / "PUSH_TO_GITHUB.txt").write_text("push the branch\n", encoding="utf-8")
+                    dst = Path(raw) / "tree"
+                    shutil.copytree(src, dst)
+                    target = dst / name
+                    target.write_text(starter + "contact " + address + "\n", encoding="utf-8")
+                    scan = claim_rules.scan_claims(dst)
+                    blob = "\n".join(scan.errors + scan.warnings)
+                    self.assertEqual(scan.errors, [f"email in {name}:{lineno}"])
+                    self.assertNotIn(address, blob)
 
 
 if __name__ == "__main__":
