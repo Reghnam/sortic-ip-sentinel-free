@@ -104,6 +104,82 @@ _CLOUD_DRIVE = (
 )
 _PATH_RE = re.compile(r"/Users/|/home/|C:\\Users|C:/Users|handoffs/|/workspace/")
 
+# A share id is the next path or query segment. A placeholder such as "..." is not an id.
+_SHARE_ID = r"[A-Za-z0-9][A-Za-z0-9_-]{0,200}"
+_SHARE_LONG = r"[A-Za-z0-9][A-Za-z0-9_-]{7,200}"
+_QUERY_ID = r"(?:!|%21)?[A-Za-z0-9][A-Za-z0-9_%!~.+-]{3,200}"
+# Upper bounds keep a long near-miss from backtracking over the rest of the line.
+_TEXT_RUN = r"[^\s?#]{0,512}"
+_AMP_RUN = r"(?:[^\s#]{0,512}&)"
+_PATH_RUN = r"(?:[^\s/?#]{1,128}/){0,16}"
+_LABEL_RUN = r"(?:[A-Za-z0-9-]{1,512}\.){0,16}"
+
+
+def _share_host(labels: tuple[str, ...], *, subdomains: bool = False) -> str:
+    host = r"\.".join(re.escape(label) for label in labels)
+    front = _LABEL_RUN if subdomains else r"(?:www\.)?"
+    return (
+        r"(?<![A-Za-z0-9@./-])(?:https?://)?"
+        + front
+        + host
+        + r"(?![A-Za-z0-9.-])"
+    )
+
+
+def _share_patterns() -> tuple[re.Pattern[str], ...]:
+    gid = _SHARE_ID
+    pieces = (
+        _share_host(("grok", "com")) + r"/share/" + gid,
+        _share_host(("chatgpt", "com")) + r"/c/" + gid,
+        _share_host(("chatgpt", "com")) + r"/share/" + gid,
+        _share_host(("chat", "openai", "com")) + r"/share/" + gid,
+        _share_host(("claude", "ai")) + r"/chat/" + gid,
+        _share_host(("claude", "ai")) + r"/share/" + gid,
+        _share_host(("x", "com")) + r"/i/grok/share/" + gid,
+        _share_host(("dropbox", "com")) + r"/(?:s|sh|scl/(?:fi|fo))/" + gid,
+        _share_host(("dropbox", "com")) + _TEXT_RUN + r"\?" + _AMP_RUN + r"?rlkey=" + _QUERY_ID,
+        _share_host(("1drv", "ms")) + r"/" + _PATH_RUN + r"s!" + gid,
+        _share_host(("1drv", "ms")) + r"/" + _SHARE_LONG,
+        _share_host(("onedrive", "live", "com")) + r"/:[A-Za-z]:/" + _PATH_RUN + gid,
+        _share_host(("onedrive", "live", "com"))
+        + _TEXT_RUN
+        + r"\?"
+        + _AMP_RUN
+        + r"?(?:resid|authkey|cid|id)="
+        + _QUERY_ID,
+        _share_host(("sharepoint", "com"), subdomains=True)
+        + r"/:[A-Za-z]:/"
+        + _PATH_RUN
+        + gid,
+        _share_host(("sharepoint", "com"), subdomains=True)
+        + r"/"
+        + _TEXT_RUN
+        + r"guestaccess\.aspx\?"
+        + _AMP_RUN
+        + r"?(?:share|guestaccesstoken)="
+        + _QUERY_ID,
+    )
+    return tuple(re.compile(piece, re.IGNORECASE) for piece in pieces)
+
+
+_SHARE_LINK = _share_patterns()
+
+
+def line_has_share_link(line: str) -> bool:
+    return any(pattern.search(line) for pattern in _SHARE_LINK)
+
+
+def share_link_lines(text: str) -> list[int]:
+    return [
+        number
+        for number, line in enumerate(text.splitlines(), 1)
+        if line_has_share_link(line)
+    ]
+
+
+def share_link_finding(name: str, lineno: int) -> str:
+    return f"share link in {name}:{lineno}"
+
 
 def _secret_re() -> re.Pattern[str]:
     parts = (
@@ -332,6 +408,8 @@ def scan_zip(
             shares = _pattern_hits(text, _CHAT_SHARE)
             if shares:
                 result.failures.append(f"chat-share: {name} ({shares})")
+            for lineno in share_link_lines(text):
+                result.failures.append(share_link_finding(name, lineno))
             drives = _pattern_hits(text, _CLOUD_DRIVE)
             if drives:
                 result.failures.append(f"cloud-drive: {name} ({drives})")

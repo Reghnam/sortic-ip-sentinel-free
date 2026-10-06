@@ -15,6 +15,8 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import NamedTuple
 
+import zipscan
+
 PACK_DIRS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 
 # Closed set copied from the window file that ships today.
@@ -609,6 +611,8 @@ def scan_claims(root: Path, patterns: list[re.Pattern[str]] | None = None) -> Cl
                 warnings.append(f"WARNING mixed-script in {rel}:{lineno}")
             if _EMAIL_RE.search(raw):
                 errors.append(f"email in {rel}:{lineno}")
+            if zipscan.line_has_share_link(raw):
+                errors.append(zipscan.share_link_finding(rel, lineno))
             for hit in classify_line(raw, prev):
                 found[hit.rule_id] += 1
                 if hit.cleared:
