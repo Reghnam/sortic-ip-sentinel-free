@@ -1,8 +1,8 @@
-# Classification matrix — SorticAI Free IP Sentinel v0.5.50-free
+# Classification matrix — SorticAI Free IP Sentinel v0.5.51-free
 
 Run after any trigger / description change. Expected intensity is the only pass/fail. Not legal advice.
 
-Description-as-trigger (Agent Skills + Velvethy field note): the YAML `description` is the match rule, not a marketplace card. A slogan that could sit on a store listing must **not** open this skill.
+Description-as-trigger (Agent Skills guidance): the YAML `description` is the match rule, not a marketplace card. A slogan that could sit on a store listing must **not** open this skill.
 
 Formal eval JSON: `references/evals.md` (Anthropic ≥3 evals).
 

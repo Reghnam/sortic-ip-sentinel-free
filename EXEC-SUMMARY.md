@@ -1,4 +1,4 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.50-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.51-free
 
 **Date:** 6 Oct 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
@@ -32,10 +32,10 @@ Origin **v0.5.50-free** starts from **v0.5.49-free** (suppressOutput is not a mu
 - Claude Code: `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free`
 - Claude.ai: zip `claude-skill/` with `SKILL.md` at zip root (enablement / 10-min terminal sync is a publish)
 - Grok / Grok Build: `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free` (project: `.grok/skills/`; user-level `~/.agents/skills/` is also discovered)
-- Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`); share pack `grok-bot-share/bot-template.json` beside the zip; live marketplace publish stays L3 for David/Sameth — do not publish live
+- Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`); share pack `grok-bot-share/bot-template.json` beside the zip; live marketplace publish stays L3 for the owner (L3) — do not publish live
 - Cursor Cloud: `cp -r cursor-skill .cursor/skills/sortic-ip-sentinel-free/`; pin on Custom Mode; Sync only `~/.cursor/skills/`
 
-**Drive Sep-2 zips, walkthrough v0.5.30, the mailed HITL v0.5.25 pack, and the mailed try pack v0.5.36 are stale.** Use this branch. Rebuild host zips from this branch as **v0.5.50-free**. Custom-GPT `openai-gpt-package/` is the retiring path — testers use `chatgpt-skill/`.
+**Drive Sep-2 zips, walkthrough v0.5.30, the mailed HITL v0.5.25 pack, and the mailed try pack v0.5.36 are stale.** Use this branch. Rebuild host zips from this branch as **v0.5.51-free**. Custom-GPT `openai-gpt-package/` is the retiring path — testers use `chatgpt-skill/`.
 
 ## Try in 30 seconds
 

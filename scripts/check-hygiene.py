@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.50-free"
+VERSION = "0.5.51-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -174,7 +174,7 @@ def main() -> int:
         "retrieve-only",
         "do not publish live",
         "us-ip-law-ground-truth",
-        "David/Sameth",
+        "the owner (L3)",
         "The lab's consumer terms are our NDA",
         "Let the coding agent keep the tests",
         "next paste is the moment",
@@ -296,8 +296,8 @@ def main() -> int:
         export = (share / "bot-template.json").read_text(encoding="utf-8") if (share / "bot-template.json").is_file() else ""
         if '"do_not_publish_live": true' not in export:
             errors.append("grok-bot-share/bot-template.json missing do_not_publish_live")
-        if "David/Sameth" not in export:
-            errors.append("grok-bot-share/bot-template.json missing David/Sameth L3 gate")
+        if "the owner (L3)" not in export:
+            errors.append("grok-bot-share/bot-template.json missing the owner (L3) gate")
         if '"api_keys": []' not in export or '"corpus_paths": []' not in export:
             errors.append("grok-bot-share/bot-template.json must ship empty api_keys and corpus_paths")
         for rel in share.iterdir():

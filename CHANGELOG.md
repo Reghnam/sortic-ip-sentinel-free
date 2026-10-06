@@ -2,6 +2,10 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.51-free] — 2026-10-06
+
+Pointer data and a readiness intake sheet, on the current edition. The skill prepares materials only. It does not apply, submit, pay, file, or give a verdict. The verified date is unset, and the window note starts unverified. Intake item 4 keeps only names already public or filed. Intake item 7 is categories only. The publish gate names the owner. Evals stay 195. No refund line. No percent. No amount. No names.
+
 ## [0.5.50-free] — 2026-10-06
 
 Absorbed this Grok Build turn's live mailbox (after the 5 Oct v0.5.49 push: one workshop promo; no skill-feedback mail; no newer grok-export) plus vendor recrawl **6 Oct** on top of origin **v0.5.49-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No deal status. No customer story. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
