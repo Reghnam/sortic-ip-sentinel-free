@@ -18,6 +18,7 @@ import zipscan
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = "0.5.51-free"
+EXPECTED_EVAL_COUNT = 205
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -127,11 +128,14 @@ def _hygiene(args: argparse.Namespace) -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 196):
+    for n in range(1, EXPECTED_EVAL_COUNT + 1):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 195:
-        errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 177)")
+    eval_count = evals.count("## Eval ")
+    if eval_count < EXPECTED_EVAL_COUNT:
+        errors.append(
+            f"evals.md has {eval_count} eval headings (need {EXPECTED_EVAL_COUNT})"
+        )
 
     for rel in (
         "HITL-LUNCH.md",
