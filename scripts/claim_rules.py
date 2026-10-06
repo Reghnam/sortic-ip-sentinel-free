@@ -51,9 +51,16 @@ NEW_FILE_NAMES = frozenset(
 )
 
 _CLAIM_EXT = {".md", ".txt", ".json", ".yaml", ".yml"}
-_TOP_FILES = ("SKILL.md", "README.md", "EXEC-SUMMARY.md", "HITL-LUNCH.md", "LAUNCH.md")
+_TOP_FILES = (
+    "SKILL.md",
+    "README.md",
+    "EXEC-SUMMARY.md",
+    "HITL-LUNCH.md",
+    "LAUNCH.md",
+    "CHANGELOG.md",
+    "PUSH_TO_GITHUB.txt",
+)
 _TOP_DIRS = ("references", "openai-gpt-package", "grok-bot-share", ".cursor", *PACK_DIRS)
-_EXCLUDED_NAMES = frozenset({"CHANGELOG.md", "PUSH_TO_GITHUB.txt"})
 _SKIP_WALK = frozenset({".git", "dist", "__pycache__", ".venv"})
 _BINARY_EXT = frozenset(
     {
@@ -128,6 +135,10 @@ _HEDGE = re.compile(r"(?i)\b(?:expected|described|says|unverified)\b")
 _HEDGE_MAY = re.compile(r"\bmay\b")
 _DISCLAIMER = re.compile(r"(?i)not legal advice")
 _URL = re.compile(r"https?://[^\s<>\"')\]]+")
+# An address is local-part @ domain. The report names the file and line only.
+_EMAIL_RE = re.compile(
+    r"(?i)(?<![A-Za-z0-9._%+\-])[A-Za-z0-9._%+\-]+@(?:[A-Za-z0-9\-]+\.)+[A-Za-z]{2,}"
+)
 _DIGIT_PERCENT = re.compile(
     r"(?i)(?<!\d)\d{1,6}(?:[.,]\d{1,4})?(?!\d)\s*(?:%|percent\b)|%\s*(?<!\d)\d{1,6}(?!\d)"
 )
@@ -562,8 +573,6 @@ def iter_claim_files(root: Path) -> list[Path]:
             return
         if path.suffix.lower() not in _CLAIM_EXT:
             return
-        if path.name in _EXCLUDED_NAMES:
-            return
         seen.add(path)
         found.append(path)
 
@@ -598,6 +607,8 @@ def scan_claims(root: Path, patterns: list[re.Pattern[str]] | None = None) -> Cl
             lineno = index + 1
             if mixed_script_line(normalize_line(raw)):
                 warnings.append(f"WARNING mixed-script in {rel}:{lineno}")
+            if _EMAIL_RE.search(raw):
+                errors.append(f"email in {rel}:{lineno}")
             for hit in classify_line(raw, prev):
                 found[hit.rule_id] += 1
                 if hit.cleared:
