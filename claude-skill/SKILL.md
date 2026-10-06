@@ -13,7 +13,7 @@ description: >
   protect intent, or the US IP law corpus. Not legal advice. No paid paths.
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.50-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.51-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -58,7 +58,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.50-free (portable)  ·  sorticai.com  ·  patched 2026-10-06              |
+|  v0.5.51-free (portable)  ·  sorticai.com  ·  patched 2026-10-06              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -87,7 +87,7 @@ Use the list below. Deliver practical artifacts (maps, checklists, text, tables)
 | 7 | Lite prior-art pointers | technical field | public search pointers + red flags — **not a search** (`references/v05-lite-prior-art-pointers.md`) |
 | 8 | Hygiene package JSON | same as snapshot | `sorticai.hygiene_package.v1` (`references/headless-hygiene-package.md`) |
 
-Also available: session ground rules, pre-meeting pack, slides (disclaimer last slide), standalone disclaimer, Q&A armor, hold-back checklist (`references/v05-demo-ground-rules-template.md`, `references/free-tier-outcomes.md`).
+Also available: session ground rules, pre-meeting pack, slides (disclaimer last slide), standalone disclaimer, Q&A armor, hold-back checklist (`references/v05-demo-ground-rules-template.md`, `references/free-tier-outcomes.md`), readiness intake sheet (`references/sme-fund-pointer-and-intake.md`, `references/sme-fund-window.json`).
 
 **When user chooses free help:**
 1. Confirm audience in one line.
@@ -220,7 +220,7 @@ Hard rules for every deliverable (full list: `references/output-language-hygiene
 Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load `references/output-language-hygiene.md` + `references/agent-exposure-log.md` when any of these fire.
 
 - **Done without evidence is not done.** Inbox-root dumps and promises are not archived. Require folder path + link, or write blocked.
-- **Do not invent, replace, or reroll a result** (OpenAI 2026-09-05). Do not infer sent / filed / cleared. Grok Bot: if source data is unavailable, report failure — do not use stale data.
+- **Do not invent, replace, or reroll a result**. Do not infer sent / filed / cleared. Grok Bot: if source data is unavailable, report failure — do not use stale data.
 - **Approval = recipient AND action named this turn.** Leftover drafts, empty signature replies, auto-publish, and resend stay on hold (Grok Bot: sending/publishing requires approval). Leftover UAT: **do-not-resend** (no tester/firm names).
 - **Claimed send needs message-id + recipients.** Otherwise log `not_sent`.
 - **HiTL / UAT / livestream / Clip-Bot are demo channels.** L2 without protect language; L3 with it. Computer-use teaching records the screen — hold secrets.
@@ -297,17 +297,17 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - `references/free-tier-outcomes.md`
 - `references/v05-contribution-log-template.md`
 - `references/v05-demo-ground-rules-template.md`
-- `references/v05-provisional-readiness-checklist.md`
+- `references/v05-provisional-readiness-checklist.md`; `references/sme-fund-window.json`; `references/sme-fund-pointer-and-intake.md` (readiness intake sheet)
 - `references/v05-trade-secret-matrix.md`
 - `references/v05-lite-prior-art-pointers.md`
 - `references/public-corpus-rag.md` (PRIVATE corpus; retrieve-only sidecar / offline fixtures; never bundle / never Bot disk)
 - `references/friedberg-satya-hygiene.md` (de-ID ≠ method safe; next paste; screenshot-first; Extra High ≠ vault; skills=all hop; consumer-terms ≠ NDA; coding-agent exhaust; scope honesty; ZDR best-efforts)
 - `references/v05-provenance-holdback-template.md`
-- `references/agent-exposure-log.md` (Bot / computer-use channels)
+- `references/agent-exposure-log.md`
 - `references/headless-hygiene-package.md`
 - `references/output-language-hygiene.md` (writing register — load on every L3 deliverable)
-- `references/classification-matrix.md` (maintainers / tests)
-- `references/evals.md` (Anthropic ≥3 evals; OpenAI description-as-trigger)
+- `references/classification-matrix.md`
+- `references/evals.md`
 
 ## Examples (Usage)
 
@@ -474,7 +474,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.50-free. Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
+- Version in header: v0.5.51-free. Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
 ## Failure Recovery
@@ -494,7 +494,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 
 ## For Maintainers (This File)
 
-- Portable free tier. Extracted from sortic-ip-checkpoint (v1.6) **free outcomes only**.
+- Portable free tier. **free outcomes only**.
 - Platform packages (same behaviour, host-specific frontmatter / install):
   - OpenAI ChatGPT Skills + Codex: `chatgpt-skill/` (minimal frontmatter + `agents/openai.yaml`)
   - Anthropic Claude Code: `claude-skill/` (`name` + `description` only, ≤1024)
@@ -502,7 +502,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - Cursor: `cursor-skill/` → project `.cursor/skills/sortic-ip-sentinel-free/`; Sync Skills is `~/.cursor/skills/` only; Custom Modes = pin skill.
   - Grok Bot share pack: `grok-bot-share/` (profile/skills/routines config only; do not publish live).
 - Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change. Lunch HITL: `HITL-LUNCH.md`.
-- Keep disclaimers, plain labels, hygiene scope. No paid residue. Current version: **v0.5.50-free** (patched 2026-10-06; first released 2026-08-17). Description ≤1024. Body 499 lines. Claude YAML stays name+description only.
+- Keep disclaimers, plain labels, hygiene scope. No paid residue. Current version: **v0.5.51-free** (patched 2026-10-06). Description ≤1024. Claude YAML stays name+description only.
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 

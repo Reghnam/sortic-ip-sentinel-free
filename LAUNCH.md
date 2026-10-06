@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.50-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.51-free
 
-**Status**: Public on GitHub. v0.5.50-free patched 2026-10-06 (OpenAI first: suppressOutput is still not a mute; the 5 Oct Bash-only line is superseded; PreToolUse also sees apply_patch, MCP, and other local tools; WebSearch is not hooked; fail-open is not a hold; hooks are a guardrail, not a boundary; this skill still ships no hooks. Anthropic second: a five-second grace is not a wipe; a watch report is a paste; SIGTERM with no recorded result is not a wipe; a ceiling of 0 is still not a stop. Grok Build third: permissions and sandbox footers still 21 Jul 2026 — NO_DELTA; a workshop promo is not a publish; a check-in is not a hold; marketplace Hold). Origin v0.5.49-free stands. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.51-free patched 2026-10-06 (OpenAI first: suppressOutput is still not a mute; the 5 Oct Bash-only line is superseded; PreToolUse also sees apply_patch, MCP, and other local tools; WebSearch is not hooked; fail-open is not a hold; hooks are a guardrail, not a boundary; this skill still ships no hooks. Anthropic second: a five-second grace is not a wipe; a watch report is a paste; SIGTERM with no recorded result is not a wipe; a ceiling of 0 is still not a stop. Grok Build third: permissions and sandbox footers still 21 Jul 2026 — NO_DELTA; a workshop promo is not a publish; a check-in is not a hold; marketplace Hold). Origin v0.5.49-free stands. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -46,7 +46,7 @@ Grok Build / project: `.grok/skills/sortic-ip-sentinel-free/` (does **not** scan
 
 **Grok Bot:** Save / Plugins → enable `sortic-ip-sentinel-free` **per Bot**. Do not `cp` to `~/.grok/skills/`. Do not use Teach-by-demonstration as the install path (publish). Bot must not email third parties unless this turn names them. Backup is not publish.
 
-**Share pack (prepare only):** `grok-bot-share/` export = profile/skills/routines config only (`bot-template.json`) — no secrets, no corpus paths, no API keys. **Do not publish live overnight.** Live marketplace publish stays **L3 for [redacted-p11]/[redacted-p9]**. Never park `us-ip-law-ground-truth` (PRIVATE) on the Bot disk.
+**Share pack (prepare only):** `grok-bot-share/` export = profile/skills/routines config only (`bot-template.json`) — no secrets, no corpus paths, no API keys. **Do not publish live overnight.** Live marketplace publish stays **L3 for the owner (L3)**. Never park `us-ip-law-ground-truth` (PRIVATE) on the Bot disk.
 
 ## 4. Cursor
 
