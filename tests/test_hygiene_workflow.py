@@ -18,17 +18,39 @@ ARCHIVE_SHA256 = "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470
 ZERO_SHA = "0000000000000000000000000000000000000000"
 GUARD_STEP = "Committed config guard"
 SCAN_STEP = "Secret scan"
-# Pinned scanner reads these from the target on its own. The only config
-# filename is `.gitleaks.toml`. `.gitleaksignore` is the ignore filename.
-GUARD_FILENAMES = (".gitleaksignore", ".gitleaks.toml")
+UNIT_STEP = "Pack tooling unit tests"
+UNIT_CMD = "python3 -m unittest discover -s tests"
+GUARD_NAMES = (
+    ".gitleaks.toml",
+    ".gitleaks.json",
+    ".gitleaks.yaml",
+    ".gitleaks.yml",
+    ".gitleaks",
+    ".gitleaksignore",
+    ".gitleaks.anything",
+)
+GUARD_KINDS = ("file", "dir", "symlink-file", "symlink-dir", "broken-symlink")
 GUARD_START = "# secret-scan-guard-start"
 GUARD_END = "# secret-scan-guard-end"
 GUARD_FAIL = "secret scan refused a committed config or ignore file"
 UNSET_LINE = "unset GITLEAKS_CONFIG GITLEAKS_CONFIG_TOML"
+DIR_CALL = '"${tool}" dir . --no-banner --redact --ignore-gitleaks-allow'
+GIT_CALL = '"${tool}" git . --no-banner --redact --ignore-gitleaks-allow --log-opts="${range}"'
+SUM_LINE = 'echo "${ARCHIVE_SHA256}  ${archive}" | sha256sum -c -'
+TAR_LINE = 'tar -xzf "${archive}" -C "${RUNNER_TEMP}" gitleaks'
 SCANNER_MODES = {"dir", "git", "detect", "protect", "stdin"}
-FORBIDDEN_SCAN_FLAGS = {"--config", "--gitleaks-ignore-path", "-c", "-i"}
+LONG_FORBIDDEN = {
+    "--config",
+    "--gitleaks-ignore-path",
+    "--exit-code",
+    "--baseline-path",
+    "--enable-rule",
+    "--max-target-megabytes",
+}
+SHORT_FORBIDDEN = {"-c", "-i", "-b"}
 _INLINE_EVENT = re.compile(r"\$\{\{\s*(github|inputs)\b")
 _OR_TRUE = re.compile(r"\|\|\s*true\b")
+_OR_COLON = re.compile(r"\|\|\s*:")
 
 
 def _dedent_block(lines: list[str]) -> str:
@@ -175,23 +197,16 @@ def _require_scanner_calls(script: str) -> list[list[str]]:
     return calls
 
 
-def _flag_name(token: str) -> str | None:
-    if token.startswith("--"):
-        return token.split("=", 1)[0]
-    if token.startswith("-") and len(token) > 1:
-        return token.split("=", 1)[0]
-    return None
-
-
-def _forbidden_flag(token: str) -> str | None:
-    if token.startswith("--"):
-        name = token.split("=", 1)[0]
-        if name in {"--config", "--gitleaks-ignore-path"}:
-            return name
-        return None
-    for short in ("-c", "-i"):
-        if token == short or token.startswith(short):
-            return short
+def _forbidden_on_call(call: list[str]) -> str | None:
+    for token in call:
+        if token.startswith("--"):
+            name = token.split("=", 1)[0]
+            if name in LONG_FORBIDDEN:
+                return token
+            continue
+        for short in SHORT_FORBIDDEN:
+            if token == short or token.startswith(short):
+                return short
     return None
 
 
@@ -237,6 +252,241 @@ def _run_guard(snippet: str, root: Path) -> subprocess.CompletedProcess[str]:
         text=True,
         check=False,
     )
+
+
+def _step_mapping_keys(block: str) -> list[str]:
+    lines = block.splitlines()
+    key_indent = None
+    keys: list[str] = []
+    for line in lines[1:]:
+        if not line.strip():
+            continue
+        indent = len(line) - len(line.lstrip(" "))
+        if key_indent is None:
+            key_indent = indent
+        if indent != key_indent:
+            continue
+        stripped = line.strip()
+        if re.match(r"^[A-Za-z0-9_-]+\s*:", stripped):
+            keys.append(stripped)
+    return keys
+
+
+def _unit_step(text: str) -> tuple[str, str, int]:
+    lines = text.splitlines()
+    for index, line in enumerate(lines):
+        if line.strip() != f"- name: {UNIT_STEP}":
+            continue
+        block = _named_step_block(text, UNIT_STEP)
+        script = _named_step_script(text, UNIT_STEP)
+        if UNIT_CMD not in script:
+            break
+        return block, script, index
+    raise AssertionError(
+        "the unit-test step that runs python3 -m unittest discover -s tests must stay"
+    )
+
+
+def _watched_scripts(text: str) -> list[tuple[str, str]]:
+    return [
+        ("committed config guard", _named_step_script(text, GUARD_STEP)),
+        ("secret scan", _named_step_script(text, SCAN_STEP)),
+        ("unit test", _unit_step(text)[1]),
+    ]
+
+
+def _assert_guard_present(text: str) -> None:
+    if _step_index(text, GUARD_STEP) >= _step_index(text, SCAN_STEP):
+        raise AssertionError("committed config guard must run before the secret scan")
+    snippet = _guard_snippet(text)
+    if "find ." not in snippet:
+        raise AssertionError("guard must search the whole working tree")
+    if "-name .git" not in snippet or "-prune" not in snippet:
+        raise AssertionError("guard must prune .git directories")
+    if "-name '.gitleaks*'" not in snippet:
+        raise AssertionError("guard must refuse every name that starts with .gitleaks")
+    if "-type" in snippet:
+        raise AssertionError("guard must refuse every entry type, not only files and symlinks")
+    if "set -euo pipefail" not in snippet:
+        raise AssertionError("set -euo pipefail was removed from the committed config guard")
+    if '>"${found_file}"' not in snippet:
+        raise AssertionError("a find error must fail the guard step")
+    if _OR_TRUE.search(snippet) or _OR_COLON.search(snippet):
+        raise AssertionError("the guard must not swallow a find error")
+    if GUARD_FAIL not in snippet:
+        raise AssertionError("guard must fail with a clear message")
+    for key in _step_mapping_keys(_named_step_block(text, GUARD_STEP)):
+        if key.startswith("if:"):
+            raise AssertionError("if: was added to the committed config guard")
+
+
+def _assert_bare_redact(text: str) -> None:
+    calls = _require_scanner_calls(_named_step_script(text, SCAN_STEP))
+    for call in calls:
+        if "--redact" not in call:
+            raise AssertionError(
+                "--redact was removed from scanner call: " + " ".join(call)
+            )
+        for index, token in enumerate(call):
+            if token.startswith("--redact") and token != "--redact":
+                raise AssertionError(
+                    "only a bare --redact is allowed on scanner call: " + " ".join(call)
+                )
+            if token == "--redact" and index + 1 < len(call) and not call[index + 1].startswith("-"):
+                raise AssertionError(
+                    "only a bare --redact is allowed on scanner call: " + " ".join(call)
+                )
+
+
+def _assert_ignore_allow(text: str) -> None:
+    calls = _require_scanner_calls(_named_step_script(text, SCAN_STEP))
+    for call in calls:
+        if "--ignore-gitleaks-allow" not in call:
+            raise AssertionError(
+                "--ignore-gitleaks-allow was removed from scanner call: " + " ".join(call)
+            )
+
+
+def _assert_scan_pipefail(text: str) -> None:
+    script = _named_step_script(text, SCAN_STEP)
+    if "set -euo pipefail" not in script:
+        raise AssertionError("set -euo pipefail was removed from the secret scan step")
+
+
+def _assert_no_swallow(text: str) -> None:
+    script = _named_step_script(text, SCAN_STEP)
+    for logical in _logical_lines(script):
+        flat = _flat_command(logical)
+        if _OR_TRUE.search(flat) is None and _OR_COLON.search(flat) is None:
+            continue
+        if _is_checksum(logical):
+            raise AssertionError("|| true or || : was added after the sha256sum -c check")
+        if _scanner_calls(logical):
+            raise AssertionError("|| true or || : was added after a scanner call")
+
+
+def _assert_no_continue_on_error(text: str) -> None:
+    if re.search(r"continue-on-error", text):
+        raise AssertionError("continue-on-error was added to the workflow")
+
+
+def _assert_triggers(text: str) -> None:
+    if re.search(r"\bworkflow_run\b", text):
+        raise AssertionError("workflow_run was added as a trigger")
+    if re.search(r"\bpull_request_target\b", text):
+        raise AssertionError("pull_request_target was added as a trigger")
+
+
+def _assert_checksum_before_extract(text: str) -> None:
+    script = _named_step_script(text, SCAN_STEP)
+    check_at = script.find("sha256sum -c")
+    extract_at = script.find("tar -xzf")
+    if check_at < 0:
+        raise AssertionError("sha256sum -c check was removed from the secret scan step")
+    if extract_at < 0:
+        raise AssertionError("archive extract is missing from the secret scan step")
+    if check_at > extract_at:
+        raise AssertionError("sha256sum -c was moved after extract")
+
+
+def _assert_permissions(text: str) -> None:
+    entries = _permission_entries(text)
+    if not entries:
+        raise AssertionError("contents: read permission was removed")
+    for entry in entries:
+        if entry != "contents: read":
+            raise AssertionError(f"contents: read was widened by {entry}")
+
+
+def _assert_env_unset(text: str) -> None:
+    script = _named_step_script(text, SCAN_STEP)
+    if UNSET_LINE not in script:
+        raise AssertionError(
+            "secret scan must keep unset GITLEAKS_CONFIG GITLEAKS_CONFIG_TOML"
+        )
+    if text.count(UNSET_LINE) != 1:
+        raise AssertionError("unset GITLEAKS_CONFIG GITLEAKS_CONFIG_TOML must appear once")
+    remainder = text.replace(UNSET_LINE, "", 1)
+    if "GITLEAKS_CONFIG" in remainder:
+        raise AssertionError(
+            "GITLEAKS_CONFIG or GITLEAKS_CONFIG_TOML is set outside the required unset"
+        )
+
+
+def _assert_no_forbidden_flags(text: str) -> None:
+    calls = _require_scanner_calls(_named_step_script(text, SCAN_STEP))
+    for call in calls:
+        found = _forbidden_on_call(call)
+        if found:
+            raise AssertionError(f"scanner call gained {found}: {' '.join(call)}")
+
+
+def _assert_no_inline(text: str) -> None:
+    for script in _run_scripts(text):
+        match = _INLINE_EVENT.search(script)
+        if match:
+            raise AssertionError(
+                "a run script inlines "
+                + match.group(0)
+                + "; event values must reach scripts through env only"
+            )
+
+
+def _assert_no_errexit_bypass(text: str) -> None:
+    for label, script in _watched_scripts(text):
+        if _OR_COLON.search(script):
+            raise AssertionError(f"|| : was added in the {label} step")
+        if "set +e" in script:
+            raise AssertionError(f"set +e was added in the {label} step")
+
+
+def _assert_no_if_on_scan_steps(text: str) -> None:
+    for name in (GUARD_STEP, SCAN_STEP):
+        for key in _step_mapping_keys(_named_step_block(text, name)):
+            if key.startswith("if:"):
+                raise AssertionError(f"if: was added to the {name} step")
+
+
+def _assert_unit_test_step(text: str) -> None:
+    _block, script, index = _unit_step(text)
+    if _OR_TRUE.search(script) or _OR_COLON.search(script):
+        raise AssertionError("|| true or || : was added to the unit-test step")
+    if "set +e" in script:
+        raise AssertionError("set +e was added to the unit-test step")
+    if "continue-on-error" in _block:
+        raise AssertionError("continue-on-error was added to the unit-test step")
+    if not (index < _step_index(text, GUARD_STEP) < _step_index(text, SCAN_STEP)):
+        raise AssertionError("unit-test step must stay before the guard and the secret scan")
+
+
+def _reject(case: unittest.TestCase, check, mutated: str, label: str) -> None:
+    with case.subTest(bad_edit=label):
+        try:
+            check(mutated)
+        except AssertionError:
+            return
+        raise AssertionError(f"bad edit was accepted: {label}")
+
+
+def _place(root: Path, relative: str, kind: str) -> None:
+    target = root / relative
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if kind == "file":
+        target.write_text("skip\n", encoding="utf-8")
+    elif kind == "dir":
+        target.mkdir()
+    elif kind == "symlink-file":
+        real = target.parent / "real-file"
+        real.write_text("skip\n", encoding="utf-8")
+        target.symlink_to(real.name)
+    elif kind == "symlink-dir":
+        real = target.parent / "real-dir"
+        real.mkdir()
+        target.symlink_to(real.name)
+    elif kind == "broken-symlink":
+        target.symlink_to("missing-target")
+    else:
+        raise AssertionError(f"unknown guard entry kind: {kind}")
 
 
 class HygieneWorkflowTests(unittest.TestCase):
@@ -306,208 +556,423 @@ class HygieneWorkflowTests(unittest.TestCase):
         self.assertIn("${BEFORE_SHA}..${AFTER_SHA}", self.text)
 
     def test_committed_config_guard_is_present(self) -> None:
-        guard_at = _step_index(self.text, GUARD_STEP)
-        scan_at = _step_index(self.text, SCAN_STEP)
-        self.assertLess(
-            guard_at,
-            scan_at,
-            "committed config guard must run before the secret scan",
+        _assert_guard_present(self.text)
+        _reject(
+            self,
+            _assert_guard_present,
+            self.text.replace("-name '.gitleaks*'", "-name '.gitleaks.toml'", 1),
+            "narrow the guard to .gitleaks.toml",
         )
-        snippet = _guard_snippet(self.text)
-        self.assertIn("find .", snippet, "guard must search the whole working tree")
-        self.assertIn("-name .git", snippet, "guard must exclude .git")
-        self.assertIn("-prune", snippet, "guard must prune .git directories")
-        for name in GUARD_FILENAMES:
-            self.assertIn(name, snippet, f"guard must refuse a committed {name}")
-        self.assertIn(GUARD_FAIL, snippet, "guard must fail with a clear message")
+        _reject(
+            self,
+            _assert_guard_present,
+            self.text.replace(
+                " -print -quit >\"${found_file}\"",
+                " -print -quit >\"${found_file}\" || true",
+                1,
+            ),
+            "|| true after find",
+        )
 
-    def test_guard_snippet_rejects_each_committed_file(self) -> None:
+    def test_guard_snippet_rejects_each_name_and_type(self) -> None:
         snippet = _guard_snippet(self.text)
-        cases = [
-            ".gitleaksignore",
-            ".gitleaks.toml",
-            "nested/.gitleaksignore",
-            "nested/deep/.gitleaks.toml",
-        ]
-        for relative in cases:
-            with self.subTest(path=relative):
-                with tempfile.TemporaryDirectory() as tmp:
-                    root = Path(tmp)
-                    target = root / relative
-                    target.parent.mkdir(parents=True, exist_ok=True)
-                    target.write_text("skip\n", encoding="utf-8")
-                    result = _run_guard(snippet, root)
-                self.assertNotEqual(
-                    result.returncode,
-                    0,
-                    f"guard should fail when {relative} is committed\n"
-                    f"stdout={result.stdout}\nstderr={result.stderr}",
-                )
-                self.assertIn(
-                    GUARD_FAIL,
-                    result.stdout,
-                    f"guard message missing for {relative}",
-                )
-        with self.subTest(path="symlink"):
-            with tempfile.TemporaryDirectory() as tmp:
-                root = Path(tmp)
-                (root / "real.toml").write_text("skip\n", encoding="utf-8")
-                (root / ".gitleaks.toml").symlink_to("real.toml")
+        for name in GUARD_NAMES:
+            for kind in GUARD_KINDS:
+                for place in (name, f"nested/{name}"):
+                    with self.subTest(path=place, kind=kind):
+                        with tempfile.TemporaryDirectory() as tmp:
+                            root = Path(tmp)
+                            _place(root, place, kind)
+                            result = _run_guard(snippet, root)
+                        self.assertNotEqual(
+                            result.returncode,
+                            0,
+                            f"guard should fail for {kind} {place}\n"
+                            f"stdout={result.stdout}\nstderr={result.stderr}",
+                        )
+                        self.assertIn(GUARD_FAIL, result.stdout, f"guard message missing for {place}")
+
+    def test_guard_snippet_fails_when_find_fails(self) -> None:
+        snippet = _guard_snippet(self.text)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            blocked = root / "nested" / "blocked"
+            blocked.mkdir(parents=True)
+            blocked.chmod(0)
+            try:
                 result = _run_guard(snippet, root)
-            self.assertNotEqual(
-                result.returncode,
-                0,
-                "guard should fail when .gitleaks.toml is a symlink",
-            )
+            finally:
+                blocked.chmod(0o755)
+        self.assertNotEqual(
+            result.returncode,
+            0,
+            f"a find error must fail the guard\nstdout={result.stdout}\nstderr={result.stderr}",
+        )
+        self.assertNotIn("no committed config or ignore file", result.stdout)
 
     def test_guard_snippet_passes_a_clean_tree(self) -> None:
         snippet = _guard_snippet(self.text)
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "notes.txt").write_text("plain\n", encoding="utf-8")
-            git_dir = root / ".git"
-            git_dir.mkdir()
-            (git_dir / ".gitleaksignore").write_text("skip\n", encoding="utf-8")
-            (git_dir / ".gitleaks.toml").write_text("skip\n", encoding="utf-8")
-            nested_git = root / "vendor" / ".git"
-            nested_git.mkdir(parents=True)
-            (nested_git / ".gitleaks.toml").write_text("skip\n", encoding="utf-8")
+            for base in (root / ".git", root / "vendor" / ".git"):
+                base.mkdir(parents=True)
+                for name in GUARD_NAMES:
+                    _place(base, name, "file")
+                _place(base, "typed-dir/.gitleaks.toml", "dir")
+                _place(base, "typed-link/.gitleaks.json", "symlink-file")
+                _place(base, "typed-dirlink/.gitleaks.yaml", "symlink-dir")
+                _place(base, "typed-broken/.gitleaks", "broken-symlink")
             result = _run_guard(snippet, root)
         self.assertEqual(
             result.returncode,
             0,
-            f"guard should pass when skip files are absent outside .git\n"
+            f"guard should pass when .gitleaks* entries are only inside .git\n"
             f"stdout={result.stdout}\nstderr={result.stderr}",
         )
         self.assertIn("no committed config or ignore file", result.stdout)
 
     def test_secret_scan_keeps_redact_on_both_calls(self) -> None:
-        calls = _require_scanner_calls(_named_step_script(self.text, SCAN_STEP))
-        for call in calls:
-            names = [name for name in (_flag_name(token) for token in call) if name]
-            self.assertIn(
-                "--redact",
-                names,
-                f"--redact was removed from scanner call: {' '.join(call)}",
-            )
+        _assert_bare_redact(self.text)
+        _reject(
+            self,
+            _assert_bare_redact,
+            self.text.replace(DIR_CALL, DIR_CALL.replace(" --redact", ""), 1),
+            "remove --redact from dir",
+        )
+        _reject(
+            self,
+            _assert_bare_redact,
+            self.text.replace(GIT_CALL, GIT_CALL.replace(" --redact", ""), 1),
+            "remove --redact from git",
+        )
+        _reject(
+            self,
+            _assert_bare_redact,
+            self.text.replace(DIR_CALL, DIR_CALL.replace(" --redact", " --redact=0"), 1),
+            "--redact=0 on dir",
+        )
+        _reject(
+            self,
+            _assert_bare_redact,
+            self.text.replace(GIT_CALL, GIT_CALL.replace(" --redact", " --redact=100"), 1),
+            "--redact=100 on git",
+        )
+        _reject(
+            self,
+            _assert_bare_redact,
+            self.text.replace(DIR_CALL, DIR_CALL.replace(" --redact ", " --redact 0 "), 1),
+            "--redact 0 on dir",
+        )
 
     def test_secret_scan_keeps_ignore_allow_on_both_calls(self) -> None:
-        calls = _require_scanner_calls(_named_step_script(self.text, SCAN_STEP))
-        for call in calls:
-            names = [name for name in (_flag_name(token) for token in call) if name]
-            self.assertIn(
-                "--ignore-gitleaks-allow",
-                names,
-                "--ignore-gitleaks-allow was removed from scanner call: " + " ".join(call),
-            )
+        _assert_ignore_allow(self.text)
+        _reject(
+            self,
+            _assert_ignore_allow,
+            self.text.replace(DIR_CALL, DIR_CALL.replace(" --ignore-gitleaks-allow", ""), 1),
+            "remove --ignore-gitleaks-allow from dir",
+        )
+        _reject(
+            self,
+            _assert_ignore_allow,
+            self.text.replace(GIT_CALL, GIT_CALL.replace(" --ignore-gitleaks-allow", ""), 1),
+            "remove --ignore-gitleaks-allow from git",
+        )
 
     def test_secret_scan_keeps_pipefail(self) -> None:
-        script = _named_step_script(self.text, SCAN_STEP)
-        self.assertIn(
-            "set -euo pipefail",
-            script,
-            "set -euo pipefail was removed from the secret scan step",
+        _assert_scan_pipefail(self.text)
+        _reject(
+            self,
+            _assert_scan_pipefail,
+            self.text.replace(
+                "        run: |\n          set -euo pipefail\n          unset GITLEAKS_CONFIG",
+                "        run: |\n          unset GITLEAKS_CONFIG",
+                1,
+            ),
+            "remove set -euo pipefail from secret scan",
         )
 
     def test_secret_scan_does_not_swallow_scanner_or_checksum(self) -> None:
-        script = _named_step_script(self.text, SCAN_STEP)
-        for logical in _logical_lines(script):
-            if _OR_TRUE.search(_flat_command(logical)) is None:
-                continue
-            self.assertFalse(
-                _is_checksum(logical),
-                "|| true was added after the sha256sum -c check",
-            )
-            self.assertFalse(
-                bool(_scanner_calls(logical)),
-                "|| true was added after a scanner call",
-            )
+        _assert_no_swallow(self.text)
+        _reject(self, _assert_no_swallow, self.text.replace(DIR_CALL, DIR_CALL + " || true", 1), "|| true after dir")
+        _reject(self, _assert_no_swallow, self.text.replace(GIT_CALL, GIT_CALL + " || true", 1), "|| true after git")
+        _reject(self, _assert_no_swallow, self.text.replace(SUM_LINE, SUM_LINE + " || true", 1), "|| true after sha256sum")
+        _reject(self, _assert_no_swallow, self.text.replace(DIR_CALL, DIR_CALL + " || :", 1), "|| : after dir")
+        _reject(self, _assert_no_swallow, self.text.replace(SUM_LINE, SUM_LINE + " || :", 1), "|| : after sha256sum")
+        _reject(
+            self,
+            _assert_no_swallow,
+            self.text.replace(DIR_CALL + "\n", DIR_CALL + "\n          || :\n", 1),
+            "|| : on the next line after dir",
+        )
 
     def test_workflow_has_no_continue_on_error(self) -> None:
-        self.assertIsNone(
-            re.search(r"continue-on-error", self.text),
-            "continue-on-error was added to the workflow",
+        _assert_no_continue_on_error(self.text)
+        _reject(
+            self,
+            _assert_no_continue_on_error,
+            self.text.replace(
+                "      - name: Secret scan\n",
+                "      - name: Secret scan\n        continue-on-error: true\n",
+                1,
+            ),
+            "continue-on-error on secret scan",
         )
 
     def test_workflow_does_not_add_untrusted_triggers(self) -> None:
-        self.assertIsNone(
-            re.search(r"\bworkflow_run\b", self.text),
-            "workflow_run was added as a trigger",
+        _assert_triggers(self.text)
+        _reject(
+            self,
+            _assert_triggers,
+            self.text.replace("on:\n  push:\n", "on:\n  workflow_run:\n    workflows: [\"hygiene-check\"]\n  push:\n", 1),
+            "workflow_run trigger",
         )
-        self.assertIsNone(
-            re.search(r"\bpull_request_target\b", self.text),
-            "pull_request_target was added as a trigger",
+        _reject(
+            self,
+            _assert_triggers,
+            self.text.replace("  pull_request:\n", "  pull_request:\n  pull_request_target:\n", 1),
+            "pull_request_target trigger",
         )
 
     def test_checksum_runs_before_extract(self) -> None:
-        script = _named_step_script(self.text, SCAN_STEP)
-        check_at = script.find("sha256sum -c")
-        extract_at = script.find("tar -xzf")
-        self.assertNotEqual(
-            check_at,
-            -1,
-            "sha256sum -c check was removed from the secret scan step",
-        )
-        self.assertNotEqual(
-            extract_at,
-            -1,
-            "archive extract is missing from the secret scan step",
-        )
-        self.assertLess(
-            check_at,
-            extract_at,
-            "sha256sum -c was moved after extract",
+        _assert_checksum_before_extract(self.text)
+        swapped = self.text.replace(SUM_LINE + "\n          " + TAR_LINE, TAR_LINE + "\n          " + SUM_LINE, 1)
+        self.assertNotEqual(swapped, self.text)
+        _reject(self, _assert_checksum_before_extract, swapped, "sha256sum after extract")
+        _reject(
+            self,
+            _assert_checksum_before_extract,
+            self.text.replace("          " + SUM_LINE + "\n", "", 1),
+            "remove sha256sum -c",
         )
 
     def test_contents_read_is_not_widened(self) -> None:
-        entries = _permission_entries(self.text)
-        self.assertTrue(entries, "contents: read permission was removed")
-        for entry in entries:
-            self.assertEqual(
-                entry,
-                "contents: read",
-                f"contents: read was widened by {entry}",
-            )
+        _assert_permissions(self.text)
+        _reject(
+            self,
+            _assert_permissions,
+            self.text.replace("contents: read", "contents: write", 1),
+            "contents: write",
+        )
+        _reject(
+            self,
+            _assert_permissions,
+            self.text.replace("permissions:\n  contents: read\n", "permissions: write-all\n", 1),
+            "permissions: write-all",
+        )
 
     def test_scanner_env_is_unset_and_not_set(self) -> None:
-        script = _named_step_script(self.text, SCAN_STEP)
-        self.assertIn(
-            UNSET_LINE,
-            script,
-            "secret scan must keep unset GITLEAKS_CONFIG GITLEAKS_CONFIG_TOML",
+        _assert_env_unset(self.text)
+        _reject(
+            self,
+            _assert_env_unset,
+            self.text.replace(
+                "name: hygiene-check\n",
+                "name: hygiene-check\n\nenv:\n  GITLEAKS_CONFIG: hidden.toml\n",
+                1,
+            ),
+            "workflow env GITLEAKS_CONFIG",
         )
-        self.assertEqual(
-            self.text.count(UNSET_LINE),
-            1,
-            "unset GITLEAKS_CONFIG GITLEAKS_CONFIG_TOML must appear once",
+        _reject(
+            self,
+            _assert_env_unset,
+            self.text.replace(
+                "  check:\n    runs-on:",
+                "  check:\n    env:\n      GITLEAKS_CONFIG_TOML: hidden\n    runs-on:",
+                1,
+            ),
+            "job env GITLEAKS_CONFIG_TOML",
         )
-        remainder = self.text.replace(UNSET_LINE, "", 1)
-        self.assertNotIn(
-            "GITLEAKS_CONFIG",
-            remainder,
-            "GITLEAKS_CONFIG or GITLEAKS_CONFIG_TOML is set outside the required unset",
+        _reject(
+            self,
+            _assert_env_unset,
+            self.text.replace(UNSET_LINE, UNSET_LINE + "\n          export GITLEAKS_CONFIG=hidden.toml", 1),
+            "export GITLEAKS_CONFIG",
+        )
+        _reject(
+            self,
+            _assert_env_unset,
+            self.text.replace("          " + UNSET_LINE + " || true\n", "", 1),
+            "remove unset",
         )
 
     def test_scanner_calls_do_not_take_config_or_ignore_flags(self) -> None:
-        calls = _require_scanner_calls(_named_step_script(self.text, SCAN_STEP))
-        for call in calls:
-            for token in call:
-                forbidden = _forbidden_flag(token)
-                self.assertIsNone(
-                    forbidden,
-                    f"scanner call gained {forbidden}: {' '.join(call)}",
-                )
+        _assert_no_forbidden_flags(self.text)
+        edits = {
+            "--config": DIR_CALL + " --config hidden.toml",
+            "--config=": DIR_CALL + " --config=hidden.toml",
+            "-c": DIR_CALL + " -c hidden.toml",
+            "-c=": DIR_CALL + " -c=hidden.toml",
+            "--gitleaks-ignore-path": GIT_CALL + " --gitleaks-ignore-path .",
+            "--gitleaks-ignore-path=": GIT_CALL + " --gitleaks-ignore-path=.",
+            "-i": GIT_CALL + " -i .",
+            "-i=": GIT_CALL + " -i=.",
+            "--exit-code": DIR_CALL + " --exit-code 0",
+            "--exit-code=": GIT_CALL + " --exit-code=0",
+            "--baseline-path": DIR_CALL + " --baseline-path report.json",
+            "--baseline-path=": GIT_CALL + " --baseline-path=report.json",
+            "-b": DIR_CALL + " -b report.json",
+            "-b=": GIT_CALL + " -b=report.json",
+            "--enable-rule": DIR_CALL + " --enable-rule one",
+            "--enable-rule=": GIT_CALL + " --enable-rule=one",
+            "--max-target-megabytes": DIR_CALL + " --max-target-megabytes 1",
+            "--max-target-megabytes=": GIT_CALL + " --max-target-megabytes=1",
+        }
+        for label, replacement in edits.items():
+            source = DIR_CALL if replacement.startswith(DIR_CALL) else GIT_CALL
+            _reject(self, _assert_no_forbidden_flags, self.text.replace(source, replacement, 1), label)
 
     def test_run_scripts_do_not_inline_github_or_inputs(self) -> None:
-        for script in _run_scripts(self.text):
-            match = _INLINE_EVENT.search(script)
-            found = match.group(0) if match else ""
-            self.assertIsNone(
-                match,
-                "a run script inlines "
-                + found
-                + "; event values must reach scripts through env only",
-            )
+        _assert_no_inline(self.text)
+        _reject(
+            self,
+            _assert_no_inline,
+            self.text.replace(
+                "run: python3 scripts/check-hygiene.py",
+                "run: python3 scripts/check-hygiene.py ${{ github.head_ref }}",
+                1,
+            ),
+            "inline github expression",
+        )
+        _reject(
+            self,
+            _assert_no_inline,
+            self.text.replace(
+                "run: python3 scripts/build-packs.py",
+                "run: python3 scripts/build-packs.py ${{ inputs.name }}",
+                1,
+            ),
+            "inline inputs expression",
+        )
+        kept = self.text.replace(
+            "          EVENT_NAME: ${{ github.event_name }}\n",
+            "          EVENT_NAME: ${{ github.event_name }}\n          EXTRA: ${{ github.head_ref }}\n",
+            1,
+        )
+        _assert_no_inline(kept)
+
+    def test_guard_secret_scan_and_unit_test_reject_errexit_bypass(self) -> None:
+        _assert_no_errexit_bypass(self.text)
+        _reject(
+            self,
+            _assert_no_errexit_bypass,
+            self.text.replace(
+                "          printf '%s\\n' \"secret scan config guard: no committed config or ignore file\"\n",
+                "          printf '%s\\n' \"secret scan config guard: no committed config or ignore file\" || :\n",
+                1,
+            ),
+            "|| : in the guard",
+        )
+        _reject(
+            self,
+            _assert_no_errexit_bypass,
+            self.text.replace(
+                "          # secret-scan-guard-start\n          set -euo pipefail\n",
+                "          # secret-scan-guard-start\n          set -euo pipefail\n          set +e\n",
+                1,
+            ),
+            "set +e in the guard",
+        )
+        _reject(
+            self,
+            _assert_no_errexit_bypass,
+            self.text.replace(
+                "          " + UNSET_LINE + " || true\n",
+                "          set +e\n          " + UNSET_LINE + " || true\n",
+                1,
+            ),
+            "set +e in secret scan",
+        )
+        _reject(
+            self,
+            _assert_no_errexit_bypass,
+            self.text.replace(DIR_CALL, DIR_CALL + " || :", 1),
+            "|| : in secret scan",
+        )
+        _reject(
+            self,
+            _assert_no_errexit_bypass,
+            self.text.replace(UNIT_CMD + " -v", UNIT_CMD + " -v || :", 1),
+            "|| : in the unit-test step",
+        )
+        _reject(
+            self,
+            _assert_no_errexit_bypass,
+            self.text.replace(UNIT_CMD + " -v", "set +e; " + UNIT_CMD + " -v", 1),
+            "set +e in the unit-test step",
+        )
+
+    def test_guard_and_secret_scan_have_no_if(self) -> None:
+        _assert_no_if_on_scan_steps(self.text)
+        _assert_guard_present(self.text)
+        _reject(
+            self,
+            _assert_no_if_on_scan_steps,
+            self.text.replace(
+                "      - name: Committed config guard\n",
+                "      - name: Committed config guard\n        if: false\n",
+                1,
+            ),
+            "if: on the guard",
+        )
+        _reject(
+            self,
+            _assert_no_if_on_scan_steps,
+            self.text.replace(
+                "      - name: Secret scan\n",
+                "      - name: Secret scan\n        if: false\n",
+                1,
+            ),
+            "if: on secret scan",
+        )
+        _reject(
+            self,
+            _assert_guard_present,
+            self.text.replace(
+                "          # secret-scan-guard-start\n          set -euo pipefail\n",
+                "          # secret-scan-guard-start\n",
+                1,
+            ),
+            "remove set -euo pipefail from the guard",
+        )
+
+    def test_unit_test_step_stays_before_the_scans(self) -> None:
+        _assert_unit_test_step(self.text)
+        block = _named_step_block(self.text, UNIT_STEP)
+        removed = self.text.replace(block + "\n", "", 1)
+        self.assertNotEqual(removed, self.text)
+        _reject(self, _assert_unit_test_step, removed, "remove the unit-test step")
+        moved = removed.rstrip() + "\n" + block + "\n"
+        _reject(self, _assert_unit_test_step, moved, "move the unit-test step after the scans")
+        _reject(
+            self,
+            _assert_unit_test_step,
+            self.text.replace(UNIT_CMD + " -v", UNIT_CMD + " -v || true", 1),
+            "|| true on the unit-test step",
+        )
+        _reject(
+            self,
+            _assert_unit_test_step,
+            self.text.replace(UNIT_CMD + " -v", UNIT_CMD + " -v || :", 1),
+            "|| : on the unit-test step",
+        )
+        _reject(
+            self,
+            _assert_unit_test_step,
+            self.text.replace(UNIT_CMD + " -v", "set +e; " + UNIT_CMD + " -v", 1),
+            "set +e on the unit-test step",
+        )
+        _reject(
+            self,
+            _assert_unit_test_step,
+            self.text.replace(
+                "      - name: Pack tooling unit tests\n",
+                "      - name: Pack tooling unit tests\n        continue-on-error: true\n",
+                1,
+            ),
+            "continue-on-error on the unit-test step",
+        )
 
 
 if __name__ == "__main__":
