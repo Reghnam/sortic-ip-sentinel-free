@@ -29,6 +29,17 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Zip scan
         run: python3 scripts/build-packs.py
+      - name: Committed config guard
+        run: |
+          # secret-scan-guard-start
+          set -euo pipefail
+          found="$(find . -name .git -prune -o \( -type f -o -type l \) \( -name '.gitleaksignore' -o -name '.gitleaks.toml' \) -print -quit)"
+          if [ -n "${found}" ]; then
+            printf '%s\n' "secret scan refused a committed config or ignore file: ${found}"
+            exit 1
+          fi
+          printf '%s\n' "secret scan config guard: no committed config or ignore file"
+          # secret-scan-guard-end
       - name: Secret scan
         env:
           EVENT_NAME: ${{ github.event_name }}
