@@ -33,7 +33,10 @@ jobs:
         run: |
           # secret-scan-guard-start
           set -euo pipefail
-          found="$(find . -name .git -prune -o \( -type f -o -type l \) \( -name '.gitleaksignore' -o -name '.gitleaks.toml' \) -print -quit)"
+          found_file="$(mktemp)"
+          trap 'rm -f "${found_file}"' EXIT
+          find . -name .git -prune -o -name '.gitleaks*' -print -quit >"${found_file}"
+          found="$(cat "${found_file}")"
           if [ -n "${found}" ]; then
             printf '%s\n' "secret scan refused a committed config or ignore file: ${found}"
             exit 1
