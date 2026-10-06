@@ -24,6 +24,11 @@ ARCHIVE_SHA256 = "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470
 ZERO_SHA = "0000000000000000000000000000000000000000"
 GUARD_STEP = "Committed config guard"
 SCAN_STEP = "Secret scan"
+TRAILER_STEP = "Commit trailer check"
+TRAILER_SKIP = "trailer check range skipped"
+TRAILER_FAIL = "commit message has a co-author trailer"
+TRAILER_EVENT_FAIL = "trailer check event is not a pull request or push"
+TRAILER_PR_RANGE_FAIL = "pull request range is not two commits"
 UNIT_STEP = "Pack tooling unit tests"
 UNIT_CMD = "python3 -m unittest discover -s tests"
 GUARD_NAMES = (
@@ -314,6 +319,7 @@ def _unit_step(text: str) -> tuple[str, str, int]:
 def _watched_scripts(text: str) -> list[tuple[str, str]]:
     return [
         ("committed config guard", _named_step_script(text, GUARD_STEP)),
+        ("commit trailer check", _named_step_script(text, TRAILER_STEP)),
         ("secret scan", _named_step_script(text, SCAN_STEP)),
         ("unit test", _unit_step(text)[1]),
     ]
@@ -817,6 +823,173 @@ def _reject(case: unittest.TestCase, check, mutated: str, label: str) -> None:
         except AssertionError:
             return
         raise AssertionError(f"bad edit was accepted: {label}")
+
+
+def _assert_trailer_step(text: str) -> None:
+    header = f"- name: {TRAILER_STEP}"
+    if text.count(header) != 1:
+        raise AssertionError("commit trailer check must exist once")
+    guard_at = _step_index(text, GUARD_STEP)
+    trailer_at = _step_index(text, TRAILER_STEP)
+    scan_at = _step_index(text, SCAN_STEP)
+    if not (guard_at < trailer_at < scan_at):
+        raise AssertionError("commit trailer check must sit between the guard and the secret scan")
+    block = _named_step_block(text, TRAILER_STEP)
+    script = _named_step_script(text, TRAILER_STEP)
+    if "set -euo pipefail" not in script:
+        raise AssertionError("set -euo pipefail was removed from the commit trailer check")
+    for key in (
+        "EVENT_NAME: ${{ github.event_name }}",
+        "BASE_SHA: ${{ github.event.pull_request.base.sha }}",
+        "HEAD_SHA: ${{ github.event.pull_request.head.sha }}",
+        "BEFORE_SHA: ${{ github.event.before }}",
+        "AFTER_SHA: ${{ github.event.after }}",
+    ):
+        if key not in block:
+            raise AssertionError("commit trailer check must read shas through env: " + key.split(":", 1)[0])
+    if "env:" not in _step_mapping_keys(block):
+        raise AssertionError("commit trailer check is missing env:")
+    if _INLINE_EVENT.search(script):
+        raise AssertionError("commit trailer check inlines an event expression")
+    for name in ("${EVENT_NAME}", "${BASE_SHA}", "${HEAD_SHA}", "${BEFORE_SHA}", "${AFTER_SHA}"):
+        if name not in script:
+            raise AssertionError("commit trailer check script does not read " + name)
+    if "git rev-list" not in script:
+        raise AssertionError("commit trailer check must list the range with git rev-list")
+    if "--no-merges" in script:
+        raise AssertionError("commit trailer check dropped merge commits")
+    if "git show -s --format=%B" not in script:
+        raise AssertionError("commit trailer check must read the full message")
+    if TRAILER_SKIP not in script:
+        raise AssertionError("a push with an empty before must print the skip line")
+    if TRAILER_FAIL not in script:
+        raise AssertionError("commit trailer check must print a fixed failure message")
+    if "scripts/" in script or "python" in script:
+        raise AssertionError("commit trailer check must stay inline")
+    if _OR_TRUE.search(script) or _OR_COLON.search(script) or "set +e" in script:
+        raise AssertionError("the commit trailer check exit was softened")
+    if "continue-on-error" in block:
+        raise AssertionError("continue-on-error was added to the commit trailer check")
+    for key in _step_mapping_keys(block):
+        if key.startswith("if:"):
+            raise AssertionError("if: was added to the commit trailer check")
+
+
+def _trailer_stem() -> str:
+    return "co-" + "authored-by"
+
+
+def _trailer_key(kind: str) -> str:
+    stem = _trailer_stem()
+    mixed = stem[0].upper() + stem[1:]
+    if kind == "lower":
+        return stem
+    if kind == "upper":
+        return stem.upper()
+    if kind == "mixed":
+        return mixed
+    if kind == "spaced":
+        return "  " + mixed
+    raise AssertionError(kind)
+
+
+def _placeholder_address() -> str:
+    return "placeholder" + "@" + "example.invalid"
+
+
+def _trailer_line(kind: str) -> str:
+    return _trailer_key(kind) + ": " + "Person <" + _placeholder_address() + ">"
+
+
+def _sentence_line() -> str:
+    return "The draft was " + "co-" + "authored during review for " + _placeholder_address() + "."
+
+
+def _midline_note() -> str:
+    return "See the note " + _trailer_line("lower")
+
+
+def _commit_message(title: str, *lines: str) -> str:
+    return "\n".join([title, "", *lines]) + "\n"
+
+
+def _init_repo(root: Path) -> None:
+    _git(root, "init", "-q", "-b", "main")
+    _git(root, "config", "user.email", "scan@localhost")
+    _git(root, "config", "user.name", "scan")
+
+
+def _commit(root: Path, name: str, text: str, message: str) -> str:
+    path = root / name
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+    _git(root, "add", name)
+    msg = root / ".git" / "COMMIT_EDITMSG_TEST"
+    msg.write_text(message if message.endswith("\n") else message + "\n", encoding="utf-8")
+    _git(root, "commit", "-q", "-F", str(msg))
+    return subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
+
+
+def _short_sha(root: Path, sha: str) -> str:
+    return subprocess.check_output(
+        ["git", "-C", str(root), "rev-parse", "--short", sha],
+        text=True,
+    ).strip()
+
+
+def _fail_line(root: Path, sha: str) -> str:
+    return _short_sha(root, sha) + " " + TRAILER_FAIL
+
+
+def _trailer_env(**overrides: str) -> dict[str, str]:
+    env = os.environ.copy()
+    for key in ("EVENT_NAME", "BASE_SHA", "HEAD_SHA", "BEFORE_SHA", "AFTER_SHA"):
+        env.pop(key, None)
+    env.update(overrides)
+    return env
+
+
+def _pr_env(base: str, head: str) -> dict[str, str]:
+    return _trailer_env(
+        EVENT_NAME="pull_request",
+        BASE_SHA=base,
+        HEAD_SHA=head,
+        BEFORE_SHA="",
+        AFTER_SHA="",
+    )
+
+
+def _push_env(before: str, after: str) -> dict[str, str]:
+    return _trailer_env(
+        EVENT_NAME="push",
+        BASE_SHA="",
+        HEAD_SHA="",
+        BEFORE_SHA=before,
+        AFTER_SHA=after,
+    )
+
+
+def _run_trailer(script: str, root: Path, env: dict[str, str]) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        ["bash", "-c", script],
+        cwd=root,
+        env=env,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+
+def _assert_hides_trailer(case: unittest.TestCase, result: subprocess.CompletedProcess[str]) -> None:
+    blob = result.stdout + result.stderr
+    case.assertFalse(
+        _placeholder_address() in blob,
+        "step output contained the placeholder address",
+    )
+    case.assertFalse(
+        _trailer_stem() in blob.lower(),
+        "step output contained the trailer key",
+    )
 
 
 def _place(root: Path, relative: str, kind: str) -> None:
@@ -1570,7 +1743,13 @@ class HygieneWorkflowTests(unittest.TestCase):
         _reject(
             self,
             _assert_range_assignments,
-            self.text.replace('range="${BASE_SHA}..${HEAD_SHA}"', 'range=""', 1),
+            self.text.replace(
+                '{ echo "pull request range is not two commits"; exit 1; }\n'
+                '            range="${BASE_SHA}..${HEAD_SHA}"',
+                '{ echo "pull request range is not two commits"; exit 1; }\n'
+                '            range=""',
+                1,
+            ),
             "clear the pull request range",
         )
 
@@ -1730,6 +1909,287 @@ class HygieneWorkflowTests(unittest.TestCase):
             check=False,
         )
         self.assertNotEqual(refused.returncode, 0)
+
+    def test_commit_trailer_check_sits_between_the_guard_and_the_secret_scan(self) -> None:
+        _assert_trailer_step(self.text)
+        block = _named_step_block(self.text, TRAILER_STEP)
+        script = _named_step_script(self.text, TRAILER_STEP)
+        removed = self.text.replace(block + "\n", "", 1)
+        self.assertNotEqual(removed, self.text)
+        self.assertNotIn(f"- name: {TRAILER_STEP}", removed)
+        _reject(self, _assert_trailer_step, removed, "remove the commit trailer check")
+        scan_block = _named_step_block(self.text, SCAN_STEP)
+        moved_after = removed.replace(scan_block, scan_block + "\n" + block, 1)
+        self.assertNotEqual(moved_after, self.text)
+        _reject(self, _assert_trailer_step, moved_after, "move the commit trailer check after the secret scan")
+        guard_block = _named_step_block(removed, GUARD_STEP)
+        moved_before = removed.replace(guard_block, block + "\n" + guard_block, 1)
+        _reject(self, _assert_trailer_step, moved_before, "move the commit trailer check before the guard")
+        _reject(
+            self,
+            _assert_trailer_step,
+            self.text.replace(
+                'printf \'%s\\n\' "' + TRAILER_SKIP + '"',
+                'printf \'%s\\n\' "' + TRAILER_SKIP + '" || true',
+                1,
+            ),
+            "|| true in the commit trailer check",
+        )
+        _reject(
+            self,
+            _assert_trailer_step,
+            self.text.replace(
+                'printf \'%s\\n\' "' + TRAILER_SKIP + '"',
+                'printf \'%s\\n\' "' + TRAILER_SKIP + '" || :',
+                1,
+            ),
+            "|| : in the commit trailer check",
+        )
+        softened = self.text.replace(
+            "          set -euo pipefail\n          is_sha() {",
+            "          set +e\n          set -euo pipefail\n          is_sha() {",
+            1,
+        )
+        self.assertNotEqual(softened, self.text)
+        _reject(self, _assert_trailer_step, softened, "set +e in the commit trailer check")
+        _reject(
+            self,
+            _assert_trailer_step,
+            self.text.replace(
+                f"      - name: {TRAILER_STEP}\n",
+                f"      - name: {TRAILER_STEP}\n        continue-on-error: true\n",
+                1,
+            ),
+            "continue-on-error on the commit trailer check",
+        )
+        _reject(
+            self,
+            _assert_trailer_step,
+            self.text.replace(
+                f"      - name: {TRAILER_STEP}\n",
+                f"      - name: {TRAILER_STEP}\n        if: false\n",
+                1,
+            ),
+            "if: on the commit trailer check",
+        )
+        self.assertNotIn("|| true", script)
+        self.assertNotIn("continue-on-error", block)
+
+    def _trailer_script(self) -> str:
+        return _named_step_script(self.text, TRAILER_STEP)
+
+    def test_trailer_check_clean_range_passes(self) -> None:
+        script = self._trailer_script()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            base = _commit(root, "base.txt", "base\n", _commit_message("base"))
+            head = _commit(root, "notes.txt", "notes\n", _commit_message("Update the notes"))
+            cases = {
+                "pull_request": _pr_env(base, head),
+                "push": _push_env(base, head),
+            }
+            for label, env in cases.items():
+                with self.subTest(event=label):
+                    result = _run_trailer(script, root, env)
+                    self.assertEqual(result.returncode, 0, result.stderr)
+                    self.assertEqual(result.stdout, "")
+                    self.assertEqual(result.stderr, "")
+                    _assert_hides_trailer(self, result)
+
+    def test_trailer_check_one_trailer_fails(self) -> None:
+        script = self._trailer_script()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            base = _commit(root, "base.txt", "base\n", _commit_message("base"))
+            bad = _commit(
+                root,
+                "notes.txt",
+                "notes\n",
+                _commit_message("Add a note", _trailer_line("mixed")),
+            )
+            subject = subprocess.check_output(
+                ["git", "-C", str(root), "show", "-s", "--format=%s", bad],
+                text=True,
+            )
+            self.assertFalse(_trailer_stem() in subject.lower())
+            cases = {
+                "pull_request": _pr_env(base, bad),
+                "push": _push_env(base, bad),
+            }
+            for label, env in cases.items():
+                with self.subTest(event=label):
+                    result = _run_trailer(script, root, env)
+                    self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+                    self.assertEqual(result.stdout.splitlines(), [_fail_line(root, bad)])
+                    self.assertEqual(result.stderr, "")
+                    _assert_hides_trailer(self, result)
+
+    def test_trailer_check_case_and_spacing_fail(self) -> None:
+        script = self._trailer_script()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            base = _commit(root, "base.txt", "base\n", _commit_message("base"))
+            shas = []
+            for index, kind in enumerate(("lower", "upper", "spaced")):
+                shas.append(
+                    _commit(
+                        root,
+                        f"note-{index}.txt",
+                        f"{kind}\n",
+                        _commit_message(f"Add note {index}", _trailer_line(kind)),
+                    )
+                )
+            head = shas[-1]
+            result = _run_trailer(script, root, _pr_env(base, head))
+            listed = subprocess.check_output(
+                ["git", "-C", str(root), "rev-list", f"{base}..{head}"],
+                text=True,
+            ).split()
+            self.assertEqual(set(listed), set(shas))
+            self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+            self.assertEqual(result.stdout.splitlines(), [_fail_line(root, sha) for sha in listed])
+            self.assertEqual(result.stderr, "")
+            _assert_hides_trailer(self, result)
+
+    def test_trailer_check_second_of_three_fails(self) -> None:
+        script = self._trailer_script()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            base = _commit(root, "base.txt", "base\n", _commit_message("base"))
+            first = _commit(root, "one.txt", "one\n", _commit_message("First note"))
+            second = _commit(
+                root,
+                "two.txt",
+                "two\n",
+                _commit_message("Second note", _trailer_line("mixed")),
+            )
+            third = _commit(root, "three.txt", "three\n", _commit_message("Third note"))
+            result = _run_trailer(script, root, _pr_env(base, third))
+            self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+            self.assertEqual(result.stdout.splitlines(), [_fail_line(root, second)])
+            self.assertNotIn(_short_sha(root, first), result.stdout)
+            self.assertNotIn(_short_sha(root, third), result.stdout)
+            self.assertEqual(result.stderr, "")
+            _assert_hides_trailer(self, result)
+
+    def test_trailer_check_merge_commit_fails(self) -> None:
+        script = self._trailer_script()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            base = _commit(root, "base.txt", "base\n", _commit_message("base"))
+            _git(root, "checkout", "-q", "-b", "side")
+            side = _commit(root, "side.txt", "side\n", _commit_message("Side note"))
+            _git(root, "checkout", "-q", "main")
+            _git(root, "merge", "--no-ff", "--no-commit", "side")
+            merge = _commit(
+                root,
+                "merge.txt",
+                "merge\n",
+                _commit_message("Merge the side branch", _trailer_line("mixed")),
+            )
+            parents = subprocess.check_output(
+                ["git", "-C", str(root), "rev-parse", f"{merge}^1", f"{merge}^2"],
+                text=True,
+            ).split()
+            self.assertEqual(len(parents), 2)
+            self.assertIn(side, parents)
+            result = _run_trailer(script, root, _pr_env(base, merge))
+            self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+            self.assertEqual(result.stdout.splitlines(), [_fail_line(root, merge)])
+            self.assertNotIn(_short_sha(root, side), result.stdout)
+            self.assertEqual(result.stderr, "")
+            _assert_hides_trailer(self, result)
+
+    def test_trailer_check_words_inside_a_sentence_pass(self) -> None:
+        script = self._trailer_script()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            base = _commit(root, "base.txt", "base\n", _commit_message("base"))
+            head = _commit(
+                root,
+                "notes.txt",
+                "notes\n",
+                _commit_message("Update the notes", _sentence_line(), _midline_note()),
+            )
+            result = _run_trailer(script, root, _pr_env(base, head))
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertEqual(result.stdout, "")
+            self.assertEqual(result.stderr, "")
+            _assert_hides_trailer(self, result)
+
+    def test_trailer_check_push_with_zero_before_skips(self) -> None:
+        script = self._trailer_script()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            _commit(root, "base.txt", "base\n", _commit_message("base"))
+            head = _commit(
+                root,
+                "notes.txt",
+                "notes\n",
+                _commit_message("Add a note", _trailer_line("mixed")),
+            )
+            cases = {
+                "zero": _push_env(ZERO_SHA, head),
+                "empty": _trailer_env(EVENT_NAME="push", AFTER_SHA=head, BEFORE_SHA=""),
+                "missing": _trailer_env(EVENT_NAME="push", AFTER_SHA=head),
+            }
+            for label, env in cases.items():
+                with self.subTest(before=label):
+                    self.assertNotIn("BEFORE_SHA", env) if label == "missing" else self.assertIn("BEFORE_SHA", env)
+                    result = _run_trailer(script, root, env)
+                    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                    self.assertEqual(result.stdout.splitlines(), [TRAILER_SKIP])
+                    self.assertNotIn(TRAILER_FAIL, result.stdout)
+                    self.assertEqual(result.stderr, "")
+                    _assert_hides_trailer(self, result)
+
+    def test_trailer_check_unknown_event_fails(self) -> None:
+        script = self._trailer_script()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            _commit(root, "base.txt", "base\n", _commit_message("base"))
+            _commit(
+                root,
+                "notes.txt",
+                "notes\n",
+                _commit_message("Add a note", _trailer_line("upper")),
+            )
+            result = _run_trailer(script, root, _trailer_env(EVENT_NAME="schedule"))
+            self.assertNotEqual(result.returncode, 0)
+            self.assertEqual(result.stdout.splitlines(), [TRAILER_EVENT_FAIL])
+            self.assertEqual(result.stderr, "")
+            _assert_hides_trailer(self, result)
+
+    def test_trailer_check_non_sha_base_fails(self) -> None:
+        script = self._trailer_script()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            _commit(root, "base.txt", "base\n", _commit_message("base"))
+            head = _commit(
+                root,
+                "notes.txt",
+                "notes\n",
+                _commit_message("Add a note", _trailer_line("lower")),
+            )
+            result = _run_trailer(
+                script,
+                root,
+                _pr_env("not-a-sha", head),
+            )
+            self.assertNotEqual(result.returncode, 0)
+            self.assertEqual(result.stdout.splitlines(), [TRAILER_PR_RANGE_FAIL])
+            self.assertNotIn(TRAILER_FAIL, result.stdout)
+            self.assertEqual(result.stderr, "")
+            _assert_hides_trailer(self, result)
 
 
 if __name__ == "__main__":
