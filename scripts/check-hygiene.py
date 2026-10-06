@@ -3,9 +3,18 @@
 
 from __future__ import annotations
 
+import argparse
+import os
 import re
 import sys
 from pathlib import Path
+
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+
+import claim_rules
+import zipscan
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = "0.5.51-free"
@@ -45,7 +54,25 @@ def body_after_frontmatter(skill: Path) -> str:
     return text.split("---", 2)[2]
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Maintainer checks for the free IP Sentinel packs.")
+    parser.add_argument("--freshness", action="store_true")
+    parser.add_argument("--window", default=None)
+    parser.add_argument("--today", default=None)
+    parser.add_argument("--extra-patterns", default=None)
+    args = parser.parse_args(argv)
+    if args.freshness:
+        return claim_rules.run_freshness(
+            root=ROOT,
+            window=args.window,
+            today=args.today,
+            extra_patterns=args.extra_patterns,
+            env_patterns=os.environ.get("IPS_EXTRA_PATTERNS_FILE"),
+        )
+    return _hygiene(args)
+
+
+def _hygiene(args: argparse.Namespace) -> int:
     errors: list[str] = []
     root_skill = ROOT / "SKILL.md"
     root_body = body_after_frontmatter(root_skill)
@@ -310,6 +337,44 @@ def main() -> int:
     edition = (ROOT / "references" / "headless-hygiene-package.md").read_text(encoding="utf-8")
     if f'"edition": "{VERSION}"' not in edition:
         errors.append("headless-hygiene-package edition not bumped")
+
+    loaded = claim_rules.load_extra_patterns(
+        args.extra_patterns,
+        os.environ.get("IPS_EXTRA_PATTERNS_FILE"),
+        ROOT,
+    )
+    errors.extend(loaded.errors)
+    today, _today_error = claim_rules.parse_today(None)
+    if today is None:
+        errors.append("could not read today's date")
+    else:
+        for message in claim_rules.validate_window_file(
+            ROOT / "references" / "sme-fund-window.json",
+            today,
+            loaded.patterns,
+            display="references/sme-fund-window.json",
+        ):
+            if message not in errors:
+                errors.append(message)
+    claim = claim_rules.scan_claims(ROOT, loaded.patterns)
+    for message in claim.errors:
+        if message not in errors:
+            errors.append(message)
+    corpus_errors, corpus_warnings = claim_rules.scan_corpus(ROOT, zipscan.CORPUS_RE)
+    for message in corpus_errors:
+        if message not in errors:
+            errors.append(message)
+
+    for warning in claim.warnings:
+        print(warning)
+    if claim.allow_count:
+        print(f"claim allow-list warnings: {claim.allow_count}")
+    for warning in corpus_warnings:
+        print(warning)
+    if corpus_warnings:
+        print(f"corpus legacy warnings: {len(corpus_warnings)}")
+    if loaded.skipped:
+        print("name patterns: skipped (no external file)")
 
     if errors:
         print("hygiene check FAILED")
