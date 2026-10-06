@@ -39,8 +39,8 @@ Use this structure for decks or overviews (modeled on proven sanitized examples)
 **Last slide (always):** Full disclaimer (see below).
 
 **Tips from cases:**
-- POLYREC example: Show visible sequences/setpoints only in demo mode; hold exact values until NDA + provisional coverage confirmed.
-- Nidara-style: Explicit "what can go in deck/private repo now vs. wait for NDA".
+- Example A (chemical process + control software + pilot): Show visible sequences/setpoints only in demo mode; hold exact values until NDA + provisional coverage confirmed.
+- Example B (investor-demo overview): Explicit "what can go in deck/private repo now vs. wait for NDA".
 
 ## 3. Pre-Demo / Pre-Pitch Checklist (7-10 days out)
 - [ ] Confirm inventorship / contribution log completed (see separate template).
@@ -81,7 +81,7 @@ Use this structure for decks or overviews (modeled on proven sanitized examples)
 
 **Disclaimer:** SorticAI IP Sentinel (free edition) v0.5-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles. *Free hygiene only. Primary task wins.*
 - USPTO: 2025 AI inventorship and eligibility guidance summaries.
-- Real SorticAI cases (internal): POLYREC (chemical process + control software + pilot), Nidara investor-demo sanitized technical overview.
+- Real SorticAI cases (internal): Example A (chemical process + control software + pilot), Example B (investor-demo overview).
 
 **This is a practical hygiene template for builders, not legal advice. Adapt to your facts and get professional counsel before real exposure.**
 
