@@ -2,8 +2,8 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.49-free**).
-- suppressOutput is not a mute; a ceiling of 0 is not a stop; read-only still writes ~/.grok/ (v0.5.49-free)
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.50-free**).
+- A wider hook path is not a boundary; a five-second grace is not a wipe; a workshop promo is not a publish (v0.5.50-free)
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
