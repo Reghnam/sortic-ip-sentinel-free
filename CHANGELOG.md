@@ -2,16 +2,87 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
-## [0.5.49-free] — 2026-10-04
+## [0.5.51-free] — 2026-10-06
 
-Pointer data and a readiness intake sheet. The skill prepares materials only. It does not apply, submit, pay, file, or give a verdict. The verified date is unset. A human sets it after reading both live pages. Every EUIPO date and the call text GR/001/26 are UNVERIFIED. No refund line. No percent. No amount. No names. Evals stay 189.
+Pointer data and a readiness intake sheet, on the current edition. The skill prepares materials only. It does not apply, submit, pay, file, or give a verdict. The verified date is unset, and the window note starts unverified. Intake item 4 keeps only names already public or filed. Intake item 7 is categories only. The publish gate names the owner. Evals stay 195. No refund line. No percent. No amount. No names.
+
+## [0.5.50-free] — 2026-10-06
+
+Absorbed this Grok Build turn's live mailbox (after the 5 Oct v0.5.49 push: one workshop promo; no skill-feedback mail; no newer grok-export) plus vendor recrawl **6 Oct** on top of origin **v0.5.49-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No deal status. No customer story. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Recrawl 2026-10-06 **learn.chatgpt.com/docs/hooks**. `developers.openai.com/codex/hooks` redirects there. No page date. Spill, compact, and block stand. This skill still ships **no hooks**.
+- **Still:** `suppressOutput` is parsed but not implemented. Parsed is not a mute and not a wipe.
+- **Superseded:** the 5 Oct line that PreToolUse only intercepts Bash. The page no longer states that script-on-disk workaround. Do not teach it as the current boundary.
+- **New:** PreToolUse and PostToolUse also see unified exec (match Bash), apply_patch (Edit or Write), MCP, and other local function tools. Hosted tools such as WebSearch are not on that path. `write_stdin` does not re-run PreToolUse. Some paths opt out. The page says treat tool hooks as a guardrail, not a complete enforcement boundary.
+- **New:** unsupported PreToolUse fields fail the hook and the tool continues. Fail-open is not a hold. MCP errors, missing servers, unavailable tools, a timeout, or a malformed response do not block.
+- **New:** SubagentStart `continue:false` does not stop the subagent. `updatedInput` only with allow. A rewrite is not a hold. PermissionRequest `updatedInput`, `updatedPermissions`, and `interrupt` fail closed. Fail-closed is not a vault. Non-managed hooks must be trusted before they run. Untrusted hooks do not run. Skipping is not a private lane.
+- Eval **190** expected text corrected to this page. Evals **193**.
+
+### Anthropic (second)
+
+- Permission-modes page was **not** recrawled this tip. The 5 Oct start table is not a new grant.
+- **Still (headless page):** the background wait ends after 10 minutes of continuous idle, then stops and drops the partial. `CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS=0` waits with no ceiling. A ceiling of 0 is not a stop. A dropped partial is not a wipe.
+- **New:** a background Bash shell is terminated about five seconds after the result and stdin close. That grace is not a wipe of output already delivered. A background subagent or workflow keeps `-p` open because its result is part of the final output.
+- **New:** a Monitor watch waits until the watch times out or the ten-minute cap, whichever comes first. While it waits, Claude keeps responding. A watch report is a paste. Default watch timeout is five minutes.
+- **New:** SIGTERM exits 143, leaves the turn unfinished, and records no result. No result is not a wipe of what already streamed. SessionEnd hooks still run. Resume leaves the interrupted turn unless `CLAUDE_CODE_RESUME_INTERRUPTED_TURN=1`, which continues it — a next-paste. A deleted working directory does not stop the session.
+- Evals **194**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Permissions and sandbox pages fetched 6 Oct. Footer is **21 Jul 2026** again. A returned footer is not a new policy. The cycle is **NO_DELTA**. Under always-approve, `rm` and `git push` still run unless a deny is set. `read-only` still writes `~/.grok/`. Sandbox stays off by default.
+- Headless feature URL stays **404**. No newer grok-export than W38.
+- **Mailbox, unnamed:** a workshop promo is not a publish and not a skill update. A Bot that uses your apps, starts work on its own, passes work to another Bot, or delegates code is a paste. A check-in is not a hold. Do not copy the invite, a customer story, or a percent.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **195**.
 
 ### Shared
 
-- A voucher or SME Fund question without protect language is a short pointer. The readiness intake sheet follows when it is asked by name, or when protect language arrives with that intent, after the existing stamp.
-- If the verified date is unset or older than 14 days, say the status may be out of date and open the live page first. Do not print a confident closed.
-- Only a provider listed by the national office can deliver the official IP Scan. The sheet is not that report, not a filing, and not legal advice.
-- Apply, file, submit, pay, or a request to do the step for the user stays declined. Network or port-scan wording stays silent.
+- **The 5 Oct Bash-only line is superseded.** Wider coverage is still not a boundary. Fail-open is not a hold. suppressOutput is still not a mute.
+- **A five-second grace is not a wipe.** A watch report is a paste. No recorded result is not a wipe. A ceiling of 0 is still not a stop.
+- **A returned 21 Jul footer is not a new policy.** A workshop promo is not a publish. A check-in is not a hold. No percent. No customer story.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **195**. HITL F1–F28 + T1–T31 required on every claimed stack. This tip adds T32 (wider path + grace + watch + promo).
+- Still free-only. Still not legal advice. No secrets.
+
+## [0.5.49-free] — 2026-10-05
+
+Absorbed this Grok Build turn's live mailbox (after the 4 Oct v0.5.48 push: a weekly backup, a chat-while-away mention, and a CLI update note; no skill-feedback mail; no newer grok-export) plus one older topic-researcher tail (not an export) plus vendor recrawl **5 Oct** on top of origin **v0.5.48-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A bot transcript tail is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No deal status.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Recrawl 2026-10-05 **developers.openai.com/codex/hooks** (same document family as learn.chatgpt.com/docs/hooks). No page date. Spill, compact, block, and the wrong-event limit stand. This skill still ships **no hooks**.
+- **New:** `suppressOutput` is parsed but not implemented. Parsed is not a mute and not a wipe.
+- **New:** PreToolUse only intercepts Bash. Writing a script to disk and running it with Bash walks around that guard. A Bash-only guard is not a boundary.
+- Evals **190**.
+
+### Anthropic (second)
+
+- Recrawl **code.claude.com/docs/en/permission-modes** (fetched 5 Oct 2026). **NO_DELTA** on the start table. Flag-fetching `claude -p` still starts in `default`. Flag-off sessions still start in auto on v2.1.285+. That auto is still not owner approval.
+- **New (headless page):** the background wait ends after 10 minutes of continuous idle, then stops and drops the partial. `CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS=0` waits with no ceiling. A ceiling of 0 is not a stop. A dropped partial is not a wipe.
+- Evals **191**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Permissions page fetched 5 Oct. Footer is **21 Jul 2026** again. A returned footer is not a new policy. The Shift+Tab cycle is **NO_DELTA**. Ask remains the documented default.
+- **New:** under always-approve, `rm` and `git push` run unless a deny is set. A remembered always-allow still prompts. An explicit allow still auto-approves.
+- **New (sandbox, footer 21 Jul 2026):** off by default stands and is not a vault. `read-only` still writes `~/.grok/` and temp. `strict` still writes the working tree, `~/.grok/`, and temp. `~/.grok/` stays writable so the session persists. That is a next-paste. Child-network block is Linux-only (no-op on macOS). In-process model and web tools are not blocked. Built-ins do not seal `~/.ssh`. A managed pin can override the CLI sandbox flag. A monitor line is a paste.
+- Headless feature URL stays **404**. No newer grok-export than W38. A topic-researcher tail is not an export.
+- **Mailbox, unnamed:** a weekly backup is not a publish. An unsent deck stays unsent. A scope-locked pre-read is not a filing. Moving corpus ownership is not a bundle and not a grant. Empty artifacts are not a transcript. Pointers outside the tree are not a move. A chat-while-away that names a sale, a raise, or an IPO is a paste. Do not copy counterparties, amounts, or deal status. A CLI update note is not a verified model id.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **192**.
+
+### Shared
+
+- **suppressOutput is not a mute.** A Bash-only guard is not a boundary.
+- **A ceiling of 0 is not a stop.** A dropped partial is not a wipe. The 5 Oct start table is NO_DELTA.
+- **read-only still writes ~/.grok/.** Under always-approve, git push runs unless denied. A monitor line is a paste. A returned 21 Jul footer is not a new policy.
+- **An unsent deck stays unsent.** A sale, raise, or IPO aside is a paste. No amounts. No counterparties. A CLI note is not a model id.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **192**. HITL F1–F28 + T1–T30 required on every claimed stack. This tip adds T31 (mute + ceiling 0 + sandbox write + unsent deck).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.48-free] — 2026-10-04
