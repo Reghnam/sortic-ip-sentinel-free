@@ -14,6 +14,7 @@ if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
 import claim_rules
+import headless_pointer
 import zipscan
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -338,9 +339,16 @@ def _hygiene(args: argparse.Namespace) -> int:
                     if banned in lower:
                         errors.append(f"{rel.name} contains secret-shaped token: {banned}")
 
-    edition = (ROOT / "references" / "headless-hygiene-package.md").read_text(encoding="utf-8")
-    if f'"edition": "{VERSION}"' not in edition:
+    headless = (ROOT / "references" / "headless-hygiene-package.md").read_text(encoding="utf-8")
+    if f'"edition": "{VERSION}"' not in headless:
         errors.append("headless-hygiene-package edition not bumped")
+    window_data, window_parse_error = claim_rules.parse_window_text(
+        (ROOT / "references" / "sme-fund-window.json").read_text(encoding="utf-8")
+    )
+    if window_parse_error or not isinstance(window_data, dict):
+        errors.append("headless pointer could not read the window file")
+        window_data = None
+    errors.extend(headless_pointer.contract_errors(headless, window_data))
 
     loaded = claim_rules.load_extra_patterns(
         args.extra_patterns,
