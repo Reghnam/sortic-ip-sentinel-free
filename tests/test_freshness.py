@@ -21,7 +21,7 @@ TODAY = date(2026, 10, 4)
 WINDOW = ROOT / "references" / "sme-fund-window.json"
 OK_LINE = (
     "hygiene check OK: 0.5.49-free; description 1018 chars; "
-    "body 501 lines; 18 references; 189 evals"
+    "body 501 lines; 18 references; 199 evals"
 )
 
 
