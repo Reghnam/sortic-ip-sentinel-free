@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import importlib.util
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -117,13 +118,76 @@ class ZipScanTests(unittest.TestCase):
             result = zipscan.scan_zip(path, legacy_paths=set())
         blob = "\n".join(result.failures)
         self.assertIn("local-path:", blob)
-        self.assertIn("company-email:", blob)
+        self.assertIn("email:", blob)
+        self.assertNotIn("ops@example.test", blob)
 
-    def test_public_mailbox_is_not_a_company_email(self) -> None:
+    def test_public_mailbox_is_still_an_email(self) -> None:
         with self._tmp() as tmp:
             path = _zip(tmp, {"SKILL.md": b"write ops@gmail.com\n"})
             result = zipscan.scan_zip(path, legacy_paths=set())
-        self.assertTrue(result.ok)
+        self.assertFalse(result.ok)
+        self.assertTrue(any(line.startswith("email:") for line in result.failures))
+
+    def test_noreply_addresses_are_allowed(self) -> None:
+        bodies = (
+            "write noreply@example.com\n",
+            "write no-reply@example.com\n",
+            "write noreply+tag@example.com\n",
+            "write 12345+login@users.noreply.github.com\n",
+        )
+        for body in bodies:
+            with self._tmp() as tmp:
+                path = _zip(tmp, {"SKILL.md": body.encode()})
+                result = zipscan.scan_zip(path, legacy_paths=set())
+            self.assertTrue(result.ok, (body, result.failures))
+
+    def test_chat_share_and_cloud_drive_links_are_caught(self) -> None:
+        samples = {
+            "references/a.md": "https://" + "grok" + ".com/c/" + "abc",
+            "references/b.md": "https://" + "chatgpt" + ".com/share/" + "abc",
+            "references/c.md": "https://" + "claude" + ".ai/share/" + "abc",
+            "references/d.md": "https://" + "drive" + ".google" + ".com/file/abc",
+            "references/e.md": "https://" + "docs" + ".google" + ".com/document/d/abc",
+        }
+        with self._tmp() as tmp:
+            members = {"SKILL.md": b"ok\n"}
+            members.update({name: (text + "\n").encode() for name, text in samples.items()})
+            result = zipscan.scan_zip(_zip(tmp, members), legacy_paths=set())
+        blob = "\n".join(result.failures)
+        self.assertEqual(sum(line.startswith("chat-share:") for line in result.failures), 3)
+        self.assertEqual(sum(line.startswith("cloud-drive:") for line in result.failures), 2)
+        for text in samples.values():
+            self.assertNotIn(text, blob)
+        self.assertFalse(result.ok)
+
+    def test_ordinary_host_mentions_are_not_share_links(self) -> None:
+        body = "\n".join(
+            (
+                "claude" + ".ai sync",
+                "chatgpt" + ".com/pricing",
+                "grok" + ".com/careers",
+                "docs" + ".google" + ".com.example",
+                "not" + "drive" + ".google" + ".com",
+            )
+        )
+        with self._tmp() as tmp:
+            path = _zip(tmp, {"SKILL.md": body.encode()})
+            result = zipscan.scan_zip(path, legacy_paths=set())
+        self.assertTrue(result.ok, result.failures)
+
+    def test_extra_pattern_reports_number_and_member_only(self) -> None:
+        token = "zz-unique-marker-9f3a"
+        patterns = [re.compile("nope-zz-absent"), re.compile(token)]
+        with self._tmp() as tmp:
+            path = _zip(
+                tmp,
+                {"SKILL.md": b"ok\n", "references/note.md": (token + "\n").encode()},
+            )
+            result = zipscan.scan_zip(path, legacy_paths=set(), extra_patterns=patterns)
+        self.assertEqual(result.failures, ["extra-pattern #2: references/note.md"])
+        report = zipscan.format_report(result)
+        self.assertNotIn(token, report)
+        self.assertNotIn("nope-zz-absent", report)
 
     def test_legacy_corpus_mention_warns_and_new_file_fails(self) -> None:
         needle = _corpus_needle()

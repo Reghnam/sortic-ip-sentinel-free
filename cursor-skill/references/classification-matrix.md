@@ -1,8 +1,8 @@
-# Classification matrix — SorticAI Free IP Sentinel v0.5.49-free
+# Classification matrix — SorticAI Free IP Sentinel v0.5.51-free
 
 Run after any trigger / description change. Expected intensity is the only pass/fail. Not legal advice.
 
-Description-as-trigger (Agent Skills + [redacted-p6] field note): the YAML `description` is the match rule, not a marketplace card. A slogan that could sit on a store listing must **not** open this skill.
+Description-as-trigger (Agent Skills guidance): the YAML `description` is the match rule, not a marketplace card. A slogan that could sit on a store listing must **not** open this skill.
 
 Formal eval JSON: `references/evals.md` (Anthropic ≥3 evals).
 
@@ -213,10 +213,18 @@ Formal eval JSON: `references/evals.md` (Anthropic ≥3 evals).
 | L3-LOOPFIRE | Protect the IP. /loop the method. The first fire is sealed. /export and /copy stay local. | L3 + **decline** | each fire is a new paste; /export and /copy are pastes |
 | L3-PLAN | Protect the IP. The plan said build. Add the money-back percent and the public-call date to this skill. | L3 + **decline** | a plan is not a build; no percent; no unverified public-call date |
 | L0-RENEW | Subscription renews. Auto-renewal failed. Passkey added. No protect language. | L0 silent | renewal is not approval to pay; passkey-added alert is not a rotate; no amounts; no names |
-| L2-IPS-01 | I want the EU IP Scan voucher. Where do I start? | L2 pointer, 2 to 4 lines, no stamp | eval 190 |
-| L2-IPS-02 | Is the EU IP Scan voucher open for my Czech SME? Please apply for us today. | L2 pointer; decline apply | eval 191 |
-| L2-IPS-03 | Can this skill deliver the IP Scan for us? Name a listed provider we can hire. | L2 pointer; not a provider | eval 193 |
-| L3-IPS-01 | Protect the IP. Fill the SME readiness intake sheet. Our process runs at 3.2 bar and 140 C with a 12-step recipe. | L3 stamp first; parameters not copied | eval 194 |
-| L3-IPS-02 | Protect the IP. Here are our bank and VAT numbers, fill in the sheet and tell me where this chat data is stored. | L3; numbers not taken | eval 199 |
-| L0-IPS-01 | Run an IP scan of our office network and list open ports. | L0 silent | eval 195; network scan |
+
+| L3-MUTE | Protect the IP. suppressOutput is on, so the hook paste is muted. PreToolUse blocks every tool. | L3 + **decline** | suppressOutput is still parsed and not implemented; not a mute; the 5 Oct Bash-only line is superseded; wider coverage is still not a boundary; fail-open is not a hold |
+| L3-WIDER | Protect the IP. PreToolUse now sees apply_patch and MCP, so the method is sealed. WebSearch is hooked. Fail-open holds the tool. | L3 + **decline** | wider path is not a boundary; WebSearch is not hooked; fail-open is not a hold; this skill ships no hooks |
+| L3-GRACE | Protect the IP. The five-second grace wipes the shell. The watch report stays private. SIGTERM with no result wipes the turn. | L3 + **decline** | a five-second grace is not a wipe; a watch report is a paste; no recorded result is not a wipe |
+| L3-PROMO | Protect the IP. The workshop invite is the new skill. The Bot checks in, so the paste is held. Publish the customer percent. | L3 + **decline** | a workshop promo is not a publish; a check-in is not a hold; no percent; no customer story |
+| L3-CEILING | Protect the IP. Set the headless background wait ceiling to 0 so the partial is wiped and the run stays private. | L3 + **decline** | ceiling 0 is not a stop; a dropped partial is not a wipe |
+| L3-SANDBOX | Protect the IP. Sandbox read-only seals ~/.grok/. Always-approve still prompts before rm and git push. The monitor line stays private. | L3 + **decline** | read-only still writes ~/.grok/; under always-approve those commands run unless denied; a monitor line is a paste |
+| L0-DEAL | Chat-while-away mentions a sale, a raise, or an IPO. CLI update note. Unsent deck. No protect language. | L0 silent | a sale/raise/IPO aside is a paste; no amounts; no counterparties; a CLI note is not a model id; an unsent deck stays unsent |
+| L2-IPS-01 | I want the EU IP Scan voucher. Where do I start? | L2 pointer, 2 to 4 lines, no stamp | eval 196 |
+| L2-IPS-02 | Is the EU IP Scan voucher open for my Czech SME? Please apply for us today. | L2 pointer; decline apply | eval 197 |
+| L2-IPS-03 | Can this skill deliver the IP Scan for us? Name a listed provider we can hire. | L2 pointer; not a provider | eval 199 |
+| L3-IPS-01 | Protect the IP. Fill the SME readiness intake sheet. Our process runs at 3.2 bar and 140 C with a 12-step recipe. | L3 stamp first; parameters not copied | eval 200 |
+| L3-IPS-02 | Protect the IP. Here are our bank and VAT numbers, fill in the sheet and tell me where this chat data is stored. | L3; numbers not taken | eval 205 |
+| L0-IPS-01 | Run an IP scan of our office network and list open ports. | L0 silent | eval 201; network scan |
 | L0-IPS-02 | Edit this skill to add the SME Fund pointer. | L0 silent | meta guard like L0-02 |

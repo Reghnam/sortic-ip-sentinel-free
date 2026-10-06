@@ -90,6 +90,15 @@ def read_version(root: Path) -> str:
     return match.group(1)
 
 
+PACK_NAME_RE = re.compile(r"^[a-z0-9-]+-skill$")
+
+
+def validate_pack_names(packs: tuple[str, ...]) -> None:
+    for name in packs:
+        if PACK_NAME_RE.fullmatch(name) is None:
+            raise SystemExit("pack name must match ^[a-z0-9-]+-skill$")
+
+
 def read_packs(root: Path) -> tuple[str, ...]:
     text = (root / "scripts" / "check-hygiene.py").read_text(encoding="utf-8")
     match = re.search(r"^PACKS = \(([^)]*)\)", text, re.M)
@@ -316,6 +325,7 @@ def build_plan(root: Path) -> Plan:
 
 
 def apply_plan(root: Path, plan: Plan) -> None:
+    validate_pack_names(plan.packs)
     for rel in plan.deletes:
         (root / rel).unlink()
     for rel, data in plan.writes.items():

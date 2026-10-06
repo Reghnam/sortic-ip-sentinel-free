@@ -179,6 +179,31 @@ class SyncPackTests(unittest.TestCase):
         code = SYNC.main(["--check", "--root", str(ROOT)])
         self.assertEqual(code, 0)
 
+    def test_invalid_pack_name_is_rejected_before_write(self) -> None:
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            _fixture(root)
+            hygiene = (root / "scripts" / "check-hygiene.py").read_text(encoding="utf-8")
+            hygiene = hygiene.replace(
+                'PACKS = ("chatgpt-skill",)',
+                'PACKS = ("Bad-Name",)',
+            )
+            (root / "scripts" / "check-hygiene.py").write_text(hygiene, encoding="utf-8")
+            dest = root / "Bad-Name"
+            dest.mkdir()
+            (dest / "SKILL.md").write_text(
+                (root / "chatgpt-skill" / "SKILL.md").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+            before = (dest / "SKILL.md").read_text(encoding="utf-8")
+            with self.assertRaises(SystemExit) as caught:
+                SYNC.main(["--root", str(root)])
+            self.assertIn("pack name must match", str(caught.exception))
+            self.assertEqual((dest / "SKILL.md").read_text(encoding="utf-8"), before)
+            self.assertTrue((root / "chatgpt-skill" / "references" / "extra.md").is_file())
+
     def test_hygiene_still_reports_current_edition(self) -> None:
         completed = subprocess.run(
             [sys.executable, "scripts/check-hygiene.py"],

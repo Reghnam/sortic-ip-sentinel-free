@@ -132,6 +132,52 @@ class ClaimRuleTests(unittest.TestCase):
         for line in window.splitlines():
             self.assertNotIn("reopen-date-fact", claim_rules.uncleared_rule_ids(line))
 
+    def test_residency_hosting_shapes(self) -> None:
+        flagged = (
+            "hosted in the EU",
+            "stored in the EU",
+            "European servers keep your data",
+            "EU-based servers",
+            "data remains in Europe",
+            "European data centres",
+        )
+        for line in flagged:
+            with self.subTest(line=line):
+                self.assertIn("residency-claim", claim_rules.uncleared_rule_ids(line))
+        self.assertEqual(claim_rules.uncleared_rule_ids("not hosted in the EU"), [])
+        self.assertEqual(
+            claim_rules.uncleared_rule_ids("we make no claim that data is stored in the EU"),
+            [],
+        )
+
+    def test_percent_near_pay_and_back(self) -> None:
+        self.assertIn("percent-near-refund", claim_rules.uncleared_rule_ids("EU pays 90%"))
+        self.assertIn("percent-near-refund", claim_rules.uncleared_rule_ids("You get 90 % back"))
+
+    def test_false_negation_phrases_do_not_clear(self) -> None:
+        self.assertIn(
+            "residency-claim",
+            claim_rules.uncleared_rule_ids("Not just GDPR compliant but fast"),
+        )
+        self.assertIn(
+            "legal-advice-positive",
+            claim_rules.uncleared_rule_ids("No doubt this is legal advice"),
+        )
+        self.assertEqual(claim_rules.uncleared_rule_ids("not legal advice"), [])
+        self.assertEqual(claim_rules.uncleared_rule_ids("Not legal advice."), [])
+        self.assertEqual(claim_rules.uncleared_rule_ids("do not say apply now"), [])
+        self.assertEqual(claim_rules.uncleared_rule_ids("never say vouchers are open"), [])
+
+    def test_apply_and_voucher_availability(self) -> None:
+        for line in (
+            "apply today",
+            "apply immediately",
+            "vouchers open now",
+            "vouchers are available",
+        ):
+            with self.subTest(line=line):
+                self.assertTrue(claim_rules.uncleared_rule_ids(line))
+
     def test_other_bans(self) -> None:
         self.assertIn("residency-claim", claim_rules.uncleared_rule_ids("GDPR"))
         self.assertIn("residency-claim", claim_rules.uncleared_rule_ids("EU data residency"))
@@ -198,7 +244,7 @@ class ClaimRuleTests(unittest.TestCase):
 
     def test_version_lines_stay_readable_by_sync(self) -> None:
         text = (SCRIPTS / "check-hygiene.py").read_text(encoding="utf-8")
-        self.assertIn('VERSION = "0.5.49-free"\n', text)
+        self.assertIn('VERSION = "0.5.51-free"\n', text)
         self.assertIsNotNone(
             re.search(
                 r'^PACKS = \("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill"\)$',

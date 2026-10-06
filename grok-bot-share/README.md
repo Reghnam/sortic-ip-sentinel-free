@@ -1,10 +1,10 @@
-# Grok Bot share pack — IP Sentinel (prepare only, v0.5.49-free)
+# Grok Bot share pack — IP Sentinel (prepare only, v0.5.51-free)
 
 **Hygiene only. Not legal advice. Free only. No secrets.**
 
 This folder is a **shareable Bot template** (profile + skills + routines **config only**). It is **not** a live marketplace listing.
 
-**Do not publish live overnight.** Live marketplace publish stays **L3 for [redacted-p11]/[redacted-p9]**. Lunch testers install from this PR branch; they do not press marketplace publish.
+**Do not publish live overnight.** Live marketplace publish stays **L3 for the owner (L3)**. Lunch testers install from this PR branch; they do not press marketplace publish.
 
 ## What this pack is
 
@@ -44,6 +44,6 @@ Drive Sep-2 zips are **stale**. Use this PR branch.
 
 ## Live publish
 
-Marketplace / public Bot share of this template is a **publish**. Decline unnamed. **[redacted-p11]/[redacted-p9]** only, L3, not overnight.
+Marketplace / public Bot share of this template is a **publish**. Decline unnamed. **the owner (L3)** only, L3, not overnight.
 
 **Not legal advice. No guarantees. Free only.**
