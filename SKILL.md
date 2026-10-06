@@ -22,8 +22,8 @@ user-invocable: true
 disable-model-invocation: false
 argument-hint: IP sensitive moment | show/hold | hygiene JSON
 metadata:
-  short-description: "SorticAI Free IP Sentinel v0.5.50-free — a wider hook path is not a boundary"
-  version: "0.5.50-free"
+  short-description: "SorticAI Free IP Sentinel v0.5.51-free — a wider hook path is not a boundary"
+  version: "0.5.51-free"
   release: "2026-08-17"
   patched: "2026-10-06"
   author: "SorticAI (portable free tier)"
@@ -33,7 +33,7 @@ license: "See LICENSE.md (free use with attribution and disclaimers)"
 compatibility: "Claude Code (~/.claude/skills/), Codex (~/.agents/skills or ~/.codex/skills), ChatGPT Skills, Grok (~/.grok/skills/ or .grok/skills/), Grok Bot, Cursor (~/.cursor/skills/ or .cursor/skills/), agentskills.io. No external services required for core."
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.50-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.51-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -78,7 +78,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.50-free (portable)  ·  sorticai.com  ·  patched 2026-10-06              |
+|  v0.5.51-free (portable)  ·  sorticai.com  ·  patched 2026-10-06              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -494,7 +494,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.50-free. Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
+- Version in header: v0.5.51-free. Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
 ## Failure Recovery
@@ -522,7 +522,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - Cursor: `cursor-skill/` → project `.cursor/skills/sortic-ip-sentinel-free/`; Sync Skills is `~/.cursor/skills/` only; Custom Modes = pin skill.
   - Grok Bot share pack: `grok-bot-share/` (profile/skills/routines config only; do not publish live).
 - Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change. Lunch HITL: `HITL-LUNCH.md`.
-- Keep disclaimers, plain labels, hygiene scope. No paid residue. Current version: **v0.5.50-free** (patched 2026-10-06). Description ≤1024. Claude YAML stays name+description only.
+- Keep disclaimers, plain labels, hygiene scope. No paid residue. Current version: **v0.5.51-free** (patched 2026-10-06). Description ≤1024. Claude YAML stays name+description only.
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 

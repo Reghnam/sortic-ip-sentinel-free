@@ -1,9 +1,9 @@
 {
   "schema": "sorticai.grok_bot_share.v1",
-  "edition": "0.5.50-free",
+  "edition": "0.5.51-free",
   "status": "prepare_only",
   "do_not_publish_live": true,
-  "live_marketplace_publish": "L3 [redacted-p11]/[redacted-p9] only",
+  "live_marketplace_publish": "L3 the owner (L3) only",
   "export": "profile/skills/routines config only",
   "profile": {
     "name": "IP Sentinel (free)",
