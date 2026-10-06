@@ -17,7 +17,7 @@ import claim_rules
 import zipscan
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.49-free"
+VERSION = "0.5.51-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -101,8 +101,8 @@ def _hygiene(args: argparse.Namespace) -> int:
         errors.append(f"claude-skill frontmatter keys {sorted(claude_keys)} != name+description")
 
     body_lines = root_body.lstrip("\n").count("\n") + 1
-    if body_lines > 501:
-        errors.append(f"SKILL.md body is {body_lines} lines (must stay at or under 501)")
+    if body_lines >= 500:
+        errors.append(f"SKILL.md body is {body_lines} lines (must stay under 500)")
 
     refs = sorted(p.name for p in (ROOT / "references").iterdir() if p.is_file())
     required = {
@@ -127,10 +127,10 @@ def _hygiene(args: argparse.Namespace) -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 187):
+    for n in range(1, 196):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 186:
+    if evals.count("## Eval ") < 195:
         errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 177)")
 
     for rel in (
@@ -201,7 +201,7 @@ def _hygiene(args: argparse.Namespace) -> int:
         "retrieve-only",
         "do not publish live",
         "us-ip-law-ground-truth",
-        "David/Sameth",
+        "the owner (L3)",
         "The lab's consumer terms are our NDA",
         "Let the coding agent keep the tests",
         "next paste is the moment",
@@ -305,6 +305,12 @@ def _hygiene(args: argparse.Namespace) -> int:
         "a chat-while-away digest is a paste",
         "a new-sign-in alert is not a rotate",
         "/loop is a standing paste",
+        "a wider hook path is not a boundary",
+        "fail-open is not a hold",
+        "a five-second grace is not a wipe",
+        "a watch report is a paste",
+        "a workshop promo is not a publish",
+        "a check-in is not a hold",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")
@@ -317,8 +323,8 @@ def _hygiene(args: argparse.Namespace) -> int:
         export = (share / "bot-template.json").read_text(encoding="utf-8") if (share / "bot-template.json").is_file() else ""
         if '"do_not_publish_live": true' not in export:
             errors.append("grok-bot-share/bot-template.json missing do_not_publish_live")
-        if "David/Sameth" not in export:
-            errors.append("grok-bot-share/bot-template.json missing David/Sameth L3 gate")
+        if "the owner (L3)" not in export:
+            errors.append("grok-bot-share/bot-template.json missing the owner (L3) gate")
         if '"api_keys": []' not in export or '"corpus_paths": []' not in export:
             errors.append("grok-bot-share/bot-template.json must ship empty api_keys and corpus_paths")
         for rel in share.iterdir():

@@ -3,7 +3,7 @@
   "scope": "pointer_only_not_advice",
   "instrument_label": "EUIPO SME Fund, IP Scan voucher",
   "window_status": "closed_reopening_expected",
-  "window_note": "When the national office page was read on 2026-10-04, it described vouchers 1 and 2 as closed on 23 April 2026 and described a reopening as expected in November 2026 with no day published, while the EUIPO side is UNVERIFIED.",
+  "window_note": "UNVERIFIED: When the national office page was read on 2026-10-04, it described vouchers 1 and 2 as closed on 23 April 2026 and described a reopening as expected in November 2026 with no day published, while the EUIPO side is UNVERIFIED.",
   "last_verified": null,
   "last_verified_note": "UNVERIFIED: a human sets this after reading both live pages",
   "last_verified_by": "human",

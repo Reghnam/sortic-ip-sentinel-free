@@ -46,18 +46,23 @@ class FreshnessWorkflowTests(unittest.TestCase):
         ):
             self.assertNotIn(banned, self.text)
 
-    def test_actions_are_pinned_by_version_tag(self) -> None:
+    def test_actions_are_pinned_to_full_shas(self) -> None:
         uses = re.findall(r"uses:\s*(\S+)", self.text)
         at = chr(64)
+        checkout = "11d5960a326750d5838078e36cf38b85af677262"
+        setup = "a26af69be951a213d495a4c3e4e4022e16d87065"
         self.assertEqual(
             uses,
-            ["actions/checkout" + at + "v4", "actions/setup-python" + at + "v5"],
+            ["actions/checkout" + at + checkout, "actions/setup-python" + at + setup],
         )
-        pin = at + "v"
         for item in uses:
-            self.assertRegex(item, re.escape(pin) + r"\d+$")
-            self.assertNotIn(chr(64) + "main", item)
-            self.assertNotIn(chr(64) + "master", item)
+            self.assertRegex(item, re.escape(at) + r"[0-9a-f]{40}$")
+            self.assertNotIn(at + "main", item)
+            self.assertNotIn(at + "master", item)
+            self.assertNotRegex(item, re.escape(at) + r"v\d")
+        self.assertIn("# v4.4.0", self.text)
+        self.assertIn("# v5.6.0", self.text)
+        self.assertIn("persist-credentials: false", self.text)
 
     def test_step_runs_stored_date_only(self) -> None:
         self.assertIn("timeout-minutes:", self.text)

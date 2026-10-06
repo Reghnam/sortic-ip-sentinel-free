@@ -99,7 +99,10 @@ _PCT = (
     r"|%\s*(?<!\d)\d{1,6}(?:[.,]\d{1,4})?(?!\d)"
     rf"|{_WORD_PCT})"
 )
-_NEAR = r"(?:\brefund\w*\b|\breimburse\w*\b|\bcover(?:s|ed|ing)?\b|\bpaid by the eu\b)"
+_NEAR = (
+    r"(?:\brefund\w*\b|\breimburse\w*\b|\bcover(?:s|ed|ing)?\b|\bpaid by the eu\b"
+    r"|\bpays?\b|\bpaying\b|\bback\b|\breturned\b|\brebate\b|\bsubsid\w*\b)"
+)
 
 _LINE_MARKERS = (
     "do not say",
@@ -110,6 +113,10 @@ _LINE_MARKERS = (
 )
 _CUE = re.compile(
     r"(?i)(?:\b(?:not|no|never|without|cannot|ban(?:ned)?|forbidden|avoid|decline)\b|n't\b)"
+)
+# These phrases contain a cue word but do not negate the claim.
+_FALSE_NEGATION = re.compile(
+    r"(?i)\bnot just\b|\bnot only\b|\bno doubt\b|\bwithout(?: a)? doubt\b"
 )
 # A cue stops at punctuation, a spaced hyphen, an en or em dash, "(", "|", or a clause word.
 _BOUNDARY = re.compile(
@@ -198,6 +205,10 @@ CLAIM_RULES: tuple[ClaimRule, ...] = (
         "residency-claim",
         re.compile(
             r"(?i)\bgdpr\b|\beu[-\s]hosted\b|\beu data residency\b|\bdata stays in the eu\b"
+            r"|\b(?:hosted|stored|kept|processed|located)\s+(?:in|within)\s+(?:the\s+)?(?:eu|european union|europe)\b"
+            r"|\bdata\s+(?:stays|remains)\s+in\s+(?:the\s+)?(?:eu|europe)\b"
+            r"|\beu[\s-](?:based|only)\s+(?:servers?|hosting|data)\b"
+            r"|\beuropean\s+(?:servers?|hosting|data\s+cent(?:er|re)s?)\b"
         ),
         "Drop the residency or hosting claim.",
         True,
@@ -237,13 +248,15 @@ CLAIM_RULES: tuple[ClaimRule, ...] = (
     ),
     ClaimRule(
         "apply-now",
-        re.compile(r"(?i)\bapply now\b"),
+        re.compile(r"(?i)\bapply now\b|\bapply today\b|\bapply immediately\b"),
         "Remove the apply-now line.",
         True,
     ),
     ClaimRule(
         "vouchers-open",
-        re.compile(r"(?i)\bvouchers are open\b"),
+        re.compile(
+            r"(?i)\bvouchers are open\b|\bvouchers open now\b|\bvouchers are available\b"
+        ),
         "Do not state that vouchers are open.",
         True,
     ),
@@ -482,7 +495,8 @@ def locally_negated(norm: str, start: int) -> bool:
             cut = match.end()
         else:
             break
-    return _CUE.search(norm[cut:start]) is not None
+    clause = _FALSE_NEGATION.sub(" ", norm[cut:start])
+    return _CUE.search(clause) is not None
 
 
 def reopen_hedged(norm: str) -> bool:
