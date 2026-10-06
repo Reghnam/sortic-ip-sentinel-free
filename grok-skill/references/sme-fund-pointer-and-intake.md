@@ -17,10 +17,10 @@ Names and yes/no answers only. None is a number or a secret.
 1. SME status evidence on hand (yes / no / unsure). Do not store IDs.
 2. VAT or tax certificate ready (yes / no). No numbers.
 3. Bank confirmation ready, with the SME as account holder (yes / no). No account numbers.
-4. Asset names (marks, product names, domains). Names only.
+4. Asset names (marks, product names, domains). only names already public or filed; write 'unfiled mark' otherwise.
 5. Show/hold map exists (yes / no; point to catalog option 1).
 6. Human contribution log started (yes / no; point to catalog option 3).
-7. What becomes public in the next 90 days (short text; dates only if the user gives them).
+7. What becomes public in the next 90 days (categories only).
 8. Public disclosure or filing already done (yes / no / unsure). This can affect patent rights, ask qualified counsel.
 9. Preferred listed expert. Leave blank on purpose in the free skill.
 
