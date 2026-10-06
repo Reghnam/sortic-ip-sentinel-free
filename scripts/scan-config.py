@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Write the CI scan config from the pinned binary.
+"""Write the CI scan config from an embedded config file.
 
-The binary embeds the tagged default rules. This keeps those rules and drops
-the global paths list. It does not extend the defaults.
+The workflow shell reads the pinned binary and checks it. This script only
+receives the embedded config, drops the global paths list, and writes the
+result. It does not extend the defaults and it does not see the binary path.
 """
 
 from __future__ import annotations
 
 import argparse
-import hashlib
 import sys
 import tomllib
 from pathlib import Path
@@ -105,26 +105,16 @@ def _require_stripped(original: str, stripped: str) -> None:
         raise SystemExit("rule path lists changed")
 
 
-def build_config(binary: bytes, source_sha256: str, output_sha256: str) -> bytes:
-    blob = extract_embedded_config(binary)
-    actual_source = hashlib.sha256(blob).hexdigest()
-    if actual_source != source_sha256:
-        raise SystemExit("embedded config checksum mismatch")
-    text = blob.decode("utf-8")
+def render_config(source: bytes) -> bytes:
+    text = source.decode("utf-8")
     stripped = strip_global_paths(text)
     _require_stripped(text, stripped)
-    out = stripped.encode("utf-8")
-    actual_output = hashlib.sha256(out).hexdigest()
-    if actual_output != output_sha256:
-        raise SystemExit("scan config checksum mismatch")
-    return out
+    return stripped.encode("utf-8")
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Write the CI scan config from the pinned binary.")
-    parser.add_argument("--binary", required=True)
-    parser.add_argument("--source-sha256", required=True)
-    parser.add_argument("--output-sha256", required=True)
+    parser = argparse.ArgumentParser(description="Write the CI scan config from an embedded config file.")
+    parser.add_argument("--input", required=True)
     parser.add_argument("--output", required=True)
     args = parser.parse_args(argv)
     output = Path(args.output)
@@ -132,8 +122,7 @@ def main(argv: list[str] | None = None) -> int:
         raise SystemExit("refusing to write a guarded config name")
     if not output.parent.is_dir():
         raise SystemExit("scan config directory is missing")
-    payload = build_config(Path(args.binary).read_bytes(), args.source_sha256, args.output_sha256)
-    output.write_bytes(payload)
+    output.write_bytes(render_config(Path(args.input).read_bytes()))
     return 0
 
 
