@@ -47,14 +47,14 @@ GIT_CALL = (
 )
 SUM_LINE = 'echo "${ARCHIVE_SHA256}  ${archive}" | sha256sum -c -'
 TAR_LINE = 'tar -xzf "${archive}" -C "${RUNNER_TEMP}" gitleaks'
+BINARY_SHA256 = "88f91962aa2f93ac6ab281d553b9e125f5197bbbce38f9f2437f7299c32e5509"
 SOURCE_SHA256 = "e163e53b9e7e8a8511e77271e2b323ed057759542a6d988258afe3a1fa329caf"
 SCAN_CONFIG_SHA256 = "9e66540bf992931a74bf926200494b6b9ac333b6b7d4e1abe71f2e529422d97a"
+BINARY_SUM = 'echo "${BINARY_SHA256}  ${tool}" | sha256sum -c -'
+CONFIG_SUM = 'echo "${SCAN_CONFIG_SHA256}  ${scan_config}" | sha256sum -c -'
+EXTRACT_CALL = "python3 - \"${tool}\" \"${embedded}\" << 'PY'"
 SCAN_CONFIG_ASSIGN = 'scan_config="${RUNNER_TEMP}/scan-config.toml"'
-GEN_CALL = (
-    'python3 scripts/scan-config.py --binary "${tool}" '
-    '--source-sha256 "${SOURCE_SHA256}" --output-sha256 "${SCAN_CONFIG_SHA256}" '
-    '--output "${scan_config}"'
-)
+GEN_CALL = 'python3 scripts/scan-config.py --input "${embedded}" --output "${scan_config}"'
 ALLOWED_CONFIG_VALUES = ("${scan_config}", "${RUNNER_TEMP}/scan-config.toml")
 RANGE_ASSIGNMENTS = (
     'range=""',
@@ -457,8 +457,76 @@ def _config_values(call: list[str]) -> list[str]:
     return values
 
 
+def _embedded_extractor(script: str) -> str:
+    marker = EXTRACT_CALL + "\n"
+    start = script.find(marker)
+    if start < 0:
+        raise AssertionError("the shell must write the embedded config before the script runs")
+    body_at = start + len(marker)
+    end = script.find("\nPY\n", body_at)
+    if end < 0:
+        raise AssertionError("embedded config extractor is missing its end marker")
+    body = script[body_at:end]
+    if "scan-config" in body or "scripts" in body:
+        raise AssertionError("the embedded config extractor calls the checkout script")
+    return body
+
+
+def _assert_shell_integrity(text: str) -> None:
+    script = _named_step_script(text, SCAN_STEP)
+    if f'BINARY_SHA256: "{BINARY_SHA256}"' not in text:
+        raise AssertionError("binary sha256 pin was removed")
+    if f'SCAN_CONFIG_SHA256: "{SCAN_CONFIG_SHA256}"' not in text:
+        raise AssertionError("scan config sha256 pin was removed")
+    if "SOURCE_SHA256" in text or "--binary" in text or "--source-sha256" in text or "--output-sha256" in text:
+        raise AssertionError("the workflow passes a binary path or a hash into the checkout script")
+    if script.count(SUM_LINE) != 1:
+        raise AssertionError("archive sha256sum -c must appear once")
+    if script.count(BINARY_SUM) != 2:
+        raise AssertionError("binary sha256sum -c must run before the script and again before the scanner")
+    if script.count(CONFIG_SUM) != 1:
+        raise AssertionError("scan config sha256sum -c must appear once")
+    for line in script.splitlines():
+        if "scripts/scan-config.py" not in line:
+            continue
+        if line.strip() != GEN_CALL or "${tool}" in line or "--binary" in line:
+            raise AssertionError("the scan config script was given the binary path")
+    archive_at = script.find(SUM_LINE)
+    tar_at = script.find(TAR_LINE)
+    first_bin = script.find(BINARY_SUM)
+    second_bin = script.find(BINARY_SUM, first_bin + len(BINARY_SUM))
+    extract_at = script.find(EXTRACT_CALL)
+    gen_at = script.find(GEN_CALL)
+    config_at = script.find(CONFIG_SUM)
+    dir_at = script.find(DIR_CALL)
+    git_at = script.find(GIT_CALL)
+    if not (
+        0
+        <= archive_at
+        < tar_at
+        < first_bin
+        < extract_at
+        < gen_at
+        < config_at
+        < second_bin
+        < dir_at
+        < git_at
+    ):
+        raise AssertionError("a sha256sum -c check was removed or moved after the file it protects")
+    if "python3" in script[config_at + len(CONFIG_SUM) :] or "scripts/" in script[config_at + len(CONFIG_SUM) :]:
+        raise AssertionError("a checkout script runs after the config checksum")
+    _embedded_extractor(script)
+    for logical in _logical_lines(script):
+        if not _is_checksum(logical):
+            continue
+        flat = _flat_command(logical)
+        if _OR_TRUE.search(flat) or _OR_COLON.search(flat) or "set +e" in flat:
+            raise AssertionError("sha256sum -c was softened")
+
+
 def _assert_ci_config(text: str) -> None:
     script = _named_step_script(text, SCAN_STEP)
+    _assert_shell_integrity(text)
     if "useDefault" in text or "[extend]" in text:
         raise AssertionError("the workflow extends the default config")
     if script.count(SCAN_CONFIG_ASSIGN) != 1:
@@ -466,7 +534,7 @@ def _assert_ci_config(text: str) -> None:
     if script.count("scan-config.toml") != 1:
         raise AssertionError("scan config file location changed")
     if script.count(GEN_CALL) != 1 or script.count("scripts/scan-config.py") != 1:
-        raise AssertionError("scan config must be generated once from the pinned binary")
+        raise AssertionError("scan config must be generated once, without the binary path")
     if script.count('"${scan_config}"') != 3:
         raise AssertionError("scan config path is used outside the generator and the two scanner calls")
     assign_at = script.find(SCAN_CONFIG_ASSIGN)
@@ -614,6 +682,70 @@ def _pinned_tool() -> Path:
         tool.chmod(0o755)
     _TOOL = tool
     return tool
+
+
+def _integrity_sequence(workflow_text: str, mode: str) -> dict[str, object]:
+    tool = _pinned_tool()
+    archive = tool.parent / "archive.tar.gz"
+    if not archive.is_file():
+        raise AssertionError("pinned archive is missing from the tool cache")
+    extractor = _embedded_extractor(_named_step_script(workflow_text, SCAN_STEP))
+    generator = ROOT / "scripts" / "scan-config.py"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        binary = root / "gitleaks"
+        binary.write_bytes(tool.read_bytes())
+        embedded = root / "embedded-config.toml"
+        scan_config = root / "scan-config.toml"
+        if mode == "bad-script":
+            generator = root / "bad-scan-config.py"
+            generator.write_text(
+                "import pathlib\n"
+                "import sys\n"
+                "out = pathlib.Path(sys.argv[sys.argv.index('--output') + 1])\n"
+                "out.write_text('title = \"changed\"\\n', encoding='utf-8')\n",
+                encoding="utf-8",
+            )
+        shell = (
+            "set -euo pipefail\n"
+            'echo "$ARCHIVE_SHA256  $archive" | sha256sum -c -\n'
+            'if [ "$MODE" = "swap-before" ]; then printf \'x\' >> "$tool"; fi\n'
+            'echo "$BINARY_SHA256  $tool" | sha256sum -c -\n'
+            'python3 - "$tool" "$embedded" << \'PY\'\n'
+            + extractor
+            + "\nPY\n"
+            'python3 "$script" --input "$embedded" --output "$scan_config"\n'
+            'if [ "$MODE" = "edit-config" ]; then printf \'\\n# tamper\\n\' >> "$scan_config"; fi\n'
+            'if [ "$MODE" = "swap-after" ]; then printf \'x\' >> "$tool"; fi\n'
+            'echo "$SCAN_CONFIG_SHA256  $scan_config" | sha256sum -c -\n'
+            'echo "$BINARY_SHA256  $tool" | sha256sum -c -\n'
+        )
+        env = os.environ.copy()
+        env.update(
+            {
+                "ARCHIVE_SHA256": ARCHIVE_SHA256,
+                "BINARY_SHA256": BINARY_SHA256,
+                "SCAN_CONFIG_SHA256": SCAN_CONFIG_SHA256,
+                "MODE": mode,
+                "archive": str(archive),
+                "tool": str(binary),
+                "embedded": str(embedded),
+                "scan_config": str(scan_config),
+                "script": str(generator),
+            }
+        )
+        completed = subprocess.run(
+            ["bash", "-c", shell],
+            env=env,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        return {
+            "code": completed.returncode,
+            "report": completed.stdout + completed.stderr,
+            "config_exists": scan_config.exists(),
+        }
 
 
 def _runtime_token() -> str:
@@ -1278,8 +1410,10 @@ class HygieneWorkflowTests(unittest.TestCase):
         )
 
     def test_ci_config_pin_drops_global_paths(self) -> None:
-        self.assertIn(f'SOURCE_SHA256: "{SOURCE_SHA256}"', self.text)
+        self.assertIn(f'BINARY_SHA256: "{BINARY_SHA256}"', self.text)
         self.assertIn(f'SCAN_CONFIG_SHA256: "{SCAN_CONFIG_SHA256}"', self.text)
+        self.assertNotIn("SOURCE_SHA256", self.text)
+        self.assertNotIn("--binary", self.text)
         self.assertNotIn("allowlist", self.text)
         module = _scan_config_module()
         self.assertNotIn("useDefault = true", (ROOT / "scripts" / "scan-config.py").read_text(encoding="utf-8"))
@@ -1307,9 +1441,12 @@ class HygieneWorkflowTests(unittest.TestCase):
         self.assertEqual(parsed["rules"][0]["allowlists"][0]["paths"], ["keep-me"])
         self.assertNotIn("skip-me", stripped)
         tool = _pinned_tool()
-        built = module.build_config(tool.read_bytes(), SOURCE_SHA256, SCAN_CONFIG_SHA256)
+        self.assertEqual(hashlib.sha256(tool.read_bytes()).hexdigest(), BINARY_SHA256)
+        blob = module.extract_embedded_config(tool.read_bytes())
+        self.assertEqual(hashlib.sha256(blob).hexdigest(), SOURCE_SHA256)
+        built = module.render_config(blob)
         self.assertEqual(hashlib.sha256(built).hexdigest(), SCAN_CONFIG_SHA256)
-        source = tomllib.loads(module.extract_embedded_config(tool.read_bytes()).decode("utf-8"))
+        source = tomllib.loads(blob.decode("utf-8"))
         result = tomllib.loads(built.decode("utf-8"))
         self.assertEqual(len(source["allowlist"]["paths"]), 25)
         self.assertNotIn("paths", result["allowlist"])
@@ -1345,7 +1482,7 @@ class HygieneWorkflowTests(unittest.TestCase):
             root = outer / "repo"
             root.mkdir()
             config = outer / "scan-config.toml"
-            config.write_bytes(module.build_config(tool.read_bytes(), SOURCE_SHA256, SCAN_CONFIG_SHA256))
+            config.write_bytes(module.render_config(module.extract_embedded_config(tool.read_bytes())))
             _git(root, "init", "-q")
             _git(root, "config", "user.email", "scan@localhost")
             _git(root, "config", "user.name", "scan")
@@ -1457,6 +1594,142 @@ class HygieneWorkflowTests(unittest.TestCase):
             self.text.replace("  pull_request:\n", "  pull_request: {paths: ['*']}\n", 1),
             "inline paths filter",
         )
+
+    def test_shell_checksums_stay_before_each_use(self) -> None:
+        _assert_shell_integrity(self.text)
+        first = "          " + BINARY_SUM + "\n          " + EXTRACT_CALL
+        second = "          " + BINARY_SUM + "\n          " + DIR_CALL
+        config_line = "          " + CONFIG_SUM + "\n"
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(first, "          " + EXTRACT_CALL, 1),
+            "remove the binary check that runs before the script",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(second, "          " + DIR_CALL, 1),
+            "remove the binary check that runs before the scanner",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(config_line, "", 1),
+            "remove the scan config check",
+        )
+        moved_first = self.text.replace(first, "          " + EXTRACT_CALL, 1).replace(
+            GEN_CALL,
+            GEN_CALL + "\n          " + BINARY_SUM,
+            1,
+        )
+        self.assertNotEqual(moved_first, self.text)
+        _reject(self, _assert_shell_integrity, moved_first, "move the first binary check to after the script")
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(second, "          " + DIR_CALL + "\n          " + BINARY_SUM, 1),
+            "move the second binary check to after the directory scan",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(config_line, "").replace(
+                DIR_CALL,
+                DIR_CALL + "\n          " + CONFIG_SUM,
+                1,
+            ),
+            "move the scan config check to after the directory scan",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(SUM_LINE + "\n          " + TAR_LINE, TAR_LINE + "\n          " + SUM_LINE, 1),
+            "move the archive check to after extract",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(first, "          " + BINARY_SUM + " || true\n          " + EXTRACT_CALL, 1),
+            "soften the first binary check",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(second, "          " + BINARY_SUM + " || :\n          " + DIR_CALL, 1),
+            "soften the second binary check",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(CONFIG_SUM, CONFIG_SUM + " || true", 1),
+            "soften the scan config check",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(SUM_LINE, SUM_LINE + " || true", 1),
+            "soften the archive check",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(
+                GEN_CALL,
+                'python3 scripts/scan-config.py --binary "${tool}" --input "${embedded}" --output "${scan_config}"',
+                1,
+            ),
+            "pass --binary to the checkout script",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(
+                GEN_CALL,
+                'python3 scripts/scan-config.py "${tool}" --input "${embedded}" --output "${scan_config}"',
+                1,
+            ),
+            "pass the binary path to the checkout script",
+        )
+
+    def test_tamper_fails_the_shell_checksums(self) -> None:
+        clean = _integrity_sequence(self.text, "clean")
+        self.assertEqual(clean["code"], 0, clean["report"])
+        self.assertTrue(clean["config_exists"])
+        bad_script = _integrity_sequence(self.text, "bad-script")
+        self.assertNotEqual(bad_script["code"], 0)
+        self.assertIn("FAILED", str(bad_script["report"]))
+        self.assertIn("scan-config.toml", str(bad_script["report"]))
+        self.assertTrue(bad_script["config_exists"])
+        edited = _integrity_sequence(self.text, "edit-config")
+        self.assertNotEqual(edited["code"], 0)
+        self.assertIn("FAILED", str(edited["report"]))
+        self.assertIn("scan-config.toml", str(edited["report"]))
+        self.assertTrue(edited["config_exists"])
+        before = _integrity_sequence(self.text, "swap-before")
+        self.assertNotEqual(before["code"], 0)
+        self.assertIn("FAILED", str(before["report"]))
+        self.assertIn("gitleaks", str(before["report"]))
+        self.assertFalse(before["config_exists"])
+        after = _integrity_sequence(self.text, "swap-after")
+        self.assertNotEqual(after["code"], 0)
+        self.assertIn("FAILED", str(after["report"]))
+        self.assertIn("gitleaks", str(after["report"]))
+        self.assertTrue(after["config_exists"])
+        refused = subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "scripts" / "scan-config.py"),
+                "--binary",
+                str(_pinned_tool()),
+                "--output",
+                "scan-config.toml",
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertNotEqual(refused.returncode, 0)
 
 
 if __name__ == "__main__":
