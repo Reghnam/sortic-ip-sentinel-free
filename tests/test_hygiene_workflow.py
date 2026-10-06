@@ -5,10 +5,16 @@ The stdlib has no YAML parser, so these tests read the workflow by indentation.
 
 from __future__ import annotations
 
+import hashlib
+import importlib.util
+import os
 import re
+import secrets
 import shlex
 import subprocess
+import sys
 import tempfile
+import tomllib
 import unittest
 from pathlib import Path
 
@@ -34,13 +40,31 @@ GUARD_START = "# secret-scan-guard-start"
 GUARD_END = "# secret-scan-guard-end"
 GUARD_FAIL = "secret scan refused a committed config or ignore file"
 UNSET_LINE = "unset GITLEAKS_CONFIG GITLEAKS_CONFIG_TOML"
-DIR_CALL = '"${tool}" dir . --no-banner --redact --ignore-gitleaks-allow'
-GIT_CALL = '"${tool}" git . --no-banner --redact --ignore-gitleaks-allow --log-opts="${range}"'
+DIR_CALL = '"${tool}" dir . --no-banner --redact --ignore-gitleaks-allow --config "${scan_config}"'
+GIT_CALL = (
+    '"${tool}" git . --no-banner --redact --ignore-gitleaks-allow '
+    '--config "${scan_config}" --log-opts="--text ${range}"'
+)
 SUM_LINE = 'echo "${ARCHIVE_SHA256}  ${archive}" | sha256sum -c -'
 TAR_LINE = 'tar -xzf "${archive}" -C "${RUNNER_TEMP}" gitleaks'
+BINARY_SHA256 = "88f91962aa2f93ac6ab281d553b9e125f5197bbbce38f9f2437f7299c32e5509"
+SOURCE_SHA256 = "e163e53b9e7e8a8511e77271e2b323ed057759542a6d988258afe3a1fa329caf"
+SCAN_CONFIG_SHA256 = "9e66540bf992931a74bf926200494b6b9ac333b6b7d4e1abe71f2e529422d97a"
+BINARY_SUM = 'echo "${BINARY_SHA256}  ${tool}" | sha256sum -c -'
+CONFIG_SUM = 'echo "${SCAN_CONFIG_SHA256}  ${scan_config}" | sha256sum -c -'
+EXTRACT_CALL = "python3 - \"${tool}\" \"${embedded}\" << 'PY'"
+SCAN_CONFIG_ASSIGN = 'scan_config="${RUNNER_TEMP}/scan-config.toml"'
+GEN_CALL = 'python3 scripts/scan-config.py --input "${embedded}" --output "${scan_config}"'
+ALLOWED_CONFIG_VALUES = ("${scan_config}", "${RUNNER_TEMP}/scan-config.toml")
+RANGE_ASSIGNMENTS = (
+    'range=""',
+    'range="${BASE_SHA}..${HEAD_SHA}"',
+    'range="${BEFORE_SHA}..${AFTER_SHA}"',
+)
+PR_FILTERS = ("paths:", "paths-ignore:", "branches:", "branches-ignore:")
+LOG_OPTS = "--log-opts=--text ${range}"
 SCANNER_MODES = {"dir", "git", "detect", "protect", "stdin"}
 LONG_FORBIDDEN = {
-    "--config",
     "--gitleaks-ignore-path",
     "--exit-code",
     "--baseline-path",
@@ -413,12 +437,339 @@ def _assert_env_unset(text: str) -> None:
         )
 
 
+def _config_values(call: list[str]) -> list[str]:
+    values: list[str] = []
+    index = 0
+    while index < len(call):
+        token = call[index]
+        if token in {"--config", "-c"}:
+            if index + 1 >= len(call):
+                raise AssertionError("config flag without a path: " + " ".join(call))
+            value = call[index + 1]
+            if token == "-c" or value not in ALLOWED_CONFIG_VALUES:
+                raise AssertionError(f"scanner call gained {token} {value}")
+            values.append(value)
+            index += 2
+            continue
+        if token.startswith("--config=") or token.startswith("-c="):
+            raise AssertionError(f"scanner call gained {token}")
+        index += 1
+    return values
+
+
+def _embedded_extractor(script: str) -> str:
+    marker = EXTRACT_CALL + "\n"
+    start = script.find(marker)
+    if start < 0:
+        raise AssertionError("the shell must write the embedded config before the script runs")
+    body_at = start + len(marker)
+    end = script.find("\nPY\n", body_at)
+    if end < 0:
+        raise AssertionError("embedded config extractor is missing its end marker")
+    body = script[body_at:end]
+    if "scan-config" in body or "scripts" in body:
+        raise AssertionError("the embedded config extractor calls the checkout script")
+    return body
+
+
+def _assert_shell_integrity(text: str) -> None:
+    script = _named_step_script(text, SCAN_STEP)
+    if f'BINARY_SHA256: "{BINARY_SHA256}"' not in text:
+        raise AssertionError("binary sha256 pin was removed")
+    if f'SCAN_CONFIG_SHA256: "{SCAN_CONFIG_SHA256}"' not in text:
+        raise AssertionError("scan config sha256 pin was removed")
+    if "SOURCE_SHA256" in text or "--binary" in text or "--source-sha256" in text or "--output-sha256" in text:
+        raise AssertionError("the workflow passes a binary path or a hash into the checkout script")
+    if script.count(SUM_LINE) != 1:
+        raise AssertionError("archive sha256sum -c must appear once")
+    if script.count(BINARY_SUM) != 2:
+        raise AssertionError("binary sha256sum -c must run before the script and again before the scanner")
+    if script.count(CONFIG_SUM) != 1:
+        raise AssertionError("scan config sha256sum -c must appear once")
+    for line in script.splitlines():
+        if "scripts/scan-config.py" not in line:
+            continue
+        if line.strip() != GEN_CALL or "${tool}" in line or "--binary" in line:
+            raise AssertionError("the scan config script was given the binary path")
+    archive_at = script.find(SUM_LINE)
+    tar_at = script.find(TAR_LINE)
+    first_bin = script.find(BINARY_SUM)
+    second_bin = script.find(BINARY_SUM, first_bin + len(BINARY_SUM))
+    extract_at = script.find(EXTRACT_CALL)
+    gen_at = script.find(GEN_CALL)
+    config_at = script.find(CONFIG_SUM)
+    dir_at = script.find(DIR_CALL)
+    git_at = script.find(GIT_CALL)
+    if not (
+        0
+        <= archive_at
+        < tar_at
+        < first_bin
+        < extract_at
+        < gen_at
+        < config_at
+        < second_bin
+        < dir_at
+        < git_at
+    ):
+        raise AssertionError("a sha256sum -c check was removed or moved after the file it protects")
+    if "python3" in script[config_at + len(CONFIG_SUM) :] or "scripts/" in script[config_at + len(CONFIG_SUM) :]:
+        raise AssertionError("a checkout script runs after the config checksum")
+    _embedded_extractor(script)
+    for logical in _logical_lines(script):
+        if not _is_checksum(logical):
+            continue
+        flat = _flat_command(logical)
+        if _OR_TRUE.search(flat) or _OR_COLON.search(flat) or "set +e" in flat:
+            raise AssertionError("sha256sum -c was softened")
+
+
+def _assert_ci_config(text: str) -> None:
+    script = _named_step_script(text, SCAN_STEP)
+    _assert_shell_integrity(text)
+    if "useDefault" in text or "[extend]" in text:
+        raise AssertionError("the workflow extends the default config")
+    if script.count(SCAN_CONFIG_ASSIGN) != 1:
+        raise AssertionError("scan config must be assigned once, at the CI temp path")
+    if script.count("scan-config.toml") != 1:
+        raise AssertionError("scan config file location changed")
+    if script.count(GEN_CALL) != 1 or script.count("scripts/scan-config.py") != 1:
+        raise AssertionError("scan config must be generated once, without the binary path")
+    if script.count('"${scan_config}"') != 3:
+        raise AssertionError("scan config path is used outside the generator and the two scanner calls")
+    assign_at = script.find(SCAN_CONFIG_ASSIGN)
+    gen_at = script.find(GEN_CALL)
+    dir_at = script.find(DIR_CALL)
+    git_at = script.find(GIT_CALL)
+    if not (0 <= assign_at < gen_at < dir_at < git_at):
+        raise AssertionError("scan config must be written before either scanner call")
+    calls = _require_scanner_calls(script)
+    if [call[1] for call in calls] != ["dir", "git"]:
+        raise AssertionError("secret scan must be one directory call and one git range call")
+    for call in calls:
+        values = _config_values(call)
+        if values != ["${scan_config}"]:
+            raise AssertionError("scanner call must use only the CI config: " + " ".join(call))
+
+
 def _assert_no_forbidden_flags(text: str) -> None:
+    _assert_ci_config(text)
     calls = _require_scanner_calls(_named_step_script(text, SCAN_STEP))
     for call in calls:
         found = _forbidden_on_call(call)
         if found:
             raise AssertionError(f"scanner call gained {found}: {' '.join(call)}")
+
+
+def _assert_text_before_range(text: str) -> None:
+    calls = _require_scanner_calls(_named_step_script(text, SCAN_STEP))
+    git_calls = [call for call in calls if len(call) > 1 and call[1] == "git"]
+    if len(git_calls) != 1:
+        raise AssertionError("secret scan must keep one git range call")
+    opts = [token for token in git_calls[0] if token.startswith("--log-opts")]
+    if opts != [LOG_OPTS]:
+        raise AssertionError("git log opts must put --text in front of the range")
+    dir_calls = [call for call in calls if len(call) > 1 and call[1] == "dir"]
+    for call in dir_calls:
+        if any(token == "--text" or token.startswith("--text") for token in call):
+            raise AssertionError("directory scan must not take --text")
+
+
+def _assert_no_early_success(text: str) -> None:
+    script = _named_step_script(text, SCAN_STEP)
+    git_at = script.find(GIT_CALL)
+    if git_at < 0:
+        raise AssertionError("git scan is missing")
+    if re.search(r"\bexit\s+0\b", script[:git_at]):
+        raise AssertionError("the scan step exits 0 before the scanner runs")
+
+
+def _assert_range_assignments(text: str) -> None:
+    script = _named_step_script(text, SCAN_STEP)
+    found = re.findall(r"(?m)^\s*(range\s*(?:\+?=).*)$", script)
+    normalized = [re.sub(r"\s+", "", item) for item in found]
+    expected = [item.replace(" ", "") for item in RANGE_ASSIGNMENTS]
+    if normalized != expected:
+        raise AssertionError("range was cleared or overwritten before the git call")
+    if re.search(r"(?m)^\s*unset\s+range\b", script):
+        raise AssertionError("range was unset before the git call")
+    calls = _require_scanner_calls(script)
+    git_calls = [call for call in calls if len(call) > 1 and call[1] == "git"]
+    if len(git_calls) != 1 or LOG_OPTS not in git_calls[0]:
+        raise AssertionError("git call lost the range")
+
+
+def _pull_request_body(text: str) -> str:
+    lines = text.splitlines()
+    for index, line in enumerate(lines):
+        stripped = line.strip()
+        if stripped != "pull_request:" and not stripped.startswith("pull_request:"):
+            continue
+        if stripped.startswith("pull_request_target"):
+            continue
+        indent = len(line) - len(line.lstrip(" "))
+        inline = stripped[len("pull_request:") :].strip()
+        body = [inline] if inline else []
+        for nxt in lines[index + 1 :]:
+            if nxt.strip() == "":
+                continue
+            current = len(nxt) - len(nxt.lstrip(" "))
+            if current <= indent:
+                break
+            body.append(nxt.strip())
+        return "\n".join(body)
+    raise AssertionError("pull_request trigger is missing")
+
+
+def _assert_pull_request_unfiltered(text: str) -> None:
+    body = _pull_request_body(text)
+    for line in body.splitlines():
+        for key in PR_FILTERS:
+            if re.search(r"(?:^|[\s{,])" + re.escape(key), line):
+                raise AssertionError(f"pull_request gained {key}")
+
+
+def _scan_config_module():
+    path = ROOT / "scripts" / "scan-config.py"
+    spec = importlib.util.spec_from_file_location("scan_config", path)
+    if spec is None or spec.loader is None:
+        raise AssertionError("scan config script could not be loaded")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _rule_path_count(data: dict) -> int:
+    count = 0
+    for rule in data.get("rules", []):
+        groups = list(rule.get("allowlists") or [])
+        single = rule.get("allowlist")
+        if isinstance(single, dict):
+            groups.append(single)
+        count += sum(1 for group in groups if "paths" in group)
+    return count
+
+
+_TOOL: Path | None = None
+
+
+def _pinned_tool() -> Path:
+    global _TOOL
+    if _TOOL is not None and _TOOL.is_file():
+        return _TOOL
+    text = WORKFLOW.read_text(encoding="utf-8")
+    script = _named_step_script(text, SCAN_STEP)
+    match = re.search(r'url="([^"]+)"', script)
+    if match is None:
+        raise AssertionError("archive url missing")
+    url = match.group(1).replace("${version}", "8.30.1")
+    cache = Path(tempfile.gettempdir()) / "hygiene-scan-8.30.1"
+    cache.mkdir(exist_ok=True)
+    archive = cache / "archive.tar.gz"
+    tool = cache / "gitleaks"
+    if not tool.is_file():
+        subprocess.run(["curl", "-fsSL", "-o", str(archive), url], check=True)
+        checksum = subprocess.run(
+            ["sha256sum", "-c", "-"],
+            input=f"{ARCHIVE_SHA256}  {archive}\n",
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+        if checksum.returncode != 0:
+            raise AssertionError("pinned archive checksum failed")
+        subprocess.run(["tar", "-xzf", str(archive), "-C", str(cache), "gitleaks"], check=True)
+        tool.chmod(0o755)
+    _TOOL = tool
+    return tool
+
+
+def _integrity_sequence(workflow_text: str, mode: str) -> dict[str, object]:
+    tool = _pinned_tool()
+    archive = tool.parent / "archive.tar.gz"
+    if not archive.is_file():
+        raise AssertionError("pinned archive is missing from the tool cache")
+    extractor = _embedded_extractor(_named_step_script(workflow_text, SCAN_STEP))
+    generator = ROOT / "scripts" / "scan-config.py"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        binary = root / "gitleaks"
+        binary.write_bytes(tool.read_bytes())
+        embedded = root / "embedded-config.toml"
+        scan_config = root / "scan-config.toml"
+        if mode == "bad-script":
+            generator = root / "bad-scan-config.py"
+            generator.write_text(
+                "import pathlib\n"
+                "import sys\n"
+                "out = pathlib.Path(sys.argv[sys.argv.index('--output') + 1])\n"
+                "out.write_text('title = \"changed\"\\n', encoding='utf-8')\n",
+                encoding="utf-8",
+            )
+        shell = (
+            "set -euo pipefail\n"
+            'echo "$ARCHIVE_SHA256  $archive" | sha256sum -c -\n'
+            'if [ "$MODE" = "swap-before" ]; then printf \'x\' >> "$tool"; fi\n'
+            'echo "$BINARY_SHA256  $tool" | sha256sum -c -\n'
+            'python3 - "$tool" "$embedded" << \'PY\'\n'
+            + extractor
+            + "\nPY\n"
+            'python3 "$script" --input "$embedded" --output "$scan_config"\n'
+            'if [ "$MODE" = "edit-config" ]; then printf \'\\n# tamper\\n\' >> "$scan_config"; fi\n'
+            'if [ "$MODE" = "swap-after" ]; then printf \'x\' >> "$tool"; fi\n'
+            'echo "$SCAN_CONFIG_SHA256  $scan_config" | sha256sum -c -\n'
+            'echo "$BINARY_SHA256  $tool" | sha256sum -c -\n'
+        )
+        env = os.environ.copy()
+        env.update(
+            {
+                "ARCHIVE_SHA256": ARCHIVE_SHA256,
+                "BINARY_SHA256": BINARY_SHA256,
+                "SCAN_CONFIG_SHA256": SCAN_CONFIG_SHA256,
+                "MODE": mode,
+                "archive": str(archive),
+                "tool": str(binary),
+                "embedded": str(embedded),
+                "scan_config": str(scan_config),
+                "script": str(generator),
+            }
+        )
+        completed = subprocess.run(
+            ["bash", "-c", shell],
+            env=env,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        return {
+            "code": completed.returncode,
+            "report": completed.stdout + completed.stderr,
+            "config_exists": scan_config.exists(),
+        }
+
+
+def _runtime_token() -> str:
+    alphabet = "QPZRY9X8GF2TVDW0S3JN54KHCE6MUA7L"
+    return "AGE-SECRET-KEY-1" + "".join(secrets.choice(alphabet) for _ in range(58))
+
+
+def _scan_env() -> dict[str, str]:
+    env = os.environ.copy()
+    env.pop("GITLEAKS_CONFIG", None)
+    env.pop("GITLEAKS_CONFIG_TOML", None)
+    return env
+
+
+def _git(root: Path, *args: str, secret: str = "") -> None:
+    completed = subprocess.run(
+        ["git", "-C", str(root), *args],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if completed.returncode != 0:
+        err = completed.stderr.replace(secret, "<redacted>") if secret else completed.stderr
+        raise AssertionError("git command failed: " + err[:400])
 
 
 def _assert_no_inline(text: str) -> None:
@@ -973,6 +1324,412 @@ class HygieneWorkflowTests(unittest.TestCase):
             ),
             "continue-on-error on the unit-test step",
         )
+
+    def test_only_the_ci_config_path_is_allowed(self) -> None:
+        _assert_ci_config(self.text)
+        _assert_no_forbidden_flags(self.text)
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace('--config "${scan_config}"', "--config hidden.toml", 1),
+            "replace the CI config path",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace('--config "${scan_config}"', "--config=${scan_config}", 1),
+            "equals-form config flag",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace('--config "${scan_config}"', '-c "${scan_config}"', 1),
+            "short config flag with the CI path",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace('--config "${scan_config}"', "-c hidden.toml", 1),
+            "short config flag with another path",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace(DIR_CALL, DIR_CALL + " --config other.toml", 1),
+            "second config on the directory call",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace(GIT_CALL, GIT_CALL + ' --config "${scan_config}"', 1),
+            "second config on the git call",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace(SCAN_CONFIG_ASSIGN, 'scan_config="${RUNNER_TEMP}/other.toml"', 1),
+            "move the generated file inside the temp dir",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace(SCAN_CONFIG_ASSIGN, 'scan_config="./scan-config.toml"', 1),
+            "move the generated file into the checkout",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace('--output "${scan_config}"', '--output "./scan-config.toml"', 1),
+            "generator writes into the checkout",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace(
+                GEN_CALL,
+                GEN_CALL + '\n          cp "${scan_config}" ./scan-config.toml',
+                1,
+            ),
+            "copy the generated config into the checkout",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace(GEN_CALL + "\n", "", 1),
+            "drop the config generator",
+        )
+        _reject(
+            self,
+            _assert_ci_config,
+            self.text.replace(
+                'name: hygiene-check\n',
+                'name: hygiene-check\n\nenv:\n  useDefault: "true"\n',
+                1,
+            ),
+            "useDefault in the workflow",
+        )
+
+    def test_ci_config_pin_drops_global_paths(self) -> None:
+        self.assertIn(f'BINARY_SHA256: "{BINARY_SHA256}"', self.text)
+        self.assertIn(f'SCAN_CONFIG_SHA256: "{SCAN_CONFIG_SHA256}"', self.text)
+        self.assertNotIn("SOURCE_SHA256", self.text)
+        self.assertNotIn("--binary", self.text)
+        self.assertNotIn("allowlist", self.text)
+        module = _scan_config_module()
+        self.assertNotIn("useDefault = true", (ROOT / "scripts" / "scan-config.py").read_text(encoding="utf-8"))
+        fixture = (
+            "title = \"fixture\"\n"
+            "[allowlist]\n"
+            "description = \"global\"\n"
+            "paths = [\n"
+            "    '''skip-me''',\n"
+            "]\n"
+            "regexes = [\n"
+            "    '''^true$''',\n"
+            "]\n"
+            "[[rules]]\n"
+            "id = \"one\"\n"
+            "regex = '''abc'''\n"
+            "[[rules.allowlists]]\n"
+            "paths = [\n"
+            "    '''keep-me''',\n"
+            "]\n"
+        )
+        stripped = module.strip_global_paths(fixture)
+        parsed = tomllib.loads(stripped)
+        self.assertNotIn("paths", parsed["allowlist"])
+        self.assertEqual(parsed["rules"][0]["allowlists"][0]["paths"], ["keep-me"])
+        self.assertNotIn("skip-me", stripped)
+        tool = _pinned_tool()
+        self.assertEqual(hashlib.sha256(tool.read_bytes()).hexdigest(), BINARY_SHA256)
+        blob = module.extract_embedded_config(tool.read_bytes())
+        self.assertEqual(hashlib.sha256(blob).hexdigest(), SOURCE_SHA256)
+        built = module.render_config(blob)
+        self.assertEqual(hashlib.sha256(built).hexdigest(), SCAN_CONFIG_SHA256)
+        source = tomllib.loads(blob.decode("utf-8"))
+        result = tomllib.loads(built.decode("utf-8"))
+        self.assertEqual(len(source["allowlist"]["paths"]), 25)
+        self.assertNotIn("paths", result["allowlist"])
+        self.assertNotIn("extend", result)
+        self.assertEqual(len(result["rules"]), 222)
+        self.assertEqual(len(source["rules"]), len(result["rules"]))
+        self.assertEqual(_rule_path_count(source), _rule_path_count(result))
+        self.assertEqual(_rule_path_count(result), 3)
+        self.assertNotIn(b"useDefault", built)
+
+    def test_log_opts_pin_text_before_the_range(self) -> None:
+        _assert_text_before_range(self.text)
+        self.assertIn('--log-opts="--text ${range}"', self.text)
+        _reject(
+            self,
+            _assert_text_before_range,
+            self.text.replace('--log-opts="--text ${range}"', '--log-opts="${range}"', 1),
+            "drop --text",
+        )
+        _reject(
+            self,
+            _assert_text_before_range,
+            self.text.replace('--log-opts="--text ${range}"', '--log-opts="${range} --text"', 1),
+            "--text after the range",
+        )
+
+    def test_text_log_opt_sees_a_removed_token(self) -> None:
+        tool = _pinned_tool()
+        module = _scan_config_module()
+        token = _runtime_token()
+        with tempfile.TemporaryDirectory() as tmp:
+            outer = Path(tmp)
+            root = outer / "repo"
+            root.mkdir()
+            config = outer / "scan-config.toml"
+            config.write_bytes(module.render_config(module.extract_embedded_config(tool.read_bytes())))
+            _git(root, "init", "-q")
+            _git(root, "config", "user.email", "scan@localhost")
+            _git(root, "config", "user.name", "scan")
+            (root / "base.txt").write_text("base\n", encoding="utf-8")
+            _git(root, "add", "base.txt")
+            _git(root, "commit", "-q", "-m", "base")
+            base = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
+            (root / ".gitattributes").write_text("*.dat -diff\n", encoding="utf-8")
+            (root / "notes.dat").write_text(token + "\n", encoding="utf-8")
+            _git(root, "add", ".gitattributes", "notes.dat")
+            _git(root, "commit", "-q", "-m", "add", secret=token)
+            (root / "notes.dat").write_text("cleared\n", encoding="utf-8")
+            _git(root, "add", "notes.dat")
+            _git(root, "commit", "-q", "-m", "remove", secret=token)
+            head = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
+            self.assertFalse(token in (root / "notes.dat").read_text(encoding="utf-8"))
+            span = f"{base}..{head}"
+            without = self._range_scan(tool, root, config, span, token)
+            with_text = self._range_scan(tool, root, config, f"--text {span}", token)
+        self.assertEqual(without, 0)
+        self.assertEqual(with_text, 1)
+
+    def _range_scan(self, tool: Path, root: Path, config: Path, log_opts: str, token: str) -> int:
+        completed = subprocess.run(
+            [
+                str(tool),
+                "git",
+                ".",
+                "--no-banner",
+                "--redact",
+                "--ignore-gitleaks-allow",
+                "--config",
+                str(config),
+                f"--log-opts={log_opts}",
+            ],
+            cwd=root,
+            env=_scan_env(),
+            capture_output=True,
+            check=False,
+        )
+        if completed.returncode not in {0, 1}:
+            safe = (completed.stdout + completed.stderr).replace(token.encode(), b"<redacted>")
+            raise AssertionError(f"range scan failed: {safe[:300]!r}")
+        return completed.returncode
+
+    def test_scan_step_has_no_early_success_exit(self) -> None:
+        _assert_no_early_success(self.text)
+        _reject(
+            self,
+            _assert_no_early_success,
+            self.text.replace(
+                "          set -euo pipefail\n          unset GITLEAKS_CONFIG",
+                "          set -euo pipefail\n          exit 0\n          unset GITLEAKS_CONFIG",
+                1,
+            ),
+            "exit 0 before the scanner",
+        )
+        _reject(
+            self,
+            _assert_no_early_success,
+            self.text.replace(DIR_CALL + "\n", DIR_CALL + "\n          exit 0\n", 1),
+            "exit 0 between the scanner calls",
+        )
+
+    def test_range_is_not_cleared_before_the_git_call(self) -> None:
+        _assert_range_assignments(self.text)
+        _reject(
+            self,
+            _assert_range_assignments,
+            self.text.replace(GIT_CALL, 'range=""\n            ' + GIT_CALL, 1),
+            "clear range before the git call",
+        )
+        _reject(
+            self,
+            _assert_range_assignments,
+            self.text.replace(GIT_CALL, 'range="HEAD"\n            ' + GIT_CALL, 1),
+            "overwrite range before the git call",
+        )
+        _reject(
+            self,
+            _assert_range_assignments,
+            self.text.replace(GIT_CALL, "unset range\n            " + GIT_CALL, 1),
+            "unset range before the git call",
+        )
+        _reject(
+            self,
+            _assert_range_assignments,
+            self.text.replace('range="${BASE_SHA}..${HEAD_SHA}"', 'range=""', 1),
+            "clear the pull request range",
+        )
+
+    def test_pull_request_trigger_has_no_path_or_branch_filter(self) -> None:
+        _assert_pull_request_unfiltered(self.text)
+        self.assertIn("    branches: [main, \"cursor/**\"]", self.text)
+        for key in PR_FILTERS:
+            _reject(
+                self,
+                _assert_pull_request_unfiltered,
+                self.text.replace(
+                    "  pull_request:\n",
+                    f"  pull_request:\n    {key}\n      - '*'\n",
+                    1,
+                ),
+                f"{key} on pull_request",
+            )
+        _reject(
+            self,
+            _assert_pull_request_unfiltered,
+            self.text.replace("  pull_request:\n", "  pull_request: {paths: ['*']}\n", 1),
+            "inline paths filter",
+        )
+
+    def test_shell_checksums_stay_before_each_use(self) -> None:
+        _assert_shell_integrity(self.text)
+        first = "          " + BINARY_SUM + "\n          " + EXTRACT_CALL
+        second = "          " + BINARY_SUM + "\n          " + DIR_CALL
+        config_line = "          " + CONFIG_SUM + "\n"
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(first, "          " + EXTRACT_CALL, 1),
+            "remove the binary check that runs before the script",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(second, "          " + DIR_CALL, 1),
+            "remove the binary check that runs before the scanner",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(config_line, "", 1),
+            "remove the scan config check",
+        )
+        moved_first = self.text.replace(first, "          " + EXTRACT_CALL, 1).replace(
+            GEN_CALL,
+            GEN_CALL + "\n          " + BINARY_SUM,
+            1,
+        )
+        self.assertNotEqual(moved_first, self.text)
+        _reject(self, _assert_shell_integrity, moved_first, "move the first binary check to after the script")
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(second, "          " + DIR_CALL + "\n          " + BINARY_SUM, 1),
+            "move the second binary check to after the directory scan",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(config_line, "").replace(
+                DIR_CALL,
+                DIR_CALL + "\n          " + CONFIG_SUM,
+                1,
+            ),
+            "move the scan config check to after the directory scan",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(SUM_LINE + "\n          " + TAR_LINE, TAR_LINE + "\n          " + SUM_LINE, 1),
+            "move the archive check to after extract",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(first, "          " + BINARY_SUM + " || true\n          " + EXTRACT_CALL, 1),
+            "soften the first binary check",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(second, "          " + BINARY_SUM + " || :\n          " + DIR_CALL, 1),
+            "soften the second binary check",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(CONFIG_SUM, CONFIG_SUM + " || true", 1),
+            "soften the scan config check",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(SUM_LINE, SUM_LINE + " || true", 1),
+            "soften the archive check",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(
+                GEN_CALL,
+                'python3 scripts/scan-config.py --binary "${tool}" --input "${embedded}" --output "${scan_config}"',
+                1,
+            ),
+            "pass --binary to the checkout script",
+        )
+        _reject(
+            self,
+            _assert_shell_integrity,
+            self.text.replace(
+                GEN_CALL,
+                'python3 scripts/scan-config.py "${tool}" --input "${embedded}" --output "${scan_config}"',
+                1,
+            ),
+            "pass the binary path to the checkout script",
+        )
+
+    def test_tamper_fails_the_shell_checksums(self) -> None:
+        clean = _integrity_sequence(self.text, "clean")
+        self.assertEqual(clean["code"], 0, clean["report"])
+        self.assertTrue(clean["config_exists"])
+        bad_script = _integrity_sequence(self.text, "bad-script")
+        self.assertNotEqual(bad_script["code"], 0)
+        self.assertIn("FAILED", str(bad_script["report"]))
+        self.assertIn("scan-config.toml", str(bad_script["report"]))
+        self.assertTrue(bad_script["config_exists"])
+        edited = _integrity_sequence(self.text, "edit-config")
+        self.assertNotEqual(edited["code"], 0)
+        self.assertIn("FAILED", str(edited["report"]))
+        self.assertIn("scan-config.toml", str(edited["report"]))
+        self.assertTrue(edited["config_exists"])
+        before = _integrity_sequence(self.text, "swap-before")
+        self.assertNotEqual(before["code"], 0)
+        self.assertIn("FAILED", str(before["report"]))
+        self.assertIn("gitleaks", str(before["report"]))
+        self.assertFalse(before["config_exists"])
+        after = _integrity_sequence(self.text, "swap-after")
+        self.assertNotEqual(after["code"], 0)
+        self.assertIn("FAILED", str(after["report"]))
+        self.assertIn("gitleaks", str(after["report"]))
+        self.assertTrue(after["config_exists"])
+        refused = subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "scripts" / "scan-config.py"),
+                "--binary",
+                str(_pinned_tool()),
+                "--output",
+                "scan-config.toml",
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertNotEqual(refused.returncode, 0)
 
 
 if __name__ == "__main__":
