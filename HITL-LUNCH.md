@@ -15,7 +15,7 @@ Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). Install source of truth
 
 ## Exact files for the lunch zip
 
-**Drive Sep-2 zips and the mailed HITL pack v0.5.25 are stale.** Do not use Google Drive packs dated 2 Sep, and do not lunch-test the zip Sameth mailed this morning. Build from **this PR branch**. Marketplace publish still **Hold**.
+**Drive Sep-2 zips and the mailed HITL pack v0.5.25 are stale.** Do not use Google Drive packs dated 2 Sep, and do not lunch-test any zip mailed earlier. Build from **this PR branch**. Marketplace publish still **Hold**.
 
 Build four host zips so `SKILL.md` is at the **zip root**. Do not zip the whole git repo (that mixes packs and extra YAML).
 

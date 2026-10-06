@@ -6,6 +6,8 @@ All notable changes to the portable free edition. Hygiene only. Not legal advice
 
 Pointer data and a readiness intake sheet, on the current edition. The skill prepares materials only. It does not apply, submit, pay, file, or give a verdict. The verified date is unset, and the window note starts unverified. Intake item 4 keeps only names already public or filed. Intake item 7 is categories only. The publish gate names the owner. Evals stay 195. No refund line. No percent. No amount. No names.
 
+Gate follow-up: neutral wording in launch notes and demo playbook; hygiene eval count message fixed. Names on five earlier lines replaced with neutral roles.
+
 ## [0.5.50-free] — 2026-10-06
 
 Absorbed this Grok Build turn's live mailbox (after the 5 Oct v0.5.49 push: one workshop promo; no skill-feedback mail; no newer grok-export) plus vendor recrawl **6 Oct** on top of origin **v0.5.49-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No deal status. No customer story. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
@@ -943,7 +945,7 @@ Absorbed overnight research (handoff `/workspace/handoffs/sorticai-ip-sentinel-o
 - **Cursor install package.** `cursor-skill/` zip → project `.cursor/skills/sortic-ip-sentinel-free/`. Sync still `~/.cursor/skills/` only.
 - **Eval stamps.** Leftover `v0.5.14-free` L3 stamp strings aligned to **v0.5.17-free**. Current lunch stamp is `v0.5.25-free`.
 - **Drive Sep-2 zips are stale.** Lunch source is this PR branch.
-- **Grok Bot share pack.** `grok-bot-share/` = profile/skills/routines config only (`bot-template.json`). No secrets. Do not publish live overnight. Live marketplace publish stays **L3 for David/Sameth**.
+- **Grok Bot share pack.** `grok-bot-share/` = profile/skills/routines config only (`bot-template.json`). No secrets. Do not publish live overnight. Live marketplace publish stays **L3 for the owner/the coordinator**.
 - Evals **102** (100 never-bundle; 101 sidecar retrieve-only; 102 share-pack no secrets). Friedberg/Satya F1–F4 and T1–T5 unchanged.
 - Still free-only. Still not legal advice. No secrets.
 
@@ -1001,7 +1003,7 @@ Absorbed upgraded SKILL-surface research (handoff `/workspace/handoffs/skill-dee
 
 ## [0.5.20-free] — 2026-09-16
 
-Folded Friedberg × Satya deeper research into the lunch HITL skill (Sameth handoff files were not in this workspace; applied the user summary + Satya SoT https://snscratchpad.com/posts/reverse-information-paradox/ ). Origin **v0.5.19-free** Cursor Cloud / Grok allowed-tools / RAG kept.
+Folded an outside commentator × a guest speaker deeper research into the lunch HITL skill (the coordinator handoff files were not in this workspace; applied the user summary + a guest speaker SoT https://snscratchpad.com/posts/reverse-information-paradox/ ). Origin **v0.5.19-free** Cursor Cloud / Grok allowed-tools / RAG kept.
 
 ### Shared
 
@@ -1013,7 +1015,7 @@ Folded Friedberg × Satya deeper research into the lunch HITL skill (Sameth hand
 
 ## [0.5.19-free] — 2026-09-16
 
-Absorbed deeper SKILL-surface research (Sameth handoff summary — handoff file was not in this workspace). Origin **v0.5.18-free** lunch HITL + read-only RAG kept.
+Absorbed deeper SKILL-surface research (the coordinator handoff summary — handoff file was not in this workspace). Origin **v0.5.18-free** lunch HITL + read-only RAG kept.
 
 ### Shared
 
@@ -1562,7 +1564,7 @@ Patched from: david@vmcorp.cz Task Extractor brief **4 Sep 2026** (evidence-or-b
 
 ## [0.5.3-free] — 2026-09-04
 
-Patched from: david@vmcorp.cz Task Extractor briefs 1–3 Sep 2026 (Grok Bot operating rules: do not invent status; do not email third parties unless named); Headless Agent topics job (multi-agent / computer-use / collectible agents / skill development); adjacent IP-lawyer hourly prompt (sentinel remains hygiene-only, not the US IP corpus); OpenAI ChatGPT Skills / Codex docs (learn.chatgpt.com/docs/build-skills, crawled 2026-09-04); Anthropic skill-authoring checklist (platform.claude.com, crawled 2026-09-04); agentskills.io specification (name ≤64 kebab, description ≤1024, compatibility is env-only); Grok Bot guides + David’s 29–31 Aug ingest notes (Jason Clip Bot, browser-use, Bot with own computer); this Grok Build run. **No Grok chat-history connector exists**; Grok-chat insights are from those X/Bot notes, `grok -p` / Grok Build headless contract, and live automations.
+Patched from: the company inbox Task Extractor briefs 1–3 Sep 2026 (Grok Bot operating rules: do not invent status; do not email third parties unless named); Headless Agent topics job (multi-agent / computer-use / collectible agents / skill development); adjacent IP-lawyer hourly prompt (sentinel remains hygiene-only, not the US IP corpus); OpenAI ChatGPT Skills / Codex docs (learn.chatgpt.com/docs/build-skills, crawled 2026-09-04); Anthropic skill-authoring checklist (platform.claude.com, crawled 2026-09-04); agentskills.io specification (name ≤64 kebab, description ≤1024, compatibility is env-only); Grok Bot guides + the owner's 29–31 Aug ingest notes (an outside commentator Clip Bot, browser-use, Bot with own computer); this Grok Build run. **No Grok chat-history connector exists**; Grok-chat insights are from those X/Bot notes, `grok -p` / Grok Build headless contract, and live automations.
 
 ### OpenAI (first)
 
@@ -1596,7 +1598,7 @@ Patched from: david@vmcorp.cz Task Extractor briefs 1–3 Sep 2026 (Grok Bot ope
 
 ## [0.5.2-free] — 2026-09-03
 
-Patched from: emails (david@vmcorp.cz, 17 Aug–3 Sep 2026) including Task Extractor 2 Sep (this job), Kristína Chytrá counsel comments 2 Sep 12:48 UTC (Reg-Radar writing, applied as **hygiene language** only), LangChain Deep Agents v0.7 (26 Aug), OpenAI ChatGPT Skills / Codex docs (learn.chatgpt.com/docs/build-skills, crawled 2026-09-01), Anthropic Agent Skills best-practices checklist (platform.claude.com, crawled 2026-09-02), agentskills.io specification (name/description constraints; `compatibility` is env-only), Microsoft Agent Framework skills (25 Aug), Headless Agent topics automation prompt, Velvethy field note *The description is the trigger*, and this Grok Build run. **No Grok chat-history connector exists**; Grok-chat insights are from live automations (this job + adjacent 08:10 IP Radar / 08:40 SKILL.md best-practices schedules), `grok -p` / Grok Build headless contract, and X posts 21 Aug–2 Sep 2026 on skills.
+Patched from: emails (the company inbox, 17 Aug–3 Sep 2026) including Task Extractor 2 Sep (this job), outside counsel comments 2 Sep 12:48 UTC (Reg-Radar writing, applied as **hygiene language** only), LangChain Deep Agents v0.7 (26 Aug), OpenAI ChatGPT Skills / Codex docs (learn.chatgpt.com/docs/build-skills, crawled 2026-09-01), Anthropic Agent Skills best-practices checklist (platform.claude.com, crawled 2026-09-02), agentskills.io specification (name/description constraints; `compatibility` is env-only), Microsoft Agent Framework skills (25 Aug), Headless Agent topics automation prompt, an outside commentator field note *The description is the trigger*, and this Grok Build run. **No Grok chat-history connector exists**; Grok-chat insights are from live automations (this job + adjacent 08:10 IP Radar / 08:40 SKILL.md best-practices schedules), `grok -p` / Grok Build headless contract, and X posts 21 Aug–2 Sep 2026 on skills.
 
 ### OpenAI (first)
 
