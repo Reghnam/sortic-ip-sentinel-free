@@ -15,7 +15,9 @@ This is a **hygiene package**, not a commercial case file. No prices, no counsel
 
 Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Apply `output-language-hygiene.md` (procedural verbs; no invented deadlines; no invented status; no "verified").
 
-## Schema (emit exactly these keys)
+## Schema (emit exactly these keys, plus `sme_fund_pointer` only when the pointer fired)
+
+Emit exactly the keys in the block below. Add the optional top-level key `sme_fund_pointer` only when the SME Fund pointer fired. When the pointer did not fire, omit that key. The object is then the keys in the block below, in that order, and nothing else. Do not emit the key as null. Schema stays `sorticai.hygiene_package.v1`. Append `sme_fund_pointer` after `sources_note` when it is present.
 
 ```json
 {
@@ -50,6 +52,108 @@ Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Appl
   "sources_note": "High-level summaries only: EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles. Public URLs located are not 'verified sources'."
 }
 ```
+
+### Optional key `sme_fund_pointer`
+
+Emit this key only when the pointer fired under `references/sme-fund-pointer-and-intake.md`. The emitted object sets `fired` to true. Do not emit the key when that would be false. A network or port scan does not fire the pointer.
+
+`level` is `L2` or `L3` from those firing rules. On an L2 turn that does not emit this package, keep the pointer as prose in that file and do not emit this key by itself. Copy `instrument_label`, `window_status`, `window_note`, `last_verified`, and `sources` from `references/sme-fund-window.json`. `window_status` uses that file's enum: `closed_reopening_expected`, `open`, or `unknown`. The data file stores `stale_after_days`. This object stores the derived boolean `stale` instead.
+
+A pipe list in the example is the set of allowed values. Emit one value, not the pipe characters. A live `last_verified` is the data file's value: JSON null, or one date string. Do not emit the type phrase from the example. Copy `window_note` and `sources` from the data file. The example sentence and the example source item are placeholders.
+
+Headless defaults stay options 1 and 8. The numbered catalog stays 8 options. This key is not a ninth option. `show_hold_map_exists` points at catalog option 1. `contribution_log_started` inside the sheet points at catalog option 3.
+
+### Field list
+
+`sme_fund_pointer`:
+
+- `fired`
+- `level`
+- `instrument_label`
+- `window_status`
+- `window_note`
+- `last_verified`
+- `stale`
+- `sources`
+- `provider_must_be_listed`
+- `reimbursement_claim`
+- `intake_sheet`
+- `not_the_official_report`
+
+`sources`:
+
+- `label`
+- `url`
+
+`intake_sheet`:
+
+- `offered`
+- `included`
+- `fields`
+
+`fields`:
+
+- `sme_status_evidence`
+- `vat_certificate_ready`
+- `bank_confirmation_ready`
+- `asset_names`
+- `show_hold_map_exists`
+- `contribution_log_started`
+- `public_next_90_days`
+- `prior_disclosure_or_filing`
+- `preferred_listed_expert`
+
+The nine `fields` keys follow the numbered readiness items in `references/sme-fund-pointer-and-intake.md`, in that order. That file spells the items in prose. The data file does not name them. These are the JSON names.
+
+### Example
+
+The block is the shape. It is not a live snapshot of the window file.
+
+```json
+{
+  "sme_fund_pointer": {
+    "fired": true,
+    "level": "L2 | L3",
+    "instrument_label": "EUIPO SME Fund, IP Scan voucher",
+    "window_status": "closed_reopening_expected | open | unknown",
+    "window_note": "one plain sentence from references/sme-fund-window.json",
+    "last_verified": "YYYY-MM-DD or null",
+    "stale": false,
+    "sources": [
+      {"label": "...", "url": "https://..."}
+    ],
+    "provider_must_be_listed": true,
+    "reimbursement_claim": "none",
+    "intake_sheet": {
+      "offered": true,
+      "included": false,
+      "fields": {
+        "sme_status_evidence": "yes | no | unsure",
+        "vat_certificate_ready": "yes | no",
+        "bank_confirmation_ready": "yes | no",
+        "asset_names": ["..."],
+        "show_hold_map_exists": "yes | no",
+        "contribution_log_started": "yes | no",
+        "public_next_90_days": "short text",
+        "prior_disclosure_or_filing": "yes | no | unsure",
+        "preferred_listed_expert": ""
+      }
+    },
+    "not_the_official_report": true
+  }
+}
+```
+
+### Pointer rules
+
+- `reimbursement_claim` is always the string `none`.
+- `preferred_listed_expert` is always the empty string. Leave it blank even when the user names someone.
+- No percent, no amount, and no provider name in any value.
+- `stale` is true when `last_verified` is null or older than `stale_after_days` in `references/sme-fund-window.json`. Older means the whole days since that date are greater than `stale_after_days`. This `stale` flag is the window date, not schedule metadata. When `stale` is true, say the status may be out of date and tell the user to open the live page first. Do not print a confident closed status.
+- Technical parameters pasted by the user never go into `intake_sheet`. Point to the show/hold map. Do not copy numbers, recipes, formulas, code, or client data into the sheet.
+- `provider_must_be_listed` is true. `not_the_official_report` is true. This key is not an IP Scan, not a filing, and not legal advice.
+- `intake_sheet.offered` and `intake_sheet.included` are booleans. The example shows a sheet that was offered and not filled. `included` is true only when the user answered the fields this turn.
+- `sme_status_evidence` and `prior_disclosure_or_filing` are `yes`, `no`, or `unsure`. `vat_certificate_ready`, `bank_confirmation_ready`, `show_hold_map_exists`, and `contribution_log_started` are `yes` or `no`. `asset_names` is a list of names. `public_next_90_days` is short text, categories only.
 
 ## Rules
 
