@@ -5,6 +5,7 @@ from __future__ import annotations
 import importlib.util
 import sys
 import tempfile
+import time
 import unittest
 from pathlib import Path
 
@@ -167,6 +168,72 @@ class ShareLinkFamilyTests(unittest.TestCase):
         text = (ROOT / "SKILL.md").read_text(encoding="utf-8")
         self.assertIn("/share/" + ELLIPSIS, text)
         self.assertEqual(zipscan.share_link_lines(text), [])
+
+
+# Host, share prefix, and a separator that reaches the open-ended piece.
+# A space blocks an id. "?" and "&" sit inside the query and path runs.
+_REPEAT_UNITS = (
+    ("grok\\.com", "grok.com/share/ "),
+    ("/c/", "chatgpt.com/c/ "),
+    ("chatgpt\\.com(?![A-Za-z0-9.-])/share/", "chatgpt.com/share/ "),
+    ("chat\\.openai\\.com", "chat.openai.com/share/ "),
+    ("/chat/", "claude.ai/chat/ "),
+    ("claude\\.ai(?![A-Za-z0-9.-])/share/", "claude.ai/share/ "),
+    ("x\\.com", "x.com/i/grok/share/ "),
+    ("(?:s|sh|scl/(?:fi|fo))", "dropbox.com/s/ "),
+    ("rlkey=", "dropbox.com/s/?&"),
+    ("s!", "1drv.ms/a/&"),
+    ("{7,200}", "1drv.ms/abc "),
+    ("onedrive\\.live\\.com(?![A-Za-z0-9.-])/:[A-Za-z]:/", "onedrive.live.com/:a:/&"),
+    ("resid|authkey", "onedrive.live.com?&"),
+    ("sharepoint\\.com(?![A-Za-z0-9.-])/:[A-Za-z]:/", "sharepoint.com/:a:/&"),
+    ("guestaccess\\.aspx", "sharepoint.com/&"),
+)
+
+# One near-miss line per host family. The separator is the slow shape for that family.
+_FAMILY_UNITS = (
+    "grok.com/share/ ",
+    "chatgpt.com/share/ ",
+    "chat.openai.com/share/ ",
+    "claude.ai/share/ ",
+    "x.com/i/grok/share/ ",
+    "dropbox.com/s/?&",
+    "1drv.ms/a/&",
+    "onedrive.live.com?&",
+    "sharepoint.com/&",
+)
+
+
+def _repeat(unit: str, length: int = 100_000) -> str:
+    copies = (length + len(unit) - 1) // len(unit)
+    return unit * copies
+
+
+class ShareLinkRepeatTests(unittest.TestCase):
+    def test_each_pattern_finishes_on_a_repeated_host(self) -> None:
+        patterns = zipscan._SHARE_LINK
+        self.assertEqual(len(patterns), len(_REPEAT_UNITS))
+        for pattern, (marker, unit) in zip(patterns, _REPEAT_UNITS):
+            self.assertIn(marker, pattern.pattern)
+            line = _repeat(unit)
+            self.assertGreaterEqual(len(line), 100_000)
+            best = None
+            found = None
+            for _ in range(3):
+                started = time.perf_counter()
+                found = pattern.search(line)
+                elapsed = time.perf_counter() - started
+                if best is None or elapsed < best:
+                    best = elapsed
+            self.assertIsNone(found, unit)
+            self.assertLess(best, 0.250, f"{unit!r} took {best * 1000:.1f} ms")
+
+    def test_adversarial_family_line_is_not_a_share_link(self) -> None:
+        self.assertEqual(len(_FAMILY_UNITS), 9)
+        for unit in _FAMILY_UNITS:
+            line = _repeat(unit)
+            self.assertGreaterEqual(len(line), 100_000)
+            self.assertFalse(zipscan.line_has_share_link(line), unit)
 
 
 if __name__ == "__main__":
