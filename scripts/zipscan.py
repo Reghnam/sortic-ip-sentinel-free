@@ -70,29 +70,37 @@ _EXACT_BASENAMES = frozenset(
     }
 )
 
-PUBLIC_MAILBOX_DOMAINS = frozenset(
-    {
-        "gmail.com",
-        "googlemail.com",
-        "outlook.com",
-        "hotmail.com",
-        "live.com",
-        "yahoo.com",
-        "yahoo.co.uk",
-        "icloud.com",
-        "me.com",
-        "proton.me",
-        "protonmail.com",
-        "pm.me",
-        "aol.com",
-        "gmx.com",
-        "gmx.de",
-        "users.noreply.github.com",
-    }
-)
+# An address is allowed only when it is a noreply role mailbox.
+# The local part is compared before any plus-tag. One noreply domain
+# stays on the list because its local part is an id, not the role name.
+_NOREPLY_LOCALS = frozenset({"noreply", "no-reply"})
+_NOREPLY_DOMAINS = frozenset({"users.noreply.github.com"})
 
 _EMAIL_RE = re.compile(
-    r"(?i)(?<![A-Za-z0-9._%+\-])[A-Za-z0-9._%+\-]+@((?:[A-Za-z0-9\-]+\.)+[A-Za-z]{2,})"
+    r"(?i)(?<![A-Za-z0-9._%+\-])([A-Za-z0-9._%+\-]+)@((?:[A-Za-z0-9\-]+\.)+[A-Za-z]{2,})"
+)
+
+
+def _link_pattern(labels: tuple[str, ...], path: str = "") -> re.Pattern[str]:
+    host = r"\.".join(re.escape(label) for label in labels)
+    if path:
+        # A share path must not match a longer word such as "shared".
+        tail = re.escape(path) + ("" if path.endswith("/") else r"(?![A-Za-z0-9])")
+    else:
+        tail = r"(?![A-Za-z0-9.-])"
+    return re.compile(
+        r"(?i)(?<![A-Za-z0-9@./-])(?:https?://)?(?:www\.)?" + host + tail
+    )
+
+
+_CHAT_SHARE = (
+    _link_pattern(("grok", "com"), "/c/"),
+    _link_pattern(("chatgpt", "com"), "/share"),
+    _link_pattern(("claude", "ai"), "/share"),
+)
+_CLOUD_DRIVE = (
+    _link_pattern(("drive", "google", "com")),
+    _link_pattern(("docs", "google", "com")),
 )
 _PATH_RE = re.compile(r"/Users/|/home/|C:\\Users|C:/Users|handoffs/|/workspace/")
 
@@ -207,13 +215,30 @@ def _layout_errors(names: list[str]) -> list[str]:
     return errors
 
 
-def _company_emails(text: str) -> int:
+def _disallowed_emails(text: str) -> int:
     found = 0
     for match in _EMAIL_RE.finditer(text):
-        domain = match.group(1).lower().rstrip(".")
-        if domain not in PUBLIC_MAILBOX_DOMAINS:
-            found += 1
+        local = match.group(1).lower().split("+", 1)[0]
+        domain = match.group(2).lower().rstrip(".")
+        if local in _NOREPLY_LOCALS or domain in _NOREPLY_DOMAINS:
+            continue
+        found += 1
     return found
+
+
+def _pattern_hits(text: str, patterns: tuple[re.Pattern[str], ...]) -> int:
+    return sum(len(pattern.findall(text)) for pattern in patterns)
+
+
+def _extra_pattern_numbers(text: str, patterns: list[re.Pattern[str]]) -> list[int]:
+    if not patterns:
+        return []
+    lines = text.splitlines() or [text]
+    hits: list[int] = []
+    for index, pattern in enumerate(patterns, 1):
+        if any(pattern.search(line) for line in lines):
+            hits.append(index)
+    return hits
 
 
 def scan_zip(
@@ -223,6 +248,7 @@ def scan_zip(
     legacy_paths: set[str] | None = None,
     max_files: int = MAX_FILES,
     max_uncompressed: int = MAX_UNCOMPRESSED,
+    extra_patterns: list[re.Pattern[str]] | None = None,
 ) -> ScanResult:
     result = ScanResult()
     legacy = set(legacy_paths) if legacy_paths is not None else legacy_paths_for(pack)
@@ -300,9 +326,17 @@ def scan_zip(
             paths = _PATH_RE.findall(text)
             if paths:
                 result.failures.append(f"local-path: {name} ({len(paths)})")
-            emails = _company_emails(text)
+            emails = _disallowed_emails(text)
             if emails:
-                result.failures.append(f"company-email: {name} ({emails})")
+                result.failures.append(f"email: {name} ({emails})")
+            shares = _pattern_hits(text, _CHAT_SHARE)
+            if shares:
+                result.failures.append(f"chat-share: {name} ({shares})")
+            drives = _pattern_hits(text, _CLOUD_DRIVE)
+            if drives:
+                result.failures.append(f"cloud-drive: {name} ({drives})")
+            for number in _extra_pattern_numbers(text, list(extra_patterns or [])):
+                result.failures.append(f"extra-pattern #{number}: {name}")
             corpus_hits = CORPUS_RE.findall(text)
             if not corpus_hits:
                 continue
