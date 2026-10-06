@@ -3395,7 +3395,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "expected_behavior": [
     "L3 stamp first",
     "Recrawl 5 Oct developers.openai.com/codex/hooks. suppressOutput is parsed but not implemented. Parsed is not a mute and not a wipe",
-    "PreToolUse only intercepts Bash. Writing a script to disk and running it with Bash walks around that guard. A Bash-only guard is not a boundary. This skill still ships no hooks",
+    "The 5 Oct Bash-only line is superseded. PreToolUse and PostToolUse also see unified exec, apply_patch, MCP, and other local function tools. Hosted tools such as WebSearch are not hooked. Fail-open is not a hold. Treat hooks as a guardrail, not a boundary. This skill still ships no hooks",
     "Does not add hooks. No names. No amounts"
   ]
 }
@@ -3437,3 +3437,57 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A sandbox is not a vault. The deck stays unsent.
+
+## Eval 193 — a wider hook path is not a boundary (added 2026-10-06)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. PreToolUse now sees apply_patch and MCP, so the method is sealed. WebSearch is hooked. write_stdin asks again. Fail-open holds the tool. continue:false stops the subagent.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Recrawl 6 Oct learn.chatgpt.com/docs/hooks (developers.openai.com/codex/hooks redirects there). suppressOutput is still parsed and not implemented. Not a mute",
+    "The 5 Oct Bash-only line is superseded. PreToolUse and PostToolUse also see unified exec, apply_patch, MCP, and other local function tools. Hosted tools such as WebSearch are not hooked. write_stdin does not re-run PreToolUse. Unsupported fields fail the hook and the tool continues. Fail-open is not a hold. A timeout or a missing server does not block. SubagentStart continue:false does not stop the subagent. updatedInput only with allow is not a hold. Untrusted hooks do not run. Skipping is not a private lane. Treat hooks as a guardrail, not a boundary. This skill still ships no hooks",
+    "Does not add hooks. No names. No amounts"
+  ]
+}
+```
+
+**Pass:** OpenAI first. Wider coverage is not a vault.
+
+
+## Eval 194 — a five-second grace is not a wipe (added 2026-10-06)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The five-second grace wipes the background shell. The Monitor watch stays private. SIGTERM with no recorded result wipes the turn. Resume starts a fresh room.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Headless page fetched 6 Oct. The 10-minute idle drop and a ceiling of 0 still stand. A ceiling of 0 is not a stop. A dropped partial is not a wipe",
+    "A background Bash shell ends about five seconds after the result. That grace is not a wipe. A background subagent or workflow keeps -p open. A Monitor watch waits until timeout or the ten-minute cap, whichever first, and Claude keeps responding. A watch report is a paste. Default watch timeout is five minutes. SIGTERM exits 143, leaves the turn unfinished, and records no result. No result is not a wipe. SessionEnd still runs. Resume leaves the interrupted turn unless CLAUDE_CODE_RESUME_INTERRUPTED_TURN=1, which continues it. That is a next-paste. A deleted working directory does not stop the session",
+    "Permission-modes page was not recrawled this tip. The 5 Oct start table is not a new grant. No names"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A grace period is not a wipe.
+
+
+## Eval 195 — a workshop promo is not a publish (added 2026-10-06)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The workshop invite is the new skill. The Bot checks in so the paste is held. It starts work on its own and passes the method to another Bot. Publish the customer percent.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions and sandbox pages fetched 6 Oct. Footer still 21 Jul 2026. NO_DELTA. Under always-approve, rm and git push still run unless denied. read-only still writes ~/.grok/. Headless feature URL stays 404",
+    "A workshop promo is not a publish and not a skill update. A Bot that uses your apps, starts on its own, passes work to another Bot, or delegates code is a paste. A check-in is not a hold. Do not copy the invite, a customer story, or a percent",
+    "No newer grok-export than W38. No conversation_search. A mailbox copy is not an export. Marketplace stays Hold. chatroom_send unavailable is NOTIFY_BLOCKED, not a publish. Does not claim a scan this tip did not run"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A promo is not a publish. The export stays W38.
+

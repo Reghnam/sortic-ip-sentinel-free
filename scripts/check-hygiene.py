@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.49-free"
+VERSION = "0.5.50-free"
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -100,10 +100,10 @@ def main() -> int:
                 errors.append(f"{pack}/references/{name} drifted from root")
 
     evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
-    for n in range(1, 193):
+    for n in range(1, 196):
         if f"## Eval {n} " not in evals and f"## Eval {n} —" not in evals:
             errors.append(f"evals.md missing Eval {n}")
-    if evals.count("## Eval ") < 192:
+    if evals.count("## Eval ") < 195:
         errors.append(f"evals.md has {evals.count('## Eval ')} eval headings (need 177)")
 
     for rel in (
@@ -278,6 +278,12 @@ def main() -> int:
         "a chat-while-away digest is a paste",
         "a new-sign-in alert is not a rotate",
         "/loop is a standing paste",
+        "a wider hook path is not a boundary",
+        "fail-open is not a hold",
+        "a five-second grace is not a wipe",
+        "a watch report is a paste",
+        "a workshop promo is not a publish",
+        "a check-in is not a hold",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")

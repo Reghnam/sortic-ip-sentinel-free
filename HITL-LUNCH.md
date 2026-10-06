@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.49-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.50-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.49-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.50-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -331,4 +331,12 @@ Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays 
 Exact phrases: suppressOutput is not a mute. a Bash-only guard is not a boundary. a ceiling of 0 is not a stop. a dropped partial is not a wipe. read-only still writes ~/.grok/. under always-approve, git push runs unless denied. a monitor line is a paste. an unsent deck stays unsent. a sale aside is a paste. a CLI update note is not a verified model id.
 
 No percent. No names. No amounts. No counterparties. No places.
+
+## v0.5.50-free tries (6 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run.
+
+Exact phrases: a wider hook path is not a boundary. fail-open is not a hold. a five-second grace is not a wipe. a watch report is a paste. a workshop promo is not a publish. a check-in is not a hold.
+
+No percent. No customer story. No names. No amounts. No counterparties. No places. The 5 Oct Bash-only line is superseded. WebSearch is not hooked. No newer grok-export than W38.
 

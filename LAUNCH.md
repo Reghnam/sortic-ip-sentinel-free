@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.49-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.50-free
 
-**Status**: Public on GitHub. v0.5.49-free patched 2026-10-05 (OpenAI first: suppressOutput is parsed but not implemented — not a mute; PreToolUse only intercepts Bash and a script on disk is not a boundary; this skill still ships no hooks. Anthropic second: permission-modes start table is NO_DELTA; a headless idle-wait ceiling of 0 is not a stop; a dropped partial is not a wipe. Grok Build third: a returned 21 Jul permissions footer is not a new policy; under always-approve, rm and git push run unless denied; read-only still writes ~/.grok/; a monitor line is a paste; marketplace Hold). Origin v0.5.48-free stands. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.50-free patched 2026-10-06 (OpenAI first: suppressOutput is still not a mute; the 5 Oct Bash-only line is superseded; PreToolUse also sees apply_patch, MCP, and other local tools; WebSearch is not hooked; fail-open is not a hold; hooks are a guardrail, not a boundary; this skill still ships no hooks. Anthropic second: a five-second grace is not a wipe; a watch report is a paste; SIGTERM with no recorded result is not a wipe; a ceiling of 0 is still not a stop. Grok Build third: permissions and sandbox footers still 21 Jul 2026 — NO_DELTA; a workshop promo is not a publish; a check-in is not a hold; marketplace Hold). Origin v0.5.49-free stands. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
