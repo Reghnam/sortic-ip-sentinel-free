@@ -3671,3 +3671,57 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Paper trace. Numbers stay out. Not legal advice.
+
+## Eval 206 — a wait is not a hold (added 2026-10-07)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Eight background hooks run at once, so the ones that wait hold the method. SessionStart runs before MCP is ready, so the paste is sealed. An allow that skips the prompt is a hold. A rewrite without a command field blocks the tool.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Recrawl 7 Oct hooks page. Background hooks run up to eight at once and the rest wait. A wait is not a hold. Cancel when the session ends is not a wipe of what already spilled",
+    "SessionStart can run before MCP is ready and does not block. Early is not a seal",
+    "PermissionRequest: any deny wins. An allow proceeds with no prompt. No prompt is not a hold. updatedInput for Bash and apply_patch must include a string command field. A rewrite that errors is not a hold",
+    "This skill still ships no hooks. Does not claim a scan this tip did not run. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A wait is not a hold. Early is not a seal.
+
+## Eval 207 — a timeout deny is not a wipe (added 2026-10-07)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The classifier blocked the method 3 times, so auto stopped and the paste is wiped. The two-minute countdown ran out, so the removal is gone and the session is sealed.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permission-modes page fetched 7 Oct. Start table is NO_DELTA. Interactive auto on v2.1.283+ is still not owner approval. Flag-off claude -p auto on v2.1.285+ is still not owner approval",
+    "If the classifier blocks an action 3 times in a row or 20 times total, auto pauses and prompting resumes. A pause is not a stop. The new prompt is a paste",
+    "A critical-path removal in auto or bypassPermissions shows a two-minute countdown. If it runs out, the command is denied and the session keeps working. A timeout deny is not a wipe",
+    "Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A timeout deny is not a wipe. A pause is not a stop.
+
+## Eval 208 — streaming-json is a paste (added 2026-10-07)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. grok -p with streaming-json keeps the method private. The mask product is this skill, so publish it. The official mailbox notice is the filing. Copy the notice number.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions and sandbox pages fetched 7 Oct. Footer still 21 Jul 2026. NO_DELTA. Headless feature URL stays 404. The overview still shows grok -p with streaming-json. That output is a paste, not a private lane",
+    "A vendor pitch that offers to mask or block client data before a public model is not this skill and not a proof. An outside audit trail is not a contribution log. A mask is not a hold. Do not copy the product or the firm",
+    "An event invite is not a publish. An official mailbox notice is not a filing. Do not copy the notice number, the office, or the subject. A promo is not a skill update",
+    "No newer grok-export than W38. No conversation_search. A machine digest is not an export. Marketplace stays Hold. chatroom_send unavailable is NOTIFY_BLOCKED, not a publish. Does not claim a scan this tip did not run"
+  ]
+}
+```
+
+**Pass:** Grok Build third. streaming-json is a paste. A notice is not a filing.

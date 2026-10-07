@@ -130,6 +130,9 @@ def _share_patterns() -> tuple[re.Pattern[str], ...]:
     gid = _SHARE_ID
     pieces = (
         _share_host(("grok", "com")) + r"/share/" + gid,
+        # Chat-conversation path. The zip-only list already matches it.
+        # Tree scans use this shared list, so the id form has to live here too.
+        _share_host(("grok", "com")) + r"/c/" + gid,
         _share_host(("chatgpt", "com")) + r"/c/" + gid,
         _share_host(("chatgpt", "com")) + r"/share/" + gid,
         _share_host(("chat", "openai", "com")) + r"/share/" + gid,
@@ -179,6 +182,24 @@ def share_link_lines(text: str) -> list[int]:
 
 def share_link_finding(name: str, lineno: int) -> str:
     return f"share link in {name}:{lineno}"
+
+
+def text_leak_findings(name: str, text: str) -> list[str]:
+    """Path, disallowed-email, and id-bearing share-link findings.
+
+    Callers outside the zip scan use this so they share ``_PATH_RE``,
+    ``_disallowed_emails``, and ``_SHARE_LINK`` instead of a second copy.
+    """
+    findings: list[str] = []
+    paths = _PATH_RE.findall(text)
+    if paths:
+        findings.append(f"local-path: {name} ({len(paths)})")
+    emails = _disallowed_emails(text)
+    if emails:
+        findings.append(f"email: {name} ({emails})")
+    for lineno in share_link_lines(text):
+        findings.append(share_link_finding(name, lineno))
+    return findings
 
 
 def _secret_re() -> re.Pattern[str]:
@@ -399,17 +420,10 @@ def scan_zip(
             text = data.decode("utf-8", "replace")
             if SECRET_RE.search(text):
                 result.failures.append(f"secret-token: {name}")
-            paths = _PATH_RE.findall(text)
-            if paths:
-                result.failures.append(f"local-path: {name} ({len(paths)})")
-            emails = _disallowed_emails(text)
-            if emails:
-                result.failures.append(f"email: {name} ({emails})")
+            result.failures.extend(text_leak_findings(name, text))
             shares = _pattern_hits(text, _CHAT_SHARE)
             if shares:
                 result.failures.append(f"chat-share: {name} ({shares})")
-            for lineno in share_link_lines(text):
-                result.failures.append(share_link_finding(name, lineno))
             drives = _pattern_hits(text, _CLOUD_DRIVE)
             if drives:
                 result.failures.append(f"cloud-drive: {name} ({drives})")

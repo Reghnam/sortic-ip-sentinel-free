@@ -2,6 +2,46 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.52-free] — 2026-10-07
+
+Absorbed this Grok Build turn's live mailbox (after the 6 Oct v0.5.51 push: a vendor pitch about masking client data before a public model, an event invite, a promo, a cancelled hold, a chat-while-away line, a trial-end note, and an official mailbox notice; no skill-feedback mail; no newer grok-export) plus one older machine digest (not an export) plus vendor recrawl **7 Oct** on top of origin **v0.5.51-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A machine digest is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No notice numbers. No offices. No product names. No terms text. No payment status. No amounts. No seat counts. No places. No host names. No serials. No deal status. No customer story. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Recrawl 2026-10-07 **learn.chatgpt.com/docs/hooks**. No page date. Spill, compact, block, suppressOutput, and the wider path stand. This skill still ships **no hooks**.
+- **Still:** suppressOutput is parsed and not implemented. Wider PreToolUse coverage is not a boundary. Fail-open is not a hold. WebSearch is not hooked. `write_stdin` does not re-run PreToolUse. Untrusted hooks do not run.
+- **New:** background hooks run up to eight at once per session. Additional hooks wait. A wait is not a hold. When the session ends, unfinished background hooks are cancelled. Cancel is not a wipe of what already spilled.
+- **New:** SessionStart can run before an MCP server is ready and does not block the session. Early is not a seal.
+- **New:** if several PermissionRequest hooks decide, any deny wins. Otherwise an allow proceeds with no approval prompt. No prompt is not a hold.
+- **New:** for Bash and apply_patch, updatedInput must include a string command field. A rewrite that errors is not a hold.
+- Evals **206**.
+
+### Anthropic (second)
+
+- Permission-modes page fetched 7 Oct. **NO_DELTA** on the start table. Interactive terminal and VS Code on v2.1.283+ still start in auto. Flag-off `claude -p` still starts in auto on v2.1.285+. That auto is still not owner approval.
+- **New:** if the classifier blocks an action 3 times in a row or 20 times total, auto pauses and prompting resumes. A pause is not a stop. The new prompt is a paste. Approving that prompt resumes auto for the next action. That approval is not a grant for the method.
+- **New:** in auto and bypassPermissions, a critical-path removal shows a two-minute countdown. If it runs out, the command is denied and the session keeps working. A timeout deny is not a wipe. An unattended session that keeps working is a next paste.
+- Evals **207**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Permissions and sandbox pages fetched 7 Oct. Footer is **21 Jul 2026** again. A returned footer is not a new policy. The cycle is **NO_DELTA**. Under always-approve, `rm` and `git push` still run unless a deny is set. `read-only` still writes `~/.grok/`. Sandbox stays off by default.
+- Headless feature URL stays **404**. The overview still documents `grok -p` with `--output-format streaming-json`. That output is a paste, not a private lane. A documented one-shot is not a seal.
+- No newer grok-export than W38. A machine digest on Drive is not an export. Do not copy host names, serials, local paths, or schedules.
+- **Mailbox, unnamed:** a vendor pitch that offers to mask or block client data before a public model is not this skill and not a proof. An outside audit trail is not a contribution log. A mask is not a hold. Do not copy the product or the firm. An event invite is not a publish. A promo is not a skill update. A cancelled hold is not a transcript. A chat-while-away line is a paste. A trial-end note is billing, not approval to pay. An official mailbox notice is not a filing. Do not copy the notice number, the office, or the subject.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **208**.
+
+### Shared
+
+- **A wait is not a hold.** Early SessionStart is not a seal. No prompt is not a hold. A rewrite that errors is not a hold.
+- **A pause is not a stop.** A timeout deny is not a wipe. The 7 Oct start table is NO_DELTA.
+- **streaming-json is a paste.** A returned 21 Jul footer is not a new policy. A vendor mask pitch is not this skill. An official mailbox notice is not a filing.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **208**. HITL F1–F28 + T1–T32 required on every claimed stack. This tip adds T33 (wait + timeout deny + streaming-json + mask pitch + mailbox notice).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.51-free] — 2026-10-06
 
 Pointer data and a readiness intake sheet, on the current edition. The skill prepares materials only. It does not apply, submit, pay, file, or give a verdict. The verified date is unset, and the window note starts unverified. Intake item 4 keeps only names already public or filed. Intake item 7 is categories only. The publish gate names the owner. Evals stay 195. No refund line. No percent. No amount. No names.
@@ -936,7 +976,7 @@ Absorbed operator mailbox 15–16 Sep 2026 (All-In / Satya follow-up + AI-native
 
 ## [0.5.25-free] — 2026-09-16
 
-Absorbed overnight research (handoff `/workspace/handoffs/sorticai-ip-sentinel-overnight-2026-09-16.md` and Grok Heavy https://grok.com/c/1251d871-4c72-41a9-a52c-56af0c9a9a1b were not usable in this workspace; applied the user-locked constraints). Origin **v0.5.24-free** three frames + Track 3 + vault-myth holds kept.
+Absorbed overnight research (handoff an internal research note and Grok Heavy a research chat were not usable in this workspace; applied the user-locked constraints). Origin **v0.5.24-free** three frames + Track 3 + vault-myth holds kept.
 
 ### Shared
 
@@ -951,7 +991,7 @@ Absorbed overnight research (handoff `/workspace/handoffs/sorticai-ip-sentinel-o
 
 ## [0.5.24-free] — 2026-09-16
 
-Absorbed Track 2 (handoff `/workspace/handoffs/deeper-2-satya-allin-data-protection-2026-09-16.md` was not in this workspace; applied the user-locked frames). Origin **v0.5.23-free** Track 1 hosts-clip citations kept. **Do not conflate.**
+Absorbed Track 2 (handoff an internal research note was not in this workspace; applied the user-locked frames). Origin **v0.5.23-free** Track 1 hosts-clip citations kept. **Do not conflate.**
 
 ### Shared
 
@@ -965,7 +1005,7 @@ Eval **99**. HITL F4 required. Still free-only. Still not legal advice.
 
 ## [0.5.23-free] — 2026-09-16
 
-Absorbed Track 1 primary sources (handoff `/workspace/handoffs/deeper-1-friedberg-allin-ip-2026-09-16.md` was not in this workspace; applied the user-locked URLs). Origin **v0.5.22-free** Track 3 realtime warning kept. Friedberg × Satya evals 90–92 and T1–T5 kept.
+Absorbed Track 1 primary sources (handoff an internal research note was not in this workspace; applied the user-locked URLs). Origin **v0.5.22-free** Track 3 realtime warning kept. Friedberg × Satya evals 90–92 and T1–T5 kept.
 
 ### Shared
 
@@ -978,7 +1018,7 @@ Absorbed Track 1 primary sources (handoff `/workspace/handoffs/deeper-1-friedber
 
 ## [0.5.22-free] — 2026-09-16
 
-Absorbed upgraded Track 3 realtime-IP-warning research (handoff `/workspace/handoffs/deeper-3-sentinel-realtime-ip-warning-2026-09-16.md` was not in this workspace; applied the user summary). Origin **v0.5.21-free** Grok Bot Save/Plugins + Cursor Cloud pin + scan-before-ship kept. Friedberg × Satya evals 90–92 and F1–F3 kept.
+Absorbed upgraded Track 3 realtime-IP-warning research (handoff an internal research note was not in this workspace; applied the user summary). Origin **v0.5.21-free** Grok Bot Save/Plugins + Cursor Cloud pin + scan-before-ship kept. Friedberg × Satya evals 90–92 and F1–F3 kept.
 
 ### Shared
 
@@ -992,7 +1032,7 @@ Absorbed upgraded Track 3 realtime-IP-warning research (handoff `/workspace/hand
 
 ## [0.5.21-free] — 2026-09-16
 
-Absorbed upgraded SKILL-surface research (handoff `/workspace/handoffs/skill-deeper-research-cursor-grokbot-grok-2026-09-16.md` was not in this workspace; applied the user summary). Origin **v0.5.20-free** Friedberg × Satya L3 callouts, evals 90–92, and HITL F1–F3 kept.
+Absorbed upgraded SKILL-surface research (handoff an internal research note was not in this workspace; applied the user summary). Origin **v0.5.20-free** Friedberg × Satya L3 callouts, evals 90–92, and HITL F1–F3 kept.
 
 ### Shared
 

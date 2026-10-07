@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import os
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -18,8 +19,8 @@ import headless_pointer
 import zipscan
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.51-free"
-EXPECTED_EVAL_COUNT = 205
+VERSION = "0.5.52-free"
+EXPECTED_EVAL_COUNT = 208
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -29,6 +30,24 @@ BANNED = (
     "subscribe now",
     "$99",
 )
+# Files that name a host zip. The edition after "-v" must be VERSION.
+ZIP_EDITION_FILES = (
+    "grok-bot-share/bot-template.json",
+    "grok-bot-share/README.md",
+    "grok-bot-share/skills.md",
+    "LAUNCH.md",
+)
+# Exact tracked paths only. The scanner source holds the path patterns.
+# The three test modules hold fixture strings those patterns must catch.
+TREE_LEAK_EXCLUSIONS = frozenset(
+    {
+        "scripts/zipscan.py",
+        "tests/test_claim_rules.py",
+        "tests/test_share_links.py",
+        "tests/test_zipscan.py",
+    }
+)
+_ZIP_NAME = re.compile(r"(?<![A-Za-z0-9._+-])([A-Za-z0-9._+-]+\.zip)(?![A-Za-z0-9._+-])")
 
 
 def description_text(skill: Path) -> str:
@@ -54,6 +73,59 @@ def frontmatter_keys(skill: Path) -> list[str]:
 def body_after_frontmatter(skill: Path) -> str:
     text = skill.read_text(encoding="utf-8")
     return text.split("---", 2)[2]
+
+
+def zip_edition(name: str) -> str | None:
+    stem = name[: -len(".zip")] if name.endswith(".zip") else name
+    mark = "-v"
+    index = stem.rfind(mark)
+    if index < 0:
+        return None
+    edition = stem[index + len(mark) :]
+    if not edition or not edition[:1].isdigit():
+        return None
+    return edition
+
+
+def zip_edition_errors(root: Path) -> list[str]:
+    """Fail when a named host zip uses an edition other than VERSION."""
+    errors: list[str] = []
+    for rel in ZIP_EDITION_FILES:
+        path = root / rel
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for name in _ZIP_NAME.findall(text):
+            if zip_edition(name) != VERSION:
+                errors.append(f"zip edition in {rel} is not {VERSION}")
+    return errors
+
+
+def tree_leak_errors(root: Path) -> list[str]:
+    """Scan every tracked file with the zip scanner's path, link, and email rules."""
+    completed = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=root,
+        check=False,
+        capture_output=True,
+    )
+    if completed.returncode != 0:
+        return ["tracked file list failed"]
+    raw = completed.stdout.decode("utf-8", "surrogateescape")
+    errors: list[str] = []
+    for rel in raw.split("\0"):
+        if not rel or rel in TREE_LEAK_EXCLUSIONS:
+            continue
+        path = root / rel
+        if not path.is_file():
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            errors.append(f"unreadable tracked file: {rel}")
+            continue
+        errors.extend(zipscan.text_leak_findings(rel, text))
+    return errors
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -376,6 +448,8 @@ def _hygiene(args: argparse.Namespace) -> int:
     for message in corpus_errors:
         if message not in errors:
             errors.append(message)
+    errors.extend(zip_edition_errors(ROOT))
+    errors.extend(tree_leak_errors(ROOT))
 
     for warning in claim.warnings:
         print(warning)
