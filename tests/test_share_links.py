@@ -47,6 +47,14 @@ class ShareLinkFamilyTests(unittest.TestCase):
         self.assertEqual(_lines("https://grok.com/share"), [])
         self.assertEqual(_lines("https://grok.com/share/"), [])
 
+    def test_grok_chat_id_flags(self) -> None:
+        self.assertEqual(_lines("see https://grok.com/c/" + MARK), [1])
+        self.assertEqual(_lines("see grok.com/c/" + MARK), [1])
+
+    def test_grok_chat_bare_base_does_not_flag(self) -> None:
+        self.assertEqual(_lines("https://grok.com/c"), [])
+        self.assertEqual(_lines("https://grok.com/c/"), [])
+
     def test_chatgpt_share_id_flags(self) -> None:
         self.assertEqual(_lines("https://chatgpt.com/c/" + MARK), [1])
         self.assertEqual(_lines("https://chatgpt.com/share/" + MARK), [1])
@@ -174,6 +182,7 @@ class ShareLinkFamilyTests(unittest.TestCase):
 # A space blocks an id. "?" and "&" sit inside the query and path runs.
 _REPEAT_UNITS = (
     ("grok\\.com", "grok.com/share/ "),
+    ("grok\\.com(?![A-Za-z0-9.-])/c/", "grok.com/c/ "),
     ("/c/", "chatgpt.com/c/ "),
     ("chatgpt\\.com(?![A-Za-z0-9.-])/share/", "chatgpt.com/share/ "),
     ("chat\\.openai\\.com", "chat.openai.com/share/ "),
