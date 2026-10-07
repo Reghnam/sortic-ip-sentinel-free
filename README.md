@@ -1,6 +1,14 @@
 # SorticAI Free IP Sentinel
 
-**The skill that quietly protects your IP at the exact moment you need it.**
+**What it is.** Free IP Sentinel is a free skill by SorticAI (edition 0.5.52-free). It notices IP-sensitive moments and gives builder worksheets, so you can decide what to show and what to hold.
+
+**Who it is for.** Builders who are about to show their work: an investor demo, a fundraising deck, a partner share or pre-read, a publish, or an agent that is about to show, send, push or post the work.
+
+**Try it**
+
+1. Pick the folder for your host in [Which folder do I install?](#which-folder-do-i-install).
+2. Copy it in using that row (`cp -r`, or zip the folder when the row says zip).
+3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
 Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.52-free**).
 - A timeout deny is not a wipe; a wait is not a hold; streaming-json is a paste (v0.5.52-free)
@@ -9,7 +17,7 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Show / hold maps
 - Staged disclosure ladders
 - Investor & partner demo hygiene playbook
-- AI / human contribution logs (USPTO 2025 aligned)
+- AI / human contribution logs. The contribution log keeps human work and AI work apart. Sources are referenced at a high level.
 - Agent / computer-use exposure logs (what the Bot showed, emailed, pushed, posted, livestreamed)
 - Approval gate (recipient AND action named this turn; leftover drafts unsent)
 - Owner-gated even at IP L3 (send / publish / pay / identity / live-copy)
@@ -82,7 +90,7 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Sign-out ≠ wipe of claude.ai-synced skills (cleanupPeriodDays, then trash)
 - Dist-path: extra YAML keys error on claude.ai / Skills API; `claude-skill/` stays name+description only
 - Invention screenshots/diagrams are still CSAM-scanned
-- Private-corpus RAG is sidecar/offline (`Reghnam/us-ip-law-ground-truth` is PRIVATE; never bundle / never Bot disk; retrieve-only stub; ticks stay L0)
+- A private reference corpus stays offline; it is never bundled and never on the Bot disk (retrieve-only stub; ticks stay L0)
 - Lunch HITL sheet: [HITL-LUNCH.md](HITL-LUNCH.md)
 - De-ID / no company name ≠ method safe; the approach is the IP; anecdote ≠ audited proof of training; ZDR is contractual best-efforts (cannot prove or prevent training)
 - Track 3 realtime warning: invention + false comfort is L2 once/session (no stamp); protect/dump-after-tip is L3 (hold exact recipe + lane map); settings-only / clip-only / industry chatter stay L0
@@ -90,13 +98,15 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
-Works on **Codex**, **ChatGPT Skills**, **Claude Code**, **Grok / Grok Build / Grok Bot**, Cursor, Microsoft Agent Framework, and any [agentskills.io](https://agentskills.io) runtime.
+Packaged for ChatGPT, Claude, Cursor and Grok Bot.
 
 Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). Lunch HITL: [HITL-LUNCH.md](HITL-LUNCH.md). What landed: [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
 ## Which folder do I install?
+
+ChatGPT Skills needs a ChatGPT Business, Enterprise or Edu plan.
 
 | Host | Folder in this repo | Install |
 |------|---------------------|---------|
@@ -119,9 +129,9 @@ Custom GPT fallback: [`openai-gpt-package/`](openai-gpt-package/).
 
 - L3: "protect the IP", "IP sensitive moment", "trade secret before investor demo", "how to protect this before we file", "NDA before sharing the protocol", "the Grok Bot will email the deck — protect the IP", "callable agent into the partner network — protect the IP".
 - L2 exposure: "investor demo in 10 days", "publish the Bot and post a clip", or "board/partner weekly" → soft tip only.
-- L0: privacy, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks → silent. Drive Sep-2 zips are stale — use this PR branch.
+- L0: privacy, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks → silent. Older zips shared outside this repository are stale; use the packs built from this repository.
 
-Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. It will **not** email/post leftover drafts, partner pre-reads, or treat a backup as publish unless this turn names the recipient **and** the action. Unnamed GitHub auto-push, registrar/DNS/dashboard logins, pay, identity publish, voice/phone provision, disabled-job re-enable, live-prompt rewrite, and fit-note send are **declined**. `--yolo` is not approval. Done requires evidence. Truncated files are not originals. Workspace renewal is silent.
+Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. By design, it tells your agent to hold a send, push or post unless that turn names the recipient and the action. Leftover drafts stay drafts, and a backup is not a publish. It is written to decline unnamed GitHub pushes, logins, payments, identity publishing and voice or phone provisioning. `--yolo` is not approval. It is not a security control: keep your host's own approval settings on. Done requires evidence. Truncated files are not originals. Workspace renewal is silent.
 
 ---
 
@@ -138,10 +148,9 @@ Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered 
 
 ---
 
-**Weekly updates**
-This skill is kept current by a research loop (agentskills.io, USPTO/EPO high-level guidance, host skill specs, Headless/Bot topics). Changelog every patch.
-
 **Sources (high-level)**
 EPO Guidelines, USPTO 2025 AI inventorship guidance, WIPO principles.
 
 **Disclaimer:** This is free procedural hygiene support only. **Not legal advice.** No guarantees. Consult qualified counsel.
+
+Free for personal or internal builder use, with attribution and the disclaimer kept (see LICENSE.md). Not an OSI open-source license.
