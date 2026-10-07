@@ -1,6 +1,6 @@
 # Exact commands to push to GitHub (Reghnam)
 
-cd /Users/DaVe/SorticAI/sortic-ip-sentinel-free
+cd <your-local-clone>
 
 # 1. Add the remote (only once)
 git remote add origin https://github.com/Reghnam/sortic-ip-sentinel-free.git

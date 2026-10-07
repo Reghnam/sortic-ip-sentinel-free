@@ -16,7 +16,7 @@
   "skills": [
     {
       "name": "sortic-ip-sentinel-free",
-      "source_zip": "sortic-ip-sentinel-free-grok-v0.5.36.zip",
+      "source_zip": "free-ip-sentinel-grok-v0.5.52-free.zip",
       "enable": "per-Bot",
       "not": "~/.grok/skills/"
     }

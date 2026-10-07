@@ -976,7 +976,7 @@ Absorbed operator mailbox 15–16 Sep 2026 (All-In / Satya follow-up + AI-native
 
 ## [0.5.25-free] — 2026-09-16
 
-Absorbed overnight research (handoff `/workspace/handoffs/sorticai-ip-sentinel-overnight-2026-09-16.md` and Grok Heavy https://grok.com/c/1251d871-4c72-41a9-a52c-56af0c9a9a1b were not usable in this workspace; applied the user-locked constraints). Origin **v0.5.24-free** three frames + Track 3 + vault-myth holds kept.
+Absorbed overnight research (handoff an internal research note and Grok Heavy a research chat were not usable in this workspace; applied the user-locked constraints). Origin **v0.5.24-free** three frames + Track 3 + vault-myth holds kept.
 
 ### Shared
 
@@ -991,7 +991,7 @@ Absorbed overnight research (handoff `/workspace/handoffs/sorticai-ip-sentinel-o
 
 ## [0.5.24-free] — 2026-09-16
 
-Absorbed Track 2 (handoff `/workspace/handoffs/deeper-2-satya-allin-data-protection-2026-09-16.md` was not in this workspace; applied the user-locked frames). Origin **v0.5.23-free** Track 1 hosts-clip citations kept. **Do not conflate.**
+Absorbed Track 2 (handoff an internal research note was not in this workspace; applied the user-locked frames). Origin **v0.5.23-free** Track 1 hosts-clip citations kept. **Do not conflate.**
 
 ### Shared
 
@@ -1005,7 +1005,7 @@ Eval **99**. HITL F4 required. Still free-only. Still not legal advice.
 
 ## [0.5.23-free] — 2026-09-16
 
-Absorbed Track 1 primary sources (handoff `/workspace/handoffs/deeper-1-friedberg-allin-ip-2026-09-16.md` was not in this workspace; applied the user-locked URLs). Origin **v0.5.22-free** Track 3 realtime warning kept. Friedberg × Satya evals 90–92 and T1–T5 kept.
+Absorbed Track 1 primary sources (handoff an internal research note was not in this workspace; applied the user-locked URLs). Origin **v0.5.22-free** Track 3 realtime warning kept. Friedberg × Satya evals 90–92 and T1–T5 kept.
 
 ### Shared
 
@@ -1018,7 +1018,7 @@ Absorbed Track 1 primary sources (handoff `/workspace/handoffs/deeper-1-friedber
 
 ## [0.5.22-free] — 2026-09-16
 
-Absorbed upgraded Track 3 realtime-IP-warning research (handoff `/workspace/handoffs/deeper-3-sentinel-realtime-ip-warning-2026-09-16.md` was not in this workspace; applied the user summary). Origin **v0.5.21-free** Grok Bot Save/Plugins + Cursor Cloud pin + scan-before-ship kept. Friedberg × Satya evals 90–92 and F1–F3 kept.
+Absorbed upgraded Track 3 realtime-IP-warning research (handoff an internal research note was not in this workspace; applied the user summary). Origin **v0.5.21-free** Grok Bot Save/Plugins + Cursor Cloud pin + scan-before-ship kept. Friedberg × Satya evals 90–92 and F1–F3 kept.
 
 ### Shared
 
@@ -1032,7 +1032,7 @@ Absorbed upgraded Track 3 realtime-IP-warning research (handoff `/workspace/hand
 
 ## [0.5.21-free] — 2026-09-16
 
-Absorbed upgraded SKILL-surface research (handoff `/workspace/handoffs/skill-deeper-research-cursor-grokbot-grok-2026-09-16.md` was not in this workspace; applied the user summary). Origin **v0.5.20-free** Friedberg × Satya L3 callouts, evals 90–92, and HITL F1–F3 kept.
+Absorbed upgraded SKILL-surface research (handoff an internal research note was not in this workspace; applied the user summary). Origin **v0.5.20-free** Friedberg × Satya L3 callouts, evals 90–92, and HITL F1–F3 kept.
 
 ### Shared
 
