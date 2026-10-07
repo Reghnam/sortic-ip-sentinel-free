@@ -2,8 +2,8 @@
 
 **The skill that quietly protects your IP at the exact moment you need it.**
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.51-free**).
-- A wider hook path is not a boundary; a five-second grace is not a wipe; a workshop promo is not a publish (v0.5.51-free)
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.52-free**).
+- A timeout deny is not a wipe; a wait is not a hold; streaming-json is a paste (v0.5.52-free)
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
