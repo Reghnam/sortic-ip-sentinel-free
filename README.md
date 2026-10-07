@@ -1,6 +1,14 @@
 # SorticAI Free IP Sentinel
 
-**The skill that quietly protects your IP at the exact moment you need it.**
+**What it is.** Free IP Sentinel is a free skill by SorticAI (edition 0.5.52-free). It notices IP-sensitive moments and gives builder worksheets, so you can decide what to show and what to hold.
+
+**Who it is for.** Builders who are about to show their work: an investor demo, a fundraising deck, a partner share or pre-read, a publish, or an agent that is about to show, send, push or post the work.
+
+**Try it**
+
+1. Pick the folder for your host in [Which folder do I install?](#which-folder-do-i-install).
+2. Copy it in using that row (`cp -r`, or zip the folder when the row says zip).
+3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
 Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.52-free**).
 - A timeout deny is not a wipe; a wait is not a hold; streaming-json is a paste (v0.5.52-free)
@@ -9,7 +17,7 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Show / hold maps
 - Staged disclosure ladders
 - Investor & partner demo hygiene playbook
-- AI / human contribution logs (USPTO 2025 aligned)
+- AI / human contribution logs. The contribution log keeps human work and AI work apart. Sources are referenced at a high level.
 - Agent / computer-use exposure logs (what the Bot showed, emailed, pushed, posted, livestreamed)
 - Approval gate (recipient AND action named this turn; leftover drafts unsent)
 - Owner-gated even at IP L3 (send / publish / pay / identity / live-copy)
@@ -90,13 +98,15 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
 
-Works on **Codex**, **ChatGPT Skills**, **Claude Code**, **Grok / Grok Build / Grok Bot**, Cursor, Microsoft Agent Framework, and any [agentskills.io](https://agentskills.io) runtime.
+Packaged for ChatGPT, Claude, Cursor and Grok Bot.
 
 Shareable one-pager: [EXEC-SUMMARY.md](EXEC-SUMMARY.md). Lunch HITL: [HITL-LUNCH.md](HITL-LUNCH.md). What landed: [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
 ## Which folder do I install?
+
+ChatGPT Skills needs a ChatGPT Business, Enterprise or Edu plan.
 
 | Host | Folder in this repo | Install |
 |------|---------------------|---------|
@@ -137,9 +147,6 @@ Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered 
 | Package | `references/` bundled | `references/` bundled | `references/` bundled |
 
 ---
-
-**Weekly updates**
-This skill is kept current by a research loop (agentskills.io, USPTO/EPO high-level guidance, host skill specs, Headless/Bot topics). Changelog every patch.
 
 **Sources (high-level)**
 EPO Guidelines, USPTO 2025 AI inventorship guidance, WIPO principles.
