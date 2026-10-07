@@ -1,6 +1,6 @@
 # Skills to enable on this Bot
 
-Enable **only** `sortic-ip-sentinel-free` from `free-ip-sentinel-grok-v0.5.52-free.zip` (this PR branch).
+Enable **only** `sortic-ip-sentinel-free` from `free-ip-sentinel-grok-v0.5.52-free.zip` (grok-skill pack in this repository).
 
 - Layout: `SKILL.md` at zip root + bundled `references/`.
 - Enable **per-Bot**. Not `cp ~/.grok/skills/` (that is Grok Build).
