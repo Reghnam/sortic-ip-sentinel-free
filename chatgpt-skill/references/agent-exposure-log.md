@@ -1,4 +1,4 @@
-# Agent / computer-use exposure log — Template (v0.5.53-free)
+# Agent / computer-use exposure log — Template (v0.5.54-free)
 
 **Free only · Builder worksheet · Not legal advice · No guarantees**
 

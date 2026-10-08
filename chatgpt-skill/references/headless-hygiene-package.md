@@ -22,7 +22,7 @@ Emit exactly the keys in the block below. Add the optional top-level key `sme_fu
 ```json
 {
   "schema": "sorticai.hygiene_package.v1",
-  "edition": "0.5.53-free",
+  "edition": "0.5.54-free",
   "activation_level": "L3",
   "output_register": "procedural_builder_worksheet",
   "not_for_third_party": true,
@@ -187,7 +187,7 @@ The block is the shape. It is not a live snapshot of the window file.
 - If source data is unavailable, report failure — do not reuse stale data.
 - `agent_exposure` **must be emitted**. Empty array is correct when the agent did not show/send anything this turn.
 
-**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.53-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
+**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.54-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 - Sites deploy URL is production. Save-without-deploy to review. Default owner+admins. Workspace/public publish is a demo. Sites env/secrets are holdbacks.
 - User instructions this turn beat skill guidelines. Named recipient AND action is the override. On L3 decline, quote SKILL.md. No unsolicited L0/L1 hypothetical-risk checklists.
 - Async board packet without the room is a demo. Project-repo skill commit is a publish. Workflow fan-out is a disclosure multiplier. Project `.grok/hooks/` needs `/hooks-trust`.

@@ -1,21 +1,22 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.53-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.54-free
 
 **Date:** 8 Oct 2026  
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free  
-**Tip:** `v0.5.53-free` (hygiene only)  
+**Tip:** `v0.5.54-free` (hygiene only)  
 **What it is:** Free portable skill that notices IP-sensitive moments and delivers builder-worksheet hygiene (show/hold, demo playbook, logs, JSON). **Not legal advice. No paid paths.**
 
 ## Why this patch (one paragraph)
 
-Origin **v0.5.52-free** starts from **v0.5.51-free** (a wait is not a hold; a pause is not a stop; streaming-json is a paste). This patch absorbs mail the 7 Oct tip did not fold — an unsent scope note, an internal estimate, a later chat-while-away, and a tentative accept; no skill-feedback mail; no newer grok-export — plus an 8 Oct vendor recrawl. **OpenAI first:** background hooks cannot block, approve, rewrite, or control the operation. A background hook is not a hold. A Stop block is not a stop. An Interrupt hook is not a hold. A 600-second default is not a seal. This skill still ships no hooks. **Anthropic second:** the start table is NO_DELTA. An allow is not a critical-path grant. Three timeouts are not a wipe. **Grok Build third:** permissions and sandbox footers still show **21 Jul 2026**. Scripting footer still **10 Jun 2026**. NO_DELTA. Headless feature URL stays 404. plain and json are pastes. An unsent scope note stays unsent. No amounts. No hour split. No months. No terms. Marketplace still Hold. Still free-only. Description ≤1024. Body stays under 500 lines.
+Origin **v0.5.53-free** (a background hook is not a hold; an allow is not a critical-path grant; plain and json are pastes; an unsent scope note stays unsent). This follow-up does not reopen that mailbox. No newer grok-export. **OpenAI first:** on SubagentStop, continue:false wins. That stop is not a wipe. A transcript path is a paste. This skill still ships no hooks. **Anthropic second:** the start table is still NO_DELTA. A boundary stated in chat is not a deny rule. Compaction can drop it. A chat approval is not a standing grant. Keep-working is not a stop. **Grok Build third:** footers still **21 Jul 2026** and **10 Jun 2026**. Feature URL stays 404. A model id on the overview is a model pick, not a private lane. grok inspect is a paste. Do not copy the id. **Mailbox this scan:** an accepted invite is not a publish. A meet link, a PIN, and a phone number are a paste. Forwarding the invite is not a private lane. The earlier payment aside stays a paste. No names. Marketplace still Hold. Still free-only. Description ≤1024. Body stays under 500 lines.
 
 ## What changed (shareable)
 
 | Host | Change |
 |------|--------|
-| **OpenAI (first)** | A background hook is not a hold. A Stop block is not a stop. An Interrupt hook is not a hold. Evals **209**. |
-| **Anthropic (second)** | An allow is not a critical-path grant. Three timeouts are not a wipe. Start table NO_DELTA. Evals **210**. |
-| **Grok Build (third)** | Footer still 21 Jul 2026. Scripting footer still 10 Jun 2026. plain and json are pastes. An unsent scope note stays unsent. Evals **211**. |
+| **OpenAI (first)** | A transcript path is a paste. That stop is not a wipe. Evals **212**. |
+| **Anthropic (second)** | A chat boundary is not a deny rule. A chat approval is not a standing grant. Keep-working is not a stop. Start table NO_DELTA. Evals **213**. |
+| **Grok Build (third)** | A model id on the overview is not a private lane. grok inspect is a paste. Evals **214**. |
+| **Mailbox (this scan)** | An accepted invite is not a publish. A meet link, a PIN, and a phone number are a paste. Forwarding the invite is not a private lane. Evals **215**. |
 
 ## Do not publish
 
@@ -23,7 +24,7 @@ Origin **v0.5.52-free** starts from **v0.5.51-free** (a wait is not a hold; a pa
 - A sample attachment. An internal estimate. No amounts. No hour split.
 - An unsent private deck. A weekly backup. Corpus trees. A machine digest.
 - A chat that names a sale, a raise, an IPO, a payment, cash flow, or an investor. No counterparties. No amounts. No months. No terms. No deal status.
-- A setup slot, a short link, a tentative accept, a workshop invite, an event invite, a customer story, or a percent.
+- A setup slot, a short link, a tentative accept, an accepted invite, a meet link, a PIN, a phone number, a forwarded invite, a workshop invite, an event invite, a customer story, or a percent.
 - A vendor product, a firm, a notice number, an office, or a subject line from an official mailbox notice.
 - Host names, serials, local paths, keys, cached tokens, or schedules.
 - Names, places, seat counts, payment status, model ids this tip did not read off a vendor page.
@@ -38,7 +39,7 @@ Origin **v0.5.52-free** starts from **v0.5.51-free** (a wait is not a hold; a pa
 - Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`); share pack `grok-bot-share/bot-template.json` beside the zip; live marketplace publish stays L3 for the owner (L3) — do not publish live
 - Cursor Cloud: `cp -r cursor-skill .cursor/skills/sortic-ip-sentinel-free/`; pin on Custom Mode; Sync only `~/.cursor/skills/`
 
-**Drive Sep-2 zips, walkthrough v0.5.30, the mailed HITL v0.5.25 pack, and the mailed try pack v0.5.36 are stale.** Use this branch. Rebuild host zips from this branch as **v0.5.53-free**. Custom-GPT `openai-gpt-package/` is the retiring path — testers use `chatgpt-skill/`.
+**Drive Sep-2 zips, walkthrough v0.5.30, the mailed HITL v0.5.25 pack, and the mailed try pack v0.5.36 are stale.** Use this branch. Rebuild host zips from this branch as **v0.5.54-free**. Custom-GPT `openai-gpt-package/` is the retiring path — testers use `chatgpt-skill/`.
 
 ## Try in 30 seconds
 
@@ -62,6 +63,8 @@ Track 3 realtime warning (every claimed stack):
 - T34: background hook + critical-path allow + plain/json + unsent scope note (above).
 
 Scorecard and zip recipe: [HITL-LUNCH.md](HITL-LUNCH.md).
+
+Track 3 follow-up: T1–T34 stand from v0.5.53. T35 is transcript path + chat boundary + grok inspect (above).
 
 ## Still true
 

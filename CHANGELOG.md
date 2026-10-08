@@ -2,6 +2,43 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.54-free] — 2026-10-08
+
+Follow-up on the same day as **v0.5.53-free**. Mailbox this scan: the unsent scope note, the internal estimate, the payment aside, and the tentative accept stay as absorbed in v0.5.53-free. One later calendar accept is not a publish. A meet link, a PIN, and a phone number are a paste. Forwarding the invite is not a private lane. No skill-feedback mail. No newer grok-export. **No conversation_search.** A machine digest is still not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No signs. No model id copied into the pack. No amounts. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 8 Oct. Background-hook, 600-second default, Stop block, and Interrupt cap stand. This skill still ships **no hooks**.
+- **New:** on SubagentStop, `continue:false` wins over a continue from another hook. That stop is not a wipe. The SubagentStop transcript path is a paste.
+- Evals **212**.
+
+### Anthropic (second)
+
+- Permission-modes page re-read 8 Oct. **NO_DELTA** on the start table. Critical-path allow, three timeouts, and the countdown switch stand.
+- **New:** a boundary stated in chat is not a deny rule. Compaction can drop it.
+- **New:** a chat approval is one named action, not a standing grant. Naming the verb alone clears nothing.
+- **New:** a `-p` run with no permission-prompt tool does not stop at the repeated-block threshold. The action does not run and the session keeps working. Keep-working is not a stop.
+- Evals **213**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Permissions, sandbox, and headless-scripting footers re-read 8 Oct. Still **21 Jul 2026** and **10 Jun 2026**. Feature URL stays **404**. NO_DELTA on those policies. plain, json, and streaming-json stay pastes.
+- **New:** the overview names a current model. A model id on that page is a model pick, not a private lane. Do not copy the id. `grok inspect` lists skills, hooks, and MCP. That listing is a paste.
+- No newer grok-export than W38. No conversation_search.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **214** on the inspect rule. Mailbox eval **215**: an accepted invite is not a publish.
+
+### Shared
+
+- **A transcript path is a paste.** That stop is not a wipe.
+- **A chat boundary is not a deny rule.** A chat approval is not a standing grant. Keep-working is not a stop. The start table is still NO_DELTA.
+- **A model id on the overview is not a private lane.** grok inspect is a paste. Do not copy the id.
+- **An accepted invite is not a publish.** A meet link, a PIN, and a phone number are a paste. Forwarding the invite is not a private lane. No names. No times. No agenda.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **215**. HITL F1–F28 + T1–T34 required on every claimed stack. This tip adds T35 (transcript path + chat boundary + grok inspect + accepted invite).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.53-free] — 2026-10-08
 
 Absorbed this Grok Build turn's live mailbox (after the 7 Oct v0.5.52 push: an unsent scope note, an internal estimate, a later chat-while-away, and a tentative accept; no skill-feedback mail; no newer grok-export) plus vendor recrawl **8 Oct** on top of origin **v0.5.52-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No notice numbers. No offices. No product names. No terms text. No payment status. No amounts. No hour splits. No months. No seat counts. No places. No host names. No serials. No deal status. No customer story. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
