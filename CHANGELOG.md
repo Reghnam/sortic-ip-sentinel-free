@@ -2,6 +2,51 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.53-free] — 2026-10-08
+
+Absorbed this Grok Build turn's live mailbox (after the 7 Oct v0.5.52 push: an unsent scope note, an internal estimate, a later chat-while-away, and a tentative accept; no skill-feedback mail; no newer grok-export) plus vendor recrawl **8 Oct** on top of origin **v0.5.52-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No notice numbers. No offices. No product names. No terms text. No payment status. No amounts. No hour splits. No months. No seat counts. No places. No host names. No serials. No deal status. No customer story. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Recrawl 2026-10-08 **learn.chatgpt.com/docs/hooks**. No page date. Spill, compact, block, suppressOutput, the wider path, and the eight-hook wait stand. This skill still ships **no hooks**.
+- **Still:** a wait is not a hold. Early SessionStart is not a seal. No prompt is not a hold. A rewrite that errors is not a hold. Cancel of a finished spill is not a wipe.
+- **New:** background hooks cannot block, approve, rewrite, or control the operation that triggered them. A background hook is not a hold. When the session ends, output that was never delivered is discarded. That discard is not a wipe of what already spilled.
+- **New:** if timeout is omitted, most hooks wait 600 seconds. SessionEnd and Interrupt default to one second and cap at three. A 600-second default is not a seal.
+- **New:** Stop `decision: block` does not reject the turn. It continues and creates a new continuation prompt from the reason. A Stop block is not a stop. The new prompt is a paste.
+- **New:** Interrupt output cannot prevent the interruption or restart the turn. An Interrupt hook is not a hold.
+- **New:** SessionEnd always runs synchronously, even when async is true. SessionEnd does not support MCP tool hooks. Async there is not a background lane. Missing MCP is not a seal.
+- Evals **209**.
+
+### Anthropic (second)
+
+- Permission-modes page fetched 8 Oct. **NO_DELTA** on the start table. Interactive auto on v2.1.283+ is still not owner approval. Flag-off `claude -p` auto on v2.1.285+ is still not owner approval. The manual alias still stands. It is not a new mode.
+- **New:** no allow rule and no PreToolUse allow can approve `rm` or `rmdir` of a critical path, even in modes that skip other prompts. A matching deny still blocks. An allow is not that grant.
+- **New:** after three unanswered critical-path prompts in a session, further ones are denied immediately. A new message restarts the count. Three timeouts are not a wipe. Where no terminal prompt can be shown, auto denies that removal immediately. The report of what it wanted to delete is a paste.
+- **New:** `CLAUDE_CODE_DISABLE_DANGEROUS_RM_TIMEOUT=1` turns the countdown off. In auto those removals go to the classifier. In bypassPermissions the prompt has no time limit. Disabling the timeout is not a vault.
+- **New:** on entering auto, broad allow rules that grant arbitrary execution are dropped, including Monitor, because Monitor runs through the shell. Narrow rules stay. The dropped rules come back on exit. A dropped allow is not a hold. A restored allow is not inherited clearance. The 3 and 20 thresholds are not configurable.
+- Evals **210**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Permissions and sandbox pages fetched 8 Oct. Footer is **21 Jul 2026** again. A returned footer is not a new policy. The cycle is **NO_DELTA**. Under always-approve, `rm` and `git push` still run unless a deny is set. `read-only` still writes `~/.grok/`. Sandbox stays off by default.
+- Headless feature URL stays **404**. Headless scripting page fetched 8 Oct. Footer still **10 Jun 2026**. A returned footer is not a new policy.
+- **Now explicit on that page:** `--output-format` `plain` and `json` are pastes, same class as `streaming-json`. `--session-id` names or resumes a session. A named resume is a next-paste. `--no-auto-update` and `[cli] auto_update = false` skip the update check. A skipped check is not a seal. ACP `grok agent stdio` chunks are a paste. `--no-alt-screen` is not a private lane. Do not paste a key or a cached token.
+- No newer grok-export than W38.
+- **Mailbox, unnamed:** an unsent scope note stays unsent. The assistant prepares. A human decides. Filing stays with counsel. A warning is not an opinion. A specimen check is not a filing. A status date needs a human check. An office-action draft is for counsel, not a client verdict. Do not publish the sample. An internal estimate is not a quote and not this skill. No amounts. No hour split. A chat-while-away about a payment, cash flow, or an investor is a paste. No months. No terms. No deal status. A setup slot is not a skill update. A short link is not a source. A tentative accept is not a publish.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **211**.
+
+### Shared
+
+- **A background hook is not a hold.** A Stop block is not a stop. An Interrupt hook is not a hold. A 600-second default is not a seal.
+- **An allow is not a critical-path grant.** Three timeouts are not a wipe. Disabling the countdown is not a vault. A restored allow is not inherited clearance. The 8 Oct start table is NO_DELTA.
+- **plain and json are pastes.** A returned 21 Jul footer is not a new policy. A returned 10 Jun scripting footer is not a new policy. A named resume is a next-paste. A skipped update check is not a seal.
+- **An unsent scope note stays unsent.** An internal estimate is not this skill. A payment or cash-flow aside is a paste. A setup slot is not a skill update. A short link is not a source.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **211**. HITL F1–F28 + T1–T33 required on every claimed stack. This tip adds T34 (background hook + critical-path allow + plain/json + unsent scope note).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.52-free] — 2026-10-07
 
 Absorbed this Grok Build turn's live mailbox (after the 6 Oct v0.5.51 push: a vendor pitch about masking client data before a public model, an event invite, a promo, a cancelled hold, a chat-while-away line, a trial-end note, and an official mailbox notice; no skill-feedback mail; no newer grok-export) plus one older machine digest (not an export) plus vendor recrawl **7 Oct** on top of origin **v0.5.51-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A machine digest is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No notice numbers. No offices. No product names. No terms text. No payment status. No amounts. No seat counts. No places. No host names. No serials. No deal status. No customer story. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

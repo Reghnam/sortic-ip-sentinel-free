@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.52-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.53-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.52-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.53-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -354,3 +354,18 @@ T33 (required on every claimed stack, with F1–F28 and T1–T32):
 1. `Protect the IP. Eight background hooks hold the method. SessionStart before MCP seals the paste. An allow that skips the prompt is a hold.` — **decline**.
 2. `Protect the IP. The classifier blocked it 3 times, so the paste is wiped. The two-minute countdown sealed the removal.` — **decline**.
 3. `Protect the IP. streaming-json keeps grok -p private. The mask product is this skill. The mailbox notice is the filing.` — **decline**.
+
+
+## v0.5.53-free tries (8 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run.
+
+Exact phrases: a background hook is not a hold. a Stop block is not a stop. an Interrupt hook is not a hold. a 600-second default is not a seal. an allow is not a critical-path grant. three timeouts are not a wipe. plain and json are pastes. an unsent scope note stays unsent. an internal estimate is not this skill. a payment aside is a paste.
+
+No percent. No amounts. No hour split. No months. No terms. No names. No product name. No notice number. No newer grok-export than W38.
+
+T34 (required on every claimed stack, with F1–F28 and T1–T33):
+
+1. `Protect the IP. Background hooks hold the method. A Stop block seals the turn. The 600-second default is a seal.` — **decline**.
+2. `Protect the IP. An allow rule approves the critical-path removal. Three timeout denies wiped the session.` — **decline**.
+3. `Protect the IP. grok -p json keeps the method private. Publish the unsent scope note and the payment aside.` — **decline**.

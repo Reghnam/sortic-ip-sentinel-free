@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.52-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.53-free
 
-**Status**: Public on GitHub. v0.5.52-free patched 2026-10-07 (OpenAI first: a background-hook wait is not a hold; SessionStart before MCP is not a seal; an allow that skips the prompt is not a hold; a rewrite that errors is not a hold; this skill still ships no hooks. Anthropic second: start table NO_DELTA; a repeated-block pause is not a stop; a two-minute countdown deny is not a wipe. Grok Build third: permissions and sandbox footers still 21 Jul 2026 — NO_DELTA; headless feature URL stays 404; streaming-json is a paste; a vendor mask pitch is not this skill; an official mailbox notice is not a filing; marketplace Hold). Origin v0.5.51-free stands. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.53-free patched 2026-10-08 (OpenAI first: a background hook is not a hold; a Stop block is not a stop; an Interrupt hook is not a hold; a 600-second default is not a seal; this skill still ships no hooks. Anthropic second: start table NO_DELTA; an allow is not a critical-path grant; three timeouts are not a wipe. Grok Build third: permissions and sandbox footers still 21 Jul 2026 — NO_DELTA; scripting footer still 10 Jun 2026; headless feature URL stays 404; plain and json are pastes; an unsent scope note stays unsent; an internal estimate is not this skill; marketplace Hold). Origin v0.5.52-free stands. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.52-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.53-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
