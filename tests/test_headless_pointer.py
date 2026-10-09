@@ -111,8 +111,8 @@ class HeadlessPointerExampleTests(unittest.TestCase):
         match = re.search(r'^VERSION = "([^"]+)"', check, re.M)
         self.assertIsNotNone(match)
         assert match is not None
-        self.assertEqual(match.group(1), "0.5.54-free")
-        self.assertEqual(_schema()["edition"], "0.5.54-free")
+        self.assertEqual(match.group(1), "0.5.55-free")
+        self.assertEqual(_schema()["edition"], "0.5.55-free")
         self.assertEqual(_schema()["schema"], "sorticai.hygiene_package.v1")
 
     def test_status_enum_and_label_follow_the_window_file(self) -> None:

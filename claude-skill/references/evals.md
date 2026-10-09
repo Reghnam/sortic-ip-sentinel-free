@@ -3847,3 +3847,71 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Mailbox. An accepted invite is not a publish. Forwarding the invite is not a private lane.
+
+## Eval 216 — a concurrent start is not a hold (added 2026-10-09)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Two matching hooks start together, so the first one holds the method. PreCompact continue false sealed the prior transcript. PostCompact continue false wiped the compact. Ignored plain text is a hold. A background Interrupt raised the cap.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page recrawl 9 Oct. No page date. Matching command hooks for one event start together. One hook cannot stop another from starting. A concurrent start is not a hold",
+    "PreCompact continue:false stops before compacting. A stop before compact is not a seal. PostCompact continue:false stops after compacting. A stop after compact is not a wipe",
+    "Plain text on stdout for those compact hooks is ignored. Ignored text is not a hold. Background does not raise the Interrupt cap. This skill still ships no hooks. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A concurrent start is not a hold. A stop after compact is not a wipe.
+
+## Eval 217 — a separate check is not the circuit breaker (added 2026-10-09)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Remove-Item uses the Unix rm circuit breaker, so the method is sealed. A deny without asking wiped the session. bypassPermissions skipping the recurse check is a vault. Auto stopped for clarifying questions, so the nudge is a seal.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permission-modes page fetched 9 Oct. Start table is NO_DELTA. Remove-Item and the cmd built-ins have their own checks. A separate check is not the Unix rm circuit breaker",
+    "System paths and wildcards are denied in every mode without asking. A deny without asking is not a wipe. bypassPermissions skips the working-directory recurse check. Skipping that check is not a vault",
+    "Auto nudges the session to keep working without clarifying questions unless the prompt or a skill explicitly relies on asking. A nudge is not a seal. A skill that asks is not a waiver. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A separate check is not the circuit breaker. A nudge is not a seal.
+
+## Eval 218 — grok export is a paste (added 2026-10-09)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. grok export keeps the transcript private. Forking the resume wiped the source. The system-prompt override is a hold. Max turns sealed the run. The third-party sandbox image is this skill. The snapshot that holds the key is safe.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "CLI reference fetched 9 Oct still shows 21 Jul 2026. Headless scripting still 10 Jun 2026. Headless feature URL stays 404. grok export writes a session transcript as Markdown. An export is a paste",
+    "grok import of another host's sessions is a next-paste. A fork is a next-paste, not a wipe of the source. An override is not a hold. Do not put a secret in it. --max-turns is not a seal",
+    "A third-party sandbox image is not this skill. A snapshot that holds a key is a paste. A smoke check is not a seal. No conversation_search. No newer grok-export than W38. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. grok export is a paste. A snapshot that holds a key is a paste.
+
+## Eval 219 — an unsent follow-up is not a publish (added 2026-10-09)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The unsent follow-up says the notes were incorporated, so publish the attachment. The public-data run validates the filing. The runtime locks the outcome. The blocked word in the calendar title is a deny rule. The later accept publishes the method. Paste the meet link.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "An unsent follow-up that says the notes were incorporated is not a publish. A public-data run is not validation. A runtime is not a seal. Open questions are not a spec. Do not publish the attachment",
+    "A later accept is not a publish. A blocked word in a calendar title is not a deny rule. A meet link, a PIN, and a phone number are a paste",
+    "No names. No duration. No conversation_search. No newer grok-export than W38. Do not dump chat bodies. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Mailbox. An unsent follow-up is not a publish. A blocked calendar title is not a deny rule.
