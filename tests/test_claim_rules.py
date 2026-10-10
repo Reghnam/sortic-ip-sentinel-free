@@ -245,7 +245,7 @@ class ClaimRuleTests(unittest.TestCase):
 
     def test_version_lines_stay_readable_by_sync(self) -> None:
         text = (SCRIPTS / "check-hygiene.py").read_text(encoding="utf-8")
-        self.assertIn('VERSION = "0.5.55-free"\n', text)
+        self.assertIn('VERSION = "0.5.56-free"\n', text)
         self.assertIsNotNone(
             re.search(
                 r'^PACKS = \("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill"\)$',

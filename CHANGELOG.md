@@ -2,6 +2,49 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.56-free] — 2026-10-10
+
+Absorbed this Grok Build turn's live mailbox after the 9 Oct v0.5.55 push (a partial week pack, a while-away chat, a carrier receipt, and an admin-console notice; no skill-feedback mail; no newer grok-export) plus vendor recrawl **10 Oct** on top of origin **v0.5.55-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No folder ids. No order numbers. No links. No duration. No gap lists.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 10 Oct. No page date. Concurrent start, compact stops, ignored compact text, and the Interrupt cap stand. This skill still ships **no hooks**.
+- **New:** UserPromptSubmit ignores `matcher`. An ignored matcher is not a filter. Plain text on stdout is extra developer context. That context is a paste. A block of that submit is not a wipe of earlier turns.
+- **New:** On Stop, `continue:false` wins over a continue from another Stop hook. That win is not a wipe. Stop plain text is invalid. Invalid text is not a hold.
+- **New:** SessionEnd also runs when a still-open conversation is archived or deleted, and after 30 minutes idle with no connected client. An idle close is not a wipe. Archive or delete is not a seal. SessionEnd output is advisory and will not steer or keep the thread open. Advisory is not a hold.
+- Evals **220**.
+
+### Anthropic (second)
+
+- Permission-modes start table re-read 10 Oct. **NO_DELTA**. Separate removal checks, the nudge, and the recurse skip stand.
+- **New:** on the Agent SDK permissions page, a hook allow does not skip deny and ask rules. A hook allow is not a skip.
+- **New:** a shadowed callback is not owner approval. It fires for bypassPermissions and for a bare allowed-tools name. A specifier and acceptEdits do not trigger it.
+- **New:** bypassPermissions refuses to start as root or under sudo outside a recognized sandbox. The query fails before the first turn. Refusing root is not a vault. `allowed_tools` does not constrain that mode. A tool list is not a limit.
+- **New:** a pattern deny is not a path deny. `/bin/rm` falls through. Falling through is not a hold. In an Agent SDK auto session, a critical-path removal is denied without calling the callback. Not calling the callback is not a wipe. dontAsk denies without calling the callback. Skipping the callback is not a seal.
+- Evals **221**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
+- Permissions, sandbox, and CLI pages re-read 10 Oct. Footers still **21 Jul 2026**. Headless scripting footer still **10 Jun 2026**. Feature URL stays **404**. Modes page footer still **8 Oct 2026**. Mode cycle is NO_DELTA. grok export, fork, and override stand.
+- **New:** `/remember` saves a memory note. A memory note is a paste. `/rewind` is not a wipe of a paste that already left.
+- **New:** `/feedback` sends session text. Feedback is a paste. Do not put a method in it. `/privacy` toggles retention status. A privacy toggle is not a vault.
+- **New:** `/import-claude` opens an import modal. An import modal is a next-paste. `/workflows` lists retained runs. That list is a paste. `GROK_WORKFLOWS=0` is not a wipe of retained runs.
+- No newer grok-export than W38. No conversation_search.
+- **Mailbox, unnamed:** a week pack without chat memory is not an export. Stale next-run values are not a seal. Do not copy folder ids. A capital-raise aside in a while-away chat is a paste. A video-demo link is not a source. An invite sent in chat is not a publish. A carrier receipt is not this skill. No order numbers. An admin-console gap list is not a deny rule. Do not publish the gaps. No names. No duration.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **222** on the memory-note rule. Mailbox eval **223**: a week pack without chat memory is not an export.
+
+### Shared
+
+- **Prompt text is a paste.** An ignored matcher is not a filter. That win is not a wipe. Invalid text is not a hold. An idle close is not a wipe. Advisory is not a hold.
+- **A hook allow is not a skip.** A shadowed callback is not owner approval. Refusing root is not a vault. A tool list is not a limit. Falling through is not a hold. Not calling the callback is not a wipe. The 10 Oct start table is NO_DELTA.
+- **A memory note is a paste.** A rewind is not a wipe. Feedback is a paste. A privacy toggle is not a vault. An import modal is a next-paste. A workflows list is a paste. Disabling workflows is not a wipe.
+- **A week pack without chat memory is not an export.** A capital-raise aside is a paste. A video-demo link is not a source. A carrier receipt is not this skill. A gap list is not a deny rule.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **223**. HITL F1–F28 + T1–T36 required on every claimed stack. This tip adds T37 (prompt text + hook allow + memory note + week pack).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.55-free] — 2026-10-09
 
 Absorbed this Grok Build turn's live mailbox (after the 8 Oct v0.5.54 push: an unsent follow-up on the same thread, and one later calendar accept; no skill-feedback mail; no newer grok-export) plus vendor recrawl **9 Oct** on top of origin **v0.5.54-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No marks. No duration. No attachments. No amounts. No hour splits. No meet links. No PINs. No phone numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

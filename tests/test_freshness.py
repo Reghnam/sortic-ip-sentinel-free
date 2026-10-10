@@ -20,8 +20,8 @@ import claim_rules  # noqa: E402
 TODAY = date(2026, 10, 4)
 WINDOW = ROOT / "references" / "sme-fund-window.json"
 OK_LINE = (
-    "hygiene check OK: 0.5.55-free; description 1018 chars; "
-    "body 499 lines; 18 references; 219 evals"
+    "hygiene check OK: 0.5.56-free; description 1018 chars; "
+    "body 499 lines; 18 references; 223 evals"
 )
 
 

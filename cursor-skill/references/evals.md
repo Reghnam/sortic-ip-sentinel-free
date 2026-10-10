@@ -3915,3 +3915,72 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Mailbox. An unsent follow-up is not a publish. A blocked calendar title is not a deny rule.
+
+
+## Eval 220 — prompt text is a paste (added 2026-10-10)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. UserPromptSubmit plain text is private developer context. Stop continue false wiped the turn. The 30-minute idle close sealed the method. SessionEnd advice holds the thread open.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "UserPromptSubmit matcher is ignored. An ignored matcher is not a filter. Plain text on stdout for that event is extra developer context. That context is a paste. A block of that submit is not a wipe of earlier turns",
+    "On Stop, continue:false wins over a continue from another Stop hook. That win is not a wipe. Stop plain text is invalid. Invalid text is not a hold",
+    "SessionEnd also runs on archive, delete, or 30 minutes idle with no connected client. An idle close is not a wipe. Archive or delete is not a seal. Advisory output is not a hold. This skill still ships no hooks. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. Prompt text is a paste. Advisory is not a hold.
+
+## Eval 221 — a hook allow is not a skip (added 2026-10-10)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The hook allow skipped the deny rules. The shadowed callback is owner approval. The tool list limits bypassPermissions. /bin/rm is the pattern deny. Refusing root is a vault. Not calling the callback wiped the removal.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permission-modes start table fetched 10 Oct is NO_DELTA. A hook allow does not skip deny and ask rules. A hook allow is not a skip. A shadowed callback is not owner approval",
+    "It fires for bypassPermissions and for a bare allowed-tools name. A specifier and acceptEdits do not trigger it. Refusing root is not a vault. A tool list is not a limit",
+    "A pattern deny is not a path deny. /bin/rm falls through. Falling through is not a hold. Not calling the callback is not a wipe. Skipping the callback is not a seal. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A hook allow is not a skip. A tool list is not a limit.
+
+## Eval 222 — a memory note is a paste (added 2026-10-10)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. /remember keeps the method private. /rewind wiped the paste that already left. /privacy is a vault. /feedback is safe. The import modal is this host. The workflows list is sealed. GROK_WORKFLOWS=0 wiped the retained runs.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions, sandbox, and CLI footers fetched 10 Oct still show 21 Jul 2026. Headless scripting still 10 Jun 2026. Headless feature URL stays 404. Modes page footer still 8 Oct 2026. Mode cycle is NO_DELTA",
+    "A memory note is a paste. /rewind is not a wipe of a paste that already left. Feedback is a paste. A privacy toggle is not a vault. An import modal is a next-paste",
+    "The workflows list is a paste. GROK_WORKFLOWS=0 is not a wipe of retained runs. No conversation_search. No newer grok-export than W38. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A memory note is a paste. A privacy toggle is not a vault.
+
+## Eval 223 — a week pack without chat memory is not an export (added 2026-10-10)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The week pack exports the chats. Stale next-run values seal the jobs. Publish the capital-raise aside and the video-demo link. The chat invite publishes the method. The carrier receipt is this skill. The admin-console gap list is a deny rule.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "A week pack without chat memory is not an export. Stale next-run values are not a seal. Do not copy folder ids. No conversation_search. No newer grok-export than W38. Do not dump chat bodies",
+    "A capital-raise aside in a while-away chat is a paste. A video-demo link is not a source. An invite sent in chat is not a publish",
+    "A carrier receipt is not this skill. No order numbers. An admin-console gap list is not a deny rule. Do not publish the gaps. No names. No duration. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Mailbox. A week pack without chat memory is not an export. A gap list is not a deny rule.
