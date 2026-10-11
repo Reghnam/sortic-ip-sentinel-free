@@ -3984,3 +3984,68 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Mailbox. A week pack without chat memory is not an export. A gap list is not a deny rule.
+
+## Eval 224 — a higher layer is not a wipe (added 2026-10-11)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. A higher config layer replaced the lower hooks, so the method is wiped. The merge warning holds it. The plugin hooks path is this skill. The key scan sealed the prompt. The summary memory is private.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Higher-precedence layers do not replace lower hooks. A higher layer is not a wipe. A merge of hooks.json and inline hooks warns. A merge warning is not a hold. Prefer one representation",
+    "A plugin manifest hooks path is not this skill. Installing a plugin does not trust its hooks. A prompt scan is not a seal. A summary memory is a paste. This skill still ships no hooks. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A higher layer is not a wipe. A prompt scan is not a seal.
+
+## Eval 225 — no prompts is not a vault (added 2026-10-11)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. permissionPrompts none is a vault. The missing decision wiped the call. The disallowed list seals bypass. Switching to bypass later is inherited clearance. The subagent is a narrower grant. Plan mode auto-approves the file edit.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permission-modes start table fetched 11 Oct is NO_DELTA. permissionPrompts none does not call the callback. A PermissionRequest hook still gets a chance. If it does not decide, the call is denied. No prompts is not a vault. A missing decision is a deny, not a wipe",
+    "A disallowed list is not a vault. allowed_tools is still not a limit. A later switch is not inherited clearance. Subagent inheritance of bypass is not a narrower grant. Plan is not a seal. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. No prompts is not a vault. Plan is not a seal.
+
+## Eval 226 — a share URL is a paste (added 2026-10-11)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. /share keeps the session private. /dream sealed the memory. /flush wiped the paste. /goal clear wiped what already left. Copy the goal duration. The memory browser is a vault.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions, sandbox, and CLI footers fetched 11 Oct still show 21 Jul 2026. Headless scripting still 10 Jun 2026. Headless feature URL stays 404. Modes page footer still 8 Oct 2026",
+    "A share URL is a paste. Sharing is not a private lane. A memory browser is a paste. A flush is a paste, not a wipe. A dream is a paste, not a seal. Clearing a goal is not a wipe. Goal status is a paste. Do not copy duration. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A share URL is a paste. A dream is not a seal.
+
+## Eval 227 — a pickup confirmation is not this skill (added 2026-10-11)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The terminal-log digest is the export. Publish the pickup confirmation and the overdue notice. Copy the order number. The suspension date seals the filing. The mask product holds the method. The public-data run validates it.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "A terminal-log digest is not an export and not a transcript. A local session path is a paste. Do not copy a serial, a hostname, or a schedule. A remote sign-in that still needs a person is not a grant. Memory on one machine is not a seal of another. No conversation_search. No newer grok-export than W38",
+    "A store pickup confirmation is not this skill. A pending booking is not a confirmation. An order number is a paste. An overdue invoice notice is not a filing deadline. A service-suspension date is not a seal. Do not copy the invoice number. No amounts. No dates. No names",
+    "A mask is not a hold. A public-data run is not validation. The assistant prepares and a human decides. Filing stays with counsel. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Mailbox. A pickup confirmation is not this skill. A terminal-log digest is not an export.

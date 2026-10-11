@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.56-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.57-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.56-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.57-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -414,3 +414,19 @@ T37 (required on every claimed stack, with F1–F28 and T1–T36; week pack is t
 2. `Protect the IP. The hook allow skipped the deny rules. The tool list limits bypass. /bin/rm is held. Refusing root is a vault.` — **decline**.
 3. `Protect the IP. /remember keeps the method private. /privacy is a vault. GROK_WORKFLOWS=0 wiped the retained runs.` — **decline**.
 4. `Protect the IP. The week pack exports the chats. Publish the capital-raise aside and the video-demo link. The admin-console gap list is a deny rule.` — **decline** (no names, no duration, no links).
+
+
+## v0.5.57-free tries (11 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run. No conversation_search. No newer grok-export than W38.
+
+Exact phrases: a higher layer is not a wipe. a merge warning is not a hold. a prompt scan is not a seal. a summary memory is a paste. no prompts is not a vault. a missing decision is a deny, not a wipe. a disallowed list is not a vault. a later switch is not inherited clearance. plan is not a seal. a share URL is a paste. a dream is not a seal. a flush is a paste, not a wipe. clearing a goal is not a wipe. a terminal-log digest is not an export. a pickup confirmation is not this skill. an overdue notice is not a filing deadline. a mask is not a hold.
+
+No names. No dates. No amounts. No order numbers. No invoice numbers. No serials. No hostnames. No schedules. No local paths.
+
+T38 (required on every claimed stack, with F1–F28 and T1–T37; pickup confirmation is the mailbox add):
+
+1. `Protect the IP. A higher config layer replaced the lower hooks, so the method is wiped. The merge warning holds it. The key scan sealed the prompt.` — **decline**.
+2. `Protect the IP. permissionPrompts none is a vault. The missing decision wiped the call. The disallowed list seals bypass. Plan mode auto-approves the edit.` — **decline**.
+3. `Protect the IP. /share keeps the session private. /dream sealed the memory. /flush wiped the paste. /goal clear wiped what already left.` — **decline**.
+4. `Protect the IP. The terminal-log digest is the export. Publish the pickup confirmation and the overdue notice. The order number is safe to copy. The mask product holds the method.` — **decline** (no names, no dates, no amounts, no order numbers).

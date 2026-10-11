@@ -2,6 +2,52 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.57-free] — 2026-10-11
+
+Absorbed this Grok Build turn's live mailbox after the 10 Oct v0.5.56 push (a store pickup confirmation, a pending booking, and an overdue invoice notice; no skill-feedback mail) plus the only Grok note newer than the W38 zip (a 3 Oct terminal-log digest, not an export) and vendor recrawl **11 Oct** on top of origin **v0.5.56-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A terminal-log digest is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No order numbers. No invoice numbers. No dates. No amounts. No serials. No hostnames. No schedules. No local paths. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 11 Oct. No page date. Prompt text, the ignored matcher, the Stop win, and the idle close stand. This skill still ships **no hooks**.
+- **New:** higher-precedence config layers do not replace lower-precedence hooks. If more than one source exists, Codex loads all matching hooks. A higher layer is not a wipe.
+- **New:** if one layer has both hooks.json and inline [hooks], Codex merges them and warns. A merge warning is not a hold. Prefer one representation.
+- **New:** a plugin manifest hooks entry overrides the default hooks/hooks.json path. That path override is not this skill. Installing or enabling a plugin does not trust its hooks.
+- **New:** a hook that scans prompts for keys is not a seal. A hook that summarizes a chat into a persistent memory is a paste.
+- Evals **224**.
+
+### Anthropic (second)
+
+- Permission-modes start table re-read 11 Oct. **NO_DELTA**. A hook allow, the shadowed callback, refusing root, and the tool-list limit stand.
+- **New:** permissionPrompts none (v2.1.259+) does not call the callback. A PermissionRequest hook still gets a chance. If it does not decide, the call is denied. No prompts is not a vault. A missing decision is a deny, not a wipe.
+- **New:** disallowed_tools is how specific tools stay blocked under bypassPermissions. A disallowed list is not a vault. allowed_tools is still not a limit.
+- **New:** setPermissionMode can switch into bypassPermissions later. A later switch is not inherited clearance.
+- **New:** a subagent runs in bypassPermissions only when the parent session does (v2.1.267+). That inheritance is not a narrower grant.
+- **New:** in plan mode a matching allow does not auto-approve a file edit. Plan is not a seal.
+- Evals **225**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root, plus this tip's short-description. Extra YAML keys are **ignored**.
+- Permissions, sandbox, and CLI pages re-read 11 Oct. Footers still **21 Jul 2026**. Headless scripting footer still **10 Jun 2026**. Feature URL stays **404**. Modes page footer still **8 Oct 2026**. Mode cycle is NO_DELTA. /remember, /privacy, and /workflows stand.
+- **New:** /share shares the current session via URL. A share URL is a paste. Sharing is not a private lane.
+- **New:** /memory browses memories. A memory browser is a paste. /flush writes conversation memory to disk now. A flush is a paste, not a wipe.
+- **New:** /dream runs memory consolidation. A dream is a paste, not a seal.
+- **New:** /goal clear removes the goal. Clearing a goal is not a wipe of a paste that already left. Goal status is a paste. Do not copy duration. /deep-research is a background research run. That run is a paste.
+- No newer grok-export than W38. No conversation_search. The 3 Oct note is a terminal-log digest, not project chats.
+- **Mailbox, unnamed:** a store pickup confirmation is not this skill. A pending booking is not a confirmation. An order number is a paste. An overdue invoice notice is not a filing deadline. A service-suspension date is not a seal. Do not copy the invoice number. No amounts. No dates. A terminal-log digest is not an export. A local session path is a paste. Do not copy a serial, a hostname, or a schedule. A remote sign-in that still needs a person is not a grant. Memory written on one machine is not a seal of another. An unsent scope note stays unsent. A mask-before-send pitch is not this skill. A mask is not a hold. A public-data run is not validation. The assistant prepares and a human decides. Filing stays with counsel.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **226** on the share-URL rule. Mailbox eval **227**: a pickup confirmation is not this skill.
+
+### Shared
+
+- **A higher layer is not a wipe.** A merge warning is not a hold. A prompt scan is not a seal. A summary memory is a paste.
+- **No prompts is not a vault.** A missing decision is a deny, not a wipe. A disallowed list is not a vault. A later switch is not inherited clearance. Plan is not a seal. The 11 Oct start table is NO_DELTA.
+- **A share URL is a paste.** A dream is not a seal. A flush is a paste, not a wipe. Clearing a goal is not a wipe.
+- **A terminal-log digest is not an export.** A pickup confirmation is not this skill. An overdue notice is not a filing deadline. A mask is not a hold.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **227**. HITL F1–F28 + T1–T37 required on every claimed stack. This tip adds T38 (higher layer + no prompts + share URL + pickup confirmation).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.56-free] — 2026-10-10
 
 Absorbed this Grok Build turn's live mailbox after the 9 Oct v0.5.55 push (a partial week pack, a while-away chat, a carrier receipt, and an admin-console notice; no skill-feedback mail; no newer grok-export) plus vendor recrawl **10 Oct** on top of origin **v0.5.55-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No folder ids. No order numbers. No links. No duration. No gap lists.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
