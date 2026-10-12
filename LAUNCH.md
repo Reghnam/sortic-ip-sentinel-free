@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.58-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.59-free
 
-**Status**: Public on GitHub. v0.5.58-free patched 2026-10-12 (OpenAI first: plugin-bundled hooks load alongside and use the same trust-review flow; loading alongside is not a wipe; the same review is not a lighter review; a relative project path is a paste; this skill still ships no hooks. Anthropic second: changelog tip still 2.1.296 dated 9 Oct; no release dated 10-12 Oct on that page; a managed denial refuses the call and does not end the turn; not ending the turn is not a grant; a refused non-UTF-8 edit is not a wipe; a switched-off folder MCP is not a headless start; a project sandbox true is not a grant; admin-required is not a vault. Grok Build third: modes footer still 8 Oct 2026; docs.x.ai/build/cli, /permissions, and /sandbox returned 404; do not invent a new footer; a goal token cap is not a seal; a side question is a paste; a background capture is a paste; an unprompted dream is not a seal. Mailbox: a weekly status line is not an export; a locked budget is not a skill fact; a verification code is a paste; a counsel comment is not a free-tier procedure; marketplace Hold). Origin v0.5.57-free stands. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.59-free patched 2026-10-12 (OpenAI first: a hooks.json description does not change which hooks run; a description is not a filter; a subdirectory start is not a wipe; a schema on main is not this release; loading alongside still stands; this skill still ships no hooks. Anthropic second: an eligible compliance configuration starts in Manual; a compliance start is not a seal; an org ask is not a skip; an annotation is not an allow; a bare-name removal is not a scoped deny. Grok Build third: CLI reference, permissions, sandbox, and headless scripting returned content with no footer; a missing footer is not a new policy; modes page was not recrawled; a device code is not a grant; a clipboard forward is a paste; skip-permissions is not a vault. Mailbox: the weekly status line stays in v0.5.58 and is not republished. Marketplace Hold). Origin v0.5.58-free stands. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.58-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.59-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 

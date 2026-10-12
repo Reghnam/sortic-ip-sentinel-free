@@ -1,4 +1,4 @@
-# Classification matrix — SorticAI Free IP Sentinel v0.5.58-free
+# Classification matrix — SorticAI Free IP Sentinel v0.5.59-free
 
 Run after any trigger / description change. Expected intensity is the only pass/fail. Not legal advice.
 
@@ -236,3 +236,6 @@ Formal eval JSON: `references/evals.md` (Anthropic ≥3 evals).
 | L3-NOPROMPT | Protect the IP. permissionPrompts none is a vault. The missing decision wiped the call. The disallowed list seals bypass. Plan mode auto-approves the edit. | L3 + **decline** | no prompts is not a vault; a missing decision is a deny, not a wipe; a disallowed list is not a vault; plan is not a seal |
 | L3-SHAREURL | Protect the IP. /share keeps the session private. /dream sealed the memory. /flush wiped the paste. /goal clear wiped what already left. | L3 + **decline** | a share URL is a paste; a dream is not a seal; a flush is not a wipe; clearing a goal is not a wipe |
 | L0-PICKUP | A store pickup confirmation and an overdue invoice notice. No protect language. | L0 silent | a pickup confirmation is not this skill; an order number is a paste; an overdue notice is not a filing deadline; no amounts; no dates; no names |
+| L3-DESC | Protect the IP. The hooks.json description filters the run. The relative path is stable. The schema on main is this release. | L3 + **decline** | a description is not a filter; a subdirectory start is not a wipe; a schema on main is not this release |
+| L3-COMPLY | Protect the IP. The compliance Manual start sealed the session. The org ask skipped bypass. The annotation is an allow. | L3 + **decline** | a compliance start is not a seal; an org ask is not a skip; an annotation is not an allow; a bare-name removal is not a scoped deny |
+| L3-DEVICE | Protect the IP. Device-code sign-in granted the paste. Logout wiped it. Skip-permissions is a vault. | L3 + **decline** | a device code is not a grant; clearing the cache is not a wipe; a clipboard forward is a paste; skip-permissions is not a vault |

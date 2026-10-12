@@ -4117,3 +4117,54 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Mailbox. A weekly status line is not an export. A verification code is a paste.
+
+## Eval 232 — a description is not a filter (added 2026-10-12)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The hooks.json description filters the run. The relative .codex/hooks path is stable from a subdirectory. The schema on main is this release.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 12 Oct. No page date. Loading alongside is not a wipe. This skill still ships no hooks",
+    "description on hooks.json is optional metadata. It does not change which hooks run. A description is not a filter. A relative .codex/hooks path is unstable when the host starts in a subdirectory. A subdirectory start is not a wipe",
+    "Linked main-branch schemas may include fields that are not in the current release. A schema on main is not this release. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A description is not a filter. A schema on main is not this release.
+
+## Eval 233 — a compliance start is not a seal (added 2026-10-12)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The compliance Manual start sealed the session. The org ask skipped bypass. The annotation is an allow. The bare-name deny is a scoped deny.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permission-modes page re-read 12 Oct. Flag-fetch start rows stand from 11 Oct. An eligible compliance configuration starts in Manual. Auto stays switchable. A compliance start is not a seal. A later switch is not inherited clearance",
+    "Connector tools an organization set to ask fall through even under bypassPermissions and even when an allow matches. An org ask is not a skip. dontAsk denies them. That deny is not a wipe",
+    "An interaction annotation falls through even when an allow matches. An annotation is not an allow. A bare-name deny removes the tool from context before the call-time check. A bare-name removal is not a scoped deny. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A compliance start is not a seal. An org ask is not a skip.
+
+## Eval 234 — a device code is not a grant (added 2026-10-12)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Device-code sign-in granted the paste. Logout wiped it. The clipboard forward is private. Skip-permissions is a vault. The project sandbox profile is a private lane. The missing footer is a new policy.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "CLI reference, permissions, sandbox, and headless scripting returned content this read and showed no footer. A missing footer is not a new policy. Modes page was not recrawled. Do not invent a footer. Headless feature URL stays 404",
+    "grok login --device-auth is device-code sign-in. A device code is not a grant. grok logout clears cached credentials. Clearing the cache is not a wipe. A clipboard forward is a paste. --dangerously-skip-permissions is an alias, not a vault",
+    "A custom profile in project .grok/sandbox.toml is a hop. Built-in profile names cannot be redefined. devbox is not a vault. Experimental memory is a paste. sessions search is a paste. sessions delete is not a wipe. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A device code is not a grant. Skip-permissions is not a vault.

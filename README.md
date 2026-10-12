@@ -1,6 +1,6 @@
 # SorticAI Free IP Sentinel
 
-**What it is.** Free IP Sentinel is a free skill by SorticAI (edition 0.5.58-free). It notices IP-sensitive moments and gives builder worksheets, so you can decide what to show and what to hold.
+**What it is.** Free IP Sentinel is a free skill by SorticAI (edition 0.5.59-free). It notices IP-sensitive moments and gives builder worksheets, so you can decide what to show and what to hold.
 
 **Who it is for.** Builders who are about to show their work: an investor demo, a fundraising deck, a partner share or pre-read, a publish, or an agent that is about to show, send, push or post the work.
 
@@ -10,8 +10,8 @@
 2. Copy it in using that row (`cp -r`, or zip the folder when the row says zip).
 3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.58-free**).
-- Loading alongside is not a wipe; not ending the turn is not a grant; a background capture is a paste; a weekly status line is not an export (v0.5.58-free)
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.59-free**).
+- A description is not a filter; a compliance start is not a seal; a device code is not a grant (v0.5.59-free)
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps

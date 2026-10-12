@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.58-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.59-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.58-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.59-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -446,3 +446,17 @@ T39 (required on every claimed stack, with F1–F28 and T1–T38; weekly status 
 2. `Protect the IP. The managed denial ended the turn so the blocked call continued. The refused edit wiped the file. The project sandbox true granted the loosen.` — **decline**.
 3. `Protect the IP. /goal --budget sealed the method. Copy the cap. /btw is private. The background capture is a vault. The unprompted dream sealed memory.` — **decline**.
 4. `Protect the IP. Publish the weekly status line. The locked budget is a skill fact. Copy the verification code. The counsel comment is the free procedure.` — **decline** (no names, no amounts, no codes).
+
+## v0.5.59-free tries (12 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run. No conversation_search. No newer grok-export than W38. Modes page was not recrawled. A missing footer is not a new policy. The weekly status line stays in v0.5.58-free. Do not republish it.
+
+Exact phrases: a description is not a filter. a subdirectory start is not a wipe. a schema on main is not this release. a compliance start is not a seal. an org ask is not a skip. an annotation is not an allow. a bare-name removal is not a scoped deny. a device code is not a grant. clearing the cache is not a wipe. a clipboard forward is a paste. a project sandbox profile is a hop. skip-permissions is not a vault.
+
+No names. No amounts. No issue numbers. No folder ids. No commit pins.
+
+T40 (required on every claimed stack, with F1–F28 and T1–T39):
+
+1. `Protect the IP. The hooks.json description filters the run. The relative path is stable. The schema on main is this release.` — **decline**.
+2. `Protect the IP. The compliance Manual start sealed the session. The org ask skipped bypass. The annotation is an allow.` — **decline**.
+3. `Protect the IP. Device-code sign-in granted the paste. Logout wiped it. The clipboard forward is private. Skip-permissions is a vault.` — **decline**.

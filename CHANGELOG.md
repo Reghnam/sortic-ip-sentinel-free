@@ -2,6 +2,50 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.59-free] — 2026-10-12
+
+Absorbed this Grok Build turn after origin **v0.5.58-free** was already on main (loading alongside is not a wipe). That tip already took the weekly status line. This tip does not republish it. No newer grok-export. **No conversation_search.** Drive title search after 1 Oct still found no newer export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No ranges. No issue numbers. No gate tallies. No spend lines. No commit pins. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 12 Oct (`learn.chatgpt.com/docs/hooks`). No page date. Loading alongside, the same review, and the relative project path stand. This skill still ships **no hooks**.
+- **New:** `description` on a `hooks.json` file is optional metadata. It does not change which hooks run. A description is not a filter.
+- **New:** a relative `.codex/hooks` path is unstable when the host starts in a subdirectory. Prefer a git-root path. A subdirectory start is not a wipe. A stable path is not a seal.
+- **New:** schemas linked from the main branch may include hook fields that are not in the current release. This page is the release behavior. A schema on main is not this release.
+- Evals **232**.
+
+### Anthropic (second)
+
+- Permission-modes page re-read 12 Oct. Flag-fetch start rows stand from 11 Oct. **NO_DELTA** on those rows. Not ending the turn, the refused edit, the switched-off server, the project true, and admin-required stand.
+- **New:** an eligible session under a compliance configuration starts in Manual. Auto stays available to switch to. A compliance start is not a seal. A later switch is not inherited clearance.
+- **New:** on the Agent SDK permissions page, connector tools an organization set to ask fall through to the callback even in `bypassPermissions`, and even when an allow matches. An org ask is not a skip. `dontAsk` denies them. That deny is not a wipe.
+- **New:** an MCP interaction annotation falls through even when an allow matches. An annotation is not an allow. `dontAsk` denies it.
+- **New:** a bare-name deny removes the tool from context before the call-time check. A bare-name removal is not a scoped deny.
+- Evals **233**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root, plus this tip's short-description. Extra YAML keys are **ignored**.
+- CLI reference, permissions, sandbox, and headless scripting returned content this read. Those exports showed **no footer**. A missing footer is not a new policy. Modes page was **not** recrawled this tip. Do not invent a footer. v0.5.58 recorded a 404 on CLI, permissions, and sandbox. A sibling 404 is not a wipe of a page that returned content. Headless feature URL stays **404**. A goal token cap, a side question, a background capture, and an unprompted dream stand.
+- **New:** `grok login --device-auth` is device-code sign-in for a headless or remote environment. A device code is not a grant. `grok logout` clears cached credentials. Clearing the cache is not a wipe of a paste that already left.
+- **New:** `grok memory clear` removes cross-session memory files. Clearing those files is not a wipe. `--experimental-memory` turns cross-session memory on. Experimental memory is a paste. `--no-memory` is not a wipe of memory already written.
+- **New:** `grok wrap` forwards clipboard writes. A clipboard forward is a paste. `grok sessions search` is a paste. `grok sessions delete` is not a wipe. `grok worktree` and `--worktree` / `--ref` are a next-paste, not a private lane. `grok setup` fetches managed configuration. A setup fetch is a hop.
+- **New:** a custom profile in project `.grok/sandbox.toml` is a hop. Built-in profile names cannot be redefined. A redefined name is not a seal. `devbox` still writes top-level directories except one data path. `devbox` is not a vault. `--dangerously-skip-permissions` is an alias, not a vault.
+- No newer grok-export than W38. No conversation_search.
+- **Mailbox:** already absorbed in v0.5.58-free. A weekly status line is not an export. This tip does not republish it. No second copy of amounts, names, or ticket text.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **234** on the device-code rule.
+
+### Shared
+
+- **A description is not a filter.** A subdirectory start is not a wipe. A schema on main is not this release.
+- **A compliance start is not a seal.** An org ask is not a skip. An annotation is not an allow. A bare-name removal is not a scoped deny.
+- **A device code is not a grant.** Clearing the cache is not a wipe. A clipboard forward is a paste. A project sandbox profile is a hop. Skip-permissions is not a vault. A missing footer is not a new policy.
+- **The weekly status line stays in v0.5.58-free.** Do not republish it.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **234**. HITL F1–F28 + T1–T39 required on every claimed stack. This tip adds T40 (description + compliance start + device code).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.58-free] — 2026-10-12
 
 Absorbed this Grok Build turn's live mailbox after the 11 Oct v0.5.57 push (a weekly status line, a discoverable-name notice, a one-time code, a service-stop notice, a card-add notice, a trial-end notice, another pickup, another overdue notice, and unsent counsel comments; no skill-feedback mail) plus the only Grok note still newer than the W38 zip (the 3 Oct terminal-log digest, already classified, not an export) and vendor recrawl **12 Oct** on top of origin **v0.5.57-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No codes. No ticket ids. No addresses. No folder ids. No marks.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
