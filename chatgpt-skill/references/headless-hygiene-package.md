@@ -22,7 +22,7 @@ Emit exactly the keys in the block below. Add the optional top-level key `sme_fu
 ```json
 {
   "schema": "sorticai.hygiene_package.v1",
-  "edition": "0.5.57-free",
+  "edition": "0.5.58-free",
   "activation_level": "L3",
   "output_register": "procedural_builder_worksheet",
   "not_for_third_party": true,
@@ -187,8 +187,8 @@ The block is the shape. It is not a live snapshot of the window file.
 - If source data is unavailable, report failure — do not reuse stale data.
 - `agent_exposure` **must be emitted**. Empty array is correct when the agent did not show/send anything this turn.
 
-- A higher layer is not a wipe. A merge warning is not a hold. No prompts is not a vault. A share URL is a paste. A dream is not a seal. A terminal-log digest is not an export. A pickup confirmation is not this skill. An order number is a paste.
-**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.57-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
+- A higher layer is not a wipe. A merge warning is not a hold. No prompts is not a vault. A share URL is a paste. A dream is not a seal. A terminal-log digest is not an export. A pickup confirmation is not this skill. An order number is a paste. Loading alongside is not a wipe. Not ending the turn is not a grant. A project true is not a grant. A background capture is a paste. A goal token cap is not a seal. A weekly status line is not an export. A verification code is a paste. A counsel comment is not a free-tier procedure.
+**Disclaimer:** SorticAI IP Sentinel (free edition) v0.5.58-free is automated / skill-assisted procedural hygiene help only. It is **not legal advice** and carries **no guarantees**. Consult qualified IP counsel. Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1, USPTO 2025 AI inventorship guidance, WIPO principles.
 - Sites deploy URL is production. Save-without-deploy to review. Default owner+admins. Workspace/public publish is a demo. Sites env/secrets are holdbacks.
 - User instructions this turn beat skill guidelines. Named recipient AND action is the override. On L3 decline, quote SKILL.md. No unsolicited L0/L1 hypothetical-risk checklists.
 - Async board packet without the room is a demo. Project-repo skill commit is a publish. Workflow fan-out is a disclosure multiplier. Project `.grok/hooks/` needs `/hooks-trust`.

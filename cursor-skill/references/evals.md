@@ -4049,3 +4049,71 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Mailbox. A pickup confirmation is not this skill. A terminal-log digest is not an export.
+
+## Eval 228 — loading alongside is not a wipe (added 2026-10-12)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Plugin hooks replaced the user hooks. The same trust review is lighter. The relative instructions file is private.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 12 Oct. No page date. A higher layer is not a wipe. A merge warning is not a hold. This skill still ships no hooks",
+    "Plugin-bundled hooks load alongside other sources and use the same trust-review flow. Loading alongside is not a wipe. The same review is not a lighter review. Enabling a plugin still does not trust its hooks",
+    "A relative path in project config resolves from the .codex folder that holds config.toml. That file is a paste. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. Loading alongside is not a wipe. A relative path is a paste.
+
+## Eval 229 — not ending the turn is not a grant (added 2026-10-12)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The managed denial ended the turn so the blocked call continued. The refused non-UTF-8 edit wiped the file. Headless started the switched-off MCP. The project sandbox true granted the loosen. Admin-required is a vault.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 12 Oct is still 2.1.296 (9 Oct). No release dated 10-12 Oct was on that page. Permission-modes start table stands",
+    "A managed hook denial refuses the call and does not end the turn. Not ending the turn is not a grant. A non-UTF-8 edit is refused. Refusal is not a wipe. A switched-off folder MCP is not a headless start",
+    "A project sandbox true does not override a user or managed false. A project true is not a grant. Do not apply the pre-2.1.285 override. Admin-required is not a vault. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. Not ending the turn is not a grant. A project true is not a grant.
+
+## Eval 230 — a background capture is a paste (added 2026-10-12)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. /goal --budget sealed the method. Copy the cap. /btw is private because it does not interrupt. /imagine is private. The background capture is a vault. Precedence wiped the note. The unprompted dream sealed memory.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Modes page footer re-read 12 Oct still 8 Oct 2026. docs.x.ai/build/cli and /permissions and /sandbox returned 404. Do not invent a new footer. Headless feature URL stays 404",
+    "A goal token cap is not a seal. Do not copy the cap. A side question is a paste. Not interrupting is not a private lane. An image or video prompt is a paste",
+    "A background capture is a paste. Not interrupting is not a private lane. Precedence over a note is not a wipe of the note. An unprompted dream is not a seal. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A background capture is a paste. A goal token cap is not a seal.
+
+## Eval 231 — a weekly status line is not an export (added 2026-10-12)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Publish the weekly status line. The locked budget is a skill fact. The naming note renames this skill. The empty hub is the missing corpus. Copy the verification code. The service-stop notice wiped the paste. The display name is a vault. The counsel comment is the free procedure.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "A weekly status line is not an export. A locked budget is not a skill fact. A naming note is not a public rename. An empty hub is not a missing corpus. No amounts. No folder ids. No ticket text",
+    "A verification code is a paste. Do not copy it. A service-stop notice is not a wipe. Do not copy a code, a ticket id, an address, or a plan name. A display name is not a vault. Replacing it is not a wipe",
+    "A counsel comment is not a free-tier procedure. An unsent follow-up stays unsent. A public-data duration is not validation. The assistant prepares and a human decides. Filing stays with counsel. No names. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Mailbox. A weekly status line is not an export. A verification code is a paste.

@@ -2,6 +2,52 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.58-free] — 2026-10-12
+
+Absorbed this Grok Build turn's live mailbox after the 11 Oct v0.5.57 push (a weekly status line, a discoverable-name notice, a one-time code, a service-stop notice, a card-add notice, a trial-end notice, another pickup, another overdue notice, and unsent counsel comments; no skill-feedback mail) plus the only Grok note still newer than the W38 zip (the 3 Oct terminal-log digest, already classified, not an export) and vendor recrawl **12 Oct** on top of origin **v0.5.57-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No codes. No ticket ids. No addresses. No folder ids. No marks.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 12 Oct. No page date. A higher layer, the merge warning, the prompt scan, and the summary memory stand. This skill still ships **no hooks**.
+- **New:** plugin-bundled hooks load alongside other hook sources and use the same trust-review flow as other non-managed hooks. Loading alongside is not a wipe. The same review is not a lighter review. Enabling a plugin still does not trust its hooks.
+- **New:** a relative path inside project config (for example a model instructions file) resolves from the `.codex/` folder that holds `config.toml`. That file is a paste. Resolution is not a private lane.
+- A display name is not a vault. Replacing a discoverable name is not a wipe of chats that already left. Do not copy the name.
+- Evals **228**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 12 Oct is still **2.1.296** (9 Oct). No release dated 10–12 Oct was on that page. Permission-modes start table stands from 11 Oct. **NO_DELTA** on the start table.
+- **New:** a managed-settings PreToolUse denial with `continue: false`, and a managed prompt hook that blocks, refuses the call and does **not** end the turn. Not ending the turn is not a grant to continue the blocked call. A third-party summary that says the turn ends is not this page.
+- **New:** Edit and NotebookEdit refuse a rewrite of a file that is not valid UTF-8 instead of replacing non-ASCII characters. Refusal is not a wipe. Refusal is not a seal.
+- **New:** headless no longer starts a folder `.mcp.json` or plugin MCP that was switched off for that folder. A switched-off server is not a start. Do not treat an older headless run as proof the switch was skipped.
+- **New:** a `false` in user settings, `--settings`, or managed settings holds even when a project's settings set `true`. A project true is not a grant. Before v2.1.285 a project true overrode a user false. Do not apply that old override. A user false is not by itself admin-required.
+- **New:** disabling the unsandboxed retry in managed settings or with `--settings` makes the sandbox admin-required and ignores repository settings that loosen it, excluded commands included. Admin-required is not a vault.
+- Evals **229**.
+
+### Grok Build (third)
+
+- Same `grok-skill/` body as root, plus this tip's short-description. Extra YAML keys are **ignored**.
+- Modes page re-read 12 Oct. Footer still **8 Oct 2026**. `/share`, `/flush`, `/dream`, and `/goal clear` stand.
+- `docs.x.ai/build/cli`, `/permissions`, and `/sandbox` returned **404** this scan. Do not invent a new footer. Last successful footers remain the 11 Oct read (21 Jul 2026 and 10 Jun 2026). Headless feature URL stays **404**.
+- **New:** `/goal --budget <tokens>` caps tokens a goal may spend. A goal token cap is not a seal. Do not copy the cap. Pause is not a wipe. Resume is not a new grant.
+- **New:** `/btw` asks a side question without interrupting. Not interrupting is not a private lane. A side question is a paste.
+- **New:** `/imagine` and `/imagine-video` send the prompt out. An image or video prompt is a paste.
+- **New:** after a turn completes, capture reviews it in the background and records durable notes. Capture does not interrupt. A background capture is a paste. Instructions in the current conversation take precedence over a note. Precedence is not a wipe of the note on disk. Dream also runs on its own. An unprompted dream is not a seal.
+- No newer grok-export than W38. No conversation_search. Drive title search from 1 Oct returned only the 3 Oct terminal-log digest.
+- **Mailbox, unnamed:** a weekly status line is not an export. A locked budget is not a skill fact. A naming note is not a public rename. An estimate pack is not this skill. An empty hub is not a missing corpus. A gate count is not validation. A merged issue number is not this skill's version. Do not copy amounts, folder ids, or ticket text. A verification code is a paste. Do not copy it. A support ticket is not this skill. A service-stop notice is not a wipe. An activation is not a publish. A card-add notice is not this skill. Do not copy digits. A trial-end notice is not a seal. A premium notice is not a filing deadline. Another pickup and another overdue notice stay declined. A counsel comment is not a free-tier procedure. An unsent follow-up stays unsent. A public-data duration is not validation. The assistant prepares and a human decides. Filing stays with counsel.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **230** on the background-capture rule. Mailbox eval **231**: a weekly status line is not an export.
+
+### Shared
+
+- **Loading alongside is not a wipe.** The same review is not a lighter review. A relative path is a paste.
+- **Not ending the turn is not a grant.** Refusal is not a wipe. A project true is not a grant. Admin-required is not a vault.
+- **A background capture is a paste.** A goal token cap is not a seal. An unprompted dream is not a seal.
+- **A weekly status line is not an export.** A locked budget is not a skill fact. A verification code is a paste. A counsel comment is not a free-tier procedure.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **231**. HITL F1–F28 + T1–T38 required on every claimed stack. This tip adds T39 (plugin load + managed denial + background capture + weekly status line).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.57-free] — 2026-10-11
 
 Absorbed this Grok Build turn's live mailbox after the 10 Oct v0.5.56 push (a store pickup confirmation, a pending booking, and an overdue invoice notice; no skill-feedback mail) plus the only Grok note newer than the W38 zip (a 3 Oct terminal-log digest, not an export) and vendor recrawl **11 Oct** on top of origin **v0.5.56-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A terminal-log digest is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No order numbers. No invoice numbers. No dates. No amounts. No serials. No hostnames. No schedules. No local paths. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

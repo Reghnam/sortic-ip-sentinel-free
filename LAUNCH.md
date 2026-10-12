@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.57-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.58-free
 
-**Status**: Public on GitHub. v0.5.57-free patched 2026-10-11 (OpenAI first: a higher layer is not a wipe; a merge warning is not a hold; a prompt scan is not a seal; a summary memory is a paste; this skill still ships no hooks. Anthropic second: start table NO_DELTA; no prompts is not a vault; a missing decision is a deny, not a wipe; a disallowed list is not a vault; a later switch is not inherited clearance; plan is not a seal. Grok Build third: footers still 21 Jul 2026, 10 Jun 2026, and modes 8 Oct 2026; headless feature URL stays 404; a share URL is a paste; a dream is not a seal; a flush is a paste, not a wipe; clearing a goal is not a wipe. Mailbox: a terminal-log digest is not an export; a pickup confirmation is not this skill; an overdue notice is not a filing deadline; a mask is not a hold; marketplace Hold). Origin v0.5.56-free stands. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.58-free patched 2026-10-12 (OpenAI first: plugin-bundled hooks load alongside and use the same trust-review flow; loading alongside is not a wipe; the same review is not a lighter review; a relative project path is a paste; this skill still ships no hooks. Anthropic second: changelog tip still 2.1.296 dated 9 Oct; no release dated 10-12 Oct on that page; a managed denial refuses the call and does not end the turn; not ending the turn is not a grant; a refused non-UTF-8 edit is not a wipe; a switched-off folder MCP is not a headless start; a project sandbox true is not a grant; admin-required is not a vault. Grok Build third: modes footer still 8 Oct 2026; docs.x.ai/build/cli, /permissions, and /sandbox returned 404; do not invent a new footer; a goal token cap is not a seal; a side question is a paste; a background capture is a paste; an unprompted dream is not a seal. Mailbox: a weekly status line is not an export; a locked budget is not a skill fact; a verification code is a paste; a counsel comment is not a free-tier procedure; marketplace Hold). Origin v0.5.57-free stands. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.57-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.58-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
