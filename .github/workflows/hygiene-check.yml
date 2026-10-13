@@ -43,6 +43,52 @@ jobs:
           fi
           printf '%s\n' "secret scan config guard: no committed config or ignore file"
           # secret-scan-guard-end
+      - name: Commit trailer check
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.event.after }}
+        run: |
+          set -euo pipefail
+          is_sha() { printf '%s' "$1" | grep -Eq '^[0-9a-f]{40}$'; }
+          zero="0000000000000000000000000000000000000000"
+          range=""
+          if [ "${EVENT_NAME}" = "pull_request" ]; then
+            is_sha "${BASE_SHA}" && is_sha "${HEAD_SHA}" || { printf '%s\n' "pull request range is not two commits"; exit 1; }
+            range="${BASE_SHA}..${HEAD_SHA}"
+          elif [ "${EVENT_NAME}" = "push" ]; then
+            if [ -n "${BEFORE_SHA:-}" ] && [ "${BEFORE_SHA}" != "${zero}" ]; then
+              is_sha "${BEFORE_SHA}" && is_sha "${AFTER_SHA}" || { printf '%s\n' "push range is not two commits"; exit 1; }
+              range="${BEFORE_SHA}..${AFTER_SHA}"
+            else
+              printf '%s\n' "trailer check range skipped"
+            fi
+          else
+            printf '%s\n' "trailer check event is not a pull request or push"
+            exit 1
+          fi
+          if [ -z "${range}" ]; then
+            exit 0
+          fi
+          list="$(mktemp)"
+          msgfile="$(mktemp)"
+          trap 'rm -f "${list}" "${msgfile}"' EXIT
+          git rev-list "${range}" >"${list}"
+          bad=0
+          while IFS= read -r commit || [ -n "${commit}" ]; do
+            [ -n "${commit}" ] || continue
+            git show -s --format=%B "${commit}" >"${msgfile}"
+            if grep -Eiq '^[[:space:]]*co-authored-by[[:space:]]*:' "${msgfile}"; then
+              short="$(git rev-parse --short "${commit}")"
+              printf '%s\n' "${short} commit message has a co-author trailer"
+              bad=1
+            fi
+          done <"${list}"
+          if [ "${bad}" -eq 1 ]; then
+            exit 1
+          fi
       - name: Secret scan
         env:
           EVENT_NAME: ${{ github.event_name }}
