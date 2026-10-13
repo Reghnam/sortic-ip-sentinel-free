@@ -2,6 +2,48 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.60-free] — 2026-10-13
+
+Absorbed this Grok Build turn after origin **v0.5.59-free** was already on main (a description is not a filter; a compliance start is not a seal; a device code is not a grant). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 13 Oct (`learn.chatgpt.com/docs/hooks`). No page date. A description, a subdirectory start, and a schema on main stand. This skill still ships **no hooks**.
+- **New:** hooks are on by default. `[features] hooks = false` in `config.toml` turns them off. `codex_hooks` is a deprecated alias of that key. Admins can force the same off in `requirements.toml`. Turning hooks off is not a wipe. A deprecated alias is not a second switch. Force-off is not a seal.
+- Evals **235**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 13 Oct is still **2.1.296** (9 Oct). No release dated 10–13 Oct was on that page. Compliance start, org ask, annotation, and bare-name stand. **NO_DELTA** on the tip version.
+- **New:** `onFailure: "block"` (2.1.295, 8 Oct) on a command or HTTP hook blocks an action that cannot start, times out, or exits with an unexpected code, instead of letting it through. An onFailure block is not a wipe.
+- **New:** `/plugin` notes when one plugin's hooks are left out because another enabled plugin has the same name (2.1.296). A same-name drop is not a seal. Leaving hooks out is not a wipe of the plugin that still runs.
+- **New:** `autoCompactWindow` on subagent frontmatter and `--agents` lets a subagent auto-compact earlier than the main window. An earlier compact is not a wipe.
+- **New:** `allow_large` on Read can take a whole text file past the usual size limit in one call when the context has room. A large read is a paste.
+- Evals **236**.
+
+### Grok Build (third)
+
+- Permissions, sandbox, settings reference, modes, headless scripting, and the computer page returned content this read. Those fetches showed **no footer**. A missing footer is not a new policy. Do not invent a footer. Headless feature URL was not the 404 path this tip; the scripting page returned content. Modes commands `/share`, `/flush`, and `/dream` still stand.
+- **New:** running `/auto` while always-approve is on (or the reverse) switches modes rather than stacking them. Permission modes do not stack. A switch is not a second grant.
+- **New:** `deny` always wins over `allow`. A deny win is not a wipe. A remembered always-allow still prompts for `rm` and `git push`. An explicit config or CLI allow auto-approves them. A remembered grant is not that auto-approve.
+- **New:** legacy keys `approval_mode` and `yolo = true` still work. `permission_mode` wins when more than one is set. A legacy key is not a vault.
+- **New:** `auto_allow_bash` defaults false. `GROK_SANDBOX_AUTO_ALLOW_BASH` defaults 0. Skipping bash prompts inside an active sandbox is not a vault. `restrict_network` is Linux seccomp when enforced. Child-network does not block the model API or web tools. Child-network is not a seal of the model call.
+- **New:** Reset rebuilds the computer from the last saved snapshot. Very recent changes may be lost. A computer reset is not a wipe of a paste that already left. Update keeps files in place. Keeping files is not a private lane.
+- No newer grok-export than W38. No conversation_search.
+- **Mailbox:** a re-subscribe welcome is not a grant and not a seal. Do not copy a plan name. Unsent counsel drafts stay unsent. The weekly status line stays in v0.5.58-free. Do not republish it. No second copy of names, marks, or amounts.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **237** on the mode-stack rule.
+
+### Shared
+
+- **Hooks off is not a wipe.** A deprecated alias is not a second switch. Force-off is not a seal.
+- **An onFailure block is not a wipe.** A same-name drop is not a seal. An earlier compact is not a wipe. A large read is a paste.
+- **Permission modes do not stack.** A deny win is not a wipe. Auto-allow bash is not a vault. Child-network is not a seal of the model call. A computer reset is not a wipe of a paste that already left.
+- **A re-subscribe welcome is not a grant.** Do not copy a plan name.
+- **Unsent drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **237**. HITL F1–F28 + T1–T40 required on every claimed stack. This tip adds T41 (hooks off + onFailure block + modes do not stack).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.59-free] — 2026-10-12
 
 Absorbed this Grok Build turn after origin **v0.5.58-free** was already on main (loading alongside is not a wipe). That tip already took the weekly status line. This tip does not republish it. No newer grok-export. **No conversation_search.** Drive title search after 1 Oct still found no newer export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No ranges. No issue numbers. No gate tallies. No spend lines. No commit pins. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

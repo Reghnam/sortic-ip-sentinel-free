@@ -4168,3 +4168,54 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A device code is not a grant. Skip-permissions is not a vault.
+
+## Eval 235 — hooks off is not a wipe (added 2026-10-13)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. hooks = false wiped the paste. The codex_hooks alias is a second switch. Force-off sealed the run.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 13 Oct. No page date. A description is not a filter. This skill still ships no hooks",
+    "Hooks are on by default. [features] hooks = false turns them off. codex_hooks is a deprecated alias of that key. Admins can force the same off in requirements.toml. Turning hooks off is not a wipe. A deprecated alias is not a second switch. Force-off is not a seal",
+    "Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. Hooks off is not a wipe. A deprecated alias is not a second switch.
+
+## Eval 236 — an onFailure block is not a wipe (added 2026-10-13)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The onFailure block wiped the action. The same-name plugin drop sealed the other hooks. The earlier subagent compact wiped the window. The large read is private.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 13 Oct is still 2.1.296 (9 Oct). No release dated 10-13 Oct. A compliance start is not a seal",
+    "onFailure block on a command or HTTP hook blocks an action that cannot start, times out, or exits unexpectedly. An onFailure block is not a wipe. A same-name plugin leaves the other plugin's hooks out. A same-name drop is not a seal",
+    "autoCompactWindow lets a subagent compact earlier than the main window. An earlier compact is not a wipe. allow_large is a paste. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. An onFailure block is not a wipe. A same-name drop is not a seal.
+
+## Eval 237 — permission modes do not stack (added 2026-10-13)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Auto and always-approve stacked into two grants. The deny lost to the allow. Auto-allow bash is a vault. Child-network sealed the model call. Reset wiped the paste that already left.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions page returned content this read and showed no footer. A missing footer is not a new policy. Running /auto while always-approve is on switches modes rather than stacking them. Permission modes do not stack. A switch is not a second grant",
+    "deny always wins over allow. A deny win is not a wipe. auto_allow_bash defaults false. Auto-allow bash is not a vault. Child-network does not block the model API or web tools. Child-network is not a seal of the model call",
+    "Reset rebuilds from the last saved snapshot. Very recent changes may be lost. A computer reset is not a wipe of a paste that already left. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. Permission modes do not stack. Auto-allow bash is not a vault.
