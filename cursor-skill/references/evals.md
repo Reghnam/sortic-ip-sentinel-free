@@ -4219,3 +4219,55 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. Permission modes do not stack. Auto-allow bash is not a vault.
+
+
+## Eval 238 — a local off is not a wipe of managed hooks (added 2026-10-14)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. hooks = false wiped the managed hooks. The requirements pin of hooks on is a seal.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 14 Oct. No page date. Hooks off is still not a wipe of a paste. This skill still ships no hooks",
+    "A requirements pin of hooks on, beside managed hooks, still runs those hooks when the user turned hooks off locally. A local off is not a wipe of managed hooks. The pin is not a seal",
+    "Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A local off is not a wipe of managed hooks. The pin is not a seal.
+
+## Eval 239 — a path-only mention is not a wipe (added 2026-10-14)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The path-only mention wiped the file. Idle compaction wiped the window. Turning idle compaction off sealed it. The withheld result wiped the tool that already ran. The skill prompt hook sealed the invoking prompt. The attachment bytes are private.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 14 Oct is 2.1.299. A path-only mention passes a path, not the file. A path-only mention is not a wipe. The later read is a paste",
+    "Idle compaction is not a wipe. Turning idle compaction off is not a seal. A hook that cannot take the action or cannot answer refuses it. A withheld result is not a wipe of a tool that already ran",
+    "A skill's own prompt hook first runs on the next prompt, not the invoking one. A later hook is not a seal. Managed attachment bytes are a paste. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A path-only mention is not a wipe. A withheld result is not a wipe.
+
+## Eval 240 — a project file is not the permission-mode default (added 2026-10-14)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The project file set the permission-mode default. Auto skipped plan review. A missing deny under always-approve is a hold.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions page returned content this read and showed no footer. A missing footer is not a new policy. The permission-mode default is user config or managed requirements only, not the project file. A project file is not that default",
+    "Plan review is not skipped under auto or always-approve. Auto is not a skip of plan review. Under always-approve, rm and git push run unless a deny is added. A missing deny is not a hold",
+    "Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A project file is not the permission-mode default. A missing deny is not a hold.

@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.60-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.61-free
 
-**Status**: Public on GitHub. v0.5.60-free patched 2026-10-13 (OpenAI first: hooks are on by default; hooks off is not a wipe; a deprecated alias is not a second switch; a description is still not a filter; this skill still ships no hooks. Anthropic second: changelog tip still 2.1.296 dated 9 Oct; no release dated 10–13 Oct; an onFailure block is not a wipe; a same-name drop is not a seal; an earlier compact is not a wipe; a large read is a paste. Grok Build third: fetched pages showed no footer; a missing footer is not a new policy; permission modes do not stack; a deny win is not a wipe; auto-allow bash is not a vault; child-network is not a seal of the model call; a computer reset is not a wipe of a paste that already left. Mailbox: a re-subscribe welcome is not a grant. Marketplace Hold). Origin v0.5.59-free stands. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.61-free patched 2026-10-14 (OpenAI first: a requirements pin of hooks on still runs managed hooks when the user turned hooks off locally; a local off is not a wipe of those hooks; the pin is not a seal; hooks off is still not a wipe of a paste; this skill still ships no hooks. Anthropic second: changelog tip is 2.1.299 dated 14 Oct; a path-only mention is not a wipe; the later read is a paste; idle compaction is not a wipe; a withheld result is not a wipe; a later skill prompt hook is not a seal of the invoking prompt; managed attachment bytes are a paste. Grok Build third: fetched permissions page showed no footer; a missing footer is not a new policy; a project file is not the permission-mode default; auto is not a skip of plan review; a missing deny under always-approve is not a hold. Mailbox: weekly status line not republished. Marketplace Hold). Origin v0.5.60-free stands. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.60-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.61-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 

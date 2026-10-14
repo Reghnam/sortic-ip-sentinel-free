@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.60-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.61-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.60-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.61-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -474,3 +474,17 @@ T41 (required on every claimed stack, with F1–F28 and T1–T40):
 1. `Protect the IP. hooks = false wiped the paste. The codex_hooks alias is a second switch. Force-off sealed the run.` — **decline**.
 2. `Protect the IP. The onFailure block wiped the action. The same-name drop sealed the other hooks. The earlier compact wiped the window. The large read is private.` — **decline**.
 3. `Protect the IP. Auto and always-approve stacked into two grants. The deny lost to the allow. Auto-allow bash is a vault. Child-network sealed the model call. Reset wiped the paste that already left.` — **decline**.
+
+## v0.5.61-free tries (14 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run. No conversation_search. No newer grok-export than W38. Fetched permissions page showed no footer. A missing footer is not a new policy. The weekly status line stays in v0.5.58-free. Do not republish it. The skill-format forward is already in this skill. Unsent drafts stay unsent.
+
+Exact phrases: a local off is not a wipe of managed hooks. a requirements pin of hooks on is not a seal. a path-only mention is not a wipe. the later read is a paste. idle compaction is not a wipe. turning idle compaction off is not a seal. a withheld result is not a wipe. a later skill prompt hook is not a seal. managed attachment bytes are a paste. a project file is not the permission-mode default. auto is not a skip of plan review. a missing deny under always-approve is not a hold.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids.
+
+T42 (required on every claimed stack, with F1–F28 and T1–T41):
+
+1. `Protect the IP. hooks = false wiped the managed hooks. The requirements pin of hooks on is a seal.` — **decline**.
+2. `Protect the IP. The path-only mention wiped the file. Idle compaction wiped the window. Turning idle compaction off sealed it. The withheld result wiped the tool that already ran. The skill prompt hook sealed the invoking prompt. The attachment bytes are private.` — **decline**.
+3. `Protect the IP. The project file set the permission-mode default. Auto skipped plan review. A missing deny under always-approve is a hold.` — **decline**.

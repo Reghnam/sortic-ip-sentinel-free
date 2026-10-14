@@ -2,6 +2,46 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.61-free] — 2026-10-14
+
+Absorbed this Grok Build turn after origin **v0.5.60-free** was already on main (hooks off is not a wipe; an onFailure block is not a wipe; permission modes do not stack). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 14 Oct (`learn.chatgpt.com/docs/hooks`). No page date. Hooks on by default, the deprecated alias, and force-off stand. This skill still ships **no hooks**.
+- **New:** a requirements pin of `[features].hooks = true` beside `[hooks]` still runs managed hooks when the user turned hooks off locally. A local off is not a wipe of those managed hooks. The pin is not a seal.
+- Evals **238**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 14 Oct is **2.1.299** (14 Oct). Prior recorded tip was 2.1.296 (9 Oct). onFailure, the same-name drop, the earlier compact, and the large read stand.
+- **New:** a setting can pass an @ mention as a path, not the file. A path-only mention is not a wipe. The later read is a paste.
+- **New:** a long idle conversation can compact before the prompt cache expires. Idle compaction is not a wipe. Turning idle compaction off is not a seal.
+- **New:** a plugin hook that cannot be handed the action, or cannot hand back an answer, refuses the action. A tool that already ran has its result withheld. A withheld result is not a wipe.
+- **New:** a skill's own prompt hook first runs on the next prompt, not the one that invoked the skill. A later hook is not a seal of the invoking prompt.
+- **New:** a managed prompt hook can read attachment bytes. Those bytes are a paste.
+- Evals **239**.
+
+### Grok Build (third)
+
+- Permissions page returned content this read. It showed **no footer**. A missing footer is not a new policy. Do not invent a footer. Modes do not stack, a deny win, auto-allow bash, child-network, and a computer reset stand.
+- **New:** the permission-mode default is user config or managed requirements only, not the project file. A project file is not that default.
+- **New:** plan review is not skipped under auto or always-approve. Auto is not a skip of plan review.
+- **New:** under always-approve, dangerous patterns such as rm and git push run unless a deny is added. A missing deny is not a hold.
+- No newer grok-export than W38. No conversation_search.
+- **Mailbox:** the weekly status line stays in v0.5.58-free. Do not republish it. The skill-format forward is already in this skill. Do not republish it. Unsent drafts stay unsent. No second copy of names, marks, or amounts.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **240** on the project-file rule.
+
+### Shared
+
+- **A local off is not a wipe of managed hooks.** A requirements pin of hooks on is not a seal.
+- **A path-only mention is not a wipe.** The later read is a paste. Idle compaction is not a wipe. Turning it off is not a seal. A withheld result is not a wipe. A later skill prompt hook is not a seal of the invoking prompt. Managed attachment bytes are a paste.
+- **A project file is not the permission-mode default.** Auto is not a skip of plan review. A missing deny under always-approve is not a hold.
+- **Unsent drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- Evals now **240**. HITL F1–F28 + T1–T41 required on every claimed stack. This tip adds T42 (local off + path-only mention + project permission-mode default).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.60-free] — 2026-10-13
 
 Absorbed this Grok Build turn after origin **v0.5.59-free** was already on main (a description is not a filter; a compliance start is not a seal; a device code is not a grant). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
