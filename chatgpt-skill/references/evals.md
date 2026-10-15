@@ -4271,3 +4271,54 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A project file is not the permission-mode default. A missing deny is not a hold.
+
+## Eval 241 — a managed_dir path is not the script (added 2026-10-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The managed_dir path is the script. The elicitation wait sealed the timeout.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 15 Oct. No page date. A local off is still not a wipe of managed hooks. This skill still ships no hooks",
+    "Codex does not distribute the scripts in managed_dir. A managed_dir path is not the script. Time spent waiting for an MCP elicitation response does not count against the hook timeout. An elicitation wait is not a seal",
+    "Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A managed_dir path is not the script. An elicitation wait is not a seal.
+
+## Eval 242 — virtualText is not a wipe of the submitted prompt (added 2026-10-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. virtualText wiped the submitted prompt. The prompt-box clear wiped the prompt already sent. updatedInput sealed the rewrite. A SessionEnd that did not run wiped the exit.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 15 Oct is 2.1.300. virtualText is drawn in the prompt box and never enters the draft or the submitted prompt. A decoration is not a wipe. The submitted prompt is still a paste",
+    "prompt.change also fires on a recalled history entry, a clear, an undo, or a plugin fill. A recalled entry is a paste. A prompt-box clear is not a wipe of a prompt already sent. updatedInput is validated like the model's own input. Unknown keys are dropped. A refused call is not a wipe. A hook rewrite is not a seal",
+    "A SessionEnd that did not run on an exit during a background command is not a wipe. The fix is not a seal of older exits. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. virtualText is not a wipe of the submitted prompt. A hook rewrite is not a seal.
+
+## Eval 243 — a user-file lock is not a seal (added 2026-10-15)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The user-file always-approve lock sealed the run. The preselected approval row was a grant.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions page returned content this read and showed no footer. A missing footer is not a new policy. The always-approve lock is honored only from a root-owned requirements source, not from the user-writable requirements file. A user-file lock is not a seal. A host lockdown file is not this lock",
+    "The preselected approval row defaults to always allow across sessions. A preselected row is not a grant. The lock is not a wipe of a paste that already left. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A user-file lock is not a seal. A preselected row is not a grant.
+

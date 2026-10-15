@@ -2,6 +2,47 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.62-free] — 2026-10-15
+
+Absorbed this Grok Build turn after origin **v0.5.61-free** was already on main (a local off is not a wipe of managed hooks; a path-only mention is not a wipe; a project file is not the permission-mode default). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 15 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The requirements pin, hooks off, and the deprecated alias stand. This skill still ships **no hooks**.
+- **New:** Codex does not distribute the scripts in `managed_dir` (macOS and Linux) or `windows_managed_dir` (Windows). Enterprise tooling must install and update them. A managed_dir path is not the script. A path is not a seal.
+- **New:** the shorter hook or server timeout applies. Time spent waiting for an MCP elicitation response does not count against that timeout. An elicitation wait is not a seal.
+- Evals **241**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 15 Oct is **2.1.300** (14 Oct, after 2.1.299). Path-only mention, idle compaction, a withheld result, a later skill prompt hook, and managed attachment bytes stand.
+- **New:** `virtualText` is drawn in the prompt box and never enters the draft or the submitted prompt. A decoration is not a wipe of the submitted prompt. The submitted prompt is still a paste.
+- **New:** `prompt.change` also fires when the box changes without a typed edit: a recalled history entry, a clear, an undo, or a plugin fill. A recalled entry is a paste. A prompt-box clear is not a wipe of a prompt already sent.
+- **New:** `updatedInput` from PreToolUse and PermissionRequest is validated like the model's own input. Unknown keys are dropped. Input the tool rejects denies the call. A dropped key is not a private lane. A refused call is not a wipe. A hook rewrite is not a seal.
+- **New:** SessionEnd sometimes did not run when exiting while a background command was still running (fixed in this tip). A SessionEnd that did not run is not a wipe. The fix is not a seal of older exits.
+- **New:** in a cloud session, a setMode update inside a PermissionRequest allow is ignored. The rest of the approval still applies. A dropped mode update is not a seal.
+- Evals **242**.
+
+### Grok Build (third)
+
+- Permissions page returned content this read. It showed **no footer**. A missing footer is not a new policy. Do not invent a footer. A project file is still not the permission-mode default. Auto is still not a skip of plan review. A missing deny under always-approve is still not a hold.
+- Enterprise page returned content. Footer **10 Aug 2026**. A dated enterprise footer is not a new permissions policy.
+- **New:** `disable_bypass_permissions_mode = true` turns always-approve off. The lock is honored only from a root-owned requirements source, not from the user-writable requirements file. A user-file lock is not a seal. A host lockdown file is not this lock. The lock is not a wipe of a paste that already left.
+- Settings reference returned content. Footer **10 Oct 2026**. **New:** `default_selected_permission` defaults to `always_allow_all_sessions`. That is the preselected row on the first prompt. A preselected row is not a grant.
+- No newer grok-export than W38. No conversation_search.
+- **Mailbox:** a counsel attachment stays with counsel. Do not ingest it. Do not publish the steps. A privileged client order stays out. An invoice chase is not this skill. Do not copy an amount. The weekly status line stays where it was. Do not republish it. Unsent drafts stay unsent.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **243** on the user-file lock.
+
+### Shared
+
+- **A managed_dir path is not the script.** An elicitation wait is not a seal.
+- **virtualText is not a wipe of the submitted prompt.** A prompt-box clear is not a wipe of a prompt already sent. updatedInput is not a seal. A SessionEnd that did not run is not a wipe.
+- **A user-file always-approve lock is not a seal.** A preselected approval row is not a grant.
+- **A counsel attachment stays with counsel.** A privileged client order stays out. An invoice chase is not this skill. Do not copy an amount.
+- Evals now **243**. HITL F1–F28 + T1–T42 required on every claimed stack. This tip adds T43 (managed_dir path + virtualText + user-file lock).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.61-free] — 2026-10-14
 
 Absorbed this Grok Build turn after origin **v0.5.60-free** was already on main (hooks off is not a wipe; an onFailure block is not a wipe; permission modes do not stack). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
