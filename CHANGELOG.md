@@ -2,6 +2,52 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.63-free] — 2026-10-16
+
+Absorbed this Grok Build turn after origin **v0.5.62-free** was already on main (a managed_dir path is not the script; an elicitation wait is not a seal; virtualText is not a wipe of the submitted prompt; a user-file always-approve lock is not a seal). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 16 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The managed_dir path, the elicitation wait, hooks off, and the requirements pin stand. This skill still ships **no hooks**.
+- **New:** a PreToolUse denial can block the action. A callback error, a timeout, or a malformed response can fail the hook without blocking the tool. A failed hook is not a block.
+- **New:** MCP hooks do not provide a complete audit trail. A missing trail is not a seal. A missing trail is not a wipe.
+- Evals **244**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 16 Oct is **2.1.301** (15 Oct, after 2.1.300). virtualText, the prompt-box clear, updatedInput, and a SessionEnd that did not run stand.
+- **New:** an unattended retry can stop when a usage limit resets too far away, instead of waiting. Stopping that wait is not a wipe. The stop is not a seal.
+- **New:** a tool-decision event can carry a classifier verdict beside the permission mode, so a classifier decision can be told apart from a permission rule. A classifier verdict is not a permission rule. Logging the verdict is a paste. A detail category, when tool details are logged, is a paste.
+- **New:** a mod hook's catch runs only when that hook throws or times out. Events raised under the hook's own calls skip that catch. A skipped catch is not a wipe. A catch that did not run is not a seal.
+- **New:** an env write resolves as set, unset, or deny. An env-set deny is not a wipe. Setting the variable is not a vault.
+- **New:** a switch to a smaller context window summarizes with the previous model first. That summary is not a wipe. A summary that ran without asking is still a paste.
+- **New:** quitting no longer removes a worktree a create-hook made, without asking, when it may hold unpushed commits. A worktree remove is not a wipe of a paste that already left. Asking first is not a seal.
+- **New:** a skipped step can still be reported as success. A reported success is not a completed step. Task text is still a paste.
+- **New:** a message sent mid-turn during a permission check is not a user reject. Repeated compaction is not a wipe. A gateway model name is not the model you picked. A failed search is not an empty result. A rewind that drops a skill from the list is not a wipe of the skill file.
+- Evals **245**.
+
+### Grok Build (third)
+
+- Permissions page returned content this read. It showed **no footer**. A missing footer is not a new policy. Do not invent a footer. The user-file lock and the preselected row stand.
+- Enterprise page returned content. Footer **10 Aug 2026**.
+- **New:** `disable_api_key_auth` replaces a first-party key with the session token at request time. A leftover key is not a skip of sign-in. Third-party endpoints keep working. That keep is not a seal.
+- **New:** a team pin rejects a personal login or the wrong team and writes nothing. An empty team list rejects every login. A session that no longer complies is cleared, including a cached token and a silent refresh. A cleared session is not a wipe of a paste that already left.
+- **New:** the root-owned always-approve lock also blocks a catch-all allow. A catch-all allow is not a bypass of that lock. Deny rules still apply. When no lock is set, behavior is unchanged. Absence of the lock is not a grant.
+- Headless scripting page returned content and showed **no footer**. Do not invent a footer. A stored headless session is still a paste.
+- No newer grok-export than W38. No conversation_search.
+- **Mailbox:** a second forward of the stale try pack is not a new pack. A reminder is not a version. Do not resend. A vendor receipt is not a grant. Do not copy an amount. A counsel attachment stays with counsel. Do not ingest it. Do not publish the steps. A privileged client order stays out. The weekly status line stays where it was. Do not republish it. Unsent drafts stay unsent.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **246** on the leftover-key rule.
+
+### Shared
+
+- **A failed hook is not a block.** A missing audit trail is not a seal.
+- **A classifier verdict is not a permission rule.** A skipped catch is not a wipe. A summary is not a wipe. A worktree remove is not a wipe of a paste that already left.
+- **A leftover key is not a skip.** A catch-all allow is not a bypass of the root-owned lock. A cleared session is not a wipe.
+- **A second forward of the stale try pack is not a new pack.** A reminder is not a version. A vendor receipt is not a grant. A counsel attachment stays with counsel.
+- Evals now **246**. HITL F1–F28 + T1–T43 required on every claimed stack. This tip adds T44 (failed hook + classifier verdict + leftover key).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.62-free] — 2026-10-15
 
 Absorbed this Grok Build turn after origin **v0.5.61-free** was already on main (a local off is not a wipe of managed hooks; a path-only mention is not a wipe; a project file is not the permission-mode default). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

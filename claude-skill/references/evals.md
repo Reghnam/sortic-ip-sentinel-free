@@ -4322,3 +4322,54 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 
 **Pass:** Grok Build third. A user-file lock is not a seal. A preselected row is not a grant.
 
+
+## Eval 244 — a failed hook is not a block (added 2026-10-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The failed hook blocked the tool. The missing audit trail sealed the paste.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 16 Oct. No page date. A managed_dir path is still not the script. An elicitation wait is still not a seal. This skill still ships no hooks",
+    "A PreToolUse denial can block. A callback error, a timeout, or a malformed response can fail the hook without blocking the tool. A failed hook is not a block. MCP hooks do not provide a complete audit trail. A missing trail is not a seal and not a wipe",
+    "Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A failed hook is not a block. A missing trail is not a seal.
+
+## Eval 245 — a classifier verdict is not a rule (added 2026-10-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The classifier verdict is the permission rule. The skipped catch sealed the call. The summary wiped the window. The worktree remove wiped the paste.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 16 Oct is 2.1.301 (15 Oct, after 2.1.300). An unattended retry that stops because a usage limit resets too far away is not a wipe and not a seal",
+    "A classifier verdict on a tool-decision event is not a permission rule. Logging that verdict is a paste. A mod-hook catch that does not run for events under its own calls is not a seal. A skipped catch is not a wipe",
+    "A summary by the previous model before a smaller window is not a wipe. A worktree remove is not a wipe of a paste that already left. Asking first is not a seal. A reported success after a skipped step is not a completed step. A mid-turn message during a permission check is not a user reject. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A classifier verdict is not a rule. A skipped catch is not a wipe.
+
+## Eval 246 — a leftover key is not a skip (added 2026-10-16)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The leftover API key skipped sign-in. The team pin wiped the paste. The catch-all allow bypassed the lock.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions page returned content this read and showed no footer. A missing footer is not a new policy. Enterprise footer still 10 Aug 2026",
+    "disable_api_key_auth replaces a first-party key with the session token. A leftover key is not a skip. Third-party endpoints keep working. That keep is not a seal. A team pin rejects a personal login and writes nothing. A cleared non-compliant session is not a wipe of a paste that already left. A catch-all allow is not a bypass of the root-owned lock",
+    "Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A leftover key is not a skip. A catch-all allow is not a bypass.

@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.62-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.63-free
 
-**Status**: Public on GitHub. v0.5.62-free patched 2026-10-15 (OpenAI first: Codex does not distribute managed_dir scripts; a managed_dir path is not the script; an elicitation wait does not count against the hook timeout; the wait is not a seal; a local off is still not a wipe of managed hooks; this skill still ships no hooks. Anthropic second: changelog tip is 2.1.300 dated 14 Oct; virtualText never enters the submitted prompt; a decoration is not a wipe; a prompt-box clear is not a wipe of a prompt already sent; updatedInput is not a seal; a SessionEnd that did not run is not a wipe. Grok Build third: fetched permissions page showed no footer; a missing footer is not a new policy; a user-file always-approve lock is not a seal; a preselected approval row is not a grant. Mailbox: counsel attachment, privileged order, and invoice chase stay out. Marketplace Hold). Origin v0.5.61-free stands. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.63-free patched 2026-10-16 (OpenAI first: a PreToolUse denial can still block; a callback error, timeout, or malformed response can fail the hook without blocking the tool; a failed hook is not a block; MCP hooks do not provide a complete audit trail; a missing trail is not a seal; a managed_dir path is still not the script; this skill still ships no hooks. Anthropic second: changelog tip is 2.1.301 dated 15 Oct; a classifier verdict is not a permission rule; logging it is a paste; a skipped catch is not a wipe; a summary is not a wipe; a worktree remove is not a wipe of a paste that already left. Grok Build third: permissions page showed no footer; enterprise footer still 10 Aug 2026; a leftover key is not a skip; a team pin that clears a session is not a wipe; a catch-all allow is not a bypass of the root-owned lock. Mailbox: a second forward of the stale try pack is not a new pack; a reminder is not a version; a vendor receipt is not a grant; a counsel attachment stays with counsel. Marketplace Hold). Origin v0.5.62-free stands. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.62-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.63-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
