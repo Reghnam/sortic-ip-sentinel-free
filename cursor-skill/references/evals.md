@@ -4373,3 +4373,54 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A leftover key is not a skip. A catch-all allow is not a bypass.
+
+## Eval 247 — an opt-out is not a seal (added 2026-10-17)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The specialized tool opt-out sealed the paste. The transcript format is a stable interface. The nested code-mode call was not a tool call.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 17 Oct. No page date. A specialized tool path can opt out of the default hook path. An opt-out is not a seal. Hooks stay a guardrail, not a boundary",
+    "A transcript_path is a convenience pointer. The transcript format is not a stable interface. Reading it is a paste. A format change is not a wipe. In code mode, a JavaScript tool call is still a tool call. A nested decision is not a seal of the script that already started. Keeping the result from the running script is not a wipe of the side effect. A relative managed-hook path is not the script",
+    "Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. An opt-out is not a seal. A transcript format is not a stable interface.
+
+## Eval 248 — a client classifier model is not the model you picked (added 2026-10-17)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The client classifier model is the model I picked. A missing permission mode granted auto. Turning forks off wiped the fork. The safety compact sealed the tool calls.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 17 Oct is 2.1.302 (16 Oct, after 2.1.301). No release dated 17 Oct was on that page",
+    "A client-side classifier model is not the model you picked and not the server-side classifier model. A missing permission mode is not a grant of auto. A fork subagent is a paste of the parent. Turning forks off is not a wipe of a fork that already ran. A surface that never offers forks is not a seal of the surfaces that do",
+    "A hook that is waiting its turn has not run. A wait is not a seal. A safety compact is not a wipe and not a seal of the tool calls that then run. A missing classifier category in a log is not a missing decision. A log that drops the tool id is not a wipe. Logging the category is still a paste. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A client classifier model is not the model you picked. A safety compact is not a seal.
+
+## Eval 249 — a default-on harness scan is a hop (added 2026-10-17)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The default-on harness scan was a review. Inference-layer zero retention wiped the local session. User-supplied video storage is a vault.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions page returned content this read and showed no footer. A missing footer is not a new policy. Enterprise and settings reference showed no footer this read. Do not invent a footer. Do not replace the recorded 10 Aug 2026 enterprise footer",
+    "compat.cursor and compat.claude default to true. A default-on scan of the other harness directories is a hop. Default true is not a review. Reading another harness managed-settings file is not a second policy. requirements.toml precedence is not a wipe",
+    "A zero-retention skip at the inference layer is not a wipe of local session history. Local history is still a paste. A dedicated identity that skips logging is not a seal. User-supplied video storage is a paste, not a vault. A counsel reply that keeps a workflow internal is not a free feature. A model-chat share URL is a paste that already left. Do not open it. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A default-on harness scan is a hop. Local history is still a paste.

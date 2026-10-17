@@ -1,4 +1,4 @@
-# SorticAI Free IP Sentinel — Cursor (v0.5.63-free)
+# SorticAI Free IP Sentinel — Cursor (v0.5.64-free)
 
 Cursor host pack. Same behaviour as the root skill. `SKILL.md` at pack root so the zip is Cloud-ready.
 

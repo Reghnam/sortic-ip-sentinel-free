@@ -2,6 +2,54 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.64-free] — 2026-10-17
+
+Absorbed this Grok Build turn after origin **v0.5.63-free** was already on main (a failed hook is not a block; a classifier verdict is not a permission rule; a leftover key is not a skip). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 17 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The failed-hook rule, the missing trail, the managed_dir path, and the elicitation wait stand. This skill still ships **no hooks**.
+- **New:** some specialized tool paths can opt out of the default hook path. An opt-out is not a seal. Hooks stay a guardrail, not a complete boundary.
+- **New:** `transcript_path` is a convenience pointer. The transcript format is not a stable interface and may change. Reading it is a paste. A format change is not a wipe.
+- **New:** when a model uses code mode to call a tool from JavaScript, hook decisions apply to that nested call. A nested call is still a tool call. A nested decision is not a seal of the script that already started. A blocking PostToolUse can keep the original result from the running script. That keep is not a wipe of the side effect.
+- **New:** managed hook commands should use absolute script paths under the configured managed directory. A relative path is not the script.
+- Evals **247**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 17 Oct is **2.1.302** (16 Oct, after 2.1.301). No release dated 17 Oct was on that page. The classifier-verdict rule, the skipped catch, and the summary-is-not-a-wipe rule stand.
+- **New:** `CLAUDE_CODE_AUTO_MODE_MODEL` chooses the model the client-side auto mode classifier uses. It does not change the model for server-side auto mode. A client classifier model is not the model you picked.
+- **New:** `claude -p` and Agent SDK sessions with no permission mode start in default mode on third-party providers, with telemetry off or on a fresh install. Passing auto keeps auto. A missing permission mode is not a grant of auto.
+- **New:** fork subagents are on by default in `claude -p`, the Agent SDK, the desktop app, and VS Code, as they already are in the terminal. An env off turns them off. `claude mcp serve` never offers them. A fork is a paste of the parent. Turning forks off is not a wipe of a fork that already ran. A surface that never offers forks is not a seal of the surfaces that do.
+- **New:** at most 12 of one prompt or agent hook event run at a time. The rest wait. A hook that is waiting has not run. A wait is not a seal.
+- **New:** a conversation too long for the server-side safety check is compacted, instead of every checked tool call being denied. A safety compact is not a wipe. It is not a seal of the tool calls that then run.
+- **New:** `classifier_category` was missing from most auto-mode tool-decision logs, and new attributes can push out the tool id when the attribute cap is low. A missing category is not a missing decision. A log that drops the tool id is not a wipe. Logging the category is still a paste.
+- Evals **248**.
+
+### Grok Build (third)
+
+- Permissions page returned content this read. It showed **no footer**. A missing footer is not a new policy. Do not invent a footer. The remembered-allow rule and the root-owned lock stand.
+- Enterprise page returned content. This read showed **no footer**. Do not replace the recorded footer of 10 Aug 2026. Do not invent a new date.
+- Settings reference returned content. It showed **no footer**.
+- **New:** `compat.cursor` and `compat.claude` default to true. This host scans the other harness directories for skills, rules, agents, MCP, and hooks. A default-on scan is a hop. Default true is not a review.
+- **New:** in a mixed environment this host reads a subset of the other harness managed-settings file (permission rules, MCP allowlists, a few telemetry flags, marketplace restrictions). That read is not a second policy. This host's requirements file still takes precedence. Precedence is not a wipe.
+- **New:** for a zero-retention organization, a dedicated service identity skips logging, and session end does not persist prompts, code, or responses at the inference layer. That skip is not a wipe of local session history. Local history is still a paste. The identity is not a seal.
+- **New:** video tools under zero retention need user-supplied output storage. That storage is a paste. It is not a vault.
+- Headless scripting page returned content and showed **no footer**. A stored headless session is still a paste.
+- No newer grok-export than W38. No conversation_search.
+- **Mailbox:** a counsel reply that keeps a workflow internal is not a free feature. Do not publish the reason. Do not publish a file number. Do not publish a percent method. A signer split stays with the office. A model-chat share URL in a mail thread is a paste that already left. Do not open it. Do not copy the URL. The weekly status line stays where it was. Do not republish it. Unsent drafts stay unsent. The mailed try pack stays stale. Do not resend.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **249** on the default-on harness scan.
+
+### Shared
+
+- **An opt-out is not a seal.** A transcript format is not a stable interface. A nested code-mode call is still a tool call. A relative managed-hook path is not the script.
+- **A client classifier model is not the model you picked.** A missing permission mode is not a grant of auto. A fork is a paste. A wait is not a seal. A safety compact is not a wipe and not a seal.
+- **A default-on harness scan is a hop.** Inference-layer zero retention is not a wipe of local history. User-supplied video storage is not a vault.
+- **A counsel reply that keeps a workflow internal is not a free feature.** A model-chat share URL is a paste that already left. Do not open it.
+- Evals now **249**. HITL F1–F28 + T1–T44 required on every claimed stack. This tip adds T45 (opt-out + client classifier model + default-on harness scan).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.63-free] — 2026-10-16
 
 Absorbed this Grok Build turn after origin **v0.5.62-free** was already on main (a managed_dir path is not the script; an elicitation wait is not a seal; virtualText is not a wipe of the submitted prompt; a user-file always-approve lock is not a seal). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
