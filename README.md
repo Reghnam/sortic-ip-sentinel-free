@@ -10,8 +10,8 @@
 2. Copy it in using that row (`cp -r`, or zip the folder when the row says zip).
 3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.64-free**).
-- An opt-out is not a seal; a client classifier model is not the model you picked; a default-on harness scan is a hop (v0.5.64-free)
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.65-free**).
+- An opt-out is not a seal; a client classifier model is not the model you picked; a default-on harness scan is a hop (v0.5.65-free)
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps

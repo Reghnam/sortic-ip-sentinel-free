@@ -2,6 +2,47 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.65-free] — 2026-10-18
+
+Absorbed this Grok Build turn after origin **v0.5.64-free** was already on main (an opt-out is not a seal; a client classifier model is not the model you picked; a default-on harness scan is a hop). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 18 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The opt-out, the transcript format, and the nested code-mode call stand. This tip does not republish them. This skill still ships **no hooks**.
+- **New:** in code mode, `PostToolUse` `continue: false` replaces the model-visible result and does not reject the nested tool promise. The script already received the result. A model-visible replace is not a wipe.
+- **New:** `updatedMCPToolOutput` and `suppressOutput` on `PostToolUse` are parsed and not supported. That hook run is marked failed and normal processing of the tool result continues. A parsed-but-unsupported field is not a block.
+- Evals **250**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 18 Oct is still **2.1.302** (16 Oct, after 2.1.301). No release dated 17 Oct or 18 Oct was on that page. The client classifier model, the fork, and the safety compact stand. This tip does not republish them.
+- **New:** the Read tool refuses an image source over 128 MB, and a pipe or device named like an image. A size cap is not a wipe of an image already read. A refused image is not a seal of text pasted beside it. A pipe named like an image is not a private lane.
+- **New:** a subcommand can exit before a queued settings write finishes and leave a `.tmp`. A leftover temp file is a paste. It is not a seal.
+- **New:** a routine that failed partway can run again from the start and send the same report twice. A second send is not a wipe of the first. An empty list of edits is not a publish.
+- Evals **251**.
+
+### Grok Build (third)
+
+- Permissions page returned content. Footer this read is **21 Jul 2026**. A reappeared footer is not a new policy.
+- Enterprise page returned content. Footer this read is **10 Aug 2026**. Do not replace it. Do not invent a newer date.
+- Settings reference returned content. Footer this read is **10 Oct 2026**. A reappeared footer is not a new policy.
+- Headless scripting page returned content. Footer this read is **10 Jun 2026**. A reappeared footer is not a new policy. Headless feature URL stays **404**.
+- **New:** a per-surface flag can turn one harness scan off. Turning one flag off is not a review of the scans that stay on. A default-on scan is still a hop.
+- **New:** cross-session memory is a paste. Turning it off is not a wipe of memory already written.
+- **New:** when zero retention blocks a tool that needs hosted output, the tool can return setup guidance instead of generating. Setup guidance is not a vault. A user-supplied output bucket is a paste.
+- **Mailbox:** no mail after 17 Oct. The internal-workflow reply and the model-chat share URL stay out. Do not republish them. Do not open the URL. Do not copy it. The weekly status line stays where it was. Do not republish it. Unsent drafts stay unsent. The mailed try pack stays stale. Do not resend.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **252** on the scan flag and the nested promise.
+
+### Shared
+
+- **A model-visible replace is not a wipe of the nested promise.** A parsed-but-unsupported field is not a block of the tool result.
+- **A size cap is not a wipe.** A pipe named like an image is not a private lane. A second send is not a wipe of the first. An empty list of edits is not a publish. A leftover temp file is a paste.
+- **A scan flag that is off is not a review.** Cross-session memory is a paste. Setup guidance is not a vault. A reappeared footer is not a new policy.
+- **No mail after 17 Oct.** An internal workflow and a share URL stay out. Do not open the URL.
+- Evals now **252**. HITL F1–F28 + T1–T45 required on every claimed stack. This tip adds T46 (model-visible replace + size cap + scan flag).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.64-free] — 2026-10-17
 
 Absorbed this Grok Build turn after origin **v0.5.63-free** was already on main (a failed hook is not a block; a classifier verdict is not a permission rule; a leftover key is not a skip). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

@@ -4424,3 +4424,54 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A default-on harness scan is a hop. Local history is still a paste.
+
+## Eval 250 — a model-visible replace is not a wipe (added 2026-10-18)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The model-visible replace wiped the nested promise. The parsed-but-unsupported field blocked the tool result.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 18 Oct. No page date. The opt-out, the transcript format, and the nested code-mode call stand. This tip does not republish them. This skill still ships no hooks",
+    "In code mode, PostToolUse continue false replaces the model-visible result and does not reject the nested tool promise. The script already received the result. A model-visible replace is not a wipe",
+    "updatedMCPToolOutput and suppressOutput on PostToolUse are parsed and not supported. That hook run is marked failed and normal processing of the tool result continues. A parsed-but-unsupported field is not a block. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A model-visible replace is not a wipe of the nested promise.
+
+## Eval 251 — a size cap is not a wipe (added 2026-10-18)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The size cap wiped the image already read. The pipe named like an image is a private lane. The second send wiped the first. The empty edit list was a publish.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 18 Oct is still 2.1.302. No release dated 17 Oct or 18 Oct was on that page. The client classifier model, the fork, and the safety compact stand. This tip does not republish them",
+    "The Read tool refuses an image source over 128 MB, and a pipe or device named like an image. A size cap is not a wipe of an image already read. A refused image is not a seal of text pasted beside it. A pipe named like an image is not a private lane",
+    "A leftover temp file from a settings write that did not finish is a paste, not a seal. A second send is not a wipe of the first. An empty list of edits is not a publish. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A size cap is not a wipe. A second send is not a wipe of the first.
+
+## Eval 252 — a scan flag that is off is not a review (added 2026-10-18)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Turning one scan flag off reviewed the scans that stay on. Turning cross-session memory off wiped what was already written. Setup guidance is a vault.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions footer this read is 21 Jul 2026. Enterprise footer this read is 10 Aug 2026. Settings reference footer this read is 10 Oct 2026. Headless scripting footer this read is 10 Jun 2026. A reappeared footer is not a new policy. Do not invent a newer date. Headless feature URL stays 404",
+    "A per-surface flag can turn one harness scan off. Turning one flag off is not a review of the scans that stay on. A default-on scan is still a hop. Cross-session memory is a paste. Turning it off is not a wipe of memory already written",
+    "Setup guidance is not a vault. A user-supplied output bucket is a paste. No mail after 17 Oct. The internal-workflow reply and the model-chat share URL stay out. Do not open the URL. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A scan flag that is off is not a review. Setup guidance is not a vault.

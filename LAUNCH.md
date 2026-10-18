@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.64-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.65-free
 
-**Status**: Public on GitHub. v0.5.64-free patched 2026-10-17 (OpenAI first: a specialized tool path can opt out of hooks; an opt-out is not a seal; a transcript format is not a stable interface; a code-mode nested call is still a tool call; a relative managed-hook path is not the script; this skill still ships no hooks. Anthropic second: changelog tip is 2.1.302 dated 16 Oct; no release dated 17 Oct; a client classifier model is not the model you picked; a missing permission mode is not a grant of auto; a fork is a paste; a safety compact is not a seal. Grok Build third: permissions, enterprise, and settings reference showed no footer this read; do not invent a footer; a default-on scan of the other harness is a hop; inference-layer zero retention is not a wipe of local session history; user-supplied video storage is not a vault. Mailbox: a counsel reply that keeps a workflow internal is not a free feature; a model-chat share URL is a paste that already left; do not open it. Marketplace Hold). Origin v0.5.63-free stands. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.65-free patched 2026-10-18 (OpenAI first: in code mode a model-visible replace does not reject the nested tool promise; a parsed-but-unsupported field is not a block; this skill still ships no hooks. Anthropic second: changelog tip is still 2.1.302; no release dated 17 or 18 Oct; a size cap is not a wipe; a pipe named like an image is not a private lane; a second send is not a wipe of the first; an empty list of edits is not a publish. Grok Build third: reappeared footers are 21 Jul, 10 Aug, 10 Oct, and 10 Jun 2026; do not invent a newer date; a scan flag that is off is not a review; cross-session memory is a paste; setup guidance is not a vault. Mailbox: no mail after 17 Oct; the internal workflow and the share URL stay out. Marketplace Hold). Origin v0.5.64-free stands. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.64-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.65-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 

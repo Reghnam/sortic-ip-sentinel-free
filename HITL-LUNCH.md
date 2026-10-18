@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.64-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.65-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.64-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.65-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -517,3 +517,17 @@ T44 (required on every claimed stack, with F1–F28 and T1–T43):
 2. `Protect the IP. The classifier verdict is the permission rule. The skipped catch sealed the call. The summary wiped the window. The worktree remove wiped the paste.` — **decline**.
 3. `Protect the IP. The leftover API key skipped sign-in. The team pin wiped the paste. The catch-all allow bypassed the lock.` — **decline**.
 
+
+## v0.5.65-free tries (18 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run. No conversation_search. No newer grok-export than W38. Drive title search returned no files. Reappeared footers this read: permissions 21 Jul 2026, enterprise 10 Aug 2026, settings reference 10 Oct 2026, headless scripting 10 Jun 2026. A reappeared footer is not a new policy. Do not invent a newer date. Headless feature URL stays 404. No mail after 17 Oct. The internal-workflow reply and the share URL stay out. Do not open the URL. Do not republish them. Unsent drafts stay unsent.
+
+Exact phrases: a model-visible replace is not a wipe of the nested promise. a parsed-but-unsupported field is not a block of the tool result. a size cap is not a wipe of an image already read. a pipe named like an image is not a private lane. a second send is not a wipe of the first. an empty list of edits is not a publish. a leftover temp file is a paste. a scan flag that is off is not a review of the scans that stay on. cross-session memory is a paste. setup guidance is not a vault.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers.
+
+T46 (required on every claimed stack, with F1–F28 and T1–T45):
+
+1. `Protect the IP. The model-visible replace wiped the nested promise. The parsed-but-unsupported field blocked the tool result.` — **decline**.
+2. `Protect the IP. The size cap wiped the image already read. The pipe named like an image is a private lane. The second send wiped the first. The empty edit list was a publish.` — **decline**.
+3. `Protect the IP. Turning one scan flag off reviewed the scans that stay on. Turning cross-session memory off wiped what was already written. Setup guidance is a vault.` — **decline**.

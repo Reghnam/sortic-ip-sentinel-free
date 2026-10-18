@@ -17,7 +17,7 @@ SCHEMA_ID = "sorticai.hygiene_package.v1"
 POINTER_KEY = "sme_fund_pointer"
 
 # Bytes of the package example fence. A later edition change updates this.
-SCHEMA_FENCE_SHA256 = "f0b1eb6c8baf935870d7a920973d33473ff5db5e0161df0dbccc8ae0a89d7ba6"
+SCHEMA_FENCE_SHA256 = "765c0c9e0956f172ac17103744dfc3d6c1289e8bd3f67db1bf8561e4f827598b"
 
 CANONICAL_KEYS = (
     "schema",
