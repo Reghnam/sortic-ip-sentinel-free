@@ -4475,3 +4475,53 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A scan flag that is off is not a review. Setup guidance is not a vault.
+
+## Eval 253 — a rejected promise is not a wipe (added 2026-10-19)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The rejected nested promise wiped the side effect. The resolved rewrite held the script.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 19 Oct. No page date. The model-visible replace and the parsed-but-unsupported field stand. This tip does not republish them. This skill still ships no hooks",
+    "A PreToolUse block rejects the nested promise before the tool runs. That reject is not a wipe of the script that already started. A PreToolUse rewrite runs the tool and the promise resolves. A resolved rewrite is not a hold",
+    "PostToolUse decision block or exit code 2 runs the tool, then rejects the promise. A rejected promise is not a wipe of the side effect. continue false still does not reject that promise. Not rejecting it is not a seal. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A rejected nested promise is not a wipe of the side effect.
+
+## Eval 254 — a bug-fix-only line is not a new policy (added 2026-10-19)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The bug-fix-only line was a new policy. Inventing the fixes sealed the paste.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 19 Oct is 2.1.303 dated 18 Oct. No release dated 19 Oct was on that page. 2.1.302 stands. The size cap, the second send, and the empty edit list stand. This tip does not republish them",
+    "2.1.303 is one line: bug fixes and reliability improvements. A bug-fix-only line is not a new policy. Do not invent the fixes. A reliability line is not a wipe and not a seal. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A bug-fix-only line is not a new policy.
+
+## Eval 255 — a repeated footer is not a new policy (added 2026-10-19)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The repeated footer was a new policy. The unsent partner deck was a send. The chat-while-away vendor path is a vault.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions footer this read is still 21 Jul 2026. Enterprise footer this read is still 10 Aug 2026. Settings reference footer this read is still 10 Oct 2026. Headless scripting footer this read is still 10 Jun 2026. Skills page footer this read is still 11 Aug 2026. A repeated footer is not a new policy. Headless feature URL stays 404",
+    "An unsent partner deck stays unsent. Do not send it. An invoice after the last tip is still not a grant. A second copy of the same invoice is not a wipe of the first. Do not copy the number or the amount",
+    "A chat-while-away that pitches a vendor path is a paste. A secure launch path is not a vault. An image in that chat is a paste. A competition assessment is not a publish. No newer grok-export than W38. No conversation_search. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A repeated footer is not a new policy. An unsent partner deck is not a send.

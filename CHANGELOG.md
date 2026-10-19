@@ -2,6 +2,40 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.66-free] — 2026-10-19
+
+Absorbed this Grok Build turn after origin **v0.5.65-free** was already on main (a model-visible replace is not a wipe of the nested promise; a size cap is not a wipe; a scan flag that is off is not a review). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 19 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The model-visible replace and the parsed-but-unsupported field stand. This tip does not republish them. This skill still ships **no hooks**.
+- **New:** the code-mode table splits the nested promise. A PreToolUse block rejects the promise before the tool runs. That reject is not a wipe of the script that already started. A PreToolUse rewrite runs the tool and the promise resolves. A resolved rewrite is not a hold.
+- **New:** PostToolUse `decision: "block"` or exit code 2 runs the tool, then rejects the promise. A rejected promise is not a wipe of the side effect. `continue: false` still does not reject that promise. Not rejecting it is not a seal of the script.
+- Evals **253**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 19 Oct is **2.1.303** (18 Oct). No release dated 19 Oct was on that page. 2.1.302 stands. The size cap, the second send, and the empty edit list stand. This tip does not republish them.
+- **New:** 2.1.303 is one line: bug fixes and reliability improvements. A bug-fix-only line is not a new policy. Do not invent the fixes. A reliability line is not a wipe and not a seal.
+- Evals **254**.
+
+### Grok Build (third)
+
+- Permissions footer this read is still **21 Jul 2026**. Enterprise page returned content. Footer this read is still **10 Aug 2026**. Settings reference footer this read is still **10 Oct 2026**. Headless scripting footer this read is still **10 Jun 2026**. Skills page footer this read is still **11 Aug 2026**. Headless feature URL stays **404**.
+- **New:** a repeated footer is not a new policy. Do not invent a newer date. The per-surface scan flags and cross-session memory stand. This tip does not republish them.
+- **Mailbox:** an unsent partner deck stays unsent. Do not send it. Do not copy a valuation, a client count, a niche list, or a named intro target. A note that a third party is not ready is not a send. An invoice after the last tip is still not a grant. A second copy of the same invoice is not a wipe of the first. Do not copy the number or the amount. A chat-while-away that pitches a vendor path is a paste. Do not copy the vendor, the floor, the raise, the product, or the URL. A secure launch path is not this skill and not a vault. An image in that chat is a paste. A competition assessment is not a publish. The internal-workflow reply and the model-chat share URL stay out. Do not open the URL. Do not republish them. The mailed try pack stays stale. Do not resend.
+- No newer grok-export than W38. No conversation_search.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **255** on the repeated footer and the unsent deck.
+
+### Shared
+
+- **A rejected nested promise is not a wipe of the side effect.** A resolved rewrite is not a hold. Not rejecting the promise is not a seal.
+- **A bug-fix-only line is not a new policy.** Do not invent the fixes. A reliability line is not a wipe and not a seal.
+- **A repeated footer is not a new policy.** An unsent partner deck is not a send. An invoice is not a grant. A second copy is not a wipe. A chat-while-away vendor path is not a vault.
+- Evals now **255**. HITL F1–F28 + T1–T46 required on every claimed stack. This tip adds T47 (rejected promise + bug-fix line + repeated footer).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.65-free] — 2026-10-18
 
 Absorbed this Grok Build turn after origin **v0.5.64-free** was already on main (an opt-out is not a seal; a client classifier model is not the model you picked; a default-on harness scan is a hop). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
