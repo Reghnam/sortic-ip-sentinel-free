@@ -2,6 +2,42 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.67-free] — 2026-10-20
+
+Absorbed this Grok Build turn after origin **v0.5.66-free** was already on main (a rejected promise is not a wipe; a bug-fix-only line is not a new policy; a repeated footer is not a new policy). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 20 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The nested promise rules stand. This tip does not republish them. This skill still ships **no hooks**.
+- **New:** a later `write_stdin` poll can deliver the original command's PostToolUse when that command finishes. Not re-running PreToolUse is not a skip of that later PostToolUse. That delivery is a paste, not a wipe of the command that already ran.
+- Evals **256**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 20 Oct is **2.1.304** (19 Oct). No release dated 20 Oct was on that page. 2.1.303 stands. The bug-fix-only line stands. This tip does not republish it.
+- **New:** a plugin that runs first can skip one of your hooks. A skip is not a wipe. A transcript line that names the skip is a paste.
+- **New:** a person-only decider refuses the ask where nobody can be asked. That refusal is not a seal. The reason is a paste.
+- **New:** under a plugins-only hook policy, a skill whose hooks are kept out no longer gets its allowed-tools. Keeping hooks out is not a grant of those tools. Losing them is not a wipe of the skill.
+- Evals **257**.
+
+### Grok Build (third)
+
+- Permissions footer this read is still **21 Jul 2026**. Enterprise footer this read is still **10 Aug 2026**. Settings reference footer this read is still **10 Oct 2026**. Headless scripting footer this read is still **10 Jun 2026**. Skills page footer this read is still **11 Aug 2026**. Headless feature URL stays **404**. A repeated footer is not a new policy.
+- **New:** the hooks page returned content. Footer this read is **2 Jul 2026**. A first read of that footer is not a new policy. Do not invent a newer date.
+- **New:** the security FAQ footer this read is **18 Oct 2026**. A plugin block does not block that service's website. The website path is still a paste. A missing network policy defaults to allow-all. Allow-all is not a seal. An allowlist that turns search off does not turn fetch off. Fetch that stays on is still a paste. A group setting can widen local execution, never tighten it. A widen is not a hold. A Bot has no identity of its own. That cap is not a vault.
+- **Mailbox:** a scheduling note after the last tip is not a skill update. A later accept of a slot is not a publish. Do not copy the slot. Do not send the invite. A quoted earlier counsel note is not a new grant. Do not republish a mark, a file number, a percent method, a signer split, or an internal-only reason. A test file named in that thread stays out. Do not copy a serial. The unsent partner deck stays unsent. Do not send it.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **258** on the website path and the scheduling note.
+
+### Shared
+
+- **A later poll is not a skip of PostToolUse.** That delivery is a paste, not a wipe.
+- **A skip is not a wipe.** A person-only refusal is not a seal. Losing allowed-tools is not a wipe of the skill.
+- **A plugin block is not a website block.** Allow-all is not a seal. A widen is not a hold. A Bot has no identity of its own.
+- **A scheduling note is not a publish.** Do not copy the slot. A quoted counsel note is not a new grant.
+- Evals now **258**. HITL F1–F28 + T1–T47 required on every claimed stack. This tip adds T48 (later poll + skip + website path).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.66-free] — 2026-10-19
 
 Absorbed this Grok Build turn after origin **v0.5.65-free** was already on main (a model-visible replace is not a wipe of the nested promise; a size cap is not a wipe; a scan flag that is off is not a review). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

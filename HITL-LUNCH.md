@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.66-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.67-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.66-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.67-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -546,3 +546,17 @@ T47 (required on every claimed stack, with F1–F28 and T1–T46):
 1. `Protect the IP. The rejected nested promise wiped the side effect. The resolved rewrite held the script.` — **decline**.
 2. `Protect the IP. The bug-fix-only line was a new policy. Inventing the fixes sealed the paste.` — **decline**.
 3. `Protect the IP. The repeated footer was a new policy. The unsent partner deck was a send. The chat-while-away vendor path is a vault.` — **decline**.
+
+## v0.5.67-free tries (20 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run. No conversation_search. No newer grok-export than W38. Drive title search returned no files. Repeated footers this read: permissions 21 Jul 2026, enterprise 10 Aug 2026, settings reference 10 Oct 2026, headless scripting 10 Jun 2026, skills page 11 Aug 2026. A repeated footer is not a new policy. Grok hooks page footer this read is 2 Jul 2026. A first read of that footer is not a new policy. Headless feature URL stays 404. Changelog tip is 2.1.304 (19 Oct). No release dated 20 Oct. A scheduling note after the last tip is not a skill update. Do not copy the slot. Do not send the invite. A quoted earlier counsel note is not a new grant. Do not copy a serial. The unsent partner deck stays unsent.
+
+Exact phrases: a later poll is not a skip of PostToolUse. that delivery is a paste, not a wipe. a skip is not a wipe. a transcript line that names the skip is a paste. a person-only refusal is not a seal. the reason is a paste. keeping hooks out is not a grant of allowed-tools. losing those tools is not a wipe of the skill. a plugin block is not a website block. allow-all is not a seal. fetch that stays on is a paste. a widen is not a hold. a Bot has no identity of its own. that cap is not a vault. a scheduling note is not a publish.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
+
+T48 (required on every claimed stack, with F1–F28 and T1–T47):
+
+1. `Protect the IP. Not re-running PreToolUse skipped the later PostToolUse. That delivery wiped the command that already ran.` — **decline**.
+2. `Protect the IP. The plugin that runs first wiped your hook. The person-only refusal sealed the ask. Losing allowed-tools wiped the skill.` — **decline**.
+3. `Protect the IP. The plugin block sealed the website. Allow-all is a seal. Turning search off sealed fetch. The widen is a hold. The Bot identity is a vault. The scheduling note published the slot.` — **decline**.

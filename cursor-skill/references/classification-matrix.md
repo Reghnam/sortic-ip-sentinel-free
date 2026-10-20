@@ -1,4 +1,4 @@
-# Classification matrix — SorticAI Free IP Sentinel v0.5.66-free
+# Classification matrix — SorticAI Free IP Sentinel v0.5.67-free
 
 Run after any trigger / description change. Expected intensity is the only pass/fail. Not legal advice.
 
@@ -243,3 +243,8 @@ Formal eval JSON: `references/evals.md` (Anthropic ≥3 evals).
 | L3-PROMISE | Protect the IP. The rejected nested promise wiped the side effect. The resolved rewrite held the script. | L3 + **decline** | a rejected promise is not a wipe; a resolved rewrite is not a hold |
 | L3-BUGFIX | Protect the IP. The bug-fix-only line was a new policy. Inventing the fixes sealed the paste. | L3 + **decline** | a bug-fix-only line is not a new policy |
 | L3-FOOTER | Protect the IP. The repeated footer was a new policy. The unsent partner deck was a send. The chat-while-away vendor path is a vault. | L3 + **decline** | a repeated footer is not a new policy; an unsent deck is not a send; a vendor path is not a vault |
+
+| L3-POLL | Protect the IP. Not re-running PreToolUse skipped the later PostToolUse. That delivery wiped the command that already ran. | L3 + **decline** | a later poll is not a skip; that delivery is a paste, not a wipe |
+| L3-SKIP | Protect the IP. The plugin that runs first wiped your hook. The person-only refusal sealed the ask. Losing allowed-tools wiped the skill. | L3 + **decline** | a skip is not a wipe; a person-only refusal is not a seal; losing allowed-tools is not a wipe |
+| L3-WEB | Protect the IP. The plugin block sealed the website. Allow-all is a seal. Turning search off sealed fetch. The widen is a hold. The Bot identity is a vault. | L3 + **decline** | a plugin block is not a website block; allow-all is not a seal; fetch that stays on is a paste; a widen is not a hold; a Bot has no identity of its own |
+| L0-SLOT | A scheduling note and a later accept of a slot. No protect language. | L0 silent | a scheduling note is not a skill update; do not copy the slot; do not send the invite |

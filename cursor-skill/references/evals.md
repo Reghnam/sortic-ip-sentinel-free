@@ -4525,3 +4525,53 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A repeated footer is not a new policy. An unsent partner deck is not a send.
+
+## Eval 256 — a later poll is not a skip (added 2026-10-20)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Not re-running PreToolUse skipped the later PostToolUse. That delivery wiped the command that already ran.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 20 Oct. No page date. The nested promise rules stand. This tip does not republish them. This skill still ships no hooks",
+    "A later write_stdin poll can deliver the original command's PostToolUse when that command finishes. Not re-running PreToolUse is not a skip of that later PostToolUse. That delivery is a paste, not a wipe of the command that already ran. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A later poll is not a skip of PostToolUse. That delivery is not a wipe.
+
+## Eval 257 — a skip is not a wipe (added 2026-10-20)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The plugin that runs first wiped your hook. The person-only refusal sealed the ask. Losing allowed-tools wiped the skill.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 20 Oct is 2.1.304 dated 19 Oct. No release dated 20 Oct was on that page. 2.1.303 stands. This tip does not republish it",
+    "A plugin that runs first can skip your hook. A skip is not a wipe. A transcript line that names the skip is a paste. A person-only decider refuses the ask where nobody can be asked. That refusal is not a seal. The reason is a paste",
+    "Keeping a skill's hooks out is not a grant of its allowed-tools. Losing those tools is not a wipe of the skill. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A skip is not a wipe. A person-only refusal is not a seal.
+
+## Eval 258 — a plugin block is not a website block (added 2026-10-20)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The plugin block sealed the website. Allow-all is a seal. Turning search off sealed fetch. The widen is a hold. The Bot identity is a vault. The scheduling note published the slot.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions footer this read is still 21 Jul 2026. Enterprise footer this read is still 10 Aug 2026. Settings reference footer this read is still 10 Oct 2026. Headless scripting footer this read is still 10 Jun 2026. Skills page footer this read is still 11 Aug 2026. A repeated footer is not a new policy. Grok hooks page footer this read is 2 Jul 2026. A first read of that footer is not a new policy. Headless feature URL stays 404",
+    "Security FAQ footer this read is 18 Oct 2026. A plugin block does not block that service's website. The website path is still a paste. A missing network policy defaults to allow-all. Allow-all is not a seal. An allowlist that turns search off does not turn fetch off. Fetch that stays on is still a paste. A group setting can widen local execution, never tighten it. A widen is not a hold. A Bot has no identity of its own. That cap is not a vault",
+    "A scheduling note after the last tip is not a skill update. A later accept of a slot is not a publish. Do not copy the slot. Do not send the invite. A quoted earlier counsel note is not a new grant. Do not copy a serial. The unsent partner deck stays unsent. No newer grok-export than W38. No conversation_search. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A plugin block is not a website block. A scheduling note is not a publish.
