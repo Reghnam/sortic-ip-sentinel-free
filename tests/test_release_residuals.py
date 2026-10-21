@@ -78,6 +78,18 @@ def _bad_email() -> str:
     return "ops" + "@" + "example.test"
 
 
+def _license_repo(files: dict[str, str]) -> list[str]:
+    with tempfile.TemporaryDirectory() as raw:
+        root = Path(raw)
+        for name, text in files.items():
+            dest = root / name
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_text(text, encoding="utf-8")
+        subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+        subprocess.run(["git", "add", "--", *files], cwd=root, check=True)
+        return HYGIENE.license_version_errors(root)
+
+
 def _extends_errors(fn: str, callee: str) -> bool:
     tree = ast.parse((SCRIPTS / "check-hygiene.py").read_text(encoding="utf-8"))
     for node in tree.body:
@@ -230,9 +242,70 @@ class ReleaseResidualTests(unittest.TestCase):
         for text in (readme, skills, template, launch):
             self.assertNotIn("0.5.36.zip", text)
 
+    def test_license_editions_match_version(self) -> None:
+        self.assertEqual(HYGIENE.license_version_errors(ROOT), [])
+        edition = "v" + HYGIENE.VERSION
+        paid = "(with paid paths), see the main skill."
+        completed = subprocess.run(
+            ["git", "ls-files", "-z"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+        )
+        names = [
+            rel
+            for rel in completed.stdout.decode("utf-8").split("\0")
+            if rel and Path(rel).name.lower() == "license.md"
+        ]
+        self.assertEqual(
+            names,
+            [
+                "LICENSE.md",
+                "chatgpt-skill/LICENSE.md",
+                "claude-skill/LICENSE.md",
+                "cursor-skill/LICENSE.md",
+                "grok-skill/LICENSE.md",
+            ],
+        )
+        for rel in names:
+            text = (ROOT / rel).read_text(encoding="utf-8")
+            self.assertIn(edition, text)
+            self.assertIn(paid, text)
+            self.assertNotIn("Checkpoint (with )", text)
+
+    def test_stale_license_edition_fails(self) -> None:
+        stale = "v" + "1.2.3-free"
+        errors = _license_repo({"LICENSE.md": "notice " + stale + "\n"})
+        self.assertEqual(errors, ["LICENSE.md license edition is not " + HYGIENE.VERSION])
+
+    def test_mixed_license_edition_fails(self) -> None:
+        text = "v" + HYGIENE.VERSION + " and v" + "1.2.3-free" + "\n"
+        errors = _license_repo({"cursor-skill/LICENSE.md": text})
+        self.assertEqual(
+            errors,
+            ["cursor-skill/LICENSE.md license edition is not " + HYGIENE.VERSION],
+        )
+
+    def test_current_license_ignores_other_files(self) -> None:
+        files = {
+            "LICENSE.md": "notice v" + HYGIENE.VERSION + "\n",
+            "notes.md": "old v" + "1.2.3-free" + "\n",
+        }
+        self.assertEqual(_license_repo(files), [])
+
+    def test_empty_checkpoint_parenthesis_fails(self) -> None:
+        text = "notice v" + HYGIENE.VERSION + "\nCheckpoint (with )\n"
+        errors = _license_repo({"LICENSE.md": text})
+        self.assertEqual(errors, ["LICENSE.md has an empty checkpoint parenthesis"])
+
+    def test_missing_license_fails(self) -> None:
+        errors = _license_repo({"README.md": "v" + HYGIENE.VERSION + "\n"})
+        self.assertEqual(errors, ["no tracked LICENSE.md"])
+
     def test_removing_the_guard_call_fails(self) -> None:
         self.assertTrue(_extends_errors("_hygiene", "tree_leak_errors"))
         self.assertTrue(_extends_errors("_hygiene", "zip_edition_errors"))
+        self.assertTrue(_extends_errors("_hygiene", "license_version_errors"))
 
 
 if __name__ == "__main__":
