@@ -2,6 +2,41 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.68-free] — 2026-10-21
+
+Absorbed this Grok Build turn after origin **v0.5.67-free** was already on main (a later poll is not a skip of PostToolUse; a skip is not a wipe; a plugin block is not a website block). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 21 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The later-poll rule stands. This tip does not republish it. This skill still ships **no hooks**.
+- **New:** `write_stdin` is transport for an existing unified-exec session. Sending input on that session does not run PreToolUse again. That send is a paste, not a new review. Transport is not a seal of the command that already passed.
+- Evals **259**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 21 Oct is **2.1.306** (21 Oct). **2.1.305** is dated 20 Oct. 2.1.304 stands. This tip does not republish the skip.
+- **New:** `claude -p` inside a cloud session can report not logged in when started without that session's environment. A false not-logged-in is not a wipe and not a seal. A prompt-too-long line that replaces an API error is not that error. An unneeded compaction is not a wipe.
+- **New:** `sandbox.allowNestedUserNamespaces` lets a sandboxed Linux command create a user namespace and get around the sandbox's file protections. Getting around them is not a seal. `allowedMcpServers` no longer filters a managed stdio server that uses a variable only in env. A server the allowlist left out can load on upgrade. That load is not a deny. A denied list is what keeps it off. The load is a paste.
+- **New (critical path, public plugin text, mailbox after the last tip):** a line that every output is a draft for attorney review is not this skill and not a grant. A draft is not a seal. A color flag is not a signature. A two-minute can-I-sign is not a grant. A playbook that lives only in one chat is not the file every session reads. A missing file is not a wipe. A named country is not knowledge of that law. Do not copy the forwarded guide. Do not install that plugin into this free skill.
+- Evals **260**.
+
+### Grok Build (third)
+
+- Permissions footer this read is still **21 Jul 2026**. Enterprise footer this read is still **10 Aug 2026**. Settings reference footer this read is still **10 Oct 2026**. Headless scripting footer this read is still **10 Jun 2026**. Skills page footer this read is still **11 Aug 2026**. Hooks page footer this read is still **2 Jul 2026**. Security FAQ footer this read is still **18 Oct 2026**. Headless feature URL stays **404**. A repeated footer is not a new policy.
+- **Mailbox:** the legal-plugin forward after the last tip is a paste. Do not copy the guide. A second scheduling note is still not a publish. Do not copy the slot. A quoted counsel note is still not a new grant. Do not copy a serial. The unsent partner deck stays unsent. Do not resend the stale try pack.
+- A false login line on another host is not a Grok vault. Headless here stays `grok -p`. A 404 is not a private lane.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **261** on the color flag and the forwarded guide.
+
+### Shared
+
+- **Transport is not a new review.** That send is a paste, not a seal.
+- **A false not-logged-in is not a wipe.** A prompt-too-long mask is not the error. An unneeded compaction is not a wipe. A nested user namespace is not a seal. An allowlist miss that loads is not a deny.
+- **A draft is not a seal.** A color flag is not a signature. A chat-only playbook is not the file. A named country is not that law. A forwarded guide is not this skill.
+- **A second scheduling note is not a publish.** Do not copy the slot.
+- Evals now **261**. HITL F1–F28 + T1–T48 required on every claimed stack. This tip adds T49 (transport + false login + color flag).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.67-free] — 2026-10-20
 
 Absorbed this Grok Build turn after origin **v0.5.66-free** was already on main (a rejected promise is not a wipe; a bug-fix-only line is not a new policy; a repeated footer is not a new policy). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

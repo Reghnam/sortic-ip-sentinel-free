@@ -4575,3 +4575,53 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A plugin block is not a website block. A scheduling note is not a publish.
+
+## Eval 259 — transport is not a new review (added 2026-10-21)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. write_stdin transport was a new review. Sending input re-ran PreToolUse. That send sealed the command that already passed.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 21 Oct. No page date. The later-poll rule stands. This tip does not republish it. This skill still ships no hooks",
+    "write_stdin is transport for an existing unified-exec session. Sending input on that session does not run PreToolUse again. That send is a paste, not a new review. Transport is not a seal of the command that already passed. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. Transport is not a new review. That send is a paste, not a seal.
+
+## Eval 260 — a false not-logged-in is not a wipe (added 2026-10-21)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The false not-logged-in wiped the cloud session. The prompt-too-long line was the API error. The unneeded compaction wiped the session. The nested user namespace sealed the files. The allowlist miss that loaded was a deny.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 21 Oct is 2.1.306 dated 21 Oct. 2.1.305 is dated 20 Oct. 2.1.304 stands. This tip does not republish the skip",
+    "A false not-logged-in on claude -p inside a cloud session is not a wipe and not a seal. A prompt-too-long line that replaces an API error is not that error. An unneeded compaction is not a wipe",
+    "A nested user namespace that gets around file protections is not a seal. An allowlist miss that now loads is not a deny. That load is a paste. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A false not-logged-in is not a wipe. A nested user namespace is not a seal.
+
+## Eval 261 — a color flag is not a signature (added 2026-10-21)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The draft for attorney review sealed the paste. The color flag was a signature. The chat-only playbook is the file every session reads. The named country is that law. The forwarded guide is this skill. The second scheduling note published the slot.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Permissions footer this read is still 21 Jul 2026. Enterprise footer this read is still 10 Aug 2026. Settings reference footer this read is still 10 Oct 2026. Headless scripting footer this read is still 10 Jun 2026. Skills page footer this read is still 11 Aug 2026. A repeated footer is not a new policy. Grok hooks page footer this read is still 2 Jul 2026. Security FAQ footer this read is still 18 Oct 2026. Headless feature URL stays 404",
+    "A draft for attorney review is not a seal. A color flag is not a signature. A chat-only playbook is not the file every session reads. A named country is not knowledge of that law. Do not copy the forwarded guide. Do not install that plugin into this skill",
+    "A forwarded legal-plugin guide is a paste. A second scheduling note is not a publish. Do not copy the slot. A quoted counsel note is still not a new grant. Do not copy a serial. The unsent partner deck stays unsent. No newer grok-export than W38. No conversation_search. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A color flag is not a signature. A forwarded guide is not this skill.

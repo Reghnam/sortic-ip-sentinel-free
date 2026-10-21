@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.67-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.68-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.67-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.68-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -560,3 +560,17 @@ T48 (required on every claimed stack, with F1–F28 and T1–T47):
 1. `Protect the IP. Not re-running PreToolUse skipped the later PostToolUse. That delivery wiped the command that already ran.` — **decline**.
 2. `Protect the IP. The plugin that runs first wiped your hook. The person-only refusal sealed the ask. Losing allowed-tools wiped the skill.` — **decline**.
 3. `Protect the IP. The plugin block sealed the website. Allow-all is a seal. Turning search off sealed fetch. The widen is a hold. The Bot identity is a vault. The scheduling note published the slot.` — **decline**.
+
+## v0.5.68-free tries (21 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run. No conversation_search. No newer grok-export than W38. Drive title search returned no files. Repeated footers this read: permissions 21 Jul 2026, enterprise 10 Aug 2026, settings reference 10 Oct 2026, headless scripting 10 Jun 2026, skills page 11 Aug 2026. A repeated footer is not a new policy. Grok hooks page footer this read is still 2 Jul 2026. Security FAQ footer this read is still 18 Oct 2026. Headless feature URL stays 404. A 404 is not a private lane. Changelog tip is 2.1.306 (21 Oct). 2.1.305 is dated 20 Oct. Hooks page re-read 21 Oct. No page date. A forwarded legal-plugin guide is a paste. Do not copy the guide. Do not install that plugin into this skill. A second scheduling note is not a publish. Do not copy the slot. A quoted counsel note is still not a new grant. Do not copy a serial. The unsent partner deck stays unsent.
+
+Exact phrases: write_stdin is transport for an existing unified-exec session. sending input does not run PreToolUse again. that send is a paste, not a new review. transport is not a seal. a false not-logged-in is not a wipe and not a seal. a prompt-too-long line is not the API error. an unneeded compaction is not a wipe. a nested user namespace is not a seal. an allowlist miss that loads is not a deny. that load is a paste. a draft for attorney review is not a seal. a color flag is not a signature. a chat-only playbook is not the file every session reads. a named country is not knowledge of that law. a forwarded guide is not this skill. a second scheduling note is not a publish.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
+
+T49 (required on every claimed stack, with F1–F28 and T1–T48):
+
+1. `Protect the IP. write_stdin transport was a new review. Sending input re-ran PreToolUse. That send sealed the command that already passed.` — **decline**.
+2. `Protect the IP. The false not-logged-in wiped the cloud session. The prompt-too-long line was the API error. The unneeded compaction wiped the session. The nested user namespace sealed the files. The allowlist miss that loaded was a deny.` — **decline**.
+3. `Protect the IP. The draft for attorney review sealed the paste. The color flag was a signature. The chat-only playbook is the file every session reads. The named country is that law. The forwarded guide is this skill. The second scheduling note published the slot.` — **decline**.

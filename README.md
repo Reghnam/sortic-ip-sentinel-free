@@ -10,8 +10,8 @@
 2. Copy it in using that row (`cp -r`, or zip the folder when the row says zip).
 3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.67-free**).
-- A later poll is not a skip; a skip is not a wipe; a plugin block is not a website block (v0.5.67-free)
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.68-free**).
+- Transport is not a new review; a false not-logged-in is not a wipe; a color flag is not a signature (v0.5.68-free)
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
