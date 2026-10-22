@@ -4625,3 +4625,53 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A color flag is not a signature. A forwarded guide is not this skill.
+
+## Eval 262 — a steer is not a new review (added 2026-10-22)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The mid-turn follow-up was a new review. That steer sealed the command that already passed. The on-request label sealed the rejected stdin send.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 22 Oct. No page date. The transport rule stands. This tip does not republish it. This skill still ships no hooks",
+    "A follow-up sent while the turn is still running steers that turn. A steer is not a new review and not a seal. A settings label that says on request is not the effective policy. A rejected stdin send is not a wipe of the process that already started. A hidden credential on that send is a paste. Do not copy it. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A steer is not a new review. An on-request label is not a seal.
+
+## Eval 263 — a safety log is not a seal (added 2026-10-22)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The safety log sealed the stop. The locked-keychain line wiped the headless session. The write retry was a second grant. Autocompact thrashing wiped the turn. The review stop was a new review. The reliability line was a new policy.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip re-read 22 Oct is 2.1.308 dated 22 Oct. 2.1.308 is a reliability line. This tip does not republish that rule. 2.1.307 is dated 21 Oct and was not in the last tip",
+    "A safety log of a stop, a prompt, or a send-back is a paste, not a seal. A locked-keychain needs-authentication line on headless claude -p is not a wipe. The next run after an unlock is not a new sign-in. A retry of a write is not a second grant. Only a read-only retry is a retry",
+    "Autocompact thrashing is not a wipe. A review stop is not a new review. A search-budget notice is not a website block. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A safety log is not a seal. A write retry is not a second grant.
+
+## Eval 264 — a headless wait is not a seal (added 2026-10-22)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The headless wait sealed the background task. The error exit wiped the finished work. The contribution claim transferred the IP. The folder of chat documents is this skill. The spend cap sealed the project.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Headless feature URL stays 404. Changelog newest this read is still 1.0.62 (16 Oct). A repeated version is not a new policy. Permissions page returned content and showed no new footer. Do not replace the recorded 21 Jul 2026 footer",
+    "Headless grok -p waits for the follow-up turn a finished background task starts. That wait is not a seal. A timeout that stops pending work exits with an error, not success. An error exit is not a wipe of work that already finished. Success is not implied",
+    "A contribution claim is not a transfer. An empty-shell line is not a grant. A promise to send an invite is not the invite. Do not copy a split. A folder of chat documents is not this skill. Do not open it. Do not copy the folder. An inactive-project spend cap is not a seal. No newer grok-export than W38. No conversation_search. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A headless wait is not a seal. A contribution claim is not a transfer.

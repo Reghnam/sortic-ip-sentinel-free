@@ -2,6 +2,38 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.69-free] — 2026-10-22
+
+Absorbed this Grok Build turn after origin **v0.5.68-free** was already on main (transport is not a new review; a false not-logged-in is not a wipe; a color flag is not a signature). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 22 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The transport rule stands. This tip does not republish it. This skill still ships **no hooks**.
+- **New:** a follow-up sent while the turn is still running steers that turn. A steer is not a new review and not a seal. A settings label that says on request is not the effective policy. A rejected stdin send is not a wipe of the process that already started. A hidden credential on that send is a paste. Do not copy it.
+- Evals **262**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 22 Oct is **2.1.308** (22 Oct). The release body is a reliability line. This tip does not republish that rule. **2.1.307** is dated 21 Oct and was not in the last tip. 2.1.306 stands.
+- **New:** a safety log of a stop, a prompt, or a send-back is a paste, not a seal. An API version pin is not a new law and not a seal. A locked-keychain needs-authentication line on headless `claude -p` is not a wipe. The next run after an unlock is not a new sign-in. A sleep timeout that leaves a server failed is not a deny. A retry of a write is not a second grant. Only a read-only retry is a retry. Autocompact thrashing is not a wipe. A window that returns to the default after restart is not a seal. A cleared chat that comes back is a paste. A search-budget notice is not a website block. A review stop is not a new review. A form that closed without creating anything is not a publish. A notice that names an output file is a paste. Do not copy the path.
+- Evals **263**.
+
+### Grok Build (third)
+
+- Permissions page returned content this read and showed no new footer. Do not replace the recorded **21 Jul 2026** footer. A date this read did not show is not a new policy. Enterprise, settings, headless scripting, and skills footers were not replaced. Grok hooks page returned content. Headless feature URL stays **404**. Changelog newest this read is still **1.0.62** (16 Oct). A repeated version is not a new policy.
+- **New:** headless `grok -p` waits for the follow-up turn a finished background task starts. That wait is not a seal. A timeout that stops pending work exits with an error, not success. An error exit is not a wipe of work that already finished. Success is not implied.
+- **Mailbox after the last tip:** a contribution claim is not a transfer. An empty-shell line is not a grant. A promise to send an invite is not the invite. Do not copy a split. An invite that arrived is still not a publish. Do not copy the link. A folder of chat documents is not this skill. Do not open it. Do not copy the folder. An inactive-project spend cap is not a seal. A terms-update notice is not that law. A missing-document list is not a filing. A second trial-end note is not a grant. Do not copy an amount.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **264** on the headless wait and the contribution claim.
+
+### Shared
+
+- **A steer is not a new review.** An on-request label is not a seal. A rejected stdin send is not a wipe.
+- **A safety log is not a seal.** A locked-keychain line is not a wipe. A write retry is not a second grant. Autocompact thrashing is not a wipe. A review stop is not a new review. A reliability line is not a new policy.
+- **A headless wait is not a seal.** An error exit is not a wipe. A contribution claim is not a transfer. A folder of chat documents is not this skill. A spend cap is not a seal.
+- Evals now **264**. HITL F1–F28 + T1–T49 required on every claimed stack. This tip adds T50 (steer + safety log + headless wait).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.68-free] — 2026-10-21
 
 Absorbed this Grok Build turn after origin **v0.5.67-free** was already on main (a later poll is not a skip of PostToolUse; a skip is not a wipe; a plugin block is not a website block). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

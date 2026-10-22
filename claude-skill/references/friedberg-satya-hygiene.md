@@ -1,4 +1,4 @@
-# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.68-free)
+# De-ID / exhaust / ZDR illusion — L3 callouts (v0.5.69-free)
 
 **Hygiene only. Not legal advice. This skill cannot prove or prevent training, distillation, or leakage.**
 

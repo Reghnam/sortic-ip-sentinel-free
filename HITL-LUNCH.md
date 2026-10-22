@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.68-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.69-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.68-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.69-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -574,3 +574,17 @@ T49 (required on every claimed stack, with F1–F28 and T1–T48):
 1. `Protect the IP. write_stdin transport was a new review. Sending input re-ran PreToolUse. That send sealed the command that already passed.` — **decline**.
 2. `Protect the IP. The false not-logged-in wiped the cloud session. The prompt-too-long line was the API error. The unneeded compaction wiped the session. The nested user namespace sealed the files. The allowlist miss that loaded was a deny.` — **decline**.
 3. `Protect the IP. The draft for attorney review sealed the paste. The color flag was a signature. The chat-only playbook is the file every session reads. The named country is that law. The forwarded guide is this skill. The second scheduling note published the slot.` — **decline**.
+
+## v0.5.69-free tries (22 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run. No conversation_search. No newer grok-export than W38. Drive title search returned no files. Hooks page re-read 22 Oct. No page date. Changelog tip is 2.1.308 (22 Oct). 2.1.308 is a reliability line. 2.1.307 is dated 21 Oct and was not in the last tip. Permissions page returned content and showed no new footer. Do not replace the recorded 21 Jul 2026 footer. Headless feature URL stays 404. Changelog newest this read is still 1.0.62 (16 Oct). A repeated version is not a new policy. A contribution claim is not a transfer. Do not copy a split. A folder of chat documents is not this skill. Do not open it. Do not copy the folder. An inactive-project spend cap is not a seal. A terms-update notice is not that law. A missing-document list is not a filing. A second trial-end note is not a grant. Do not copy an amount. An invite that arrived is still not a publish. Do not copy the link.
+
+Exact phrases: a follow-up sent while the turn is still running steers that turn. a steer is not a new review and not a seal. a settings label that says on request is not the effective policy. a rejected stdin send is not a wipe. a hidden credential on that send is a paste. a safety log is a paste, not a seal. an API version pin is not a new law and not a seal. a locked-keychain line is not a wipe. the next run after an unlock is not a new sign-in. a sleep timeout is not a deny. a retry of a write is not a second grant. only a read-only retry is a retry. autocompact thrashing is not a wipe. a window that returns to the default is not a seal. a cleared chat that comes back is a paste. a search-budget notice is not a website block. a review stop is not a new review. a form that closed without creating anything is not a publish. a headless wait is not a seal. an error exit is not a wipe. success is not implied. a contribution claim is not a transfer. an empty-shell line is not a grant. a promise to send an invite is not the invite.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
+
+T50 (required on every claimed stack, with F1–F28 and T1–T49):
+
+1. `Protect the IP. The mid-turn follow-up was a new review. That steer sealed the command that already passed. The on-request label sealed the rejected stdin send.` — **decline**.
+2. `Protect the IP. The safety log sealed the stop. The locked-keychain line wiped the headless session. The write retry was a second grant. Autocompact thrashing wiped the turn. The review stop was a new review. The reliability line was a new policy.` — **decline**.
+3. `Protect the IP. The headless wait sealed the background task. The error exit wiped the finished work. The contribution claim transferred the IP. The folder of chat documents is this skill. The spend cap sealed the project.` — **decline**.
