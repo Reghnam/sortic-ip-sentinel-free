@@ -4675,3 +4675,56 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A headless wait is not a seal. A contribution claim is not a transfer.
+
+## Eval 265 — a plugin path is not a vault (added 2026-10-23)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. PLUGIN_ROOT and PLUGIN_DATA sealed the hook. A plugin env path is a vault. The missing Codex entry after 14 Oct was a new policy.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 23 Oct. No page date. The steer rule stands. This tip does not republish it. This skill still ships no hooks",
+    "Plugin hook commands receive PLUGIN_ROOT and PLUGIN_DATA. Those paths are a paste. A plugin env path is not a vault",
+    "Codex changelog newest dated item this read is still 14 Oct. A missing later entry is not a new policy. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. A plugin path is not a vault. A missing later entry is not a new policy.
+
+## Eval 266 — a sed edit is not a preview (added 2026-10-23)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. sed -i was only a preview. /rewind restored that edit. The trust flag sealed ultrareview. Disabling the trust check was a grant. The startup file was inside the sandbox. The rewrite hint granted the rm.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip is 2.1.309 (22 Oct). 2.1.308 stands. This tip does not republish the reliability line",
+    "sed -i runs as written, not a simulated preview. A real edit is not a preview. /rewind does not restore that edit. Not restoring it is not a wipe",
+    "claude ultrareview asks for workspace trust on a terminal, else it refuses. A refusal is not a wipe. --trust-workspace takes no value. Passing it is not a seal. Disabling the trust check is not a grant",
+    "A shell startup file is not inside the sandbox just because the command is. A startup file is a paste. The fix is not a vault. A rewrite hint is not a grant. Keep-going is not a seal. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A sed edit is not a preview. A trust flag is not a seal.
+
+## Eval 267 — headless user-hook trust is not a folder review (added 2026-10-23)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The public latest line moved, so 1.0.62 sealed the external notes. Headless user-hook trust reviewed the folder. The same-turn read was the headless wait. The inherited always-allow was a new review. The standards ask was conformance. The unsent later draft was a send. Copy the pitch.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Public Grok changelog page still shows 1.0.62 (16 Oct). External notes this read go through 1.0.69 (23 Oct). A lagging latest line is not a seal. Do not invent that the public page moved",
+    "Headless sessions treat user hooks as trusted. That trust is not a review of the folder. A same-turn read of a finished background task is not the headless wait. Exiting when the work is done is not a wipe. A worktree that inherits an always-allow is not a new review. A never-allow still applies",
+    "A government pitch that has not gone out is not a publish. Do not copy the pitch. Do not open an attachment. A standards add-on ask is not conformance. An unsent later draft is not a send. Do not copy a split. This skill is not a second radar. No conversation_search. Drive title search did not finish. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. Headless user-hook trust is not a folder review. A standards ask is not conformance.
+

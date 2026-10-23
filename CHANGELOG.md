@@ -2,6 +2,43 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.70-free] — 2026-10-23
+
+Absorbed this Grok Build turn after origin **v0.5.69-free** was already on main (a steer is not a new review; a safety log is not a seal; a headless wait is not a seal). No newer grok-export. **No conversation_search.** Drive title search did not finish. Do not claim a scan this tip did not finish. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 23 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The steer rule stands. This tip does not republish it. This skill still ships **no hooks**.
+- **New:** plugin hook commands receive `PLUGIN_ROOT` and `PLUGIN_DATA`. Those paths are a paste. A plugin env path is not a vault.
+- Codex changelog newest dated item this read is still **14 Oct**. A missing later entry is not a new policy.
+- Evals **265**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 23 Oct is **2.1.309** (22 Oct). **2.1.308** stands. This tip does not republish the reliability line.
+- **New:** `sed -i` runs as written, not a simulated preview. A real edit is not a preview. `/rewind` does not restore that edit. Not restoring it is not a wipe.
+- **New:** `claude ultrareview` asks for workspace trust on a terminal, else it refuses. A refusal is not a wipe. `--trust-workspace` takes no value. Passing it is not a seal. Disabling the trust check is not a grant.
+- **New:** a shell startup file is not inside the sandbox just because the command is. A startup file is a paste. The fix is not a vault. In bypass permissions, a dangerous `rm` is denied at once. A rewrite hint is not a grant. Keep-going is not a seal.
+- Evals **266**.
+
+### Grok Build (third)
+
+- Public changelog page (`x.ai/changelog/build`) still shows **1.0.62** (16 Oct). External notes this read go through **1.0.69** (23 Oct). A lagging latest line is not a seal. Do not invent that the public page moved.
+- **New:** headless sessions treat user hooks as trusted (external **1.0.64**). That trust is not a review of the folder. Untrusted folders still wait on user, project, plugin, and agent hooks until the folder is trusted. The wait is not a wipe of managed hooks.
+- **New:** a same-turn read of a finished background task is not the headless wait (external **1.0.67**). Exiting when the work is done is not a wipe. A worktree that inherits an always-allow is not a new review. A never-allow still applies.
+- **New:** a resume that matches commands, paths, and replies, including other folders, is a paste. A retired `simple_mode` key is not a seal (external **1.0.69**). A doctor line that names a leftover key is a paste. Do not copy the config. Headless feature URL stays **404**.
+- **Mailbox after the last tip:** a government pitch that has not gone out is not a publish. Do not copy the pitch. Do not open an attachment. Do not forward it. An internal note is not this skill. A standards add-on ask is not conformance. Naming a standards family is not that standard. Do not copy the reply. Do not copy a count. An unsent later draft is not a send. Do not send it. Do not copy a split. This skill is not a second radar.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **267** on headless user-hook trust and the standards ask.
+
+### Shared
+
+- **A plugin env path is not a vault.** A missing later entry is not a new policy.
+- **A sed edit is not a preview.** A trust flag is not a seal. A startup file is a paste. A rewrite hint is not a grant.
+- **A lagging latest line is not a seal.** Headless user-hook trust is not a folder review. A same-turn read is not the headless wait. A standards ask is not conformance. An unsent later draft is not a send.
+- Evals now **267**. HITL F1–F28 + T1–T50 required on every claimed stack. This tip adds T51 (plugin path + sed edit + headless user-hook trust).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.69-free] — 2026-10-22
 
 Absorbed this Grok Build turn after origin **v0.5.68-free** was already on main (transport is not a new review; a false not-logged-in is not a wipe; a color flag is not a signature). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.

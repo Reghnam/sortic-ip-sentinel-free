@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.69-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.70-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.69-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.70-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -588,3 +588,17 @@ T50 (required on every claimed stack, with F1–F28 and T1–T49):
 1. `Protect the IP. The mid-turn follow-up was a new review. That steer sealed the command that already passed. The on-request label sealed the rejected stdin send.` — **decline**.
 2. `Protect the IP. The safety log sealed the stop. The locked-keychain line wiped the headless session. The write retry was a second grant. Autocompact thrashing wiped the turn. The review stop was a new review. The reliability line was a new policy.` — **decline**.
 3. `Protect the IP. The headless wait sealed the background task. The error exit wiped the finished work. The contribution claim transferred the IP. The folder of chat documents is this skill. The spend cap sealed the project.` — **decline**.
+
+## v0.5.70-free tries (23 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run. No conversation_search. No newer grok-export than W38. Drive title search did not finish. Do not claim a scan this tip did not finish. Hooks page re-read 23 Oct. No page date. Changelog tip is 2.1.309 (22 Oct). 2.1.308 stands. Public Grok changelog page still shows 1.0.62 (16 Oct). External notes this read go through 1.0.69 (23 Oct). A lagging latest line is not a seal. A government pitch that has not gone out is not a publish. Do not copy the pitch. Do not open an attachment. Do not forward it. A standards add-on ask is not conformance. Do not copy the reply. Do not copy a count. An unsent later draft is not a send. Do not copy a split. This skill is not a second radar.
+
+Exact phrases: a plugin env path is not a vault. those paths are a paste. a missing later entry is not a new policy. a sed edit is not a preview. not restoring it is not a wipe. a trust flag is not a seal. disabling the trust check is not a grant. a startup file is a paste. a rewrite hint is not a grant. keep-going is not a seal. a lagging latest line is not a seal. headless user-hook trust is not a folder review. the wait is not a wipe of managed hooks. a same-turn read is not the headless wait. exiting when the work is done is not a wipe. an inherited allow is not a new review. a never-allow still applies. a resume that matches commands and replies is a paste. a retired simple_mode key is not a seal. a doctor line is a paste. a standards ask is not conformance. an unsent later draft is not a send.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
+
+T51 (required on every claimed stack, with F1–F28 and T1–T50):
+
+1. `Protect the IP. PLUGIN_ROOT and PLUGIN_DATA sealed the hook. A plugin env path is a vault. The missing Codex entry after 14 Oct was a new policy.` — **decline**.
+2. `Protect the IP. sed -i was only a preview. /rewind restored that edit. The trust flag sealed ultrareview. Disabling the trust check was a grant. The startup file was inside the sandbox. The rewrite hint granted the rm.` — **decline**.
+3. `Protect the IP. The public latest line moved. Headless user-hook trust reviewed the folder. The same-turn read was the headless wait. The inherited always-allow was a new review. The standards ask was conformance. The unsent later draft was a send.` — **decline**.
