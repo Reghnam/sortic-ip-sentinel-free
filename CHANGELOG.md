@@ -2,6 +2,54 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.71-free] — 2026-10-24
+
+Absorbed this Grok Build turn after origin **v0.5.70-free** was already on main (a plugin env path is not a vault; a sed edit is not a preview; headless user-hook trust is not a folder review). No newer grok-export. **No conversation_search.** Did not open the continue-reading chat link. Drive title search did not finish. Do not claim a scan this tip did not finish. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 24 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The plugin-path rule stands. This tip does not republish it. This skill still ships **no hooks**.
+- **New:** Codex changelog newest dated item this read is **23 Oct**, CLI **0.164.0**. The last tip's newest dated item was still 14 Oct. A later dated entry is not a seal.
+- **New:** ten numbered preset slots hold reusable prompts and slash commands. A numbered preset is not a vault. Saving the method there is a paste.
+- **New:** inline arguments set a permission profile. An inline permission profile is not a new review and not a seal.
+- **New:** a queued prompt waits for a pending permission selection. That wait is not a grant.
+- **New:** credentials are masked on supported remote shell commands. A masked credential is still a paste. Do not copy it. Masking is not a vault.
+- **New:** sandbox checks cover a case-variant metadata path and a replaceable symlink used to locate an executable. A case-variant path is not the path you allowed. A replaceable symlink is not the executable you reviewed.
+- Evals **268**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 24 Oct is **2.1.310** (23 Oct). **2.1.309** stands. This tip does not republish the sed rule.
+- **New:** the Monitor tool and plugin monitors still run when telemetry or nonessential traffic is disabled. A monitor while telemetry is off is not a seal. A blocked long sleep is not a wipe.
+- **New:** an MCP tool call that times out in a non-interactive session while elicitation is unanswered says no answer came and not to repeat the call. An unanswered elicitation is not a grant. Not repeating is not a wipe. Do not copy the error.
+- **New:** turning cloud sessions or remote control on asks for confirmation and lists custom roles. A role list is a paste. Do not copy the roles. A confirmation is not a publish.
+- **New:** a cloud setup script loaded from a file is a paste. Do not copy the script.
+- **New:** a hook that cannot run is not a grant. A missing shell is not approval.
+- Evals **269**.
+
+### Grok Build (third)
+
+- Public changelog page (`x.ai/changelog/build`) this read returned **403**. Do not invent that the public page moved. Do not replace the last recorded public line from a page this tip did not read.
+- External notes this read include **1.0.70** (23 Oct), after **1.0.69**. A later external note is not the public latest line.
+- **New:** `/plugins` counts only skills that load, and says how many were skipped because they link outside the plugin folder. A skill that links outside the plugin folder is skipped. That skip is not a wipe. The skip count is a paste. Do not copy the count.
+- **New:** `GROK_DISABLE_EXPERIMENTS`, or experiments disabled in any configuration file, turns every experiments entry off. Turning experiments off is not a seal and not a review of the folder.
+- **Mailbox after the last tip:** a mailed skill digest cuts off at a continue-reading link. A cut-off digest is not a finished review. A continue-reading link is not this skill. Do not open it. Do not copy a chat id, an automation id, or a team id. The lean-body line in that digest already stands. This file is already over 500 lines. This tip does not rewrite it down. Do not claim the body is under 500 lines.
+- A quiet field note is not a new alert. Do not copy a candidate count. Do not name the watcher.
+- A gate-pass mail is not a seal. Do not copy a tally. Do not copy a case id into this skill.
+- A failed run on another repo is not this skill. Do not copy the hour or the record.
+- The unsent split draft stays unsent. This tip does not republish that rule. Do not send it. Do not copy the split.
+- A bank-document list is not this skill. Do not copy it. A receipt thread is not a grant. Do not copy the notice number. An API billing note is not this skill. Do not copy the plan name.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **270** on the outside-link skip and the cut-off digest.
+
+### Shared
+
+- **A preset is not a vault.** An inline permission profile is not a new review. A wait is not a grant. A masked credential is still a paste. A case-variant path is not the allowed path. A replaceable symlink is not the reviewed executable.
+- **A monitor while telemetry is off is not a seal.** An unanswered elicitation is not a grant. A role list is a paste. A setup script is a paste. A hook that did not run is not a grant.
+- **A skip is not a wipe.** The skip count is a paste. Turning experiments off is not a seal. A cut-off digest is not a finished review. A continue-reading link is not this skill. Do not claim the body is under 500 lines.
+- Evals now **270**. HITL F1–F28 + T1–T51 required on every claimed stack. This tip adds T52 (preset + monitor + outside-link skip).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.70-free] — 2026-10-23
 
 Absorbed this Grok Build turn after origin **v0.5.69-free** was already on main (a steer is not a new review; a safety log is not a seal; a headless wait is not a seal). No newer grok-export. **No conversation_search.** Drive title search did not finish. Do not claim a scan this tip did not finish. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
