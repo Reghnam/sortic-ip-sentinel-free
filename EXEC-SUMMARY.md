@@ -1,25 +1,28 @@
-# Exec summary — SorticAI Free IP Sentinel v0.5.72-free
+# Exec summary — SorticAI Free IP Sentinel v0.5.73-free
 
 **Date:** 25 Oct 2026
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free
-**Tip:** `v0.5.72-free` (hygiene only)
+**Tip:** `v0.5.73-free` (hygiene only)
 **What it is:** Free portable skill that notices IP-sensitive moments and delivers builder-worksheet hygiene (show/hold, demo playbook, logs, JSON). **Not legal advice. No paid paths.**
 
 ## Why this patch (one paragraph)
 
-Origin **v0.5.71-free** rules still stand: a preset is not a vault, a monitor while telemetry is off is not a seal, and a skip of an outside-link skill is not a wipe. This tip does not republish those. No newer grok-export. **No conversation_search.** Did not open the continue-reading link. Drive title search timed out. Do not claim a drive scan this tip did not finish. The native mailbox search timed out. A later cursor read of the owner mailbox finished. A token timeout is not that review. **OpenAI first:** hooks page re-read 25 Oct, still no page date. Codex changelog newest dated item this read is still **23 Oct**, CLI **0.164.0**. The latest line is still that CLI. An alpha whose note is only its own name is not a feature list. An empty alpha is not a feature list. An alpha is not the latest line. An unreleased commit is not the latest line. An environment hook is not a review. A hook listing is a paste. An experimental fork is not a seal. A memory import is a paste. A memory-summary read is not a vault. A masked cloud credential used to sign a local proxy is still a paste. A server approval default is not a new review. A silent append is still a paste. This skill still ships no hooks. **Anthropic second:** changelog tip is still **2.1.310** (23 Oct). No later release. A missing next version is not a new policy. A cleanup of a recent file is not a wipe. A very large cleanup period is not a vault. Dense text kept after compaction is still a paste. A prompt that hides where a link leads is not a review of the target. A timeout when the editor closes is not a grant. **Grok Build third:** the public changelog page this read returned **403**. External note **1.0.70** still returns. The next external note is a missing key. A missing next note is not a wipe. Do not invent the number. A lagging enterprise line is not the public latest line. Headless feature URL stays 404. **Mailbox:** a cut-off digest is not a finished review. Do not open the continue-reading link. This tip joins two blank lines so the body is under 500. That join is not a rewrite. Do not claim the body is under 200. A later gate-pass mail is still not a seal. A no-new-entries note is not a new corpus. A later failed run on another repo is still not this skill. A forwarded event note is not this skill. A meeting-notes promo is not a skill update. Still free-only. Description ≤1024.
+Origin **v0.5.72-free** rules still stand: an empty alpha is not a feature list, a cleanup of a recent file is not a wipe, and the checker body under 500 lines is not a rewrite. This tip does not republish those. No newer grok-export. **No conversation_search.** The continue-reading chat returned no body. **OpenAI first:** Codex changelog re-read 25 Oct. Newest dated item is still **23 Oct**, CLI **0.164.0**. No later entry. An implicit-off flag is not a vault. Explicit dollar-invoke still loads the skill. A listing cap is not a wipe of the body. A should-not line is the router, not a seal. This skill still ships no hooks. **Anthropic second:** changelog tip is still **2.1.310** (23 Oct). No 2.1.311. A collapsed "6 improvements" control is not six sections of this skill. A six-section label is not a rewrite. **Grok Build third:** the public changelog page returned **403**. Skills docs this read still say last updated 11 Aug 2026. user-invocable yes is not true. Only the literal true counts. disable-model-invocation is not a vault. **Mailbox:** the 25 Oct digest cuts off before any six names. Do not invent those names as a quote. Do not claim the body is under 200. An eval file is not a bakeoff. Do not add a second evals file. Still free-only. Description ≤1024.
 
 ## What changed (shareable)
 
 | Host | Change |
 |------|--------|
-| **OpenAI (first)** | An empty alpha is not a feature list. An unreleased commit is not the latest line. Evals **271**. |
-| **Anthropic (second)** | A cleanup of a recent file is not a wipe. Dense text kept after compaction is still a paste. Evals **272**. |
-| **Grok Build (third)** | A missing next note is not a wipe. Do not invent the number. Evals **273**. |
-| **Mailbox** | A cut-off digest is not a finished review. Do not claim the body is under 200. A forwarded event note is not this skill. A meeting-notes promo is not a skill update. |
+| **OpenAI (first)** | An implicit-off flag is not a vault. A listing cap is not a wipe. A should-not line is the router. Evals stay **273**. |
+| **Anthropic (second)** | No 2.1.311. A six-section label is not a rewrite. An eval file is not a bakeoff. |
+| **Grok Build (third)** | user-invocable yes is not true. disable-model-invocation is not a vault. Public changelog page **403**. |
+| **Checker** | Body stays 499 lines. That fact is not a seal. Edition pins match **v0.5.73-free**. |
 
 ## Do not publish
 
+- Six section names from a cutoff digest. Do not invent them as a quote of that chat.
+- An eval-gate sentence. It is not a bakeoff this tip ran. Do not add a second evals file.
+- A listing cap or a token ceiling.
 - An empty alpha feature list, an unreleased commit, a hook listing, or a memory import.
 - A cleanup of a recent file, dense text kept after compaction, or a hidden link target.
 - The number of a missing next note. Do not invent it.
@@ -58,7 +61,7 @@ Origin **v0.5.71-free** rules still stand: a preset is not a vault, a monitor wh
 - Grok Bot: Save / Plugins → enable per-Bot (not `~/.grok/skills/`); share pack `grok-bot-share/bot-template.json` beside the zip; live marketplace publish stays L3 for the owner (L3) — do not publish live
 - Cursor Cloud: `cp -r cursor-skill .cursor/skills/sortic-ip-sentinel-free/`; pin on Custom Mode; Sync only `~/.cursor/skills/`
 
-**Drive Sep-2 zips, walkthrough v0.5.30, the mailed HITL v0.5.25 pack, and the mailed try pack v0.5.36 are stale.** Use this branch. Rebuild host zips from this branch as **v0.5.72-free**. Custom-GPT `openai-gpt-package/` is the retiring path — testers use `chatgpt-skill/`.
+**Drive Sep-2 zips, walkthrough v0.5.30, the mailed HITL v0.5.25 pack, and the mailed try pack v0.5.36 are stale.** Use this branch. Rebuild host zips from this branch as **v0.5.73-free**. Custom-GPT `openai-gpt-package/` is the retiring path — testers use `chatgpt-skill/`.
 
 ## Try in 30 seconds
 

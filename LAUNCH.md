@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.72-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.73-free
 
-**Status**: Public on GitHub. v0.5.72-free patched 2026-10-25 (OpenAI first: Codex changelog newest dated item this read is still 23 Oct, CLI 0.164.0; an empty alpha note is not a feature list; an alpha is not the latest line; an unreleased commit is not the latest line; an environment hook is not a review; a memory import is a paste; a masked cloud credential used for local proxy signing is still a paste; this skill still ships no hooks. Anthropic second: changelog tip is still 2.1.310 dated 23 Oct; a missing next version is not a new policy; a cleanup of a recent file is not a wipe; dense text kept after compaction is still a paste; a hidden link target is not a review; an editor-close timeout is not a grant. Grok Build third: public changelog page this read returned 403; external note 1.0.70 still returns; the next external note is a missing key; a missing next note is not a wipe; do not invent the number. Mailbox: a cut-off digest is not a finished review; do not open the continue-reading link; this tip joins two blank lines so the body is under 500; do not claim the body is under 200; a forwarded event note is not this skill; a meeting-notes promo is not a skill update. Marketplace Hold). Origin v0.5.71-free stands. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.73-free patched 2026-10-25 (OpenAI first: Codex changelog newest dated item this read is still 23 Oct, CLI 0.164.0; an empty alpha note is not a feature list; an alpha is not the latest line; an unreleased commit is not the latest line; an environment hook is not a review; a memory import is a paste; a masked cloud credential used for local proxy signing is still a paste; this skill still ships no hooks. Anthropic second: changelog tip is still 2.1.310 dated 23 Oct; a missing next version is not a new policy; a cleanup of a recent file is not a wipe; dense text kept after compaction is still a paste; a hidden link target is not a review; an editor-close timeout is not a grant. Grok Build third: public changelog page this read returned 403; external note 1.0.70 still returns; the next external note is a missing key; a missing next note is not a wipe; do not invent the number. Mailbox: a cut-off digest is not a finished review; do not open the continue-reading link; this tip joins two blank lines so the body is under 500; do not claim the body is under 200; a forwarded event note is not this skill; a meeting-notes promo is not a skill update. Marketplace Hold). Origin v0.5.71-free stands. All files sanitized for free-only use. Strong disclaimers included.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.72-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.73-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 

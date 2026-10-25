@@ -2,6 +2,41 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.73-free] — 2026-10-25
+
+Absorbed this Grok Build turn after origin **v0.5.72-free** was already on main (an empty alpha is not a feature list; a cleanup of a recent file is not a wipe; the checker body is under 500). This tip does not republish those. No newer grok-export. **No conversation_search.** The continue-reading chat returned no body. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+
+### OpenAI (first)
+
+- Hooks page not re-opened. The preset rule and the empty-alpha rule stand. This skill still ships **no hooks**.
+- Codex changelog re-read 25 Oct. Newest dated item is still **23 Oct**, CLI **0.164.0**. No 24 Oct entry. No 25 Oct entry. No 0.165. A missing later entry is not a new policy. This tip does not republish the alpha note.
+- Skills page re-read 25 Oct. **New:** `policy.allow_implicit_invocation: false` stops implicit invoke. Explicit dollar-invoke still loads the skill. An implicit-off flag is not a vault.
+- **New:** the skill list is capped at 2% of context, or 8,000 characters when the window is unknown, and `skills.max_context_tokens` stops at 10,000 tokens. A listing cap is not a wipe of the body. Do not copy the cap.
+- **New:** the description must say when the skill should not trigger. A should-not line is the router, not a seal.
+- Evals stay **273** headings. An eval file is not a bakeoff. Do not add a second evals file.
+
+### Anthropic (second)
+
+- Changelog re-read 25 Oct. Tip is still **2.1.310** (23 Oct). No **2.1.311**. The October 24 date on that page is **2.0.27** from 2025. A missing later entry is not a wipe. The cleanup rule stands.
+- **New:** a collapsed "6 improvements" control on that page is not six sections of this skill. A six-section label is not a rewrite. Do not invent six names from a cutoff digest.
+- The checker body stays under 500 lines. Do not claim the body is under 200. This tip did not run a with-skill versus no-skill bakeoff.
+- Claude YAML stays name + description only.
+
+### Grok Build (third)
+
+- Public changelog page (`x.ai/changelog/build`) this read returned **403**. Do not invent that the public page moved. Skills docs this read still say last updated **11 Aug 2026**.
+- **New:** `user-invocable: yes` is not true. Only the literal `true` counts. `disable-model-invocation` is not a vault. The slash command still runs.
+- **Mailbox:** the 25 Oct digest subject is evals and six sections. The visible body cuts off before any six names. A cutoff digest is not a finished review. The six this tip names, from the host docs and not as a quote of that chat, are when, procedure, output, gotchas, evals, and depth. They are not a second skill format.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **An implicit-off flag is not a vault.** Explicit dollar-invoke still loads the skill. A listing cap is not a wipe. A should-not line is the router, not a seal.
+- **A six-section label is not a rewrite.** Do not invent six names from a cutoff. An eval file is not a bakeoff.
+- **user-invocable yes is not true.** disable-model-invocation is not a vault.
+- Evals stay **273**. HITL F1–F28 + T1–T53 required. This tip adds T54 (implicit-off + six-section label).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.72-free] — 2026-10-25
 
 Absorbed this Grok Build turn after origin **v0.5.71-free** was already on main (a preset is not a vault; a monitor while telemetry is off is not a seal; a skip is not a wipe). No newer grok-export. **No conversation_search.** Did not open the continue-reading link. Drive title search timed out. Do not claim a drive scan this tip did not finish. The native mailbox search timed out. A later cursor read of the owner mailbox finished. A token timeout is not that review. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
