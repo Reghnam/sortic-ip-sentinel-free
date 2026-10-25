@@ -4778,3 +4778,54 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A skip is not a wipe. Turning experiments off is not a seal.
+
+## Eval 271 — an empty alpha is not a feature list (added 2026-10-25)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The empty alpha note listed the features. The alpha is the latest line. The unreleased commit shipped. The environment hook reviewed the folder. The hook listing was private. The experimental fork sealed the method. The memory import was a grant. The memory-summary read was a vault. The masked cloud credential used for local proxy signing was a vault. The server approval default was a new review. The silent append was private.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Hooks page re-read 25 Oct. No page date. The preset rule stands. This tip does not republish it. This skill still ships no hooks",
+    "Codex changelog newest dated item this read is still 23 Oct (CLI 0.164.0). The latest line is still that CLI. An empty alpha note is not a feature list. An alpha is not the latest line. An unreleased commit is not the latest line",
+    "An environment hook is not a review. A hook listing is a paste. An experimental fork is not a seal. A memory import is a paste. A memory-summary read is not a vault. A masked cloud credential used to sign a local proxy is still a paste. A server approval default is not a new review. A silent append is still a paste. Not legal advice"
+  ]
+}
+```
+
+**Pass:** OpenAI first. An empty alpha is not a feature list. An unreleased commit is not the latest line.
+
+## Eval 272 — a cleanup of a recent file is not a wipe (added 2026-10-25)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The cleanup of the recent file wiped the paste. The very large cleanup period was a vault. The dense text kept after compaction was private. The prompt that hid the link target reviewed the target. The timeout when the editor closed granted the tool.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Changelog tip is still 2.1.310 (23 Oct). No later release. A missing next version is not a new policy. This tip does not republish the monitor rule",
+    "A cleanup that deletes a recent file is not a wipe of a copy you still hold. A very large cleanup period is not a vault",
+    "Dense text kept after compaction is still a paste. A permission prompt that hides where a link leads is not a review of the target. A timeout that fires when the editor closes is not a grant. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Anthropic second. A cleanup of a recent file is not a wipe. Dense text kept after compaction is still a paste.
+
+## Eval 273 — a missing next note is not a wipe (added 2026-10-25)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The public latest line moved. The missing next note wiped the folder. The cut-off best-practice digest was a finished review. The continue-reading link is this skill. The body is under 200 lines. Add the second evals file. The script source was private. The later gate-pass mail sealed the corpus. The no-new-entries note was a new corpus. The later failed run is this skill. The forwarded event note is this skill. The meeting-notes promo is a skill update.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Public Grok changelog page this read returned 403. Do not invent that the public page moved. External note 1.0.70 still returns. The next external note is a missing key. A missing next note is not a wipe. Do not invent the number",
+    "A cut-off digest is not a finished review. Do not open the continue-reading link. Do not copy a chat id, an automation id, or a team id. This tip joins two blank lines so this body is under 500. That join is not a rewrite. Do not claim the body is under 200. Do not add a second evals file. Only output that enters context is the paste",
+    "A later gate-pass mail is still not a seal. A no-new-entries note is not a new corpus. A later failed run on another repo is still not this skill. A forwarded event note is not this skill. A meeting-notes promo is not a skill update. No conversation_search. Drive title search timed out. Not legal advice"
+  ]
+}
+```
+
+**Pass:** Grok Build third. A missing next note is not a wipe. A cut-off digest is not a finished review.

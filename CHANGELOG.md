@@ -2,6 +2,42 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.72-free] — 2026-10-25
+
+Absorbed this Grok Build turn after origin **v0.5.71-free** was already on main (a preset is not a vault; a monitor while telemetry is off is not a seal; a skip is not a wipe). No newer grok-export. **No conversation_search.** Did not open the continue-reading link. Drive title search timed out. Do not claim a drive scan this tip did not finish. The native mailbox search timed out. A later cursor read of the owner mailbox finished. A token timeout is not that review. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+
+### OpenAI (first)
+
+- Hooks page re-read 25 Oct (`learn.chatgpt.com/docs/hooks`; `developers.openai.com/codex/hooks` redirects there). No page date. The preset rule stands. This tip does not republish it. This skill still ships **no hooks**.
+- Codex changelog newest dated item this read is still **23 Oct**, CLI **0.164.0**. The latest line is still that CLI.
+- **New:** an alpha tag dated the same day has a note that is only its own name. An empty alpha note is not a feature list. Do not invent features from it. An alpha is not the latest line.
+- **New:** commits after that latest line are not shipped. An unreleased commit is not the latest line. An environment hook on its owning executor is not a review. A listing of those hooks is a paste. Do not copy the listing. An experimental thread fork is not a seal. A fork is a paste. A memory import from another agent is a paste. A memory-summary read is not a vault. A masked cloud credential used to sign a local proxy is still a paste. A server approval default at startup is not a new review. A silent append is still a paste.
+- Evals **271**.
+
+### Anthropic (second)
+
+- Changelog tip re-read 25 Oct is still **2.1.310** (23 Oct). No later release. A missing next version is not a new policy. This tip does not republish the monitor rule.
+- **New (same note, lines not in the last tip):** a cleanup that deletes a recent file is not a wipe of a copy you still hold. A very large cleanup period is not a vault. Dense text kept after compaction is still a paste. Do not copy it. A permission prompt that hides where a link leads is not a review of the target. A timeout that fires when the editor closes is not a grant.
+- Evals **272**.
+
+### Grok Build (third)
+
+- Public changelog page (`x.ai/changelog/build`) this read returned **403**. Do not invent that the public page moved.
+- External note **1.0.70** still returns. The next external note is a missing key. A missing next note is not a wipe and not a new policy. Do not invent the number. A lagging enterprise line on a third-party index is not the public latest line. Headless feature URL stays **404**.
+- **Mailbox after the last tip:** a mailed best-practice digest cuts off at a continue-reading link. A cut-off digest is not a finished review. Do not open the link. Do not copy a chat id, an automation id, or a team id. The lines before the cut restate a shared format and a body cap. This tip joins two blank lines so this body is under 500. That join is not a rewrite of the rules. Do not claim the body is under 200. A path named in that digest is not this layout. Do not add a second evals file. A script source stays out of context. Only output that enters context is the paste.
+- A later gate-pass mail is still not a seal. Do not copy the hour. A no-new-entries note is not a new corpus. Do not copy a case id. A later failed run on another repo is still not this skill. Do not copy the hash.
+- A forwarded event note is not this skill. Do not copy a raise, a name, a phone, or an address. Do not forward it. A meeting-notes promo is not a skill update. Do not install that path into this skill.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Evals **273** on the missing next note and the cut-off digest.
+
+### Shared
+
+- **An empty alpha is not a feature list.** An alpha is not the latest line. An unreleased commit is not the latest line. An environment hook is not a review. A memory import is a paste.
+- **A cleanup of a recent file is not a wipe.** Dense text kept after compaction is still a paste. A hidden link target is not a review. An editor-close timeout is not a grant.
+- **A missing next note is not a wipe.** A cut-off digest is not a finished review. Do not claim the body is under 200. A later gate-pass mail is still not a seal. A forwarded event note is not this skill.
+- Evals now **273**. HITL F1–F28 + T1–T52 required on every claimed stack. This tip adds T53 (empty alpha + recent-file cleanup + missing next note).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.71-free] — 2026-10-24
 
 Absorbed this Grok Build turn after origin **v0.5.70-free** was already on main (a plugin env path is not a vault; a sed edit is not a preview; headless user-hook trust is not a folder review). No newer grok-export. **No conversation_search.** Did not open the continue-reading chat link. Drive title search did not finish. Do not claim a scan this tip did not finish. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
