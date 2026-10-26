@@ -2,6 +2,42 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.74-free] — 2026-10-26
+
+Absorbed this Grok Build turn after origin **v0.5.73-free** was already on main (an implicit-off flag is not a vault; a six-section label is not a rewrite; the checker body under 500 is not a seal). This tip does not republish those. No newer grok-export. **No conversation_search.** The continue-reading chat returned no body. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+
+### OpenAI (first)
+
+- Changelog re-read 26 Oct. Newest dated item is still **23 Oct**, CLI **0.164.0**. No 24 Oct entry. No 25 Oct entry. No 26 Oct entry. No 0.165. A missing later entry is not a new policy.
+- Skills page re-read 26 Oct. The implicit-off flag, the listing cap, and the should-not line stand. This tip does not republish them. This skill still ships **no hooks**.
+- **New:** two skills that share a name both appear in the selector. They are not merged. A same-name twin is not this skill.
+- **New:** when many skills are installed, descriptions are shortened first, and some skills may be omitted from the startup list with a warning. A shortened description is not a wipe of the body. An omitted startup row is not a wipe.
+- **New:** if an update does not appear, restart. A missing restart is not a wipe.
+- Do not copy a startup-token estimate. Evals stay **273**.
+
+### Anthropic (second)
+
+- Changelog re-read 26 Oct. Tip is still **2.1.310** (23 Oct). No **2.1.311**. Do not invent an improvements count from this read. A missing later entry is not a wipe.
+- Best-practices page this read: write evaluations before extensive documentation. This tip did not run that eval. An eval-before-docs line is not a bakeoff. Do not add a second evals file.
+- **New:** a nested reference may be previewed, not fully read. A nested reference preview is not the file. Keep references one level deep. That rule already stood. This tip does not move the gotchas out of the body.
+- Claude YAML stays name + description only. The checker body stays under 500 lines. Do not claim the body is under 200.
+
+### Grok Build (third)
+
+- Public changelog page this read returned. Tip is still **v1.0.70 · 23 Oct 2026**. Yesterday's read was **403**. A 403 last read is not a move. A page that answers is not a new release. Do not invent a version after 1.0.70.
+- Skills docs this read still say last updated **11 Aug 2026**. `user-invocable: yes` is still not true. `disable-model-invocation` is still not a vault. This tip does not republish those.
+- The outside-link skip count on that 1.0.70 line already stood. A skip count is still a paste. Do not copy it.
+- **Mailbox:** the 26 Oct digest subject is gotchas. The visible body stops mid-word after the gotchas line. A mid-word cutoff is not a finished review. Do not complete it. The continue-reading chat returned no body.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **A same-name twin is not a merge.** A shortened description is not a wipe. An omitted startup row is not a wipe. A missing restart is not a wipe.
+- **Do not copy a startup-token estimate.** Do not complete a mid-word cutoff. A nested reference preview is not the file. An eval-before-docs line is not a bakeoff.
+- **A page that answers is not a new release.** Do not invent a later public line.
+- Evals stay **273**. HITL F1–F28 + T1–T54 required. This tip adds T55 (same-name twin + mid-word cutoff + page that answers).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.73-free] — 2026-10-25
 
 Absorbed this Grok Build turn after origin **v0.5.72-free** was already on main (an empty alpha is not a feature list; a cleanup of a recent file is not a wipe; the checker body is under 500). This tip does not republish those. No newer grok-export. **No conversation_search.** The continue-reading chat returned no body. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.

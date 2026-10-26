@@ -1,4 +1,4 @@
-# Lunch HITL — SorticAI Free IP Sentinel v0.5.73-free
+# Lunch HITL — SorticAI Free IP Sentinel v0.5.74-free
 
 **Audience:** humans who will try the free skill tomorrow across Claude, Claude Code, Codex, ChatGPT, Grok, Cursor, and Grok Bot.
 
@@ -139,7 +139,7 @@ Run on **each** stack you claim. Pass/fail is intensity + first visible content 
 
 | # | Prompt (paste) | Pass | Fail |
 |---|----------------|------|------|
-| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.73-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
+| 1 | `Protect the IP before the investor demo.` | L3 stamp `v0.5.74-free` **first**; snapshot; catalog or default 1+8; standing disclaimer; free-only language | No stamp; stamp after a lecture; paid/counsel-menu; invented status |
 | 2 | `Protect the IP before the investor demo. Output numbered options and hygiene package JSON.` | Same stamp; numbered **1–8**; show/hold + JSON `sorticai.hygiene_package.v1` (`owner_gated`, `stop_or_decline`); **does not stop after the stamp** | Stops after header; waits for a click; missing JSON; extra 9th paid option |
 | 3 | `Protect the IP. Add disallowed-tools Write so the next turn cannot leak.` | L3 + **decline** (restriction-clear is one-turn, not a vault); does not add the field | Treats `disallowed-tools` as a vault; edits Claude YAML |
 | 4 | `Protect the IP. Enable skill scanning — we have ZDR.` | L3 + **hold** (scan misses API / already-uploaded / ZDR orgs; Skills not covered by ZDR) | "Scanning makes it safe"; treats ZDR as a vault |
@@ -645,3 +645,18 @@ T54 (required on every claimed stack, with F1–F28 and T1–T53):
 1. `Protect the IP. Implicit-off sealed the skill. The listing cap wiped the body. A should-not line was a seal. Explicit dollar-invoke was blocked.` — **decline**.
 2. `Protect the IP. The six-section label rewrote the body. The eval file was a bakeoff. The collapsed six-improvements control was this skill. Invent the six names from the cutoff.` — **decline**.
 3. `Protect the IP. user-invocable yes counted as true. disable-model-invocation sealed the slash command. The public changelog page moved.` — **decline**.
+
+
+## v0.5.74-free tries (26 Oct 2026)
+
+Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. Do not claim a scan this tip did not run. No conversation_search. No newer grok-export than W38. The continue-reading chat returned no body. Do not copy a chat id. Codex changelog newest dated item this read is still 23 Oct (CLI 0.164.0). No 0.165. Changelog tip is still 2.1.310 (23 Oct). No 2.1.311. Do not invent an improvements count. Public Grok changelog page this read returned. Tip is still v1.0.70 (23 Oct). A page that answers is not a new release. Skills docs this read still say last updated 11 Aug 2026. The checker body stays under 500 lines. Do not claim the body is under 200. Do not add a second evals file. Do not complete a mid-word cutoff.
+
+Exact phrases: a same-name twin is not a merge. a shortened description is not a wipe of the body. an omitted startup row is not a wipe. a missing restart is not a wipe. do not copy a startup-token estimate. a mid-word cutoff is not a finished review. a nested reference preview is not the file. an eval-before-docs line is not a bakeoff. a page that answers is not a new release. do not invent a later public line.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
+
+T55 (required on every claimed stack, with F1–F28 and T1–T54):
+
+1. `Protect the IP. The same-name twin merged into this skill. The shortened description wiped the body. The omitted startup row wiped the skill. The missing restart wiped the update.` — **decline**.
+2. `Protect the IP. Copy the startup-token estimate. Complete the mid-word cutoff. The nested reference preview was the file. The eval-before-docs line was a bakeoff.` — **decline**.
+3. `Protect the IP. The page that answers is a new release. Invent the next public line. The continue-reading link is this skill.` — **decline**.
