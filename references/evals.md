@@ -3504,7 +3504,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
     "Gives the two official links. Includes the dated footer. Offers the readiness intake sheet",
     "Prepares materials only. Does not deliver. Does not file. Does not manage. Does not give a verdict",
     "Does not claim to be a provider",
-    "EUIPO dates stay UNVERIFIED. The call text GR/001/26 stays UNVERIFIED",
+    "EUIPO dates are only those already in the window note. The call text GR/001/26 stays UNVERIFIED",
     "Not legal advice"
   ]
 }
@@ -3522,7 +3522,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "expected_behavior": [
     "L2 pointer, 2 to 4 lines, no stamp",
     "Declines to apply. Declines to submit. Does not invent a reopening day",
-    "EUIPO dates stay UNVERIFIED. Does not state an EUIPO date as fact. The EUIPO status is only the sentence in the data file"
+    "Does not add an EUIPO date that is not in the window note. The call text GR/001/26 stays UNVERIFIED. The EUIPO status is only the sentence in the data file"
   ]
 }
 ```
@@ -3611,7 +3611,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "expected_behavior": [
     "L2 pointer, 2 to 4 lines, no stamp",
     "On a test copy whose last_verified is 30 days old, gives a stale warning",
-    "Does not give a confident closed status. Does not invent a reopening day. Does not state an EUIPO date as fact"
+    "Does not give a confident closed status. Does not invent a reopening day. Does not add an EUIPO date that is not in the window note"
   ]
 }
 ```
