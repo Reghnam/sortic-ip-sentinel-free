@@ -2,6 +2,43 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.75-free] — 2026-10-27
+
+Absorbed this Grok Build turn after origin **v0.5.74-free** was already on main (a same-name twin is not a merge; a shortened description is not a wipe; a mid-word cutoff is not a finished review; a page that answers is not a new release). This tip does not republish those. No newer grok-export. **No conversation_search.** The continue-reading chats returned no body. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+
+### OpenAI (first)
+
+- Skills page re-read 27 Oct. The implicit-off flag, the listing cap, the same-name rule, and the restart line stand. This tip does not republish them. This skill still ships **no hooks**.
+- GitHub releases re-read 27 Oct. **Latest** stable is still **0.164.0** (23 Oct). Pre-release tags exist after it. **An alpha tag is not the stable CLI.** Do not copy pre-release notes. Do not treat a pre-release tag as the CLI line.
+- The public changelog page this read did not agree with itself across fetches. One fetch named a model-availability line after 23 Oct. Others did not. A model-availability line is not a skill-format change. Model pick stays L0. Do not copy the model name.
+- Evals stay **273**.
+
+### Anthropic (second)
+
+- Changelog page re-read 27 Oct. One fetch leads with **2.1.311** dated **26 Oct** and mentions a skill still downloading and a long CLAUDE.md list item. A later fetch of the same URL led with an older heading. **A docs heading one fetch leads with and the next fetch does not is not a seal.** Do not copy collapsed counts. Do not invent **2.1.312**.
+- **New:** a skill still downloading is not a loaded skill. Interrupt during a download is not a completed hygiene pass.
+- **New:** a long CLAUDE.md list item can freeze startup. A freeze is not a wipe. Do not paste this skill into CLAUDE.md to dodge the body cap.
+- Best-practices page this read: no new six-section list. Yesterday's eval-before-docs line still stands. This tip did not run that eval. Do not add a second evals file.
+- Claude YAML stays name + description only. The checker body stays under 500 lines. Do not claim the body is under 200.
+
+### Grok Build (third)
+
+- Official changelog page this read returned. Tip is still **v1.0.70 · 23 Oct 2026**. No newer version on that page. No alpha channel on that page.
+- A third-party catalog names an alpha pointer after 1.0.70 and also says its scrape was overdue. **A catalog alpha is not the stable line.** Do not copy the catalog notes. Do not invent a stable version after 1.0.70.
+- Skills docs this read still say last updated **11 Aug 2026**. This tip does not republish `user-invocable` or `disable-model-invocation`.
+- **Mailbox:** david@ weekly backups through W42 stay PARTIAL. Backup is not publish. Do not copy a Drive link or a folder id. The 6 Oct forward (disable-invoke, refs move) is already in the stack. Do not republish it.
+- **Mailbox:** the 27 Oct digest subject is six-section updates. The visible body stops after Gotchas (highest-value). A cutoff is not six sections. Do not invent the section names. Do not complete it. The continue-reading chat returned no body.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **An alpha tag is not the stable CLI.** A catalog alpha is not the stable Grok Build line.
+- **A docs heading one fetch leads with and the next fetch does not is not a seal.** Do not copy collapsed counts.
+- **A skill still downloading is not a loaded skill.** A long CLAUDE.md list freeze is not a wipe.
+- **A cutoff after Gotchas (highest-value) is not six sections.** Do not invent the section names.
+- Evals stay **273**. HITL F1–F28 + T1–T55 required. This tip adds T56 (alpha tag + unstable heading + cutoff is not six sections).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.74-free] — 2026-10-26
 
 Absorbed this Grok Build turn after origin **v0.5.73-free** was already on main (an implicit-off flag is not a vault; a six-section label is not a rewrite; the checker body under 500 is not a seal). This tip does not republish those. No newer grok-export. **No conversation_search.** The continue-reading chat returned no body. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.

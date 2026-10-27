@@ -22,10 +22,10 @@ user-invocable: true
 disable-model-invocation: false
 argument-hint: IP sensitive moment | show/hold | hygiene JSON
 metadata:
-  short-description: "SorticAI Free IP Sentinel v0.5.74-free — a same-name twin is not a merge"
-  version: "0.5.74-free"
+  short-description: "SorticAI Free IP Sentinel v0.5.75-free — an alpha tag is not the stable CLI"
+  version: "0.5.75-free"
   release: "2026-08-17"
-  patched: "2026-10-25"
+  patched: "2026-10-27"
   author: "SorticAI (portable free tier)"
   category: "ip-hygiene"
   tags: ["ip", "patent", "trade-secret", "hygiene", "demo-safety", "inventorship", "free", "headless"]
@@ -33,7 +33,7 @@ license: "See LICENSE.md (free use with attribution and disclaimers)"
 compatibility: "Claude Code (~/.claude/skills/), Codex (~/.agents/skills or ~/.codex/skills), ChatGPT Skills, Grok (~/.grok/skills/ or .grok/skills/), Grok Bot, Cursor (~/.cursor/skills/ or .cursor/skills/), agentskills.io. No external services required for core."
 ---
 
-# SorticAI IP Sentinel — Free Edition (v0.5.74-free)
+# SorticAI IP Sentinel — Free Edition (v0.5.75-free)
 
 **Mission (plain):** At the exact moment builders (or their agents) create or prepare to expose valuable work, notice IP-sensitive signals and offer powerful, immediately usable free hygiene. Protection builds trust through staged, documented, human-centered process. AI assists the procedure. Humans conceive and decide. Not legal advice. No guarantees.
 
@@ -78,7 +78,7 @@ When L3:
 ```text
 +==============================================================================+
 |  S O R T I C A I   ·   FREE IP SENTINEL                                      |
-|  v0.5.74-free (portable)  ·  sorticai.com  ·  patched 2026-10-26              |
+|  v0.5.75-free (portable)  ·  sorticai.com  ·  patched 2026-10-27              |
 |  Skill activated  ·  IP-sensitive moment detected                            |
 +==============================================================================+
 ```
@@ -309,7 +309,7 @@ Highest-signal content (Anthropic 2026: capture what actually goes wrong). Load 
 - **`default_version` / omit-version is a live channel.** Same as `latest`. Inline base64 zip and curated first-party skills are a demo surface. Skill body is user-prompt input.
 - **Shared Bot sessions are account-wide.** Files + browser sessions + app logins are available to every Bot you run. Screens ≠ security boundary. Separate Bots ≠ a vault. Dedicated user for isolated credentials. Delete Bot ≠ wipe computer. Enterprise terminate-computer keeps the durable disk (next session remounts it). Bot-to-Bot DM / group chat is a hop. Auto Review does not review memory writes. claude.ai→Cowork/cloud sync is a publish (`CLAUDE_CODE_SYNC_SKILLS=1` → `~/.claude/skills/synced/`); local `~/.claude/skills/` still does not auto-sync. Marketplace job-taking is access grant + send. App Builder preview ≠ Vercel deploy. Desktop-egress is a CDN (update computer first, then route; laptop closed stops **routing**, not cloud work). Ownership-pass is access grant + hop. Local-computer-exec is owner-gated. No Legacy Privacy Mode (Cursor opt-out). Videos 48h+30d / Eyes Off still retain; None-retention project ≠ lane; CSAM scan overrides ZDR. Do not add `allowed-tools` write grants or `disallowed-tools` (Anthropic one-turn grant/restriction-clear is not a vault; Grok `allowed-tools` does not grant or restrict). Image gen Eyes Off no. Skill-scan is not a vault. Grok Bot computer is US-hosted (not on-prem). Sign-out ≠ wipe synced skills. Dist-path extra keys error on claude.ai/API. `context: fork` is a hop. Invention screenshots are still CSAM-scanned.
 
-- **A same-name twin is not a merge.** Both can appear in the selector. They are not one skill. A shortened description is not a wipe of the body. An omitted startup row is not a wipe. A missing restart is not a wipe. A startup-token estimate is not the spec. Do not copy it. A mid-word cutoff is not a finished review. Do not complete it. A nested reference preview is not the file. An eval-before-docs line is not a bakeoff. A page that answers is not a new release. Do not invent a later public line.
+- **A same-name twin is not a merge.** Both can appear in the selector. They are not one skill. A shortened description is not a wipe of the body. An omitted startup row is not a wipe. A missing restart is not a wipe. A startup-token estimate is not the spec. Do not copy it. A mid-word cutoff is not a finished review. Do not complete it. A nested reference preview is not the file. An eval-before-docs line is not a bakeoff. A page that answers is not a new release. Do not invent a later public line. **An alpha tag is not the stable CLI** (GitHub Latest stays **0.164.0**; do not copy pre-release notes). A docs heading one fetch leads with and the next fetch does not is not a seal. Do not copy collapsed counts. A skill still downloading is not a loaded skill. A long CLAUDE.md list freeze is not a wipe. **A catalog alpha is not the stable Grok Build line** (official tip stays **v1.0.70**, 23 Oct). A cutoff after Gotchas (highest-value) is not six sections. Do not invent the section names.
 ## Progressive Disclosure & References
 Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest). When the user selects a deliverable, read that file now and apply its structure exactly.
 
@@ -496,7 +496,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 - Plain language for builders.
 - Numbered steps, tables for maps/logs/checklists, copy-paste ready text.
 - Every deliverable ends with disclaimer + "Sources referenced (high-level summaries only): EPO Guidelines G-II 3.3.1 (AI/ML technical effect), USPTO 2025 AI inventorship guidance (human conception), WIPO principles."
-- Version in header: v0.5.74-free. Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
+- Version in header: v0.5.75-free. Headless: numbered options + default 1+8 if unnamed + JSON. Never block on UI.
 - Builder-worksheet register (`references/output-language-hygiene.md`).
 
 ## Failure Recovery
@@ -524,7 +524,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
   - Cursor: `cursor-skill/` → project `.cursor/skills/sortic-ip-sentinel-free/`; Sync Skills is `~/.cursor/skills/` only; Custom Modes = pin skill.
   - Grok Bot share pack: `grok-bot-share/` (profile/skills/routines config only; do not publish live).
 - Test against `references/classification-matrix.md` and `references/evals.md` after any trigger change. Lunch HITL: `HITL-LUNCH.md`.
-- Keep disclaimers, plain labels, hygiene scope. No paid residue. Current version: **v0.5.74-free** (patched 2026-10-26). Description ≤1024. Claude YAML stays name+description only.
+- Keep disclaimers, plain labels, hygiene scope. No paid residue. Current version: **v0.5.75-free** (patched 2026-10-27). Description ≤1024. Claude YAML stays name+description only.
 
 **This skill is free hygiene assistance at creation time. File before you expose when it matters. Talk to counsel. Primary task wins.**
 *End of SKILL.md body. Load references/ files when a specific hygiene deliverable is chosen.*
