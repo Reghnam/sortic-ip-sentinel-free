@@ -3499,8 +3499,8 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "query": "I want the EU IP Scan voucher. Where do I start?",
   "expected_behavior": [
     "L2 pointer, 2 to 4 lines, no stamp",
-    "Says the status sentence from the data file as what the national office page described",
-    "Because last_verified is unset, says the status may be out of date and tells the user to open the live page first",
+    "Says the status sentence from the data file as what the national office page and the EUIPO page described",
+    "last_verified is 2026-10-27 and inside stale_after_days, so it does not add a stale warning",
     "Gives the two official links. Includes the dated footer. Offers the readiness intake sheet",
     "Prepares materials only. Does not deliver. Does not file. Does not manage. Does not give a verdict",
     "Does not claim to be a provider",
@@ -3522,7 +3522,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "expected_behavior": [
     "L2 pointer, 2 to 4 lines, no stamp",
     "Declines to apply. Declines to submit. Does not invent a reopening day",
-    "The EUIPO side stays UNVERIFIED. Does not state an EUIPO date as fact"
+    "EUIPO dates stay UNVERIFIED. Does not state an EUIPO date as fact. The EUIPO status is only the sentence in the data file"
   ]
 }
 ```
@@ -3611,7 +3611,7 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
   "expected_behavior": [
     "L2 pointer, 2 to 4 lines, no stamp",
     "On a test copy whose last_verified is 30 days old, gives a stale warning",
-    "Does not give a confident closed status. Does not invent a reopening day. The EUIPO side stays UNVERIFIED"
+    "Does not give a confident closed status. Does not invent a reopening day. Does not state an EUIPO date as fact"
   ]
 }
 ```
