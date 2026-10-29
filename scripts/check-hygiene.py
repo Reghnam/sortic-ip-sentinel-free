@@ -19,8 +19,8 @@ import headless_pointer
 import zipscan
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.52-free"
-EXPECTED_EVAL_COUNT = 208
+VERSION = "0.5.76-free"
+EXPECTED_EVAL_COUNT = 273
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -388,6 +388,11 @@ def _hygiene(args: argparse.Namespace) -> int:
         "a watch report is a paste",
         "a workshop promo is not a publish",
         "a check-in is not a hold",
+        "a failed hook is not a block",
+        "a classifier verdict is not a permission rule",
+        "a leftover key is not a skip",
+        "a second forward of the stale try pack is not a new pack",
+        "a vendor receipt is not a grant",
     ):
         if needle not in hitl:
             errors.append(f"HITL-LUNCH.md missing install/trigger: {needle}")

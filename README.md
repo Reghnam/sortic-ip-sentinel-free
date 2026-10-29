@@ -1,6 +1,6 @@
 # SorticAI Free IP Sentinel
 
-**What it is.** Free IP Sentinel is a free skill by SorticAI (edition 0.5.52-free). It notices IP-sensitive moments and gives builder worksheets, so you can decide what to show and what to hold.
+**What it is.** Free IP Sentinel is a free skill by SorticAI (edition 0.5.76-free). It notices IP-sensitive moments and gives builder worksheets, so you can decide what to show and what to hold.
 
 **Who it is for.** Builders who are about to show their work: an investor demo, a fundraising deck, a partner share or pre-read, a publish, or an agent that is about to show, send, push or post the work.
 
@@ -10,8 +10,13 @@
 2. Copy it in using that row (`cp -r`, or zip the folder when the row says zip).
 3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.52-free**).
-- A timeout deny is not a wipe; a wait is not a hold; streaming-json is a paste (v0.5.52-free)
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.76-free**).
+- A non-prerelease tag is the stable CLI; an alpha after it is not the next line; an external note is not a seal (v0.5.76-free)
+- A same-name twin is not a merge; a shortened description is not a wipe; a page that answers is not a new release (v0.5.75-free)
+- An implicit-off flag is not a vault; a six-section label is not a rewrite; a listing cap is not a wipe (v0.5.73-free)
+- An empty alpha is not a feature list; a cleanup of a recent file is not a wipe; a missing next note is not a wipe (v0.5.72-free).
+- A preset is not a vault; a monitor while telemetry is off is not a seal; a skip of an outside-link skill is not a wipe (v0.5.71-free)
+- A steer is not a new review; a safety log is not a seal; a headless wait is not a seal (v0.5.70-free)
 Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
 
 - Show / hold maps
