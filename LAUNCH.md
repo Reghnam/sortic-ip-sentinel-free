@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.76-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.77-free
 
-**Status**: Public on GitHub. v0.5.76-free patched 2026-10-28 (OpenAI first: GitHub releases Latest is **0.165.0** dated 27 Oct, not a prerelease. An alpha after that tag is not the next stable line. Do not copy pre-release notes. Do not copy a model name. Memory import on a fresh profile is a next-paste. This skill still ships no hooks. Anthropic second: changelog.md and the html page both lead with **2.1.312** dated 27 Oct. Two fetches that agree can seal that read. Do not copy collapsed counts. A partial read of a large CLAUDE.md is not the file. A cd is not a wipe of a paths skill. A reused skills list is not a fresh sync. A second run after a restart is not a second grant. Evals stay 273. Grok Build third: the public changelog page this curl was 403 and a search snippet still leads with v1.0.70 dated 23 Oct. External notes named later files. An external note the public latest line does not lead with is not a seal. failClosed is not owner approval. Mailbox: no newer skill note than the 6 Oct forward, already in the stack. No conversation_search. Do not open a continue-reading link. Backup is not publish. Marketplace Hold).
+**Status**: Public on GitHub. v0.5.77-free patched 2026-10-29 (OpenAI first: GitHub releases Latest is still **0.165.0** dated 27 Oct. The top row is a 29 Oct pre-release. The top row is not the Latest badge. Do not copy that pre-release. Do not copy a model name. Anthropic second: changelog.md and the html URL returned the same generated page. Both lead with **2.1.312** dated 27 Oct. Two URLs that return one generated page are one read, not two seals. No 28 Oct entry. No 29 Oct entry. Do not invent a second date. Do not copy collapsed counts. Evals stay 273. Grok Build third: the public page this read leads with v1.0.70 dated 23 Oct. An enterprise pointer that matches an alpha pointer is not a stable promotion. A skipped official scrape is not a seal. A page that answers and still leads with that line is not a new release. Mailbox: the 26 Oct backup subject says done. A done subject is not a publish. A deal lane is not this skill. No newer skill note than the 6 Oct forward. No conversation_search. A memory snapshot is not a grok-export. Backup is not publish. Marketplace Hold).
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.76-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.77-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 

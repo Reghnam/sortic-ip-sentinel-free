@@ -2,6 +2,41 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.77-free] — 2026-10-29
+
+Absorbed this Grok Build turn after origin **v0.5.76-free** was already on main (a non-prerelease tag is the stable CLI; an alpha after that tag is not the next stable line; an external note is not a seal). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. The 26 Oct backup folder listed three docs (a manifest, a memory snapshot, a backup changelog), not a chat export. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+
+### OpenAI (first)
+
+- GitHub releases Latest this read is still **0.165.0** (27 Oct, not a prerelease). No stable tag on 28 Oct. No stable tag on 29 Oct. A missing stable tag is not a new policy.
+- **New:** the top row of the releases page is a 29 Oct pre-release. **The top row is not the Latest badge.** Page order is not the stable CLI. Do not copy that pre-release. Do not copy a model name. Model pick stays L0.
+- Memory import on a fresh profile is still a next-paste. This tip does not republish it. This skill still ships **no hooks**. Evals stay **273**.
+
+### Anthropic (second)
+
+- Changelog.md and the html URL both returned the same generated page. Both lead with **2.1.312** dated 27 Oct. No 28 Oct entry. No 29 Oct entry. A missing later entry is not a wipe.
+- **New:** two URLs that return one generated page are one read, not two seals. Do not invent a second date under that heading. Do not copy collapsed counts.
+- A partial read is still not the file. A `cd` is still not a wipe. A reused list is still not a fresh sync. A second run is still not a second grant. This tip does not republish those.
+- Claude YAML stays name + description only. The checker body stays under 500 lines. Do not claim the body is under 200.
+
+### Grok Build (third)
+
+- Public changelog page this read returned and still leads with **v1.0.70 · 23 Oct 2026**. Yesterday's curl was 403. A page that answers and still leads with that line is not a new release.
+- A third-party index this read marks official pages skipped and points an alpha channel and an enterprise channel at the same later number. **An enterprise pointer that matches an alpha pointer is not a stable promotion.** A skipped official scrape is not a seal. Do not copy those notes. Do not invent a stable line after 1.0.70.
+- failClosed is still not owner approval. This skill has no hooks. This tip does not republish that.
+- **Mailbox:** david@ 26 Oct backup subject says done. Status in that mail is material. **A done subject is not a publish. A material status is not a skill bump.** Artifacts unchanged is not a new corpus. Folders not rescanned is not a finished scan. A deal lane in that mail is not this skill. Do not copy a term sheet, a valuation, a compensation note, a tax brief, or a licence. No david@ skill note after that backup. The 6 Oct forward stays the last skill note. Do not republish it. Partner and invoice threads that matched a broad IP search stay uncopied.
+- **Chats:** no conversation_search. The memory snapshot in that backup is not a grok-export and not a transcript. A programme application in that snapshot is not this skill and not a grant. A note that a retrieval store keeps client data is not a waiver and not a vault. Do not paste client data to obtain a waiver. Do not dump chat bodies. No newer grok-export than W38.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **The top row is not the Latest badge.** A 29 Oct pre-release is not the stable CLI.
+- **Two URLs that return one generated page are one read.** Do not invent a second date.
+- **An enterprise pointer that matches an alpha pointer is not a stable promotion.** A skipped scrape is not a seal. A page that answers with the same line is not a new release.
+- **A done backup is not a publish.** A memory snapshot is not a grok-export. A retrieval store is not a waiver.
+- Evals stay **273**. HITL F1–F28 + T1–T57 required. This tip adds T58 (top row + one generated page + done backup).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.76-free] — 2026-10-28
 
 Absorbed this Grok Build turn after origin **v0.5.75-free** was already on main (an alpha tag is not the stable CLI; a disagreeing heading is not a seal; a catalog alpha is not the stable line). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
