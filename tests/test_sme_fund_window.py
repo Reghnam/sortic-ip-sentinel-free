@@ -27,7 +27,7 @@ def baseline() -> dict:
 
 class WindowSchemaTests(unittest.TestCase):
     def test_real_file_passes(self) -> None:
-        errors = claim_rules.validate_window(baseline(), TODAY)
+        errors = claim_rules.validate_window(baseline(), date(2026, 10, 27))
         self.assertEqual(errors, [])
 
     def test_every_required_key_missing(self) -> None:
@@ -76,12 +76,14 @@ class WindowSchemaTests(unittest.TestCase):
 
     def test_open_while_null_is_rejected(self) -> None:
         data = baseline()
+        data["last_verified"] = None
         data["window_status"] = "open"
         errors = claim_rules.validate_window(data, TODAY)
         self.assertTrue(any("open" in error for error in errors))
 
     def test_null_note_must_be_unverified(self) -> None:
         data = baseline()
+        data["last_verified"] = None
         data["last_verified_note"] = "a human will set this"
         errors = claim_rules.validate_window(data, TODAY)
         self.assertTrue(any("UNVERIFIED" in error for error in errors))
@@ -94,6 +96,7 @@ class WindowSchemaTests(unittest.TestCase):
                 self.assertTrue(claim_rules.validate_window(data, TODAY))
         for value in (1, 14, 30):
             data = baseline()
+            data["last_verified"] = TODAY.isoformat()
             data["stale_after_days"] = value
             with self.subTest(value=value):
                 self.assertEqual(claim_rules.validate_window(data, TODAY), [])
