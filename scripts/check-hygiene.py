@@ -19,8 +19,8 @@ import headless_pointer
 import zipscan
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.67-free"
-EXPECTED_EVAL_COUNT = 258
+VERSION = "0.5.76-free"
+EXPECTED_EVAL_COUNT = 273
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (

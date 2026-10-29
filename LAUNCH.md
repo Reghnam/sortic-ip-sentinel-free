@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.67-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.76-free
 
-**Status**: Public on GitHub. v0.5.67-free patched 2026-10-20 (OpenAI first: a later write_stdin poll is not a skip of PostToolUse; that delivery is a paste, not a wipe; this skill still ships no hooks. Anthropic second: changelog tip is 2.1.304 dated 19 Oct; no release dated 20 Oct; a plugin skip is not a wipe; a person-only refusal is not a seal; losing allowed-tools is not a wipe of the skill. Grok Build third: repeated footers stand; hooks page footer this read is 2 Jul 2026 and is not a new policy; security FAQ footer is 18 Oct 2026; a plugin block is not a website block; allow-all is not a seal; a widen is not a hold. Mailbox: a scheduling note is not a publish; do not copy the slot; a quoted counsel note is not a new grant. Marketplace Hold). Origin v0.5.66-free stands. All files sanitized for free-only use. Strong disclaimers included.
+**Status**: Public on GitHub. v0.5.76-free patched 2026-10-28 (OpenAI first: GitHub releases Latest is **0.165.0** dated 27 Oct, not a prerelease. An alpha after that tag is not the next stable line. Do not copy pre-release notes. Do not copy a model name. Memory import on a fresh profile is a next-paste. This skill still ships no hooks. Anthropic second: changelog.md and the html page both lead with **2.1.312** dated 27 Oct. Two fetches that agree can seal that read. Do not copy collapsed counts. A partial read of a large CLAUDE.md is not the file. A cd is not a wipe of a paths skill. A reused skills list is not a fresh sync. A second run after a restart is not a second grant. Evals stay 273. Grok Build third: the public changelog page this curl was 403 and a search snippet still leads with v1.0.70 dated 23 Oct. External notes named later files. An external note the public latest line does not lead with is not a seal. failClosed is not owner approval. Mailbox: no newer skill note than the 6 Oct forward, already in the stack. No conversation_search. Do not open a continue-reading link. Backup is not publish. Marketplace Hold).
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.67-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.76-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
