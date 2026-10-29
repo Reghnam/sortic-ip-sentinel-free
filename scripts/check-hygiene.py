@@ -48,6 +48,8 @@ TREE_LEAK_EXCLUSIONS = frozenset(
     }
 )
 _ZIP_NAME = re.compile(r"(?<![A-Za-z0-9._+-])([A-Za-z0-9._+-]+\.zip)(?![A-Za-z0-9._+-])")
+_EDITION = re.compile(r"\d+\.\d+\.\d+-free")
+_EMPTY_CHECKPOINT = "Checkpoint (with )"
 
 
 def description_text(skill: Path) -> str:
@@ -98,6 +100,41 @@ def zip_edition_errors(root: Path) -> list[str]:
         for name in _ZIP_NAME.findall(text):
             if zip_edition(name) != VERSION:
                 errors.append(f"zip edition in {rel} is not {VERSION}")
+    return errors
+
+
+def license_version_errors(root: Path) -> list[str]:
+    """Fail when a tracked LICENSE.md names an edition other than VERSION."""
+    completed = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=root,
+        check=False,
+        capture_output=True,
+    )
+    if completed.returncode != 0:
+        return ["tracked file list failed"]
+    raw = completed.stdout.decode("utf-8", "surrogateescape")
+    errors: list[str] = []
+    found = False
+    for rel in raw.split("\0"):
+        if not rel or Path(rel).name.lower() != "license.md":
+            continue
+        found = True
+        path = root / rel
+        if not path.is_file():
+            errors.append(f"missing tracked license: {rel}")
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            errors.append(f"unreadable tracked license: {rel}")
+            continue
+        if set(_EDITION.findall(text)) != {VERSION}:
+            errors.append(f"{rel} license edition is not {VERSION}")
+        if _EMPTY_CHECKPOINT in text:
+            errors.append(f"{rel} has an empty checkpoint parenthesis")
+    if not found:
+        errors.append("no tracked LICENSE.md")
     return errors
 
 
@@ -454,6 +491,7 @@ def _hygiene(args: argparse.Namespace) -> int:
         if message not in errors:
             errors.append(message)
     errors.extend(zip_edition_errors(ROOT))
+    errors.extend(license_version_errors(ROOT))
     errors.extend(tree_leak_errors(ROOT))
 
     for warning in claim.warnings:
