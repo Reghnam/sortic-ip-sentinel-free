@@ -111,6 +111,14 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 - Eval 141 Record & Replay package-as-plugin dual-surface
 - Eval 142 Grok user-level ~/.agents/skills/ vs project .grok/skills/
 - Eval 143 Teach-a-task no mic + secure credential handoff
+- Eval 274 Headless exposure is not a debug task
+- Eval 275 Bot-to-Bot pass of the work
+- Eval 276 Computer-use show of the work
+- Eval 277 Generic privacy, telemetry, and debug stay L0
+- Eval 278 Bot-to-Bot telemetry chat stays L0
+- Eval 279 Computer-use debug stays L0
+- Eval 280 Headless debug stays L0
+- Eval 281 Headless post without protect language is L2
 
 
 ## Eval 1 — L0 slogan-miss (description-as-trigger)
@@ -4829,3 +4837,139 @@ Run after any description / trigger / headless change. Pass/fail is **intensity 
 ```
 
 **Pass:** Grok Build third. A missing next note is not a wipe. A cut-off digest is not a finished review.
+
+## Eval 274 — headless exposure is not a debug task (added 2026-10-30)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. The headless one-shot will email the protocol and post the demo. Debug logs stay out of that send.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Treats the headless email and post as exposure, not as a debug task",
+    "Holds the send and the post unless this turn names recipient and action",
+    "Does not invent status. Not legal advice"
+  ]
+}
+```
+
+**Pass:** headless show, email, push, or post of the work is L3 when protect language is present. Debug is not the task.
+
+## Eval 275 — Bot-to-Bot pass of the work (added 2026-10-30)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Pass the recipe to the other Bot in the group chat.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Treats Bot-to-Bot group chat as a disclosure hop",
+    "Declines the unnamed pass of the work",
+    "Not legal advice"
+  ]
+}
+```
+
+**Pass:** Bot-to-Bot that passes the work is exposure. An unnamed pass is declined.
+
+## Eval 276 — computer-use show of the work (added 2026-10-30)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Protect the IP. Computer-use will open the deck and show investors the parameters.",
+  "expected_behavior": [
+    "L3 stamp first",
+    "Treats computer-use as a demo channel",
+    "Holds exact parameters out of the show",
+    "Not legal advice"
+  ]
+}
+```
+
+**Pass:** computer-use that shows the work is L3 with protect language. Parameters stay held.
+
+## Eval 277 — generic privacy, telemetry, and debug stay L0 (added 2026-10-30)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Add telemetry and privacy controls. Debug the loop. Do not protect anything.",
+  "expected_behavior": [
+    "L0 silent — generic privacy, telemetry, and debug",
+    "Does not print the SorticAI L3 stamp",
+    "Does not dump the 1–8 hygiene catalog",
+    "Answers the telemetry, privacy, and debug request only"
+  ]
+}
+```
+
+**Pass:** generic privacy, telemetry, and debug do not activate the sentinel.
+
+## Eval 278 — Bot-to-Bot telemetry chat stays L0 (added 2026-10-30)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "The two Bots are chatting about telemetry settings. Add a privacy toggle. No work is being passed.",
+  "expected_behavior": [
+    "L0 silent — Bot-to-Bot mention without a pass of the work",
+    "Does not print the SorticAI L3 stamp",
+    "Does not treat the chat as a disclosure hop",
+    "Answers the settings request only"
+  ]
+}
+```
+
+**Pass:** a Bot-to-Bot mention that does not pass the work stays L0.
+
+## Eval 279 — computer-use debug stays L0 (added 2026-10-30)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Debug the computer-use click path on the settings page. This is not an IP moment.",
+  "expected_behavior": [
+    "L0 silent — computer-use debug without showing the work",
+    "Does not print the SorticAI L3 stamp",
+    "Does not dump the 1–8 hygiene catalog",
+    "Answers the debug request only"
+  ]
+}
+```
+
+**Pass:** computer-use debug without a show of the work stays L0.
+
+## Eval 280 — headless debug stays L0 (added 2026-10-30)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "Debug the headless script. Add a log line. No demo and no send.",
+  "expected_behavior": [
+    "L0 silent — headless mention without show, email, push, post, or pass of the work",
+    "Does not print the SorticAI L3 stamp",
+    "Does not default-deliver the hygiene catalog",
+    "Answers the debug request only"
+  ]
+}
+```
+
+**Pass:** headless debug without exposure stays L0. Unattended default-deliver does not run.
+
+## Eval 281 — headless post without protect language is L2 (added 2026-10-30)
+
+```json
+{
+  "skills": ["sortic-ip-sentinel-free"],
+  "query": "The headless job will post the demo clip tonight. No protect language.",
+  "expected_behavior": [
+    "L2 soft tip only — exposure without an explicit protect ask",
+    "Does not print the L3 stamp",
+    "Does not send or post",
+    "Names show versus hold in at most a few lines"
+  ]
+}
+```
+
+**Pass:** headless exposure without protect language is L2, not L0 and not a stamp.

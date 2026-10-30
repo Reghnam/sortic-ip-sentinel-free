@@ -3,7 +3,7 @@
 **Date:** 29 Oct 2026
 **Repo:** https://github.com/Reghnam/sortic-ip-sentinel-free
 **Tip:** as **v0.5.77-free** (hygiene only)
-**What it is:** Free portable skill that notices IP-sensitive moments and delivers builder-worksheet hygiene (show/hold, demo playbook, logs, JSON). **Not legal advice. No paid paths.**
+**What it is:** Free portable skill that notices IP-sensitive moments and delivers builder-worksheet hygiene (show/hold, demo playbook, logs, JSON). **Not legal advice. No paid paths.** Progressive disclosure: SKILL.md routes and `references/` load on demand. This free skill stays an instruction package only.
 
 ## Why this patch (one paragraph)
 

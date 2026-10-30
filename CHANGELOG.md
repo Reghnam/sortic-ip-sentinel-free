@@ -34,7 +34,8 @@ Absorbed this Grok Build turn after origin **v0.5.76-free** was already on main 
 - **Two URLs that return one generated page are one read.** Do not invent a second date.
 - **An enterprise pointer that matches an alpha pointer is not a stable promotion.** A skipped scrape is not a seal. A page that answers with the same line is not a new release.
 - **A done backup is not a publish.** A memory snapshot is not a grok-export. A retrieval store is not a waiver.
-- Evals stay **273**. HITL F1–F28 + T1–T57 required. This tip adds T58 (top row + one generated page + done backup).
+- Evals stay **273** for the 29 Oct recrawl. HITL F1–F28 + T1–T57 required. This tip adds T58 (top row + one generated page + done backup).
+- Weekly hygiene 30 Oct keeps this edition at **0.5.77-free**. Edition pins must match across SKILL.md metadata, LICENSE.md, README.md, and this tip. Activation evals **274–281** separate headless, Bot-to-Bot, and computer-use exposure from generic privacy, telemetry, and debug. A skill is an instruction package. This free skill stays instructions-only.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.76-free] — 2026-10-28
