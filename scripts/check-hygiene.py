@@ -20,7 +20,7 @@ import zipscan
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = "0.5.77-free"
-EXPECTED_EVAL_COUNT = 273
+EXPECTED_EVAL_COUNT = 281
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
 ALLOWED_CLAUDE_KEYS = {"name", "description"}
 BANNED = (
@@ -36,6 +36,30 @@ ZIP_EDITION_FILES = (
     "grok-bot-share/README.md",
     "grok-bot-share/skills.md",
     "LAUNCH.md",
+    ".cursor/skills/README.md",
+)
+# Current edition pin. Historical mentions later in a file are not the pin.
+# A suffix on the token is a different edition.
+PIN_SKILLS = (
+    "SKILL.md",
+    "chatgpt-skill/SKILL.md",
+    "cursor-skill/SKILL.md",
+    "grok-skill/SKILL.md",
+)
+PIN_LICENSES = (
+    "LICENSE.md",
+    "chatgpt-skill/LICENSE.md",
+    "claude-skill/LICENSE.md",
+    "cursor-skill/LICENSE.md",
+    "grok-skill/LICENSE.md",
+)
+PIN_READMES = (
+    "README.md",
+    "chatgpt-skill/README.md",
+    "claude-skill/README.md",
+    "cursor-skill/README.md",
+    "grok-skill/README.md",
+    "grok-bot-share/README.md",
 )
 # Exact tracked paths only. The scanner source holds the path patterns.
 # The three test modules hold fixture strings those patterns must catch.
@@ -49,6 +73,11 @@ TREE_LEAK_EXCLUSIONS = frozenset(
 )
 _ZIP_NAME = re.compile(r"(?<![A-Za-z0-9._+-])([A-Za-z0-9._+-]+\.zip)(?![A-Za-z0-9._+-])")
 _EDITION = re.compile(r"\d+\.\d+\.\d+-free")
+# A leading "v" is allowed. A suffix stays attached, so "v0.5.77-free-alpha" is not VERSION.
+_PINNED_EDITION = re.compile(r"(?<![0-9.])(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])")
+_SUFFIXED_EDITION = re.compile(r"(?<![0-9.])(\d+\.\d+\.\d+-free[A-Za-z0-9+-]+)")
+_META_VERSION = re.compile(r'(?m)^  version:\s*"([^"]*)"')
+_CHANGELOG_TIP = re.compile(r"(?m)^## \[([^\]]+)\]")
 _EMPTY_CHECKPOINT = "Checkpoint (with )"
 
 
@@ -100,6 +129,81 @@ def zip_edition_errors(root: Path) -> list[str]:
         for name in _ZIP_NAME.findall(text):
             if zip_edition(name) != VERSION:
                 errors.append(f"zip edition in {rel} is not {VERSION}")
+    return errors
+
+
+def _first_edition_token(text: str) -> str | None:
+    """First edition-shaped token. A suffix wins when it starts at that token."""
+    found: list[tuple[int, str]] = []
+    clean = _PINNED_EDITION.search(text)
+    if clean:
+        found.append((clean.start(), clean.group(1)))
+    suffixed = _SUFFIXED_EDITION.search(text)
+    if suffixed:
+        found.append((suffixed.start(), suffixed.group(1)))
+    if not found:
+        return None
+    found.sort(key=lambda item: item[0])
+    return found[0][1]
+
+
+def metadata_pin_error(rel: str, text: str) -> str | None:
+    match = _META_VERSION.search(text)
+    if match is None or match.group(1) != VERSION:
+        return f"{rel} metadata edition is not {VERSION}"
+    return None
+
+
+def readme_pin_error(rel: str, text: str) -> str | None:
+    token = _first_edition_token(text)
+    if token != VERSION:
+        return f"{rel} edition is not {VERSION}"
+    return None
+
+
+def changelog_pin_error(rel: str, text: str) -> str | None:
+    match = _CHANGELOG_TIP.search(text)
+    if match is None or match.group(1) != VERSION:
+        return f"{rel} tip edition is not {VERSION}"
+    return None
+
+
+def license_pin_error(rel: str, text: str) -> str | None:
+    """Every license edition token must be VERSION. History in a license fails."""
+    clean = _PINNED_EDITION.findall(text)
+    suffixed = _SUFFIXED_EDITION.findall(text)
+    if suffixed or set(clean) != {VERSION}:
+        return f"{rel} license edition is not {VERSION}"
+    return None
+
+
+def edition_pin_errors(root: Path) -> list[str]:
+    """Fail when the current edition drifts across the public pins.
+
+    SKILL.md metadata, each LICENSE.md, the first token of each host README,
+    and the CHANGELOG tip must all be VERSION. A later historical token in a
+    README or the changelog is not the pin. A suffixed token is not VERSION.
+    """
+    errors: list[str] = []
+    checks = (
+        [(metadata_pin_error, rel) for rel in PIN_SKILLS]
+        + [(license_pin_error, rel) for rel in PIN_LICENSES]
+        + [(readme_pin_error, rel) for rel in PIN_READMES]
+        + [(changelog_pin_error, "CHANGELOG.md")]
+    )
+    for check, rel in checks:
+        path = root / rel
+        if not path.is_file():
+            errors.append(f"{rel} edition pin missing")
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            errors.append(f"{rel} edition pin unreadable")
+            continue
+        message = check(rel, text)
+        if message:
+            errors.append(message)
     return errors
 
 
@@ -492,6 +596,7 @@ def _hygiene(args: argparse.Namespace) -> int:
             errors.append(message)
     errors.extend(zip_edition_errors(ROOT))
     errors.extend(license_version_errors(ROOT))
+    errors.extend(edition_pin_errors(ROOT))
     errors.extend(tree_leak_errors(ROOT))
 
     for warning in claim.warnings:

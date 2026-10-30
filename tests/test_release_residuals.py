@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import ast
 import importlib.util
+import re
 import subprocess
 import sys
 import tempfile
@@ -306,6 +307,99 @@ class ReleaseResidualTests(unittest.TestCase):
         self.assertTrue(_extends_errors("_hygiene", "tree_leak_errors"))
         self.assertTrue(_extends_errors("_hygiene", "zip_edition_errors"))
         self.assertTrue(_extends_errors("_hygiene", "license_version_errors"))
+        self.assertTrue(_extends_errors("_hygiene", "edition_pin_errors"))
+
+    def test_edition_pins_match_current_tree(self) -> None:
+        self.assertEqual(HYGIENE.edition_pin_errors(ROOT), [])
+
+    def test_skill_metadata_mismatch_fails(self) -> None:
+        stale = "0.5." + "52" + "-free"
+        text = 'metadata:\n  version: "' + stale + '"\n'
+        self.assertEqual(
+            HYGIENE.metadata_pin_error("SKILL.md", text),
+            "SKILL.md metadata edition is not " + HYGIENE.VERSION,
+        )
+        current = 'metadata:\n  version: "' + HYGIENE.VERSION + '"\n'
+        self.assertIsNone(HYGIENE.metadata_pin_error("SKILL.md", current))
+
+    def test_readme_history_is_not_the_pin(self) -> None:
+        stale = "0.5." + "52" + "-free"
+        text = "edition " + HYGIENE.VERSION + "\nolder v" + stale + "\n"
+        self.assertIsNone(HYGIENE.readme_pin_error("README.md", text))
+
+    def test_readme_stale_first_pin_fails(self) -> None:
+        stale = "0.5." + "52" + "-free"
+        text = "edition " + stale + "\nlater " + HYGIENE.VERSION + "\n"
+        self.assertEqual(
+            HYGIENE.readme_pin_error("README.md", text),
+            "README.md edition is not " + HYGIENE.VERSION,
+        )
+
+    def test_readme_suffix_fails(self) -> None:
+        text = "edition v" + HYGIENE.VERSION + "-alpha\n"
+        self.assertEqual(
+            HYGIENE.readme_pin_error("README.md", text),
+            "README.md edition is not " + HYGIENE.VERSION,
+        )
+
+    def test_changelog_tip_ignores_later_headings(self) -> None:
+        stale = "0.5." + "52" + "-free"
+        current = "## [" + HYGIENE.VERSION + "] — 2026-10-29\n## [" + stale + "] — 2026-10-07\n"
+        self.assertIsNone(HYGIENE.changelog_pin_error("CHANGELOG.md", current))
+        swapped = "## [" + stale + "] — 2026-10-07\n## [" + HYGIENE.VERSION + "] — 2026-10-29\n"
+        self.assertEqual(
+            HYGIENE.changelog_pin_error("CHANGELOG.md", swapped),
+            "CHANGELOG.md tip edition is not " + HYGIENE.VERSION,
+        )
+
+    def test_license_suffix_pin_fails(self) -> None:
+        text = "notice v" + HYGIENE.VERSION + "-alpha\n"
+        self.assertEqual(
+            HYGIENE.license_pin_error("LICENSE.md", text),
+            "LICENSE.md license edition is not " + HYGIENE.VERSION,
+        )
+        mixed = "v" + HYGIENE.VERSION + " and v" + "1.2.3-free" + "\n"
+        self.assertEqual(
+            HYGIENE.license_pin_error("LICENSE.md", mixed),
+            "LICENSE.md license edition is not " + HYGIENE.VERSION,
+        )
+        clean = "notice v" + HYGIENE.VERSION + "\n"
+        self.assertIsNone(HYGIENE.license_pin_error("LICENSE.md", clean))
+
+    def test_missing_edition_pin_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            errors = HYGIENE.edition_pin_errors(root)
+        self.assertIn("SKILL.md edition pin missing", errors)
+        self.assertIn("LICENSE.md edition pin missing", errors)
+        self.assertIn("README.md edition pin missing", errors)
+        self.assertIn("CHANGELOG.md edition pin missing", errors)
+
+    def test_activation_separates_exposure_from_debug(self) -> None:
+        skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        desc = HYGIENE.description_text(ROOT / "SKILL.md")
+        when_match = re.search(
+            r"^when-to-use:\s*>\n((?:  .*\n)+)",
+            skill,
+            re.M,
+        )
+        self.assertIsNotNone(when_match)
+        when = "\n".join(line[2:] for line in when_match.group(1).splitlines()).strip()
+        self.assertLessEqual(len(desc), 1024)
+        self.assertLessEqual(len(desc) + len(when), 1536)
+        flat = " ".join(desc.split())
+        self.assertIn("Bot-to-Bot will show", flat)
+        self.assertIn("does not expose the work", flat)
+        self.assertIn("debug", flat.lower())
+        self.assertIn("no exposure", when)
+        body = HYGIENE.body_after_frontmatter(ROOT / "SKILL.md")
+        self.assertIn("does not show, email, push, post, or pass the work", body)
+        self.assertIn("headless one-shot, computer-use, or Bot-to-Bot pass of the work", body)
+        evals = (ROOT / "references" / "evals.md").read_text(encoding="utf-8")
+        self.assertIn("## Eval 277 —", evals)
+        self.assertIn("## Eval 281 —", evals)
+        self.assertIn("L0 silent — generic privacy, telemetry, and debug", evals)
+        self.assertIn("L2 soft tip only — exposure without an explicit protect ask", evals)
 
 
 if __name__ == "__main__":

@@ -102,7 +102,7 @@ Detects “protect the IP”, investor demos, pilot showcases, fundraising decks
 - Track 3 realtime warning: invention + false comfort is L2 once/session (no stamp); protect/dump-after-tip is L3 (hold exact recipe + lane map); settings-only / clip-only / industry chatter stay L0
 - Scan before ship: third-party marketplace skills are untrusted — inspect before attach; do not bundle them into the lunch zip
 
-**Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis.
+**Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis. A skill is an instruction package. This free skill stays instructions-only: no scripts in the skill, no paid paths, no secrets. Progressive disclosure: load `references/` on demand.
 
 Packaged for ChatGPT, Claude, Cursor and Grok Bot.
 
@@ -135,7 +135,7 @@ Custom GPT fallback: [`openai-gpt-package/`](openai-gpt-package/).
 
 - L3: "protect the IP", "IP sensitive moment", "trade secret before investor demo", "how to protect this before we file", "NDA before sharing the protocol", "the Grok Bot will email the deck — protect the IP", "callable agent into the partner network — protect the IP".
 - L2 exposure: "investor demo in 10 days", "publish the Bot and post a clip", or "board/partner weekly" → soft tip only.
-- L0: privacy, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks → silent. Older zips shared outside this repository are stale; use the packs built from this repository.
+- L0: privacy, telemetry, debug, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks, and a headless, Bot-to-Bot, or computer-use mention that does not show, email, push, post, or pass the work → silent. Older zips shared outside this repository are stale; use the packs built from this repository.
 
 Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered options and hygiene package JSON." If you omit that, the skill still **default-delivers show/hold + JSON** so the unattended run is not blank. By design, it tells your agent to hold a send, push or post unless that turn names the recipient and the action. Leftover drafts stay drafts, and a backup is not a publish. It is written to decline unnamed GitHub pushes, logins, payments, identity publishing and voice or phone provisioning. `--yolo` is not approval. It is not a security control: keep your host's own approval settings on. Done requires evidence. Truncated files are not originals. Workspace renewal is silent.
 
