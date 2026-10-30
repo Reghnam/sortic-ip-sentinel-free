@@ -2,6 +2,44 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.78-free] — 2026-10-30
+
+Absorbed this Grok Build turn after origin **v0.5.77-free** was already on main (the top row is not the Latest badge when that row is a pre-release; two URLs that return one generated page are one read; a done backup is not a publish). This tip does not republish those. No newer grok-export. **No conversation_search.** Drive title search did not finish. Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+
+### OpenAI (first)
+
+- GitHub releases Latest this read is **0.166.0** (29 Oct, not a prerelease). Yesterday's pin was **0.165.0**. A later non-prerelease tag is the stable CLI.
+- The first API row this read is that same non-prerelease. An earlier alpha of the same number is not a newer CLI. Do not copy the alpha. Do not copy a model name. Model pick stays L0.
+- No release dated 30 Oct. A missing 30 Oct tag is not a new policy.
+- **New:** a skill-catalog delta, a catalog size, or an omitted description is not a wipe of the body. Do not copy a catalog size. An empty remote skill-discovery cache is not a missing skill. A filesystem watch is not a fresh sync.
+- **New:** environment-scoped hooks and a PreToolUse line that names a working directory are still hooks. Secret substitution inside a hook is not a vault. Do not put a secret in a hook. This skill still ships **no hooks**.
+- Preserved acknowledged approvals on resume are not owner approval for a new paste. Memory import on a fresh profile stays a next-paste. This tip does not republish it. Evals stay **281**. The same-day pin alignment already added activation evals **274–281**. This tip does not add evals.
+
+### Anthropic (second)
+
+- The raw changelog and the html URL both lead with **2.1.314** dated 30 Oct. Two fetches that agree can seal that read. Yesterday's lead was **2.1.312** (27 Oct). That lead is not this read.
+- **New:** there is no **2.1.313** on that page. A missing number between two headings is not a wipe. Do not invent it.
+- **New:** a permission mode is not a path vault. Writes outside the working directories stay refused when that block is on. This skill does not ship that setting. Do not treat a permission mode as leave to write outside the tree.
+- **New:** a skill left in trash is not a loaded skill. A trash cap is not a wipe. Do not copy the cap. A slash-only session title taken from CLAUDE.md is not a review of that file. Do not paste this skill into CLAUDE.md.
+- **New:** a parent that drops subagent tool results when a headless turn ends has not wiped the exposure. Log it. A dropped tool result is not a contribution log. A hook that did not run is not a block. A headless resume into a worktree is not a fresh sandbox and not a wipe of the prior session. An excluded settings source that still supplies some settings is not a full wipe. An upload prompt that names files is a paste moment. Do not upload this pack. Idle compaction is a summary, not a hold map. A summary is not the file. Do not copy a character cap.
+- Claude YAML stays name + description only. The checker body stays under 500 lines. Do not claim the body is under 200.
+
+### Grok Build (third)
+
+- This curl of the public changelog returned **403**. A fetch that returned still leads with **v1.0.70 · 23 Oct 2026**. **A 403 and a page that still leads with the same line are one version.** Do not invent a second line from the 403. Do not invent a stable line after 1.0.70.
+- failClosed is still not owner approval. This skill has no hooks. This tip does not republish that.
+- **Mailbox:** no david@ mail dated 28, 29, or 30 Oct in this search. The mail after the done backup is a sales-rep link, not a skill note. **A sales-rep link is not a publish.** Do not copy the link. Do not tweet it. Do not treat that post as a grok-export. A shared bot that writes a CRM, a quote, or a deal term is a paste. Routing an exception is not owner approval. The 26 Oct backup subject that says done stays unrepubished. A done subject is not a publish. The 6 Oct forward stays the last skill note. Do not republish it.
+- **Chats:** no conversation_search. Drive title search did not finish. Do not claim a scan this tip did not finish. No newer grok-export than W38. Do not dump chat bodies.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **A later non-prerelease tag is the stable CLI.** An earlier alpha of the same number is not a newer CLI.
+- **A missing number between two headings is not a wipe.** A permission mode is not a path vault. A dropped tool result is not a contribution log.
+- **A 403 and the same public line are one version.** A sales-rep link is not a skill note. A shared bot write is a paste.
+- Evals stay **281**. The same-day pin alignment already holds activation evals **274–281**. This tip does not add evals. HITL F1–F28 + T1–T58 required. This tip adds T59 (later stable tag + missing number + sales-rep link).
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.77-free] — 2026-10-29
 
 Absorbed this Grok Build turn after origin **v0.5.76-free** was already on main (a non-prerelease tag is the stable CLI; an alpha after that tag is not the next stable line; an external note is not a seal). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. The 26 Oct backup folder listed three docs (a manifest, a memory snapshot, a backup changelog), not a chat export. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
