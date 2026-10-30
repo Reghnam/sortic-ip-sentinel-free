@@ -72,7 +72,8 @@ TREE_LEAK_EXCLUSIONS = frozenset(
     }
 )
 _ZIP_NAME = re.compile(r"(?<![A-Za-z0-9._+-])([A-Za-z0-9._+-]+\.zip)(?![A-Za-z0-9._+-])")
-_EDITION = re.compile(r"\d+\.\d+\.\d+-free")
+# A suffix on the same token is part of the edition. "0.5.77-free-alpha" is not "0.5.77-free".
+_EDITION = re.compile(r"(?<![0-9.])\d+\.\d+\.\d+-free[A-Za-z0-9+-]*")
 # A leading "v" is allowed. A suffix stays attached, so "v0.5.77-free-alpha" is not VERSION.
 _PINNED_EDITION = re.compile(r"(?<![0-9.])(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])")
 _SUFFIXED_EDITION = re.compile(r"(?<![0-9.])(\d+\.\d+\.\d+-free[A-Za-z0-9+-]+)")

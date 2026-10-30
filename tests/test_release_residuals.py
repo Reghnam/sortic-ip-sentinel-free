@@ -287,6 +287,19 @@ class ReleaseResidualTests(unittest.TestCase):
             ["cursor-skill/LICENSE.md license edition is not " + HYGIENE.VERSION],
         )
 
+    def test_suffixed_license_edition_fails(self) -> None:
+        for suffix in ("-alpha", "2", "+build"):
+            with self.subTest(suffix=suffix):
+                text = "notice v" + HYGIENE.VERSION + suffix + "\n"
+                errors = _license_repo({"LICENSE.md": text})
+                self.assertEqual(
+                    errors,
+                    ["LICENSE.md license edition is not " + HYGIENE.VERSION],
+                )
+        both = "v" + HYGIENE.VERSION + " and v" + HYGIENE.VERSION + "-alpha\n"
+        errors = _license_repo({"LICENSE.md": both})
+        self.assertEqual(errors, ["LICENSE.md license edition is not " + HYGIENE.VERSION])
+
     def test_current_license_ignores_other_files(self) -> None:
         files = {
             "LICENSE.md": "notice v" + HYGIENE.VERSION + "\n",
