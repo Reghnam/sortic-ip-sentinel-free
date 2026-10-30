@@ -2,6 +2,36 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.79-free] — 2026-10-30
+
+Absorbed this Grok Build turn after origin **v0.5.78-free** was already on main (a later non-prerelease tag is the stable CLI; a missing number between headings is not a wipe; a 403 and the same public line are one version; a sales-rep link is not a skill note). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+
+### OpenAI (first)
+
+- GitHub releases Latest endpoint this read is still **0.166.0** (29 Oct, not a prerelease). No release dated 30 Oct. A second read that returns the same Latest is not a new CLI. Do not copy a model name. This tip does not republish the alpha rule.
+- This skill still ships **no hooks**. Evals stay **281**. This tip adds no eval heading.
+
+### Anthropic (second)
+
+- Raw CHANGELOG.md leads with `## 2.1.314` and has no date on that heading. The generated page leads with **2.1.314** dated 30 Oct. Agreeing on the version is one version. The date lives on the generated page. **Do not invent a date on the raw heading.** Yesterday's sentence that both are dated is not a date on the raw file.
+- **New:** a refused write outside the working directories is not a waiver to paste the same text into chat, mail, or another path. A permission mode is still not a path vault. This tip does not republish that.
+- **New:** a silent `claude -p` exit 0 with no output is not a pass. The 2.1.314 note says a startup failure used to exit that way. A host not on this lead can still. A missing stamp is not a clean headless run. A changelog lead is not the installed binary.
+- Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 200.
+
+### Grok Build (third)
+
+- A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A direct curl returned **403**. A 403 and that same line are still one version. Do not invent a stable line after 1.0.70. Do not copy a third-party later number.
+- **Mailbox:** this run's gmail search timed out waiting for a token refresh. **A timeout is not a wipe of the earlier search and not a new mail.** Do not invent a newer david@ note. Do not republish the sales-rep link. Do not tweet it.
+- **Chats:** no conversation_search. Drive search this run timed out. A timeout is not a grok-export and not a wipe of the earlier unfinished title search. Do not dump chat bodies. No newer grok-export than W38.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **The raw heading has no date.** Do not invent one. A refused write is not a waiver. A silent exit 0 is not a pass.
+- **A later mailbox timeout is not a wipe of the earlier search.** A drive timeout is not a grok-export.
+- Evals stay **281**. HITL F1–F28 + T1–T59 required. This tip adds T60 (raw heading + refused write + mailbox timeout). No new eval heading.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.78-free] — 2026-10-30
 
 Absorbed this Grok Build turn after origin **v0.5.77-free** was already on main (the top row is not the Latest badge when that row is a pre-release; two URLs that return one generated page are one read; a done backup is not a publish). This tip does not republish those. No newer grok-export. **No conversation_search.** Drive title search did not finish. Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.

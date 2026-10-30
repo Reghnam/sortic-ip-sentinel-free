@@ -1,6 +1,6 @@
 # SorticAI Free IP Sentinel
 
-**What it is.** Free IP Sentinel is a free skill by SorticAI (edition 0.5.78-free). It notices IP-sensitive moments and gives builder worksheets, so you can decide what to show and what to hold.
+**What it is.** Free IP Sentinel is a free skill by SorticAI (edition 0.5.79-free). It notices IP-sensitive moments and gives builder worksheets, so you can decide what to show and what to hold.
 
 **Who it is for.** Builders who are about to show their work: an investor demo, a fundraising deck, a partner share or pre-read, a publish, or an agent that is about to show, send, push or post the work.
 
@@ -10,7 +10,8 @@
 2. Copy it in using that row (`cp -r`, or zip the folder when the row says zip).
 3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
-Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.78-free**).
+Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.79-free**).
+- The raw heading has no date; a refused write is not a waiver; a silent exit 0 is not a pass (v0.5.79-free)
 - A later non-prerelease tag is the stable CLI; a missing number between headings is not a wipe; a 403 and the same public line are one version (v0.5.78-free)
 - The top row is not the Latest badge; a done backup is not a publish; an enterprise pointer that matches an alpha is not a promotion (v0.5.77-free)
 - A non-prerelease tag is the stable CLI; an alpha after it is not the next line; an external note is not a seal (edition 0.5.76-free)
