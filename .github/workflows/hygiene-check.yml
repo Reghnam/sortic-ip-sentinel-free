@@ -74,13 +74,15 @@ jobs:
           fi
           list="$(mktemp)"
           msgfile="$(mktemp)"
-          trap 'rm -f "${list}" "${msgfile}"' EXIT
+          trailers="$(mktemp)"
+          trap 'rm -f "${list}" "${msgfile}" "${trailers}"' EXIT
           git rev-list "${range}" >"${list}"
           bad=0
           while IFS= read -r commit || [ -n "${commit}" ]; do
             [ -n "${commit}" ] || continue
             git show -s --format=%B "${commit}" >"${msgfile}"
-            if grep -Eiq '^[[:space:]]*co-authored-by[[:space:]]*:' "${msgfile}"; then
+            git interpret-trailers --parse "${msgfile}" >"${trailers}"
+            if grep -Eiq '^[[:space:]]*co-authored-by[[:space:]]*:' "${trailers}"; then
               short="$(git rev-parse --short "${commit}")"
               printf '%s\n' "${short} commit message has a co-author trailer"
               bad=1

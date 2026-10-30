@@ -860,6 +860,24 @@ def _assert_trailer_step(text: str) -> None:
         raise AssertionError("commit trailer check dropped merge commits")
     if "git show -s --format=%B" not in script:
         raise AssertionError("commit trailer check must read the full message")
+    parse_call = 'git interpret-trailers --parse "${msgfile}" >"${trailers}"'
+    parsed_grep = (
+        "grep -Eiq '^[[:space:]]*"
+        + _trailer_stem()
+        + "[[:space:]]*:' \"${trailers}\""
+    )
+    raw_grep = (
+        "grep -Eiq '^[[:space:]]*"
+        + _trailer_stem()
+        + "[[:space:]]*:' \"${msgfile}\""
+    )
+    show_at = script.find("git show -s --format=%B")
+    parse_at = script.find(parse_call)
+    grep_at = script.find(parsed_grep)
+    if parse_at < 0 or not (0 <= show_at < parse_at < grep_at):
+        raise AssertionError("commit trailer check must parse trailers before the grep")
+    if raw_grep in script:
+        raise AssertionError("commit trailer check must not grep the raw message")
     if TRAILER_SKIP not in script:
         raise AssertionError("a push with an empty before must print the skip line")
     if TRAILER_FAIL not in script:
@@ -903,6 +921,18 @@ def _trailer_line(kind: str) -> str:
 
 def _sentence_line() -> str:
     return "The draft was " + "co-" + "authored during review for " + _placeholder_address() + "."
+
+
+def _explained_key_line() -> str:
+    return _trailer_key("mixed") + " is the key this check rejects."
+
+
+def _prose_follow() -> str:
+    return "The next line is ordinary prose."
+
+
+def _signed_off_line() -> str:
+    return "Signed-off-by: Person <" + _placeholder_address() + ">"
 
 
 def _midline_note() -> str:
@@ -1974,6 +2004,21 @@ class HygieneWorkflowTests(unittest.TestCase):
         )
         self.assertNotIn("|| true", script)
         self.assertNotIn("continue-on-error", block)
+        dropped_parse = self.text.replace(
+            'git interpret-trailers --parse "${msgfile}"',
+            'git interpret-trailers --only-trailers "${msgfile}"',
+            1,
+        )
+        self.assertNotEqual(dropped_parse, self.text)
+        _reject(self, _assert_trailer_step, dropped_parse, "drop --parse")
+        raw_needle = _trailer_stem() + "[[:space:]]*:' \"${trailers}\""
+        raw_swap = self.text.replace(
+            raw_needle,
+            _trailer_stem() + "[[:space:]]*:' \"${msgfile}\"",
+            1,
+        )
+        self.assertNotEqual(raw_swap, self.text)
+        _reject(self, _assert_trailer_step, raw_swap, "grep the raw message")
 
     def _trailer_script(self) -> str:
         return _named_step_script(self.text, TRAILER_STEP)
@@ -2026,14 +2071,14 @@ class HygieneWorkflowTests(unittest.TestCase):
                     self.assertEqual(result.stderr, "")
                     _assert_hides_trailer(self, result)
 
-    def test_trailer_check_case_and_spacing_fail(self) -> None:
+    def test_trailer_check_case_variants_fail(self) -> None:
         script = self._trailer_script()
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             _init_repo(root)
             base = _commit(root, "base.txt", "base\n", _commit_message("base"))
             shas = []
-            for index, kind in enumerate(("lower", "upper", "spaced")):
+            for index, kind in enumerate(("lower", "upper")):
                 shas.append(
                     _commit(
                         root,
@@ -2117,6 +2162,64 @@ class HygieneWorkflowTests(unittest.TestCase):
                 "notes\n",
                 _commit_message("Update the notes", _sentence_line(), _midline_note()),
             )
+            result = _run_trailer(script, root, _pr_env(base, head))
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertEqual(result.stdout, "")
+            self.assertEqual(result.stderr, "")
+            _assert_hides_trailer(self, result)
+
+    def test_trailer_check_non_trailer_text_passes(self) -> None:
+        script = self._trailer_script()
+        cases = {
+            "leading-space": _commit_message("Add note", _trailer_line("spaced")),
+            "same-paragraph": _commit_message(
+                "Explain the rule",
+                _explained_key_line(),
+                _prose_follow(),
+            ),
+            "later-paragraph": _commit_message(
+                "Explain the rule",
+                _explained_key_line(),
+                "",
+                _prose_follow(),
+            ),
+            "body-plus-other-trailer": _commit_message(
+                "Explain the rule",
+                _explained_key_line(),
+                _prose_follow(),
+                "",
+                _signed_off_line(),
+            ),
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            base = _commit(root, "base.txt", "base\n", _commit_message("base"))
+            for label, message in cases.items():
+                with self.subTest(kind=label):
+                    _git(root, "reset", "--hard", "-q", base)
+                    head = _commit(root, "notes.txt", "notes\n", message)
+                    result = _run_trailer(script, root, _pr_env(base, head))
+                    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                    self.assertEqual(result.stdout, "")
+                    self.assertEqual(result.stderr, "")
+                    _assert_hides_trailer(self, result)
+
+    def test_trailer_check_ignores_configured_trailers(self) -> None:
+        script = self._trailer_script()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _init_repo(root)
+            _git(root, "config", "trailer.coauthor.key", _trailer_key("mixed"))
+            _git(root, "config", "trailer.coauthor.ifmissing", "add")
+            _git(
+                root,
+                "config",
+                "trailer.coauthor.command",
+                'printf "%s" "Injected <' + _placeholder_address() + '>"',
+            )
+            base = _commit(root, "base.txt", "base\n", _commit_message("base"))
+            head = _commit(root, "notes.txt", "notes\n", _commit_message("Update the notes"))
             result = _run_trailer(script, root, _pr_env(base, head))
             self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
             self.assertEqual(result.stdout, "")
