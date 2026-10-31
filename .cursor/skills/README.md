@@ -15,6 +15,6 @@ cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 
 Do **not** put `us-ip-law-ground-truth` (PRIVATE) under `.cursor/skills/`. RAG is sidecar/offline only.
 
-Drive Sep-2 zips are stale. Use this branch. Zip `free-ip-sentinel-cursor-v0.5.79-free.zip` from `cursor-skill/`.
+Drive Sep-2 zips are stale. Use this branch. Zip `free-ip-sentinel-cursor-v0.5.80-free.zip` from `cursor-skill/`.
 
 **Not legal advice. No guarantees. Free only.** Progressive disclosure: this folder is the install copy. The skill stays instructions-only.

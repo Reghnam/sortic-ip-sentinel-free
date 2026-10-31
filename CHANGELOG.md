@@ -2,6 +2,45 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.80-free] — 2026-10-31
+
+Absorbed this Grok Build turn after origin **v0.5.79-free** was already on main (the raw heading has no date; a refused write is not a waiver; a silent exit 0 is not a pass; a mailbox timeout is not a wipe). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+
+### OpenAI (first)
+
+- GitHub releases list this read: the first row is **0.166.0** (29 Oct, not a prerelease). The next rows are earlier alphas of that same number, then **0.165.0**. No release dated 30 Oct. No release dated 31 Oct. A second read of the same Latest is not a new CLI.
+- **New:** a status-watch page checked 31 Oct that repeats **0.166.0** is not a 31 Oct CLI and not a second seal. Page order under the stable tag is not a newer CLI. Do not copy a model name from the release body or from a notes index.
+- This skill still ships **no hooks**. Evals stay **281**. This tip adds no eval heading.
+
+### Anthropic (second)
+
+- Raw CHANGELOG.md leads with `## 2.1.316` and has no date on that heading. The next heading is `## 2.1.314`. There is no **2.1.315**. A missing number between headings is not a wipe. Do not invent it. Yesterday's lead **2.1.314** is not this read.
+- The generated page leads with **2.1.316** dated 31 Oct. Agreeing on the version is one version. The date lives on the generated page. **Do not invent a date on the raw heading.**
+- **New:** layered policy means every matching policy applies, not only the first. **First-match is not the whole policy.**
+- **New:** unnamed subagent effort is not the session effort. Inheritance is not a named setting.
+- **New:** a Read allow is not an upload grant. Do not upload this pack. A keyword-disable flag is not a wipe of the draft.
+- **New:** a missing stop reason is not a pass. A changelog lead is not the installed binary. A host not on this lead can still omit the reason.
+- **New:** server-managed settings that apply with no approval prompt are not owner approval. A stored copy that does not verify is refused. A refusal is not a waiver. A form you did not fill is not owner approval. A catching-up line is not the transcript.
+- A pooled budget is not a personal vault. Do not copy a budget. Do not copy a model name from a deprecation note.
+- Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 200.
+
+### Grok Build (third)
+
+- This curl of the public changelog returned **403**. A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A 403 and that same line are one version. Do not invent a stable line after 1.0.70.
+- **New:** a host version file the public Latest line does not lead with is not a promotion. Do not copy that later number. Do not treat it as the stable CLI.
+- **New:** a status-page incident is not a release. Degraded service is not a version bump.
+- **Mailbox:** no david@ skill note dated 31 Oct. The received mail after 24 Oct is still the 27 Oct sales-rep link and the 26 Oct backup whose subject says done. Seeing the sales-rep link again is not a new publish. Do not copy it. Do not tweet it. A done subject is not a publish. A 30 Oct name-trend note is not a filing and not a skill note. Nothing decided is not owner approval. Do not copy a domain. A draft is not a sent note. Do not send it. Share and compensation threads stay uncopied. Do not copy a percent or a name. This tip did not read those bodies.
+- **Chats:** no conversation_search. One drive search timed out. A title search for a grok-export returned no file. **An empty title search is not a grok-export** and not a wipe of W38. Do not dump chat bodies.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **A status-watch repeat is not a new CLI.** Do not copy a model name.
+- **The raw lead is 2.1.316 and has no date.** First-match is not the whole policy. A Read allow is not an upload grant.
+- **A host file the public Latest line does not lead with is not the CLI.** An empty title search is not a grok-export. A draft is not a sent note.
+- Evals stay **281**. HITL F1–F28 + T1–T60 required. This tip adds T61 (first-match + raw 2.1.316 + host file). No new eval heading.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.79-free] — 2026-10-30
 
 Absorbed this Grok Build turn after origin **v0.5.78-free** was already on main (a later non-prerelease tag is the stable CLI; a missing number between headings is not a wipe; a 403 and the same public line are one version; a sales-rep link is not a skill note). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.

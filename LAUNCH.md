@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.79-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.80-free
 
-**Status**: Public on GitHub. v0.5.79-free patched 2026-10-30 (OpenAI first: GitHub Latest this read is **0.166.0** dated 29 Oct, not a prerelease. Yesterday's pin was **0.165.0**. The first API row is that same non-prerelease. An earlier alpha of the same number is not a newer CLI. No release dated 30 Oct. Do not copy a model name. A catalog delta is not a wipe. This skill still ships no hooks. Anthropic second: the raw changelog and the html URL both lead with **2.1.314**. The raw heading has no date. The generated page dates that lead 30 Oct. Do not invent a date on the raw heading. A refused write is not a waiver to paste. A silent claude -p exit 0 is not a pass. This later mailbox search timed out. A timeout is not a wipe of the earlier search and not a new mail. There is no **2.1.313**. A missing number between headings is not a wipe. A permission mode is not a path vault. A dropped subagent tool result is not a contribution log. Evals stay 281. Grok Build third: this curl returned 403. A fetch that returned still leads with v1.0.70 dated 23 Oct. A 403 and the same line are one version. Do not invent a stable line after 1.0.70. Mailbox: no david@ mail dated 28, 29, or 30 Oct. A sales-rep link is not a skill note. Do not copy the link. Do not tweet it. The done backup stays unrepubished. No conversation_search. Drive title search did not finish. No newer grok-export than W38. Marketplace Hold).
+**Status**: Public on GitHub. v0.5.80-free patched 2026-10-31 (OpenAI first: GitHub Latest this read is still **0.166.0** dated 29 Oct, not a prerelease. No 30 Oct tag. No 31 Oct tag. A status-watch repeat of that number is not a new CLI. Do not copy a model name. Anthropic second: raw CHANGELOG.md leads with **2.1.316** and has no date on that heading. The next heading is **2.1.314**. There is no **2.1.315**. The generated page dates the lead 31 Oct. Do not invent a date on the raw heading. First-match is not the whole policy. A Read allow is not an upload grant. Unnamed subagent effort is not the session effort. A missing stop reason is not a pass. Grok Build third: curl **403**. A page read still leads with **v1.0.70** dated 23 Oct. A host file the public Latest line does not lead with is not the stable CLI. A status incident is not a release. Mailbox: no new skill note. A sales-rep link is not a publish. A name-trend note is not a filing. A draft is not a sent note. No conversation_search. An empty title search is not a grok-export. Marketplace Hold).
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.79-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.80-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
