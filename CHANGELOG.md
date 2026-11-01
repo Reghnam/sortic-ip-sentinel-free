@@ -2,6 +2,38 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## [0.5.81-free] — 2026-11-01
+
+Absorbed this Grok Build turn after origin **v0.5.80-free** was already on main (a status-watch repeat is not a new CLI; the raw heading has no date; first-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+
+### OpenAI (first)
+
+- GitHub releases API this read: the first row is **rust-v0.166.0** (29 Oct, not a prerelease). The next rows are earlier alphas of that same number, then **0.165.0**. No release dated 31 Oct. No release dated 1 Nov. A second read of the same Latest is not a new CLI.
+- **New:** commits on main after the Latest tag are not a new CLI. Do not copy a commit count. Do not copy a model name from the release body.
+- The Codex default prompt now states that rule. This skill still ships **no hooks**. Evals stay **281**. This tip adds no eval heading.
+
+### Anthropic (second)
+
+- Raw CHANGELOG.md still leads with `## 2.1.316` and has no date on that heading. The next heading is still `## 2.1.314`. There is no **2.1.315**. There is no **2.1.317**. GitHub releases Latest is still **v2.1.316** (31 Oct). No 1 Nov release.
+- **New:** a second read of the same raw heading is not a new binary. Do not invent a 1 Nov heading. Do not invent a date on the raw heading.
+- Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 200.
+
+### Grok Build (third)
+
+- This curl of the public changelog returned **403**. A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A 403 and that same line are one version. Do not invent a stable line after 1.0.70.
+- **New:** a status-page timestamp (the history page said it was updated 1 Nov) is not a CLI. An ongoing billing incident is not a release. A status incident is still not a release.
+- **Mailbox:** the personal inbox has a 1 Nov automation digest whose visible text repeats the open standard (description is the sole trigger; body stays lean; references load on demand). **A truncated automation digest is not a new practice.** Do not open the continue-reading link. Do not copy a chat id. A 31 Oct david@ handover of other PC skills is not this skill and not a publish. Do not copy a path. It is not a sentinel note. A draft is not a sent note. Do not send it.
+- **Chats:** no conversation_search. Continue-reading was not opened. An email snippet is not the chat and not a grok-export. No newer grok-export than W38.
+- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+
+### Shared
+
+- **Commits on main after the Latest tag are not a new CLI.** Do not copy a commit count. Do not copy a model name.
+- **The raw lead is still 2.1.316 and has no date.** A second read is not a new binary.
+- **A truncated automation digest is not a new practice.** A handover of other PC skills is not this skill. A status-page timestamp is not a CLI.
+- Evals stay **281**. HITL F1–F28 + T1–T61 required. This tip adds T62 (commits after Latest + truncated digest + status-page timestamp). No new eval heading.
+- Still free-only. Still not legal advice. No secrets.
+
 ## [0.5.80-free] — 2026-10-31
 
 Absorbed this Grok Build turn after origin **v0.5.79-free** was already on main (the raw heading has no date; a refused write is not a waiver; a silent exit 0 is not a pass; a mailbox timeout is not a wipe). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.

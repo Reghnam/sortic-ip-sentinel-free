@@ -1,6 +1,6 @@
-# LAUNCH: SorticAI Free IP Sentinel v0.5.80-free
+# LAUNCH: SorticAI Free IP Sentinel v0.5.81-free
 
-**Status**: Public on GitHub. v0.5.80-free patched 2026-10-31 (OpenAI first: GitHub Latest this read is still **0.166.0** dated 29 Oct, not a prerelease. No 30 Oct tag. No 31 Oct tag. A status-watch repeat of that number is not a new CLI. Do not copy a model name. Anthropic second: raw CHANGELOG.md leads with **2.1.316** and has no date on that heading. The next heading is **2.1.314**. There is no **2.1.315**. The generated page dates the lead 31 Oct. Do not invent a date on the raw heading. First-match is not the whole policy. A Read allow is not an upload grant. Unnamed subagent effort is not the session effort. A missing stop reason is not a pass. Grok Build third: curl **403**. A page read still leads with **v1.0.70** dated 23 Oct. A host file the public Latest line does not lead with is not the stable CLI. A status incident is not a release. Mailbox: no new skill note. A sales-rep link is not a publish. A name-trend note is not a filing. A draft is not a sent note. No conversation_search. An empty title search is not a grok-export. Marketplace Hold).
+**Status**: Public on GitHub. v0.5.81-free patched 2026-11-01 (OpenAI first: GitHub Latest this read is still **0.166.0** dated 29 Oct, not a prerelease. No 1 Nov tag. Commits on main after that tag are not a new CLI. Do not copy a commit count. Do not copy a model name. Anthropic second: raw CHANGELOG.md still leads with **2.1.316** and has no date on that heading. The next heading is still **2.1.314**. There is no **2.1.317**. A second read of the same raw heading is not a new binary. Do not invent a 1 Nov heading. Grok Build third: curl **403**. A page read still leads with **v1.0.70** dated 23 Oct. A status-page timestamp is not a CLI. A billing incident is not a release. Mailbox: a truncated automation digest is not a new practice. A handover of other PC skills is not this skill. Do not copy a path. No conversation_search. An email snippet is not a grok-export. Marketplace Hold).
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 
@@ -57,7 +57,7 @@ mkdir -p .cursor/skills/sortic-ip-sentinel-free
 cp -r cursor-skill/. .cursor/skills/sortic-ip-sentinel-free/
 ```
 
-Zip: `free-ip-sentinel-cursor-v0.5.80-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
+Zip: `free-ip-sentinel-cursor-v0.5.81-free.zip` from `cursor-skill/`. See `.cursor/skills/README.md`.
 
 **Custom Modes = pin skill.** Pin `sortic-ip-sentinel-free` on the lunch Custom Mode.
 
