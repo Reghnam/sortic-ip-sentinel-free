@@ -2,6 +2,14 @@
 
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
+## Process
+
+Bump the edition only for a functional change, an activation change, an eval change, or a hard-stop change.
+
+A content-only CLI or ecosystem observation tip must not bump the edition. Record that observation under the current tip. Do not open a new edition heading for it, and do not restamp the public edition pins for it.
+
+The top edition heading is the current edition. A later commit may edit that tip. Do not rewrite git history to change an older heading.
+
 ## [0.5.81-free] — 2026-11-01
 
 Absorbed this Grok Build turn after origin **v0.5.80-free** was already on main (a status-watch repeat is not a new CLI; the raw heading has no date; first-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
@@ -22,7 +30,7 @@ Absorbed this Grok Build turn after origin **v0.5.80-free** was already on main 
 
 - This curl of the public changelog returned **403**. A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A 403 and that same line are one version. Do not invent a stable line after 1.0.70.
 - **New:** a status-page timestamp (the history page said it was updated 1 Nov) is not a CLI. An ongoing billing incident is not a release. A status incident is still not a release.
-- **Mailbox:** the personal inbox has a 1 Nov automation digest whose visible text repeats the open standard (description is the sole trigger; body stays lean; references load on demand). **A truncated automation digest is not a new practice.** Do not open the continue-reading link. Do not copy a chat id. A 31 Oct david@ handover of other PC skills is not this skill and not a publish. Do not copy a path. It is not a sentinel note. A draft is not a sent note. Do not send it.
+- **Mailbox:** an operator inbox digest repeats the open standard (description is the sole trigger; body stays lean; references load on demand). **A truncated automation digest is not a new practice.** Do not open the continue-reading link. Do not copy a chat id. An operator-inbox handover of other PC skills is not this skill and not a publish. Do not copy a path. It is not a sentinel note. A draft is not a sent note. Do not send it.
 - **Chats:** no conversation_search. Continue-reading was not opened. An email snippet is not the chat and not a grok-export. No newer grok-export than W38.
 - Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
@@ -32,6 +40,7 @@ Absorbed this Grok Build turn after origin **v0.5.80-free** was already on main 
 - **The raw lead is still 2.1.316 and has no date.** A second read is not a new binary.
 - **A truncated automation digest is not a new practice.** A handover of other PC skills is not this skill. A status-page timestamp is not a CLI.
 - Evals stay **281**. HITL F1–F28 + T1–T61 required. This tip adds T62 (commits after Latest + truncated digest + status-page timestamp). No new eval heading.
+- **Public changelog:** an operator inbox digest stays unnamed. Do not name an inbox or an email handle. A content-only observation does not bump the edition.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.80-free] — 2026-10-31
@@ -61,7 +70,7 @@ Absorbed this Grok Build turn after origin **v0.5.79-free** was already on main 
 - This curl of the public changelog returned **403**. A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A 403 and that same line are one version. Do not invent a stable line after 1.0.70.
 - **New:** a host version file the public Latest line does not lead with is not a promotion. Do not copy that later number. Do not treat it as the stable CLI.
 - **New:** a status-page incident is not a release. Degraded service is not a version bump.
-- **Mailbox:** no david@ skill note dated 31 Oct. The received mail after 24 Oct is still the 27 Oct sales-rep link and the 26 Oct backup whose subject says done. Seeing the sales-rep link again is not a new publish. Do not copy it. Do not tweet it. A done subject is not a publish. A 30 Oct name-trend note is not a filing and not a skill note. Nothing decided is not owner approval. Do not copy a domain. A draft is not a sent note. Do not send it. Share and compensation threads stay uncopied. Do not copy a percent or a name. This tip did not read those bodies.
+- **Mailbox:** no operator-inbox skill note dated 31 Oct. The received mail after 24 Oct is still the 27 Oct sales-rep link and the 26 Oct backup whose subject says done. Seeing the sales-rep link again is not a new publish. Do not copy it. Do not tweet it. A done subject is not a publish. A 30 Oct name-trend note is not a filing and not a skill note. Nothing decided is not owner approval. Do not copy a domain. A draft is not a sent note. Do not send it. Share and compensation threads stay uncopied. Do not copy a percent or a name. This tip did not read those bodies.
 - **Chats:** no conversation_search. One drive search timed out. A title search for a grok-export returned no file. **An empty title search is not a grok-export** and not a wipe of W38. Do not dump chat bodies.
 - Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
@@ -92,7 +101,7 @@ Absorbed this Grok Build turn after origin **v0.5.78-free** was already on main 
 ### Grok Build (third)
 
 - A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A direct curl returned **403**. A 403 and that same line are still one version. Do not invent a stable line after 1.0.70. Do not copy a third-party later number.
-- **Mailbox:** this run's gmail search timed out waiting for a token refresh. **A timeout is not a wipe of the earlier search and not a new mail.** Do not invent a newer david@ note. Do not republish the sales-rep link. Do not tweet it.
+- **Mailbox:** this run's operator-inbox search timed out. **A timeout is not a wipe of the earlier search and not a new mail.** Do not invent a newer operator-inbox note. Do not republish the sales-rep link. Do not tweet it.
 - **Chats:** no conversation_search. Drive search this run timed out. A timeout is not a grok-export and not a wipe of the earlier unfinished title search. Do not dump chat bodies. No newer grok-export than W38.
 - Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
@@ -129,7 +138,7 @@ Absorbed this Grok Build turn after origin **v0.5.77-free** was already on main 
 
 - This curl of the public changelog returned **403**. A fetch that returned still leads with **v1.0.70 · 23 Oct 2026**. **A 403 and a page that still leads with the same line are one version.** Do not invent a second line from the 403. Do not invent a stable line after 1.0.70.
 - failClosed is still not owner approval. This skill has no hooks. This tip does not republish that.
-- **Mailbox:** no david@ mail dated 28, 29, or 30 Oct in this search. The mail after the done backup is a sales-rep link, not a skill note. **A sales-rep link is not a publish.** Do not copy the link. Do not tweet it. Do not treat that post as a grok-export. A shared bot that writes a CRM, a quote, or a deal term is a paste. Routing an exception is not owner approval. The 26 Oct backup subject that says done stays unrepubished. A done subject is not a publish. The 6 Oct forward stays the last skill note. Do not republish it.
+- **Mailbox:** no operator-inbox mail dated 28, 29, or 30 Oct in this search. The mail after the done backup is a sales-rep link, not a skill note. **A sales-rep link is not a publish.** Do not copy the link. Do not tweet it. Do not treat that post as a grok-export. A shared bot that writes a CRM, a quote, or a deal term is a paste. Routing an exception is not owner approval. The 26 Oct backup subject that says done stays unrepubished. A done subject is not a publish. The 6 Oct forward stays the last skill note. Do not republish it.
 - **Chats:** no conversation_search. Drive title search did not finish. Do not claim a scan this tip did not finish. No newer grok-export than W38. Do not dump chat bodies.
 - Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
@@ -163,7 +172,7 @@ Absorbed this Grok Build turn after origin **v0.5.76-free** was already on main 
 - Public changelog page this read returned and still leads with **v1.0.70 · 23 Oct 2026**. Yesterday's curl was 403. A page that answers and still leads with that line is not a new release.
 - A third-party index this read marks official pages skipped and points an alpha channel and an enterprise channel at the same later number. **An enterprise pointer that matches an alpha pointer is not a stable promotion.** A skipped official scrape is not a seal. Do not copy those notes. Do not invent a stable line after 1.0.70.
 - failClosed is still not owner approval. This skill has no hooks. This tip does not republish that.
-- **Mailbox:** david@ 26 Oct backup subject says done. Status in that mail is material. **A done subject is not a publish. A material status is not a skill bump.** Artifacts unchanged is not a new corpus. Folders not rescanned is not a finished scan. A deal lane in that mail is not this skill. Do not copy a term sheet, a valuation, a compensation note, a tax brief, or a licence. No david@ skill note after that backup. The 6 Oct forward stays the last skill note. Do not republish it. Partner and invoice threads that matched a broad IP search stay uncopied.
+- **Mailbox:** the operator-inbox 26 Oct backup subject says done. Status in that mail is material. **A done subject is not a publish. A material status is not a skill bump.** Artifacts unchanged is not a new corpus. Folders not rescanned is not a finished scan. A deal lane in that mail is not this skill. Do not copy a term sheet, a valuation, a compensation note, a tax brief, or a licence. No operator-inbox skill note after that backup. The 6 Oct forward stays the last skill note. Do not republish it. Partner and invoice threads that matched a broad IP search stay uncopied.
 - **Chats:** no conversation_search. The memory snapshot in that backup is not a grok-export and not a transcript. A programme application in that snapshot is not this skill and not a grant. A note that a retrieval store keeps client data is not a waiver and not a vault. Do not paste client data to obtain a waiver. Do not dump chat bodies. No newer grok-export than W38.
 - Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
@@ -204,7 +213,7 @@ Absorbed this Grok Build turn after origin **v0.5.75-free** was already on main 
 - External notes named later files. **An external note the public latest line does not lead with is not a seal.** Do not copy those notes. Do not invent a stable line after 1.0.70 from this read.
 - **New:** failClosed is not owner approval. A hook that denies on timeout is still a hook. This skill has none. Do not add one.
 - Skills docs were not re-dated this read. This tip does not republish `user-invocable` or `disable-model-invocation`.
-- **Mailbox:** no newer david@ skill note than the 6 Oct forward (disable-invoke, refs move), already in the stack. Do not republish it. Weekly backups through W42 stay PARTIAL. Backup is not publish. Do not copy a Drive link or a folder id.
+- **Mailbox:** no newer operator-inbox skill note than the 6 Oct forward (disable-invoke, refs move), already in the stack. Do not republish it. Weekly backups through W42 stay PARTIAL. Backup is not publish. Do not copy a Drive link or a folder id.
 - Partner mail and a compensation note stay uncopied. A failed run on another repo is not this skill.
 - Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
@@ -240,7 +249,7 @@ Absorbed this Grok Build turn after origin **v0.5.74-free** was already on main 
 - Official changelog page this read returned. Tip is still **v1.0.70 · 23 Oct 2026**. No newer version on that page. No alpha channel on that page.
 - A third-party catalog names an alpha pointer after 1.0.70 and also says its scrape was overdue. **A catalog alpha is not the stable line.** Do not copy the catalog notes. Do not invent a stable version after 1.0.70.
 - Skills docs this read still say last updated **11 Aug 2026**. This tip does not republish `user-invocable` or `disable-model-invocation`.
-- **Mailbox:** david@ weekly backups through W42 stay PARTIAL. Backup is not publish. Do not copy a Drive link or a folder id. The 6 Oct forward (disable-invoke, refs move) is already in the stack. Do not republish it.
+- **Mailbox:** operator-inbox weekly backups through W42 stay PARTIAL. Backup is not publish. Do not copy a Drive link or a folder id. The 6 Oct forward (disable-invoke, refs move) is already in the stack. Do not republish it.
 - **Mailbox:** the 27 Oct digest subject is six-section updates. The visible body stops after Gotchas (highest-value). A cutoff is not six sections. Do not invent the section names. Do not complete it. The continue-reading chat returned no body.
 - Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 

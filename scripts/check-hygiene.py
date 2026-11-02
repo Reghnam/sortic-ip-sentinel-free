@@ -61,6 +61,29 @@ PIN_READMES = (
     "grok-skill/README.md",
     "grok-bot-share/README.md",
 )
+# First edition token is the stamp. A later historical token is not the stamp.
+# references/evals.md and references/v05-*.md keep their own document titles.
+# Those titles are not this skill's edition stamp.
+PIN_LEADS = (
+    "EXEC-SUMMARY.md",
+    "LAUNCH.md",
+    "HITL-LUNCH.md",
+    "claude-skill/SKILL.md",
+    "openai-gpt-package/HOW_TO_CREATE_IN_OPENAI.md",
+    "references/classification-matrix.md",
+    "references/friedberg-satya-hygiene.md",
+    "references/public-corpus-rag.md",
+    "references/agent-exposure-log.md",
+    "openai-gpt-package/knowledge/agent-exposure-log.md",
+    "grok-bot-share/skills.md",
+    ".cursor/skills/README.md",
+)
+# The JSON edition field is the stamp even when a zip name in the same file matches.
+PIN_JSON_EDITION = (
+    "grok-bot-share/bot-template.json",
+    "references/headless-hygiene-package.md",
+    "openai-gpt-package/knowledge/headless-hygiene-package.md",
+)
 # Exact tracked paths only. The scanner source holds the path patterns.
 # The three test modules hold fixture strings those patterns must catch.
 TREE_LEAK_EXCLUSIONS = frozenset(
@@ -79,6 +102,42 @@ _PINNED_EDITION = re.compile(r"(?<![0-9.])(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])"
 _SUFFIXED_EDITION = re.compile(r"(?<![0-9.])(\d+\.\d+\.\d+-free[A-Za-z0-9+-]+)")
 _META_VERSION = re.compile(r'(?m)^  version:\s*"([^"]*)"')
 _CHANGELOG_TIP = re.compile(r"(?m)^## \[([^\]]+)\]")
+_SHORT_DESC_EDITION = re.compile(
+    r'(?m)^  short-description:\s*"[^\n]*\bv(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])'
+)
+_FREE_EDITION_HEADING = re.compile(
+    r"Free Edition \(v(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])\)"
+)
+_PORTABLE_BANNER = re.compile(
+    r"\|\s+v(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-]) \(portable\)"
+)
+_HEADER_VERSION = re.compile(
+    r"Version in header: v(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])"
+)
+_CURRENT_VERSION = re.compile(
+    r"Current version: \*\*v(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])\*\*"
+)
+_JSON_EDITION_FIELD = re.compile(r'"edition"\s*:\s*"([^"]*)"')
+_AS_EDITION = re.compile(r"as \*\*v(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])\*\*")
+_LAUNCH_STATUS = re.compile(
+    r"Public on GitHub\. v(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])"
+)
+_L3_STAMP = re.compile(r"L3 stamp `v(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])`")
+_PUBLISH_NAME = re.compile(
+    r"Free IP Sentinel \(v(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])\)"
+)
+_SKILL_BODY_STAMPS = (
+    ("free-edition heading", _FREE_EDITION_HEADING),
+    ("portable banner", _PORTABLE_BANNER),
+    ("header version", _HEADER_VERSION),
+    ("current version", _CURRENT_VERSION),
+)
+_EXTRA_SLOTS = {
+    "EXEC-SUMMARY.md": (("tip", _AS_EDITION),),
+    "LAUNCH.md": (("status", _LAUNCH_STATUS),),
+    "HITL-LUNCH.md": (("L3 stamp", _L3_STAMP),),
+    "openai-gpt-package/HOW_TO_CREATE_IN_OPENAI.md": (("title", _PUBLISH_NAME),),
+}
 _EMPTY_CHECKPOINT = "Checkpoint (with )"
 
 
@@ -178,18 +237,66 @@ def license_pin_error(rel: str, text: str) -> str | None:
     return None
 
 
+def required_slot_error(
+    rel: str,
+    text: str,
+    label: str,
+    pattern: re.Pattern[str],
+) -> str | None:
+    """Fail when a named stamp slot is missing or is not VERSION.
+
+    A later historical token that does not match the slot stays allowed.
+    """
+    found = pattern.findall(text)
+    if not found or any(item != VERSION for item in found):
+        return f"{rel} {label} edition is not {VERSION}"
+    return None
+
+
+def json_edition_pin_error(rel: str, text: str) -> str | None:
+    """The JSON edition field is the stamp. A matching zip name is not a substitute."""
+    found = _JSON_EDITION_FIELD.findall(text)
+    if not found or any(item != VERSION for item in found):
+        return f"{rel} edition is not {VERSION}"
+    return None
+
+
+def extra_pin_errors(rel: str, text: str) -> list[str]:
+    """Stamp slots that are not the first token and not the metadata version."""
+    errors: list[str] = []
+    if rel in PIN_SKILLS or rel == "claude-skill/SKILL.md":
+        for label, pattern in _SKILL_BODY_STAMPS:
+            message = required_slot_error(rel, text, label, pattern)
+            if message:
+                errors.append(message)
+    if rel in PIN_SKILLS:
+        message = required_slot_error(rel, text, "short-description", _SHORT_DESC_EDITION)
+        if message:
+            errors.append(message)
+    for label, pattern in _EXTRA_SLOTS.get(rel, ()):
+        message = required_slot_error(rel, text, label, pattern)
+        if message:
+            errors.append(message)
+    return errors
+
+
 def edition_pin_errors(root: Path) -> list[str]:
     """Fail when the current edition drifts across the public pins.
 
-    SKILL.md metadata, each LICENSE.md, the first token of each host README,
-    and the CHANGELOG tip must all be VERSION. A later historical token in a
-    README or the changelog is not the pin. A suffixed token is not VERSION.
+    SKILL.md metadata and display stamps, each LICENSE.md, the first token of
+    each host README and other lead stamps, the JSON edition field, and the
+    CHANGELOG tip must all be VERSION. A later historical token in a README,
+    EXEC-SUMMARY, HITL, or the changelog is not the pin. A suffixed token is
+    not VERSION. Template titles under references/v05-*.md and the evals.md
+    document title are not skill stamps.
     """
     errors: list[str] = []
     checks = (
         [(metadata_pin_error, rel) for rel in PIN_SKILLS]
         + [(license_pin_error, rel) for rel in PIN_LICENSES]
         + [(readme_pin_error, rel) for rel in PIN_READMES]
+        + [(readme_pin_error, rel) for rel in PIN_LEADS]
+        + [(json_edition_pin_error, rel) for rel in PIN_JSON_EDITION]
         + [(changelog_pin_error, "CHANGELOG.md")]
     )
     for check, rel in checks:
@@ -205,6 +312,7 @@ def edition_pin_errors(root: Path) -> list[str]:
         message = check(rel, text)
         if message:
             errors.append(message)
+        errors.extend(extra_pin_errors(rel, text))
     return errors
 
 

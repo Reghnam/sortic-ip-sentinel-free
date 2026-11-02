@@ -355,6 +355,98 @@ class ReleaseResidualTests(unittest.TestCase):
             "README.md edition is not " + HYGIENE.VERSION,
         )
 
+    def test_readme_mismatch_fails_the_ci_pin(self) -> None:
+        """CI runs check-hygiene.py, which fails when edition_pin_errors is non-empty."""
+        stale = "0.5." + "77" + "-free"
+        text = "edition " + stale + "\nlater " + HYGIENE.VERSION + "\n"
+        message = "README.md edition is not " + HYGIENE.VERSION
+        self.assertEqual(HYGIENE.readme_pin_error("README.md", text), message)
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            (root / "README.md").write_text(text, encoding="utf-8")
+            errors = HYGIENE.edition_pin_errors(root)
+        self.assertIn(message, errors)
+
+    def test_bot_template_edition_mismatch_fails_while_zip_matches(self) -> None:
+        """A stale JSON edition fails even when the zip name is already current."""
+        stale = "0.5." + "77" + "-free"
+        zip_name = "free-ip-sentinel-" + "grok" + "-v" + HYGIENE.VERSION + ".zip"
+        text = (
+            '{"edition":"'
+            + stale
+            + '","skills":[{"source_zip":"'
+            + zip_name
+            + '"}]}\n'
+        )
+        self.assertEqual(HYGIENE.zip_edition(zip_name), HYGIENE.VERSION)
+        message = "grok-bot-share/bot-template.json edition is not " + HYGIENE.VERSION
+        self.assertEqual(
+            HYGIENE.json_edition_pin_error("grok-bot-share/bot-template.json", text),
+            message,
+        )
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            share = root / "grok-bot-share"
+            share.mkdir()
+            (share / "bot-template.json").write_text(text, encoding="utf-8")
+            errors = HYGIENE.edition_pin_errors(root)
+            zip_errors = HYGIENE.zip_edition_errors(root)
+        self.assertIn(message, errors)
+        self.assertEqual(zip_errors, [])
+
+    def test_exec_summary_stale_lead_fails(self) -> None:
+        stale = "0.5." + "77" + "-free"
+        text = "# Exec summary v" + stale + "\nTip: as **v" + HYGIENE.VERSION + "**\n"
+        self.assertEqual(
+            HYGIENE.readme_pin_error("EXEC-SUMMARY.md", text),
+            "EXEC-SUMMARY.md edition is not " + HYGIENE.VERSION,
+        )
+
+    def test_exec_summary_tip_slot_mismatch_fails(self) -> None:
+        stale = "0.5." + "77" + "-free"
+        text = (
+            "# Exec summary v"
+            + HYGIENE.VERSION
+            + "\nOrigin v"
+            + stale
+            + " rules still stand.\nTip: as **v"
+            + stale
+            + "**\n"
+        )
+        self.assertIsNone(HYGIENE.readme_pin_error("EXEC-SUMMARY.md", text))
+        self.assertEqual(
+            HYGIENE.required_slot_error("EXEC-SUMMARY.md", text, "tip", HYGIENE._AS_EDITION),
+            "EXEC-SUMMARY.md tip edition is not " + HYGIENE.VERSION,
+        )
+
+    def test_launch_status_mismatch_fails(self) -> None:
+        stale = "0.5." + "77" + "-free"
+        text = (
+            "# LAUNCH v"
+            + HYGIENE.VERSION
+            + "\nPublic on GitHub. v"
+            + stale
+            + " patched.\n"
+        )
+        self.assertIsNone(HYGIENE.readme_pin_error("LAUNCH.md", text))
+        self.assertEqual(
+            HYGIENE.required_slot_error("LAUNCH.md", text, "status", HYGIENE._LAUNCH_STATUS),
+            "LAUNCH.md status edition is not " + HYGIENE.VERSION,
+        )
+
+    def test_skill_header_mismatch_fails(self) -> None:
+        stale = "0.5." + "77" + "-free"
+        text = "Free Edition (v" + stale + ")\n"
+        self.assertEqual(
+            HYGIENE.required_slot_error(
+                "SKILL.md",
+                text,
+                "free-edition heading",
+                HYGIENE._FREE_EDITION_HEADING,
+            ),
+            "SKILL.md free-edition heading edition is not " + HYGIENE.VERSION,
+        )
+
     def test_changelog_tip_ignores_later_headings(self) -> None:
         stale = "0.5." + "52" + "-free"
         current = "## [" + HYGIENE.VERSION + "] — 2026-10-29\n## [" + stale + "] — 2026-10-07\n"
@@ -387,6 +479,10 @@ class ReleaseResidualTests(unittest.TestCase):
         self.assertIn("LICENSE.md edition pin missing", errors)
         self.assertIn("README.md edition pin missing", errors)
         self.assertIn("CHANGELOG.md edition pin missing", errors)
+        self.assertIn("EXEC-SUMMARY.md edition pin missing", errors)
+        self.assertIn("LAUNCH.md edition pin missing", errors)
+        self.assertIn("grok-bot-share/bot-template.json edition pin missing", errors)
+        self.assertIn("claude-skill/SKILL.md edition pin missing", errors)
 
     def test_activation_separates_exposure_from_debug(self) -> None:
         skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
