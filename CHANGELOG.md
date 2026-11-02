@@ -12,6 +12,18 @@ The top edition heading is the current edition. A later commit may edit that tip
 
 ## [0.5.81-free] — 2026-11-01
 
+### 2 Nov read (same edition)
+
+Recorded under this tip. Not a new edition. Pins stay **v0.5.81-free**. A content observation does not bump the edition. This note does not republish the 1 Nov rules. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+
+- **OpenAI (first):** GitHub releases Latest endpoint this read is still **0.166.0** (29 Oct, not a prerelease). The first API rows are prereleases of the next number, published 1 Nov. **A 1 Nov prerelease is not a 1 Nov stable CLI.** The top rows are not the Latest badge. Do not copy the alpha tag. The alpha body is empty. **An empty alpha body is not a policy.** No stable tag dated 1 Nov. No stable tag dated 2 Nov. Do not copy a model name. The 1 Nov sentence that the first row was the stable tag is that day's read, not this read.
+- **Anthropic (second):** Raw CHANGELOG.md still leads with `## 2.1.316` and has no date on that heading. The next heading is still `## 2.1.314`. There is no **2.1.317**. GitHub releases Latest is still **v2.1.316** (31 Oct). **A later read of the same raw heading is not a new binary.** Do not invent a 2 Nov heading. Do not invent a date on the raw heading.
+- **Grok Build (third):** This curl of the public changelog returned **403**. A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A 403 and that same line are one version. Do not invent a stable line after 1.0.70. Host changelog files past the public line still exist. **A 404 on the next file is not a version.** Do not copy a later number. A host file the public line does not lead with is not the CLI.
+- **Mailbox:** an operator backup dated 2 Nov whose subject says done (material). A done subject is not a publish. A material status is not a skill bump. The note says this tip was not rechecked. **Not rechecked is not a wipe.** Do not copy plan wording. Do not copy the pack link. Do not open it. An index left unedited is not a publish.
+- **Chats:** no conversation_search. A title search returned only the older W38 zip. **An older zip is not a newer grok-export.** Do not copy a file id. No newer grok-export than W38.
+- Evals stay **281**. No new eval heading. No new T number. The checker body stays 499 lines.
+
+
 Absorbed this Grok Build turn after origin **v0.5.80-free** was already on main (a status-watch repeat is not a new CLI; the raw heading has no date; first-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
 
 ### OpenAI (first)

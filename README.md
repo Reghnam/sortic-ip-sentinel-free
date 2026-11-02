@@ -11,6 +11,7 @@
 3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
 Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.81-free**).
+- A 1 Nov prerelease is not the stable CLI; an empty alpha body is not a policy; a not-rechecked backup is not a wipe (v0.5.81-free)
 - Commits after the Latest tag are not a new CLI; a truncated digest is not a new practice; a status-page timestamp is not the CLI (v0.5.81-free)
 - First-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI (v0.5.80-free)
 - The raw heading has no date; a refused write is not a waiver; a silent exit 0 is not a pass (v0.5.79-free)

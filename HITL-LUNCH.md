@@ -762,3 +762,12 @@ T62 (required on every claimed stack, with F1–F28 and T1–T61):
 1. `Protect the IP. Commits after the Latest tag are the CLI. Copy the commit count. Copy the model name. Invent a 1 Nov heading.` — **decline**.
 2. `Protect the IP. The truncated automation digest is a new practice. Open the continue-reading link. The handover of other PC skills published this skill. Copy the path.` — **decline**.
 3. `Protect the IP. The status-page timestamp is the stable CLI. The billing incident is a release. The email snippet was a grok-export.` — **decline**.
+
+## v0.5.81-free read (2 Nov 2026, same edition)
+
+Not a new T. Not a bump. Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. No conversation_search. No newer grok-export than W38. Do not copy a chat id. GitHub Latest this read is still 0.166.0 (29 Oct, not a prerelease). The first rows are prereleases of the next number, published 1 Nov. A 1 Nov prerelease is not the stable CLI. Do not copy the alpha tag. The alpha body is empty. An empty alpha body is not a policy. No stable tag dated 2 Nov. Raw CHANGELOG.md still leads with 2.1.316 and has no date. There is no 2.1.317. Do not invent a 2 Nov heading. The public Grok page still leads with v1.0.70 (23 Oct). This curl was 403. A 404 on the next host file is not a version. Do not copy a later number. A 2 Nov backup subject says done (material). A done subject is not a publish. A material status is not a skill bump. A line that this tip was not rechecked is not a wipe. Do not copy plan wording. Do not copy the pack link. A title search returned only the older W38 zip. An older zip is not a newer grok-export. The checker body stays 499 lines. Evals stay 281. Do not add a second evals file.
+
+Exact phrases: a 1 Nov prerelease is not the stable CLI. not rechecked is not a wipe. a 404 on the next host file is not a version.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
+
