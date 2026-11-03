@@ -771,3 +771,11 @@ Exact phrases: a 1 Nov prerelease is not the stable CLI. not rechecked is not a 
 
 No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
 
+
+## v0.5.81-free read (3 Nov 2026, same edition)
+
+Not a new T. Not a bump. Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. No conversation_search. No newer grok-export than W38. Do not copy a chat id. GitHub Latest this read is still 0.166.0 (29 Oct, not a prerelease). The first API row is a prerelease of the next number, published 3 Nov. A 3 Nov prerelease is not the stable CLI. Do not copy the alpha tag. The alpha body is a title line only. A title-only alpha body is not a policy. No stable tag dated 3 Nov. Raw CHANGELOG.md now leads with 2.1.317 and has no date. The next heading is 2.1.316. GitHub releases Latest is v2.1.317 (3 Nov). Do not invent a date on that heading. Do not copy the changelog bullets. The 2 Nov sentence that there is no 2.1.317 is that day's read. Unasked connectors on a scheduled task are not a grant. A web or shell send of an account email is a hold until asked. This curl of the public Grok changelog returned 403. Do not replace the recorded line v1.0.70 (23 Oct). A 403 on the next host file is not a version. Do not copy a later number. A night-check path is not this skill. Do not copy the path. A vendor post-training note is not this skill. Do not copy it. Post-training of invention-grade chats is still a disclosure. A failed freshness run is not a corpus publish. A drive timeout is not a newer grok-export. The checker body stays 499 lines. Evals stay 281. Do not add a second evals file.
+
+Exact phrases: a 3 Nov prerelease is not the stable CLI. the raw heading has no date. a 403 on the next host file is not a version.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
