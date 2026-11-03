@@ -3,9 +3,9 @@
   "scope": "pointer_only_not_advice",
   "instrument_label": "EUIPO SME Fund, IP Scan voucher",
   "window_status": "closed_reopening_expected",
-  "window_note": "UNVERIFIED: When the national office page was read on 2026-10-04, it described vouchers 1 and 2 as closed on 23 April 2026 and described a reopening as expected in November 2026 with no day published, while the EUIPO side is UNVERIFIED.",
-  "last_verified": null,
-  "last_verified_note": "UNVERIFIED: a human sets this after reading both live pages",
+  "window_note": "On 2026-10-27 UPV described voucher 1 (IP Scan) and 2 temporarily closed since 23 April 2026, reopening expected in November 2026, no day, voucher 3 and 4 open, voucher 5 (CIGI) open since 30 June 2026. EUIPO described 1 and 2 unavailable for new applications (funds exhausted), no reopening date, visit the page regularly, 3 and 4 still open, CIGI link, programme 2 February 2026 to 4 December 2026.",
+  "last_verified": "2026-10-27",
+  "last_verified_note": "Human (Sameth) verified both live pages on 2026-10-27 (Europe/Rome): the national office page (UPV) and the EUIPO SME Fund 2026 page. The call text GR/001/26 was not on the EUIPO page.",
   "last_verified_by": "human",
   "stale_after_days": 14,
   "sources": [
@@ -19,9 +19,7 @@
     }
   ],
   "unverified": [
-    "UNVERIFIED: every EUIPO date",
-    "UNVERIFIED: the status on the EUIPO side",
-    "UNVERIFIED: the call text GR/001/26"
+    "UNVERIFIED: the EUIPO call text GR/001/26 date was not on the page"
   ],
   "facts_allowed": [
     "Only a provider listed by the national office can deliver the official IP Scan.",
