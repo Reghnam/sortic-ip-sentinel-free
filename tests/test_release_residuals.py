@@ -246,7 +246,7 @@ class ReleaseResidualTests(unittest.TestCase):
     def test_license_editions_match_version(self) -> None:
         self.assertEqual(HYGIENE.license_version_errors(ROOT), [])
         edition = "v" + HYGIENE.VERSION
-        paid = "(with paid paths), see the main skill."
+        paid = "For the SorticAI IP Checkpoint paid edition, see the main skill."
         completed = subprocess.run(
             ["git", "ls-files", "-z"],
             cwd=ROOT,
