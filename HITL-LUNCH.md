@@ -779,3 +779,12 @@ Not a new T. Not a bump. Do not resend the mailed try pack v0.5.36. Do not push 
 Exact phrases: a 3 Nov prerelease is not the stable CLI. the raw heading has no date. a 403 on the next host file is not a version.
 
 No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
+
+
+## v0.5.81-free read (4 Nov 2026, same edition)
+
+Not a new T. Not a bump. Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. No conversation_search. No newer grok-export than W38. Do not copy a chat id. GitHub Latest this read is still 0.166.0 (29 Oct, not a prerelease). The first API row is a prerelease published 4 Nov. A 4 Nov prerelease is not the stable CLI. Do not copy the alpha tag. The alpha body is a title line only. A title-only alpha body is not a policy. No stable tag dated 4 Nov. The 3 Nov sentence that the first row was a 3 Nov prerelease is that day's read. Raw CHANGELOG.md now leads with 2.1.318 and has no date. The next heading is 2.1.317. GitHub releases Latest is v2.1.318 (4 Nov). Do not invent a date on that heading. Do not copy the changelog bullets. The 3 Nov sentence that the lead is 2.1.317 is that day's read. A sign-in end date in headless JSON is not a leave-behind. A recorded answer to turn a session-written mod on is not a publish. This curl of the public Grok changelog returned 403. A repeat 403 is not a move. Do not replace the recorded line v1.0.70 (23 Oct). A digest that opens with NOTIFY_BLOCKED is not a new practice. A mid-word cutoff of the six-part line is not the six sections. Do not complete it. A red main on another repo is not this skill. Do not copy a run id. Continue-reading returned no body. A login wall is not the chat. The checker body stays 499 lines. Evals stay 281. Do not add a second evals file.
+
+Exact phrases: a 4 Nov prerelease is not the stable CLI. a sign-in end date in headless JSON is not a leave-behind. a repeat 403 is not a move.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
