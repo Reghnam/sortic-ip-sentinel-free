@@ -788,3 +788,12 @@ Not a new T. Not a bump. Do not resend the mailed try pack v0.5.36. Do not push 
 Exact phrases: a 4 Nov prerelease is not the stable CLI. a sign-in end date in headless JSON is not a leave-behind. a repeat 403 is not a move.
 
 No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
+
+
+## v0.5.81-free read (6 Nov 2026, same edition)
+
+Not a new T. Not a bump. Do not resend the mailed try pack v0.5.36. Do not push packs. Marketplace stays Hold. No conversation_search. No newer grok-export than W38. Do not copy a chat id. GitHub Latest this read is 0.167.0 (6 Nov, not a prerelease). The first API row is that same stable tag. A stable tag dated 6 Nov is the stable CLI. The 5 Nov sentence that Latest is still 0.166.0 is that day's read. The 5 Nov sentence that the first row is a prerelease is that day's read. A higher prerelease of the next number is not the stable CLI. Do not copy that alpha tag. The alpha body is a title line only. A title-only alpha body is not a policy. The stable body is not a title line. Do not copy it. A feature list in the stable body is not a policy. Do not copy issue numbers from that body. A compare link in that body is not a leave-behind. Do not copy a model name. Raw CHANGELOG.md still leads with 2.1.318 and has no date. The next heading is still 2.1.317. GitHub releases Latest is still v2.1.318 (4 Nov). Do not invent a 6 Nov heading. Do not invent a date on that heading. Do not copy the changelog bullets. This curl of the public Grok changelog returned 403. A page summary named the recorded line and an older line. A conflicting summary is not a new CLI. Do not replace the recorded line v1.0.70 (23 Oct). Do not copy the older line. A repeat 403 is not a move. A 6 Nov sweep on another repo is not this skill. Do not copy an hour. Do not copy a commit. Do not copy a serial. Do not invent NEXT. Main green on that repo is not this skill's publish. No new headless practice in this mailbox. A handover of other PC skills is still not this skill. Do not copy a path. Drive search timed out. A drive timeout is not a wipe of W38. The checker body stays 499 lines. Evals stay 281. Do not add a second evals file.
+
+Exact phrases: a stable tag dated 6 Nov is the stable CLI. a feature list in the stable body is not a policy. a sweep on another repo is not this skill. a conflicting summary is not a new CLI.
+
+No names. No amounts. No plan names. No marks. No issue numbers. No folder ids. No share URLs. No file numbers. No serials.
