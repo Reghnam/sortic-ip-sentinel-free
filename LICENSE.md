@@ -13,4 +13,4 @@ See `SKILL.md` for full guardrails and terms.
 
 No commercial use of the "SorticAI" name or branding without separate permission.
 
-For the full SorticAI IP Checkpoint (with paid paths), see the main skill.
+For the SorticAI IP Checkpoint paid edition, see the main skill.
