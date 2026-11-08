@@ -11,6 +11,7 @@
 3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
 Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.81-free**).
+- A 7 Nov prerelease is not the stable CLI; a later read of the same raw 2.1.319 heading is not a new binary; a 7 Nov night note on another repo is not this skill; a conflicting summary is not a new CLI; a W38 title hit is not a newer grok-export (v0.5.81-free)
 - A prerelease above Latest is not the stable CLI; the raw heading is 2.1.319 with no date; the 6 Nov sentence that the lead is 2.1.318 is that day's read; an empty title search is not a grok-export (v0.5.81-free)
 - A stable tag dated 6 Nov is the CLI (**0.167.0**); a higher prerelease is not; a stable body is not a policy; a sweep on another repo is not this skill; a conflicting summary is not a new CLI (v0.5.81-free)
 - A 5 Nov prerelease is not the stable CLI; a later read of the same raw 2.1.318 heading is not a new binary; a queue-exhausted note on another repo is not this skill; a repeat 403 is not a move (v0.5.81-free)
