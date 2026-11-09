@@ -10,87 +10,11 @@ A content-only CLI or ecosystem observation tip must not bump the edition. Recor
 
 The top edition heading is the current edition. A later commit may edit that tip. Do not rewrite git history to change an older heading.
 
+Content notes and changelog notes go through a pull request. Rebase-merge that pull request. Do not push them directly to main.
+
 ## [0.5.81-free] — 2026-11-01
 
-### 8 Nov read (same edition)
-
-Recorded under this tip. Not a new edition. Pins stay **v0.5.81-free**. A content observation does not bump the edition. This note does not republish the 7 Nov rules. No newer grok-export. **No conversation_search.** A title search returned W38 only. A W38 hit is not a newer export. One drive search timed out. A drive timeout is not a wipe of W38. Do not copy a chat id, an automation id, a team id, or a file id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
-
-- **OpenAI (first):** GitHub releases Latest endpoint this read is still **0.167.0** (6 Nov, not a prerelease). **A later read of the same stable tag is not a new CLI.** The first API row is a prerelease published 7 Nov. **A prerelease above Latest is not the stable CLI.** The 7 Nov sentence that the first API row is a prerelease published 6 Nov is that day's read, not this read. Do not copy that alpha tag. The alpha body is a title line only. **A title-only alpha body is not a policy.** The stable body is not a title line. Do not copy it. **A feature list in the stable body is not a policy.** Do not copy issue numbers from that body. A compare link in that body is not a leave-behind. Do not copy a model name. No stable tag dated 8 Nov.
-- **Anthropic (second):** Raw CHANGELOG.md still leads with `## 2.1.319` and has no date on that heading. The next heading is still `## 2.1.318`. GitHub releases Latest is still **v2.1.319** (6 Nov, not a prerelease). **A later read of the same raw heading is not a new binary.** The 7 Nov sentence that a new raw heading is a new binary is that day's read, not this read. Do not invent an 8 Nov heading. Do not invent a date on the raw heading. Do not copy the changelog bullets. A sign-in end date in headless JSON is still not a leave-behind. A recorded answer to turn a session-written mod on is still not a publish. This note does not republish those.
-- **Grok Build (third):** This curl of `x.ai/changelog/build` returned **403**. **A repeat 403 is not a move.** A page summary this run named the recorded line **v1.0.70 · 23 Oct 2026** and also an older line. **A conflicting summary is not a new CLI.** Do not replace the recorded public line. Do not copy the older line. The 7 Nov sentence that this tip did not read a page summary is that day's read, not this read. An npm search hit is not the public changelog line. Do not copy a package version.
-- **Mailbox:** no operator note dated 8 Nov about this skill. The newest IP note is a 7 Nov night note on another repo (main red after an end-of-day sidecar). **A red main on another repo is not this skill.** The 7 Nov sentence that there is no operator note dated 7 Nov is that day's read, not this read. Do not copy a run id. Do not copy a commit. Do not copy an hour. Do not copy a module token. Do not invent NEXT. A cloud-agent launch on that repo is not this skill's publish. Do not copy a model name. No new headless practice in this mailbox.
-- **Chats:** no conversation_search. A title search returned W38 only. **A W38 hit is not a newer grok-export.** The 7 Nov sentence that a title search returned no file is that day's read, not this read. Do not copy a file id. A drive timeout is not a wipe of W38. No newer grok-export than W38.
-- Evals stay **281**. No new eval heading. No new T number. The checker body stays 499 lines.
-
-### 7 Nov read (same edition)
-
-Recorded under this tip. Not a new edition. Pins stay **v0.5.81-free**. A content observation does not bump the edition. This note does not republish the 6 Nov rules. No newer grok-export. **No conversation_search.** A title search returned no file. An empty title search is not a grok-export and not a wipe of W38. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
-
-- **OpenAI (first):** GitHub releases Latest endpoint this read is still **0.167.0** (6 Nov, not a prerelease). **A later read of the same stable tag is not a new CLI.** The first API row is a prerelease published 6 Nov. **A prerelease above Latest is not the stable CLI.** The 6 Nov sentence that the first API row is that same stable tag is that day's read, not this read. Do not copy that alpha tag. The alpha body is a title line only. **A title-only alpha body is not a policy.** The stable body is not a title line. Do not copy it. **A feature list in the stable body is not a policy.** Do not copy issue numbers from that body. A compare link in that body is not a leave-behind. Do not copy a model name.
-- **Anthropic (second):** Raw CHANGELOG.md now leads with `## 2.1.319` and has no date on that heading. The next heading is `## 2.1.318`. GitHub releases Latest is **v2.1.319** (6 Nov, not a prerelease). **A new raw heading is a new binary.** The 6 Nov sentence that the lead is still **2.1.318** is that day's read, not this read. The 6 Nov sentence that Latest is still **v2.1.318** (4 Nov) is that day's read, not this read. Do not invent a 7 Nov heading. Do not invent a date on the raw heading. Do not copy the changelog bullets. A sign-in end date in headless JSON is still not a leave-behind. A recorded answer to turn a session-written mod on is still not a publish. This note does not republish those.
-- **Grok Build (third):** This curl of `x.ai/changelog/build` returned **403**. **A repeat 403 is not a move.** This tip did not read a page summary. Do not invent one. Do not replace the recorded public line **v1.0.70 · 23 Oct 2026** from a page this tip did not read. An npm search hit is not the public changelog line. Do not copy a package version.
-- **Mailbox:** no operator note dated 7 Nov about this skill. The newest IP note is still the 6 Nov sweep on another repo. **A later read of that same sweep is not this skill.** Do not copy an hour. Do not copy a commit. Do not copy a serial. Do not invent NEXT. A native mailbox connector timeout is not a wipe of the account search that returned. No new headless practice in this mailbox.
-- **Chats:** no conversation_search. A title search returned no file. **An empty title search is not a grok-export** and not a wipe of W38. The 6 Nov sentence that drive search timed out is that day's read, not this read. No newer grok-export than W38.
-- Evals stay **281**. No new eval heading. No new T number. The checker body stays 499 lines.
-
-### 6 Nov read (same edition)
-
-Recorded under this tip. Not a new edition. Pins stay **v0.5.81-free**. A content observation does not bump the edition. This note does not republish the 5 Nov rules. No newer grok-export. **No conversation_search.** Drive search timed out. A drive timeout is not a wipe of W38. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
-
-- **OpenAI (first):** GitHub releases Latest endpoint this read is **0.167.0** (6 Nov, not a prerelease). The first API row is that same stable tag. **A stable tag dated 6 Nov is the stable CLI.** The 5 Nov sentence that Latest is still **0.166.0** is that day's read, not this read. The 5 Nov sentence that the first row is a prerelease is that day's read, not this read. A higher prerelease of the next number is still not the stable CLI. Do not copy that alpha tag. The alpha body is a title line only. **A title-only alpha body is not a policy.** The stable body is not a title line. Do not copy it. **A feature list in the stable body is not a policy.** Do not copy issue numbers from that body. A compare link in that body is not a leave-behind. Do not copy a model name.
-- **Anthropic (second):** Raw CHANGELOG.md still leads with `## 2.1.318` and has no date on that heading. The next heading is still `## 2.1.317`. GitHub releases Latest is still **v2.1.318** (4 Nov, not a prerelease). **A later read of the same raw heading is not a new binary.** Do not invent a 6 Nov heading. Do not invent a date on the raw heading. Do not copy the changelog bullets. A sign-in end date in headless JSON is still not a leave-behind. A recorded answer to turn a session-written mod on is still not a publish. This note does not republish those.
-- **Grok Build (third):** This curl of `x.ai/changelog/build` returned **403**. A page summary this run named the recorded line **v1.0.70 · 23 Oct 2026** and also an older line. **A conflicting summary is not a new CLI.** Do not replace the recorded public line. Do not copy the older line. **A repeat 403 is not a move.**
-- **Mailbox:** the newest note is a 6 Nov sweep on another repo. **A sweep on another repo is not this skill.** Do not copy an hour. Do not copy a commit. Do not copy a serial. Main green on that repo is not this skill's publish. Do not invent NEXT. The 5 Nov sentence that the newest IP note is the 4 Nov sweep is that day's read, not this read. An afternoon note after that read is not a wipe of that read and is still not this skill. No new headless practice in this mailbox. A handover of other PC skills is still not this skill. Do not copy a path.
-- **Chats:** no conversation_search. Drive search timed out. **A drive timeout is not a wipe of W38.** No newer grok-export than W38.
-- Evals stay **281**. No new eval heading. No new T number. The checker body stays 499 lines.
-
-### 5 Nov read (same edition)
-
-Recorded under this tip. Not a new edition. Pins stay **v0.5.81-free**. A content observation does not bump the edition. This note does not republish the 4 Nov rules. No newer grok-export. **No conversation_search.** A title search returned no file. An empty title search is not a grok-export and not a wipe of W38. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
-
-- **OpenAI (first):** GitHub releases Latest endpoint this read is still **0.166.0** (29 Oct, not a prerelease). The first API row is a prerelease published 5 Nov. **A 5 Nov prerelease is not the stable CLI.** Do not copy the alpha tag. The alpha body is a title line only. **A title-only alpha body is not a policy.** No stable tag dated 5 Nov. A higher prerelease still above Latest is not the stable CLI. Do not copy that tag. Do not copy a model name. The 4 Nov sentence that the first row was a 4 Nov prerelease is that day's read, not this read.
-- **Anthropic (second):** Raw CHANGELOG.md still leads with `## 2.1.318` and has no date on that heading. The next heading is still `## 2.1.317`. GitHub releases Latest is still **v2.1.318** (4 Nov, not a prerelease). **A later read of the same raw heading is not a new binary.** Do not invent a 5 Nov heading. Do not invent a date on the raw heading. Do not copy the changelog bullets. The 3 Nov sentence that the lead is **2.1.317** is that day's read, not this read. A sign-in end date in headless JSON is still not a leave-behind. A recorded answer to turn a session-written mod on is still not a publish. This note does not republish those.
-- **Grok Build (third):** This curl of `x.ai/changelog/build` returned **403**. **A repeat 403 is not a move.** Do not replace the recorded public line **v1.0.70 · 23 Oct 2026** from a page this tip did not read. A package index that still stops at that line is not a new CLI. Do not copy a later number.
-- **Mailbox:** no operator note dated 5 Nov about this skill. The newest IP note is still the 4 Nov sweep on another repo. **A queue-exhausted note on another repo is not this skill.** Do not copy an hour. Do not invent NEXT. A stalled lane is not a publish. A declined calendar is not a skill note. A field digest is not a grok-export. Do not copy a candidate.
-- **Chats:** no conversation_search. A title search returned no file. **An empty title search is not a grok-export** and not a wipe of W38. No newer grok-export than W38.
-- Evals stay **281**. No new eval heading. No new T number. The checker body stays 499 lines.
-
-### 4 Nov read (same edition)
-
-Recorded under this tip. Not a new edition. Pins stay **v0.5.81-free**. A content observation does not bump the edition. This note does not republish the 3 Nov rules. No newer grok-export. **No conversation_search.** Continue-reading chats returned no body. A login wall is not the chat. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
-
-- **OpenAI (first):** GitHub releases list this read: the first row is a prerelease published 4 Nov. **A 4 Nov prerelease is not the stable CLI.** The first non-prerelease in that list is still **0.166.0** (29 Oct). The public Latest page this read is still that tag. No stable tag dated 4 Nov. Do not copy the alpha tag. The alpha body is a title line only. **A title-only alpha body is not a policy.** Do not copy a model name. The 3 Nov sentence that the first row was a 3 Nov prerelease is that day's read, not this read.
-- **Anthropic (second):** Raw CHANGELOG.md now leads with `## 2.1.318` and has no date on that heading. The next heading is `## 2.1.317`. GitHub releases Latest is **v2.1.318** (4 Nov, not a prerelease). **Do not invent a date on the raw heading.** Do not copy the changelog bullets. The 3 Nov sentence that the lead is **2.1.317** is that day's read, not this read. A sign-in end date in headless JSON is not a leave-behind. Do not copy it. A recorded answer to turn a session-written mod on is not a publish.
-- **Grok Build (third):** This curl of `x.ai/changelog/build` returned **403**. **A repeat 403 is not a move.** Do not replace the recorded public line **v1.0.70 · 23 Oct 2026** from a page this tip did not read. Do not copy a later number.
-- **Mailbox:** today's automation digest opens with NOTIFY_BLOCKED and then repeats the shared contract. **A digest that opens with NOTIFY_BLOCKED is not a new practice.** The six-part line is cut off mid-word. **A mid-word cutoff of the six-part line is not the six sections.** Do not complete it. A red main on another repo is not this skill. Do not copy a run id. Do not copy a commit. A direct push on that repo is not this skill's publish.
-- **Chats:** no conversation_search. Continue-reading returned no body. **A login wall is not the chat.** No newer grok-export than W38.
-- Evals stay **281**. No new eval heading. No new T number. The checker body stays 499 lines.
-
-### 3 Nov read (same edition)
-
-Recorded under this tip. Not a new edition. Pins stay **v0.5.81-free**. A content observation does not bump the edition. This note does not republish the 1 Nov or 2 Nov rules. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
-
-- **OpenAI (first):** GitHub releases Latest endpoint this read is still **0.166.0** (29 Oct, not a prerelease). The first API row is a prerelease of the next number, published 3 Nov. **A 3 Nov prerelease is not the stable CLI.** The top row is not the Latest badge. Do not copy the alpha tag. The alpha body is a title line only. **A title-only alpha body is not a policy.** No stable tag dated 3 Nov. Do not copy a model name. The 2 Nov sentence that the first rows were 1 Nov prereleases is that day's read, not this read.
-- **Anthropic (second):** Raw CHANGELOG.md now leads with `## 2.1.317` and has no date on that heading. The next heading is `## 2.1.316`. GitHub releases Latest is **v2.1.317** (3 Nov, not a prerelease). **Do not invent a date on the raw heading.** Do not copy the changelog bullets. The 2 Nov sentence that there is no **2.1.317** is that day's read, not this read. A scheduled task that gains connectors you did not ask for is not a grant. A web or shell call that would send an account email is a hold until asked.
-- **Grok Build (third):** This curl of `x.ai/changelog/build` returned **403**. Do not replace the recorded public line **v1.0.70 · 23 Oct 2026** from a page this tip did not read. A package index that still stops at that line is not a new CLI. **A 403 on the next host file is not a version.** Do not copy a later number. A third-party plugin note is not the CLI.
-- **Mailbox:** a night-check note that names a local path is not this skill. Do not copy the path. An hourly window is not a publish. A vendor note about post-training on your own data is not this skill. Do not copy it. Do not email it onward. Post-training of invention-grade chats is still a disclosure. A failed freshness run is not a corpus publish and not a wipe of this pin. A failed run on another repo is not this skill.
-- **Chats:** no conversation_search. Drive search timed out. **A drive timeout is not a wipe of the older export.** No newer grok-export than W38. Do not open a continue-reading link.
-- Evals stay **281**. No new eval heading. No new T number. The checker body stays 499 lines.
-
-### 2 Nov read (same edition)
-
-Recorded under this tip. Not a new edition. Pins stay **v0.5.81-free**. A content observation does not bump the edition. This note does not republish the 1 Nov rules. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
-
-- **OpenAI (first):** GitHub releases Latest endpoint this read is still **0.166.0** (29 Oct, not a prerelease). The first API rows are prereleases of the next number, published 1 Nov. **A 1 Nov prerelease is not a 1 Nov stable CLI.** The top rows are not the Latest badge. Do not copy the alpha tag. The alpha body is empty. **An empty alpha body is not a policy.** No stable tag dated 1 Nov. No stable tag dated 2 Nov. Do not copy a model name. The 1 Nov sentence that the first row was the stable tag is that day's read, not this read.
-- **Anthropic (second):** Raw CHANGELOG.md still leads with `## 2.1.316` and has no date on that heading. The next heading is still `## 2.1.314`. There is no **2.1.317**. GitHub releases Latest is still **v2.1.316** (31 Oct). **A later read of the same raw heading is not a new binary.** Do not invent a 2 Nov heading. Do not invent a date on the raw heading.
-- **Grok Build (third):** This curl of the public changelog returned **403**. A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A 403 and that same line are one version. Do not invent a stable line after 1.0.70. Host changelog files past the public line still exist. **A 404 on the next file is not a version.** Do not copy a later number. A host file the public line does not lead with is not the CLI.
-- **Mailbox:** an operator backup dated 2 Nov whose subject says done (material). A done subject is not a publish. A material status is not a skill bump. The note says this tip was not rechecked. **Not rechecked is not a wipe.** Do not copy plan wording. Do not copy the pack link. Do not open it. An index left unedited is not a publish.
-- **Chats:** no conversation_search. A title search returned only the older W38 zip. **An older zip is not a newer grok-export.** Do not copy a file id. No newer grok-export than W38.
-- Evals stay **281**. No new eval heading. No new T number. The checker body stays 499 lines.
-
-
-Absorbed this Grok Build turn after origin **v0.5.80-free** was already on main (a status-watch repeat is not a new CLI; the raw heading has no date; first-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+Absorbed this Grok Build turn after origin **v0.5.80-free** was already on main (a status-watch repeat is not a new CLI; the raw heading has no date; first-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
@@ -108,22 +32,19 @@ Absorbed this Grok Build turn after origin **v0.5.80-free** was already on main 
 
 - This curl of the public changelog returned **403**. A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A 403 and that same line are one version. Do not invent a stable line after 1.0.70.
 - **New:** a status-page timestamp (the history page said it was updated 1 Nov) is not a CLI. An ongoing billing incident is not a release. A status incident is still not a release.
-- **Mailbox:** an operator inbox digest repeats the open standard (description is the sole trigger; body stays lean; references load on demand). **A truncated automation digest is not a new practice.** Do not open the continue-reading link. Do not copy a chat id. An operator-inbox handover of other PC skills is not this skill and not a publish. Do not copy a path. It is not a sentinel note. A draft is not a sent note. Do not send it.
-- **Chats:** no conversation_search. Continue-reading was not opened. An email snippet is not the chat and not a grok-export. No newer grok-export than W38.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
 ### Shared
 
 - **Commits on main after the Latest tag are not a new CLI.** Do not copy a commit count. Do not copy a model name.
 - **The raw lead is still 2.1.316 and has no date.** A second read is not a new binary.
-- **A truncated automation digest is not a new practice.** A handover of other PC skills is not this skill. A status-page timestamp is not a CLI.
+- **A truncated automation digest is not a new practice.** A status-page timestamp is not a CLI.
 - Evals stay **281**. HITL F1–F28 + T1–T61 required. This tip adds T62 (commits after Latest + truncated digest + status-page timestamp). No new eval heading.
-- **Public changelog:** an operator inbox digest stays unnamed. Do not name an inbox or an email handle. A content-only observation does not bump the edition.
+- A content-only observation does not bump the edition.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.80-free] — 2026-10-31
 
-Absorbed this Grok Build turn after origin **v0.5.79-free** was already on main (the raw heading has no date; a refused write is not a waiver; a silent exit 0 is not a pass; a mailbox timeout is not a wipe). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+Absorbed this Grok Build turn after origin **v0.5.79-free** was already on main (the raw heading has no date; a refused write is not a waiver; a silent exit 0 is not a pass). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
@@ -148,21 +69,18 @@ Absorbed this Grok Build turn after origin **v0.5.79-free** was already on main 
 - This curl of the public changelog returned **403**. A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A 403 and that same line are one version. Do not invent a stable line after 1.0.70.
 - **New:** a host version file the public Latest line does not lead with is not a promotion. Do not copy that later number. Do not treat it as the stable CLI.
 - **New:** a status-page incident is not a release. Degraded service is not a version bump.
-- **Mailbox:** no operator-inbox skill note dated 31 Oct. The received mail after 24 Oct is still the 27 Oct sales-rep link and the 26 Oct backup whose subject says done. Seeing the sales-rep link again is not a new publish. Do not copy it. Do not tweet it. A done subject is not a publish. A 30 Oct name-trend note is not a filing and not a skill note. Nothing decided is not owner approval. Do not copy a domain. A draft is not a sent note. Do not send it. Share and compensation threads stay uncopied. Do not copy a percent or a name. This tip did not read those bodies.
-- **Chats:** no conversation_search. One drive search timed out. A title search for a grok-export returned no file. **An empty title search is not a grok-export** and not a wipe of W38. Do not dump chat bodies.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
 ### Shared
 
 - **A status-watch repeat is not a new CLI.** Do not copy a model name.
 - **The raw lead is 2.1.316 and has no date.** First-match is not the whole policy. A Read allow is not an upload grant.
-- **A host file the public Latest line does not lead with is not the CLI.** An empty title search is not a grok-export. A draft is not a sent note.
+- **A host file the public Latest line does not lead with is not the CLI.** A draft is not a sent note.
 - Evals stay **281**. HITL F1–F28 + T1–T60 required. This tip adds T61 (first-match + raw 2.1.316 + host file). No new eval heading.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.79-free] — 2026-10-30
 
-Absorbed this Grok Build turn after origin **v0.5.78-free** was already on main (a later non-prerelease tag is the stable CLI; a missing number between headings is not a wipe; a 403 and the same public line are one version; a sales-rep link is not a skill note). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+Absorbed this Grok Build turn after origin **v0.5.78-free** was already on main (a later non-prerelease tag is the stable CLI; a missing number between headings is not a wipe; a 403 and the same public line are one version). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
@@ -179,20 +97,16 @@ Absorbed this Grok Build turn after origin **v0.5.78-free** was already on main 
 ### Grok Build (third)
 
 - A page read this run still leads with **v1.0.70 · 23 Oct 2026**. A direct curl returned **403**. A 403 and that same line are still one version. Do not invent a stable line after 1.0.70. Do not copy a third-party later number.
-- **Mailbox:** this run's operator-inbox search timed out. **A timeout is not a wipe of the earlier search and not a new mail.** Do not invent a newer operator-inbox note. Do not republish the sales-rep link. Do not tweet it.
-- **Chats:** no conversation_search. Drive search this run timed out. A timeout is not a grok-export and not a wipe of the earlier unfinished title search. Do not dump chat bodies. No newer grok-export than W38.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
 ### Shared
 
 - **The raw heading has no date.** Do not invent one. A refused write is not a waiver. A silent exit 0 is not a pass.
-- **A later mailbox timeout is not a wipe of the earlier search.** A drive timeout is not a grok-export.
-- Evals stay **281**. HITL F1–F28 + T1–T59 required. This tip adds T60 (raw heading + refused write + mailbox timeout). No new eval heading.
+- Evals stay **281**. HITL F1–F28 + T1–T59 required. This tip adds T60. No new eval heading.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.78-free] — 2026-10-30
 
-Absorbed this Grok Build turn after origin **v0.5.77-free** was already on main (the top row is not the Latest badge when that row is a pre-release; two URLs that return one generated page are one read; a done backup is not a publish). This tip does not republish those. No newer grok-export. **No conversation_search.** Drive title search did not finish. Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+Absorbed this Grok Build turn after origin **v0.5.77-free** was already on main (the top row is not the Latest badge when that row is a pre-release; two URLs that return one generated page are one read). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
@@ -216,21 +130,18 @@ Absorbed this Grok Build turn after origin **v0.5.77-free** was already on main 
 
 - This curl of the public changelog returned **403**. A fetch that returned still leads with **v1.0.70 · 23 Oct 2026**. **A 403 and a page that still leads with the same line are one version.** Do not invent a second line from the 403. Do not invent a stable line after 1.0.70.
 - failClosed is still not owner approval. This skill has no hooks. This tip does not republish that.
-- **Mailbox:** no operator-inbox mail dated 28, 29, or 30 Oct in this search. The mail after the done backup is a sales-rep link, not a skill note. **A sales-rep link is not a publish.** Do not copy the link. Do not tweet it. Do not treat that post as a grok-export. A shared bot that writes a CRM, a quote, or a deal term is a paste. Routing an exception is not owner approval. The 26 Oct backup subject that says done stays unrepubished. A done subject is not a publish. The 6 Oct forward stays the last skill note. Do not republish it.
-- **Chats:** no conversation_search. Drive title search did not finish. Do not claim a scan this tip did not finish. No newer grok-export than W38. Do not dump chat bodies.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
 ### Shared
 
 - **A later non-prerelease tag is the stable CLI.** An earlier alpha of the same number is not a newer CLI.
 - **A missing number between two headings is not a wipe.** A permission mode is not a path vault. A dropped tool result is not a contribution log.
-- **A 403 and the same public line are one version.** A sales-rep link is not a skill note. A shared bot write is a paste.
-- Evals stay **281**. The same-day pin alignment already holds activation evals **274–281**. This tip does not add evals. HITL F1–F28 + T1–T58 required. This tip adds T59 (later stable tag + missing number + sales-rep link).
+- **A 403 and the same public line are one version.** A shared bot write is a paste.
+- Evals stay **281**. The same-day pin alignment already holds activation evals **274–281**. This tip does not add evals. HITL F1–F28 + T1–T58 required. This tip adds T59.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.77-free] — 2026-10-29
 
-Absorbed this Grok Build turn after origin **v0.5.76-free** was already on main (a non-prerelease tag is the stable CLI; an alpha after that tag is not the next stable line; an external note is not a seal). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. The 26 Oct backup folder listed three docs (a manifest, a memory snapshot, a backup changelog), not a chat export. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+Absorbed this Grok Build turn after origin **v0.5.76-free** was already on main (a non-prerelease tag is the stable CLI; an alpha after that tag is not the next stable line; an external note is not a seal). This tip does not republish those. The 26 Oct backup folder listed three docs (a manifest, a memory snapshot, a backup changelog), not a chat export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
@@ -250,23 +161,20 @@ Absorbed this Grok Build turn after origin **v0.5.76-free** was already on main 
 - Public changelog page this read returned and still leads with **v1.0.70 · 23 Oct 2026**. Yesterday's curl was 403. A page that answers and still leads with that line is not a new release.
 - A third-party index this read marks official pages skipped and points an alpha channel and an enterprise channel at the same later number. **An enterprise pointer that matches an alpha pointer is not a stable promotion.** A skipped official scrape is not a seal. Do not copy those notes. Do not invent a stable line after 1.0.70.
 - failClosed is still not owner approval. This skill has no hooks. This tip does not republish that.
-- **Mailbox:** the operator-inbox 26 Oct backup subject says done. Status in that mail is material. **A done subject is not a publish. A material status is not a skill bump.** Artifacts unchanged is not a new corpus. Folders not rescanned is not a finished scan. A deal lane in that mail is not this skill. Do not copy a term sheet, a valuation, a compensation note, a tax brief, or a licence. No operator-inbox skill note after that backup. The 6 Oct forward stays the last skill note. Do not republish it. Partner and invoice threads that matched a broad IP search stay uncopied.
-- **Chats:** no conversation_search. The memory snapshot in that backup is not a grok-export and not a transcript. A programme application in that snapshot is not this skill and not a grant. A note that a retrieval store keeps client data is not a waiver and not a vault. Do not paste client data to obtain a waiver. Do not dump chat bodies. No newer grok-export than W38.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
 ### Shared
 
 - **The top row is not the Latest badge.** A 29 Oct pre-release is not the stable CLI.
 - **Two URLs that return one generated page are one read.** Do not invent a second date.
 - **An enterprise pointer that matches an alpha pointer is not a stable promotion.** A skipped scrape is not a seal. A page that answers with the same line is not a new release.
-- **A done backup is not a publish.** A memory snapshot is not a grok-export. A retrieval store is not a waiver.
-- Evals stay **273** for the 29 Oct recrawl. HITL F1–F28 + T1–T57 required. This tip adds T58 (top row + one generated page + done backup).
+- A retrieval store is not a waiver.
+- Evals stay **273** for the 29 Oct recrawl. HITL F1–F28 + T1–T57 required. This tip adds T58.
 - Weekly hygiene 30 Oct keeps this edition at **0.5.77-free**. Edition pins must match across SKILL.md metadata, LICENSE.md, README.md, and this tip. Activation evals **274–281** separate headless, Bot-to-Bot, and computer-use exposure from generic privacy, telemetry, and debug. A skill is an instruction package. This free skill stays instructions-only.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.76-free] — 2026-10-28
 
-Absorbed this Grok Build turn after origin **v0.5.75-free** was already on main (an alpha tag is not the stable CLI; a disagreeing heading is not a seal; a catalog alpha is not the stable line). This tip does not republish those. No newer grok-export. **No conversation_search.** Continue-reading chats were not opened. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+Absorbed this Grok Build turn after origin **v0.5.75-free** was already on main (an alpha tag is not the stable CLI; a disagreeing heading is not a seal; a catalog alpha is not the stable line). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
@@ -291,9 +199,6 @@ Absorbed this Grok Build turn after origin **v0.5.75-free** was already on main 
 - External notes named later files. **An external note the public latest line does not lead with is not a seal.** Do not copy those notes. Do not invent a stable line after 1.0.70 from this read.
 - **New:** failClosed is not owner approval. A hook that denies on timeout is still a hook. This skill has none. Do not add one.
 - Skills docs were not re-dated this read. This tip does not republish `user-invocable` or `disable-model-invocation`.
-- **Mailbox:** no newer operator-inbox skill note than the 6 Oct forward (disable-invoke, refs move), already in the stack. Do not republish it. Weekly backups through W42 stay PARTIAL. Backup is not publish. Do not copy a Drive link or a folder id.
-- Partner mail and a compensation note stay uncopied. A failed run on another repo is not this skill.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
 ### Shared
 
@@ -305,7 +210,7 @@ Absorbed this Grok Build turn after origin **v0.5.75-free** was already on main 
 
 ## [0.5.75-free] — 2026-10-27
 
-Absorbed this Grok Build turn after origin **v0.5.74-free** was already on main (a same-name twin is not a merge; a shortened description is not a wipe; a mid-word cutoff is not a finished review; a page that answers is not a new release). This tip does not republish those. No newer grok-export. **No conversation_search.** The continue-reading chats returned no body. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+Absorbed this Grok Build turn after origin **v0.5.74-free** was already on main (a same-name twin is not a merge; a shortened description is not a wipe; a mid-word cutoff is not a finished review; a page that answers is not a new release). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
@@ -327,9 +232,6 @@ Absorbed this Grok Build turn after origin **v0.5.74-free** was already on main 
 - Official changelog page this read returned. Tip is still **v1.0.70 · 23 Oct 2026**. No newer version on that page. No alpha channel on that page.
 - A third-party catalog names an alpha pointer after 1.0.70 and also says its scrape was overdue. **A catalog alpha is not the stable line.** Do not copy the catalog notes. Do not invent a stable version after 1.0.70.
 - Skills docs this read still say last updated **11 Aug 2026**. This tip does not republish `user-invocable` or `disable-model-invocation`.
-- **Mailbox:** operator-inbox weekly backups through W42 stay PARTIAL. Backup is not publish. Do not copy a Drive link or a folder id. The 6 Oct forward (disable-invoke, refs move) is already in the stack. Do not republish it.
-- **Mailbox:** the 27 Oct digest subject is six-section updates. The visible body stops after Gotchas (highest-value). A cutoff is not six sections. Do not invent the section names. Do not complete it. The continue-reading chat returned no body.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
 ### Shared
 
@@ -342,7 +244,7 @@ Absorbed this Grok Build turn after origin **v0.5.74-free** was already on main 
 
 ## [0.5.74-free] — 2026-10-26
 
-Absorbed this Grok Build turn after origin **v0.5.73-free** was already on main (an implicit-off flag is not a vault; a six-section label is not a rewrite; the checker body under 500 is not a seal). This tip does not republish those. No newer grok-export. **No conversation_search.** The continue-reading chat returned no body. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+Absorbed this Grok Build turn after origin **v0.5.73-free** was already on main (an implicit-off flag is not a vault; a six-section label is not a rewrite; the checker body under 500 is not a seal). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
@@ -365,8 +267,6 @@ Absorbed this Grok Build turn after origin **v0.5.73-free** was already on main 
 - Public changelog page this read returned. Tip is still **v1.0.70 · 23 Oct 2026**. Yesterday's read was **403**. A 403 last read is not a move. A page that answers is not a new release. Do not invent a version after 1.0.70.
 - Skills docs this read still say last updated **11 Aug 2026**. `user-invocable: yes` is still not true. `disable-model-invocation` is still not a vault. This tip does not republish those.
 - The outside-link skip count on that 1.0.70 line already stood. A skip count is still a paste. Do not copy it.
-- **Mailbox:** the 26 Oct digest subject is gotchas. The visible body stops mid-word after the gotchas line. A mid-word cutoff is not a finished review. Do not complete it. The continue-reading chat returned no body.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
 ### Shared
 
@@ -378,7 +278,7 @@ Absorbed this Grok Build turn after origin **v0.5.73-free** was already on main 
 
 ## [0.5.73-free] — 2026-10-25
 
-Absorbed this Grok Build turn after origin **v0.5.72-free** was already on main (an empty alpha is not a feature list; a cleanup of a recent file is not a wipe; the checker body is under 500). This tip does not republish those. No newer grok-export. **No conversation_search.** The continue-reading chat returned no body. Do not copy a chat id, an automation id, or a team id. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run. Do not add a second evals file.
+Absorbed this Grok Build turn after origin **v0.5.72-free** was already on main (an empty alpha is not a feature list; a cleanup of a recent file is not a wipe; the checker body is under 500). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
@@ -400,8 +300,6 @@ Absorbed this Grok Build turn after origin **v0.5.72-free** was already on main 
 
 - Public changelog page (`x.ai/changelog/build`) this read returned **403**. Do not invent that the public page moved. Skills docs this read still say last updated **11 Aug 2026**.
 - **New:** `user-invocable: yes` is not true. Only the literal `true` counts. `disable-model-invocation` is not a vault. The slash command still runs.
-- **Mailbox:** the 25 Oct digest subject is evals and six sections. The visible body cuts off before any six names. A cutoff digest is not a finished review. The six this tip names, from the host docs and not as a quote of that chat, are when, procedure, output, gotchas, evals, and depth. They are not a second skill format.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
 ### Shared
 
@@ -413,7 +311,7 @@ Absorbed this Grok Build turn after origin **v0.5.72-free** was already on main 
 
 ## [0.5.72-free] — 2026-10-25
 
-Absorbed this Grok Build turn after origin **v0.5.71-free** was already on main (a preset is not a vault; a monitor while telemetry is off is not a seal; a skip is not a wipe). No newer grok-export. **No conversation_search.** Did not open the continue-reading link. Drive title search timed out. Do not claim a drive scan this tip did not finish. The native mailbox search timed out. A later cursor read of the owner mailbox finished. A token timeout is not that review. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.71-free** was already on main (a preset is not a vault; a monitor while telemetry is off is not a seal; a skip is not a wipe). A token timeout is not that review. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -433,10 +331,8 @@ Absorbed this Grok Build turn after origin **v0.5.71-free** was already on main 
 
 - Public changelog page (`x.ai/changelog/build`) this read returned **403**. Do not invent that the public page moved.
 - External note **1.0.70** still returns. The next external note is a missing key. A missing next note is not a wipe and not a new policy. Do not invent the number. A lagging enterprise line on a third-party index is not the public latest line. Headless feature URL stays **404**.
-- **Mailbox after the last tip:** a mailed best-practice digest cuts off at a continue-reading link. A cut-off digest is not a finished review. Do not open the link. Do not copy a chat id, an automation id, or a team id. The lines before the cut restate a shared format and a body cap. This tip joins two blank lines so this body is under 500. That join is not a rewrite of the rules. Do not claim the body is under 200. A path named in that digest is not this layout. Do not add a second evals file. A script source stays out of context. Only output that enters context is the paste.
-- A later gate-pass mail is still not a seal. Do not copy the hour. A no-new-entries note is not a new corpus. Do not copy a case id. A later failed run on another repo is still not this skill. Do not copy the hash.
+- A later gate-pass mail is still not a seal. Do not copy the hour. A no-new-entries note is not a new corpus. Do not copy a case id. Do not copy the hash.
 - A forwarded event note is not this skill. Do not copy a raise, a name, a phone, or an address. Do not forward it. A meeting-notes promo is not a skill update. Do not install that path into this skill.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **273** on the missing next note and the cut-off digest.
 
 ### Shared
@@ -449,7 +345,7 @@ Absorbed this Grok Build turn after origin **v0.5.71-free** was already on main 
 
 ## [0.5.71-free] — 2026-10-24
 
-Absorbed this Grok Build turn after origin **v0.5.70-free** was already on main (a plugin env path is not a vault; a sed edit is not a preview; headless user-hook trust is not a folder review). No newer grok-export. **No conversation_search.** Did not open the continue-reading chat link. Drive title search did not finish. Do not claim a scan this tip did not finish. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.70-free** was already on main (a plugin env path is not a vault; a sed edit is not a preview; headless user-hook trust is not a folder review). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -478,26 +374,24 @@ Absorbed this Grok Build turn after origin **v0.5.70-free** was already on main 
 - External notes this read include **1.0.70** (23 Oct), after **1.0.69**. A later external note is not the public latest line.
 - **New:** `/plugins` counts only skills that load, and says how many were skipped because they link outside the plugin folder. A skill that links outside the plugin folder is skipped. That skip is not a wipe. The skip count is a paste. Do not copy the count.
 - **New:** `GROK_DISABLE_EXPERIMENTS`, or experiments disabled in any configuration file, turns every experiments entry off. Turning experiments off is not a seal and not a review of the folder.
-- **Mailbox after the last tip:** a mailed skill digest cuts off at a continue-reading link. A cut-off digest is not a finished review. A continue-reading link is not this skill. Do not open it. Do not copy a chat id, an automation id, or a team id. The lean-body line in that digest already stands. This file is already over 500 lines. This tip does not rewrite it down. Do not claim the body is under 500 lines.
 - A quiet field note is not a new alert. Do not copy a candidate count. Do not name the watcher.
 - A gate-pass mail is not a seal. Do not copy a tally. Do not copy a case id into this skill.
-- A failed run on another repo is not this skill. Do not copy the hour or the record.
+- Do not copy the hour or the record.
 - The unsent split draft stays unsent. This tip does not republish that rule. Do not send it. Do not copy the split.
 - A bank-document list is not this skill. Do not copy it. A receipt thread is not a grant. Do not copy the notice number. An API billing note is not this skill. Do not copy the plan name.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **270** on the outside-link skip and the cut-off digest.
 
 ### Shared
 
 - **A preset is not a vault.** An inline permission profile is not a new review. A wait is not a grant. A masked credential is still a paste. A case-variant path is not the allowed path. A replaceable symlink is not the reviewed executable.
 - **A monitor while telemetry is off is not a seal.** An unanswered elicitation is not a grant. A role list is a paste. A setup script is a paste. A hook that did not run is not a grant.
-- **A skip is not a wipe.** The skip count is a paste. Turning experiments off is not a seal. A cut-off digest is not a finished review. A continue-reading link is not this skill. Do not claim the body is under 500 lines.
+- **A skip is not a wipe.** The skip count is a paste. Turning experiments off is not a seal. A cut-off digest is not a finished review. Do not claim the body is under 500 lines.
 - Evals now **270**. HITL F1–F28 + T1–T51 required on every claimed stack. This tip adds T52 (preset + monitor + outside-link skip).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.70-free] — 2026-10-23
 
-Absorbed this Grok Build turn after origin **v0.5.69-free** was already on main (a steer is not a new review; a safety log is not a seal; a headless wait is not a seal). No newer grok-export. **No conversation_search.** Drive title search did not finish. Do not claim a scan this tip did not finish. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.69-free** was already on main (a steer is not a new review; a safety log is not a seal; a headless wait is not a seal). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -520,8 +414,6 @@ Absorbed this Grok Build turn after origin **v0.5.69-free** was already on main 
 - **New:** headless sessions treat user hooks as trusted (external **1.0.64**). That trust is not a review of the folder. Untrusted folders still wait on user, project, plugin, and agent hooks until the folder is trusted. The wait is not a wipe of managed hooks.
 - **New:** a same-turn read of a finished background task is not the headless wait (external **1.0.67**). Exiting when the work is done is not a wipe. A worktree that inherits an always-allow is not a new review. A never-allow still applies.
 - **New:** a resume that matches commands, paths, and replies, including other folders, is a paste. A retired `simple_mode` key is not a seal (external **1.0.69**). A doctor line that names a leftover key is a paste. Do not copy the config. Headless feature URL stays **404**.
-- **Mailbox after the last tip:** a government pitch that has not gone out is not a publish. Do not copy the pitch. Do not open an attachment. Do not forward it. An internal note is not this skill. A standards add-on ask is not conformance. Naming a standards family is not that standard. Do not copy the reply. Do not copy a count. An unsent later draft is not a send. Do not send it. Do not copy a split. This skill is not a second radar.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **267** on headless user-hook trust and the standards ask.
 
 ### Shared
@@ -534,7 +426,7 @@ Absorbed this Grok Build turn after origin **v0.5.69-free** was already on main 
 
 ## [0.5.69-free] — 2026-10-22
 
-Absorbed this Grok Build turn after origin **v0.5.68-free** was already on main (transport is not a new review; a false not-logged-in is not a wipe; a color flag is not a signature). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.68-free** was already on main (transport is not a new review; a false not-logged-in is not a wipe; a color flag is not a signature). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -552,8 +444,6 @@ Absorbed this Grok Build turn after origin **v0.5.68-free** was already on main 
 
 - Permissions page returned content this read and showed no new footer. Do not replace the recorded **21 Jul 2026** footer. A date this read did not show is not a new policy. Enterprise, settings, headless scripting, and skills footers were not replaced. Grok hooks page returned content. Headless feature URL stays **404**. Changelog newest this read is still **1.0.62** (16 Oct). A repeated version is not a new policy.
 - **New:** headless `grok -p` waits for the follow-up turn a finished background task starts. That wait is not a seal. A timeout that stops pending work exits with an error, not success. An error exit is not a wipe of work that already finished. Success is not implied.
-- **Mailbox after the last tip:** a contribution claim is not a transfer. An empty-shell line is not a grant. A promise to send an invite is not the invite. Do not copy a split. An invite that arrived is still not a publish. Do not copy the link. A folder of chat documents is not this skill. Do not open it. Do not copy the folder. An inactive-project spend cap is not a seal. A terms-update notice is not that law. A missing-document list is not a filing. A second trial-end note is not a grant. Do not copy an amount.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **264** on the headless wait and the contribution claim.
 
 ### Shared
@@ -566,7 +456,7 @@ Absorbed this Grok Build turn after origin **v0.5.68-free** was already on main 
 
 ## [0.5.68-free] — 2026-10-21
 
-Absorbed this Grok Build turn after origin **v0.5.67-free** was already on main (a later poll is not a skip of PostToolUse; a skip is not a wipe; a plugin block is not a website block). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.67-free** was already on main (a later poll is not a skip of PostToolUse; a skip is not a wipe; a plugin block is not a website block). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -585,9 +475,7 @@ Absorbed this Grok Build turn after origin **v0.5.67-free** was already on main 
 ### Grok Build (third)
 
 - Permissions footer this read is still **21 Jul 2026**. Enterprise footer this read is still **10 Aug 2026**. Settings reference footer this read is still **10 Oct 2026**. Headless scripting footer this read is still **10 Jun 2026**. Skills page footer this read is still **11 Aug 2026**. Hooks page footer this read is still **2 Jul 2026**. Security FAQ footer this read is still **18 Oct 2026**. Headless feature URL stays **404**. A repeated footer is not a new policy.
-- **Mailbox:** the legal-plugin forward after the last tip is a paste. Do not copy the guide. A second scheduling note is still not a publish. Do not copy the slot. A quoted counsel note is still not a new grant. Do not copy a serial. The unsent partner deck stays unsent. Do not resend the stale try pack.
 - A false login line on another host is not a Grok vault. Headless here stays `grok -p`. A 404 is not a private lane.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **261** on the color flag and the forwarded guide.
 
 ### Shared
@@ -601,7 +489,7 @@ Absorbed this Grok Build turn after origin **v0.5.67-free** was already on main 
 
 ## [0.5.67-free] — 2026-10-20
 
-Absorbed this Grok Build turn after origin **v0.5.66-free** was already on main (a rejected promise is not a wipe; a bug-fix-only line is not a new policy; a repeated footer is not a new policy). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.66-free** was already on main (a rejected promise is not a wipe; a bug-fix-only line is not a new policy; a repeated footer is not a new policy). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -622,8 +510,6 @@ Absorbed this Grok Build turn after origin **v0.5.66-free** was already on main 
 - Permissions footer this read is still **21 Jul 2026**. Enterprise footer this read is still **10 Aug 2026**. Settings reference footer this read is still **10 Oct 2026**. Headless scripting footer this read is still **10 Jun 2026**. Skills page footer this read is still **11 Aug 2026**. Headless feature URL stays **404**. A repeated footer is not a new policy.
 - **New:** the hooks page returned content. Footer this read is **2 Jul 2026**. A first read of that footer is not a new policy. Do not invent a newer date.
 - **New:** the security FAQ footer this read is **18 Oct 2026**. A plugin block does not block that service's website. The website path is still a paste. A missing network policy defaults to allow-all. Allow-all is not a seal. An allowlist that turns search off does not turn fetch off. Fetch that stays on is still a paste. A group setting can widen local execution, never tighten it. A widen is not a hold. A Bot has no identity of its own. That cap is not a vault.
-- **Mailbox:** a scheduling note after the last tip is not a skill update. A later accept of a slot is not a publish. Do not copy the slot. Do not send the invite. A quoted earlier counsel note is not a new grant. Do not republish a mark, a file number, a percent method, a signer split, or an internal-only reason. A test file named in that thread stays out. Do not copy a serial. The unsent partner deck stays unsent. Do not send it.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **258** on the website path and the scheduling note.
 
 ### Shared
@@ -637,7 +523,7 @@ Absorbed this Grok Build turn after origin **v0.5.66-free** was already on main 
 
 ## [0.5.66-free] — 2026-10-19
 
-Absorbed this Grok Build turn after origin **v0.5.65-free** was already on main (a model-visible replace is not a wipe of the nested promise; a size cap is not a wipe; a scan flag that is off is not a review). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.65-free** was already on main (a model-visible replace is not a wipe of the nested promise; a size cap is not a wipe; a scan flag that is off is not a review). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -656,9 +542,6 @@ Absorbed this Grok Build turn after origin **v0.5.65-free** was already on main 
 
 - Permissions footer this read is still **21 Jul 2026**. Enterprise page returned content. Footer this read is still **10 Aug 2026**. Settings reference footer this read is still **10 Oct 2026**. Headless scripting footer this read is still **10 Jun 2026**. Skills page footer this read is still **11 Aug 2026**. Headless feature URL stays **404**.
 - **New:** a repeated footer is not a new policy. Do not invent a newer date. The per-surface scan flags and cross-session memory stand. This tip does not republish them.
-- **Mailbox:** an unsent partner deck stays unsent. Do not send it. Do not copy a valuation, a client count, a niche list, or a named intro target. A note that a third party is not ready is not a send. An invoice after the last tip is still not a grant. A second copy of the same invoice is not a wipe of the first. Do not copy the number or the amount. A chat-while-away that pitches a vendor path is a paste. Do not copy the vendor, the floor, the raise, the product, or the URL. A secure launch path is not this skill and not a vault. An image in that chat is a paste. A competition assessment is not a publish. The internal-workflow reply and the model-chat share URL stay out. Do not open the URL. Do not republish them. The mailed try pack stays stale. Do not resend.
-- No newer grok-export than W38. No conversation_search.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **255** on the repeated footer and the unsent deck.
 
 ### Shared
@@ -671,7 +554,7 @@ Absorbed this Grok Build turn after origin **v0.5.65-free** was already on main 
 
 ## [0.5.65-free] — 2026-10-18
 
-Absorbed this Grok Build turn after origin **v0.5.64-free** was already on main (an opt-out is not a seal; a client classifier model is not the model you picked; a default-on harness scan is a hop). No newer grok-export. **No conversation_search.** Drive title search returned no files. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.64-free** was already on main (an opt-out is not a seal; a client classifier model is not the model you picked; a default-on harness scan is a hop). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -697,8 +580,6 @@ Absorbed this Grok Build turn after origin **v0.5.64-free** was already on main 
 - **New:** a per-surface flag can turn one harness scan off. Turning one flag off is not a review of the scans that stay on. A default-on scan is still a hop.
 - **New:** cross-session memory is a paste. Turning it off is not a wipe of memory already written.
 - **New:** when zero retention blocks a tool that needs hosted output, the tool can return setup guidance instead of generating. Setup guidance is not a vault. A user-supplied output bucket is a paste.
-- **Mailbox:** no mail after 17 Oct. The internal-workflow reply and the model-chat share URL stay out. Do not republish them. Do not open the URL. Do not copy it. The weekly status line stays where it was. Do not republish it. Unsent drafts stay unsent. The mailed try pack stays stale. Do not resend.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **252** on the scan flag and the nested promise.
 
 ### Shared
@@ -712,7 +593,7 @@ Absorbed this Grok Build turn after origin **v0.5.64-free** was already on main 
 
 ## [0.5.64-free] — 2026-10-17
 
-Absorbed this Grok Build turn after origin **v0.5.63-free** was already on main (a failed hook is not a block; a classifier verdict is not a permission rule; a leftover key is not a skip). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.63-free** was already on main (a failed hook is not a block; a classifier verdict is not a permission rule; a leftover key is not a skip). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -744,9 +625,6 @@ Absorbed this Grok Build turn after origin **v0.5.63-free** was already on main 
 - **New:** for a zero-retention organization, a dedicated service identity skips logging, and session end does not persist prompts, code, or responses at the inference layer. That skip is not a wipe of local session history. Local history is still a paste. The identity is not a seal.
 - **New:** video tools under zero retention need user-supplied output storage. That storage is a paste. It is not a vault.
 - Headless scripting page returned content and showed **no footer**. A stored headless session is still a paste.
-- No newer grok-export than W38. No conversation_search.
-- **Mailbox:** a counsel reply that keeps a workflow internal is not a free feature. Do not publish the reason. Do not publish a file number. Do not publish a percent method. A signer split stays with the office. A model-chat share URL in a mail thread is a paste that already left. Do not open it. Do not copy the URL. The weekly status line stays where it was. Do not republish it. Unsent drafts stay unsent. The mailed try pack stays stale. Do not resend.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **249** on the default-on harness scan.
 
 ### Shared
@@ -754,13 +632,13 @@ Absorbed this Grok Build turn after origin **v0.5.63-free** was already on main 
 - **An opt-out is not a seal.** A transcript format is not a stable interface. A nested code-mode call is still a tool call. A relative managed-hook path is not the script.
 - **A client classifier model is not the model you picked.** A missing permission mode is not a grant of auto. A fork is a paste. A wait is not a seal. A safety compact is not a wipe and not a seal.
 - **A default-on harness scan is a hop.** Inference-layer zero retention is not a wipe of local history. User-supplied video storage is not a vault.
-- **A counsel reply that keeps a workflow internal is not a free feature.** A model-chat share URL is a paste that already left. Do not open it.
+- A model-chat share URL is a paste that already left. Do not open it.
 - Evals now **249**. HITL F1–F28 + T1–T44 required on every claimed stack. This tip adds T45 (opt-out + client classifier model + default-on harness scan).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.63-free] — 2026-10-16
 
-Absorbed this Grok Build turn after origin **v0.5.62-free** was already on main (a managed_dir path is not the script; an elicitation wait is not a seal; virtualText is not a wipe of the submitted prompt; a user-file always-approve lock is not a seal). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. A machine digest dated before this tip is not a new export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.62-free** was already on main (a managed_dir path is not the script; an elicitation wait is not a seal; virtualText is not a wipe of the submitted prompt; a user-file always-approve lock is not a seal). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -790,9 +668,6 @@ Absorbed this Grok Build turn after origin **v0.5.62-free** was already on main 
 - **New:** a team pin rejects a personal login or the wrong team and writes nothing. An empty team list rejects every login. A session that no longer complies is cleared, including a cached token and a silent refresh. A cleared session is not a wipe of a paste that already left.
 - **New:** the root-owned always-approve lock also blocks a catch-all allow. A catch-all allow is not a bypass of that lock. Deny rules still apply. When no lock is set, behavior is unchanged. Absence of the lock is not a grant.
 - Headless scripting page returned content and showed **no footer**. Do not invent a footer. A stored headless session is still a paste.
-- No newer grok-export than W38. No conversation_search.
-- **Mailbox:** a second forward of the stale try pack is not a new pack. A reminder is not a version. Do not resend. A vendor receipt is not a grant. Do not copy an amount. A counsel attachment stays with counsel. Do not ingest it. Do not publish the steps. A privileged client order stays out. The weekly status line stays where it was. Do not republish it. Unsent drafts stay unsent.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **246** on the leftover-key rule.
 
 ### Shared
@@ -800,13 +675,13 @@ Absorbed this Grok Build turn after origin **v0.5.62-free** was already on main 
 - **A failed hook is not a block.** A missing audit trail is not a seal.
 - **A classifier verdict is not a permission rule.** A skipped catch is not a wipe. A summary is not a wipe. A worktree remove is not a wipe of a paste that already left.
 - **A leftover key is not a skip.** A catch-all allow is not a bypass of the root-owned lock. A cleared session is not a wipe.
-- **A second forward of the stale try pack is not a new pack.** A reminder is not a version. A vendor receipt is not a grant. A counsel attachment stays with counsel.
+- **A second forward of the stale try pack is not a new pack.** A reminder is not a version. A vendor receipt is not a grant.
 - Evals now **246**. HITL F1–F28 + T1–T43 required on every claimed stack. This tip adds T44 (failed hook + classifier verdict + leftover key).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.62-free] — 2026-10-15
 
-Absorbed this Grok Build turn after origin **v0.5.61-free** was already on main (a local off is not a wipe of managed hooks; a path-only mention is not a wipe; a project file is not the permission-mode default). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.61-free** was already on main (a local off is not a wipe of managed hooks; a path-only mention is not a wipe; a project file is not the permission-mode default). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -831,9 +706,6 @@ Absorbed this Grok Build turn after origin **v0.5.61-free** was already on main 
 - Enterprise page returned content. Footer **10 Aug 2026**. A dated enterprise footer is not a new permissions policy.
 - **New:** `disable_bypass_permissions_mode = true` turns always-approve off. The lock is honored only from a root-owned requirements source, not from the user-writable requirements file. A user-file lock is not a seal. A host lockdown file is not this lock. The lock is not a wipe of a paste that already left.
 - Settings reference returned content. Footer **10 Oct 2026**. **New:** `default_selected_permission` defaults to `always_allow_all_sessions`. That is the preselected row on the first prompt. A preselected row is not a grant.
-- No newer grok-export than W38. No conversation_search.
-- **Mailbox:** a counsel attachment stays with counsel. Do not ingest it. Do not publish the steps. A privileged client order stays out. An invoice chase is not this skill. Do not copy an amount. The weekly status line stays where it was. Do not republish it. Unsent drafts stay unsent.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **243** on the user-file lock.
 
 ### Shared
@@ -841,13 +713,13 @@ Absorbed this Grok Build turn after origin **v0.5.61-free** was already on main 
 - **A managed_dir path is not the script.** An elicitation wait is not a seal.
 - **virtualText is not a wipe of the submitted prompt.** A prompt-box clear is not a wipe of a prompt already sent. updatedInput is not a seal. A SessionEnd that did not run is not a wipe.
 - **A user-file always-approve lock is not a seal.** A preselected approval row is not a grant.
-- **A counsel attachment stays with counsel.** A privileged client order stays out. An invoice chase is not this skill. Do not copy an amount.
+- A privileged client order stays out. Do not copy an amount.
 - Evals now **243**. HITL F1–F28 + T1–T42 required on every claimed stack. This tip adds T43 (managed_dir path + virtualText + user-file lock).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.61-free] — 2026-10-14
 
-Absorbed this Grok Build turn after origin **v0.5.60-free** was already on main (hooks off is not a wipe; an onFailure block is not a wipe; permission modes do not stack). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.60-free** was already on main (hooks off is not a wipe; an onFailure block is not a wipe; permission modes do not stack). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -871,9 +743,6 @@ Absorbed this Grok Build turn after origin **v0.5.60-free** was already on main 
 - **New:** the permission-mode default is user config or managed requirements only, not the project file. A project file is not that default.
 - **New:** plan review is not skipped under auto or always-approve. Auto is not a skip of plan review.
 - **New:** under always-approve, dangerous patterns such as rm and git push run unless a deny is added. A missing deny is not a hold.
-- No newer grok-export than W38. No conversation_search.
-- **Mailbox:** the weekly status line stays in v0.5.58-free. Do not republish it. The skill-format forward is already in this skill. Do not republish it. Unsent drafts stay unsent. No second copy of names, marks, or amounts.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **240** on the project-file rule.
 
 ### Shared
@@ -881,13 +750,13 @@ Absorbed this Grok Build turn after origin **v0.5.60-free** was already on main 
 - **A local off is not a wipe of managed hooks.** A requirements pin of hooks on is not a seal.
 - **A path-only mention is not a wipe.** The later read is a paste. Idle compaction is not a wipe. Turning it off is not a seal. A withheld result is not a wipe. A later skill prompt hook is not a seal of the invoking prompt. Managed attachment bytes are a paste.
 - **A project file is not the permission-mode default.** Auto is not a skip of plan review. A missing deny under always-approve is not a hold.
-- **Unsent drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **240**. HITL F1–F28 + T1–T41 required on every claimed stack. This tip adds T42 (local off + path-only mention + project permission-mode default).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.60-free] — 2026-10-13
 
-Absorbed this Grok Build turn after origin **v0.5.59-free** was already on main (a description is not a filter; a compliance start is not a seal; a device code is not a grant). No newer grok-export. **No conversation_search.** Drive title search still found only the W38 zip. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.59-free** was already on main (a description is not a filter; a compliance start is not a seal; a device code is not a grant). **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -912,9 +781,6 @@ Absorbed this Grok Build turn after origin **v0.5.59-free** was already on main 
 - **New:** legacy keys `approval_mode` and `yolo = true` still work. `permission_mode` wins when more than one is set. A legacy key is not a vault.
 - **New:** `auto_allow_bash` defaults false. `GROK_SANDBOX_AUTO_ALLOW_BASH` defaults 0. Skipping bash prompts inside an active sandbox is not a vault. `restrict_network` is Linux seccomp when enforced. Child-network does not block the model API or web tools. Child-network is not a seal of the model call.
 - **New:** Reset rebuilds the computer from the last saved snapshot. Very recent changes may be lost. A computer reset is not a wipe of a paste that already left. Update keeps files in place. Keeping files is not a private lane.
-- No newer grok-export than W38. No conversation_search.
-- **Mailbox:** a re-subscribe welcome is not a grant and not a seal. Do not copy a plan name. Unsent counsel drafts stay unsent. The weekly status line stays in v0.5.58-free. Do not republish it. No second copy of names, marks, or amounts.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **237** on the mode-stack rule.
 
 ### Shared
@@ -923,13 +789,13 @@ Absorbed this Grok Build turn after origin **v0.5.59-free** was already on main 
 - **An onFailure block is not a wipe.** A same-name drop is not a seal. An earlier compact is not a wipe. A large read is a paste.
 - **Permission modes do not stack.** A deny win is not a wipe. Auto-allow bash is not a vault. Child-network is not a seal of the model call. A computer reset is not a wipe of a paste that already left.
 - **A re-subscribe welcome is not a grant.** Do not copy a plan name.
-- **Unsent drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **237**. HITL F1–F28 + T1–T40 required on every claimed stack. This tip adds T41 (hooks off + onFailure block + modes do not stack).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.59-free] — 2026-10-12
 
-Absorbed this Grok Build turn after origin **v0.5.58-free** was already on main (loading alongside is not a wipe). That tip already took the weekly status line. This tip does not republish it. No newer grok-export. **No conversation_search.** Drive title search after 1 Oct still found no newer export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No ranges. No issue numbers. No gate tallies. No spend lines. No commit pins. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Absorbed this Grok Build turn after origin **v0.5.58-free** was already on main (loading alongside is not a wipe). That tip already took the weekly status line. This tip does not republish it. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No ranges. No issue numbers. No gate tallies. No spend lines. No commit pins. No folder ids.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -956,9 +822,6 @@ Absorbed this Grok Build turn after origin **v0.5.58-free** was already on main 
 - **New:** `grok memory clear` removes cross-session memory files. Clearing those files is not a wipe. `--experimental-memory` turns cross-session memory on. Experimental memory is a paste. `--no-memory` is not a wipe of memory already written.
 - **New:** `grok wrap` forwards clipboard writes. A clipboard forward is a paste. `grok sessions search` is a paste. `grok sessions delete` is not a wipe. `grok worktree` and `--worktree` / `--ref` are a next-paste, not a private lane. `grok setup` fetches managed configuration. A setup fetch is a hop.
 - **New:** a custom profile in project `.grok/sandbox.toml` is a hop. Built-in profile names cannot be redefined. A redefined name is not a seal. `devbox` still writes top-level directories except one data path. `devbox` is not a vault. `--dangerously-skip-permissions` is an alias, not a vault.
-- No newer grok-export than W38. No conversation_search.
-- **Mailbox:** already absorbed in v0.5.58-free. A weekly status line is not an export. This tip does not republish it. No second copy of amounts, names, or ticket text.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **234** on the device-code rule.
 
 ### Shared
@@ -967,13 +830,13 @@ Absorbed this Grok Build turn after origin **v0.5.58-free** was already on main 
 - **A compliance start is not a seal.** An org ask is not a skip. An annotation is not an allow. A bare-name removal is not a scoped deny.
 - **A device code is not a grant.** Clearing the cache is not a wipe. A clipboard forward is a paste. A project sandbox profile is a hop. Skip-permissions is not a vault. A missing footer is not a new policy.
 - **The weekly status line stays in v0.5.58-free.** Do not republish it.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **234**. HITL F1–F28 + T1–T39 required on every claimed stack. This tip adds T40 (description + compliance start + device code).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.58-free] — 2026-10-12
 
-Absorbed this Grok Build turn's live mailbox after the 11 Oct v0.5.57 push (a weekly status line, a discoverable-name notice, a one-time code, a service-stop notice, a card-add notice, a trial-end notice, another pickup, another overdue notice, and unsent counsel comments; no skill-feedback mail) plus the only Grok note still newer than the W38 zip (the 3 Oct terminal-log digest, already classified, not an export) and vendor recrawl **12 Oct** on top of origin **v0.5.57-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No codes. No ticket ids. No addresses. No folder ids. No marks.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+**No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No codes. No ticket ids. No addresses. No folder ids. No marks.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1002,9 +865,6 @@ Absorbed this Grok Build turn's live mailbox after the 11 Oct v0.5.57 push (a we
 - **New:** `/btw` asks a side question without interrupting. Not interrupting is not a private lane. A side question is a paste.
 - **New:** `/imagine` and `/imagine-video` send the prompt out. An image or video prompt is a paste.
 - **New:** after a turn completes, capture reviews it in the background and records durable notes. Capture does not interrupt. A background capture is a paste. Instructions in the current conversation take precedence over a note. Precedence is not a wipe of the note on disk. Dream also runs on its own. An unprompted dream is not a seal.
-- No newer grok-export than W38. No conversation_search. Drive title search from 1 Oct returned only the 3 Oct terminal-log digest.
-- **Mailbox, unnamed:** a weekly status line is not an export. A locked budget is not a skill fact. A naming note is not a public rename. An estimate pack is not this skill. An empty hub is not a missing corpus. A gate count is not validation. A merged issue number is not this skill's version. Do not copy amounts, folder ids, or ticket text. A verification code is a paste. Do not copy it. A support ticket is not this skill. A service-stop notice is not a wipe. An activation is not a publish. A card-add notice is not this skill. Do not copy digits. A trial-end notice is not a seal. A premium notice is not a filing deadline. Another pickup and another overdue notice stay declined. A counsel comment is not a free-tier procedure. An unsent follow-up stays unsent. A public-data duration is not validation. The assistant prepares and a human decides. Filing stays with counsel.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **230** on the background-capture rule. Mailbox eval **231**: a weekly status line is not an export.
 
 ### Shared
@@ -1013,13 +873,13 @@ Absorbed this Grok Build turn's live mailbox after the 11 Oct v0.5.57 push (a we
 - **Not ending the turn is not a grant.** Refusal is not a wipe. A project true is not a grant. Admin-required is not a vault.
 - **A background capture is a paste.** A goal token cap is not a seal. An unprompted dream is not a seal.
 - **A weekly status line is not an export.** A locked budget is not a skill fact. A verification code is a paste. A counsel comment is not a free-tier procedure.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **231**. HITL F1–F28 + T1–T38 required on every claimed stack. This tip adds T39 (plugin load + managed denial + background capture + weekly status line).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.57-free] — 2026-10-11
 
-Absorbed this Grok Build turn's live mailbox after the 10 Oct v0.5.56 push (a store pickup confirmation, a pending booking, and an overdue invoice notice; no skill-feedback mail) plus the only Grok note newer than the W38 zip (a 3 Oct terminal-log digest, not an export) and vendor recrawl **11 Oct** on top of origin **v0.5.56-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A terminal-log digest is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No order numbers. No invoice numbers. No dates. No amounts. No serials. No hostnames. No schedules. No local paths. No folder ids.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+**No client / product / infra / firm / tester / counsel / counterparty names. No order numbers. No invoice numbers. No dates. No amounts. No serials. No hostnames. No schedules. No local paths. No folder ids.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1048,9 +908,6 @@ Absorbed this Grok Build turn's live mailbox after the 10 Oct v0.5.56 push (a st
 - **New:** /memory browses memories. A memory browser is a paste. /flush writes conversation memory to disk now. A flush is a paste, not a wipe.
 - **New:** /dream runs memory consolidation. A dream is a paste, not a seal.
 - **New:** /goal clear removes the goal. Clearing a goal is not a wipe of a paste that already left. Goal status is a paste. Do not copy duration. /deep-research is a background research run. That run is a paste.
-- No newer grok-export than W38. No conversation_search. The 3 Oct note is a terminal-log digest, not project chats.
-- **Mailbox, unnamed:** a store pickup confirmation is not this skill. A pending booking is not a confirmation. An order number is a paste. An overdue invoice notice is not a filing deadline. A service-suspension date is not a seal. Do not copy the invoice number. No amounts. No dates. A terminal-log digest is not an export. A local session path is a paste. Do not copy a serial, a hostname, or a schedule. A remote sign-in that still needs a person is not a grant. Memory written on one machine is not a seal of another. An unsent scope note stays unsent. A mask-before-send pitch is not this skill. A mask is not a hold. A public-data run is not validation. The assistant prepares and a human decides. Filing stays with counsel.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **226** on the share-URL rule. Mailbox eval **227**: a pickup confirmation is not this skill.
 
 ### Shared
@@ -1058,14 +915,14 @@ Absorbed this Grok Build turn's live mailbox after the 10 Oct v0.5.56 push (a st
 - **A higher layer is not a wipe.** A merge warning is not a hold. A prompt scan is not a seal. A summary memory is a paste.
 - **No prompts is not a vault.** A missing decision is a deny, not a wipe. A disallowed list is not a vault. A later switch is not inherited clearance. Plan is not a seal. The 11 Oct start table is NO_DELTA.
 - **A share URL is a paste.** A dream is not a seal. A flush is a paste, not a wipe. Clearing a goal is not a wipe.
-- **A terminal-log digest is not an export.** A pickup confirmation is not this skill. An overdue notice is not a filing deadline. A mask is not a hold.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- A pickup confirmation is not this skill. An overdue notice is not a filing deadline. A mask is not a hold.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **227**. HITL F1–F28 + T1–T37 required on every claimed stack. This tip adds T38 (higher layer + no prompts + share URL + pickup confirmation).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.56-free] — 2026-10-10
 
-Absorbed this Grok Build turn's live mailbox after the 9 Oct v0.5.55 push (a partial week pack, a while-away chat, a carrier receipt, and an admin-console notice; no skill-feedback mail; no newer grok-export) plus vendor recrawl **10 Oct** on top of origin **v0.5.55-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No folder ids. No order numbers. No links. No duration. No gap lists.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+**No client / product / infra / firm / tester / counsel / counterparty names. No folder ids. No order numbers. No links. No duration. No gap lists.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1091,9 +948,6 @@ Absorbed this Grok Build turn's live mailbox after the 9 Oct v0.5.55 push (a par
 - **New:** `/remember` saves a memory note. A memory note is a paste. `/rewind` is not a wipe of a paste that already left.
 - **New:** `/feedback` sends session text. Feedback is a paste. Do not put a method in it. `/privacy` toggles retention status. A privacy toggle is not a vault.
 - **New:** `/import-claude` opens an import modal. An import modal is a next-paste. `/workflows` lists retained runs. That list is a paste. `GROK_WORKFLOWS=0` is not a wipe of retained runs.
-- No newer grok-export than W38. No conversation_search.
-- **Mailbox, unnamed:** a week pack without chat memory is not an export. Stale next-run values are not a seal. Do not copy folder ids. A capital-raise aside in a while-away chat is a paste. A video-demo link is not a source. An invite sent in chat is not a publish. A carrier receipt is not this skill. No order numbers. An admin-console gap list is not a deny rule. Do not publish the gaps. No names. No duration.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **222** on the memory-note rule. Mailbox eval **223**: a week pack without chat memory is not an export.
 
 ### Shared
@@ -1102,13 +956,13 @@ Absorbed this Grok Build turn's live mailbox after the 9 Oct v0.5.55 push (a par
 - **A hook allow is not a skip.** A shadowed callback is not owner approval. Refusing root is not a vault. A tool list is not a limit. Falling through is not a hold. Not calling the callback is not a wipe. The 10 Oct start table is NO_DELTA.
 - **A memory note is a paste.** A rewind is not a wipe. Feedback is a paste. A privacy toggle is not a vault. An import modal is a next-paste. A workflows list is a paste. Disabling workflows is not a wipe.
 - **A week pack without chat memory is not an export.** A capital-raise aside is a paste. A video-demo link is not a source. A carrier receipt is not this skill. A gap list is not a deny rule.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **223**. HITL F1–F28 + T1–T36 required on every claimed stack. This tip adds T37 (prompt text + hook allow + memory note + week pack).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.55-free] — 2026-10-09
 
-Absorbed this Grok Build turn's live mailbox (after the 8 Oct v0.5.54 push: an unsent follow-up on the same thread, and one later calendar accept; no skill-feedback mail; no newer grok-export) plus vendor recrawl **9 Oct** on top of origin **v0.5.54-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No marks. No duration. No attachments. No amounts. No hour splits. No meet links. No PINs. No phone numbers.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+**No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No marks. No duration. No attachments. No amounts. No hour splits. No meet links. No PINs. No phone numbers.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1136,9 +990,6 @@ Absorbed this Grok Build turn's live mailbox (after the 8 Oct v0.5.54 push: an u
 - **New:** `--fork-session` forks a resume. A fork is a next-paste, not a wipe of the source.
 - **New:** `--system-prompt-override` replaces the system prompt. An override is not a hold. Do not put a secret in it. `--max-turns` is not a seal.
 - **New:** a third-party sandbox image is not this skill. A snapshot that holds a key is a paste. A smoke check is not a seal.
-- No newer grok-export than W38. No conversation_search.
-- **Mailbox, unnamed:** an unsent follow-up that says the notes were incorporated is not a publish. A public-data run is not validation. A runtime is not a seal. Open questions are not a spec. Do not publish the attachment. A later accept is not a publish. A blocked word in a calendar title is not a deny rule. A meet link, a PIN, and a phone number are a paste.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **218** on the export rule. Mailbox eval **219**: an unsent follow-up is not a publish.
 
 ### Shared
@@ -1147,13 +998,13 @@ Absorbed this Grok Build turn's live mailbox (after the 8 Oct v0.5.54 push: an u
 - **A separate check is not the Unix circuit breaker.** A deny without asking is not a wipe. Skipping the recurse check is not a vault. A nudge is not a seal. The 9 Oct start table is NO_DELTA.
 - **grok export is a paste.** A fork is a next-paste. An override is not a hold. A third-party sandbox image is not this skill. A snapshot that holds a key is a paste.
 - **An unsent follow-up is not a publish.** A public-data run is not validation. A runtime is not a seal. A blocked calendar title is not a deny rule.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **219**. HITL F1–F28 + T1–T35 required on every claimed stack. This tip adds T36 (concurrent start + separate removal check + grok export + unsent follow-up).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.54-free] — 2026-10-08
 
-Follow-up on the same day as **v0.5.53-free**. Mailbox this scan: the unsent scope note, the internal estimate, the payment aside, and the tentative accept stay as absorbed in v0.5.53-free. One later calendar accept is not a publish. A meet link, a PIN, and a phone number are a paste. Forwarding the invite is not a private lane. No skill-feedback mail. No newer grok-export. **No conversation_search.** A machine digest is still not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No signs. No model id copied into the pack. No amounts. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+Follow-up on the same day as **v0.5.53-free**. Mailbox this scan: the unsent scope note, the internal estimate, the payment aside, and the tentative accept stay as absorbed in v0.5.53-free. One later calendar accept is not a publish. A meet link, a PIN, and a phone number are a paste. Forwarding the invite is not a private lane. No skill-feedback mail. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No signs. No model id copied into the pack. No amounts. No percent.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1174,8 +1025,6 @@ Follow-up on the same day as **v0.5.53-free**. Mailbox this scan: the unsent sco
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Permissions, sandbox, and headless-scripting footers re-read 8 Oct. Still **21 Jul 2026** and **10 Jun 2026**. Feature URL stays **404**. NO_DELTA on those policies. plain, json, and streaming-json stay pastes.
 - **New:** the overview names a current model. A model id on that page is a model pick, not a private lane. Do not copy the id. `grok inspect` lists skills, hooks, and MCP. That listing is a paste.
-- No newer grok-export than W38. No conversation_search.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **214** on the inspect rule. Mailbox eval **215**: an accepted invite is not a publish.
 
 ### Shared
@@ -1184,13 +1033,13 @@ Follow-up on the same day as **v0.5.53-free**. Mailbox this scan: the unsent sco
 - **A chat boundary is not a deny rule.** A chat approval is not a standing grant. Keep-working is not a stop. The start table is still NO_DELTA.
 - **A model id on the overview is not a private lane.** grok inspect is a paste. Do not copy the id.
 - **An accepted invite is not a publish.** A meet link, a PIN, and a phone number are a paste. Forwarding the invite is not a private lane. No names. No times. No agenda.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **215**. HITL F1–F28 + T1–T34 required on every claimed stack. This tip adds T35 (transcript path + chat boundary + grok inspect + accepted invite).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.53-free] — 2026-10-08
 
-Absorbed this Grok Build turn's live mailbox (after the 7 Oct v0.5.52 push: an unsent scope note, an internal estimate, a later chat-while-away, and a tentative accept; no skill-feedback mail; no newer grok-export) plus vendor recrawl **8 Oct** on top of origin **v0.5.52-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No notice numbers. No offices. No product names. No terms text. No payment status. No amounts. No hour splits. No months. No seat counts. No places. No host names. No serials. No deal status. No customer story. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+**No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No notice numbers. No offices. No product names. No terms text. No payment status. No amounts. No hour splits. No months. No seat counts. No places. No host names. No serials. No deal status. No customer story. No percent.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1218,9 +1067,6 @@ Absorbed this Grok Build turn's live mailbox (after the 7 Oct v0.5.52 push: an u
 - Permissions and sandbox pages fetched 8 Oct. Footer is **21 Jul 2026** again. A returned footer is not a new policy. The cycle is **NO_DELTA**. Under always-approve, `rm` and `git push` still run unless a deny is set. `read-only` still writes `~/.grok/`. Sandbox stays off by default.
 - Headless feature URL stays **404**. Headless scripting page fetched 8 Oct. Footer still **10 Jun 2026**. A returned footer is not a new policy.
 - **Now explicit on that page:** `--output-format` `plain` and `json` are pastes, same class as `streaming-json`. `--session-id` names or resumes a session. A named resume is a next-paste. `--no-auto-update` and `[cli] auto_update = false` skip the update check. A skipped check is not a seal. ACP `grok agent stdio` chunks are a paste. `--no-alt-screen` is not a private lane. Do not paste a key or a cached token.
-- No newer grok-export than W38.
-- **Mailbox, unnamed:** an unsent scope note stays unsent. The assistant prepares. A human decides. Filing stays with counsel. A warning is not an opinion. A specimen check is not a filing. A status date needs a human check. An office-action draft is for counsel, not a client verdict. Do not publish the sample. An internal estimate is not a quote and not this skill. No amounts. No hour split. A chat-while-away about a payment, cash flow, or an investor is a paste. No months. No terms. No deal status. A setup slot is not a skill update. A short link is not a source. A tentative accept is not a publish.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Evals **211**.
 
 ### Shared
@@ -1229,13 +1075,13 @@ Absorbed this Grok Build turn's live mailbox (after the 7 Oct v0.5.52 push: an u
 - **An allow is not a critical-path grant.** Three timeouts are not a wipe. Disabling the countdown is not a vault. A restored allow is not inherited clearance. The 8 Oct start table is NO_DELTA.
 - **plain and json are pastes.** A returned 21 Jul footer is not a new policy. A returned 10 Jun scripting footer is not a new policy. A named resume is a next-paste. A skipped update check is not a seal.
 - **An unsent scope note stays unsent.** An internal estimate is not this skill. A payment or cash-flow aside is a paste. A setup slot is not a skill update. A short link is not a source.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **211**. HITL F1–F28 + T1–T33 required on every claimed stack. This tip adds T34 (background hook + critical-path allow + plain/json + unsent scope note).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.52-free] — 2026-10-07
 
-Absorbed this Grok Build turn's live mailbox (after the 6 Oct v0.5.51 push: a vendor pitch about masking client data before a public model, an event invite, a promo, a cancelled hold, a chat-while-away line, a trial-end note, and an official mailbox notice; no skill-feedback mail; no newer grok-export) plus one older machine digest (not an export) plus vendor recrawl **7 Oct** on top of origin **v0.5.51-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A machine digest is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No notice numbers. No offices. No product names. No terms text. No payment status. No amounts. No seat counts. No places. No host names. No serials. No deal status. No customer story. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+**No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No notice numbers. No offices. No product names. No terms text. No payment status. No amounts. No seat counts. No places. No host names. No serials. No deal status. No customer story. No percent.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1259,9 +1105,7 @@ Absorbed this Grok Build turn's live mailbox (after the 6 Oct v0.5.51 push: a ve
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Permissions and sandbox pages fetched 7 Oct. Footer is **21 Jul 2026** again. A returned footer is not a new policy. The cycle is **NO_DELTA**. Under always-approve, `rm` and `git push` still run unless a deny is set. `read-only` still writes `~/.grok/`. Sandbox stays off by default.
 - Headless feature URL stays **404**. The overview still documents `grok -p` with `--output-format streaming-json`. That output is a paste, not a private lane. A documented one-shot is not a seal.
-- No newer grok-export than W38. A machine digest on Drive is not an export. Do not copy host names, serials, local paths, or schedules.
-- **Mailbox, unnamed:** a vendor pitch that offers to mask or block client data before a public model is not this skill and not a proof. An outside audit trail is not a contribution log. A mask is not a hold. Do not copy the product or the firm. An event invite is not a publish. A promo is not a skill update. A cancelled hold is not a transcript. A chat-while-away line is a paste. A trial-end note is billing, not approval to pay. An official mailbox notice is not a filing. Do not copy the notice number, the office, or the subject.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Do not copy host names, serials, local paths, or schedules.
 - Evals **208**.
 
 ### Shared
@@ -1269,7 +1113,7 @@ Absorbed this Grok Build turn's live mailbox (after the 6 Oct v0.5.51 push: a ve
 - **A wait is not a hold.** Early SessionStart is not a seal. No prompt is not a hold. A rewrite that errors is not a hold.
 - **A pause is not a stop.** A timeout deny is not a wipe. The 7 Oct start table is NO_DELTA.
 - **streaming-json is a paste.** A returned 21 Jul footer is not a new policy. A vendor mask pitch is not this skill. An official mailbox notice is not a filing.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **208**. HITL F1–F28 + T1–T32 required on every claimed stack. This tip adds T33 (wait + timeout deny + streaming-json + mask pitch + mailbox notice).
 - Still free-only. Still not legal advice. No secrets.
 
@@ -1281,7 +1125,7 @@ Gate follow-up: neutral wording in launch notes and demo playbook; hygiene eval 
 
 ## [0.5.50-free] — 2026-10-06
 
-Absorbed this Grok Build turn's live mailbox (after the 5 Oct v0.5.49 push: one workshop promo; no skill-feedback mail; no newer grok-export) plus vendor recrawl **6 Oct** on top of origin **v0.5.49-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No deal status. No customer story. No percent.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+**No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No deal status. No customer story. No percent.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1306,9 +1150,7 @@ Absorbed this Grok Build turn's live mailbox (after the 5 Oct v0.5.49 push: one 
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Permissions and sandbox pages fetched 6 Oct. Footer is **21 Jul 2026** again. A returned footer is not a new policy. The cycle is **NO_DELTA**. Under always-approve, `rm` and `git push` still run unless a deny is set. `read-only` still writes `~/.grok/`. Sandbox stays off by default.
-- Headless feature URL stays **404**. No newer grok-export than W38.
-- **Mailbox, unnamed:** a workshop promo is not a publish and not a skill update. A Bot that uses your apps, starts work on its own, passes work to another Bot, or delegates code is a paste. A check-in is not a hold. Do not copy the invite, a customer story, or a percent.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Headless feature URL stays **404**.
 - Evals **195**.
 
 ### Shared
@@ -1316,13 +1158,13 @@ Absorbed this Grok Build turn's live mailbox (after the 5 Oct v0.5.49 push: one 
 - **The 5 Oct Bash-only line is superseded.** Wider coverage is still not a boundary. Fail-open is not a hold. suppressOutput is still not a mute.
 - **A five-second grace is not a wipe.** A watch report is a paste. No recorded result is not a wipe. A ceiling of 0 is still not a stop.
 - **A returned 21 Jul footer is not a new policy.** A workshop promo is not a publish. A check-in is not a hold. No percent. No customer story.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **195**. HITL F1–F28 + T1–T31 required on every claimed stack. This tip adds T32 (wider path + grace + watch + promo).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.49-free] — 2026-10-05
 
-Absorbed this Grok Build turn's live mailbox (after the 4 Oct v0.5.48 push: a weekly backup, a chat-while-away mention, and a CLI update note; no skill-feedback mail; no newer grok-export) plus one older topic-researcher tail (not an export) plus vendor recrawl **5 Oct** on top of origin **v0.5.48-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A bot transcript tail is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No deal status.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+A bot transcript tail is not an export. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No deal status.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1343,9 +1185,7 @@ Absorbed this Grok Build turn's live mailbox (after the 4 Oct v0.5.48 push: a we
 - Permissions page fetched 5 Oct. Footer is **21 Jul 2026** again. A returned footer is not a new policy. The Shift+Tab cycle is **NO_DELTA**. Ask remains the documented default.
 - **New:** under always-approve, `rm` and `git push` run unless a deny is set. A remembered always-allow still prompts. An explicit allow still auto-approves.
 - **New (sandbox, footer 21 Jul 2026):** off by default stands and is not a vault. `read-only` still writes `~/.grok/` and temp. `strict` still writes the working tree, `~/.grok/`, and temp. `~/.grok/` stays writable so the session persists. That is a next-paste. Child-network block is Linux-only (no-op on macOS). In-process model and web tools are not blocked. Built-ins do not seal `~/.ssh`. A managed pin can override the CLI sandbox flag. A monitor line is a paste.
-- Headless feature URL stays **404**. No newer grok-export than W38. A topic-researcher tail is not an export.
-- **Mailbox, unnamed:** a weekly backup is not a publish. An unsent deck stays unsent. A scope-locked pre-read is not a filing. Moving corpus ownership is not a bundle and not a grant. Empty artifacts are not a transcript. Pointers outside the tree are not a move. A chat-while-away that names a sale, a raise, or an IPO is a paste. Do not copy counterparties, amounts, or deal status. A CLI update note is not a verified model id.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Headless feature URL stays **404**. A topic-researcher tail is not an export.
 - Evals **192**.
 
 ### Shared
@@ -1354,19 +1194,18 @@ Absorbed this Grok Build turn's live mailbox (after the 4 Oct v0.5.48 push: a we
 - **A ceiling of 0 is not a stop.** A dropped partial is not a wipe. The 5 Oct start table is NO_DELTA.
 - **read-only still writes ~/.grok/.** Under always-approve, git push runs unless denied. A monitor line is a paste. A returned 21 Jul footer is not a new policy.
 - **An unsent deck stays unsent.** A sale, raise, or IPO aside is a paste. No amounts. No counterparties. A CLI note is not a model id.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **192**. HITL F1–F28 + T1–T30 required on every claimed stack. This tip adds T31 (mute + ceiling 0 + sandbox write + unsent deck).
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.48-free] — 2026-10-04
 
-Absorbed this Grok Build turn's live mailbox (after the 3 Oct v0.5.47 push: a second sign-in alert, a passkey-added alert copy, a subscription renewal notice, a failed auto-renewal, a travel receipt, a public API announcement thread, and an SSO pitch; no skill-feedback mail; no newer grok-export) plus one bot transcript tail (not an export) plus vendor recrawl **4 Oct** on top of origin **v0.5.47-free**. **No conversation_search.** Drive title search not required: no newer export was in the mailbox. grok-export still **W38** only. A mailbox copy is not an export and not a transcript. A bot transcript tail is not an export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No medical.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs. Do not claim a scan this tip did not run.
+A bot transcript tail is not an export. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No seat counts. No places. No medical.** Marketplace still Hold.
 
 ### OpenAI (first)
 
 - Recrawl 2026-10-04 **learn.chatgpt.com/docs/hooks**. Spill is still a paste. Compact is still not a wipe. A PostToolUse block is still not a rollback. Prompt and agent handlers are still parsed but skipped. `command` and `mcp_tool` still run. This skill still ships **no hooks**.
 - **New:** for events that cannot produce additional context, Codex ignores `additionalContextLimit` and reports a configuration warning. A limit on the wrong event is not a vault and not a wipe. Limit 0 on `additionalContext` is still a full paste.
-- **Mailbox, unnamed:** a second new-sign-in alert is still L0 identity, not a rotate. Do not paste the device or the place. A subscription renewal notice is billing. No seat counts. A renewal is not owner approval to pay.
 - Evals **187**.
 
 ### Anthropic (second)
@@ -1374,7 +1213,6 @@ Absorbed this Grok Build turn's live mailbox (after the 3 Oct v0.5.47 push: a se
 - Recrawl **code.claude.com/docs/en/permission-modes** (fetched 4 Oct 2026). **NO_DELTA** on the start table. Flag-fetching `claude -p` still starts in `default`. Flag-off sessions still start in auto on v2.1.285+. `CLAUDE_CODE_AUTO_MODE_SERVER=0` is still Claude Code's own classifier, not owner approval. The first session after upgrade can still differ from the table.
 - **New (headless page):** without `--bare`, `claude -p` runs the hooks in a project's `.claude/settings.json` and connects the servers in `.mcp.json` even in a folder never trusted. A `-p` session shows no workspace trust dialog and no per-server approval prompt. Untrusted `-p` is not a private lane.
 - **New:** before v2.1.286, bare limits held only partly. An interactive `--bare` session connected the MCP servers a normal session would. Every `--bare` session sent system reminders. Background tasks stayed available. Current bare is tighter and is still not a vault. An older bare session is not a wipe.
-- **Mailbox, unnamed:** a passkey-added security alert copied to a recovery mailbox is L0 identity. Not a rotate. Not a transcript. Do not paste the account.
 - Evals **188**.
 
 ### Grok Build (third)
@@ -1383,8 +1221,7 @@ Absorbed this Grok Build turn's live mailbox (after the 3 Oct v0.5.47 push: a se
 - Permissions page fetched 4 Oct. Footer date **not shown**. A missing footer is not a policy change. Ask remains the documented default. The Shift+Tab cycle (Normal → Plan → Auto when available → Always-approve) is **NO_DELTA**. `/auto` still switches and does not stack. Ctrl+O still does not stack on `/auto`. Neither is owner approval. `permission_mode` is still user or managed/requirements only, not project `.grok/config.toml`.
 - **New:** `/loop` fires immediately, then repeats. Each firing is a new agent turn. Interval minimum 60s. Loops expire after 7 days. At most 50. That is a standing paste, not one sealed job, and not owner approval to repeat the method. `/export` and `/copy` are pastes. `/transcript` is not a private lane.
 - **Transcript, unnamed:** a plan is not a build. This tip does not add an intake sheet, a money-back line, a percent, a hosting claim, or a compliance claim. It does not add a guarantee. It does not add a positive legal-advice claim. "Not legal advice" stays. Unverified public-call dates stay out. The durable ChatGPT route remains `chatgpt-skill/`. `openai-gpt-package/` stays the retiring path (freeze 26 Oct; retire 11 Dec) — a chat restatement is not a new date. A repeated correction of the same paste class does not grow a product. Corpus ticks stay L0.
-- Headless feature URL stays **404**. No newer grok-export than W38. Marketplace still Hold.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Headless feature URL stays **404**. Marketplace still Hold.
 - Evals **189**.
 
 ### Shared
@@ -1393,13 +1230,13 @@ Absorbed this Grok Build turn's live mailbox (after the 3 Oct v0.5.47 push: a se
 - **Untrusted `claude -p` is not a private lane.** Older bare was leakier. Bare is still not a vault.
 - **Each `/loop` fire is a new paste.** `/export` and `/copy` are pastes. A missing permissions footer is not a policy change.
 - **A plan is not a build.** No percent. No unverified public-call date. A renewal is not approval to pay. A passkey-added alert is not a rotate.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs. Do not claim a scan this tip did not run.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **189**. HITL F1–F28 + T1–T30 required on every claimed stack.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.47-free] — 2026-10-03
 
-Absorbed this Grok Build turn's live mailbox (after the 2 Oct v0.5.46 push: a chat-while-away digest and a new-sign-in alert; no skill-feedback mail; no newer grok-export) plus vendor recrawl **3 Oct** on top of origin **v0.5.46-free**. **No conversation_search.** Drive title search found no newer grok-export. grok-export still **W38** only. A mailbox copy is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No medical.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs.
+**No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No medical.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1412,7 +1249,6 @@ Absorbed this Grok Build turn's live mailbox (after the 2 Oct v0.5.46 push: a ch
 ### Anthropic (second)
 
 - Recrawl **code.claude.com/docs/en/permission-modes** and **code.claude.com/docs/en/headless** (fetched 3 Oct 2026). **NO_DELTA.** Flag-fetching `claude -p` still starts in `default`. Flag-off sessions still start in auto on v2.1.285+. `CLAUDE_CODE_AUTO_MODE_SERVER=0` is still Claude Code's own classifier, not owner approval. The first session after upgrade can still differ from the table. Do not import a third-party gateway cutoff the official pages did not state.
-- **Mailbox, unnamed:** a chat-while-away digest arrived after the 2 Oct push. It mixes a private-stack model sunset (already L0-SUNSET / L3-SUNSET: minimal local swap is not a publish; do not paste client-validated prompts; client validation stays hold) with an account aside and a medical aside. A digest is a paste. Do not copy it into this skill, another model, or this public repo. No names. No amounts. No medical. No client.
 - A new-sign-in alert the next morning is L0 identity. Not a rotate. Not a skill input. Do not paste the alert.
 - Evals **185**.
 
@@ -1421,8 +1257,7 @@ Absorbed this Grok Build turn's live mailbox (after the 2 Oct v0.5.46 push: a ch
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Permissions page fetched 3 Oct. Footer still **21 Jul 2026**. Ask remains the documented default. The Shift+Tab cycle recorded in v0.5.46 is **NO_DELTA**. `/auto` still switches and does not stack. Ctrl+O toggles always-approve and does not stack on `/auto`. Neither is owner approval.
 - **New:** `/loop [interval] <prompt>` repeats a prompt on an interval (modes-and-commands). That is a standing paste, not a vault, and not owner approval to repeat the method.
-- Headless feature URL stays **404**. `--continue` still reads `~/.grok/sessions`. No newer grok-export than W38. A digest is not a transcript. Marketplace still Hold.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Headless feature URL stays **404**. `--continue` still reads `~/.grok/sessions`. A digest is not a transcript. Marketplace still Hold.
 - Evals **186**.
 
 ### Shared
@@ -1430,13 +1265,13 @@ Absorbed this Grok Build turn's live mailbox (after the 2 Oct v0.5.46 push: a ch
 - **A compact is not a wipe.** A block is not a rollback. Parsed-but-skipped is not a gate.
 - **A chat-while-away digest is a paste.** A new-sign-in alert is not a rotate. No amounts. No medical. No names.
 - **`/loop` is a standing paste.** Permissions footer unchanged. Anthropic 3 Oct recrawl is NO_DELTA.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **186**. HITL F1–F28 + T1–T29 required on every claimed stack.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.46-free] — 2026-10-02
 
-Absorbed this Grok Build turn's live mailbox (after the 1 Oct v0.5.45 push: a newer official completeness notice, an in-chat hire/marketplace pitch, and bank-document / payment-reminder / billing-summary mail; no skill-feedback mail; no newer grok-export) plus vendor recrawl **2 Oct** on top of origin **v0.5.45-free**. **No conversation_search.** Drive title search found no newer grok-export. grok-export still **W38** only. A mailbox copy of a notice is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs.
+**No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1444,7 +1279,6 @@ Absorbed this Grok Build turn's live mailbox (after the 1 Oct v0.5.45 push: a ne
 - **New:** `additionalContextLimit` applies **only** to `additionalContext`. Tool feedback and continuation prompts **keep the default** spill. Limit 0 still passes the handler's complete additionalContext to the model. That is a full paste. It is not a private lane for tool traces.
 - **New:** when managed policy and remote hooks are enabled, Work Cloud with local access **and dots** use admin-managed remote MCP hooks on the cloud orchestrator. Personal accounts and Work Cloud without local access do not use those enterprise hooks. Not owner review.
 - **Amends v0.5.45:** not only command and shell hooks. Prompt and agent handlers, environment-scoped hooks, and SessionEnd MCP hooks do not run under cloud orchestration, even when tools execute locally. A background async hook uses the same spill and cannot approve. Local-only orchestration is not a vault.
-- **Mailbox, unnamed:** a newer official completeness notice is the same class as v0.5.45 — still not a transcript and not a reply. Do not paste the protocol or the filing reference. An in-chat hire or marketplace connector is a hop and a paste — not owner approval to send the method out. Do not name the vendor. Bank-document, payment-reminder, and billing-summary mail stays L0. No amounts.
 - Evals **181**.
 
 ### Anthropic (second)
@@ -1459,8 +1293,7 @@ Absorbed this Grok Build turn's live mailbox (after the 1 Oct v0.5.45 push: a ne
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Permissions page fetched 2 Oct. Footer still **21 Jul 2026**. Ask remains the documented default. v0.5.45 recorded Auto and left the cycle implicit. **Now explicit:** Shift+Tab cycles Normal → Plan → Auto (when the feature is on) → Always-approve. `/auto` while always-approve is on **switches**. It does not stack. Plan review is not skipped under auto or always-approve. deny wins over allow. `--allow` and `--deny` are per invocation, not a vault. Headless dontAsk and locking always-approve off are an enterprise control, not a free-skill grant.
 - Headless scripting page still **10 Jun 2026**. `--continue` is the latest session in the current directory. It still reads `~/.grok/sessions`. Resume is a next-paste. `--always-approve` on `grok -p` is still not owner approval. `docs.x.ai/build/features/headless` stays **404**.
-- No newer grok-export than W38. A mailbox copy is not a transcript. Marketplace still Hold.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Marketplace still Hold.
 - Evals **183**.
 
 ### Shared
@@ -1469,20 +1302,19 @@ Absorbed this Grok Build turn's live mailbox (after the 1 Oct v0.5.45 push: a ne
 - **Server-skip is not owner approval.** The first session after upgrade can differ from the table.
 - **Shift+Tab does not stack modes.** Plan review is not skipped. deny wins. `--continue` is a next-paste.
 - **A newer completeness notice is not a send.** An in-chat hire connector is a hop. Bank-document mail stays L0. No amounts.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **183**. HITL F1–F27 + T1–T28 required on every claimed stack.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.45-free] — 2026-10-01
 
-Absorbed this Grok Build turn's live mailbox (after the 30 Sep v0.5.44 push: a later official completeness notice, a vendor legal-terms notice, and billing / invoice / trial / credit-note mail; one chat catch-up; no skill-feedback mail; no newer grok-export) plus vendor recrawl **1 Oct** on top of origin **v0.5.44-free**. **No conversation_search.** Drive title search found no newer grok-export. grok-export still **W38** only. A mailbox copy of a notice is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No personal health.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners. Do not push packs.
+**No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No amounts. No personal health.** Marketplace still Hold.
 
 ### OpenAI (first)
 
 - Recrawl 2026-10-01 **developers.openai.com/codex/hooks** (same document as learn.chatgpt.com/docs/hooks). Spill is still a paste. A failed write still sends a truncated preview. This skill still ships **no hooks**.
 - **New:** `additionalContextLimit` defaults to **2500** tokens. A positive integer raises the spill threshold. **`0` passes the handler's complete additionalContext to the model.** Limit 0 is a full paste, not a private lane. The docs say avoid 0 unless the hook caps its own output. Do not return secrets in hook output (spill writes a temp file).
 - **New:** when managed policy and remote hooks are enabled, Work Cloud with local access runs **admin-managed remote MCP hooks** on the cloud orchestrator. That is not owner review. Command and shell hooks do not run under cloud orchestration. Do not turn on local computer access to treat those hooks as a vault.
-- **Mailbox, unnamed:** a later official completeness notice is the same class as v0.5.44 — still not a transcript and not a reply. Do not paste the protocol or the filing reference. A vendor legal-terms notice is not this skill. Do not paste the terms. Do not accept them from this skill. Billing, invoice, trial, and credit-note mail stays L0. No amounts.
 - Evals **178**.
 
 ### Anthropic (second)
@@ -1498,8 +1330,7 @@ Absorbed this Grok Build turn's live mailbox (after the 30 Sep v0.5.44 push: a l
 - Permissions page fetched 1 Oct. **Ask remains the documented default.** v0.5.44 recorded that and `--always-approve`, and left the Auto row implicit. **Now explicit:** Auto (`/auto`, Shift+Tab when the feature is on) is a **classifier**, not owner approval. `permission_mode` is **user config or managed/requirements only** — not project `.grok/config.toml`. Legacy `yolo = true` still works; `permission_mode` wins. A remembered always-allow still prompts for `rm` and `git push`. An explicit allow rule auto-approves them. That rule is not owner approval.
 - Sandbox is **separate** and **off by default**. Off is not a vault.
 - Headless scripting: `grok -p --resume` and `--continue` read `~/.grok/sessions`. Resume is a next-paste. `--always-approve` on `grok -p` is still not owner approval. `docs.x.ai/build/features/headless` stays **404**.
-- No newer grok-export than W38. A chat catch-up is not a transcript. Marketplace still Hold.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Marketplace still Hold.
 - Evals **180**.
 
 ### Shared
@@ -1508,13 +1339,13 @@ Absorbed this Grok Build turn's live mailbox (after the 30 Sep v0.5.44 push: a l
 - **Flag-off headless auto is not owner approval.** Feature-flag sessions still start in default.
 - **Grok Auto is not a project-file grant.** Sandbox off is not a vault. Session resume is a next-paste.
 - **A later completeness notice is not a send.** A vendor legal-terms notice is not a paste. Billing mail stays L0. No amounts.
-- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not push packs.
+- **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **180**. HITL F1–F26 + T1–T27 required on every claimed stack. T26 amended for the headless start rule.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.44-free] — 2026-09-30
 
-Absorbed this Grok Build turn's live mailbox (after the 29 Sep v0.5.43 push: an inbound official completeness receipt, and a later partner-deck note; no skill-feedback mail; no newer grok-export) plus vendor recrawl **30 Sep** on top of origin **v0.5.43-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy of a deck or a receipt is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No personal health.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners.
+**No client / product / infra / firm / tester / counsel / counterparty names. No filing references. No terms text. No payment status. No personal health.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1538,8 +1369,7 @@ Absorbed this Grok Build turn's live mailbox (after the 29 Sep v0.5.43 push: an 
 - Recrawl **docs.x.ai/build/features/permissions** (footer 21 Jul 2026): **NO_DELTA**. Ask is still the documented default. `--always-approve` is still not owner approval.
 - **docs.x.ai/build/features/headless is 404.** Headless remains `grok -p` (docs.x.ai/build/cli/headless-scripting). A 404 is not a new private lane.
 - **New:** docs MCP page last updated 29 Sep 2026. `grok mcp add` of `https://docs.x.ai/api/mcp` is a network hop, not a vault and not a transcript. Do not point it at a private corpus. Do not paste keys into `~/.grok/config.toml`.
-- No newer grok-export than W38. Deck mail is not a transcript. Review/Blocked drafts stay unsent. This free skill is not the platform.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Deck mail is not a transcript. Review/Blocked drafts stay unsent. This free skill is not the platform.
 - Evals **177**.
 
 ### Shared
@@ -1553,7 +1383,7 @@ Absorbed this Grok Build turn's live mailbox (after the 29 Sep v0.5.43 push: an 
 
 ## [0.5.43-free] — 2026-09-29
 
-Absorbed this Grok Build turn's live mailbox (after the 28 Sep v0.5.42 push: one chat catch-up arrived 29 Sep; no newer skill-feedback mail; no newer grok-export) plus vendor recrawl **29 Sep** on top of origin **v0.5.42-free**. **No conversation_search.** grok-export still **W38** only. A mailbox copy of a team chat is not an export and not a transcript. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel / counterparty names. No terms text. No payment status. No personal health.** Marketplace still Hold. `chatroom_send` unavailable → NOTIFY_BLOCKED. Do not invent a Bot DM. Do not email partners.
+**No client / product / infra / firm / tester / counsel / counterparty names. No terms text. No payment status. No personal health.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1573,28 +1403,26 @@ Absorbed this Grok Build turn's live mailbox (after the 28 Sep v0.5.42 push: one
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026): **NO_DELTA**. Extra `~/.grok/hooks-paths` remains a hop. `GROK_PLUGIN_ROOT` is not a vault.
-- No newer grok-export than W38. A 29 Sep chat catch-up is not a transcript. Payment-status asides stay L0 and unsent. Personal scheduling and health stay out. Review/Blocked drafts stay unsent. This free skill is not the platform.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Payment-status asides stay L0 and unsent. Personal scheduling and health stay out. Review/Blocked drafts stay unsent. This free skill is not the platform.
 - Evals **174**.
 
 ### Shared
 
 - **Official notice is not a send.** I'll-process-it-after is not owner approval.
 - **Private-stack model sunset is not this skill.**
-- **Chat catch-up is not a transcript.**
-- **Counsel reply is still not a filing.** Spill is still a paste. Classifier review is still not owner approval.
+- Spill is still a paste. Classifier review is still not owner approval.
 - **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
 - Evals now **174**. HITL F1–F24 + T1–T25 required on every claimed stack.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.42-free] — 2026-09-28
 
-Absorbed this Grok Build turn's live mailbox (after the 27 Sep v0.5.41 push: a counsel reply on the mark-filing pre-read arrived the same evening; a 28 Sep absorb-only backup arrived this morning — Platform / pitch hubs, blocked drafts, empty artifacts, empty week hub) plus vendor recrawl **28 Sep** on top of origin **v0.5.41-free**. **No conversation_search.** grok-export still **W38** only. No newer export. Do not dump chat bodies. A memory snapshot is not a transcript. **No client / product / infra / firm / tester / counsel names.** Marketplace still Hold.
+No newer export. A memory snapshot is not a transcript. **No client / product / infra / firm / tester / counsel names.** Marketplace still Hold.
 
 ### OpenAI (first)
 
 - Recrawl 2026-09-28 **developers.openai.com/codex/hooks**: **NO_DELTA**. Hook-output spill is still a paste. A failed write still sends a truncated preview. `additionalContext` is still model-visible. This skill still ships **no hooks**. A NO_DELTA recrawl is not a reason to add hooks.
-- **New from the mailbox, unnamed:** a counsel reply on a mark-filing pre-read is not this skill. Do not ingest the reply. Do not ingest the slides. Do not file. Do not paste the mark, specimens, or strategy into Codex (or any consumer chat) to fill filing basis. An identical-mark knockout is not a confusion opinion. Nice wording is not an ID Manual acceptance. A model percentage is not clearance. A name or surname distinctiveness flag is not a refusal prediction. Do not invent an office-action clock.
+- Do not ingest the reply. Do not ingest the slides. Do not file. Do not paste the mark, specimens, or strategy into Codex (or any consumer chat) to fill filing basis. An identical-mark knockout is not a confusion opinion. Nice wording is not an ID Manual acceptance. A model percentage is not clearance. A name or surname distinctiveness flag is not a refusal prediction. Do not invent an office-action clock.
 - Evals **169**.
 
 ### Anthropic (second)
@@ -1607,22 +1435,21 @@ Absorbed this Grok Build turn's live mailbox (after the 27 Sep v0.5.41 push: a c
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026): **NO_DELTA**. Extra `~/.grok/hooks-paths` remains a hop. `GROK_PLUGIN_ROOT` is not a vault.
-- No newer grok-export than W38. W39 stays PARTIAL. The 28 Sep absorb-only backup is not a publish and not a transcript. Empty artifacts and an empty week hub are not a transcript. Review/Blocked drafts stay unsent. This free skill is not the platform — no prices, no client names. Never bundle `Reghnam/eu-ip-law-ground-truth` (do not invent a second sidecar).
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- W39 stays PARTIAL. Review/Blocked drafts stay unsent. This free skill is not the platform — no prices, no client names. Never bundle `Reghnam/eu-ip-law-ground-truth` (do not invent a second sidecar).
 - Evals **171**.
 
 ### Shared
 
-- **Counsel reply is not a filing.** Identical-mark knockout is not a confusion opinion. Do not invent an office-action clock.
+- Identical-mark knockout is not a confusion opinion. Do not invent an office-action clock.
 - **PermissionRequest hook allow is not owner approval.** Bare mode still writes.
-- **Absorb-only backup is not a publish.** Do not dump chats. Do not bundle the EU corpus.
+- Do not dump chats. Do not bundle the EU corpus.
 - **Unsent and blocked drafts stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend. Do not chase a stale forward with this zip.
 - Evals now **171**. HITL F1–F23 + T1–T24 required on every claimed stack.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.41-free] — 2026-09-27
 
-Absorbed this Grok Build turn's live mailbox (after the 26 Sep v0.5.40 push: a mark-filing use-case pre-read went out the same morning **after** that push; on 27 Sep the owner personally forwarded the **stale** mailed try pack v0.5.36 and, separately, a platform-access / UAT note — neither is a publish of this tip) plus vendor recrawl **27 Sep** on top of origin **v0.5.40-free**. **No conversation_search.** grok-export still **W38** only (cover-sized). No newer export. Do not dump chat bodies. **No client / product / infra / firm / tester / counsel names.** Marketplace still Hold.
+No newer export. **No client / product / infra / firm / tester / counsel names.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1640,8 +1467,7 @@ Absorbed this Grok Build turn's live mailbox (after the 26 Sep v0.5.40 push: a m
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026): **NO_DELTA**. Extra `~/.grok/hooks-paths` remains a hop. `GROK_PLUGIN_ROOT` is not a vault.
-- No newer grok-export than W38. W39 stays PARTIAL. A memory snapshot is not a transcript. Marketplace still Hold.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- W39 stays PARTIAL. A memory snapshot is not a transcript. Marketplace still Hold.
 - Evals **168**.
 
 ### Shared
@@ -1656,7 +1482,7 @@ Absorbed this Grok Build turn's live mailbox (after the 26 Sep v0.5.40 push: a m
 
 ## [0.5.40-free] — 2026-09-26
 
-Absorbed this Grok Build turn's live mailbox (after the 25 Sep v0.5.39 push: weekly backup **2026-W39** arrived later the same day, STATUS **PARTIAL**; no newer owner skill-feedback mail; mailed try pack **v0.5.36** stays stale — do not resend; unsent execution briefs stay unsent) plus vendor recrawl **26 Sep** on top of origin **v0.5.39-free**. **No conversation_search.** W39 memory snapshot is pointers only — project chats were not exported. Do not dump chat bodies. Do not treat the snapshot or the memory-repo tree as a transcript or a publish. **No client / product / infra / firm / tester names.** Marketplace still Hold.
+W39 memory snapshot is pointers only — project chats were not exported. Do not treat the snapshot or the memory-repo tree as a transcript or a publish. **No client / product / infra / firm / tester names.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1675,8 +1501,7 @@ Absorbed this Grok Build turn's live mailbox (after the 25 Sep v0.5.39 push: wee
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (public URLs located): bot page **NO_DELTA**. Skills page still last-updated 11 Aug, but this turn records a path v0.5.39 did not name: extra hook roots via `~/.grok/hooks-paths` are a **hop** (same class as extra `[skills] paths`). Project `.grok/hooks/` still needs `/hooks-trust`. Plugin hooks receive `GROK_PLUGIN_ROOT` / `GROK_PLUGIN_DATA` — not a vault.
-- W39 chat coverage is **PARTIAL**. conversation_search cannot export Grok project chats. A memory snapshot is not a transcript. Marketplace still Hold. Bot computers still US-hosted.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- W39 chat coverage is **PARTIAL**. A memory snapshot is not a transcript. Marketplace still Hold. Bot computers still US-hosted.
 - Evals **165**.
 
 ### Shared
@@ -1690,7 +1515,7 @@ Absorbed this Grok Build turn's live mailbox (after the 25 Sep v0.5.39 push: wee
 
 ## [0.5.39-free] — 2026-09-25
 
-Absorbed this Grok Build turn's live mailbox (after the 24 Sep v0.5.38 patch: no owner mail after 24 Sep; a cold compute-spend pitch forwarded internally is **L0** — do not reply; unsent execution brief stays **DRAFT**; mailed try pack **v0.5.36** stays stale — do not resend) plus vendor recrawl **25 Sep** on top of origin **v0.5.38-free**. **No conversation_search** — grok-export W38 re-checked (18 Sep, cover-sized, unreadable here); no newer export; no chat bodies dumped. **No client / product / infra / firm / tester / vendor names.** Marketplace still Hold.
+**No client / product / infra / firm / tester / vendor names.** Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1708,7 +1533,7 @@ Absorbed this Grok Build turn's live mailbox (after the 24 Sep v0.5.38 patch: no
 - `acceptEdits` auto-approves mkdir, touch, mv, and cp. Unattended writes, not owner approval.
 - Explicit `--plugin-dir`, `--plugin-url`, `--mcp-config`, `--settings`, `--agents`, and `--append-system-prompt-file` still load under bare. `/skill-name` in the prompt still expands.
 - `--forward-subagent-text` (and forked-skill forwarding, v2.1.275+) reconstructs transcripts. Disclosure multiplier.
-- On SIGTERM, SessionEnd hooks still run. Skipping auto-discovery is not "no hooks at exit."
+- On SIGTERM, SessionEnd hooks still run.
 - Piped stdin is capped at 10MB. Piping invention text is still a paste.
 - Evals **161**.
 
@@ -1716,8 +1541,7 @@ Absorbed this Grok Build turn's live mailbox (after the 24 Sep v0.5.38 patch: no
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026) (public URLs located): **no new host path this turn**. Extra `[skills] paths` in `~/.grok/config.toml` remains a hop. Private skills remain one library. Broad listeners remain a disclosure multiplier. Teach-a-task writes stay behind approval.
-- Grok-export W38 still PARTIAL. Do not dump chat bodies. Marketplace still Hold. Bot computers still US-hosted.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Marketplace still Hold. Bot computers still US-hosted.
 - Evals **162**.
 
 ### Shared
@@ -1727,13 +1551,13 @@ Absorbed this Grok Build turn's live mailbox (after the 24 Sep v0.5.38 patch: no
 - **A cold compute-spend pitch is L0.** Do not reply. Do not paste per-project metrics. No vendor names.
 - **Research-lock / decision-schema paste stays a next-paste.** Missing source file: wait. This skill does not file.
 - **Unsent execution briefs stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
-- **Grok host docs unchanged.** Weekly backup ≠ publish. grok-export stays PARTIAL.
+- **Grok host docs unchanged.** Weekly backup ≠ publish.
 - Evals now **162**. HITL F1–F20 + T1–T20 required on every claimed stack.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.38-free] — 2026-09-24
 
-Absorbed this Grok Build turn's live mailbox (after the 23 Sep v0.5.37 patch: late execution brief still **DRAFT/unsent**; a counsel working-picture and an internal scan briefing are **not** this skill; mailed try pack **v0.5.36** stays stale — do not resend) plus vendor recrawl **24 Sep** on top of origin **v0.5.37-free**. **No conversation_search** — grok-export W38 re-checked, still PARTIAL (cover + metadata; no chat bodies dumped; no newer export). **No client / product / infra / firm / tester / architecture names.** Leftover drafts stay unsent. Marketplace still Hold.
+**No client / product / infra / firm / tester / architecture names.** Leftover drafts stay unsent. Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1752,8 +1576,7 @@ Absorbed this Grok Build turn's live mailbox (after the 23 Sep v0.5.37 patch: la
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** (last updated 11 Aug 2026) + **docs.x.ai/grok-bot/skills-routines-and-automations** (last updated 14 Sep 2026) (public URLs located): **no new host path this turn**. Project skills stay `.grok/skills/`. User-level `~/.agents/skills/` still discovered. Private skills remain one library. Broad listeners remain a disclosure multiplier. Teach-a-task writes stay behind approval.
-- Grok-export W38 still PARTIAL. Do not dump chat bodies. Marketplace still Hold. Bot computers still US-hosted.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Marketplace still Hold. Bot computers still US-hosted.
 - Evals **159**.
 
 ### Shared
@@ -1764,13 +1587,13 @@ Absorbed this Grok Build turn's live mailbox (after the 23 Sep v0.5.37 patch: la
 - **Routing internals stay off leave-behinds.** This skill does not claim a legal opinion, freedom-to-operate, or a filing. A counsel working-picture is not a product. An internal scan briefing is not a leave-behind.
 - **Do not send invention-grade text to an external lab API.** Do not deploy, request quota, or set always-on from this skill.
 - **Unsent execution briefs stay unsent.** Mailed try pack v0.5.36 is stale. Do not resend.
-- **Grok host docs unchanged.** Weekly backup ≠ publish. grok-export stays PARTIAL.
+- **Grok host docs unchanged.** Weekly backup ≠ publish.
 - Evals now **159**. HITL F1–F19 + T1–T19 required on every claimed stack.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.37-free] — 2026-09-23
 
-Absorbed this Grok Build turn's live mailbox (22 Sep try-pack **v0.5.36 sent** — feedback asked, do not resend; infra follow-up is scheduling only) plus vendor recrawl **23 Sep** on top of origin **v0.5.36-free**. **No conversation_search** — grok-export W38 re-read, still PARTIAL (cover + metadata; no chat bodies dumped). **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
+**No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1789,8 +1612,7 @@ Absorbed this Grok Build turn's live mailbox (22 Sep try-pack **v0.5.36 sent** �
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Recrawl **docs.x.ai/grok-bot/skills-routines-and-automations** + **docs.x.ai/build/features/skills-plugins-marketplaces** (public URLs located): paths unchanged. **Private skills are one library** shared by all Bots. **Broad event listeners** are a disclosure multiplier. Test-run-is-real-work hold kept.
-- Grok-export W38 still PARTIAL. Marketplace still Hold. Bot computers still US-hosted.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Marketplace still Hold. Bot computers still US-hosted.
 
 ### Shared
 
@@ -1800,13 +1622,13 @@ Absorbed this Grok Build turn's live mailbox (22 Sep try-pack **v0.5.36 sent** �
 - **Mailed try pack v0.5.36 is stale.** Do not resend.
 - **Synced skills are read-only.** Bare mode and safe mode skip sync. Both instruction files are hops.
 - **Infra or access overview paste is a next-paste.** No names in this repo.
-- **Weekly backup ≠ publish.** grok-export stays PARTIAL.
+- **Weekly backup ≠ publish.**
 - Evals now **155**. HITL F1–F19 + T1–T19 required on every claimed stack.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.36-free] — 2026-09-21
 
-Absorbed this Grok Build turn's live mailbox (after 20 Sep: weekly backup **2026-09-21** absorb-only; HITL v0.5.25 still UNREAD/stale; leftover UAT **do-not-resend**; remaining leftover drafts still unsent) plus vendor recrawl **21 Sep morning** on top of origin **v0.5.35-free** (10-min claude.ai sync; custom-commands merge; Teach writes behind approval; Copilot cloud / Genkit hop). **No conversation_search** — grok-export W38 still PARTIAL. **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
+**No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1828,8 +1650,7 @@ Absorbed this Grok Build turn's live mailbox (after 20 Sep: weekly backup **2026
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Recrawl **docs.x.ai/build/features/skills-plugins-marketplaces** + **docs.x.ai/grok-bot/skills-routines-and-automations** (public URLs located): Grok auto-reads Claude Code `AGENTS.md` / plugins / skills with zero config — AGENTS.md fallback is a hop. Teach-a-task: keep write actions behind approval (send / purchase / delete / publish / production change). No-mic ≠ clearance. User-level `~/.agents/skills/` and `~/.agents/commands/` kept. Project skills still `.grok/skills/` (not project `.agents/skills/`).
-- Grok-export W38 still PARTIAL (no conversation_search; do not dump chat bodies). Weekly backup 21 Sep is absorb-only — **backup ≠ publish**. Marketplace still Hold. Bot computers still US-hosted.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Weekly backup 21 Sep is absorb-only — **backup ≠ publish**. Marketplace still Hold. Bot computers still US-hosted.
 
 ### Shared
 
@@ -1845,7 +1666,7 @@ Absorbed this Grok Build turn's live mailbox (after 20 Sep: weekly backup **2026
 
 ## [0.5.35-free] — 2026-09-20
 
-Absorbed this Grok Build turn's live mailbox (after 19 Sep: no IP/skill hits — billing/invite stay L0; leftover UAT **do-not-resend**; remaining leftover drafts still unsent; mailed HITL v0.5.25 still stale) plus vendor recrawl **20 Sep morning** on top of origin **v0.5.34-free** (Astra IF guidelines vs requirements; Record & Replay package-as-plugin dual-surface; Grok user-level `~/.agents/skills/`; Teach-a-task no mic). **No conversation_search** — grok-export W38 still PARTIAL. **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
+**No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1866,8 +1687,7 @@ Absorbed this Grok Build turn's live mailbox (after 19 Sep: no IP/skill hits —
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Recrawl **docs.x.ai/grok-bot/skills-routines-and-automations** (public URL located): Teach-a-task records visible computer interaction ≤10 min; **does not record microphone**; use secure credential handoff; **keep write actions behind approval**. User-level `~/.agents/commands/` is also discovered (custom-commands family). Project skills still `.grok/skills/` (not project `.agents/skills/`); user-level `~/.agents/skills/` **is** discovered.
-- Grok-export W38 still PARTIAL. Marketplace still Hold. Bot computers still US-hosted.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Marketplace still Hold. Bot computers still US-hosted.
 
 ### Shared
 
@@ -1882,7 +1702,7 @@ Absorbed this Grok Build turn's live mailbox (after 19 Sep: no IP/skill hits —
 
 ## [0.5.34-free] — 2026-09-20
 
-Absorbed this Grok Build turn's live mailbox (after 18 Sep: Twilio verify only; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**; mailed HITL v0.5.25 still UNREAD) plus vendor recrawl **20 Sep afternoon** on top of origin **v0.5.33-free** (Claude-plugin OpenAI submit dual-surface; import-other-agent next-paste kept). **No conversation_search** — grok-export W38 still PARTIAL. **No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
+**No client / product / infra / firm / tester names.** Leftover drafts stay unsent. Marketplace still Hold.
 
 ### OpenAI (first)
 
@@ -1902,8 +1722,7 @@ Absorbed this Grok Build turn's live mailbox (after 18 Sep: Twilio verify only; 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Official **docs.x.ai/build/features/skills-plugins-marketplaces** (public URL located): Grok discovers **project** skills from `./.grok/skills/` (walked to repo root), `~/.grok/skills/`, enabled plugin `skills/`, and `[skills] paths`. Grok does **not** scan project `.agents/skills/`. **User-level** `~/.agents/skills/` **is** discovered (Agents.md compatibility). Origin 0.5.33 noted this in changelog; this patch writes it into the SKILL body so hosts actually follow it.
 - **Teach a task** (docs.x.ai/grok-bot/skills-routines-and-automations): records visible computer interaction ≤10 min; **does not record microphone audio**; use the **secure credential handoff** for secrets. No-mic ≠ clearance for on-screen secrets.
-- `user-invocable:` only literal `true` counts. Grok-export W38 still PARTIAL. Marketplace still Hold. Bot computers still US-hosted.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- `user-invocable:` only literal `true` counts. Marketplace still Hold. Bot computers still US-hosted.
 
 ### Shared
 
@@ -1918,7 +1737,7 @@ Absorbed this Grok Build turn's live mailbox (after 18 Sep: Twilio verify only; 
 
 ## [0.5.33-free] — 2026-09-20
 
-Absorbed this Grok Build turn's live mailbox (SteerCo IP-risk 12/16 Sep already in origin; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**) plus vendor recrawl **20 Sep morning**. **No conversation_search** — grok-export W38 still PARTIAL (12 files: 1 verified Build session + 11 automation metadata-only). Origin **v0.5.32-free** Record & Replay / Teach-a-task / Scan Tools rescan / Spark-retire L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+Origin **v0.5.32-free** Record & Replay / Teach-a-task / Scan Tools rescan / Spark-retire L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
 
 ### OpenAI (first)
 
@@ -1941,8 +1760,7 @@ Absorbed this Grok Build turn's live mailbox (SteerCo IP-risk 12/16 Sep already 
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
 - Recrawl 20 Sep **docs.x.ai/build/features/skills-plugins-marketplaces**: Grok auto-reads Claude Code marketplaces, plugins, skills, MCPs, agents, hooks, and `CLAUDE.md` / `.claude/rules/` with zero config. Home `~/.agents/skills/` is discovered; **project** `.agents/skills/` is still **not** scanned — keep skills at `.grok/skills/` for project. Teach-a-task ≤10 min = demonstration-to-skill Hold. Private skills = one library across Bots (hop). `grok plugin install --trust` hop. Marketplace still Hold. Bot computers still US-hosted.
-- Grok-export W38 still PARTIAL. Do **not** dump those chats into this public repo. `conversation_search` still not in this harness.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
+- Do **not** dump those chats into this public repo.
 
 ### Shared
 
@@ -1957,12 +1775,11 @@ Absorbed this Grok Build turn's live mailbox (SteerCo IP-risk 12/16 Sep already 
 - Evals now **139**. HITL F9–F15 + T9–T15 required on every claimed stack.
 - Still free-only. Still not legal advice. No secrets.
 
-
 All notable changes to the portable free edition. Hygiene only. Not legal advice.
 
 ## [0.5.32-free] — 2026-09-19
 
-Absorbed this Grok Build turn's live mailbox (SteerCo IP-risk brief 16 Sep already in origin; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**) plus vendor recrawl **19 Sep afternoon** and the **readable** grok-export W38 zip (previous turn called it binary). **No conversation_search** — Grok-chat coverage is PARTIAL (12 files: 1 verified Build session + 11 automation metadata-only; interactive project chats missing). Origin **v0.5.31-free** Office add-in / custom-GPT migrate / host-stripped / Word preview L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+Origin **v0.5.31-free** Office add-in / custom-GPT migrate / host-stripped / Word preview L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
 
 ### OpenAI (first)
 
@@ -1970,8 +1787,7 @@ Absorbed this Grok Build turn's live mailbox (SteerCo IP-risk brief 16 Sep alrea
 - **Scan Tools rescan-after-change is another method paste.** "After changing the skill, deploy the server and scan it again before submitting a new plugin version." Rescan ≠ a new private lane. Hold.
 - GPT-5.3-Codex-Spark removed 14 Sep from ChatGPT desktop / Codex CLI / IDE — **L0 model pick**. GPT-5.5 retire 14 Oct stays L0.
 - Office add-in / custom GPT→plugin dual-surface / universal directory / hooks web-install ≠ deploy / host-stripped forks kept from 0.5.31.
-- `agents/openai.yaml` `default_prompt` names Record & Replay, Teach-a-task 10 min, rescan-after-change, grok-export PARTIAL, leftover drafts unsent.
-- Evals **132–135**. JSON channels `record-replay | teach-a-task | rescan-snapshot | grok-export-partial | spark-retire-l0`.
+- Evals **132–135**.
 
 ### Anthropic (second)
 
@@ -1980,17 +1796,16 @@ Absorbed this Grok Build turn's live mailbox (SteerCo IP-risk brief 16 Sep alrea
 ### Grok Build (third)
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored**.
-- **Grok-export W38 is now readable** (was binary last turn). Coverage **PARTIAL**: 1 verified Build session + 11 automation conversations (metadata + conversationId; bodies not retrieved). Interactive project chats still missing. Do **not** dump those chats into this public repo. `conversation_search` still not in this harness.
+- Coverage **PARTIAL**: 1 verified Build session + 11 automation conversations (bodies not retrieved). Interactive project chats still missing. Do **not** dump those chats into this public repo.
 - **Teach a task** (FAQ last updated 18 Sep): records one browser workflow from the computer view, **10-minute** limit, draft skill to review. Same demonstration-to-skill Hold as Record & Replay. Private skills are one library shared by all Bots (hop).
 - Project skills still `.grok/skills/` (does not scan `.agents/skills/`). `grok plugin install --trust` hop. Marketplace still Hold. Bot computers still US-hosted.
 - Galaxy / Office-preview / content-summit / Spark-retire **attendance / model pick** stays **L0**.
-- Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 
 ### Shared
 
 - **Record & Replay / Teach-a-task is demonstration-to-skill.** Window content is recorded. Secrets/methods do not belong in the take. Unnamed save-as-skill is a publish.
 - **Scan Tools rescan-after-change is another snapshot.** Do not treat a second scan as a private lane.
-- **Grok-export PARTIAL ≠ full chat absorb.** Metadata-only automation chats are not transcripts. Do not publish chat bodies.
+- Metadata-only automation chats are not transcripts.
 - **Office add-in / custom-GPT migrate / universal directory** holds kept.
 - Leftover tester UAT / upskilling / partner-pre-read drafts stay unsent.
 - Callable / headless chain is still a disclosure ladder.
@@ -2000,7 +1815,7 @@ Absorbed this Grok Build turn's live mailbox (SteerCo IP-risk brief 16 Sep alrea
 
 ## [0.5.31-free] — 2026-09-19
 
-Absorbed this Grok Build turn's live mailbox (OpenAI Business admin 18 Sep evening: Office add-in + custom-GPT retirement + GPT-5.5 dates; leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**) plus vendor recrawl **19 Sep**. **No Grok chat-history connector exists** — grok-export zip is binary/unreadable here; Grok-chat insights are from this turn, Bot/Build docs, StoreConnect 18 Sep, and live automations. Origin **v0.5.30-free** universal-directory / hooks web-install / Claude name-cache / Galaxy finale L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+Origin **v0.5.30-free** universal-directory / hooks web-install / Claude name-cache / Galaxy finale L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
 
 ### OpenAI (first)
 
@@ -2023,7 +1838,6 @@ Absorbed this Grok Build turn's live mailbox (OpenAI Business admin 18 Sep eveni
 - **Project skills live at `.grok/skills/`** — Grok Build does **not** scan `.agents/skills/` for project skills. StoreConnect (public URL located, last modified 18 Sep) confirms the same hop. Home `~/.grok/skills/` is Build/CLI. Bot = Save / Plugins enable-per-Bot.
 - `grok plugin install <name> --trust` stays a hop. Marketplace still Hold. Bot computers still US-hosted.
 - Galaxy Day 2–3 / **finale** / remaining role livestreams / **free-month usage-reset** / Office add-in preview / public content-summit **attendance** stays **L0**. Share pack still do-not-publish-live.
-- This turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED (inner-circle wrap only; no partner mail, no tweet, no marketplace).
 
 ### Shared
 
@@ -2038,7 +1852,7 @@ Absorbed this Grok Build turn's live mailbox (OpenAI Business admin 18 Sep eveni
 
 ## [0.5.30-free] — 2026-09-18
 
-Absorbed this Grok Build turn's live mailbox (leftover tester UAT / upskilling / partner-pre-read drafts still **DRAFT/unsent**; Galaxy Day 3 **finale** + free-month usage-reset calendar 17 Sep evening) plus vendor recrawl **18 Sep**. **No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, StoreConnect 18 Sep, and live automations. Origin **v0.5.29-free** Scan Tools snapshot / leftover UAT unsent / Galaxy Day 3 L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+**No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, StoreConnect 18 Sep, and live automations. Origin **v0.5.29-free** Scan Tools snapshot / leftover UAT unsent / Galaxy Day 3 L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
 
 ### OpenAI (first)
 
@@ -2060,7 +1874,6 @@ Absorbed this Grok Build turn's live mailbox (leftover tester UAT / upskilling /
 - **Project skills live at `.grok/skills/`** — Grok Build does **not** scan `.agents/skills/` for project skills. StoreConnect (public URL located, last modified 18 Sep) confirms the same hop. Home `~/.grok/skills/` is Build/CLI. Bot = Save / Plugins enable-per-Bot.
 - `grok plugin install <name> --trust` stays a hop. Marketplace still Hold. Bot computers still US-hosted.
 - Galaxy Day 2–3 / **finale** / remaining role livestreams / **free-month usage-reset** **attendance** stays **L0**. Share pack still do-not-publish-live.
-- This turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED (inner-circle wrap only; no partner mail, no tweet, no marketplace).
 
 ### Shared
 
@@ -2075,7 +1888,7 @@ Absorbed this Grok Build turn's live mailbox (leftover tester UAT / upskilling /
 
 ## [0.5.29-free] — 2026-09-17
 
-Absorbed this Grok Build turn's live mailbox (leftover tester UAT invite still **DRAFT/unsent**; Galaxy Day 3 / remaining role livestream calendar) plus vendor recrawl 17 Sep late morning. **No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, and live automations. Origin **v0.5.28-free** no-train lane / grok plugin --trust / GPT-5.5→gpt-5.6-sol L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+**No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, and live automations. Origin **v0.5.28-free** no-train lane / grok plugin --trust / GPT-5.5→gpt-5.6-sol L0 kept. **No client / product / infra / firm / tester / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
 
 ### OpenAI (first)
 
@@ -2094,7 +1907,6 @@ Absorbed this Grok Build turn's live mailbox (leftover tester UAT invite still *
 - **Project skills live at `.grok/skills/`** — Grok Build does **not** scan `.agents/skills/` for project skills. Home `~/.grok/skills/` is Build/CLI. Bot = Save / Plugins enable-per-Bot.
 - `grok plugin install <name> --trust` stays a hop. Marketplace still Hold. Bot computers still US-hosted.
 - Galaxy Day 2–3 / remaining role livestream **attendance** stays **L0**. Share pack still do-not-publish-live.
-- This turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED (inner-circle wrap only; no partner mail, no tweet, no marketplace).
 
 ### Shared
 
@@ -2107,7 +1919,7 @@ Absorbed this Grok Build turn's live mailbox (leftover tester UAT invite still *
 
 ## [0.5.28-free] — 2026-09-17
 
-Absorbed this Grok Build turn's live mailbox (16 Sep evening Satya follow-up after v0.5.27; leftover upskilling draft unsent; Galaxy Day 2 / role livestream calendar) plus vendor recrawl 17 Sep morning. **No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, and live automations. Origin **v0.5.27-free** screenshot-first / skills=all / HITL-zip-stale / Chat-Work-plugin Hold kept. **No client / product / infra / firm / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+**No Grok chat-history connector exists** — Grok-chat insights are from this turn, Bot/Build docs, and live automations. Origin **v0.5.27-free** screenshot-first / skills=all / HITL-zip-stale / Chat-Work-plugin Hold kept. **No client / product / infra / firm / webinar / industrial-group names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
 
 ### OpenAI (first)
 
@@ -2128,7 +1940,6 @@ Absorbed this Grok Build turn's live mailbox (16 Sep evening Satya follow-up aft
 - **Project skills live at `.grok/skills/`** — Grok Build does **not** scan `.agents/skills/` for project skills (that path is Codex). Home `~/.grok/skills/` is Build/CLI. Bot = Save / Plugins enable-per-Bot.
 - `grok plugin install <name> --trust` is SHA-pinned and a **hop**. SHA-pin is not a vault. Do not PR `xai-org/plugin-marketplace` overnight. Marketplace still Hold.
 - Bot computers still US-hosted. Galaxy Day 2 / role livestream **attendance** stays **L0**. Share pack still do-not-publish-live.
-- This turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files. `chatroom_send` unavailable → NOTIFY_BLOCKED (inner-circle wrap only; no partner mail, no tweet, no marketplace).
 
 ### Shared
 
@@ -2141,7 +1952,7 @@ Absorbed this Grok Build turn's live mailbox (16 Sep evening Satya follow-up aft
 
 ## [0.5.27-free] — 2026-09-16
 
-Absorbed this Grok Build turn's live mailbox (HITL review pack mailed as v0.5.25; AI-native webinar attendance; screenshot-first correspondence prompt; Headless/callable stack note) plus vendor recrawl 16 Sep afternoon. **No Grok chat-history connector exists** — Grok-chat insights are from Bot/Build docs, this turn, and live automations. Origin **v0.5.26-free** next-paste / consumer-terms / coding-agent / scope-honesty holds kept. **No client / product / infra / firm / webinar names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
+**No Grok chat-history connector exists** — Grok-chat insights are from Bot/Build docs, this turn, and live automations. Origin **v0.5.26-free** next-paste / consumer-terms / coding-agent / scope-honesty holds kept. **No client / product / infra / firm / webinar names** in this public repo. Leftover drafts stay unsent. Marketplace publish still Hold.
 
 ### OpenAI (first)
 
@@ -2160,7 +1971,6 @@ Absorbed this Grok Build turn's live mailbox (HITL review pack mailed as v0.5.25
 
 - Same `grok-skill/` body as root. Extra YAML keys are **ignored** (unlike Claude dist-path which **errors**). Keep the split.
 - Bot computers still US-hosted. `cp` to `~/.grok/skills/` is Build/CLI; Bot = Save / Plugins enable-per-Bot.
-- This turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files.
 - Galaxy recording / public AI-native webinar **attendance** stays **L0**. Staging your method on a public AI-native showcase is L3 demo hygiene. Share pack still do-not-publish-live.
 
 ### Shared
@@ -2175,7 +1985,7 @@ Absorbed this Grok Build turn's live mailbox (HITL review pack mailed as v0.5.25
 
 ## [0.5.26-free] — 2026-09-16
 
-Absorbed operator mailbox 15–16 Sep 2026 (All-In / Satya follow-up + AI-native daily-use notes) and **this Grok Build turn** (Gmail/Drive/GitHub live; named owner GitHub push). Origin **v0.5.25-free** PRIVATE sidecar / Cursor pack / Grok Bot share-pack holds kept. **No client / product / infra / firm / webinar names** in this public repo. No Grok chat-history connector exists.
+Origin **v0.5.25-free** PRIVATE sidecar / Cursor pack / Grok Bot share-pack holds kept. **No client / product / infra / firm / webinar names** in this public repo. No Grok chat-history connector exists.
 
 ### OpenAI (first)
 
@@ -2188,8 +1998,6 @@ Absorbed operator mailbox 15–16 Sep 2026 (All-In / Satya follow-up + AI-native
 - YAML still **only** `name` + `description` on `claude-skill/`. Body stays under 500. Dist-path extra keys still error. `allowed-tools` / `disallowed-tools` still one-turn — this skill adds neither. SDK `skills` list is exact names. 107 evals.
 
 ### Grok Build (third)
-
-- Same `grok-skill/` body as root. Bot computers still US-hosted. `cp` to `~/.grok/skills/` is Build/CLI; Bot = Save / Plugins enable-per-Bot. This Grok Build turn's mail/drive/git connectors are **hops** — this skill still has **no MCP**. Named owner **and** action this turn = the GitHub push of hygiene-only files. Galaxy recording 16 Sep stays **L0 attend**. Share pack still do-not-publish-live.
 
 ### Shared
 
@@ -2241,9 +2049,9 @@ Absorbed Track 1 primary sources (handoff an internal research note was not in t
 ### Shared
 
 - Educational sources (public URL located — not "sources verified"; clip-only stays L0):
-  - X: https://x.com/theallinpod/status/2098606000890687813
-  - YouTube ep: https://www.youtube.com/watch?v=cvxjqbfLVk0 — “AI Kills Everybody or Doomer Psyop?”
-  - Sacks (verified in that clip): “What does it mean that the model is allowed to train on unidentifiable data?”
+- X: https://x.com/theallinpod/status/2098606000890687813
+- YouTube ep: https://www.youtube.com/watch?v=cvxjqbfLVk0 — “AI Kills Everybody or Doomer Psyop?”
+- Sacks (verified in that clip): “What does it mean that the model is allowed to train on unidentifiable data?”
 - **Friedberg hygiene the skill must say:** the **approach is the IP**. A podcast **anecdote ≠ audited proof of training**. Sacks's question is not a finding.
 - Eval **98** (`friedberg-anecdote`). HITL F1 pass text restated. Still free-only. Still not legal advice.
 
@@ -2274,7 +2082,7 @@ Absorbed upgraded SKILL-surface research (handoff an internal research note was 
 
 ## [0.5.20-free] — 2026-09-16
 
-Folded an outside commentator × a guest speaker deeper research into the lunch HITL skill (the coordinator handoff files were not in this workspace; applied the user summary + a guest speaker SoT https://snscratchpad.com/posts/reverse-information-paradox/ ). Origin **v0.5.19-free** Cursor Cloud / Grok allowed-tools / RAG kept.
+Folded an outside commentator × a guest speaker deeper research into the lunch HITL skill (the coordinator handoff files were not in this workspace; applied the user summary + a guest speaker SoT https://snscratchpad.com/posts/reverse-information-paradox/). Origin **v0.5.19-free** Cursor Cloud / Grok allowed-tools / RAG kept.
 
 ### Shared
 
@@ -2329,7 +2137,7 @@ Patched from: overnight lock for lunch HITL distribution (Claude / Claude Code /
 
 ## [0.5.17-free] — 2026-09-15
 
-Patched from: operator mailbox 14–15 Sep 2026 (Grok Bot Galaxy starts-tomorrow + role livestream calendar adds — Engineers / Founders / PMs — stay **L0 attend**; Claude.ai magic-link stays **L0**; weekly backup ≠ publish; leftover drafts — accounting reply, UAT leftover, partner pre-read — **unsent**; infra/IAM / Headless-callable partner mail stays out of this public repo — **no client/product/infra names, no valuation figures**; All-In de-id note already in 0.5.12/0.5.13); OpenAI recrawl 2026-09-15 afternoon (developers.openai.com/api/docs/guides/your-data + tools-skills + **csam-guidance** published 2026-09-15: **invention screenshots/diagrams are still scanned** — image/file inputs on `/v1/responses`, `/v1/chat/completions`, `/v1/images` (incl. Computer Use screenshots) are scanned on submit; classifier hit retained for manual review even on ZDR/MAM/Eyes Off; `$skill-creator` keep descriptions short while making WHEN clear; progressive disclosure — do not “read everything before every change”; `context: fork` is a hop — subagent does not inherit this skill unless listed); Anthropic Agent Skills recrawl 2026-09-15 afternoon (code.claude.com/docs/en/skills + changelog **2.1.272** 15 Sep + platform.claude.com enterprise skill scanning: **`disallowed-tools` restriction-clear is one-turn** then clears — cannot remove `EndConversation` if other tools remain; **dist-path extra keys error** — Claude Code accepts all frontmatter, claude.ai / Skills API / `package_skill.py` only `name, description, license, compatibility, metadata, allowed-tools`; **skill security scanning is not a vault** — claude.ai/Cowork only, misses Skills API, already-uploaded skills, CMEK/ZDR/HIPAA orgs; **sign-out ≠ wipe** — 2.1.272 keeps claude.ai-synced skills on disk until `cleanupPeriodDays`, then trash); Grok Bot / Build recrawl 2026-09-15 afternoon (docs.x.ai/grok-bot/security-faq last updated 3 Sep + security + approvals-security-and-privacy: **Grok Bot computers run in the United States today** — not on-prem, not BYO image, not inside your perimeter; if a review needs a written residency commitment, that is account-team not this skill; Auto Review still does not review memory writes / most settings changes; recreate/image-update can drop in-computer sign-in sessions, terminate-computer still keeps the durable disk). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; this improvement job is enabled), and X ingest. Do not dump client/product facts into the public repo.
+Computer Use screenshots) are scanned on submit; classifier hit retained for manual review even on ZDR/MAM/Eyes Off; `$skill-creator` keep descriptions short while making WHEN clear; progressive disclosure — do not “read everything before every change”; `context: fork` is a hop — subagent does not inherit this skill unless listed); Anthropic Agent Skills recrawl 2026-09-15 afternoon (code.claude.com/docs/en/skills + changelog **2.1.272** 15 Sep + platform.claude.com enterprise skill scanning: **`disallowed-tools` restriction-clear is one-turn** then clears — cannot remove `EndConversation` if other tools remain; **dist-path extra keys error** — Claude Code accepts all frontmatter, claude.ai / Skills API / `package_skill.py` only `name, description, license, compatibility, metadata, allowed-tools`; **skill security scanning is not a vault** — claude.ai/Cowork only, misses Skills API, already-uploaded skills, CMEK/ZDR/HIPAA orgs; **sign-out ≠ wipe** — 2.1.272 keeps claude.ai-synced skills on disk until `cleanupPeriodDays`, then trash); Grok Bot / Build recrawl 2026-09-15 afternoon (docs.x.ai/grok-bot/security-faq last updated 3 Sep + security + approvals-security-and-privacy: **Grok Bot computers run in the United States today** — not on-prem, not BYO image, not inside your perimeter; if a review needs a written residency commitment, that is account-team not this skill; Auto Review still does not review memory writes / most settings changes; recreate/image-update can drop in-computer sign-in sessions, terminate-computer still keeps the durable disk). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; this improvement job is enabled), and X ingest. Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2352,7 +2160,7 @@ Patched from: operator mailbox 14–15 Sep 2026 (Grok Bot Galaxy starts-tomorrow
 - **Grok Bot computers run in the United States today.** Not on-prem, not BYO image, not inside your perimeter. Holdbacks on that computer are a US geography fact, not an EU vault. Recreate / image update can drop in-computer sign-in sessions; terminate-computer still keeps the durable disk.
 - Auto Review still does not review memory writes / most settings changes. Rules remain desktop-local. Cloud ≠ egress ≠ local-exec unchanged from 0.5.16.
 - Galaxy / role livestream calendar add and Claude magic-link stay L0 attend. Streaming internals remains L2/L3.
-- No Grok chat-history connector. Live `isEnabled` is evidence. Weekly backup ≠ publish. GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- No Grok chat-history connector. Live `isEnabled` is evidence. Weekly backup ≠ publish. GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 
 ### Shared
 
@@ -2364,7 +2172,7 @@ Patched from: operator mailbox 14–15 Sep 2026 (Grok Bot Galaxy starts-tomorrow
 
 ## [0.5.16-free] — 2026-09-15
 
-Patched from: operator mailbox 14–15 Sep 2026 (Grok Bot Galaxy starts-tomorrow + role livestream calendar adds — Engineers / Founders / PMs / Marketing — stay **L0 attend**; Claude.ai magic-link stays **L0**; ChatGPT Business payment-failed notices stay **L0 billing**; weekly backup ≠ publish; leftover drafts — accounting reply, UAT leftover, partner pre-read — **unsent**; infra/IAM / Headless-callable partner mail stays out of this public repo — **no client/product/infra names, no valuation figures**); OpenAI recrawl 2026-09-15 (developers.openai.com/api/docs/guides/your-data + tools-skills: **CSAM scan of image/file inputs overrides ZDR/MAM/Eyes Off** — classifier hit retained for manual review; `/v1/videos` still **48h processing + 30d abuse**, currently **blocked for MAM/ZDR**; a project set to retention **None** is required to call videos — **None-retention ≠ protected lane**; gpt-image-2.5-sunburst/flare incl. 2026-09-08 are **ZDR-yes / Eyes Off no**; Safety Retention can pull a model out of ZDR/MAM (notified); three skill form factors — local path / hosted `skill_reference` / Agents `capability_directories` max 32; zip 50 MB / 500 files / 25 MB uncompressed; ZDR-ineligible list unchanged: conversations+items, agents, files, vector_stores, evals, assistants, threads+messages/runs/steps, chatkit, batches, videos, fine_tuning); Anthropic Agent Skills recrawl 2026-09-15 (platform.claude.com + code.claude.com/docs/en/skills: kebab ≤64, description ≤1024, body <500, YAML **name + description only** on `claude-skill/`, listing truncate **description + when_to_use 1536**, `allowed-tools` auto-approves listed tools for **one turn then clears** — one-turn grant-clear is not a vault, do not add write grants; Skills not covered by ZDR; custom claude.ai Skills are per-user and do not auto-sync; Anthropic settings enablement may sync to Cowork — neither is a vault); Grok Bot / Build recrawl 2026-09-15 (docs.x.ai/grok-bot/approvals-security-and-privacy last updated 2 Sep + computer-and-apps: **cloud computer ≠ desktop-egress ≠ local-computer execution** — Settings → General → Agent → Execution on Local Computer, default **Ask every time**, use **Never allowed** unless named; laptop closed continues cloud work, stops egress routing and local-exec; Auto Review rules live on **this desktop** and sync to its Bot computer; **Update Agent Computer** preserves durable state, **Reset** drops unsynced recent work; Network Controls is Enterprise-only; no Legacy Privacy Mode; training opt-out follows the Cursor account; shared Bot computer remains account-wide). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; this improvement job is enabled), and X ingest. Do not dump client/product facts into the public repo.
+2026-09-08 are **ZDR-yes / Eyes Off no**; Safety Retention can pull a model out of ZDR/MAM (notified); three skill form factors — local path / hosted `skill_reference` / Agents `capability_directories` max 32; zip 50 MB / 500 files / 25 MB uncompressed; ZDR-ineligible list unchanged: conversations+items, agents, files, vector_stores, evals, assistants, threads+messages/runs/steps, chatkit, batches, videos, fine_tuning); Anthropic Agent Skills recrawl 2026-09-15 (platform.claude.com + code.claude.com/docs/en/skills: kebab ≤64, description ≤1024, body <500, YAML **name + description only** on `claude-skill/`, listing truncate **description + when_to_use 1536**, `allowed-tools` auto-approves listed tools for **one turn then clears** — one-turn grant-clear is not a vault, do not add write grants; Skills not covered by ZDR; custom claude.ai Skills are per-user and do not auto-sync; Anthropic settings enablement may sync to Cowork — neither is a vault); Grok Bot / Build recrawl 2026-09-15 (docs.x.ai/grok-bot/approvals-security-and-privacy last updated 2 Sep + computer-and-apps: **cloud computer ≠ desktop-egress ≠ local-computer execution** — Settings → General → Agent → Execution on Local Computer, default **Ask every time**, use **Never allowed** unless named; laptop closed continues cloud work, stops egress routing and local-exec; Auto Review rules live on **this desktop** and sync to its Bot computer; **Update Agent Computer** preserves durable state, **Reset** drops unsynced recent work; Network Controls is Enterprise-only; no Legacy Privacy Mode; training opt-out follows the Cursor account; shared Bot computer remains account-wide). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; this improvement job is enabled), and X ingest. Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2388,7 +2196,7 @@ Patched from: operator mailbox 14–15 Sep 2026 (Grok Bot Galaxy starts-tomorrow
 - **Auto Review rules are desktop-local.** They live on this desktop and sync to its Bot computer — another desktop is not the same config. Update Agent Computer preserves durable state; Reset drops unsynced recent work. Network Controls is Enterprise-only; shared static egress; no DLP; no Cursor VPN.
 - Galaxy / role livestream calendar add and Claude magic-link stay L0 attend. Streaming internals remains L2/L3. Invite copy that each Bot has its own computer is marketing, not isolation.
 - No Legacy Privacy Mode. Training opt-out follows the Cursor account. Shared Bot computer remains account-wide.
-- Live `isEnabled` is evidence. Weekly backup ≠ publish. GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- Live `isEnabled` is evidence. Weekly backup ≠ publish. GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 
 ### Shared
 
@@ -2400,7 +2208,7 @@ Patched from: operator mailbox 14–15 Sep 2026 (Grok Bot Galaxy starts-tomorrow
 
 ## [0.5.15-free] — 2026-09-14
 
-Patched from: operator mailbox 14 Sep 2026 (Grok Bot for Engineers livestream calendar add Tue 15 Sep 21:30–23:00 GMT+2 stays **L0 attend**; ChatGPT Business payment-failed notices stay **L0 billing**; weekly backup PARTIAL ≠ publish; leftover drafts — accounting reply, UAT reply, partner pre-read — **unsent**; infra/IAM partner mail stays out of this public repo — **no client/product/infra names, no valuation figures**); OpenAI recrawl 2026-09-14 (developers.openai.com/api/docs/guides/your-data + tools-skills: `/v1/videos` **48h processing + 30d abuse monitoring**, currently **blocked for MAM/ZDR**; Eyes Off / Safety Retention still retain; ZDR-ineligible made granular — `/v1/conversations` **and** `/v1/conversations/items`; `/v1/threads` **and** `/v1/threads/messages` `/runs` `/runs/steps`; agents, files, vector_stores, evals, assistants, chatkit, batches, fine_tuning unchanged; zip 50 MB / 500 files / 25 MB uncompressed; `capability_directories` max 32; pin integer version; inspect-before-attach); Anthropic Agent Skills recrawl 2026-09-14 (platform.claude.com + code.claude.com/docs/en/skills: kebab ≤64, description ≤1024, body <500, YAML **name + description only**, references one level deep, ≥3 evals, 20-skill cap, Skills not covered by ZDR, `allowed-tools` auto-approves listed tools — **do not add write grants**, claude.ai→Cowork/cloud sync unchanged); Grok Bot / Build recrawl 2026-09-14 (docs.x.ai/grok-bot/approvals-security-and-privacy last updated 2 Sep: **no Legacy Privacy Mode** — Grok Bot requires cloud storage; training opt-out follows the **Cursor** account; security-faq 3 Sep: screens ≠ boundary, terminate-computer keeps durable disk, Auto Review does not review memory writes; X ingest 14 Sep: **desktop-egress** — Settings → Updates → Update Grok Bot's Computer FIRST, then Settings → Computer → Route Computer traffic through this desktop; reverse order errors "Grok Bot's computer wasn't provisioned with the egress tunnel"; laptop closed stops routing; desktop becomes a CDN / residential IP vs datacenter; holdbacks on that desktop see Bot traffic; **ownership-pass** is access grant + hop — Bots on one account hand off tasks on the shared computer). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; this improvement job is enabled), and X ingest. Do not dump client/product facts into the public repo.
+**No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; this improvement job is enabled), and X ingest. Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2422,7 +2230,7 @@ Patched from: operator mailbox 14 Sep 2026 (Grok Bot for Engineers livestream ca
 - **Ownership-pass is access grant + hop.** Passing task ownership between Bots on one account is not just a DM. Decline unnamed. Isolated credentials still need a dedicated user.
 - **No Legacy Privacy Mode.** Grok Bot requires cloud storage. Training opt-out follows the Cursor account, not a vault. Do not invent the mode.
 - Engineers livestream calendar add is L0 attend. Streaming internals remains L2/L3.
-- Live `isEnabled` is evidence. Weekly backup ≠ publish. GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- Live `isEnabled` is evidence. Weekly backup ≠ publish. GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 
 ### Shared
 
@@ -2434,7 +2242,7 @@ Patched from: operator mailbox 14 Sep 2026 (Grok Bot for Engineers livestream ca
 
 ## [0.5.14-free] — 2026-09-14
 
-Patched from: the company inbox 13–14 Sep 2026 (ChatGPT Business payment-failed notices stay **L0 billing**; Grok Bot Galaxy livestream calendar adds/updates stay **L0 attend**; weekly backup PARTIAL ≠ publish; leftover drafts unsent; infra/IAM partner mail stays out of this public repo — **no client/product/infra names, no valuation figures**); OpenAI recrawl 2026-09-14 (developers.openai.com/api/docs/guides/tools-skills + **blog/rethinking-skills-and-prompts-for-gpt-6-astra** 11 Sep: Astra can **over-refuse** ("take it too seriously") — do not pad extra refuse language; **define completion before starting** so Astra does not stop after a first stamp; inspect Skills before attach — privileged instructions, prompt-injection risk; zip/ZDR/`capability_directories` 32 unchanged); Anthropic Agent Skills recrawl 2026-09-14 (code.claude.com/docs/en/skills: **claude.ai enablement now syncs skills to Cowork/cloud**; `CLAUDE_CODE_SYNC_SKILLS=1` downloads to `~/.claude/skills/synced/` prefixed `/anthropic-skills:`; local `~/.claude/skills/` still does **not** auto-sync to Cowork; `disable-model-invocation` also blocks scheduled-task skill prompts v2.1.196+; listing truncate 1536 including `when_to_use`; `/skill-doctor` v2.1.252+; `skillOverrides`; synced `!` commands not run locally; frontmatter sanitization v2.1.228+); Grok Build / Bot recrawl 2026-09-14 (docs.x.ai skills-plugins: Grok discovers `~/.agents/skills/` and Claude Code plugins/skills/hooks/`AGENTS.md` with **zero config**; **App Builder live preview is a demo; Vercel deploy is a publish**; Grok 4.6 model pick stays L0). **No Grok chat-history connector exists**; Grok-chat insights are from those docs and this Grok Build turn. Do not dump client/product facts into the public repo.
+**No Grok chat-history connector exists**; Grok-chat insights are from those docs and this Grok Build turn. Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2458,7 +2266,7 @@ Patched from: the company inbox 13–14 Sep 2026 (ChatGPT Business payment-faile
 - **App Builder live preview is a demo; Vercel deploy is a publish.** The in-browser preview is not production.
 - **Grok discovers `~/.agents/skills/` and Claude Code plugins/skills/hooks/`AGENTS.md` with zero config.** A skill sitting in those paths is a live channel.
 - Grok 4.6 model pick stays L0. Screens ≠ security boundary. Bot-to-Bot DM is a hop. Terminate-computer keeps durable disk. No Grok chat-history connector.
-- Live `isEnabled` is evidence. Weekly backup ≠ publish. GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- Live `isEnabled` is evidence. Weekly backup ≠ publish. GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 
 ### Shared
 
@@ -2470,7 +2278,7 @@ Patched from: the company inbox 13–14 Sep 2026 (ChatGPT Business payment-faile
 
 ## [0.5.13-free] — 2026-09-13
 
-Patched from: the company inbox 8–13 Sep 2026 (All-In de-id note already in 0.5.12; GPT-6 Astra "most capable and secure" + workspace-wide computer/browser use is still ChatGPT lane, not API ZDR; Grok Bot Galaxy livestreams 15–17 Sep — attending is L0, streaming internals is L2/L3; meeting-notes AI plan downgrade does not stop transcription or Slack auto-share; leftover drafts unsent; weekly backup PARTIAL ≠ publish; live `isEnabled` is evidence — this improvement job is enabled even with a stale nextRun; Sentinel→GitHub auto-push is owner L3 — this Grok Build turn *is* the named owner push of hygiene-only files — **no client/product/infra names, no valuation figures in this repo**); OpenAI recrawl 2026-09-13 afternoon (developers.openai.com/api/docs/guides/tools-skills + **api/docs/guides/your-data**: API no-train since 2023 is opt-in only and is **not** ChatGPT/Business no-train; ZDR-ineligible even when the org has ZDR: `/v1/conversations`, `/v1/agents`, `/v1/files`, `/v1/vector_stores`, `/v1/evals`, `/v1/assistants`, `/v1/threads`, **`/v1/chatkit/threads`**, **`/v1/batches`**, **`/v1/videos`**, **`/v1/fine_tuning/jobs`**; hosted container discarded ≠ abuse-monitor 30d gone; `default_version` / `latest` / omit-version are live pointers; zip 50 MB / 500 files / 25 MB uncompressed; `capability_directories` max **32**; inspect Skills before attach; do not expose this public repo as an open end-user catalog; model marketing "most secure" is not a data-control change); Anthropic Agent Skills recrawl 2026-09-13 afternoon (platform.claude.com Agent Skills overview + best-practices: kebab ≤64, description ≤1024 — this patch **trims description to 1021 chars**; SKILL.md body <500 / <5k tokens; **Skills are not covered by ZDR** — skill definitions *and* execution data are retained under standard policy; covered-model 30-day safety retention can apply even on ZDR orgs; custom Skills do not sync across claude.ai / API / Claude Code; references one level deep; ≥3 evals; 20-skill session cap); Grok Bot / Build recrawl 2026-09-13 afternoon (`docs.x.ai/grok-bot/overview` published 11 Sep; **security-faq** last updated 3 Sep: screens are work surfaces, not security boundaries; all of your Bots share one Firecracker computer; isolated credentials need a **dedicated user**; delete Bot ≠ wipe computer; **Enterprise terminate-computer keeps the durable disk** (next session remounts it); Bot-to-Bot DM / group chat is a hop; Auto Review does not review memory writes / most settings changes; shared static egress, no dedicated per-customer IPs). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; weekly backup ≠ publish), and X ingest (voice screen-share sees the browser; public Bot share is cloneable config). Do not dump client/product facts into the public repo.
+**No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (`isEnabled` is evidence; weekly backup ≠ publish), and X ingest (voice screen-share sees the browser; public Bot share is cloneable config). Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2498,8 +2306,8 @@ Patched from: the company inbox 8–13 Sep 2026 (All-In de-id note already in 0.
 - Shared Bot computer remains account-wide (files, sessions, logins). Shared static egress, no dedicated per-customer IPs.
 - Public Bot livestream of internals is a demo; attending Galaxy is L0. Voice screen-share sees the browser. Public `x.ai/bot/…` is cloneable config.
 - Meeting-notes AI plan downgrade does not stop transcription or Slack auto-share.
-- Live `isEnabled` is evidence. This job fires when live metadata says enabled. Stale nextRun ≠ didn't run. Weekly backup ≠ publish.
-- GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- Live `isEnabled` is evidence. Stale nextRun ≠ didn't run. Weekly backup ≠ publish.
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 
 ### Shared
 
@@ -2511,7 +2319,7 @@ Patched from: the company inbox 8–13 Sep 2026 (All-In de-id note already in 0.
 
 ## [0.5.12-free] — 2026-09-13
 
-Patched from: the company inbox 12–13 Sep 2026 (de-identified chat insights can train the next AI — PII-stripped / ZDR / Business / Enterprise / "we don't train" is not a vault; opt-out after the chat is not a rewind; a public clip about the industry issue is L0; livestream calendar add is L0 attend; leftover drafts unsent; access grant is owner-gated; weekly backup PARTIAL ≠ publish; workspace billing/payment without protect intent stays L0; live `isEnabled` is evidence — this improvement job is enabled even with a stale nextRun; Sentinel→GitHub auto-push is owner L3 — this Grok Build turn *is* the named owner push of hygiene-only files — **no client/product/infra names, no valuation figures in this repo**); OpenAI recrawl 2026-09-13 (developers.openai.com/plugins/build/skills + **api/docs/guides/tools-skills**: `default_version` is used when `skill_reference.version` is omitted; `latest_version` tracks the newest upload; pin an integer in production; you cannot delete the default version without setting another first; deleting the last remaining version deletes the skill; skill instructions are **user-prompt** input (same priority as other user instructions; this-turn user instructions still beat skill guidelines); inline base64 zip is a publish; curated first-party skills (`openai-spreadsheets`) are a demo surface if they sit in a container that holds the work; inspect before attach; hosted/container skills are discarded when the container expires; zip limits **50 MB / 500 files / 25 MB uncompressed**; three zip layouts stay distinct; do not expose this public repo as an open end-user catalog); Anthropic Agent Skills recrawl 2026-09-13 (no new name/description limits: kebab ≤64, description ≤1024 — this patch **trims description to 1014 chars**; SKILL.md body <500; references one level deep; ≥3 evals; Skills are not a ZDR boundary; **custom Skills do not sync** across claude.ai / API / Claude Code — each install is a separate publish; 20-skill session cap; `user-invocable:` only literal `true`; extra YAML keys ignored; `bypassPermissions` is not owner approval; folder name must match `name`; Windows paths: forward slashes); Grok Bot / Build recrawl 2026-09-13 (`docs.x.ai/grok-bot/overview` last updated 11 Sep: **all of your Bots use the same cloud computer, sharing its files, browser sessions, and app logins** — the computer belongs to the account, not to an individual Bot; treat anything placed on it as available to every Bot you run; between users, isolation is strict; demonstration-to-skill still a publish; X ingest 13 Sep: a marketplace skill that lets a Bot take jobs and get paid onchain is **access grant + send + computer-use**). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; live `isEnabled` is evidence; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
+**No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; live `isEnabled` is evidence; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2536,9 +2344,9 @@ Patched from: the company inbox 12–13 Sep 2026 (de-identified chat insights ca
 - **Shared Bot computer is account-wide.** Files, browser sessions, and app logins are available to every Bot you run. Isolation between users is strict; isolation between your Bots is not. Do not park holdbacks there.
 - **Marketplace job-taking skill is access grant + send + computer-use.** Decline unnamed.
 - De-identified / ZDR-claimed frontier chat of invention-grade content is a disclosure. Opt-out is not a rewind. A public clip about the industry issue is L0. Livestream calendar add is L0 attend.
-- Live `isEnabled` is evidence. This job fires when live metadata says enabled. Stale nextRun ≠ didn't run. Weekly backup ≠ publish.
+- Live `isEnabled` is evidence. Stale nextRun ≠ didn't run. Weekly backup ≠ publish.
 - Subagents still do not inherit this skill. `--yolo` / `bypassPermissions` is not owner approval. Hide ≠ pause.
-- GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 
 ### Shared
 
@@ -2550,7 +2358,7 @@ Patched from: the company inbox 12–13 Sep 2026 (de-identified chat insights ca
 
 ## [0.5.11-free] — 2026-09-12
 
-Patched from: the company inbox 8–12 Sep 2026 (meet auto-notes of an IP/AI session are a demo; counsel-release of AI output is a send — "waiting for legal review" is an internal hold, never a customer-facing artifact; leftover counsel draft that later sends is still a send; clock-limited UAT is a demo; weekly backup PARTIAL ≠ publish; leftover drafts unsent; access grant is owner-gated; live `isEnabled` is evidence — this improvement job is enabled even with a stale nextRun; Sentinel→GitHub auto-push is owner L3 — this Grok Build turn *is* the named owner push of hygiene-only files — **no client/product/infra names, no valuation figures in this repo**); OpenAI recrawl 2026-09-12 (developers.openai.com/plugins/build/skills + **plugins/guides/submit-claude-plugin** + **plugins/build/plugins** + **api/docs/guides/tools-skills** last noted 12 Sep 07:02 CEST: **three zip layouts** — Skills tab = `SKILL.md` at zip root, Agent Plugins = root `plugin.json` + `skills/<name>/SKILL.md`, Claude archive = `.claude-plugin/plugin.json` + `skills/<name>/SKILL.md` and the portal converts to `.codex-plugin`; exactly one `SKILL.md` per bundle, case-insensitive; zip limits **50 MB / 500 files / 25 MB uncompressed**; no secrets in archive, manifest, instructions, or defaults; inline base64 zip is a publish; unnamed Claude-plugin directory submit is a publish; Responses API Skills are versioned bundles — pin an integer version, `latest` is a live channel; hosted/container is a demo; inspect before attach; do not expose this public repo as an open end-user catalog; local shell does not take `skill_reference` attachments; Astra user instructions this turn beat skill guidelines; on L3 decline name and link SKILL.md; every Sites URL is production); Anthropic Agent Skills + Managed Agents recrawl 2026-09-12 (no new name/description limits: kebab ≤64, description ≤1024 — this patch **trims description to 1022 chars**; SKILL.md body <500; references one level deep; ≥3 evals; degrees of freedom; authors ≠ own reviewers; pin `latest` is a live channel; folder name must match `name`; Windows paths: forward slashes; do not assume tools installed; subagent `skills:` auto-loads listed skills only; `user-invocable:` only literal `true` counts; extra YAML keys ignored; subagent `permissionMode: bypassPermissions` is not owner approval; Managed Agents **20-skill session cap**; Skills are not a ZDR boundary); Grok Bot / Build recrawl 2026-09-12 (`docs.x.ai/grok-bot/overview` published 11 Sep: Bots **learn workflows from demonstration** — walk once, save as a skill; Teach-by-demonstration records the screen, ≤10 min; shared cloud computer is not a vault; Auto Review rules sync to the Bot computer; event-triggered routines from integrations are fan-out; X ingest 12 Sep: public Galaxy-style Bot livestream of a 72-hour build is a demo channel — attending is L0, streaming your internals is L2/L3). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; live `isEnabled` is evidence; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
+**No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; live `isEnabled` is evidence; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2572,9 +2380,9 @@ Patched from: the company inbox 8–12 Sep 2026 (meet auto-notes of an IP/AI ses
 - **Public Bot livestream** of internals is a demo (L2 without protect language; L3 with it). Attending a public livestream is L0.
 - **Demonstration-to-skill is a publish.** Walking a Bot through a path once (screen recorded, ≤10 min) and saving it as a skill is a live channel.
 - Meet auto-notes of an IP/AI session are a demo. Counsel-release is a send. A second-model judge is another hop, not counsel. Confidence = certainty of a finding, not priority or impact.
-- Live `isEnabled` is evidence. This job fires when live metadata says enabled. Stale nextRun ≠ didn't run. Weekly backup ≠ publish.
+- Live `isEnabled` is evidence. Stale nextRun ≠ didn't run. Weekly backup ≠ publish.
 - Subagents still do not inherit this skill. `--yolo` / `bypassPermissions` is not owner approval. Hide ≠ pause.
-- GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 
 ### Shared
 
@@ -2586,7 +2394,7 @@ Patched from: the company inbox 8–12 Sep 2026 (meet auto-notes of an IP/AI ses
 
 ## [0.5.10-free] — 2026-09-11
 
-Patched from: the company inbox 8–11 Sep 2026 (phone-driven desktop / remote Mac is computer-use; leftover counsel draft that later sends is still a send; async board packet without the room is a demo; workspace billing/payment without protect intent stays L0; weekly backup ≠ publish; leftover drafts unsent; Sentinel→GitHub auto-push is owner L3 — this Grok Build turn *is* the named owner push of hygiene-only files; live `isEnabled` is evidence — do not invent disabled from a prior brief — **no client/product/infra names, no valuation figures in this repo**); OpenAI **plugins/build/skills** recrawl ~07:36 CEST plus **api/docs/guides/tools-skills** 08:40 CEST + Astra instruction-following + Codex Sites (developers.openai.com/plugins/build/skills live; **Responses API Skills are versioned bundles** — pin an integer version, `latest` is a live channel; hosted/container execution is a demo surface; inspect before attach; do not expose this public repo as an open end-user catalog; local shell does not take `skill_reference` attachments; **two zip layouts** — ChatGPT Skills tab = `SKILL.md` at zip root, Agent Plugins = `plugin.json` + `skills/<name>/SKILL.md`; exactly one `SKILL.md` per bundle, case-insensitive; smallest plugin shape is skill-only; MCP Scan Tools is a snapshot; zip scanned; **explicit user instructions this turn take precedence over skill guidelines**; on L3 decline **name and link** SKILL.md; no unsolicited warnings / disclaimers / approval flows / safety checklists; every **Sites deployment URL is production**; workspace-shared plugins are a demo/publish channel); Anthropic Agent Skills best-practices recrawl 2026-09-11 (no new limits: name kebab ≤64; description ≤1024; SKILL.md body <500; references one level deep; ≥3 evals; degrees of freedom; authors ≠ own reviewers; pin `latest` is a live production channel; folder name must match `name`; Windows paths: forward slashes; do not assume tools installed; Claude Code subagent frontmatter `skills:` auto-loads listed skills — they still do not inherit unless listed); Grok Bot / Build recrawl 2026-09-11 (`docs.x.ai/grok-bot/bots` last updated 7 Sep: share link is **public configuration**; hide ≠ pause; duplicate copies skills and routines; cloud computer is separate from the Mac in front of you; **Execution on Local Computer** is owner-gated; X ingest 9–11 Sep: phone-driven docked Mac / Messages typing / phone screenshots of local terminal are computer-use + send/demo; `docs.x.ai/build/features/skills-plugins-marketplaces`: skills from `./.grok/skills/` walked up to repo root — **a project-repo skill commit is a publish**; Copilot/VS Code also load `.github/skills/` and `.claude/skills/`; project `.grok/hooks/` **requires `/hooks-trust`**; subagents spawn independent child sessions and do not inherit). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; live `isEnabled` is evidence; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
+**No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; live `isEnabled` is evidence; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2607,10 +2415,10 @@ Patched from: the company inbox 8–11 Sep 2026 (phone-driven desktop / remote M
 ### Grok Build (third)
 
 - Remote Mac / phone-driven desktop is **computer-use**. Registering a Mac as a Bot remote device is owner-gated access grant. Messages/Mail typing is a **send**. Phone screenshots of the local terminal are a demo. Cloud computer ≠ the Mac in front of you. Local-computer execution is not a vault.
-- Live `isEnabled` is evidence. Do not invent disabled from a prior brief. Stale nextRun ≠ didn't run. This job fires when live metadata says enabled.
+- Live `isEnabled` is evidence. Do not invent disabled from a prior brief. Stale nextRun ≠ didn't run.
 - Workspace-shared plugin and Copilot `.github/skills/` are a **publish**. Project-repo skill commit is a publish. Fan-out is a disclosure multiplier. `/hooks-trust` required for project hooks.
 - Subagents still do not inherit this skill. `--yolo` is not owner approval. Hide ≠ pause.
-- GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 
 ### Shared
 
@@ -2622,7 +2430,7 @@ Patched from: the company inbox 8–11 Sep 2026 (phone-driven desktop / remote M
 
 ## [0.5.9-free] — 2026-09-11
 
-Patched from: the company inbox 8–11 Sep 2026 (async board packet without the room is a demo channel; leftover counsel draft that later sends is still a send; callable/headless chain remains a disclosure ladder including the **human reviewer hop**; **sortic-ip-sentinel-free automation stays disabled**; Sentinel→GitHub auto-push is owner L3 — this Grok Build turn *is* the named owner push of hygiene-only files; weekly backup ≠ publish; disabled jobs stay disabled; fit-note ≠ send; image-only ≠ numbered facts — **no client/product/infra names, no valuation figures in this repo**); OpenAI **plugins/build/skills** + Astra instruction-following + Codex Sites recrawl **2026-09-11** (developers.openai.com/plugins/build/skills live; developers.openai.com/api/docs/guides/latest-model: **explicit user instructions this turn take precedence over skill guidelines**; if a skill would pause/diverge, **quote SKILL.md**; complete authorized work first so approval is last; **do not introduce unsolicited warnings / disclaimers / hypothetical-risk checklists**; every **Sites deployment URL is production**; save-without-deploy to review; default owner+admins; workspace/public publish are demo channels; keep secrets out of prompts, attached files, Site content, and `.openai/hosting.json`; Astra computer-use is a live demo; connectors are not a vault; computer-use speed is not a vault; Astra credits/seats stay L0; smallest plugin shape is skill-only; MCP Scan Tools is a snapshot; zip scanned); Anthropic Agent Skills best-practices recrawl 2026-09-11 (no new limits: name kebab ≤64; description ≤1024; SKILL.md body <500; references one level deep; ≥3 evals; degrees of freedom; authors ≠ own reviewers; pin `latest` is a live production channel; keep Skills list order stable for prompt caching); Grok Bot / Build recrawl 2026-09-11 (`docs.x.ai/grok-bot/bots` last updated 7 Sep: share link is **public configuration**; hide ≠ pause; duplicate copies skills and routines; `docs.x.ai/build/features/skills-plugins-marketplaces`: skills from `./.grok/skills/` walked up to repo root — **a project-repo skill commit is a publish**; project `.grok/hooks/` **requires `/hooks-trust`**; Grok also reads `.claude/` skills; subagents spawn independent child sessions and do not inherit). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; disabled jobs stay disabled; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
+**No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; disabled jobs stay disabled; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2659,7 +2467,7 @@ Patched from: the company inbox 8–11 Sep 2026 (async board packet without the 
 
 ## [0.5.8-free] — 2026-09-10
 
-Patched from: the company inbox 8–10 Sep 2026 (callable/headless chain is a disclosure ladder including the **human reviewer hop**; mailbox/Outlook connector is MCP live data; legal correspondence needs **two inputs**; drafts ≠ send; access grant is owner-gated identity; IAM/secret screenshots are holdbacks; fit-note ≠ send; leftover drafts unsent; least-privilege / no long-lived keys as generic hygiene — **no client/product/infra names in this repo**); OpenAI **plugins/build/skills** + plugin architecture + package recrawl **2026-09-10** (developers.openai.com/plugins/build/skills live; **smallest plugin shape is skill-only**; MCP "Scan Tools" is a **snapshot**, not a live fetch; public listing is the ChatGPT+Codex **universal plugin directory**; `enabled = false` is not uninstall; **plugin-bundled hooks stay skipped until the user trusts the current definition**; installing a plugin does not run lifecycle scripts; this skill has **no MCP and no lifecycle hooks**; zip scanned; test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported; GPT-6 Astra / Extra High **model pick is L0** — decline exploit/PoC; GPT-6 Astra **computer and browser use** is a **live demo channel**; connectors/plugins use the signed-in account — they are **not a secrecy boundary**; confirmation policies cover exposing confidential information, sharing a dashboard too broadly, deleting data; Astra declines unsupported conclusions from documents); Anthropic Agent Skills best-practices + enterprise recrawl 2026-09-10 (no new limits: name kebab ≤64; description ≤1024; SKILL.md <500; references one level deep; ≥3 evals; degrees of freedom; authors ≠ own reviewers; **pin skill version in production** — `latest` immediately changes production agents; keep Skills list order stable for prompt caching); Grok Bot recrawl 2026-09-10 (`docs.x.ai/grok-bot/bots` updated 7 Sep: share link is **public configuration**; **duplicate copies skills and routines**, not history/memory/attachments; hide ≠ pause; delete removes routines but shared-computer files remain; **changing production requires approval** — CI auto-apply of an infra PR is that class) plus X ingest 9–10 Sep (voice screen-share sees the browser; public Bot share URL `x.ai/bot/…` is cloneable; voice clone is identity publish). Follow-up same day: Astra computer-use write-across-apps ≠ model pick; console-shot partner mail is a demo; one focused skill (do not merge with correspondence/persona skills). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; disabled jobs stay disabled; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
+Follow-up same day: Astra computer-use write-across-apps ≠ model pick; console-shot partner mail is a demo; one focused skill (do not merge with correspondence/persona skills). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations (stale nextRun ≠ didn't run; disabled jobs stay disabled; weekly backup ≠ publish), and X ingest. Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2685,7 +2493,7 @@ Patched from: the company inbox 8–10 Sep 2026 (callable/headless chain is a di
 - Plugin-bundled Codex hooks stay skipped until trusted. This skill has none.
 - Astra / ChatGPT Work computer+browser use is the same class of demo channel as Grok Bot computer-use. Connectors are not a vault.
 - CI auto-apply of an infra PR is a production change (Grok Bot: changing production requires approval).
-- GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 - `grok -p` / Grok Build headless default 1+8 unchanged.
 
 ### Shared
@@ -2698,7 +2506,7 @@ Patched from: the company inbox 8–10 Sep 2026 (callable/headless chain is a di
 
 ## [0.5.7-free] — 2026-09-09
 
-Patched from: the company inbox Task Extractor briefs **7–8 Sep 2026** (callable / headless chain is a disclosure ladder; consult ≠ provision for voice/phone; disabled jobs stay disabled; do not rewrite live prompts; schedule-metadata reset ≠ prompt rewrite; ENABLED jobs with stale nextRun can still fire; internal fit-note is not a send; placeholders and MCP-size-blocked files are not originals; dashboard / OAuth / 2FA / DNS / MCP-reinstall login declined; one-tab fallback ≠ reinstall; leftover drafts unsent; do not invent status; owner-gated send/publish/pay/identity even at IP L3); OpenAI **plugins/build/skills** + plugin architecture recrawl **2026-09-09** (live at developers.openai.com/plugins/build/skills — earlier 404 note was stale; **smallest plugin shape is skill-only**; public listing is the ChatGPT+Codex **universal plugin directory**; workflow boundary names **which supporting files to consult**; test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported; prefer one focused skill; do not add a script when instructions suffice; skill zip is scanned); Anthropic Agent Skills best-practices recrawl 2026-09-09 (no new limits: name kebab ≤64; description ≤1024; SKILL.md <500; references one level deep; ≥3 evals; degrees of freedom; avoid clock-dated trivia; TOC on long refs); Grok Bot recrawl 2026-09-09 (`docs.x.ai/grok-bot/skills-routines-and-automations`, approvals-security-and-privacy, create-and-manage Bots: **Require Approval wins Always Allow**; **routine test-run performs real work**; **routine delete is immediate with no undo**; **Bot share link is public configuration** — identity, description, skills, routines; **hide ≠ pause**; deleting a Bot removes routines but shared-computer files remain; Bot datacenter IP may trip human-verification walls; `--always-approve` is a tool-permission mode, not owner approval); X ingest 7–9 Sep 2026 (malicious skills can persist via backups; third-party Bot marketplaces). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations, and X ingest. Do not dump client/product facts into the public repo.
+**No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this Grok Build turn, live automations, and X ingest. Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2723,7 +2531,7 @@ Patched from: the company inbox Task Extractor briefs **7–8 Sep 2026** (callab
 - Routine test-run performs real work. Routine delete is immediate with no undo.
 - 2FA / CAPTCHA computer-takeover is not a reason to log in. Datacenter IP that trips a human-verification wall is not a reason to improvise a proxy.
 - Image-only artifacts are not numbered facts. Do not invent dollar figures from a PNG/chart.
-- GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Grok Build turn *is* the named owner push of hygiene-only files.)
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 - `grok -p` / Grok Build headless default 1+8 unchanged.
 
 ### Shared
@@ -2736,7 +2544,7 @@ Patched from: the company inbox Task Extractor briefs **7–8 Sep 2026** (callab
 
 ## [0.5.6-free] — 2026-09-07
 
-Patched from: the company inbox Task Extractor brief **6 Sep 2026** (backup ≠ publish; ChatGPT/project export is owner-desk; owner-gated even at IP L3: send / publish / pay / identity / live title-copy; partner pre-reads unsent unless this turn names recipient and action; do not grow backup/control trees; stale nextRun ≠ didn't run; workspace/SaaS renewal is L0; registrar new-device alerts are not a reason to log in; do not invent status; leftover drafts unsent); OpenAI **plugins/build/skills** recrawl 2026-09-07 (no new rules since 6 Sep; skill zip is scanned; do not add a script when instructions suffice; test inventory still: direct, indirect, incomplete, should-not-activate, must-not-invent); Anthropic Agent Skills best-practices recrawl 2026-09-07 (**degrees of freedom**: low on send/publish/pay/login/identity, medium on show/hold, high on snapshot wording; do not put clock-dated session trivia in the skill body; SKILL.md <500; description ≤1024; ≥3 evals; references one level deep); Grok Bot skills/routines recrawl 2026-09-07 (approval for sending / purchasing / deleting / publishing / changing production; test skill before routine; shared cookies/sessions; local-computer execution is another leakage surface; secure credential handoff — do not paste secrets in chat); X ingest 6–7 Sep 2026 (Bot egress IP is not sticky; registrar new-device friction). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, this 09:30 Prague job, live automations, and X ingest. Do not dump client/product facts into the public repo.
+Do not dump client/product facts into the public repo.
 
 ### OpenAI (first)
 
@@ -2757,7 +2565,7 @@ Patched from: the company inbox Task Extractor brief **6 Sep 2026** (backup ≠ 
 - Bot egress IP is **not sticky**. Registrar new-device alerts → decline login.
 - Owner-gated: sending, purchasing, deleting, publishing, production changes, identity/live-copy. IP L0–L3 is signal intensity, not write-privilege.
 - Backup / project export is owner-desk. Do not grow backup trees.
-- GitHub auto-push of this public repo: decline unless this turn names owner AND action. (This Monday job *is* the named owner push of hygiene-only files.)
+- GitHub auto-push of this public repo: decline unless this turn names owner AND action.
 - `grok -p` / Grok Build headless default 1+8 unchanged.
 
 ### Shared
@@ -2769,8 +2577,6 @@ Patched from: the company inbox Task Extractor brief **6 Sep 2026** (backup ≠ 
 - Still free-only. Still not legal advice. Still silent on meta/privacy/corpus.
 
 ## [0.5.5-free] — 2026-09-06
-
-Patched from: the company inbox Task Extractor brief **5 Sep 2026** (Sentinel→GitHub auto-push is owner + L3 gate — do not dump client/product facts into the public repo; truncated/junk files are not originals; do not mix manuals with IP work-product; clock-limited HiTL/UAT is a demo channel; do not log into Spaceship/Cloudflare unless named; do not invent status; leftover drafts unsent); AI Agentic SKILL.md best-practices job 6 Sep 06:40 UTC (conversation `8d1b8589-7502-4528-9cee-9521583585a5` — body not readable: no Grok chat-history connector; sources re-crawled); Headless Agent topics last successful run 2 Sep ("Agent Skills & Headless Shift"); OpenAI **plugins/build/skills** crawled 2026-09-06 (workflow boundary: input / steps / output / facts not to infer / when to ask, stop, or decline; MCP = live data + auth + controlled actions, skill = sequences; test inventory: direct, indirect, incomplete, should-not-activate, must-not-invent/unsupported); Anthropic Agent Skills best-practices (subagents do not inherit skills; tool-specific frontmatter is non-portable; skills are privileged instructions; evals first; SKILL.md <500; references one level deep; TOC on long refs); Grok Bot skills/routines + DataCamp 2026-08-27 (shared cloud computer is not a security boundary; autonomy observe/draft/approved-write/scheduled; safety gate: no secrets in dispatched task specs). **No Grok chat-history connector exists**; Grok-chat insights are from those docs, this 09:30 Prague job, live automations, and X ingest 26 Aug–3 Sep 2026.
 
 ### OpenAI (first)
 
@@ -2803,11 +2609,11 @@ Patched from: the company inbox Task Extractor brief **5 Sep 2026** (Sentinel→
 
 ## [0.5.4-free] — 2026-09-05
 
-Patched from: the company inbox Task Extractor brief **4 Sep 2026** (evidence-or-blocked: Drive root ≠ archived; do not invent status; do not email third parties unless the item names them; do not auto-publish / resend / send leftover drafts or empty signature replies; confirm message-id + recipients before claiming send; HiTL/UAT Thu 10 Sep and Grok Bot Galaxy livestream 15–17 Sep as demo channels); Headless Agent topics job (computer-use / skill development; leave as-is); adjacent US IP corpus hourly + EOD prompts (sentinel remains hygiene-only; disk==claim); OpenAI **plugins/build/skills** page crawled 2026-09-05 (do not invent, replace, or reroll; state what the model must not infer; when to stop or decline; incomplete inputs; a dependency does not replace workflow; optional plugin wrap); Anthropic Agent Skills best-practices + gotchas (description is the trigger; ≥3 evals; SKILL.md as TOC; avoid too many options); Grok Bot skills/routines docs (useful skill states what requires approval; report failure instead of stale data; sending/publishing needs approval; computer-use teaching records the screen). **No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, live automations (this 09:30 Prague job), and X/Bot ingest notes.
+**No Grok chat-history connector exists**; Grok-chat insights are from those Bot/Build docs, live automations and X/Bot ingest notes.
 
 ### OpenAI (first)
 
-- Description now 691 chars (under Codex 8k / 2% truncation and Anthropic 1024). Front-loads HiTL / UAT / livestream / leftover-draft / auto-publish triggers. States “never invent status or send unless this turn names recipient and action.”
+- Description now 691 chars (under Codex 8k / 2% truncation and Anthropic 1024). Front-loads HiTL / UAT / livestream / leftover-draft / auto-publish triggers.
 - `agents/openai.yaml` `default_prompt` names HiTL/livestream, leftover-draft hold, evidence-or-blocked, recipient **and** action. Implicit invocation stays on. **No MCP `dependencies.tools`.** Instructions over scripts. A declared MCP would not replace this workflow (we still do not need one).
 - ChatGPT zip path unchanged (`SKILL.md` at zip root). Optional later plugin wrap (`skills: "./skills/"`) is documented; the install unit stays the skill folder.
 - New evals cover incomplete input (must not invent artifacts) and leftover-draft hold — OpenAI’s 2026-09-05 test inventory.
@@ -2835,7 +2641,7 @@ Patched from: the company inbox Task Extractor brief **4 Sep 2026** (evidence-or
 
 ## [0.5.3-free] — 2026-09-04
 
-Patched from: the company inbox Task Extractor briefs 1–3 Sep 2026 (Grok Bot operating rules: do not invent status; do not email third parties unless named); Headless Agent topics job (multi-agent / computer-use / collectible agents / skill development); adjacent IP-lawyer hourly prompt (sentinel remains hygiene-only, not the US IP corpus); OpenAI ChatGPT Skills / Codex docs (learn.chatgpt.com/docs/build-skills, crawled 2026-09-04); Anthropic skill-authoring checklist (platform.claude.com, crawled 2026-09-04); agentskills.io specification (name ≤64 kebab, description ≤1024, compatibility is env-only); Grok Bot guides + the owner's 29–31 Aug ingest notes (an outside commentator Clip Bot, browser-use, Bot with own computer); this Grok Build run. **No Grok chat-history connector exists**; Grok-chat insights are from those X/Bot notes, `grok -p` / Grok Build headless contract, and live automations.
+**No Grok chat-history connector exists**; Grok-chat insights are from those X/Bot notes, `grok -p` / Grok Build headless contract, and live automations.
 
 ### OpenAI (first)
 
@@ -2869,7 +2675,7 @@ Patched from: the company inbox Task Extractor briefs 1–3 Sep 2026 (Grok Bot o
 
 ## [0.5.2-free] — 2026-09-03
 
-Patched from: emails (the company inbox, 17 Aug–3 Sep 2026) including Task Extractor 2 Sep (this job), outside counsel comments 2 Sep 12:48 UTC (Reg-Radar writing, applied as **hygiene language** only), LangChain Deep Agents v0.7 (26 Aug), OpenAI ChatGPT Skills / Codex docs (learn.chatgpt.com/docs/build-skills, crawled 2026-09-01), Anthropic Agent Skills best-practices checklist (platform.claude.com, crawled 2026-09-02), agentskills.io specification (name/description constraints; `compatibility` is env-only), Microsoft Agent Framework skills (25 Aug), Headless Agent topics automation prompt, an outside commentator field note *The description is the trigger*, and this Grok Build run. **No Grok chat-history connector exists**; Grok-chat insights are from live automations (this job + adjacent 08:10 IP Radar / 08:40 SKILL.md best-practices schedules), `grok -p` / Grok Build headless contract, and X posts 21 Aug–2 Sep 2026 on skills.
+**No Grok chat-history connector exists**; Grok-chat insights are from live automations `grok -p` / Grok Build headless contract, and X posts 21 Aug–2 Sep 2026 on skills.
 
 ### OpenAI (first)
 
@@ -2901,7 +2707,7 @@ Patched from: emails (the company inbox, 17 Aug–3 Sep 2026) including Task Ext
 
 ## [0.5.1-free] — 2026-09-02
 
-Patched from emails (the company inbox, 17 Aug–2 Sep 2026), SteerCo v2.4 / Future Solution Architecture, v05-suggestions, OpenAI ChatGPT Skills + Codex docs (2026-09), Anthropic Agent Skills best practices, and Grok Build / headless agent contracts. No Grok chat-history connector was available; Grok insights come from the 2026-09-02 `chatgpt-skill` commit, the demo headless `grok -p` pattern, and Grok Build skill layout.
+Patched from SteerCo v2.4 / Future Solution Architecture, v05-suggestions, OpenAI ChatGPT Skills + Codex docs (2026-09), Anthropic Agent Skills best practices, and Grok Build / headless agent contracts. No Grok chat-history connector was available; Grok insights come from the 2026-09-02 `chatgpt-skill` commit, the demo headless `grok -p` pattern, and Grok Build skill layout.
 
 ### OpenAI (first)
 
