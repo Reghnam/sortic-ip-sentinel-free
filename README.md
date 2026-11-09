@@ -11,6 +11,7 @@
 3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
 Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.81-free**).
+- An alpha above the Latest badge is not the stable CLI; a third-party index is not the releases list; a later read of the same raw heading is not a new binary; a contradictory page line is not a second CLI; a token-refresh timeout is not a transcript (same edition v0.5.81-free, read 9 Nov 2026)
 - Commits after the Latest tag are not a new CLI; a truncated digest is not a new practice; a status-page timestamp is not the CLI (v0.5.81-free)
 - First-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI (v0.5.80-free)
 - The raw heading has no date; a refused write is not a waiver; a silent exit 0 is not a pass (v0.5.79-free)
