@@ -14,7 +14,40 @@ Content notes and changelog notes go through a pull request. Rebase-merge that p
 
 ## [0.5.81-free] — 2026-11-01
 
-Absorbed this Grok Build turn after origin **v0.5.80-free** was already on main (a status-watch repeat is not a new CLI; the raw heading has no date; first-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
+### Later read — 2026-11-09 (same edition)
+
+A content-only host read. No edition bump. No pin restamp. Origin 1 Nov sentences below stay in this tip. They are not this read. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
+
+#### OpenAI (first)
+
+- GitHub releases API this read: the Latest badge is still **0.167.0** (6 Nov, not a prerelease). The rows above that badge are prereleases. An alpha above the Latest badge is not this read's stable CLI. Do not copy the alpha tag. No stable tag dated 7 Nov, 8 Nov, or 9 Nov.
+- **New:** a third-party index is not the releases list. Do not copy an alpha that this API page did not return. A "minutes ago" line on that index is not a stable CLI.
+- A prior pin of **0.166.0** is not this read. Commits on main after the Latest tag are still not a new CLI. Do not copy a commit count. Do not copy a model name. This skill still ships **no hooks**. Evals stay **281**. This read adds no eval heading.
+
+#### Anthropic (second)
+
+- Raw CHANGELOG.md this read still leads with `## 2.1.319` and has no date on that heading. The next headings are `## 2.1.318`, then `## 2.1.317`, then `## 2.1.316`, then `## 2.1.314`. There is no **2.1.320**.
+- **New:** a 9 Nov read of that same raw heading is not a new binary. Do not invent a 9 Nov heading. Do not invent a date on the raw heading. Do not copy the changelog bullets. The 1 Nov sentence that there is no **2.1.317** is that day's read, not this read.
+- GitHub releases Latest is still **v2.1.319** (6 Nov, not a prerelease). The date lives on the releases list. Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 200.
+
+#### Grok Build (third)
+
+- This curl of the public changelog returned **403**. Do not replace the recorded public line **v1.0.70** (23 Oct).
+- **New:** a page summary that also printed a contradictory older line is not a second CLI. Do not copy that line. An external note the public line does not lead with is not the CLI. Do not copy that later number.
+- Gmail search did not finish (token refresh). Drive search did not finish (token refresh). That timeout is not a transcript. Do not invent a mail body. Do not invent a chat export. No conversation_search. No newer grok-export than W38.
+
+#### Shared
+
+- **An alpha above the Latest badge is not the stable CLI.** Latest this read is still **0.167.0** (6 Nov). A third-party index is not the releases list.
+- **The raw lead is still 2.1.319 and has no date.** A 9 Nov read is not a new binary. There is no **2.1.320**.
+- **A contradictory page line is not a second CLI.** Public lead stays **v1.0.70**. A token-refresh timeout is not a transcript.
+- Evals stay **281**. HITL F1–F28 + T1–T62 required. This read adds T63 (alpha above Latest + same raw heading + contradictory page line + token-refresh timeout). No new eval heading.
+- A content-only observation does not bump the edition.
+- Still free-only. Still not legal advice. No secrets.
+
+### Prior read in this edition (1 Nov 2026) — not this read
+
+Prior 1 Nov absorb, after origin **v0.5.80-free** was already on main (a status-watch repeat is not a new CLI; the raw heading has no date; first-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
