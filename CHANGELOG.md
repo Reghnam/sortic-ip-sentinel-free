@@ -141,7 +141,7 @@ Absorbed this Grok Build turn after origin **v0.5.77-free** was already on main 
 
 ## [0.5.77-free] — 2026-10-29
 
-Absorbed this Grok Build turn after origin **v0.5.76-free** was already on main (a non-prerelease tag is the stable CLI; an alpha after that tag is not the next stable line; an external note is not a seal). This tip does not republish those. The 26 Oct backup folder listed three docs (a manifest, a memory snapshot, a backup changelog), not a chat export. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
+Absorbed this Grok Build turn after origin **v0.5.76-free** was already on main (a non-prerelease tag is the stable CLI; an alpha after that tag is not the next stable line; an external note is not a seal). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
 ### OpenAI (first)
 
