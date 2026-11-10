@@ -14,7 +14,39 @@ Content notes and changelog notes go through a pull request. Rebase-merge that p
 
 ## [0.5.81-free] — 2026-11-01
 
-### Later read — 2026-11-09 (same edition)
+### Later read — 2026-11-10 (same edition)
+
+A content-only host read. No edition bump. No pin restamp. Origin 1 Nov sentences and the 9 Nov sentences below stay in this tip. They are not this read. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
+
+#### OpenAI (first)
+
+- GitHub releases Latest this read is still **0.167.0** (6 Nov, not a prerelease). The rows above that badge are prereleases, including alphas published 9 Nov. An alpha published after the Latest date is not a 10 Nov stable CLI. A later alpha of the same stable number is not a newer stable CLI. Do not copy the alpha tag. No stable tag dated 10 Nov.
+- A third-party index is not the releases list. The top row is not the Latest badge. Do not copy a commit count. Do not copy a model name. This skill still ships **no hooks**. Evals stay **281**. This read adds no eval heading.
+
+#### Anthropic (second)
+
+- Raw CHANGELOG.md this read leads with `## 2.1.322` and has no date on that heading. The next headings are `## 2.1.321`, then `## 2.1.319`, then `## 2.1.318`, then `## 2.1.317`, then `## 2.1.316`, then `## 2.1.314`. There is no `## 2.1.320` between `## 2.1.321` and `## 2.1.319`. A missing number is not a wipe. Do not invent it.
+- **New:** GitHub releases Latest is **v2.1.322** (10 Nov, not a prerelease). A later non-prerelease tag is the stable line. The date lives on the releases list. Do not invent a date on the raw heading. Do not copy the changelog bullets. Do not copy a model name.
+- The 9 Nov sentence that the raw lead is **2.1.319**, and that there is no **2.1.320** as that day's lead, is that day's read, not this read.
+- Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 200.
+
+#### Grok Build (third)
+
+- The public changelog page this read returned **200** and leads with **v1.0.77** (5 Nov). The 9 Nov curl was **403** and that day's recorded line was **v1.0.70**. That sentence is that day's read, not this read.
+- **New:** a changelog file numbered above the page lead is not the public line. Do not copy that later number. A missing index key (**404**) is not a version. Do not copy the bullets.
+- Gmail from the owner returned. The notes are corpus status and a planning forward, not a headless-skill practice and not a host CLI. Do not copy a hash, a run id, an hour, or an issue number. Do not copy an amount. A planning forward is not a publish. Drive search did not finish (token refresh). That timeout is not a transcript. Do not invent a chat export. No conversation_search. No newer grok-export than W38.
+
+#### Shared
+
+- **An alpha published after the Latest date is not a 10 Nov stable CLI.** Latest this read is still **0.167.0** (6 Nov). Do not copy the alpha tag.
+- **The raw lead is 2.1.322 and has no date.** GitHub Latest is **v2.1.322** (10 Nov). A missing number between headings is not a wipe. The 9 Nov raw-lead sentence is that day's read.
+- **The public page leads with v1.0.77 (5 Nov).** A changelog file above that lead is not the public line. A token-refresh timeout is not a transcript.
+- Evals stay **281**. HITL F1–F28 + T1–T63 required. This read adds T64 (alpha after the Latest date + raw lead 2.1.322 + file above the page lead + corpus note and drive timeout). No new eval heading.
+- A content-only observation does not bump the edition.
+- Still free-only. Still not legal advice. No secrets.
+
+### Prior read in this edition (9 Nov 2026) — not this read
+
 
 A content-only host read. No edition bump. No pin restamp. Origin 1 Nov sentences below stay in this tip. They are not this read. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
