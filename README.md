@@ -11,6 +11,7 @@
 3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
 Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.81-free**).
+- GitHub Latest this read is **0.167.1** (10 Nov, not a prerelease); an alpha published 11 Nov is not an 11 Nov stable CLI; the raw lead is still 2.1.322 and has no date; a second read is not a new binary; this curl returned 403; do not replace v1.0.77; a third-party later number is not the public line; a corpus note is not this skill; a template note is not a rewrite (same edition v0.5.81-free, read 11 Nov 2026)
 - An alpha published after the Latest date is not a 10 Nov stable CLI; the raw lead is 2.1.322 and has no date; a changelog file above the page lead is not the public line; a corpus note is not this skill (same edition v0.5.81-free, read 10 Nov 2026)
 - An alpha above the Latest badge is not the stable CLI; a third-party index is not the releases list; a later read of the same raw heading is not a new binary; a contradictory page line is not a second CLI; a token-refresh timeout is not a transcript (same edition v0.5.81-free, read 9 Nov 2026)
 - Commits after the Latest tag are not a new CLI; a truncated digest is not a new practice; a status-page timestamp is not the CLI (v0.5.81-free)
