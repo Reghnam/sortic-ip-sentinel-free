@@ -14,7 +14,40 @@ Content notes and changelog notes go through a pull request. Rebase-merge that p
 
 ## [0.5.81-free] — 2026-11-01
 
-### Later read — 2026-11-11 (same edition)
+### Later read — 2026-11-12 (same edition)
+
+A content-only host read. No edition bump. No pin restamp. Origin 1 Nov sentences, the 9 Nov sentences, the 10 Nov sentences, and the 11 Nov sentences below stay in this tip. They are not this read. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
+
+#### OpenAI (first)
+
+- GitHub releases Latest this read is **0.167.2** (11 Nov, not a prerelease). A later non-prerelease tag is the stable CLI.
+- **New:** the first API row is a 12 Nov alpha. The top row is not the Latest badge. An alpha published 12 Nov is not a 12 Nov stable CLI. Do not copy the alpha tag. No stable tag dated 12 Nov.
+- **New:** the 11 Nov sentence that Latest is **0.167.1**, and that no stable tag is dated 11 Nov, is that day's read, not this read. A later same-day non-prerelease is the stable CLI. Do not copy the release body. Do not copy a model name.
+- This skill still ships **no hooks**. Evals stay **281**. This read adds no eval heading.
+
+#### Anthropic (second)
+
+- Raw CHANGELOG.md this read still leads with `## 2.1.322` and has no date on that heading. The next headings are `## 2.1.321`, then `## 2.1.319`. There is no `## 2.1.320` between those headings. There is no `## 2.1.323`. A missing number is not a wipe. Do not invent it.
+- **New:** GitHub releases Latest is still **v2.1.322** (10 Nov, not a prerelease). No release dated 12 Nov. A 12 Nov read of the same Latest is not a new binary. Do not invent a 12 Nov heading. Do not invent a date on the raw heading. Do not copy the changelog bullets. Do not copy a model name.
+- Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 200. Do not claim the body is under 500. Do not claim that 499 is a rewrite.
+
+#### Grok Build (third)
+
+- This curl of `x.ai/changelog/build` returned **403**. Do not replace the recorded public line **v1.0.77** (5 Nov). A 403 and that recorded line are one version.
+- **New:** the public skills page and the headless page returned **200**. `user-invocable: false` hides the skill from the model as well as the slash menu. The literal `yes` is not true. `allowed-tools` on this host does not grant tools. `--no-auto-update` on `grok -p` is not a vault and not owner approval. A background update in a headless run is not owner approval. Grok reading Claude skills, hooks, and CLAUDE.md with no extra setup is a hop, not a vault. A routine that runs in the cloud while the laptop is closed is not a local vault. Start with a one-time task before a routine. Customer contact still requires approval. Publishing a private skill to a team is a publish. Hold. Do not publish.
+- Gmail from the owner returned no mail dated 11 Nov or 12 Nov. The newest note remains corpus status on another repo, not a headless-skill practice and not a host CLI. A writer that pushes straight to main is not this skill's publish path. Do not copy a hash, a run id, an hour, or an issue number. A continue-reading chat was not opened. A template note is not a rewrite. No conversation_search. No newer grok-export than W38.
+
+#### Shared
+
+- **Latest this read is 0.167.2 (11 Nov).** The first API row is a 12 Nov alpha. The top row is not the Latest badge. An alpha published 12 Nov is not a 12 Nov stable CLI. The 11 Nov sentence that Latest is **0.167.1** is that day's read.
+- **The raw lead is still 2.1.322 and has no date.** GitHub Latest is still **v2.1.322** (10 Nov). A 12 Nov read is not a new binary. There is no **2.1.323**.
+- **This curl returned 403.** Do not replace **v1.0.77**. `yes` is not true. `allowed-tools` does not grant tools. `--no-auto-update` is not a vault. A cloud routine is not a local vault. Publishing a private skill is a publish. A corpus note is not this skill. A template note is not a rewrite.
+- Evals stay **281**. HITL F1–F28 + T1–T65 required. This read adds T66 (12 Nov alpha above Latest + same raw lead + 403 with a 200 skills page + corpus note still not a skill). No new eval heading.
+- A content-only observation does not bump the edition.
+- Still free-only. Still not legal advice. No secrets.
+
+### Prior read in this edition (11 Nov 2026) — not this read
+
 
 A content-only host read. No edition bump. No pin restamp. Origin 1 Nov sentences, the 9 Nov sentences, and the 10 Nov sentences below stay in this tip. They are not this read. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
