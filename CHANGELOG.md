@@ -14,7 +14,40 @@ Content notes and changelog notes go through a pull request. Rebase-merge that p
 
 ## [0.5.81-free] — 2026-11-01
 
-### Later read — 2026-11-11 (same edition)
+### Later read — 2026-11-13 (same edition)
+
+A content-only host read. No edition bump. No pin restamp. Origin 1 Nov sentences, the 9 Nov sentences, the 10 Nov sentences, and the 11 Nov sentences below stay in this tip. They are not this read. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
+
+#### OpenAI (first)
+
+- GitHub releases Latest this read is **0.169.0** (13 Nov, not a prerelease). The first API row is that Latest badge. A later non-prerelease tag is the stable CLI.
+- **New:** a same-day earlier stable tag is not the Latest badge. Do not copy that tag. Alphas published 12 Nov or 13 Nov are not the stable CLI. Do not copy the alpha tag. Do not copy a commit count. Do not copy a model name.
+- The 11 Nov sentence that Latest is **0.167.1** (10 Nov), and that no stable tag is dated 11 Nov, is that day's read, not this read. A stable tag that morning read did not see is not this read's Latest.
+- **New:** Codex implicit invocation is `allow_implicit_invocation` in `agents/openai.yaml`. This pack stays true. Claude `disable-model-invocation` is a different flag. Do not treat that flag as the Codex switch. Do not add a second skill format. This skill still ships **no hooks**. Evals stay **281**. This read adds no eval heading.
+
+#### Anthropic (second)
+
+- Raw CHANGELOG.md this read leads with `## 2.1.323` and has no date on that heading. The next headings are `## 2.1.322`, then `## 2.1.321`, then `## 2.1.319`. There is still no `## 2.1.320` between those headings. A missing number is not a wipe. Do not invent it.
+- **New:** GitHub releases Latest is **v2.1.323** (12 Nov, not a prerelease). No release dated 13 Nov. The 11 Nov sentence that the raw lead is still **2.1.322**, and that Latest is still **v2.1.322**, is that day's read. Do not invent a 13 Nov heading. Do not invent a date on the raw heading. Do not copy the changelog bullets. Do not copy a model name.
+- Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 200. Do not claim that 499 is a rewrite. Do not claim the body is under 500.
+
+#### Grok Build (third)
+
+- This curl of the public changelog returned **403**. Do not replace the recorded public line **v1.0.77** (5 Nov). A 403 and that recorded line are one version. A second 403 is not a new binary.
+- **New:** a page render that still leads with **v1.0.77** is that recorded line. Do not invent a move from a render that agrees. A vendor changelog file numbered above the page lead returned **200**. Its last-modified date is 11 Nov. That file is not the public page. Do not copy that number. Do not copy the bullets. A 13 Nov fetch of an 11 Nov file is not a 13 Nov CLI.
+- Gmail from the owner after the 11 Nov read returned. The notes are still corpus status on another repo, not a headless-skill practice and not a host CLI. Another writer that pushes straight to main is not this skill's publish path. A maintain failure is not a pass. Do not copy a hash, a run id, an hour, an issue number, or a case id. Do not copy an amount.
+- A 13 Nov skill-practice mail returned another six-part template and a continue-reading link. The inbox cut the template. Do not complete the cutoff. That note is not a rewrite of this body. Do not open the link. Do not copy a chat id, an automation id, or a team id. The grok chat behind the link did not load. An unopened chat is not a transcript. Fail-closed on a missing input is already stop-or-decline. Do not add a ninth offer. A line that says NOTIFY_BLOCKED is not a new practice. Drive was not opened. No conversation_search. No newer grok-export than W38.
+
+#### Shared
+
+- **Latest this read is 0.169.0 (13 Nov).** A same-day earlier stable tag is not the Latest badge. An alpha published 12 Nov or 13 Nov is not the stable CLI. Do not copy the alpha tag. The 11 Nov sentence that Latest is **0.167.1** is that day's read.
+- **The raw lead is 2.1.323 and has no date.** GitHub Latest is **v2.1.323** (12 Nov). No release dated 13 Nov. There is still no **2.1.320**. The 11 Nov raw-lead sentence is that day's read.
+- **This curl returned 403.** Do not replace **v1.0.77**. A page render of that same line is not a new CLI. A changelog file above the page lead is not the public line. A corpus note is not this skill. A failed maintain is not a pass. A cut-off template is not a rewrite.
+- Evals stay **281**. HITL F1–F28 + T1–T65 required. This read adds T66 (0.169.0 + raw lead 2.1.323 + a second 403 and a file above the page lead + a later corpus note and a cut-off template). No new eval heading.
+- A content-only observation does not bump the edition.
+- Still free-only. Still not legal advice. No secrets.
+
+### Prior read in this edition (11 Nov 2026) — not this read
 
 A content-only host read. No edition bump. No pin restamp. Origin 1 Nov sentences, the 9 Nov sentences, and the 10 Nov sentences below stay in this tip. They are not this read. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
