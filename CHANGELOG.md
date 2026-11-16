@@ -14,7 +14,40 @@ Content notes and changelog notes go through a pull request. Rebase-merge that p
 
 ## [0.5.81-free] — 2026-11-01
 
-### Later read — 2026-11-15 (same edition)
+### Later read — 2026-11-16 (same edition)
+
+A content-only host read. No edition bump. No pin restamp. Origin 1 Nov sentences, the 9 Nov sentences, the 10 Nov sentences, the 11 Nov sentences, the 13 Nov sentences, the 14 Nov sentences, and the 15 Nov sentences below stay in this tip. They are not this read. **No client / product / infra names.**
+
+#### OpenAI (first)
+
+- GitHub releases Latest this read is still **0.169.0** (13 Nov, not a prerelease). A later non-prerelease tag is the stable CLI.
+- **New:** the first row of the releases list is a prerelease published 15 Nov. That row is not the Latest badge. A second row is also a prerelease published 15 Nov. An alpha published 15 Nov is not the stable CLI. No row is dated 16 Nov. No stable tag dated 15 Nov. No stable tag dated 16 Nov. Do not copy the alpha tag. Do not copy a commit count. Do not copy a model name. Do not copy the release bullets.
+- The 15 Nov sentence that the API page's first row is the Latest badge, and that no row is dated 15 Nov, is that day's read, not this read. The 14 Nov sentence that the first releases-list row is a prerelease published 14 Nov is that day's read.
+- Codex implicit invocation stays `allow_implicit_invocation` in `agents/openai.yaml` (this pack stays true). Claude `disable-model-invocation` is a different flag. Do not treat that flag as the Codex switch. This skill still ships **no hooks**.
+
+#### Anthropic (second)
+
+- Raw CHANGELOG.md this read still leads with `## 2.1.325` and has no date on that heading. The next headings are `## 2.1.323`, then `## 2.1.322`, then `## 2.1.321`, then `## 2.1.319`. There is no `## 2.1.324`. There is no `## 2.1.326`. A missing number is not a wipe.
+- **New:** a 16 Nov read of that same raw heading is not a new binary. GitHub releases Latest is still **v2.1.325** (13 Nov, not a prerelease). No release dated 15 Nov. No release dated 16 Nov. The 15 Nov sentence that Latest is still **v2.1.325** and that no release is dated 15 Nov is that day's read. Do not invent a 16 Nov heading. Do not invent a date on the raw heading. Do not copy the bullets. Do not copy a model name.
+- Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 200. Do not claim that 499 is a rewrite. Do not claim the body is under 500.
+
+#### Grok Build (third)
+
+- This curl of the public changelog returned **403**. Do not replace the recorded public line **v1.0.77** (5 Nov). A 403 and that recorded line are one version. Another 403 is not a new binary.
+- **New:** a page render still leads with **v1.0.77** (5 Nov). A render that agrees is not this curl and is not a new binary. A vendor changelog file numbered above the page lead returned **200**. Its last-modified date is still 14 Nov. The next number returned **404**. That file is not the public page. Do not copy that number. Do not copy the bullets. The 15 Nov sentence that the file last-modified date is 14 Nov is that day's read. A 16 Nov fetch of a 14 Nov file is not a 16 Nov CLI.
+- A product page names a model. Do not copy a model name. A product page is not the public changelog line.
+- Mail search this read did not return (token refresh timed out). A timeout is not a wipe of the 15 Nov empty-search note. Do not invent a newer note. Do not invent a next queue item. Drive search returned no files. An empty result is not a transcript. No conversation_search. No newer grok-export than W38. A NOTIFY_BLOCKED line is not a new practice.
+
+#### Shared
+
+- **Latest this read is still 0.169.0 (13 Nov).** The first row of the releases list is a 15 Nov prerelease and is not the Latest badge. An alpha published 15 Nov is not the stable CLI. No row is dated 16 Nov. No stable tag dated 16 Nov. The 15 Nov sentence that the API page's first row is the Latest badge, and that no row is dated 15 Nov, is that day's read.
+- **The raw lead is still 2.1.325 and has no date.** GitHub Latest is still **v2.1.325** (13 Nov). No release dated 16 Nov. There is no **2.1.326**. There is no **2.1.324**. A 16 Nov read of the same heading is not a new binary.
+- **This curl returned 403.** Do not replace **v1.0.77**. A page render of that line is not this curl. A changelog file above the page lead, last-modified 14 Nov, is not the public line. A mail timeout is not a wipe. An empty drive result is not a transcript.
+- Evals stay **281**. HITL F1–F28 + T1–T68 required. This read adds T69 (still 0.169.0 + a 15 Nov alpha that is not Latest + no 16 Nov row + same raw lead 2.1.325 + another 403 and a 14 Nov file + a mail timeout and an empty drive result). No new eval heading.
+- A content-only observation does not bump the edition.
+- Still free-only. Still not legal advice. No secrets.
+
+### Prior read in this edition (15 Nov 2026) — not this read
 
 A content-only host read. No edition bump. No pin restamp. Origin 1 Nov sentences, the 9 Nov sentences, the 10 Nov sentences, the 11 Nov sentences, the 13 Nov sentences, and the 14 Nov sentences below stay in this tip. They are not this read. **No client / product / infra names.**
 
