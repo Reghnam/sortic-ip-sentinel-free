@@ -102,6 +102,22 @@ _PINNED_EDITION = re.compile(r"(?<![0-9.])(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])"
 _SUFFIXED_EDITION = re.compile(r"(?<![0-9.])(\d+\.\d+\.\d+-free[A-Za-z0-9+-]+)")
 _META_VERSION = re.compile(r'(?m)^  version:\s*"([^"]*)"')
 _CHANGELOG_TIP = re.compile(r"(?m)^## \[([^\]]+)\]")
+_EDITION_HEADING = re.compile(r"^## \[[^\]]+\]")
+_LATER_READ_HEADING = re.compile(r"^### Later read\b")
+_PRIOR_READ_HEADING = re.compile(r"^### Prior read\b")
+_READ_BLOCK_END = re.compile(r"^### [^#]|^## [^#]")
+# Exact phrases only. Bare backup, export, mail, and Drive stay allowed.
+CHANGELOG_OPS_PHRASES = (
+    "NOTIFY_BLOCKED",
+    "conversation_search",
+    "grok-export",
+    "Gmail",
+    "marked PARTIAL",
+    "weekly backup",
+    "Drive search",
+    "returned no messages",
+)
+CHANGELOG_READ_LINE_CAP = 40
 _SHORT_DESC_EDITION = re.compile(
     r'(?m)^  short-description:\s*"[^\n]*\bv(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])'
 )
@@ -378,9 +394,89 @@ def tree_leak_errors(root: Path) -> list[str]:
     return errors
 
 
+def current_edition_lines(text: str) -> list[str] | None:
+    """Lines of the first edition heading, up to the next edition heading."""
+    lines = text.splitlines()
+    start = None
+    for index, line in enumerate(lines):
+        if _EDITION_HEADING.match(line):
+            start = index
+            break
+    if start is None:
+        return None
+    end = len(lines)
+    for index in range(start + 1, len(lines)):
+        if _EDITION_HEADING.match(lines[index]):
+            end = index
+            break
+    return lines[start:end]
+
+
+def _later_read_spans(lines: list[str]) -> list[tuple[int, int]]:
+    starts = [index for index, line in enumerate(lines) if _LATER_READ_HEADING.match(line)]
+    spans: list[tuple[int, int]] = []
+    for start in starts:
+        end = len(lines)
+        for index in range(start + 1, len(lines)):
+            if _READ_BLOCK_END.match(lines[index]):
+                end = index
+                break
+        spans.append((start, end))
+    return spans
+
+
+def changelog_read_findings(text: str) -> list[str]:
+    """Warn-only checks for the current-edition host-read block.
+
+    At most one ``### Later read`` heading, no ``### Prior read`` heading,
+    that block stays within ``CHANGELOG_READ_LINE_CAP`` lines, and the
+    current edition does not contain an operator phrase.
+    """
+    lines = current_edition_lines(text)
+    if lines is None:
+        return ["current edition heading is missing"]
+    section = "\n".join(lines)
+    findings: list[str] = []
+    spans = _later_read_spans(lines)
+    if len(spans) > 1:
+        findings.append(f"current edition has {len(spans)} Later read headings")
+    prior = sum(1 for line in lines if _PRIOR_READ_HEADING.match(line))
+    if prior:
+        findings.append(f"current edition has {prior} Prior read headings")
+    for number, (start, end) in enumerate(spans, 1):
+        length = end - start
+        if length > CHANGELOG_READ_LINE_CAP:
+            findings.append(
+                f"Later read block {number} is {length} lines (cap {CHANGELOG_READ_LINE_CAP})"
+            )
+    for phrase in CHANGELOG_OPS_PHRASES:
+        if phrase in section:
+            findings.append(f"current edition contains operator phrase: {phrase}")
+    return findings
+
+
+def strict_changelog_enabled(flag: bool, env: str | None) -> bool:
+    """Strict mode is opt-in. The default check only prints warnings."""
+    return bool(flag) or env == "1"
+
+
+def partition_changelog_findings(
+    findings: list[str], *, strict: bool
+) -> tuple[list[str], list[str]]:
+    """Return ``(errors, warnings)``. Warnings do not change the exit code."""
+    if strict:
+        return list(findings), []
+    return [], list(findings)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Maintainer checks for the free IP Sentinel packs.")
     parser.add_argument("--freshness", action="store_true")
+    parser.add_argument(
+        "--strict-changelog",
+        action="store_true",
+        help="Fail the current-edition changelog read check. Default is warn-only.",
+    )
     parser.add_argument("--window", default=None)
     parser.add_argument("--today", default=None)
     parser.add_argument("--extra-patterns", default=None)
@@ -707,6 +803,21 @@ def _hygiene(args: argparse.Namespace) -> int:
     errors.extend(license_version_errors(ROOT))
     errors.extend(edition_pin_errors(ROOT))
     errors.extend(tree_leak_errors(ROOT))
+
+    changelog_findings = changelog_read_findings(
+        (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+    )
+    strict_changelog = strict_changelog_enabled(
+        args.strict_changelog,
+        os.environ.get("HYGIENE_STRICT_CHANGELOG"),
+    )
+    changelog_errors, changelog_warnings = partition_changelog_findings(
+        changelog_findings,
+        strict=strict_changelog,
+    )
+    errors.extend(changelog_errors)
+    for warning in changelog_warnings:
+        print(f"changelog warning: {warning}")
 
     for warning in claim.warnings:
         print(warning)
