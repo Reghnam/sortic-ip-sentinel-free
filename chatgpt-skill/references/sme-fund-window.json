@@ -5,7 +5,7 @@
   "window_status": "closed_reopening_expected",
   "window_note": "UNVERIFIED: When the national office page was read on 2026-10-04, it described vouchers 1 and 2 as closed on 23 April 2026 and described a reopening as expected in November 2026 with no day published, while the EUIPO side is UNVERIFIED.",
   "last_verified": null,
-  "last_verified_note": "UNVERIFIED: a human sets this after reading both live pages",
+  "last_verified_note": "UNVERIFIED: TODO: replace null with the YYYY-MM-DD date you read both live pages",
   "last_verified_by": "human",
   "stale_after_days": 14,
   "sources": [
