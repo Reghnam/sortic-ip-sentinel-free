@@ -18,35 +18,36 @@ Content notes and changelog notes go through a pull request. Rebase-merge that p
 
 Prior 1 Nov absorb, after origin **v0.5.80-free** was already on main (a status-watch repeat is not a new CLI; the raw heading has no date; first-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
-### Later read — 2026-11-16 (same edition)
+### Later read — 2026-11-18 (same edition)
 
 A content-only host read. No edition bump. No pin restamp. **No client / product / infra names.**
 
 #### OpenAI (first)
 
-- GitHub releases Latest this read is still **0.169.0** (13 Nov, not a prerelease). A later non-prerelease tag is the stable CLI.
-- **New:** the first row of the releases list is a prerelease published 15 Nov. That row is not the Latest badge. A second row is also a prerelease published 15 Nov. An alpha published 15 Nov is not the stable CLI. No row is dated 16 Nov. No stable tag dated 15 Nov. No stable tag dated 16 Nov. Do not copy the alpha tag. Do not copy a commit count. Do not copy a model name. Do not copy the release bullets.
-- The 15 Nov sentence that the API page's first row is the Latest badge, and that no row is dated 15 Nov, is that day's read, not this read. The 14 Nov sentence that the first releases-list row is a prerelease published 14 Nov is that day's read.
+- GitHub releases Latest this read is **0.170.0** (18 Nov, not a prerelease). A later non-prerelease tag is the stable CLI.
+- **New:** the first row of the releases list is that same non-prerelease. It is the Latest badge. An alpha published 18 Nov, with a higher number, is not the stable CLI. An earlier stable tag dated 17 Nov is not the badge. Do not copy the alpha tag. Do not copy a commit count. Do not copy a model name. Do not copy the release bullets.
+- The 16 Nov sentence that Latest is still **0.169.0**, that the first row is a 15 Nov prerelease, and that no row is dated 16 Nov, is that day's read, not this read.
 - Codex implicit invocation stays `allow_implicit_invocation` in `agents/openai.yaml` (this pack stays true). Claude `disable-model-invocation` is a different flag. Do not treat that flag as the Codex switch. This skill still ships **no hooks**.
 
 #### Anthropic (second)
 
-- Raw CHANGELOG.md this read still leads with `## 2.1.325` and has no date on that heading. The next headings are `## 2.1.323`, then `## 2.1.322`, then `## 2.1.321`, then `## 2.1.319`. There is no `## 2.1.324`. There is no `## 2.1.326`. A missing number is not a wipe.
-- **New:** a 16 Nov read of that same raw heading is not a new binary. GitHub releases Latest is still **v2.1.325** (13 Nov, not a prerelease). No release dated 15 Nov. No release dated 16 Nov. The 15 Nov sentence that Latest is still **v2.1.325** and that no release is dated 15 Nov is that day's read. Do not invent a 16 Nov heading. Do not invent a date on the raw heading. Do not copy the bullets. Do not copy a model name.
+- Raw CHANGELOG.md this read leads with `## 2.1.327` and has no date on that heading. The next headings are `## 2.1.326`, then `## 2.1.325`, then `## 2.1.323`. There is no `## 2.1.324`. There is a `## 2.1.326`. A missing number is not a wipe.
+- **New:** GitHub releases Latest is **v2.1.327** (17 Nov, not a prerelease). A release dated 16 Nov is **v2.1.326** and is not Latest. The 16 Nov sentence that the raw lead is still **2.1.325**, that there is no **2.1.326**, and that no release is dated 16 Nov, is that day's read. Do not invent an 18 Nov heading. Do not invent a date on the raw heading. Do not copy the bullets. Do not copy a model name.
+- **New:** a headless resume that drops stored messages is not a wipe. Log the exposure. A stall before the first headless request is not a pass. Continuing without model settings is not owner approval. A child run that inherits the session retry is not a fresh sandbox.
 - Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 200. Do not claim that 499 is a rewrite. Do not claim the body is under 500.
 
 #### Grok Build (third)
 
-- This curl of the public changelog returned **403**. Do not replace the recorded public line **v1.0.77** (5 Nov). A 403 and that recorded line are one version. Another 403 is not a new binary.
-- **New:** a page render still leads with **v1.0.77** (5 Nov). A render that agrees is not this curl and is not a new binary. A vendor changelog file numbered above the page lead returned **200**. Its last-modified date is still 14 Nov. The next number returned **404**. That file is not the public page. Do not copy that number. Do not copy the bullets. The 15 Nov sentence that the file last-modified date is 14 Nov is that day's read. A 16 Nov fetch of a 14 Nov file is not a 16 Nov CLI.
-- A product page names a model. Do not copy a model name. A product page is not the public changelog line.
+- This curl of the public changelog returned **403**. Another 403 is not a new binary.
+- **New:** a page render leads with **v1.0.88** (16 Nov). That render is the public line this read. The 16 Nov sentence that a page render still leads with **v1.0.77** is that day's read. Do not copy the bullets. Do not copy a model name. A product page is not the public changelog line. No public line dated 18 Nov on that render.
+- A numbered file above this page lead was not fetched. A missing probe is not a 404 and not a second CLI.
 
 #### Shared
 
-- **Latest this read is still 0.169.0 (13 Nov).** The first row of the releases list is a 15 Nov prerelease and is not the Latest badge. An alpha published 15 Nov is not the stable CLI. No row is dated 16 Nov. No stable tag dated 16 Nov. The 15 Nov sentence that the API page's first row is the Latest badge, and that no row is dated 15 Nov, is that day's read.
-- **The raw lead is still 2.1.325 and has no date.** GitHub Latest is still **v2.1.325** (13 Nov). No release dated 16 Nov. There is no **2.1.326**. There is no **2.1.324**. A 16 Nov read of the same heading is not a new binary.
-- **This curl returned 403.** Do not replace **v1.0.77**. A page render of that line is not this curl. A changelog file above the page lead, last-modified 14 Nov, is not the public line.
-- Evals stay **281**. HITL F1–F28 + T1–T68 required. This read adds T69 (still 0.169.0 + a 15 Nov alpha that is not Latest + no 16 Nov row + same raw lead 2.1.325 + another 403 and a 14 Nov file). No new eval heading.
+- **Latest this read is 0.170.0 (18 Nov).** The first row is that badge. An 18 Nov alpha is not the stable CLI. An earlier stable tag dated 17 Nov is not the badge. The 16 Nov sentence that Latest is still **0.169.0** is that day's read.
+- **The raw lead is 2.1.327 and has no date.** GitHub Latest is **v2.1.327** (17 Nov). There is a **2.1.326**. There is no **2.1.324**. The 16 Nov sentence that there is no **2.1.326** is that day's read.
+- **This curl returned 403.** The page render leads with **v1.0.88** (16 Nov). Do not keep **v1.0.77** as this read's public line.
+- Evals stay **281**. HITL F1–F28 + T1–T69 required. This read adds T70 (0.170.0 is Latest + an 18 Nov alpha is not + raw lead 2.1.327 + page lead v1.0.88). No new eval heading.
 - A content-only observation does not bump the edition.
 - Still free-only. Still not legal advice. No secrets.
 

@@ -27,7 +27,7 @@ user-invocable: true
 disable-model-invocation: false
 argument-hint: IP sensitive moment | show/hold | hygiene JSON
 metadata:
-  short-description: "SorticAI Free IP Sentinel v0.5.81-free — 0.169.0 is the stable CLI"
+  short-description: "SorticAI Free IP Sentinel v0.5.81-free — 0.170.0 is the stable CLI"
   version: "0.5.81-free"
   release: "2026-08-17"
   patched: "2026-11-01"
