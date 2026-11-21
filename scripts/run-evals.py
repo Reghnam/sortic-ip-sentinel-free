@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Deterministic L0–L3 activation eval harness. Keyword hits are warnings.
 
-Reads tests/evals/*.jsonl. Required fields are id, prompt, and expected_level.
+Reads tests/evals/*.jsonl, including activation_l0_generic_v0.1.jsonl.
+That generic L0 file is scored for root phrases and for the Claude
+description alone, the same way as the held-out file. It is not the gate
+file. Required fields are id, prompt, and expected_level.
 must and must_not are optional lists and are carried through untouched.
 Unknown fields are kept. gate_excluded fixtures are omitted from coverage,
 the gate counts, and keyword warnings, and are reported as their own total.
