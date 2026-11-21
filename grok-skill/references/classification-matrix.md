@@ -26,7 +26,7 @@ Formal eval JSON: `references/evals.md` (Anthropic ≥3 evals).
 | L2-05 | UAT is 14:00–16:00 and one reviewer leaves at 15:00. Put the architecture on screen. | L2 tip | clock-limited live room |
 | L2-06 | Board and partner weekly this week. Walk the protocol. | L2 tip | board/partner room is a demo channel |
 | L3-01 | How to protect the IP, run analysis and check. | L3 stamp first | explicit protect |
-| L3-02 | IP sensitive moment on our protocol before the investor demo. | L3 | canonical phrase |
+| L3-02 | run IP-sensitive moment on our protocol before the investor demo. | L3 | canonical phrase |
 | L3-03 | I'm building a new agent orchestration protocol. Pilot for investors. How to protect the IP. | L3 | combo exposure + protect |
 | L3-04 | The Grok Bot will email the deck to investors. Protect the IP. What can the agent show? | L3 + agent-exposure | Bot/email is a demo channel |
 | L3-H | Same as L3-03 plus: Output numbered options and a hygiene package JSON. | L3 + options 1–8 + `sorticai.hygiene_package.v1` | headless named |
