@@ -42,10 +42,10 @@ name: demo
 description: >
   Use when the user says protect the IP, patent, trade secret, or when headless, a Grok Bot
   will show, email, push, post, or pass the work (protected-lane, infra paste).
-  Do not use for generic privacy, telemetry, debug, CI.
+  Do not use for generic privacy, telemetry, debug, CI. IP sensitive moment.
 when-to-use: >
-  Triggers: "protect the IP", "before we demo", and headless, Grok Bot that will show, email, push, post, or pass the work.
-  Do not activate for generic privacy.
+  Triggers: "protect the IP", "before we demo", "patent".
+  Do not activate for generic privacy, or when headless will show the work.
 ---
 # Demo
 """
@@ -214,18 +214,54 @@ class RunEvalTests(unittest.TestCase):
 
     def test_trigger_phrases_from_frontmatter(self) -> None:
         phrases = {item.casefold() for item in RUN.parse_trigger_phrases(SKILL)}
-        self.assertIn("protect the ip", phrases)
-        self.assertIn("before we demo", phrases)
-        self.assertIn("headless", phrases)
-        self.assertIn("grok bot", phrases)
-        self.assertIn("patent", phrases)
-        self.assertIn("infra paste", phrases)
+        self.assertEqual(phrases, {"protect the ip", "before we demo", "patent"})
+        self.assertNotIn("headless", phrases)
+        self.assertNotIn("ip sensitive moment", phrases)
+        self.assertNotIn("grok bot", phrases)
+        self.assertNotIn("infra paste", phrases)
         self.assertNotIn("push", phrases)
         self.assertNotIn("email", phrases)
         self.assertNotIn("show", phrases)
         self.assertNotIn("post", phrases)
-        self.assertNotIn("ci", phrases)
-        self.assertNotIn("privacy", phrases)
+
+    def test_description_sentence_is_not_a_trigger_source(self) -> None:
+        phrases = RUN.parse_trigger_phrases(SKILL)
+        self.assertEqual(
+            RUN.attested_phrases(phrases, "headless IP sensitive moment infra paste"),
+            [],
+        )
+        self.assertEqual(RUN.attested_phrases(phrases, "Say patent please."), ["patent"])
+
+    def test_claude_description_alone_drops_unlisted_prose(self) -> None:
+        raw = tempfile.mkdtemp()
+        root = Path(raw)
+        _write(root / "SKILL.md", SKILL)
+        _write(
+            root / "claude-skill" / "SKILL.md",
+            "---\nname: demo\ndescription: >\n  patent only, not the other words.\n---\n# Demo\n",
+        )
+        _write(
+            root / "tests" / "evals" / "cases.jsonl",
+            _jsonl(
+                [
+                    _row("act-001", "L0", "debug the loop"),
+                    _row("act-002", "L1", "Keep this private."),
+                    _row("act-003", "L2", "before we demo the plan"),
+                    _row("act-004", "L3", "patent the approach"),
+                    _row("act-005", "L0", "a patent typo in the comment"),
+                ]
+            ),
+        )
+        text, code = RUN.render(root)
+        self.assertEqual(code, 0, text)
+        self.assertIn("block: root tests/evals/cases.jsonl", text)
+        self.assertIn("block: claude-description tests/evals/cases.jsonl", text)
+        root_block, claude_block = text.split("block: claude-description", 1)
+        self.assertIn("warning missed-moment: act-003 L2 matched none", claude_block)
+        self.assertNotIn("warning missed-moment: act-003 L2 matched none", root_block)
+        self.assertIn("warning false-positive: act-005", claude_block)
+        self.assertNotIn("warning missed-moment: act-004", claude_block)
+        self.assertIsNone(RUN.claude_description_phrases(Path(tempfile.mkdtemp()), ["patent"]))
 
     def test_real_skill_trigger_list(self) -> None:
         phrases = {
@@ -235,29 +271,38 @@ class RunEvalTests(unittest.TestCase):
         for needle in (
             "protect the ip",
             "before we demo",
-            "ip sensitive moment",
-            "headless",
+            "run ip-sensitive moment",
+            "headless hygiene package",
+            "sortic-ip-sentinel-free",
             "grok bot",
             "computer-use",
             "bot-to-bot",
-            "partner pre-read",
             "investor demo",
             "fundraising deck",
-            "claude.ai sync",
+            "open-sourcing",
+            "going live",
+            "conference talk",
         ):
             self.assertIn(needle, phrases)
         for banned in (
+            "headless",
+            "ip sensitive moment",
             "push",
             "email",
             "show",
             "post",
-            "ci",
-            "privacy",
-            "debug",
             "pass the work",
-            "claude",
         ):
             self.assertNotIn(banned, phrases)
+        claude = RUN.claude_description_phrases(ROOT, RUN.parse_trigger_phrases(
+            (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        ))
+        self.assertIsNotNone(claude)
+        folded = {item.casefold() for item in claude}
+        self.assertIn("open-sourcing", folded)
+        self.assertNotIn("headless hygiene package", folded)
+        self.assertNotIn("sortic-ip-sentinel-free", folded)
+        self.assertNotIn("livestream", folded)
 
     def test_activation_fixture_is_byte_identical(self) -> None:
         digest = hashlib.sha256(FIXTURE.read_bytes()).hexdigest()
@@ -277,8 +322,21 @@ class RunEvalTests(unittest.TestCase):
         )
         for fixture_id in ("act-011", "act-034", "act-035"):
             self.assertNotIn(fixture_id, text)
-        self.assertIn("warning false-positive: act-007 L0 matched:", text)
-        self.assertIn("warning missed-moment: act-036 L2 matched none", text)
+        self.assertIn("block: root tests/evals/activation_v0.1.jsonl", text)
+        self.assertIn("block: claude-description tests/evals/activation_v0.1.jsonl", text)
+        self.assertIn("block: root tests/evals/activation_heldout_v0.1.jsonl", text)
+        self.assertIn("block: claude-description tests/evals/activation_heldout_v0.1.jsonl", text)
+        root_gate = text.split("block: claude-description tests/evals/activation_v0.1.jsonl", 1)[0]
+        self.assertIn("summary: false-positive=0 missed-moment=0 excluded=3", root_gate)
+        self.assertNotIn("act-007", root_gate)
+        self.assertNotIn("act-009", root_gate)
+        self.assertNotIn("act-048", root_gate)
+        self.assertNotIn("warning missed-moment: act-036", root_gate)
+        claude_gate = text.split("block: claude-description tests/evals/activation_v0.1.jsonl", 1)[1]
+        claude_gate = claude_gate.split("block: root tests/evals/activation_heldout_v0.1.jsonl", 1)[0]
+        for fixture_id in ("act-024", "act-025", "act-043"):
+            self.assertIn(f"warning missed-moment: {fixture_id}", claude_gate)
+        self.assertNotIn("act-007", claude_gate)
         self.assertTrue(text.endswith("ok"))
         completed = subprocess.run(
             [sys.executable, str(SCRIPT)],
