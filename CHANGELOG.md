@@ -18,7 +18,7 @@ Content notes and changelog notes go through a pull request. Rebase-merge that p
 
 Prior 1 Nov absorb, after origin **v0.5.80-free** was already on main (a status-watch repeat is not a new CLI; the raw heading has no date; first-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
-Activation eval harness (warn-only CI): deterministic L0-L3 checks over tests/evals/activation_v0.1.jsonl. Edition stays 0.5.81-free.
+Activation eval harness (warn-only CI): deterministic L0-L3 checks over tests/evals/activation_v0.1.jsonl. Edition stays 0.5.81-free. The standing rule 'Do not add a second evals file' covers the human-readable references/evals.md, and tests/evals/ holds machine-readable CI fixtures only and is not synced into the packs.
 
 ### Later read — 2026-11-21 (same edition)
 
