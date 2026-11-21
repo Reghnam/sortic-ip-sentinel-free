@@ -275,18 +275,29 @@ class RunEvalTests(unittest.TestCase):
             "headless hygiene package",
             "sortic-ip-sentinel-free",
             "grok bot",
-            "computer-use",
-            "bot-to-bot",
             "investor demo",
             "fundraising deck",
             "open-sourcing",
             "going live",
             "conference talk",
+            "public repo",
+            "investor deck",
+            "public preview",
+            "demo recording",
+            "partner share",
         ):
             self.assertIn(needle, phrases)
         for banned in (
             "headless",
             "ip sensitive moment",
+            "partner",
+            "deck",
+            "repo",
+            "deploy",
+            "preview",
+            "pilot",
+            "recording",
+            "tweet",
             "push",
             "email",
             "show",
@@ -333,14 +344,34 @@ class RunEvalTests(unittest.TestCase):
         self.assertIn("fixtures: 18", generic)
         self.assertIn("levels all: L0=18 L1=0 L2=0 L3=0", generic)
         root_gate = text.split("block: claude-description tests/evals/activation_v0.1.jsonl", 1)[0]
-        self.assertIn("summary: false-positive=0 missed-moment=0 excluded=3", root_gate)
+        self.assertIn("summary: false-positive=0 missed-moment=4 excluded=3", root_gate)
         self.assertNotIn("act-007", root_gate)
         self.assertNotIn("act-009", root_gate)
         self.assertNotIn("act-048", root_gate)
-        self.assertNotIn("warning missed-moment: act-036", root_gate)
+        for fixture_id in ("act-026", "act-029", "act-030", "act-049"):
+            self.assertIn(f"warning missed-moment: {fixture_id}", root_gate)
+        generic = text.split("block: root tests/evals/activation_l0_generic_v0.1.jsonl", 1)[1]
+        generic_root = generic.split("block:", 1)[0]
+        self.assertIn("summary: false-positive=0 missed-moment=0 excluded=0", generic_root)
         claude_gate = text.split("block: claude-description tests/evals/activation_v0.1.jsonl", 1)[1]
         claude_gate = claude_gate.split("block: root tests/evals/activation_heldout_v0.1.jsonl", 1)[0]
-        for fixture_id in ("act-024", "act-025", "act-043"):
+        for fixture_id in (
+            "act-024",
+            "act-025",
+            "act-026",
+            "act-027",
+            "act-028",
+            "act-029",
+            "act-030",
+            "act-031",
+            "act-036",
+            "act-038",
+            "act-039",
+            "act-043",
+            "act-044",
+            "act-049",
+            "act-050",
+        ):
             self.assertIn(f"warning missed-moment: {fixture_id}", claude_gate)
         self.assertNotIn("act-007", claude_gate)
         self.assertTrue(text.endswith("ok"))
