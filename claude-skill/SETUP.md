@@ -1,10 +1,10 @@
 # Paste-in nudge
 
-Paste the three lines below into one of these places. No menu path.
+Paste the three lines below into one of these places.
 
 - Claude Code, every project: `~/.claude/CLAUDE.md`
 - Claude Code, this repo only: `CLAUDE.md`
-- claude.ai or Claude Desktop: Preferences, or a Project's instructions
+- claude.ai or Claude Desktop: your claude.ai instructions or a Project's instructions
 
 ```
 When I'm about to share, demo, pitch, push public, post, open-source or submit my own unreleased work, check it with the IP Sentinel skill (sortic-ip-sentinel-free) first.
