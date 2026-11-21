@@ -18,11 +18,42 @@ Content notes and changelog notes go through a pull request. Rebase-merge that p
 
 Prior 1 Nov absorb, after origin **v0.5.80-free** was already on main (a status-watch repeat is not a new CLI; the raw heading has no date; first-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI). This tip does not republish those. **No client / product / infra / firm / tester / counsel / counterparty names. No amounts. No plan names. No marks. No issue numbers. No gate tallies. No folder ids. No serials. No hostnames. No share URLs. No file numbers.** Marketplace still Hold. Do not add a second evals file.
 
-### Later read — 2026-11-20 (same edition)
+### Later read — 2026-11-21 (same edition)
 
 A content-only host read. No edition bump. No pin restamp. **No client / product / infra names.**
 
 #### OpenAI (first)
+
+- GitHub releases Latest this read is still **0.171.0** (20 Nov, not a prerelease). A second read of the same badge is not a new CLI. No stable tag dated 21 Nov. The 20 Nov sentence that Latest is **0.171.0** is still the badge.
+- **New:** the first row of the releases list is a prerelease published 21 Nov. That row is not the Latest badge. An alpha published 21 Nov is not the stable CLI. A higher alpha number is not Latest. The 20 Nov sentence that the first row is a prerelease published 20 Nov is that day's read. Do not copy the alpha tag. Do not copy a commit count. Do not copy a model name. Do not copy the release bullets.
+- **New:** the description is the interface. State what it does and when, near the start, within 1024 characters. Do not freeze the body before the trigger evals. A host overlay keeps the portable core clean. Do not add a second skill format. A cut-off digest is not a finished review. Do not complete a cut-off sentence. Do not open a continue-reading link. Do not copy a chat id.
+- Codex implicit invocation stays `allow_implicit_invocation` in `agents/openai.yaml` (this pack stays true). Claude `disable-model-invocation` is a different flag. Do not treat that flag as the Codex switch. This skill still ships **no hooks**.
+
+#### Anthropic (second)
+
+- Raw CHANGELOG.md this read leads with `## 2.1.330` and has no date on that heading. The next headings are `## 2.1.329`, then `## 2.1.328`, then `## 2.1.327`, then `## 2.1.326`, then `## 2.1.325`, then `## 2.1.323`. There is no `## 2.1.324`. The 20 Nov sentence that the raw lead is `## 2.1.329` is that day's read.
+- **New:** GitHub releases Latest is **v2.1.330** (20 Nov, not a prerelease). There is a release dated 20 Nov. No release dated 21 Nov. The 20 Nov sentence that Latest is **v2.1.329**, and that no release is dated 20 Nov, is that day's read. Do not invent a date on the raw heading. Do not invent a 21 Nov heading. Do not copy the bullets. Do not copy a model name.
+- Log the human plan. A model that only carries out that plan is a tool, not a conceiver. A public model session is not a confidential vault. A claim with no human conceiver is a hold, not a filing. A cut-off sentence about concision is not a new rule. Do not complete it.
+- Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 200. Do not claim that 499 is a rewrite. Do not claim the body is under 500.
+
+#### Grok Build (third)
+
+- This curl of the public changelog returned **403**. Do not replace the recorded public line **v1.0.77** (5 Nov). A 403 and that recorded line are one version. Another 403 is not a new binary.
+- **New:** a vendor changelog file above the recorded line returned **200**. Its last-modified date is still 20 Nov. The next number returned **404**. A 21 Nov fetch of a 20 Nov file is not a 21 Nov CLI. A later number is not a later clock. A date inside that file is not the public line. The 20 Nov sentence that the file last-modified date is 20 Nov is that day's read. Do not copy that number.
+- A positional prompt with no flag is still a paste. Do not point it at this pack. Bare `-p` reads stdin. Stdin is a paste. A host overlay is not a second core. The headless feature URL stays **404**.
+- This curl of the status page returned **403**. A 403 is not a timestamp. The 20 Nov sentence that a 20 Nov status timestamp is not a CLI is that day's read. Do not invent a 21 Nov timestamp. A product page is not the public changelog line. Do not copy a model name.
+
+#### Shared
+
+- **Latest this read is still 0.171.0 (20 Nov).** The first row is a 21 Nov prerelease and is not the Latest badge. A higher alpha number is not Latest. No stable tag dated 21 Nov. The 20 Nov sentence that the first row is a 20 Nov prerelease is that day's read.
+- **The raw lead is 2.1.330 and has no date.** GitHub Latest is **v2.1.330** (20 Nov). No release dated 21 Nov. There is still no **2.1.324**.
+- **This curl returned 403.** Do not replace **v1.0.77**. A file last-modified 20 Nov is not the public line. The next number is still **404**.
+- **New:** a green test is still not a merge. A conflict the next morning is still a hold. A merge commit onto a live branch is not this skill's publish path. A closed stall note is not a merge of a conflicted branch. Silence after a green test is not a merge. Do not force. Do not rewrite a live branch from a sweep.
+- Evals stay **281**. HITL F1–F28 + T1–T71 required. This read adds T72 (still 0.171.0 + a 21 Nov alpha that is not Latest + raw lead 2.1.330 + another 403 and a 20 Nov file). No new eval heading.
+- A content-only observation does not bump the edition.
+- Still free-only. Still not legal advice. No secrets.
+
+### OpenAI (first)
 
 - GitHub releases Latest this read is **0.171.0** (20 Nov, not a prerelease). A later non-prerelease tag is the stable CLI. The 19 Nov sentence that Latest is **0.170.0**, and that the first row is that non-prerelease, is that day's read.
 - **New:** the first row of the releases list is a prerelease published 20 Nov. That row is not the Latest badge. An alpha published 20 Nov is not the stable CLI. A higher alpha number is not Latest. A 19 Nov prerelease is not the Latest badge. Do not copy the alpha tag. Do not copy a commit count. Do not copy a model name. Do not copy the release bullets.

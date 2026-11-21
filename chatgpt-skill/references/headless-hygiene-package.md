@@ -14,7 +14,7 @@ This is a **hygiene package**, not a commercial case file. No prices, no counsel
 - **Default on unnamed headless L3:** emit this JSON together with a show/hold map (option 1) in the same turn.
 
 
-**Headless turn end:** a parent that drops subagent tool results when the turn ends has not wiped the exposure. Log it in the contribution log. A dropped tool result is not this package. A headless resume into a worktree is not a fresh sandbox. Commits on main after the Latest tag are not a new CLI. A truncated automation digest is not a headless pass. A status-page timestamp is not the installed line. Do not copy a commit count, a model name, a chat id, or a path.
+**Headless turn end:** a parent that drops subagent tool results when the turn ends has not wiped the exposure. Log it in the contribution log. A dropped tool result is not this package. A headless resume into a worktree is not a fresh sandbox. Commits on main after the Latest tag are not a new CLI. A truncated automation digest is not a headless pass. A cut-off digest is not a finished review. Do not complete it. A status-page timestamp is not the installed line. A status-page 403 is not a timestamp. A host overlay is not a second core. A 21 Nov fetch of a 20 Nov vendor file is not a new CLI. Do not copy a commit count, a model name, a chat id, or a path.
 
 Emit **after** the stamp + snapshot. Repeat the disclaimer inside the JSON. Apply `output-language-hygiene.md` (procedural verbs; no invented deadlines; no invented status; no "verified").
 
