@@ -212,6 +212,32 @@ class ZipScanTests(unittest.TestCase):
         self.assertFalse(failed.ok)
         self.assertTrue(any(line.startswith("corpus-ref:") for line in failed.failures))
 
+    def test_claude_folder_layout_rejects_root_files_and_a_wrong_folder(self) -> None:
+        folder = "sortic-ip-sentinel-free"
+        with self._tmp() as tmp:
+            good = _zip(
+                tmp,
+                {
+                    f"{folder}/SKILL.md": b"ok\n",
+                    f"{folder}/references/note.md": b"plain\n",
+                },
+            )
+            ok = zipscan.scan_zip(good, legacy_paths=set(), skill_folder=folder)
+            self.assertTrue(ok.ok, ok.failures)
+            rooted = Path(tmp) / "root.zip"
+            BUILD.write_deterministic_zip(
+                rooted,
+                {"SKILL.md": b"ok\n", f"{folder}/references/note.md": b"plain\n"},
+            )
+            root_result = zipscan.scan_zip(rooted, legacy_paths=set(), skill_folder=folder)
+            self.assertTrue(any("zip root" in line for line in root_result.failures))
+            wrong = Path(tmp) / "wrong.zip"
+            BUILD.write_deterministic_zip(wrong, {"other-folder/SKILL.md": b"ok\n"})
+            wrong_result = zipscan.scan_zip(wrong, legacy_paths=set(), skill_folder=folder)
+            self.assertTrue(any("top folder" in line for line in wrong_result.failures))
+            self.assertFalse(root_result.ok)
+            self.assertFalse(wrong_result.ok)
+
     def test_layout_and_size_limits(self) -> None:
         with self._tmp() as tmp:
             missing = _zip(tmp, {"README.md": b"no skill\n"})

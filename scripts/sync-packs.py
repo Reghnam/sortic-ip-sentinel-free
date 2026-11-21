@@ -26,6 +26,9 @@ from pathlib import Path
 VER = r"\d+\.\d+\.\d+-free"
 STAMP_EXT = {".md", ".txt", ".json", ".yml", ".yaml"}
 SKIP_NAMES = {"CHANGELOG.md", "LICENSE.md"}
+CLAUDE_PACK = "claude-skill"
+# Files that stay in the Claude pack. Sync deletes a same-named file in any other pack.
+CLAUDE_ONLY_NAMES = frozenset({"SETUP.md"})
 
 
 def _slot(pattern: str) -> re.Pattern[str]:
@@ -227,6 +230,16 @@ def _reference_names(root: Path) -> tuple[str, ...]:
     return tuple(names)
 
 
+def _claude_only_owner(rel: str, packs: tuple[str, ...]) -> str | None:
+    """Pack that holds a Claude-only file, when rel is that file at pack root."""
+    parts = rel.split("/")
+    if len(parts) != 2 or parts[1] not in CLAUDE_ONLY_NAMES:
+        return None
+    if parts[0] not in packs:
+        return None
+    return parts[0]
+
+
 def _is_pack_skill(rel: str, packs: tuple[str, ...]) -> bool:
     return any(rel == f"{pack}/SKILL.md" for pack in packs)
 
@@ -266,6 +279,9 @@ def build_plan(root: Path) -> Plan:
             writes[rel] = data
 
     for rel, text in stamped.items():
+        owner = _claude_only_owner(rel, packs)
+        if owner is not None and owner != CLAUDE_PACK:
+            continue
         if _is_pack_skill(rel, packs) or _is_pack_reference(rel, packs):
             continue
         if _is_knowledge_copy(rel, ref_set):
@@ -305,6 +321,11 @@ def build_plan(root: Path) -> Plan:
             for path in pack_refs.iterdir():
                 if path.is_file() and path.name not in ref_bytes:
                     deletes.append(f"{pack}/references/{path.name}")
+        if pack != CLAUDE_PACK:
+            for name in CLAUDE_ONLY_NAMES:
+                rel = f"{pack}/{name}"
+                if (root / rel).is_file():
+                    deletes.append(rel)
 
     knowledge_count = 0
     knowledge = root / KNOWLEDGE_DIR

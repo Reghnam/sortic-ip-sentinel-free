@@ -299,17 +299,41 @@ def forbidden_name(arcname: str) -> str | None:
     return None
 
 
-def _layout_errors(names: list[str]) -> list[str]:
+def _layout_errors(names: list[str], *, skill_folder: str | None = None) -> list[str]:
     errors: list[str] = []
+    plugins = [n for n in names if n.rsplit("/", 1)[-1].lower() == "plugin.json"]
+    if plugins:
+        errors.append("layout: plugin.json must not be inside a skills zip")
+    if skill_folder:
+        prefix = skill_folder + "/"
+        root_files = [n for n in names if "/" not in n]
+        if root_files:
+            errors.append("layout: claude zip must not put files at the zip root")
+        tops = {n.split("/", 1)[0] for n in names if "/" in n}
+        if tops != {skill_folder}:
+            errors.append(f"layout: claude zip top folder must be {skill_folder}")
+        skills = [n for n in names if n.endswith("/SKILL.md") or n == "SKILL.md"]
+        if skills != [prefix + "SKILL.md"]:
+            errors.append(
+                "layout: claude zip needs exactly one SKILL.md inside the skill folder"
+            )
+        return errors
     skills = [n for n in names if n == "SKILL.md" or n.endswith("/SKILL.md")]
     if skills != ["SKILL.md"]:
         errors.append(
             "layout: zip needs exactly one SKILL.md and it must sit at the zip root"
         )
-    plugins = [n for n in names if n.rsplit("/", 1)[-1].lower() == "plugin.json"]
-    if plugins:
-        errors.append("layout: plugin.json must not be inside a skills zip")
     return errors
+
+
+def _legacy_member(name: str, skill_folder: str | None) -> str:
+    """Map a nested Claude member back to the pack-relative legacy path."""
+    if not skill_folder:
+        return name
+    prefix = skill_folder + "/"
+    if name.startswith(prefix):
+        return name[len(prefix) :]
+    return name
 
 
 def _disallowed_emails(text: str) -> int:
@@ -346,6 +370,7 @@ def scan_zip(
     max_files: int = MAX_FILES,
     max_uncompressed: int = MAX_UNCOMPRESSED,
     extra_patterns: list[re.Pattern[str]] | None = None,
+    skill_folder: str | None = None,
 ) -> ScanResult:
     result = ScanResult()
     legacy = set(legacy_paths) if legacy_paths is not None else legacy_paths_for(pack)
@@ -392,7 +417,7 @@ def scan_zip(
                 f"size: {result.uncompressed} uncompressed bytes "
                 f"(limit {max_uncompressed})"
             )
-        result.failures.extend(_layout_errors(result.names))
+        result.failures.extend(_layout_errors(result.names, skill_folder=skill_folder))
         if result.uncompressed > max_uncompressed:
             return result
         for info in files:
@@ -432,7 +457,7 @@ def scan_zip(
             corpus_hits = CORPUS_RE.findall(text)
             if not corpus_hits:
                 continue
-            if name in legacy:
+            if _legacy_member(name, skill_folder) in legacy:
                 result.warnings.append(f"{len(corpus_hits)} corpus legacy: {name}")
             else:
                 result.failures.append(f"corpus-ref: {name} ({len(corpus_hits)})")

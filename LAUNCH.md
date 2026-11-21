@@ -33,7 +33,7 @@ cp -r sortic-ip-sentinel-free/claude-skill ~/.claude/skills/sortic-ip-sentinel-f
 
 Project-local: `.claude/skills/sortic-ip-sentinel-free/`. `references/` is already inside that folder.
 
-**Claude.ai / Cowork:** zip `claude-skill/` with `SKILL.md` at the zip root. Local `~/.claude/skills/` still does not auto-sync. Enablement / `CLAUDE_CODE_SYNC_SKILLS=1` is a publish.
+**Claude.ai / Cowork:** use the Claude archive from `scripts/build-packs.py`. The skill folder is the top of that archive, and the folder name matches `name`. Do not put `SKILL.md` at the archive root. See the README Claude section. Local `~/.claude/skills/` still does not auto-sync. Enablement / `CLAUDE_CODE_SYNC_SKILLS=1` is a publish.
 
 ## 3. Grok / Grok Build
 
@@ -71,7 +71,7 @@ Root `SKILL.md` + `references/` is the agentskills.io canonical pack (same behav
 
 ## 5. Verification Checklist
 
-- [ ] L3 triggers ("protect the IP", "IP sensitive moment", "Bot will email the deck — protect the IP")
+- [ ] L3 triggers ("protect the IP", "run IP-sensitive moment", "Bot will email the deck — protect the IP")
 - [ ] L0 silence on privacy/config/meta work, US IP corpus ticks, workspace renewal, weekly backup, livestream attend
 - [ ] Headless: stamp → numbered 1–8 → JSON schema `sorticai.hygiene_package.v1` (includes `agent_exposure`, `owner_gated`)
 - [ ] Unnamed headless default-delivers 1+8 same turn

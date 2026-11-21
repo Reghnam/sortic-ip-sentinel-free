@@ -44,7 +44,13 @@ class BuildPackTests(unittest.TestCase):
             zips = sorted(dist.glob("*.zip"))
             self.assertEqual(len(zips), 4)
             edition = _edition()
+            skill = BUILD.read_skill_name(ROOT / "claude-skill")
+            names = {path.name for path in zips}
+            self.assertIn(f"{skill}.zip", names)
             for path in zips:
+                if path.name == f"{skill}.zip":
+                    self.assertNotIn(edition, path.name)
+                    continue
                 self.assertTrue(path.name.startswith("free-ip-sentinel-"))
                 self.assertIn(edition, path.name)
 
@@ -67,10 +73,60 @@ class BuildPackTests(unittest.TestCase):
             self.assertEqual(BUILD.build(ROOT, dist), 0)
             edition = _edition()
             for pack in BUILD._load_sync().read_packs(ROOT):
-                expected = sorted(BUILD.pack_members(ROOT / pack))
-                archive = dist / BUILD.zip_name(pack, edition)
+                members, skill_folder = BUILD.zip_members(pack, ROOT / pack)
+                expected = sorted(members)
+                archive = dist / BUILD.zip_name(pack, edition, skill_folder)
                 with zipfile.ZipFile(archive) as zf:
                     self.assertEqual(zf.namelist(), expected)
+
+    def test_claude_zip_has_no_root_file_and_one_name_folder(self) -> None:
+        skill = BUILD.read_skill_name(ROOT / "claude-skill")
+        prefix = skill + "/"
+        with tempfile.TemporaryDirectory() as raw:
+            dist = Path(raw)
+            self.assertEqual(BUILD.build(ROOT, dist), 0)
+            archive = dist / f"{skill}.zip"
+            with zipfile.ZipFile(archive) as zf:
+                names = zf.namelist()
+            self.assertTrue(names)
+            self.assertEqual([name for name in names if "/" not in name], [])
+            self.assertEqual({name.split("/", 1)[0] for name in names}, {skill})
+            for required in (
+                "SKILL.md",
+                "README.md",
+                "LICENSE.md",
+                "references/evals.md",
+            ):
+                self.assertIn(prefix + required, names)
+            edition = _edition()
+            for pack in BUILD._load_sync().read_packs(ROOT):
+                if pack == "claude-skill":
+                    continue
+                other = dist / BUILD.zip_name(pack, edition)
+                with zipfile.ZipFile(other) as zf:
+                    others = zf.namelist()
+                self.assertIn("SKILL.md", others)
+                self.assertFalse(any(name.startswith(prefix) for name in others))
+
+    def test_claude_frontmatter_keys_stay_inside_the_spec(self) -> None:
+        allowed = {
+            "name",
+            "description",
+            "license",
+            "compatibility",
+            "metadata",
+            "allowed-tools",
+        }
+        text = (ROOT / "claude-skill" / "SKILL.md").read_text(encoding="utf-8")
+        self.assertTrue(text.startswith("---\n"))
+        block = text.split("---\n", 2)[1]
+        keys = [
+            line.split(":", 1)[0]
+            for line in block.splitlines()
+            if line and not line.startswith(" ") and ":" in line
+        ]
+        self.assertTrue(keys)
+        self.assertEqual([key for key in keys if key not in allowed], [])
 
     def test_missing_and_inside_pattern_files_fail_closed(self) -> None:
         missing = BUILD.load_name_patterns(None, "/tmp/ips-missing-patterns-9f3a.txt", ROOT)

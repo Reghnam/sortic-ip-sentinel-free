@@ -170,9 +170,28 @@ class SyncPackTests(unittest.TestCase):
         real_front, real_body = SYNC.split_skill(real)
         self.assertEqual(real_front + real_body, real)
 
+    def test_setup_md_outside_claude_is_removed(self) -> None:
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            _fixture(root)
+            _write(root / "chatgpt-skill" / "SETUP.md", "paste\n")
+            plan = SYNC.build_plan(root)
+            self.assertIn("chatgpt-skill/SETUP.md", plan.deletes)
+            self.assertNotIn("chatgpt-skill/SETUP.md", plan.writes)
+            SYNC.apply_plan(root, plan)
+            self.assertFalse((root / "chatgpt-skill" / "SETUP.md").exists())
+            self.assertEqual(SYNC.main(["--check", "--root", str(root)]), 0)
+
     def test_real_tree_check_is_clean(self) -> None:
         plan = SYNC.build_plan(ROOT)
         self.assertEqual(plan.diffs(), [])
+        self.assertTrue((ROOT / "claude-skill" / "SETUP.md").is_file())
+        for pack in plan.packs:
+            if pack == "claude-skill":
+                continue
+            self.assertFalse((ROOT / pack / "SETUP.md").exists())
         self.assertEqual(plan.version, SYNC.read_version(ROOT))
         self.assertEqual(len(plan.packs), len(SYNC.read_packs(ROOT)))
         self.assertEqual(plan.knowledge_count, _knowledge_copies(ROOT))
