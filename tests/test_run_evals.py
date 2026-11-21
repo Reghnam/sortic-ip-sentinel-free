@@ -356,6 +356,7 @@ class RunEvalTests(unittest.TestCase):
         claude_gate = text.split("block: claude-description tests/evals/activation_v0.1.jsonl", 1)[1]
         claude_gate = claude_gate.split("block: root tests/evals/activation_heldout_v0.1.jsonl", 1)[0]
         for fixture_id in (
+            "act-023",
             "act-024",
             "act-025",
             "act-026",
