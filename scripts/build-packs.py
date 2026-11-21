@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Build one deterministic zip per host pack and scan it.
 
-Zips land in dist/ (gitignored). SKILL.md is at the zip root.
+Zips land in dist/ (gitignored). Other hosts keep SKILL.md at the zip
+root. The Claude zip is named from the skill `name` and puts that
+folder at the top, with the pack files inside it.
 Member names are sorted and timestamps are fixed, so a second build
 of the same tree is byte-identical on the same zlib. Byte identity
 depends on the zlib version that deflates the members.
@@ -25,6 +27,8 @@ if str(_SCRIPTS) not in sys.path:
 import zipscan
 
 FIXED_TIME = (1980, 1, 1, 0, 0, 0)
+CLAUDE_PACK = "claude-skill"
+_SKILL_NAME = re.compile(r"(?m)^name:\s*(\S+)\s*$")
 
 
 def _load_sync():
@@ -68,7 +72,32 @@ def write_deterministic_zip(dest: Path, members: dict[str, bytes]) -> None:
             zf.writestr(info, members[name], compresslevel=9)
 
 
-def zip_name(pack: str, version: str) -> str:
+def read_skill_name(pack_dir: Path) -> str:
+    text = (pack_dir / "SKILL.md").read_text(encoding="utf-8")
+    match = _SKILL_NAME.search(text)
+    if not match:
+        raise SystemExit(f"{pack_dir} SKILL.md is missing name")
+    name = match.group(1)
+    if name in {".", ".."} or "/" in name or "\\" in name:
+        raise SystemExit(f"{pack_dir} skill name is not a single folder")
+    return name
+
+
+def zip_members(pack: str, pack_dir: Path) -> tuple[dict[str, bytes], str | None]:
+    """Return zip member bytes and, for Claude, the skill-folder name."""
+    members = pack_members(pack_dir)
+    if pack != CLAUDE_PACK:
+        return members, None
+    skill = read_skill_name(pack_dir)
+    nested = {f"{skill}/{rel}": data for rel, data in members.items()}
+    return nested, skill
+
+
+def zip_name(pack: str, version: str, skill_name: str | None = None) -> str:
+    if pack == CLAUDE_PACK:
+        if not skill_name:
+            raise SystemExit("claude zip name needs the skill name")
+        return f"{skill_name}.zip"
     short = pack[: -len("-skill")] if pack.endswith("-skill") else pack
     return f"free-ip-sentinel-{short}-v{version}.zip"
 
@@ -130,8 +159,8 @@ def build(
     packs = sync.read_packs(root)
     failed = False
     for pack in packs:
-        members = pack_members(root / pack)
-        dest = dist / zip_name(pack, version)
+        members, skill_folder = zip_members(pack, root / pack)
+        dest = dist / zip_name(pack, version, skill_folder)
         write_deterministic_zip(dest, members)
         again = dest.with_suffix(dest.suffix + ".again")
         write_deterministic_zip(again, members)
@@ -139,7 +168,12 @@ def build(
             print(f"FAIL {pack}: zip is not deterministic")
             failed = True
         again.unlink()
-        result = zipscan.scan_zip(dest, pack=pack, extra_patterns=extra_patterns)
+        result = zipscan.scan_zip(
+            dest,
+            pack=pack,
+            extra_patterns=extra_patterns,
+            skill_folder=skill_folder,
+        )
         disk_names = sorted(members)
         print(f"{pack}: {dest.name}")
         print(f"  files {result.file_count} uncompressed {result.uncompressed}")

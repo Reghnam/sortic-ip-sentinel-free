@@ -11,104 +11,17 @@
 3. Ask a trigger question from [Usage triggers (examples)](#usage-triggers-examples), for example "protect the IP".
 
 Free portable IP-sensitive moment detector + hygiene sentinel (**v0.5.81-free**).
-- GitHub Latest this read is still **0.169.0** (13 Nov, not a prerelease); the first releases-list row is a 14 Nov prerelease and is not the Latest badge; an alpha published 14 Nov is not the stable CLI; the raw lead is **2.1.325** and has no date; there is no **2.1.324**; Latest is **v2.1.325** (13 Nov); no release dated 14 Nov; this curl returned 403; do not replace **v1.0.77**; a changelog file last-modified 13 Nov is not the public line; a PARTIAL backup is not a publish (same edition v0.5.81-free, read 14 Nov)
-- GitHub Latest on the 11 Nov read was **0.167.1** (10 Nov, not a prerelease); an alpha published 11 Nov is not an 11 Nov stable CLI; the raw lead is still 2.1.322 and has no date; a second read is not a new binary; this curl returned 403; do not replace v1.0.77; a third-party later number is not the public line; a corpus note is not this skill; a template note is not a rewrite (same edition v0.5.81-free, read 11 Nov 2026)
-- An alpha published after the Latest date is not a 10 Nov stable CLI; the raw lead is 2.1.322 and has no date; a changelog file above the page lead is not the public line; a corpus note is not this skill (same edition v0.5.81-free, read 10 Nov 2026)
-- An alpha above the Latest badge is not the stable CLI; a third-party index is not the releases list; a later read of the same raw heading is not a new binary; a contradictory page line is not a second CLI; a token-refresh timeout is not a transcript (same edition v0.5.81-free, read 9 Nov 2026)
-- Commits after the Latest tag are not a new CLI; a truncated digest is not a new practice; a status-page timestamp is not the CLI (v0.5.81-free)
-- First-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI (v0.5.80-free)
-- The raw heading has no date; a refused write is not a waiver; a silent exit 0 is not a pass (v0.5.79-free)
-- A later non-prerelease tag is the stable CLI; a missing number between headings is not a wipe; a 403 and the same public line are one version (v0.5.78-free)
-- The top row is not the Latest badge; a done backup is not a publish; an enterprise pointer that matches an alpha is not a promotion (v0.5.77-free)
-- A non-prerelease tag is the stable CLI; an alpha after it is not the next line; an external note is not a seal (edition 0.5.76-free)
-- A same-name twin is not a merge; a shortened description is not a wipe; a page that answers is not a new release (v0.5.75-free)
-- An implicit-off flag is not a vault; a six-section label is not a rewrite; a listing cap is not a wipe (v0.5.73-free)
-- An empty alpha is not a feature list; a cleanup of a recent file is not a wipe; a missing next note is not a wipe (v0.5.72-free).
-- A preset is not a vault; a monitor while telemetry is off is not a seal; a skip of an outside-link skill is not a wipe (v0.5.71-free)
-- A steer is not a new review; a safety log is not a seal; a headless wait is not a seal (v0.5.70-free)
-Detects “protect the IP”, investor demos, pilot showcases, fundraising decks, **and headless/Grok Bot/computer-use/HiTL/livestream exposure**… and delivers only free procedural hygiene:
+Host-read notes: [docs/host-reads.md](docs/host-reads.md).
 
-- Show / hold maps
-- Staged disclosure ladders
-- Investor & partner demo hygiene playbook
-- AI / human contribution logs. The contribution log keeps human work and AI work apart. Sources are referenced at a high level.
-- Agent / computer-use exposure logs (what the Bot showed, emailed, pushed, posted, livestreamed)
-- Approval gate (recipient AND action named this turn; leftover drafts unsent)
-- Owner-gated even at IP L3 (send / publish / pay / identity / live-copy)
-- Backup ≠ publish; project export is owner-desk
-- Evidence-or-blocked (done requires path+link)
-- Ask / stop / decline (incomplete → ask; leftover/truncated/backup-tree → stop; login/unnamed public push/partner send/pay/identity → decline)
-- Shared Bot computer is not a secrecy boundary; local-computer execution is not a vault; subagents do not inherit this skill
-- Bot egress IP is not sticky — registrar new-device alerts → decline login
-- Provisional readiness checklists
-- Provenance & holdback audits
-- Screenshot-first of client correspondence into Extra High is a next-paste (Extra High ≠ vault)
-- SDK `skills=all` is a hop; mailed HITL v0.5.25 zip is stale; marketplace still Hold
-- Standalone skills = ChatGPT desktop + Codex CLI/IDE; Chat/Work web+mobile need a plugin (Hold)
-- Office add-in (Word/Excel/PowerPoint) is a next-paste; custom GPT → plugin migrate is dual-surface Hold
-- Record & Replay / Teach-a-task (≤10 min, window content, no mic) is demonstration-to-skill; package-as-plugin is dual-surface; Scan Tools rescan-after-change is another method paste
-- Astra IF: user beats skill guidelines; explicit skill requirements still bind; stacked slash-skills are a disclosure multiplier; AGENTS.md fallback is a hop; Grok user-level `~/.agents/skills/` is discovered
-- Disallow AI Training is not a vault; crawler Search/Training/Agent toggles stay L0
-- Callable / headless chain is a disclosure ladder (show/hold at every hop)
-- Voice/phone provision: consult ≠ provision (owner-gated decline)
-- `--yolo` / `--always-approve` is not owner approval; disabled jobs stay disabled
-- Fit-note / adjacent-demand analysis is not a send
-- Placeholders and MCP-size-blocked files are not originals
-- Headless hygiene package JSON (`sorticai.hygiene_package.v1`)
-- Builder-worksheet language register (procedural, not advisory)
-- Reviewer hop is a disclosure hop; mailbox connector is MCP (this skill has none)
-- Public Grok share / `x.ai/bot/…` is cloneable config; access grant is owner-gated
-- Legal drafts ≠ send; voice screen-share sees the browser; voice clone is identity
-- Plugin-bundled hooks untrusted until reviewed; pin `latest` is a live production channel
-- GPT-6 Astra computer+browser use is a live demo channel (model pick stays L0); connectors are not a vault
-- Console screenshots in a partner mail are a demo; CI auto-apply is a production change
-- One focused skill — do not merge with correspondence/persona skills
-- Sites deploy URL is production (save-without-deploy to review; env/secrets are holdbacks)
-- User instructions this turn beat skill guidelines; named recipient AND action is the override
-- Async board packet without the room is a demo; project-repo skill commit is a publish
-- Workflow fan-out is a disclosure multiplier; project `.grok/hooks/` needs `/hooks-trust`
-- Remote Mac / phone-driven desktop is computer-use; Messages/Mail typing is a send
-- Live `isEnabled` is evidence — do not invent disabled from a prior brief
-- Workspace-shared plugin / Copilot `.github/skills/` is a publish
-- Responses API Skills are versioned bundles — pin an integer version, not `latest`
-- Three zip layouts (Skills tab = `SKILL.md` at zip root; Agent Plugins = `plugin.json` + `skills/<name>/SKILL.md`; Claude archive = `.claude-plugin/plugin.json` + `skills/<name>/SKILL.md`)
-- Counsel-release is a send; "waiting for legal review" is an internal hold
-- Public Bot livestream of internals is a demo; attending is L0
-- Demonstration-to-skill is a publish (Teach-by-demonstration records the screen)
-- De-identified / ZDR-claimed training is still a disclosure (opt-out is not a rewind)
-- `default_version` / omit-version / `latest` are live pointers — pin an integer
-- Shared Bot computer is account-wide (files, browser sessions, app logins)
-- Marketplace job-taking skill is access grant + send + computer-use
-- claude.ai enablement syncs skills to Cowork/cloud (`CLAUDE_CODE_SYNC_SKILLS=1` → `~/.claude/skills/synced/`); local `~/.claude/skills/` still does not auto-sync
-- API no-train ≠ ChatGPT no-train; Skills/Agents/Files/Conversations/chatkit/batches/videos/fine-tuning are ZDR-ineligible
-- Anthropic Skills are not covered by ZDR (definitions and execution retained)
-- Bot screens ≠ security boundary; Bot-to-Bot DM is a hop; delete Bot ≠ wipe computer
-- Protected-lane check is hygiene, not a product; `capability_directories` max 32
-- Astra define-completion: do not stop after the L3 stamp; do not pad extra refuse language
-- App Builder live preview is a demo; Vercel deploy is a publish
-- Grok discovers `~/.agents/skills/` and Claude Code plugins with zero config
-- Desktop-egress is a CDN, not a vault (update Grok Bot's Computer FIRST, then route; laptop closed stops routing)
-- Ownership-pass is access grant + hop (Bots on one account hand off tasks; decline unnamed)
-- `/v1/videos` is 48h+30d and blocked for MAM/ZDR; Eyes Off still retain; conversations+items and threads+messages/runs/steps are granular-ineligible
-- No Legacy Privacy Mode (Grok Bot requires cloud storage; training opt-out follows the Cursor account)
-- Do not add `allowed-tools` write grants; Claude YAML stays name+description only
-- Cloud computer ≠ desktop-egress ≠ local-computer execution (Ask every time default; Never allowed unless named)
-- CSAM scan of image/file inputs overrides ZDR/MAM/Eyes Off; gpt-image-2.5-sunburst/flare is ZDR-yes / Eyes Off no
-- A None-retention project to call `/v1/videos` is not a protected lane
-- `allowed-tools` grant is one-turn then clears — grant-clear is not a vault
-- Auto Review rules are desktop-local; Update Agent Computer preserves durable state; Reset drops unsynced work
-- Galaxy / role livestream calendar add and Claude magic-link stay L0 attend
-- `disallowed-tools` restriction-clear is one-turn, not a vault (do not add the field)
-- Skill security scanning is not a vault (misses API / already-uploaded / ZDR/CMEK/HIPAA)
-- Grok Bot computers run in the United States today — not on-prem, not BYO image
-- Sign-out ≠ wipe of claude.ai-synced skills (cleanupPeriodDays, then trash)
-- Dist-path: extra YAML keys error on claude.ai / Skills API; `claude-skill/` stays name+description only
-- Invention screenshots/diagrams are still CSAM-scanned
-- A private reference corpus stays offline; it is never bundled and never on the Bot disk (retrieve-only stub; ticks stay L0)
-- Lunch HITL sheet: [HITL-LUNCH.md](HITL-LUNCH.md)
-- De-ID / no company name ≠ method safe; the approach is the IP; anecdote ≠ audited proof of training; ZDR is contractual best-efforts (cannot prove or prevent training)
-- Track 3 realtime warning: invention + false comfort is L2 once/session (no stamp); protect/dump-after-tip is L3 (hold exact recipe + lane map); settings-only / clip-only / industry chatter stay L0
-- Scan before ship: third-party marketplace skills are untrusted — inspect before attach; do not bundle them into the lunch zip
+## Claude
+
+Upload, copy, or API. `python3 scripts/build-packs.py` writes the Claude archive as `dist/sortic-ip-sentinel-free.zip`. The only top folder in that zip is `sortic-ip-sentinel-free/`, the same as `name`, and `SKILL.md`, `references/`, `README.md`, and `LICENSE.md` sit inside it. Paste-in nudge and the install check: [claude-skill/SETUP.md](claude-skill/SETUP.md).
+
+**claude.ai and Claude Desktop.** Upload that zip as a custom skill. Code execution must be enabled. Source: [How to create custom skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills).
+
+**Claude Code.** Copy the pack to `~/.claude/skills/sortic-ip-sentinel-free/` or a project's `.claude/skills/sortic-ip-sentinel-free/`. Check with `/sortic-ip-sentinel-free` and ask `What skills are available?`. Source: [Extend Claude with skills](https://code.claude.com/docs/en/skills).
+
+**API.** Follow Anthropic's Skills guide. This page does not add steps. Source: [Using Agent Skills with the API](https://docs.claude.com/en/build-with-claude/skills-guide).
 
 **Not legal advice. No guarantees. Free only.** Outputs are builder worksheets — do not send them to third parties as legal analysis. A skill is an instruction package. This free skill stays instructions-only: no scripts in the skill, no paid paths, no secrets. Progressive disclosure: load `references/` on demand.
 
@@ -126,7 +39,7 @@ ChatGPT Skills needs a ChatGPT Business, Enterprise or Edu plan.
 |------|---------------------|---------|
 | **OpenAI Codex** | [`chatgpt-skill/`](chatgpt-skill/) | `cp -r chatgpt-skill ~/.agents/skills/sortic-ip-sentinel-free` (also works at `~/.codex/skills/` or project `.agents/skills/`) |
 | **ChatGPT Skills** | [`chatgpt-skill/`](chatgpt-skill/) | Zip that folder → Skills tab (Business / Enterprise / Edu). Invoke with `@`. |
-| **Anthropic Claude Code** | [`claude-skill/`](claude-skill/) | `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free` (`references/` is bundled) |
+| **Anthropic Claude** | [`claude-skill/`](claude-skill/) | Claude Code: `cp -r claude-skill ~/.claude/skills/sortic-ip-sentinel-free` (`references/` is bundled). claude.ai, Desktop, and the API: [Claude](#claude). |
 | **Grok / Grok Build** | [`grok-skill/`](grok-skill/) | `cp -r grok-skill ~/.grok/skills/sortic-ip-sentinel-free` or project `.grok/skills/` |
 | **Grok Bot** | [`grok-skill/`](grok-skill/) zip | Save / Plugins → **enable per-Bot**. Not `cp` to `~/.grok/skills/` (that is Build). Do not Teach-to-install. |
 | **Cursor** | [`cursor-skill/`](cursor-skill/) | Cloud Agents: `cp -r cursor-skill .cursor/skills/sortic-ip-sentinel-free/`. Sync Skills = `~/.cursor/skills/` only. Custom Modes = pin skill. |
@@ -141,7 +54,7 @@ Custom GPT fallback: [`openai-gpt-package/`](openai-gpt-package/).
 
 ## Usage triggers (examples)
 
-- L3: "protect the IP", "IP sensitive moment", "trade secret before investor demo", "how to protect this before we file", "NDA before sharing the protocol", "the Grok Bot will email the deck — protect the IP", "callable agent into the partner network — protect the IP".
+- L3: "protect the IP", "run IP-sensitive moment", "trade secret before investor demo", "how to protect this before we file", "NDA before sharing the protocol", "the Grok Bot will email the deck — protect the IP", "callable agent into the partner network — protect the IP".
 - L2 exposure: "investor demo in 10 days", "publish the Bot and post a clip", or "board/partner weekly" → soft tip only.
 - L0: privacy, telemetry, debug, config, meta on this skill, slogan "Helps with AI topics", US IP corpus ticks, and a headless, Bot-to-Bot, or computer-use mention that does not show, email, push, post, or pass the work → silent. Older zips shared outside this repository are stale; use the packs built from this repository.
 
@@ -153,7 +66,7 @@ Headless one-shot (Codex / Claude / grok `-p` / Grok Bot): add "Output numbered 
 
 | Rule | OpenAI | Anthropic | Grok Build / Bot |
 |------|--------|-----------|------------------|
-| Frontmatter | `name` + `description` (+ optional `license`/`metadata`); extra keys in `agents/openai.yaml` | **Only** `name` + `description`; name kebab-case ≤64; description ≤1024 | Rich keys ok (`when-to-use`, `argument-hint`, metadata) |
+| Frontmatter | `name` + `description` (+ optional `license`/`metadata`); extra keys in `agents/openai.yaml` | **Only** `name` + `description`; name kebab-case ≤64 | Rich keys ok (`when-to-use`, `argument-hint`, metadata) |
 | Description | Front-load triggers (list may be truncated to 8k / 2% context) | What + when + do-not-use; slogan-miss stays L0 | Same description |
 | Invocation | ChatGPT `@` · Codex `$` / `/skills` · implicit | implicit + `/skill` | implicit + `.grok/skills` + slash `argument-hint` |
 | Headless | Numbered 1–8; unnamed → default 1+8 JSON; leftover drafts held | Same + gotchas | Numbered 1–8 **default**; Bot = headless; approval + evidence-or-blocked |

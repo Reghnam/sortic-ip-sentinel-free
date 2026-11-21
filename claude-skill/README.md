@@ -1,10 +1,16 @@
-# SorticAI Free IP Sentinel — Claude Code (v0.5.81-free)
+# SorticAI Free IP Sentinel — Claude (v0.5.81-free)
 
-Anthropic-strict package. SKILL.md YAML is **only** `name` + `description` (required). Name is kebab-case, ≤64 chars. Description stays ≤1024 and includes what + when + do-not-use. Headless, Bot-to-Bot, and computer-use count only when they will show, email, push, post, or pass the work. Generic privacy, telemetry, and debug stay out. No XML.
+Anthropic-strict package. SKILL.md YAML is **only** `name` + `description` (required). Name is kebab-case, ≤64 chars. Description says what the skill does and when to use it. Headless, Bot-to-Bot, and computer-use count only when they will show, email, push, post, or pass the work. Generic privacy, telemetry, and debug stay out. No XML.
 
 `references/` is **bundled**. One copy is a complete skill. Evals: `references/evals.md` (281; ≥3 required). Dist-path extra keys error on claude.ai/API. Skill-scan is not a vault. Sign-out ≠ wipe synced skills. Degrees of freedom: low on send/publish/pay/login/access-grant/hooks/CI-apply. Pin `latest` is a live production channel. `allowed-tools` / `disallowed-tools` are one-turn then clear — this skill adds neither. Custom claude.ai Skills are per-user and do not auto-sync; settings enablement may sync to Cowork — neither is a vault. **Skills are not covered by ZDR** (definitions and execution retained). Authors ≠ own reviewers. No scripts. One focused skill. A skill is an instruction package. This free skill stays instructions-only.
 
-## Install
+Paste-in nudge and the install check: [SETUP.md](SETUP.md).
+
+## Claude
+
+**claude.ai and Claude Desktop.** Upload `sortic-ip-sentinel-free.zip` from `python3 scripts/build-packs.py` as a custom skill. The zip's only top folder is `sortic-ip-sentinel-free/`, matching `name`. Code execution must be enabled. Source: [How to create custom skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills).
+
+**Claude Code.** Copy this folder to `~/.claude/skills/sortic-ip-sentinel-free/` or a project's `.claude/skills/sortic-ip-sentinel-free/`. Check with `/sortic-ip-sentinel-free` and ask `What skills are available?`. Source: [Extend Claude with skills](https://code.claude.com/docs/en/skills).
 
 ```bash
 git clone https://github.com/Reghnam/sortic-ip-sentinel-free.git
@@ -12,6 +18,8 @@ cp -r sortic-ip-sentinel-free/claude-skill ~/.claude/skills/sortic-ip-sentinel-f
 ```
 
 Project-local: `.claude/skills/sortic-ip-sentinel-free/`.
+
+**API.** Follow Anthropic's Skills guide. This page does not add steps. Source: [Using Agent Skills with the API](https://docs.claude.com/en/build-with-claude/skills-guide).
 
 ## Authoring rules this package follows
 - Progressive disclosure; references one level deep from SKILL.md.
