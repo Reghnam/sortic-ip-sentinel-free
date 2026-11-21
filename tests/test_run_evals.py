@@ -326,6 +326,12 @@ class RunEvalTests(unittest.TestCase):
         self.assertIn("block: claude-description tests/evals/activation_v0.1.jsonl", text)
         self.assertIn("block: root tests/evals/activation_heldout_v0.1.jsonl", text)
         self.assertIn("block: claude-description tests/evals/activation_heldout_v0.1.jsonl", text)
+        self.assertIn("block: root tests/evals/activation_l0_generic_v0.1.jsonl", text)
+        self.assertIn("block: claude-description tests/evals/activation_l0_generic_v0.1.jsonl", text)
+        generic = text.split("block: root tests/evals/activation_l0_generic_v0.1.jsonl", 1)[1]
+        generic = generic.split("block:", 1)[0]
+        self.assertIn("fixtures: 18", generic)
+        self.assertIn("levels all: L0=18 L1=0 L2=0 L3=0", generic)
         root_gate = text.split("block: claude-description tests/evals/activation_v0.1.jsonl", 1)[0]
         self.assertIn("summary: false-positive=0 missed-moment=0 excluded=3", root_gate)
         self.assertNotIn("act-007", root_gate)
