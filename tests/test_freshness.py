@@ -44,7 +44,9 @@ def _run(args: list[str]) -> subprocess.CompletedProcess[str]:
 
 class FreshnessTests(unittest.TestCase):
     def test_null_fails_freshness(self) -> None:
-        problems = claim_rules.freshness_problems(baseline(), TODAY)
+        data = baseline()
+        data["last_verified"] = None
+        problems = claim_rules.freshness_problems(data, TODAY)
         self.assertTrue(any("not set" in problem for problem in problems))
 
     def test_age_limits(self) -> None:
@@ -103,6 +105,7 @@ class FreshnessTests(unittest.TestCase):
 
         missing = baseline()
         missing["last_verified"] = None
+        missing["last_verified_note"] = "UNVERIFIED: fixture date is null"
         path.write_text(json.dumps(missing), encoding="utf-8")
         null = _run(["--freshness", "--window", str(path), "--today", "2026-10-04"])
         self.assertEqual(null.returncode, 1)
@@ -116,11 +119,13 @@ class FreshnessTests(unittest.TestCase):
         self.assertEqual(bad.returncode, 1)
         self.assertNotIn("Traceback", bad.stdout + bad.stderr)
 
-    def test_real_tree_freshness_exits_1(self) -> None:
-        completed = _run(["--freshness"])
-        self.assertEqual(completed.returncode, 1, completed.stdout + completed.stderr)
-        self.assertIn("freshness FAIL: references/sme-fund-window.json", completed.stdout)
-        self.assertIn("not set: a human must read both live pages and set it", completed.stdout)
+    def test_real_tree_freshness_matches_the_stored_date(self) -> None:
+        self.assertEqual(baseline()["last_verified"], "2026-10-27")
+        completed = _run(["--freshness", "--today", "2026-10-27"])
+        self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+        self.assertIn("freshness OK: references/sme-fund-window.json", completed.stdout)
+        self.assertIn("last_verified 2026-10-27 is 0 days old (limit 14)", completed.stdout)
+        self.assertNotIn("not set:", completed.stdout)
         self.assertIn("name patterns: skipped (no external file)", completed.stdout)
         self.assertNotIn("Traceback", completed.stdout + completed.stderr)
         self.assertNotIn("hygiene check OK:", completed.stdout)

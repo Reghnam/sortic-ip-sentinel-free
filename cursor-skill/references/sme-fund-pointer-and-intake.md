@@ -4,7 +4,7 @@ This file holds pointer rules (L2) and the readiness intake sheet (L3). It prepa
 
 ## Pointer
 
-Write one status sentence from `sme-fund-window.json`, then these two links, then the dated footer in that file. EUIPO page: https://www.euipo.europa.eu/en/sme-corner/sme-fund/2026. National office page: https://www.upv.gov.cz/sluzby/cosme-fund. If `last_verified` is null or older than `stale_after_days`, say the status may be out of date and tell the user to open the live page first. Never print a confident "closed". Only a provider listed by the national office can deliver the official IP Scan. This sheet is not that report. The skill does not apply, submit, pay, or file; decline those. No refund line. No percent. No amount. No names. Every EUIPO date and the call text GR/001/26 are UNVERIFIED.
+Write one status sentence from `sme-fund-window.json`, then these two links, then the dated footer in that file. EUIPO page: https://www.euipo.europa.eu/en/sme-corner/sme-fund/2026. National office page: https://www.upv.gov.cz/sluzby/cosme-fund. If `last_verified` is null or older than `stale_after_days`, say the status may be out of date and tell the user to open the live page first. Never print a confident "closed". Only a provider listed by the national office can deliver the official IP Scan. This sheet is not that report. The skill does not apply, submit, pay, or file; decline those. No refund line. No percent. No amount. No names. State an EUIPO date only when the window note already has it. The call text GR/001/26 stays UNVERIFIED.
 
 ## Firing
 
