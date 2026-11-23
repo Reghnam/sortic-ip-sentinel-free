@@ -103,9 +103,11 @@ _SUFFIXED_EDITION = re.compile(r"(?<![0-9.])(\d+\.\d+\.\d+-free[A-Za-z0-9+-]+)")
 _META_VERSION = re.compile(r'(?m)^  version:\s*"([^"]*)"')
 _CHANGELOG_TIP = re.compile(r"(?m)^## \[([^\]]+)\]")
 _EDITION_HEADING = re.compile(r"^## \[[^\]]+\]")
-_LATER_READ_HEADING = re.compile(r"^### Later read\b")
+# A day block is any level-3 heading. Wording does not matter: "Later read"
+# and "OpenAI (first)" are the same kind of block. A level-4 heading is inside
+# the block, not a new one.
+_DAY_BLOCK_HEADING = re.compile(r"^### [^#]")
 _PRIOR_READ_HEADING = re.compile(r"^### Prior read\b")
-_READ_BLOCK_END = re.compile(r"^### [^#]|^## [^#]")
 # Exact phrases only. Bare backup, export, mail, and Drive stay allowed.
 CHANGELOG_OPS_PHRASES = (
     "NOTIFY_BLOCKED",
@@ -412,13 +414,14 @@ def current_edition_lines(text: str) -> list[str] | None:
     return lines[start:end]
 
 
-def _later_read_spans(lines: list[str]) -> list[tuple[int, int]]:
-    starts = [index for index, line in enumerate(lines) if _LATER_READ_HEADING.match(line)]
+def _day_block_spans(lines: list[str]) -> list[tuple[int, int]]:
+    """Spans of same-edition day blocks. Heading text is not consulted."""
+    starts = [index for index, line in enumerate(lines) if _DAY_BLOCK_HEADING.match(line)]
     spans: list[tuple[int, int]] = []
     for start in starts:
         end = len(lines)
         for index in range(start + 1, len(lines)):
-            if _READ_BLOCK_END.match(lines[index]):
+            if _EDITION_HEADING.match(lines[index]) or _DAY_BLOCK_HEADING.match(lines[index]):
                 end = index
                 break
         spans.append((start, end))
@@ -426,20 +429,21 @@ def _later_read_spans(lines: list[str]) -> list[tuple[int, int]]:
 
 
 def changelog_read_findings(text: str) -> list[str]:
-    """Warn-only checks for the current-edition host-read block.
+    """Warn-only checks for same-edition day blocks in the current tip.
 
-    At most one ``### Later read`` heading, no ``### Prior read`` heading,
-    that block stays within ``CHANGELOG_READ_LINE_CAP`` lines, and the
-    current edition does not contain an operator phrase.
+    A day block is any level-3 heading, whatever it says. At most one such
+    block, no ``### Prior read`` heading, that block stays within
+    ``CHANGELOG_READ_LINE_CAP`` lines, and the current edition does not
+    contain an operator phrase.
     """
     lines = current_edition_lines(text)
     if lines is None:
         return ["current edition heading is missing"]
     section = "\n".join(lines)
     findings: list[str] = []
-    spans = _later_read_spans(lines)
+    spans = _day_block_spans(lines)
     if len(spans) > 1:
-        findings.append(f"current edition has {len(spans)} Later read headings")
+        findings.append(f"current edition has {len(spans)} day blocks")
     prior = sum(1 for line in lines if _PRIOR_READ_HEADING.match(line))
     if prior:
         findings.append(f"current edition has {prior} Prior read headings")
@@ -447,7 +451,7 @@ def changelog_read_findings(text: str) -> list[str]:
         length = end - start
         if length > CHANGELOG_READ_LINE_CAP:
             findings.append(
-                f"Later read block {number} is {length} lines (cap {CHANGELOG_READ_LINE_CAP})"
+                f"day block {number} is {length} lines (cap {CHANGELOG_READ_LINE_CAP})"
             )
     for phrase in CHANGELOG_OPS_PHRASES:
         if phrase in section:

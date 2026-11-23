@@ -57,7 +57,7 @@ def _bad_tip() -> str:
 class ChangelogReadRuleTest(unittest.TestCase):
     def test_strict_mode_fails_on_second_heading_and_ops_phrase(self) -> None:
         findings = HYGIENE.changelog_read_findings(_bad_tip())
-        self.assertTrue(any("2 Later read headings" in item for item in findings))
+        self.assertTrue(any("3 day blocks" in item for item in findings))
         self.assertTrue(any("Prior read headings" in item for item in findings))
         self.assertTrue(any("NOTIFY_BLOCKED" in item for item in findings))
         self.assertTrue(any("returned no messages" in item for item in findings))
@@ -86,6 +86,42 @@ class ChangelogReadRuleTest(unittest.TestCase):
             )
         )
         self.assertEqual(HYGIENE.changelog_read_findings(text), [])
+
+    def test_day_blocks_ignore_heading_wording(self) -> None:
+        stacked = "\n".join(
+            (
+                "## [9.9.9-free] — 2026-01-01",
+                "",
+                "### OpenAI (first)",
+                "",
+                "- one day",
+                "",
+                "### OpenAI (first)",
+                "",
+                "- another day",
+                "",
+                "## [9.9.8-free] — 2025-12-01",
+                "",
+            )
+        )
+        findings = HYGIENE.changelog_read_findings(stacked)
+        self.assertTrue(any("2 day blocks" in item for item in findings))
+        self.assertFalse(any("Later read" in item for item in findings))
+        single = "\n".join(
+            (
+                "## [9.9.9-free] — 2026-01-01",
+                "",
+                "Substantive notes stay outside the day block.",
+                "",
+                "### Host read — 2026-01-02",
+                "",
+                "- one kept read",
+                "",
+                "## [9.9.8-free] — 2025-12-01",
+                "",
+            )
+        )
+        self.assertEqual(HYGIENE.changelog_read_findings(single), [])
 
     def test_line_cap_is_about_forty(self) -> None:
         cap = HYGIENE.CHANGELOG_READ_LINE_CAP
