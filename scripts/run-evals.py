@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic L0–L3 activation eval harness. Keyword hits are warnings.
+"""Deterministic L0–L3 activation eval harness. Keyword hits are gated.
 
 Reads tests/evals/*.jsonl, including activation_l0_generic_v0.1.jsonl.
 That generic L0 file is scored for root phrases and for the Claude
@@ -14,10 +14,20 @@ Description prose is not parsed. The Claude pack has no when-to-use field, so
 a second block scores that pack's description alone: only trigger phrases that
 actually occur in the description count.
 
-Exit 0 when the schema is valid and every level is present in the gate set.
-The gate set is tests/evals/activation_v0.1.jsonl when that file is present,
-otherwise every loaded file. Keyword misses are warnings and do not fail.
-Exit non-zero only for malformed fixtures or a missing gate level.
+Exit 0 when the schema is valid, every level is present in the gate set,
+false positives are 0 on the three fixture sets, and root recall on the dev
+set meets the floor. The gate set for level coverage is
+tests/evals/activation_v0.1.jsonl when that file is present, otherwise every
+loaded file.
+
+False positives are a hard failure on activation_v0.1.jsonl, on the held-out
+hold-* file, and on the generic L0 file, for the root phrase list and for the
+Claude description alone. Recall is a hard floor on the dev set only
+(activation_v0.1.jsonl, root phrases). The floor is the recall measured when
+this gate was added, so today's tree passes. Held-out recall and Claude
+description recall are printed and do not fail. Other fixture names stay
+report-only, so a synthetic tree still exits 0 on a keyword miss.
+
 --model-in-loop is a stub: it prints a fixed line and exits 0. It does not
 call an API and it does not read secrets or environment keys.
 """
@@ -36,6 +46,17 @@ LIST_FIELDS = ("must", "must_not")
 BOOL_FIELDS = ("ambiguous", "gate_excluded", "headless")
 STR_FIELDS = ("category", "rationale", "context_note")
 GATE_NAME = "activation_v0.1.jsonl"
+# False-positive gate. Names, not heading text.
+FP_GATE_NAMES = frozenset(
+    {
+        "activation_v0.1.jsonl",
+        "activation_heldout_v0.1.jsonl",
+        "activation_l0_generic_v0.1.jsonl",
+    }
+)
+# Root recall floor on the dev set only: caught/moments measured on this tree
+# (21 of 25 L2/L3 gate rows). Held-out recall has no floor.
+DEV_RECALL_FLOOR = (21, 25)
 CLAUDE_SKILL = Path("claude-skill") / "SKILL.md"
 
 
@@ -197,11 +218,15 @@ def format_counts(counts: dict[str, int]) -> str:
     return " ".join(f"{level}={counts[level]}" for level in LEVELS)
 
 
-def keyword_warnings(rows: list[dict], phrases: list[str]) -> list[str]:
-    """L0 trigger hits and L2/L3 trigger misses. Excluded rows are skipped."""
+def keyword_report(rows: list[dict], phrases: list[str]) -> tuple[list[str], dict[str, int]]:
+    """L0 trigger hits and L2/L3 trigger misses. Excluded rows are skipped.
+
+    ``caught`` / ``moments`` are the L2 and L3 gate rows. Recall is caught/moments.
+    """
     lines: list[str] = []
     false_positive: list[tuple[str, str]] = []
     missed: list[tuple[str, str]] = []
+    moments = 0
     for row in rows:
         if gate_excluded(row):
             continue
@@ -209,13 +234,41 @@ def keyword_warnings(rows: list[dict], phrases: list[str]) -> list[str]:
         hits = matched_phrases(row["prompt"], phrases)
         if level == "L0" and hits:
             false_positive.append((row["id"], ", ".join(hits)))
-        elif level in ("L2", "L3") and not hits:
-            missed.append((row["id"], level))
+        elif level in ("L2", "L3"):
+            moments += 1
+            if not hits:
+                missed.append((row["id"], level))
     for fixture_id, hits in sorted(false_positive):
         lines.append(f"warning false-positive: {fixture_id} L0 matched: {hits}")
     for fixture_id, level in sorted(missed):
         lines.append(f"warning missed-moment: {fixture_id} {level} matched none")
+    stats = {
+        "false_positive": len(false_positive),
+        "missed": len(missed),
+        "moments": moments,
+        "caught": moments - len(missed),
+    }
+    return lines, stats
+
+
+def keyword_warnings(rows: list[dict], phrases: list[str]) -> list[str]:
+    """L0 trigger hits and L2/L3 trigger misses. Excluded rows are skipped."""
+    lines, _stats = keyword_report(rows, phrases)
     return lines
+
+
+def recall_meets_floor(caught: int, moments: int, floor: tuple[int, int]) -> bool:
+    """True when caught/moments is at least floor_caught/floor_moments."""
+    floor_caught, floor_moments = floor
+    return caught * floor_moments >= moments * floor_caught
+
+
+def recall_line(stats: dict[str, int], *, floor: tuple[int, int] | None) -> str:
+    caught = stats["caught"]
+    moments = stats["moments"]
+    if floor is None:
+        return f"recall: caught={caught} moments={moments} report-only"
+    return f"recall: caught={caught} moments={moments} floor={floor[0]}/{floor[1]}"
 
 
 def unscored_lines(rows: list[dict]) -> list[str]:
@@ -230,15 +283,18 @@ def unscored_lines(rows: list[dict]) -> list[str]:
     return lines
 
 
-def score_lines(rows: list[dict], phrases: list[str]) -> list[str]:
-    """One file scored against one phrase list. Warnings are not a failure."""
+def score_lines(
+    rows: list[dict],
+    phrases: list[str],
+    *,
+    recall_floor: tuple[int, int] | None = None,
+) -> tuple[list[str], dict[str, int]]:
+    """One file scored against one phrase list. The caller applies the gate."""
     all_counts = level_counts(rows, gate_only=False)
     gate_counts = level_counts(rows, gate_only=True)
     excluded = sum(1 for row in rows if gate_excluded(row))
-    warnings = keyword_warnings(rows, phrases)
-    false_positive = sum(1 for line in warnings if line.startswith("warning false-positive:"))
-    missed = sum(1 for line in warnings if line.startswith("warning missed-moment:"))
-    return [
+    warnings, stats = keyword_report(rows, phrases)
+    lines = [
         f"fixtures: {len(rows)}",
         f"excluded: {excluded}",
         f"gate: {len(rows) - excluded}",
@@ -249,11 +305,13 @@ def score_lines(rows: list[dict], phrases: list[str]) -> list[str]:
         *unscored_lines(rows),
         (
             "summary: "
-            f"false-positive={false_positive} "
-            f"missed-moment={missed} "
+            f"false-positive={stats['false_positive']} "
+            f"missed-moment={stats['missed']} "
             f"excluded={excluded}"
         ),
+        recall_line(stats, floor=recall_floor),
     ]
+    return lines, stats
 
 
 def claude_description_phrases(root: Path, phrases: list[str]) -> list[str] | None:
@@ -284,18 +342,41 @@ def render(root: Path) -> tuple[str, int]:
     multi = len(groups) > 1 or claude_phrases is not None
     lines: list[str] = []
     missing: list[str] = []
+    gate_errors: list[str] = []
     for rel, rows in groups:
+        name = Path(rel).name
         if multi:
             lines.append(f"block: root {rel}")
-        lines.extend(score_lines(rows, phrases))
+        root_floor = DEV_RECALL_FLOOR if name == GATE_NAME else None
+        block, stats = score_lines(rows, phrases, recall_floor=root_floor)
+        lines.extend(block)
+        if name in FP_GATE_NAMES and stats["false_positive"] != 0:
+            gate_errors.append(
+                f"error: false-positive={stats['false_positive']} in root {rel}"
+            )
+        if root_floor is not None and not recall_meets_floor(
+            stats["caught"], stats["moments"], root_floor
+        ):
+            gate_errors.append(
+                "error: recall "
+                f"{stats['caught']}/{stats['moments']} "
+                f"below floor {root_floor[0]}/{root_floor[1]} in root {rel}"
+            )
         if claude_phrases is not None:
             lines.append(f"block: claude-description {rel}")
-            lines.extend(score_lines(rows, claude_phrases))
+            block, stats = score_lines(rows, claude_phrases)
+            lines.extend(block)
+            if name in FP_GATE_NAMES and stats["false_positive"] != 0:
+                gate_errors.append(
+                    f"error: false-positive={stats['false_positive']} in claude-description {rel}"
+                )
         if rel in gate_rels:
             counts = level_counts(rows, gate_only=True)
             missing.extend(level for level in LEVELS if counts[level] == 0)
     if missing:
         lines.append("error: missing level " + ", ".join(missing) + " in gate set")
+    lines.extend(gate_errors)
+    if missing or gate_errors:
         lines.append("failed")
         return "\n".join(lines), 1
     lines.append("ok")

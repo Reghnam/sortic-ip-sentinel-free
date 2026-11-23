@@ -345,6 +345,7 @@ class RunEvalTests(unittest.TestCase):
         self.assertIn("levels all: L0=18 L1=0 L2=0 L3=0", generic)
         root_gate = text.split("block: claude-description tests/evals/activation_v0.1.jsonl", 1)[0]
         self.assertIn("summary: false-positive=0 missed-moment=4 excluded=3", root_gate)
+        self.assertIn("recall: caught=21 moments=25 floor=21/25", root_gate)
         self.assertNotIn("act-007", root_gate)
         self.assertNotIn("act-009", root_gate)
         self.assertNotIn("act-048", root_gate)
@@ -376,6 +377,11 @@ class RunEvalTests(unittest.TestCase):
             self.assertIn(f"warning missed-moment: {fixture_id}", claude_gate)
         self.assertNotIn("act-007", claude_gate)
         self.assertTrue(text.endswith("ok"))
+        held = text.split("block: root tests/evals/activation_heldout_v0.1.jsonl", 1)[1]
+        held = held.split("block:", 1)[0]
+        self.assertIn("recall: caught=", held)
+        self.assertIn("report-only", held)
+        self.assertNotIn("floor=", held)
         completed = subprocess.run(
             [sys.executable, str(SCRIPT)],
             check=False,
@@ -385,6 +391,104 @@ class RunEvalTests(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0)
         self.assertEqual(completed.stdout.strip(), text)
+
+    def _gated(self, name: str, rows: list[dict]) -> tuple[str, int]:
+        root = Path(tempfile.mkdtemp())
+        _write(root / "SKILL.md", SKILL)
+        _write(root / "tests" / "evals" / name, _jsonl(rows))
+        return RUN.render(root)
+
+    def test_dev_false_positive_fails_the_gate(self) -> None:
+        text, code = self._gated(
+            "activation_v0.1.jsonl",
+            [
+                _row("act-001", "L0", "Say patent in a comment"),
+                _row("act-002", "L1", "Keep this private."),
+                _row("act-003", "L2", "Protect the IP before the pilot."),
+                _row("act-004", "L3", "Protect the IP."),
+            ],
+        )
+        self.assertEqual(code, 1, text)
+        self.assertIn("error: false-positive=1 in root tests/evals/activation_v0.1.jsonl", text)
+        self.assertTrue(text.endswith("failed"))
+        self.assertNotIn("\nok", text)
+
+    def test_dev_recall_below_the_floor_fails(self) -> None:
+        text, code = self._gated(
+            "activation_v0.1.jsonl",
+            [
+                _row("act-001", "L0", "debug the loop"),
+                _row("act-002", "L1", "Keep this private."),
+                _row("act-003", "L2", "Demo tomorrow with no protect word."),
+                _row("act-004", "L3", "Protect the IP."),
+            ],
+        )
+        self.assertEqual(code, 1, text)
+        self.assertIn("below floor 21/25", text)
+        self.assertIn("warning missed-moment: act-003", text)
+        self.assertTrue(text.endswith("failed"))
+
+    def test_dev_recall_at_the_floor_passes(self) -> None:
+        text, code = self._gated(
+            "activation_v0.1.jsonl",
+            [
+                _row("act-001", "L0", "debug the loop"),
+                _row("act-002", "L1", "Keep this private."),
+                _row("act-003", "L2", "Protect the IP before the pilot."),
+                _row("act-004", "L3", "Protect the IP."),
+            ],
+        )
+        self.assertEqual(code, 0, text)
+        self.assertIn("recall: caught=2 moments=2 floor=21/25", text)
+        self.assertTrue(text.endswith("ok"))
+
+    def test_held_out_miss_is_report_only(self) -> None:
+        text, code = self._gated(
+            "activation_heldout_v0.1.jsonl",
+            [
+                _row("hold-001", "L0", "debug the loop"),
+                _row("hold-002", "L1", "Keep this private."),
+                _row("hold-003", "L2", "Demo tomorrow with no protect word."),
+                _row("hold-004", "L3", "Protect the IP."),
+            ],
+        )
+        self.assertEqual(code, 0, text)
+        self.assertIn("warning missed-moment: hold-003", text)
+        self.assertIn("report-only", text)
+        self.assertNotIn("below floor", text)
+        self.assertTrue(text.endswith("ok"))
+
+    def test_held_out_false_positive_fails(self) -> None:
+        text, code = self._gated(
+            "activation_heldout_v0.1.jsonl",
+            [
+                _row("hold-001", "L0", "Say patent in a comment"),
+                _row("hold-002", "L1", "Keep this private."),
+                _row("hold-003", "L2", "Protect the IP before the pilot."),
+                _row("hold-004", "L3", "Protect the IP."),
+            ],
+        )
+        self.assertEqual(code, 1, text)
+        self.assertIn(
+            "error: false-positive=1 in root tests/evals/activation_heldout_v0.1.jsonl",
+            text,
+        )
+
+    def test_generic_l0_false_positive_fails(self) -> None:
+        text, code = self._gated(
+            "activation_l0_generic_v0.1.jsonl",
+            [
+                _row("gen-001", "L0", "Say patent in a comment"),
+                _row("gen-002", "L1", "Keep this private."),
+                _row("gen-003", "L2", "Protect the IP before the pilot."),
+                _row("gen-004", "L3", "Protect the IP."),
+            ],
+        )
+        self.assertEqual(code, 1, text)
+        self.assertIn(
+            "error: false-positive=1 in root tests/evals/activation_l0_generic_v0.1.jsonl",
+            text,
+        )
 
 
 if __name__ == "__main__":
