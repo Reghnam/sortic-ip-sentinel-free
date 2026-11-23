@@ -27,6 +27,7 @@ _COMMON_LEGACY = frozenset(
     {
         "SKILL.md",
         "references/classification-matrix.md",
+        "references/l3-callouts.md",
         "references/evals.md",
         "references/output-language-hygiene.md",
         "references/public-corpus-rag.md",

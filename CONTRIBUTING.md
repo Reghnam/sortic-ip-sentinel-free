@@ -8,7 +8,7 @@ Bump the edition only for a functional change, an activation change, an eval cha
 
 A content-only CLI or ecosystem observation tip must not bump the edition. Record a functional observation under the current CHANGELOG tip. Do not open a new edition heading for it, and do not restamp the public edition pins (SKILL.md, LICENSE, README, EXEC-SUMMARY, LAUNCH, `grok-bot-share/bot-template.json`, and the other stamps the hygiene check pins) for it.
 
-A content-only daily host read goes in `docs/host-reads/ROLLING.md`. That file is outside every shipped pack and zip. Do not stack another same-edition daily read in CHANGELOG.md. The current edition may keep the single latest read block already recorded under the top heading.
+A content-only daily host read goes in `docs/host-reads/ROLLING.md` only. That file is outside every shipped pack and zip. Do not record a host read in CHANGELOG.md.
 
 The CHANGELOG top edition heading is the current edition. A later commit may edit that tip. Do not rewrite git history to change an older heading.
 

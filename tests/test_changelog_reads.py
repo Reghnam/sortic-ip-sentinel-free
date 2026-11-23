@@ -159,6 +159,18 @@ class ChangelogReadRuleTest(unittest.TestCase):
         contributing = (ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
         self.assertIn(f"`{ROLLING}`", changelog)
         self.assertIn(f"`{ROLLING}`", contributing)
+        self.assertIn("Do not record a host read in CHANGELOG.md.", changelog)
+        self.assertIn("Do not record a host read in CHANGELOG.md.", contributing)
+        self.assertEqual(HYGIENE.host_read_ops_findings(ROOT), [])
+
+    def test_host_read_operator_phrase_is_named(self) -> None:
+        findings = HYGIENE.operator_phrase_findings(
+            ROLLING,
+            "status line",
+        )
+        self.assertEqual(findings, [])
+        findings = HYGIENE.operator_phrase_findings(ROLLING, "see NOTIFY_BLOCKED")
+        self.assertEqual(findings, [f"{ROLLING} contains operator phrase: NOTIFY_BLOCKED"])
 
 
 if __name__ == "__main__":

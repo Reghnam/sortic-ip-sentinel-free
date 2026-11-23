@@ -118,6 +118,15 @@ CHANGELOG_OPS_PHRASES = (
     "returned no messages",
 )
 CHANGELOG_READ_LINE_CAP = 40
+# Just above root SKILL.md after the lines over 2,000 characters moved into references/.
+SKILL_BYTE_CAP = 78848
+SKILL_BYTE_FILES = (
+    "SKILL.md",
+    "chatgpt-skill/SKILL.md",
+    "claude-skill/SKILL.md",
+    "cursor-skill/SKILL.md",
+    "grok-skill/SKILL.md",
+)
 _SHORT_DESC_EDITION = re.compile(
     r'(?m)^  short-description:\s*"[^\n]*\bv(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])'
 )
@@ -453,6 +462,52 @@ def changelog_read_findings(text: str) -> list[str]:
         if phrase in section:
             findings.append(f"current edition contains operator phrase: {phrase}")
     return findings
+
+
+def operator_phrase_findings(rel: str, text: str) -> list[str]:
+    """Exact operator phrases. Bare backup, export, mail, and Drive stay allowed."""
+    return [
+        f"{rel} contains operator phrase: {phrase}"
+        for phrase in CHANGELOG_OPS_PHRASES
+        if phrase in text
+    ]
+
+
+def host_read_ops_findings(root: Path) -> list[str]:
+    """Operator phrases under docs/host-reads/ are errors, not warnings.
+
+    Daily host reads live only in that directory. It is outside every shipped pack.
+    """
+    folder = root / "docs" / "host-reads"
+    if not folder.is_dir():
+        return ["docs/host-reads is missing"]
+    findings: list[str] = []
+    paths = sorted(path for path in folder.rglob("*") if path.is_file())
+    if not paths:
+        return ["docs/host-reads has no files"]
+    for path in paths:
+        rel = path.relative_to(root).as_posix()
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            findings.append(f"unreadable host read: {rel}")
+            continue
+        findings.extend(operator_phrase_findings(rel, text))
+    return findings
+
+
+def skill_byte_errors(root: Path) -> list[str]:
+    """Fail when a pack SKILL.md grows past the post-split cap."""
+    errors: list[str] = []
+    for rel in SKILL_BYTE_FILES:
+        path = root / rel
+        if not path.is_file():
+            errors.append(f"{rel} byte cap missing")
+            continue
+        size = path.stat().st_size
+        if size > SKILL_BYTE_CAP:
+            errors.append(f"{rel} is {size} bytes (cap {SKILL_BYTE_CAP})")
+    return errors
 
 
 def strict_changelog_enabled(flag: bool, env: str | None) -> bool:
@@ -803,6 +858,8 @@ def _hygiene(args: argparse.Namespace) -> int:
     errors.extend(license_version_errors(ROOT))
     errors.extend(edition_pin_errors(ROOT))
     errors.extend(tree_leak_errors(ROOT))
+    errors.extend(host_read_ops_findings(ROOT))
+    errors.extend(skill_byte_errors(ROOT))
 
     changelog_findings = changelog_read_findings(
         (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")

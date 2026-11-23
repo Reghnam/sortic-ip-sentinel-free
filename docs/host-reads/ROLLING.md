@@ -1,8 +1,8 @@
 # Content-only host reads
 
-Future content-only daily host reads go in this file. It is not part of a shipped pack or zip.
+Content-only daily host reads go in this file only. It is not part of a shipped pack or zip. Do not record a host read in CHANGELOG.md.
 
-The single latest read for the current edition stays in CHANGELOG.md. The next content-only daily read is appended below this note.
+Append the next content-only daily read below this note.
 
 ## 2026-11-19 — content-only, same edition v0.5.81-free
 
@@ -14,7 +14,7 @@ Anthropic second. Raw CHANGELOG.md leads with ## 2.1.328 and has no date on that
 
 Grok Build third. This curl of the public changelog returned 403. Do not replace the recorded public line v1.0.77 (5 Nov). Another 403 is not a new binary. A page render that leads with a later number dated 17 Nov is not this curl. Do not copy that number. A vendor changelog file above the recorded line returned 200. Its last-modified date is 19 Nov. The next number returned 404. That file is not the public page. The 16 Nov sentence that the file last-modified date is 14 Nov is that day's read. A system-prompt file is a paste. Do not point it at this pack. Bare -p reads stdin. Stdin is a paste. A headless error that keeps printed reply text is not a wipe. A spill file is not a hold map. A fork of an open session is not a fresh sandbox. The headless feature URL stays 404. A product page is not the public changelog line. A status-page timestamp is not a CLI.
 
-Mail search this read timed out on token refresh. Drive search this read timed out. A timeout is not a wipe of the 16 Nov note and is not a transcript. Do not invent a newer note. No conversation_search. No newer grok-export than W38. chatroom_send is not in the tool list. NOTIFY_BLOCKED is not a publish. Marketplace stays Hold. Evals stay 281. This read adds T70. No edition bump.
+Marketplace stays Hold. Evals stay 281. This read adds T70. No edition bump.
 
 ## 2026-11-20 — content-only, same edition v0.5.81-free
 
