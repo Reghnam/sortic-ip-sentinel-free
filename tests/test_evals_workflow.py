@@ -1,0 +1,38 @@
+"""Pin checks for the eval workflow. The warn-only flag is a separate change."""
+
+from __future__ import annotations
+
+import re
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+WORKFLOW = ROOT / ".github" / "workflows" / "evals.yml"
+
+
+class EvalsWorkflowTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.text = WORKFLOW.read_text(encoding="utf-8")
+
+    def test_actions_are_pinned_to_full_shas(self) -> None:
+        uses = re.findall(r"uses:\s*(\S+)", self.text)
+        at = chr(64)
+        checkout = "3d3c42e5aac5ba805825da76410c181273ba90b1"
+        setup = "6d4fd22b20465ccc0f7354476588e8df7c9ca0e0"
+        self.assertEqual(
+            uses,
+            ["actions/checkout" + at + checkout, "actions/setup-python" + at + setup],
+        )
+        for item in uses:
+            self.assertRegex(item, re.escape(at) + r"[0-9a-f]{40}$")
+            self.assertNotIn(at + "main", item)
+            self.assertNotIn(at + "master", item)
+            self.assertNotRegex(item, re.escape(at) + r"v\d")
+        self.assertIn("# v7.0.1", self.text)
+        self.assertIn("# v7.1.0", self.text)
+        self.assertIn("persist-credentials: false", self.text)
+        self.assertIn('python-version: "3.12"', self.text)
+
+
+if __name__ == "__main__":
+    unittest.main()
