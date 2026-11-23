@@ -55,6 +55,7 @@ A content-only host read. No edition bump. No pin restamp. **No client / product
 - A green test is still not a merge. No later owner note dated 21 or 22 Nov is not a wipe of that hold. Do not force. Do not copy a hash, an hour, an issue number, or a case id. A token-refresh timeout is not a transcript.
 - Evals stay **281**. HITL F1–F28 + T1–T72 required. This read adds T73 (still 0.171.0 + no 22 Nov row + raw lead 2.1.330 + public lead 1.0.89 dated 17 Nov). No new eval heading.
 - A content-only observation does not bump the edition.
+- Shipped skill text says the private corpus instead of naming the private repo. Edition stays 0.5.81-free.
 - Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.80-free] — 2026-10-31

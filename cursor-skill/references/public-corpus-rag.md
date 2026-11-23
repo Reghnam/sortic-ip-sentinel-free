@@ -2,7 +2,7 @@
 
 **Hygiene only. Not legal advice. Not a prior-art search. Not FTO. Not a second regulatory radar.**
 
-`Reghnam/us-ip-law-ground-truth` is **PRIVATE**. It is the source of truth for hourly US-IP curriculum. This free skill must **never** ship that tree.
+`the private corpus` is **PRIVATE**. It is the source of truth for hourly US-IP curriculum. This free skill must **never** ship that tree.
 
 `Reghnam/eu-ip-law-ground-truth` is also **PRIVATE**. Same never-bundle rule. Do **not** invent a second sidecar or a second radar. Hourly curriculum ticks stay L0.
 
@@ -10,7 +10,7 @@ This skill may **retrieve** limited citation/snippet answers through a SorticAI-
 
 ## Never bundle / never Bot disk
 
-Do **not** copy, zip, upload, or park `us-ip-law-ground-truth` or `eu-ip-law-ground-truth` (or any private law dump) into:
+Do **not** copy, zip, upload, or park `the private corpus` or `eu-ip-law-ground-truth` (or any private law dump) into:
 
 - this public free skill zip (`chatgpt-skill/`, `claude-skill/`, `grok-skill/`, `cursor-skill/`)
 - a Grok Bot disk / Computer / share template
@@ -29,7 +29,7 @@ L3 and the user asks for prior-art pointers, public-source hygiene, or "use the 
 Probe, in order, then stop. Do not invent a private client path or a live API host.
 
 1. Environment variable `SORTICAI_US_IP_SIDECAR` (retrieve-only HTTPS endpoint controlled by SorticAI). Request/response contract: `references/sidecar-retrieve.stub.json`.
-2. **Do not** treat a sibling `us-ip-law-ground-truth/` inside this skill tree as mounted — that would mean the corpus was bundled. If a maintainer sidecar mount exists **outside** the skill zip, it is still retrieve-only; never copy it in.
+2. **Do not** treat a sibling `the private corpus/` inside this skill tree as mounted — that would mean the corpus was bundled. If a maintainer sidecar mount exists **outside** the skill zip, it is still retrieve-only; never copy it in.
 3. If neither resolves, use **offline fallback**.
 
 ### Sidecar request (retrieve-only)

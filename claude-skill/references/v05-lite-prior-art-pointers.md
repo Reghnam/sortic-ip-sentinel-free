@@ -12,7 +12,7 @@
 
 Search your own high-level problem + technical field. Do not paste secret embodiments into public search boxes.
 
-If a SorticAI **retrieve-only sidecar** is configured, prefer that lookup per `references/public-corpus-rag.md`. If the sidecar is unknown, stay on this page (offline public-safe fixtures). Do not ingest client work. Do not bundle `us-ip-law-ground-truth` (PRIVATE) into this zip or a Bot disk. Not a search. Not FTO.
+If a SorticAI **retrieve-only sidecar** is configured, prefer that lookup per `references/public-corpus-rag.md`. If the sidecar is unknown, stay on this page (offline public-safe fixtures). Do not ingest client work. Do not bundle `the private corpus` (PRIVATE) into this zip or a Bot disk. Not a search. Not FTO.
 
 ## Software / AI red flags (hygiene, not a ruling)
 
