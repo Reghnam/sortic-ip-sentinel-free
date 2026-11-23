@@ -1,6 +1,6 @@
 # LAUNCH: SorticAI Free IP Sentinel v0.5.81-free
 
-**Status**: Public on GitHub. v0.5.81-free patched 2026-11-01, later read 2026-11-22, no edition bump (OpenAI first: GitHub Latest this read is still **0.171.0** dated 20 Nov, not a prerelease. No row is dated 22 Nov. The first row is still a prerelease published 21 Nov and is not the Latest badge. A 22 Nov fetch of a 21 Nov alpha is not a 22 Nov stable CLI. Do not copy the alpha tag. Anthropic second: raw CHANGELOG.md still leads with **2.1.330** and has no date. There is still no **2.1.324**. GitHub Latest is still **v2.1.330** dated 20 Nov. No release dated 22 Nov. Do not copy the bullets. A loop-duration bullet is not a rewrite. Grok Build third: this curl returned **200** and the page leads with **v1.0.89** dated 17 Nov. The feed agrees. A 22 Nov fetch of a 17 Nov lead is not a 22 Nov CLI. Do not copy a third-party later number. The headless feature URL stays **404**. A green test is still not a merge. Marketplace Hold).
+**Status**: Public on GitHub. v0.5.81-free patched 2026-11-01. Host reads live in `docs/host-reads/ROLLING.md` only. No edition bump.
 
 Repo: https://github.com/Reghnam/sortic-ip-sentinel-free
 

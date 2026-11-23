@@ -120,6 +120,15 @@ CHANGELOG_OPS_PHRASES = (
     "returned no messages",
 )
 CHANGELOG_READ_LINE_CAP = 40
+# Just above the post-split SKILL.md size. Raised when a pack copy is larger.
+SKILL_BYTE_CAP = 87040
+SKILL_BYTE_FILES = (
+    "SKILL.md",
+    "chatgpt-skill/SKILL.md",
+    "claude-skill/SKILL.md",
+    "cursor-skill/SKILL.md",
+    "grok-skill/SKILL.md",
+)
 _SHORT_DESC_EDITION = re.compile(
     r'(?m)^  short-description:\s*"[^\n]*\bv(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])'
 )
@@ -457,6 +466,44 @@ def changelog_read_findings(text: str) -> list[str]:
         if phrase in section:
             findings.append(f"current edition contains operator phrase: {phrase}")
     return findings
+
+
+def operator_phrase_findings(rel: str, text: str) -> list[str]:
+    """Name each exact operator phrase. Bare backup, export, mail, and Drive stay allowed."""
+    return [f"{rel} contains operator phrase: {phrase}" for phrase in CHANGELOG_OPS_PHRASES if phrase in text]
+
+
+def host_read_ops_findings(root: Path) -> list[str]:
+    """Hard errors. Host reads are public, so an operator phrase here fails the check."""
+    directory = root / "docs" / "host-reads"
+    if not directory.is_dir():
+        return ["docs/host-reads/ is missing"]
+    files = [path for path in directory.rglob("*") if path.is_file()]
+    if not files:
+        return ["docs/host-reads/ is empty"]
+    findings: list[str] = []
+    for path in sorted(files):
+        rel = path.relative_to(root).as_posix()
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeError:
+            findings.append(f"{rel} is not utf-8")
+            continue
+        findings.extend(operator_phrase_findings(rel, text))
+    return findings
+
+
+def skill_byte_errors(root: Path) -> list[str]:
+    errors: list[str] = []
+    for rel in SKILL_BYTE_FILES:
+        path = root / rel
+        if not path.is_file():
+            errors.append(f"{rel} is missing")
+            continue
+        size = path.stat().st_size
+        if size > SKILL_BYTE_CAP:
+            errors.append(f"{rel} is {size} bytes (cap {SKILL_BYTE_CAP})")
+    return errors
 
 
 def strict_changelog_enabled(flag: bool, env: str | None) -> bool:
@@ -807,6 +854,8 @@ def _hygiene(args: argparse.Namespace) -> int:
     errors.extend(license_version_errors(ROOT))
     errors.extend(edition_pin_errors(ROOT))
     errors.extend(tree_leak_errors(ROOT))
+    errors.extend(host_read_ops_findings(ROOT))
+    errors.extend(skill_byte_errors(ROOT))
 
     changelog_findings = changelog_read_findings(
         (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")

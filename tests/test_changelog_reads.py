@@ -6,6 +6,7 @@ import importlib.util
 import os
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -195,6 +196,20 @@ class ChangelogReadRuleTest(unittest.TestCase):
         contributing = (ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
         self.assertIn(f"`{ROLLING}`", changelog)
         self.assertIn(f"`{ROLLING}`", contributing)
+        self.assertIn("Do not record a host read in CHANGELOG.md.", changelog)
+        self.assertIn("Do not record a host read in CHANGELOG.md.", contributing)
+        self.assertEqual(HYGIENE.host_read_ops_findings(ROOT), [])
+        self.assertEqual(HYGIENE.skill_byte_errors(ROOT), [])
+
+    def test_host_read_operator_phrase_is_an_error(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            folder = root / "docs" / "host-reads"
+            folder.mkdir(parents=True)
+            (folder / "ROLLING.md").write_text("NOTIFY_BLOCKED\n", encoding="utf-8")
+            findings = HYGIENE.host_read_ops_findings(root)
+        self.assertTrue(any("NOTIFY_BLOCKED" in item for item in findings))
+        self.assertTrue(any(item.startswith("docs/host-reads/ROLLING.md") for item in findings))
 
 
 if __name__ == "__main__":

@@ -380,6 +380,7 @@ LEGACY_CORPUS_FILES: frozenset[str] = frozenset(
     {
         ".cursor/skills/README.md",
         "CHANGELOG.md",
+        "docs/host-reads/ROLLING.md",
         "HITL-LUNCH.md",
         "LAUNCH.md",
         "README.md",

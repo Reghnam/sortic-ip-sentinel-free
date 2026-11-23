@@ -8,7 +8,7 @@ Bump the edition only for a functional change, an activation change, an eval cha
 
 A content-only CLI or ecosystem observation tip must not bump the edition. Do not open a new edition heading for it, and do not restamp the public edition pins for it.
 
-A content-only daily host read goes in `docs/host-reads/ROLLING.md`. That file stays outside every shipped pack and zip. Do not stack another same-edition daily read under the current heading. The current edition may keep the single latest read block already recorded here.
+A content-only daily host read goes in `docs/host-reads/ROLLING.md` only. That file stays outside every shipped pack and zip. Do not record a host read in CHANGELOG.md.
 
 The top edition heading is the current edition. A later commit may edit that tip. Do not rewrite git history to change an older heading.
 
@@ -22,38 +22,6 @@ Activation eval harness (warn-only CI): deterministic L0-L3 checks over tests/ev
 Activation rulings are explicit in the tier text: exposure with no protect ask is L2, including a conference or paper submission and open-sourcing; the highest matching level wins; internal-only sharing with a concrete artifact is L1; general IP education is L1 and L3 on the user's own work; a livestream of the user's own unreleased work is L2; stream configuration or setup alone, or passive viewing, is L0; bare 'before we demo' with no audience is L1; 'before we demo' with a named audience or a date is L2; a declined L3 is not re-offered. Trigger phrases are the quoted Triggers list in when-to-use, the description is the supplied host prose, and the harness also scores the Claude description alone, a held-out prompt file, and a generic L0 file. Bare headless and a bare IP-sensitive moment are not triggers; the skill name still is. Added the sorticai.hygiene_package.v1 JSON Schema. Edition stays 0.5.81-free. Baseline at this change: root on the 51 fixtures 0 false positives and 4 missed (act-026, act-029, act-030, act-049); Claude description alone on the 51, 0 false positives and 16 missed (act-023, act-024, act-025, act-026, act-027, act-028, act-029, act-030, act-031, act-036, act-038, act-039, act-043, act-044, act-049, act-050); held-out 26 prompts, root and Claude description alone, 0 false positives and 10 missed (all 8 L2, plus hold-023 and hold-026); generic L0 18 prompts, root and Claude description alone, 0 false positives; the held-out prompts are not used to tune triggers; these are keyword-coverage results, not model behaviour, and they do not show that activation changed.
 
 - Claude upload archive is built with the skill folder at the top and named from `name`. Install notes cover claude.ai, Claude Desktop, Claude Code, and the API. `claude-skill/SETUP.md` is the paste-in nudge and is not copied to other packs. The first activation in a conversation says one active line and does not fire on L0. Usage examples name the direct invocation "run IP-sensitive moment". Edition stays 0.5.81-free.
-
-### Later read — 2026-11-22 (same edition)
-
-A content-only host read. No edition bump. No pin restamp. **No client / product / infra names.**
-
-#### OpenAI (first)
-
-- GitHub Latest this read is still **0.171.0** (20 Nov, not a prerelease). The latest redirect lands on that tag. A second read of the same badge is not a new CLI. No stable tag dated 22 Nov. No row on this page is dated 22 Nov.
-- **New:** the first row is still a prerelease published 21 Nov. That row is not a 22 Nov CLI and is not the Latest badge. A 22 Nov fetch of a 21 Nov alpha is not a 22 Nov stable CLI. A higher alpha number is not Latest. The 21 Nov sentence that the first row is a prerelease published 21 Nov is that day's read. Do not copy the alpha tag. Do not copy a commit count. Do not copy a model name. Do not copy the release bullets.
-- The description is the interface. State what it does and when, near the start, within 1024 characters. Do not freeze the body before the trigger evals. Do not copy a host changelog bullet into this pack. Codex implicit invocation stays `allow_implicit_invocation` (this pack stays true). This skill still ships **no hooks**.
-
-#### Anthropic (second)
-
-- Raw CHANGELOG.md this read still leads with `## 2.1.330` and has no date. Next is `## 2.1.329`, then `## 2.1.328`, then `## 2.1.327`, then `## 2.1.326`, then `## 2.1.325`, then `## 2.1.323`. There is no `## 2.1.324`. A 22 Nov read of that heading is not a new binary.
-- **New:** GitHub Latest is still **v2.1.330** (20 Nov, not a prerelease). No release dated 21 Nov. No release dated 22 Nov. The 21 Nov sentence that Latest is **v2.1.330**, and that no release is dated 21 Nov, is that day's read. Do not invent a date on the raw heading. Do not invent a 22 Nov heading. Do not copy the bullets. A loop-duration bullet is not a rewrite of this pack.
-- Log the human plan. A model that only carries out that plan is a tool, not a conceiver. A claim with no human conceiver is a hold, not a filing. Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 500.
-
-#### Grok Build (third)
-
-- **New:** this curl of the public changelog returned **200**. The page leads with **v1.0.89** (17 Nov). The feed last build is 17 Nov and the first item is that same line. Two fetches that agree are one read. A 22 Nov fetch of a 17 Nov lead is not a 22 Nov CLI. No public item is dated 18 Nov through 22 Nov. The 21 Nov sentence that this curl is **403**, and that the recorded line stays **v1.0.77**, is that day's read. Do not copy the bullets. Do not copy a third-party later number.
-- A numbered file this read did not re-date is not a new clock. The 21 Nov sentence that a file last-modified 20 Nov is not the public line is that day's read. Do not copy that number. A positional prompt with no flag is still a paste. Bare `-p` reads stdin. A host overlay is not a second core. The headless feature URL stays **404**.
-- This curl of the status page returned **200**. The overview has no release timestamp. A status page is not a CLI. Do not invent a 22 Nov timestamp. The 21 Nov sentence that the status curl is **403** is that day's read.
-
-#### Shared
-
-- **Latest this read is still 0.171.0 (20 Nov).** No row is dated 22 Nov. The first row is still a 21 Nov prerelease and is not the badge.
-- **The raw lead is still 2.1.330 and has no date.** Latest is still **v2.1.330** (20 Nov). No release dated 22 Nov. There is still no **2.1.324**.
-- **This curl returned 200.** The public lead is **v1.0.89** (17 Nov). The feed agrees. A third-party later number is not this page.
-- A green test is still not a merge. No later owner note dated 21 or 22 Nov is not a wipe of that hold. Do not force. Do not copy a hash, an hour, an issue number, or a case id. A token-refresh timeout is not a transcript.
-- Evals stay **281**. HITL F1–F28 + T1–T72 required. This read adds T73 (still 0.171.0 + no 22 Nov row + raw lead 2.1.330 + public lead 1.0.89 dated 17 Nov). No new eval heading.
-- A content-only observation does not bump the edition.
-- Still free-only. Still not legal advice. No secrets.
 
 ## [0.5.80-free] — 2026-10-31
 
