@@ -120,6 +120,118 @@ CHANGELOG_OPS_PHRASES = (
     "returned no messages",
 )
 CHANGELOG_READ_LINE_CAP = 40
+ROLLING_REL = "docs/host-reads/ROLLING.md"
+REMOVED_LINES_REL = "docs/host-reads/REMOVED-LINES.md"
+# Next 1024-byte boundary above the largest of the five SKILL.md files
+# after the long rule lines moved into references/.
+SKILL_BYTE_CAP = 86016
+SKILL_BYTE_FILES = (
+    "SKILL.md",
+    "chatgpt-skill/SKILL.md",
+    "claude-skill/SKILL.md",
+    "cursor-skill/SKILL.md",
+    "grok-skill/SKILL.md",
+)
+_TEXT_SUFFIXES = {".md", ".txt", ".yaml", ".yml", ".json"}
+# A line that states a rule is product text. Skip the whole line before
+# operator and host-read matching, including when an earlier sentence on
+# that same line names a run. The rule forms are "X is not a Y", "Do not",
+# and "Does not".
+_RULE_LINE = re.compile(r"(?i)(?:\bis not an?\b|\bDo not\b|\bDoes not\b)")
+_MONTH = r"Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+_VERSION_RE = re.compile(r"(?<![A-Za-z0-9.])v?(\d+\.\d+\.\d+)(?![A-Za-z0-9.])")
+_DATE_RE = re.compile(
+    rf"(?i)(?:\b\d{{1,2}}\s+(?:{_MONTH})\b|\b\d{{4}}-\d{{2}}-\d{{2}}\b|\bas of\b)"
+)
+# Shipped eval expectations quote a changelog tip. They stay byte-identical
+# and are not a daily host read. Edition pins (0.5.x and -free), schema
+# names, and actions/* pins are the other allowlist.
+_HOST_READ_TEXT_ALLOW = re.compile(
+    r"(?i)(?:\bChangelog tip\b|\bPublic Grok changelog\b|\bChangelog newest\b)"
+)
+# Run-log phrasing only. A product rule that names an export, a mail copy,
+# a timeout, or a transcript stays allowed, including the L0 example and the
+# restored eval lines.
+_OPERATOR_CLASSES: tuple[tuple[str, re.Pattern[str]], ...] = (
+    (
+        "search",
+        re.compile(
+            r"(?i)(?:"
+            r"\b(?:e-?mail|mailbox|gmail|mail|chat)\s+search\s+did not finish\b"
+            r"|\bdrive\s+(?:title\s+)?search\s+returned no\b"
+            r"|\bdrive\s+search\s+did not finish\b"
+            r")"
+        ),
+    ),
+    ("export", re.compile(r"(?i)\bthis run's grok-export\b")),
+    (
+        "timeout",
+        re.compile(r"(?i)\bthis run's\b[^\n.]{0,40}\btimed out\b"),
+    ),
+    (
+        "token refresh",
+        re.compile(r"(?i)\btoken[-\s]?refresh\s+did not finish\b"),
+    ),
+    ("notify", re.compile(r"(?i)\bblocked notify line\b")),
+    (
+        "tool name",
+        re.compile(r"(?i)\bconversation_search returned no\b"),
+    ),
+    ("backup", re.compile(r"(?i)\bour backup was marked PARTIAL\b")),
+    ("owner note", re.compile(r"(?i)\bno later owner note dated\b")),
+    (
+        "unfinished mail",
+        re.compile(r"(?i)\bGmail and Drive did not finish\b"),
+    ),
+    (
+        "this run",
+        re.compile(
+            r"(?i)\b(?:e-?mail|mailbox|gmail|mail|chat|drive)\s+search\s+this run\b"
+        ),
+    ),
+)
+
+
+def _version_allowlisted(line: str, match: re.Match[str]) -> bool:
+    """Edition headings, schema names, and actions/* pins are not host reads."""
+    if line[match.end() : match.end() + 5].startswith("-free"):
+        return True
+    if match.group(1).startswith("0.5."):
+        return True
+    before = line[max(0, match.start() - 32) : match.start()]
+    if re.search(r"(?i)\b(?:checkout|setup-python)\s+$", before):
+        return True
+    if re.search(r"(?i)\bschema\s+$", before):
+        return True
+    if re.search(r"(?i)hygiene_package\W*$", before):
+        return True
+    return False
+
+
+def _line_is_host_read(line: str) -> bool:
+    """True when a non-rule line pairs a semver with a date within 40 chars."""
+    if _RULE_LINE.search(line) or _HOST_READ_TEXT_ALLOW.search(line):
+        return False
+    dates = list(_DATE_RE.finditer(line))
+    if not dates:
+        return False
+    for version in _VERSION_RE.finditer(line):
+        if _version_allowlisted(line, version):
+            continue
+        for date in dates:
+            if date.end() <= version.start():
+                gap = version.start() - date.end()
+            else:
+                gap = date.start() - version.end()
+            if gap <= 40:
+                return True
+    return False
+
+
+def _without_rule_lines(text: str) -> str:
+    return "\n".join(line for line in text.splitlines() if not _RULE_LINE.search(line))
+
+
 _SHORT_DESC_EDITION = re.compile(
     r'(?m)^  short-description:\s*"[^\n]*\bv(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])'
 )
@@ -457,6 +569,109 @@ def changelog_read_findings(text: str) -> list[str]:
         if phrase in section:
             findings.append(f"current edition contains operator phrase: {phrase}")
     return findings
+
+
+def operator_class_labels(text: str) -> list[str]:
+    """Class labels for operator run-state in ``text``, in pattern order."""
+    scanned = _without_rule_lines(text)
+    return [label for label, cre in _OPERATOR_CLASSES if cre.search(scanned)]
+
+
+def is_host_read_text(text: str) -> bool:
+    """True when ``text`` contains a daily host-read line."""
+    return any(_line_is_host_read(line) for line in text.splitlines())
+
+
+def host_read_lines(text: str) -> list[str]:
+    """Non-rule lines in ``text`` that pair a version with a nearby date."""
+    return [line for line in text.splitlines() if _line_is_host_read(line)]
+
+
+def tracked_text_rels(root: Path) -> list[str]:
+    """Tracked text under docs, the public notes, the root skill, and every pack."""
+    rels: list[str] = []
+
+    def add(path: Path) -> None:
+        if path.is_file() and path.suffix.lower() in _TEXT_SUFFIXES:
+            rels.append(path.relative_to(root).as_posix())
+
+    for name in (
+        "EXEC-SUMMARY.md",
+        "LAUNCH.md",
+        "README.md",
+        "SKILL.md",
+        "HITL-LUNCH.md",
+    ):
+        add(root / name)
+    for folder in (root / "docs", root / "references", root / "openai-gpt-package"):
+        if folder.is_dir():
+            for path in folder.rglob("*"):
+                add(path)
+    for pack in PACKS:
+        pack_dir = root / pack
+        if pack_dir.is_dir():
+            for path in pack_dir.rglob("*"):
+                add(path)
+    return sorted(set(rels))
+
+
+def _read_tracked(root: Path, rel: str) -> tuple[str | None, str | None]:
+    path = root / rel
+    try:
+        return path.read_text(encoding="utf-8"), None
+    except (OSError, UnicodeError) as exc:
+        return None, f"{rel} is not readable text ({exc.__class__.__name__})"
+
+
+def operator_state_findings(root: Path) -> list[str]:
+    """Operator run-state in every tracked text file, including ROLLING.md."""
+    findings: list[str] = []
+    for rel in tracked_text_rels(root):
+        text, error = _read_tracked(root, rel)
+        if error:
+            findings.append(error)
+            continue
+        assert text is not None
+        scanned = _without_rule_lines(text)
+        for label, cre in _OPERATOR_CLASSES:
+            match = cre.search(scanned)
+            if match:
+                findings.append(
+                    f"{rel} contains operator state ({label}): {match.group(0)}"
+                )
+    return findings
+
+
+def host_read_findings(root: Path) -> list[str]:
+    """Daily host reads outside ROLLING.md. ROLLING.md itself is exempt."""
+    findings: list[str] = []
+    for rel in tracked_text_rels(root):
+        # ROLLING.md is the host-read file. REMOVED-LINES.md quotes the
+        # lines that moved there and is not a second host-read surface.
+        if rel in {ROLLING_REL, REMOVED_LINES_REL}:
+            continue
+        text, error = _read_tracked(root, rel)
+        if error:
+            findings.append(error)
+            continue
+        assert text is not None
+        if any(_line_is_host_read(line) for line in text.splitlines()):
+            findings.append(f"{rel} contains a host read outside {ROLLING_REL}")
+    return findings
+
+
+def skill_byte_errors(root: Path) -> list[str]:
+    """Fail when a shipped SKILL.md is over the byte cap."""
+    errors: list[str] = []
+    for rel in SKILL_BYTE_FILES:
+        path = root / rel
+        if not path.is_file():
+            errors.append(f"{rel} is missing")
+            continue
+        size = path.stat().st_size
+        if size > SKILL_BYTE_CAP:
+            errors.append(f"{rel} is {size} bytes (cap {SKILL_BYTE_CAP})")
+    return errors
 
 
 def strict_changelog_enabled(flag: bool, env: str | None) -> bool:
@@ -807,6 +1022,9 @@ def _hygiene(args: argparse.Namespace) -> int:
     errors.extend(license_version_errors(ROOT))
     errors.extend(edition_pin_errors(ROOT))
     errors.extend(tree_leak_errors(ROOT))
+    errors.extend(operator_state_findings(ROOT))
+    errors.extend(host_read_findings(ROOT))
+    errors.extend(skill_byte_errors(ROOT))
 
     changelog_findings = changelog_read_findings(
         (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")

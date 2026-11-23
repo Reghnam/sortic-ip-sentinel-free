@@ -380,6 +380,13 @@ LEGACY_CORPUS_FILES: frozenset[str] = frozenset(
     {
         ".cursor/skills/README.md",
         "CHANGELOG.md",
+        "docs/host-reads/ROLLING.md",
+        "docs/host-reads/REMOVED-LINES.md",
+        "references/l3-callouts.md",
+        "chatgpt-skill/references/l3-callouts.md",
+        "claude-skill/references/l3-callouts.md",
+        "cursor-skill/references/l3-callouts.md",
+        "grok-skill/references/l3-callouts.md",
         "HITL-LUNCH.md",
         "LAUNCH.md",
         "README.md",
