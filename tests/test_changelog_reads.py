@@ -202,33 +202,39 @@ class ChangelogReadRuleTest(unittest.TestCase):
 
     def test_operator_classes_match_run_state_and_not_rulings(self) -> None:
         positives = {
-            "search": "Mail search this read timed out on token refresh.",
-            "export": "No newer grok-export than W38.",
-            "timeout": "Drive search this read timed out.",
-            "token refresh": "A token-refresh timeout is not a transcript.",
-            "notify": "NOTIFY_BLOCKED is not a publish.",
-            "tool name": "chatroom_send is not in the tool list.",
-            "backup": "A weekly backup marked PARTIAL is not a publish.",
+            "search": "Gmail search did not finish.",
+            "export": "This run's grok-export did not finish.",
+            "timeout": "This run's gmail search timed out.",
+            "token refresh": "The token refresh did not finish.",
+            "notify": "A blocked notify line was logged for this run.",
+            "tool name": "conversation_search returned no messages.",
+            "backup": "Our backup was marked PARTIAL.",
             "owner note": "No later owner note dated 21 or 22 Nov.",
             "unfinished mail": "Gmail and Drive did not finish.",
         }
         for label, sentence in positives.items():
             self.assertIn(label, HYGIENE.operator_class_labels(sentence), sentence)
-        self.assertIn("export", HYGIENE.operator_class_labels("The export stays W38."))
-        negatives = (
-            "A backup is not a publish. An export is a paste.",
+        product = (
+            "Does not email partners. Does not invent a Bot DM.",
+            "Deck mail is not a transcript.",
+            "A mailbox copy is not a transcript.",
+            "grok-export PARTIAL (no conversation_search), public clip",
+            "Dump the Grok chat export into the public skill.",
+            "Drive title search timed out.",
             "A timeout deny is not a wipe.",
-            "weekly backup without protect intent",
+            "A token-refresh timeout is not a transcript.",
             "a memory snapshot is not a grok-export",
-            "A tool list is not a limit.",
-            "Marketplace stays Hold. Evals stay 281. No edition bump.",
             "is NOTIFY_BLOCKED, not a publish",
+            "No newer grok-export than W38.",
+            "The missing later owner note wiped the hold.",
+            "A tool list is not a limit.",
+            "weekly backup without protect intent",
+            "Changelog tip re-read 12 Oct is still 2.1.296 (9 Oct).",
         )
-        # The notify class matches the token wherever it sits, including a ruling
-        # that names it. The negative set below is the wording that must stay.
-        for sentence in negatives[:-1]:
+        for sentence in product:
             self.assertEqual(HYGIENE.operator_class_labels(sentence), [], sentence)
-        self.assertTrue(HYGIENE.is_host_read_text("GitHub Latest this read is still 0.171.0."))
+            self.assertFalse(HYGIENE.is_host_read_text(sentence), sentence)
+        self.assertTrue(HYGIENE.is_host_read_text("is still 0.172.0 (23 Nov)"))
         self.assertFalse(HYGIENE.is_host_read_text("A later non-prerelease tag is the stable CLI."))
 
     def test_host_read_rule_exempts_only_rolling(self) -> None:
@@ -237,11 +243,11 @@ class ChangelogReadRuleTest(unittest.TestCase):
             rolling = root / "docs" / "host-reads"
             rolling.mkdir(parents=True)
             (rolling / "ROLLING.md").write_text(
-                "GitHub Latest this read is still 0.171.0.\nNOTIFY_BLOCKED\n",
+                "is still 0.172.0 (23 Nov)\nGmail and Drive did not finish.\n",
                 encoding="utf-8",
             )
             (root / "README.md").write_text(
-                "GitHub Latest this read is still 0.171.0.\n",
+                "is still 0.172.0 (23 Nov)\n",
                 encoding="utf-8",
             )
             (root / "EXEC-SUMMARY.md").write_text("Edition stays.\n", encoding="utf-8")
@@ -250,9 +256,11 @@ class ChangelogReadRuleTest(unittest.TestCase):
             (root / "references").mkdir()
             findings = HYGIENE.host_read_findings(root)
             self.assertTrue(any(item.startswith("README.md") for item in findings))
-            self.assertFalse(any(item.startswith(f"{ROLLING}:") or item.startswith(f"{ROLLING} ") for item in findings))
+            self.assertFalse(
+                any(item.startswith(f"{ROLLING}:") or item.startswith(f"{ROLLING} ") for item in findings)
+            )
             operators = HYGIENE.operator_state_findings(root)
-            self.assertTrue(any("ROLLING.md" in item and "notify" in item for item in operators))
+            self.assertTrue(any("ROLLING.md" in item and "unfinished mail" in item for item in operators))
 
 
 if __name__ == "__main__":

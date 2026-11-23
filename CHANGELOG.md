@@ -27,6 +27,8 @@ Activation rulings are explicit in the tier text: exposure with no protect ask i
 
 - A host read outside `docs/host-reads/ROLLING.md`, and operator run state in docs, the exec summary, the launch note, the readme, or a pack, is a hard hygiene error. SKILL.md has a byte cap. Eight callout files now live under `references/`. Eleven dated matrix rows left the shipped matrix. The ChatGPT default prompt no longer carries the dated host-read tail. Edition stays 0.5.81-free.
 
+- The hygiene check flags operator run logs by run-log phrasing, and a public CLI version together with a calendar date outside the rolling host-read file. The lunch note and the custom-GPT package are in that scan. Edition stays 0.5.81-free.
+
 ### Later read — 2026-11-22 (same edition)
 
 A content-only host read. No edition bump. No pin restamp. **No client / product / infra names.**

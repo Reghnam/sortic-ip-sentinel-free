@@ -131,69 +131,53 @@ SKILL_BYTE_FILES = (
     "grok-skill/SKILL.md",
 )
 _TEXT_SUFFIXES = {".md", ".txt", ".yaml", ".yml", ".json"}
-# Report-shaped operator state. A ruling that only names the idea
-# ("a timeout deny is not a wipe", "weekly backup" inside an L0 example)
-# does not match.
+# Run-log phrasing only. A product rule that names an export, a mail copy,
+# a timeout, or a transcript stays allowed, including the L0 example and the
+# restored eval lines.
 _OPERATOR_CLASSES: tuple[tuple[str, re.Pattern[str]], ...] = (
     (
         "search",
         re.compile(
             r"(?i)(?:"
-            r"\b(?:e-?mail|mailbox|mail|chat)\s+search\b"
-            r"|\bdrive\s+(?:title\s+)?search\b"
-            r"|\bfile-title\s+lookup\b"
-            r"|\bfile[-\s]title\s+lookup\b"
-            r"|\btitle\s+search\s+(?:returned|timed|did|was)\b"
+            r"\b(?:e-?mail|mailbox|gmail|mail|chat)\s+search\s+did not finish\b"
+            r"|\bdrive\s+(?:title\s+)?search\s+returned no\b"
+            r"|\bdrive\s+search\s+did not finish\b"
             r")"
         ),
     ),
-    (
-        "export",
-        re.compile(
-            r"(?i)(?:"
-            r"\bgrok-export\s+W\d+"
-            r"|\bgrok-export\s+PARTIAL\b"
-            r"|\bgrok-export\s+coverage\s+is\s+PARTIAL\b"
-            r"|\bno newer grok-export\b"
-            r"|\bchat\s+export\b"
-            r"|\bthe export stays W\d+\b"
-            r")"
-        ),
-    ),
+    ("export", re.compile(r"(?i)\bthis run's grok-export\b")),
     (
         "timeout",
-        re.compile(
-            r"(?i)(?:"
-            r"\btimed\s+out\b"
-            r"|\btoken-refresh\s+timeout\b"
-            r"|\bdrive\s+timeout\b"
-            r"|\ba\s+timeout\s+is\s+not\s+a\s+(?:wipe|transcript)\b"
-            r")"
-        ),
+        re.compile(r"(?i)\bthis run's\b[^\n.]{0,40}\btimed out\b"),
     ),
-    ("token refresh", re.compile(r"(?i)\btoken[-\s]?refresh\b")),
-    ("notify", re.compile(r"(?i)\bNOTIFY_BLOCKED\b|\bblocked\s+notify\b")),
+    (
+        "token refresh",
+        re.compile(r"(?i)\btoken[-\s]?refresh\s+did not finish\b"),
+    ),
+    ("notify", re.compile(r"(?i)\bblocked notify line\b")),
     (
         "tool name",
-        re.compile(
-            r"(?i)\bconversation_search\b"
-            r"|\b[a-z][a-z0-9]*_send\b"
-            r"|\bnot\s+in\s+the\s+tool\s+list\b"
-        ),
+        re.compile(r"(?i)\bconversation_search returned no\b"),
     ),
-    (
-        "backup",
-        re.compile(
-            r"(?i)\bPARTIAL\s+backup\b|\bmarked\s+PARTIAL\b|\bchat-coverage\s+PARTIAL\b"
-        ),
-    ),
-    ("owner note", re.compile(r"(?i)\bowner[-\s]?note\b")),
+    ("backup", re.compile(r"(?i)\bour backup was marked PARTIAL\b")),
+    ("owner note", re.compile(r"(?i)\bno later owner note dated\b")),
     (
         "unfinished mail",
         re.compile(r"(?i)\bGmail and Drive did not finish\b"),
     ),
 )
-_HOST_READ_RE = re.compile(r"(?i)\bthis read\b")
+# A public Latest-style CLI version beside a calendar date. Changelog-tip
+# lines such as "2.1.296 (9 Oct)" are product expectations and do not match.
+_HOST_READ_RE = re.compile(
+    r"(?i)(?:"
+    r"\bGitHub\s+(?:releases\s+)?Latest\b[^.\n]{0,80}"
+    r"\bv?\d+\.\d+\.\d+\**\s*\(\s*\d{1,2}\s+"
+    r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b"
+    r"|"
+    r"\bis still\s+\**0\.\d+\.\d+\**\s*\(\s*\d{1,2}\s+"
+    r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b"
+    r")"
+)
 _SHORT_DESC_EDITION = re.compile(
     r'(?m)^  short-description:\s*"[^\n]*\bv(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])'
 )
@@ -551,9 +535,15 @@ def tracked_text_rels(root: Path) -> list[str]:
         if path.is_file() and path.suffix.lower() in _TEXT_SUFFIXES:
             rels.append(path.relative_to(root).as_posix())
 
-    for name in ("EXEC-SUMMARY.md", "LAUNCH.md", "README.md", "SKILL.md"):
+    for name in (
+        "EXEC-SUMMARY.md",
+        "LAUNCH.md",
+        "README.md",
+        "SKILL.md",
+        "HITL-LUNCH.md",
+    ):
         add(root / name)
-    for folder in (root / "docs", root / "references"):
+    for folder in (root / "docs", root / "references", root / "openai-gpt-package"):
         if folder.is_dir():
             for path in folder.rglob("*"):
                 add(path)

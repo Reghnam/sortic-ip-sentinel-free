@@ -97,7 +97,7 @@ Origin **v0.5.81-free** rules still stand, including the 1 Nov through 21 Nov se
 | **OpenAI (first)** | Latest is still **0.171.0** (20 Nov). The redirect lands on that tag. No row dated 22 Nov. The first row is still a 21 Nov prerelease and is not the badge. A 22 Nov fetch of that alpha is not a 22 Nov stable CLI. Do not copy a host changelog bullet into this pack. Codex implicit invocation stays `allow_implicit_invocation: true`. |
 | **Anthropic (second)** | Raw heading is still **2.1.330** and has no date. There is still no **2.1.324**. Latest is still **v2.1.330** (20 Nov). No release dated 22 Nov. A loop-duration bullet is not a rewrite. Log the human plan. A model that only carries out that plan is a tool, not a conceiver. |
 | **Grok Build (third)** | This curl is **200**. The public lead is **v1.0.89** (17 Nov). The feed agrees. A 22 Nov fetch of that lead is not a 22 Nov CLI. A third-party later number is not this page. The 21 Nov **403** / **v1.0.77** sentence is that day's read. Headless feature URL stays **404**. Status overview has no release timestamp. |
-| **Mail and chats** | A green test is still not a merge. No note dated 21 or 22 Nov is not a wipe of that hold. Do not copy a hash, an hour, an issue number, or a case id. |
+| **Green test** | A green test is still not a merge. No note dated 21 or 22 Nov is not a wipe of that hold. Do not copy a hash, an hour, an issue number, or a case id. |
 | **Checker** | Body stays 499 lines. That fact is not a seal. Edition pin stays **v0.5.81-free**. No edition bump. This read adds T73. |
 
 ### Do not publish
@@ -149,3 +149,29 @@ Codex changelog newest dated item this read is 23 Oct (CLI 0.164.0). A later dat
 Public Grok changelog page this read did not finish (403). Do not invent that the public page moved. External notes this read include 1.0.70 (23 Oct), after 1.0.69. A later external note is not the public latest line.
 Codex changelog newest dated item this read is still 23 Oct (CLI 0.164.0). The latest line is still that CLI. An empty alpha note is not a feature list. An alpha is not the latest line. An unreleased commit is not the latest line.
 Public Grok changelog page this read returned 403. Do not invent that the public page moved. External note 1.0.70 still returns. The next external note is a missing key. A missing next note is not a wipe. Do not invent the number.
+
+### From EXEC-SUMMARY.md T73 and the 22 Nov tail
+
+- T66–T72 are the 13 Nov through 21 Nov reads (not this read).
+- T73 is still Latest **0.171.0** + no 22 Nov row + raw lead **2.1.330** + public lead **v1.0.89** (17 Nov) + a green test that is still not a merge (below).
+
+The 1 Nov through 21 Nov sentences stay in this edition and are not this read. A later non-prerelease tag is the stable CLI (OpenAI GitHub Latest this read is still **0.171.0**; Anthropic GitHub Latest this read is still **v2.1.330**). No row dated 22 Nov. The first row is still a 21 Nov prerelease and is not the Latest badge. The raw lead is still **2.1.330** and has no date. There is still no **2.1.324**. No Anthropic release dated 22 Nov. This curl returned **200**. The public lead is **v1.0.89** (17 Nov). The feed agrees. A 22 Nov fetch of that lead is not a 22 Nov CLI. Do not copy a third-party later number. A positional prompt with no flag is still a paste. Stdin is a paste. A host overlay is not a second core. The headless feature URL stays **404**. The status overview has no release timestamp. Log the human plan. A model that only carries out that plan is a tool, not a conceiver. A claim with no human conceiver is a hold, not a filing. A green test is still not a merge. Do not force. Codex implicit invocation stays `allow_implicit_invocation: true`. Claude `disable-model-invocation` is not that switch. This skill has no hooks. Marketplace stays Hold. Mailed try pack v0.5.36 stays stale. Do not resend.
+
+### From references/reenable-and-publish.md
+
+- treating a 29 Oct pre-release as the stable CLI
+- inventing a date on the raw 2.1.314 heading
+- inventing a date on the raw 2.1.316 heading, inventing 2.1.315
+
+### From HITL-LUNCH.md
+
+- GitHub Latest is v2.1.322 (10 Nov, not a prerelease).
+- GitHub Latest is still v2.1.322 (10 Nov, not a prerelease).
+
+- GitHub releases Latest this read is still 0.164.0 (23 Oct).
+- GitHub releases Latest this read is 0.165.0 (27 Oct, not a prerelease).
+- GitHub releases Latest this read is still 0.165.0 (27 Oct, not a prerelease).
+- GitHub releases Latest this read is 0.166.0 (29 Oct, not a prerelease).
+- GitHub Latest this read is still 0.166.0 (29 Oct, not a prerelease).
+- GitHub Latest this read is still 0.167.0 (6 Nov, not a prerelease).
+- GitHub Latest this read is 0.167.1 (10 Nov, not a prerelease).
