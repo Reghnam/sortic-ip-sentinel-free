@@ -165,7 +165,7 @@ Hygiene only. Not legal advice. Public URL located 19 Sep afternoon, not "source
 - **Teach a task** (Grok Bot FAQ, last updated 18 Sep): records one browser workflow from the computer view. **10-minute** limit. Draft skill to review and test. Same Hold. Private skills are one library shared by all Bots — a hop, not a vault.
 - **Scan Tools rescan-after-change** (plugins/build/skills): after changing a skill, deploy and scan again before a new plugin version. The second snapshot is still a **method paste**. Hold. Do not invent `plugin.json`.
 - **GPT-5.3-Codex-Spark** removed 14 Sep from ChatGPT desktop / Codex CLI / IDE — **L0 model pick**. GPT-5.5 retire 14 Oct stays L0.
-- 11 automation chats are metadata + conversationId only. Interactive project chats missing. Do not dump chat bodies into this public repo.
+- **Grok-export W38 is readable** and still **PARTIAL**. No `conversation_search`. 11 automation chats are metadata + conversationId only. Interactive project chats missing. Do not dump chat bodies into this public repo. `chatroom_send` unavailable → NOTIFY_BLOCKED.
 - Leftover tester UAT / upskilling / partner-pre-read drafts stay **unsent**. No tester / firm / module names.
 - Office add-in next-paste, custom GPT→plugin dual-surface, host-stripped forks, universal directory, web-install ≠ hook deploy kept from 0.5.31.
 

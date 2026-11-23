@@ -25,9 +25,9 @@ Activation rulings are explicit in the tier text: exposure with no protect ask i
 
 - GitHub Actions checkout and setup-python are pinned to the Node 24 majors, checkout v7.0.1 and setup-python v7.1.0. Edition stays 0.5.81-free.
 
-- A host read outside `docs/host-reads/ROLLING.md`, and operator run state in docs, the exec summary, the launch note, the readme, or a pack, is a hard hygiene error. SKILL.md has a byte cap. Eight callout files now live under `references/`. Eleven dated matrix rows left the shipped matrix. The ChatGPT default prompt no longer carries the dated host-read tail. Edition stays 0.5.81-free.
+- A host read outside `docs/host-reads/ROLLING.md` is a hard hygiene error when a version sits within 40 characters of a calendar date. A rule-form line stays. Edition headings, schema names, and action pins stay. Operator run state is a hard error on the same scan, except a rule-form line. SKILL.md byte cap is 201728. Eight callout files now live under `references/`. The dated matrix rows stay in the shipped matrix. Edition stays 0.5.81-free.
 
-- The hygiene check flags operator run logs by run-log phrasing, and a public CLI version together with a calendar date outside the rolling host-read file. The lunch note and the custom-GPT package are in that scan. Edition stays 0.5.81-free.
+- Lines removed from the exec summary and the lunch note are host facts. They are copied verbatim into `docs/host-reads/ROLLING.md` and listed in `docs/host-reads/REMOVED-LINES.md`. The lunch note and the custom-GPT package are in that scan. Edition stays 0.5.81-free.
 
 ### Later read — 2026-11-22 (same edition)
 

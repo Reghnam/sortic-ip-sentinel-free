@@ -2,7 +2,17 @@
 
 These notes used to sit at the top of README.md (the CLI-version and release-read list). They are not install steps.
 
-- Host reads live in `docs/host-reads/ROLLING.md` only.
+- GitHub Latest this read is still **0.171.0** (20 Nov, not a prerelease); no row is dated 22 Nov; the first row is still a 21 Nov prerelease and is not the badge; the raw lead is still **2.1.330** and has no date; there is still no **2.1.324**; Latest is still **v2.1.330** (20 Nov); no release dated 22 Nov; this curl of the public changelog returned 200 and leads with **v1.0.89** (17 Nov); the feed agrees; a 22 Nov fetch of a 17 Nov lead is not a 22 Nov CLI; do not copy a third-party later number; a green test is still not a merge (same edition v0.5.81-free, read 22 Nov)
+- GitHub Latest this read is still **0.169.0** (13 Nov, not a prerelease); the first releases-list row is a 14 Nov prerelease and is not the Latest badge; an alpha published 14 Nov is not the stable CLI; the raw lead is **2.1.325** and has no date; there is no **2.1.324**; Latest is **v2.1.325** (13 Nov); no release dated 14 Nov; this curl returned 403; do not replace **v1.0.77**; a changelog file last-modified 13 Nov is not the public line; a PARTIAL backup is not a publish (same edition v0.5.81-free, read 14 Nov)
+- GitHub Latest on the 11 Nov read was **0.167.1** (10 Nov, not a prerelease); an alpha published 11 Nov is not an 11 Nov stable CLI; the raw lead is still 2.1.322 and has no date; a second read is not a new binary; this curl returned 403; do not replace v1.0.77; a third-party later number is not the public line; a corpus note is not this skill; a template note is not a rewrite (same edition v0.5.81-free, read 11 Nov 2026)
+- An alpha published after the Latest date is not a 10 Nov stable CLI; the raw lead is 2.1.322 and has no date; a changelog file above the page lead is not the public line; a corpus note is not this skill (same edition v0.5.81-free, read 10 Nov 2026)
+- An alpha above the Latest badge is not the stable CLI; a third-party index is not the releases list; a later read of the same raw heading is not a new binary; a contradictory page line is not a second CLI; a token-refresh timeout is not a transcript (same edition v0.5.81-free, read 9 Nov 2026)
+- Commits after the Latest tag are not a new CLI; a truncated digest is not a new practice; a status-page timestamp is not the CLI (v0.5.81-free)
+- First-match is not the whole policy; a Read allow is not an upload grant; a host file the public Latest line does not lead with is not the CLI (v0.5.80-free)
+- The raw heading has no date; a refused write is not a waiver; a silent exit 0 is not a pass (v0.5.79-free)
+- A later non-prerelease tag is the stable CLI; a missing number between headings is not a wipe; a 403 and the same public line are one version (v0.5.78-free)
+- The top row is not the Latest badge; a done backup is not a publish; an enterprise pointer that matches an alpha is not a promotion (v0.5.77-free)
+- A non-prerelease tag is the stable CLI; an alpha after it is not the next line; an external note is not a seal (edition 0.5.76-free)
 - A same-name twin is not a merge; a shortened description is not a wipe; a page that answers is not a new release (v0.5.75-free)
 - An implicit-off flag is not a vault; a six-section label is not a rewrite; a listing cap is not a wipe (v0.5.73-free)
 - An empty alpha is not a feature list; a cleanup of a recent file is not a wipe; a missing next note is not a wipe (v0.5.72-free).

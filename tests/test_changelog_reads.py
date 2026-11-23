@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -211,6 +212,7 @@ class ChangelogReadRuleTest(unittest.TestCase):
             "backup": "Our backup was marked PARTIAL.",
             "owner note": "No later owner note dated 21 or 22 Nov.",
             "unfinished mail": "Gmail and Drive did not finish.",
+            "this run": "Mail search this run timed out.",
         }
         for label, sentence in positives.items():
             self.assertIn(label, HYGIENE.operator_class_labels(sentence), sentence)
@@ -261,6 +263,191 @@ class ChangelogReadRuleTest(unittest.TestCase):
             )
             operators = HYGIENE.operator_state_findings(root)
             self.assertTrue(any("ROLLING.md" in item and "unfinished mail" in item for item in operators))
+
+    def test_rule_form_lines_are_not_operator_or_host_reads(self) -> None:
+        rules = (
+            "A NOTIFY_BLOCKED line is not a new practice.",
+            "Does not email partners. Does not invent a Bot DM.",
+            "Do not dump chat bodies.",
+            "Chat coverage marked PARTIAL is not an export.",
+            "A weekly backup marked PARTIAL is not a publish.",
+            "A timeout is not a transcript.",
+            "A drive timeout is not a wipe of the older export.",
+            "NOTIFY_BLOCKED is not a publish.",
+            "Latest is v2.1.331 (23 Nov). Do not copy a host changelog bullet.",
+        )
+        for sentence in rules:
+            self.assertEqual(HYGIENE.operator_class_labels(sentence), [], sentence)
+            self.assertFalse(HYGIENE.is_host_read_text(sentence), sentence)
+        self.assertEqual(
+            HYGIENE.operator_class_labels("Mail search this run timed out."),
+            ["this run"],
+        )
+
+    def test_host_read_plants_and_allowlist(self) -> None:
+        plants = (
+            "v1.0.90 on 24 Nov",
+            "2.1.331 as of 2026-11-23",
+            "Latest is v2.1.331 (23 Nov)",
+        )
+        for sentence in plants:
+            self.assertTrue(HYGIENE.is_host_read_text(sentence), sentence)
+        allowed = (
+            "schema v1",
+            "sorticai.hygiene_package.v1",
+            "## [0.5.81-free] — 2026-11-01",
+            "checkout v7.0.1 on 23 Nov",
+            "Changelog tip re-read 12 Oct is still 2.1.296 (9 Oct).",
+        )
+        for sentence in allowed:
+            self.assertFalse(HYGIENE.is_host_read_text(sentence), sentence)
+
+    def _plant_host_read(self, rel: str, sentence: str) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(sentence + "\n", encoding="utf-8")
+            findings = HYGIENE.host_read_findings(root)
+        self.assertTrue(any(item.startswith(rel) for item in findings), findings)
+
+    def test_host_read_plant_on_exec_summary(self) -> None:
+        self._plant_host_read("EXEC-SUMMARY.md", "v1.0.90 on 24 Nov")
+
+    def test_host_read_plant_on_launch(self) -> None:
+        self._plant_host_read("LAUNCH.md", "2.1.331 as of 2026-11-23")
+
+    def test_host_read_plant_on_grok_skill_reference(self) -> None:
+        self._plant_host_read(
+            "grok-skill/references/plant.md",
+            "Latest is v2.1.331 (23 Nov)",
+        )
+
+    def test_host_read_plant_on_openai_yaml(self) -> None:
+        self._plant_host_read(
+            "chatgpt-skill/agents/openai.yaml",
+            "v1.0.90 on 24 Nov",
+        )
+
+    def test_host_read_plant_on_gpt_package(self) -> None:
+        self._plant_host_read(
+            "openai-gpt-package/plant.md",
+            "2.1.331 as of 2026-11-23",
+        )
+
+    def test_host_read_plant_on_hitl(self) -> None:
+        self._plant_host_read("HITL-LUNCH.md", "Latest is v2.1.331 (23 Nov)")
+
+    def test_skill_byte_cap_plant(self) -> None:
+        cap = HYGIENE.SKILL_BYTE_CAP
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for rel in HYGIENE.SKILL_BYTE_FILES:
+                path = root / rel
+                path.parent.mkdir(parents=True, exist_ok=True)
+                size = cap + 1024 if rel == "SKILL.md" else 32
+                path.write_bytes(b"x" * size)
+            errors = HYGIENE.skill_byte_errors(root)
+        self.assertTrue(any(item.startswith("SKILL.md is ") for item in errors), errors)
+
+    def test_removed_lines_file_is_outside_shipped_packs(self) -> None:
+        rel = "docs/host-reads/REMOVED-LINES.md"
+        self.assertTrue((ROOT / rel).is_file())
+        for pack in HYGIENE.PACKS:
+            names = BUILD.pack_members(ROOT / pack)
+            self.assertFalse(any(name.endswith("REMOVED-LINES.md") for name in names))
+        plan = SYNC.build_plan(ROOT)
+        self.assertNotIn(rel, plan.writes)
+        self.assertNotIn(rel, plan.deletes)
+
+    def test_removed_lines_match_the_main_diff(self) -> None:
+        base = "3763e526"
+        suffixes = {".md", ".txt", ".yaml", ".yml", ".json"}
+        rule = HYGIENE._RULE_LINE
+        listed = _parse_removed_lines((ROOT / "docs/host-reads/REMOVED-LINES.md").read_text(encoding="utf-8"))
+        rolling = (ROOT / ROLLING).read_text(encoding="utf-8")
+        for path, tag, line in listed:
+            self.assertIn(tag, {"OPERATOR-STATE", "MOVED-TO-ROLLING"})
+            self.assertIsNone(rule.search(line), path)
+            if tag == "MOVED-TO-ROLLING":
+                self.assertIn(line, rolling)
+        base_files = set(_git_paths(base, suffixes))
+        current = set(_git_paths("HEAD", suffixes))
+        current.update(
+            path for path in _git_paths_worktree(suffixes) if path not in current
+        )
+        removed: Counter[tuple[str, str]] = Counter()
+        for path in sorted(base_files):
+            if _removal_exempt(path, base_files):
+                continue
+            old = _git_show(base, path).splitlines()
+            new_path = ROOT / path
+            new = new_path.read_text(encoding="utf-8").splitlines() if new_path.is_file() else []
+            old_counts, new_counts = Counter(old), Counter(new)
+            for line, count in old_counts.items():
+                missing = count - new_counts.get(line, 0)
+                if missing > 0:
+                    removed[(path, line)] += missing
+        found: Counter[tuple[str, str]] = Counter((path, line) for path, _tag, line in listed)
+        self.assertEqual(found, removed)
+
+
+def _parse_removed_lines(text: str) -> list[tuple[str, str, str]]:
+    records: list[tuple[str, str, str]] = []
+    lines = text.splitlines()
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        if not line.startswith("@ "):
+            index += 1
+            continue
+        _at, path, tag, length = line.split(" ", 3)
+        index += 1
+        body = lines[index]
+        if len(body) != int(length):
+            raise AssertionError(f"{path} record length {len(body)} != {length}")
+        records.append((path, tag, body))
+        index += 1
+    return records
+
+
+def _git_paths(rev: str, suffixes: set[str]) -> list[str]:
+    completed = subprocess.run(
+        ["git", "ls-tree", "-r", "--name-only", rev],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return [path for path in completed.stdout.splitlines() if Path(path).suffix.lower() in suffixes]
+
+
+def _git_paths_worktree(suffixes: set[str]) -> list[str]:
+    completed = subprocess.run(
+        ["git", "ls-files", "--others", "--exclude-standard"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return [path for path in completed.stdout.splitlines() if Path(path).suffix.lower() in suffixes]
+
+
+def _git_show(rev: str, path: str) -> str:
+    completed = subprocess.run(
+        ["git", "show", f"{rev}:{path}"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return completed.stdout
+
+
+def _removal_exempt(path: str, base_files: set[str]) -> bool:
+    if path == "CHANGELOG.md" or path.startswith("tests/") or path.startswith("scripts/"):
+        return True
+    return path not in base_files
 
 
 if __name__ == "__main__":

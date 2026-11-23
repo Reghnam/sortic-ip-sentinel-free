@@ -121,8 +121,11 @@ CHANGELOG_OPS_PHRASES = (
 )
 CHANGELOG_READ_LINE_CAP = 40
 ROLLING_REL = "docs/host-reads/ROLLING.md"
+REMOVED_LINES_REL = "docs/host-reads/REMOVED-LINES.md"
 # Next 1024-byte boundary above the largest of the five SKILL.md files.
-SKILL_BYTE_CAP = 86016
+# The restored skill is the main text (201440 bytes). Rule lines in that
+# file are 149240 bytes, so the split-era 86016 cap cannot hold them.
+SKILL_BYTE_CAP = 201728
 SKILL_BYTE_FILES = (
     "SKILL.md",
     "chatgpt-skill/SKILL.md",
@@ -131,6 +134,22 @@ SKILL_BYTE_FILES = (
     "grok-skill/SKILL.md",
 )
 _TEXT_SUFFIXES = {".md", ".txt", ".yaml", ".yml", ".json"}
+# A line that states a rule is product text. Skip the whole line before
+# operator and host-read matching, including when an earlier sentence on
+# that same line names a run. The rule forms are "X is not a Y", "Do not",
+# and "Does not".
+_RULE_LINE = re.compile(r"(?i)(?:\bis not an?\b|\bDo not\b|\bDoes not\b)")
+_MONTH = r"Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+_VERSION_RE = re.compile(r"(?<![A-Za-z0-9.])v?(\d+\.\d+\.\d+)(?![A-Za-z0-9.])")
+_DATE_RE = re.compile(
+    rf"(?i)(?:\b\d{{1,2}}\s+(?:{_MONTH})\b|\b\d{{4}}-\d{{2}}-\d{{2}}\b|\bas of\b)"
+)
+# Shipped eval expectations quote a changelog tip. They stay byte-identical
+# and are not a daily host read. Edition pins (0.5.x and -free), schema
+# names, and actions/* pins are the other allowlist.
+_HOST_READ_TEXT_ALLOW = re.compile(
+    r"(?i)(?:\bChangelog tip\b|\bPublic Grok changelog\b|\bChangelog newest\b)"
+)
 # Run-log phrasing only. A product rule that names an export, a mail copy,
 # a timeout, or a transcript stays allowed, including the L0 example and the
 # restored eval lines.
@@ -165,19 +184,55 @@ _OPERATOR_CLASSES: tuple[tuple[str, re.Pattern[str]], ...] = (
         "unfinished mail",
         re.compile(r"(?i)\bGmail and Drive did not finish\b"),
     ),
+    (
+        "this run",
+        re.compile(
+            r"(?i)\b(?:e-?mail|mailbox|gmail|mail|chat|drive)\s+search\s+this run\b"
+        ),
+    ),
 )
-# A public Latest-style CLI version beside a calendar date. Changelog-tip
-# lines such as "2.1.296 (9 Oct)" are product expectations and do not match.
-_HOST_READ_RE = re.compile(
-    r"(?i)(?:"
-    r"\bGitHub\s+(?:releases\s+)?Latest\b[^.\n]{0,80}"
-    r"\bv?\d+\.\d+\.\d+\**\s*\(\s*\d{1,2}\s+"
-    r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b"
-    r"|"
-    r"\bis still\s+\**0\.\d+\.\d+\**\s*\(\s*\d{1,2}\s+"
-    r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b"
-    r")"
-)
+
+
+def _version_allowlisted(line: str, match: re.Match[str]) -> bool:
+    """Edition headings, schema names, and actions/* pins are not host reads."""
+    if line[match.end() : match.end() + 5].startswith("-free"):
+        return True
+    if match.group(1).startswith("0.5."):
+        return True
+    before = line[max(0, match.start() - 32) : match.start()]
+    if re.search(r"(?i)\b(?:checkout|setup-python)\s+$", before):
+        return True
+    if re.search(r"(?i)\bschema\s+$", before):
+        return True
+    if re.search(r"(?i)hygiene_package\W*$", before):
+        return True
+    return False
+
+
+def _line_is_host_read(line: str) -> bool:
+    """True when a non-rule line pairs a semver with a date within 40 chars."""
+    if _RULE_LINE.search(line) or _HOST_READ_TEXT_ALLOW.search(line):
+        return False
+    dates = list(_DATE_RE.finditer(line))
+    if not dates:
+        return False
+    for version in _VERSION_RE.finditer(line):
+        if _version_allowlisted(line, version):
+            continue
+        for date in dates:
+            if date.end() <= version.start():
+                gap = version.start() - date.end()
+            else:
+                gap = date.start() - version.end()
+            if gap <= 40:
+                return True
+    return False
+
+
+def _without_rule_lines(text: str) -> str:
+    return "\n".join(line for line in text.splitlines() if not _RULE_LINE.search(line))
+
+
 _SHORT_DESC_EDITION = re.compile(
     r'(?m)^  short-description:\s*"[^\n]*\bv(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])'
 )
@@ -519,12 +574,18 @@ def changelog_read_findings(text: str) -> list[str]:
 
 def operator_class_labels(text: str) -> list[str]:
     """Class labels for operator run-state in ``text``, in pattern order."""
-    return [label for label, cre in _OPERATOR_CLASSES if cre.search(text)]
+    scanned = _without_rule_lines(text)
+    return [label for label, cre in _OPERATOR_CLASSES if cre.search(scanned)]
 
 
 def is_host_read_text(text: str) -> bool:
-    """True when ``text`` is a daily host-read sentence."""
-    return _HOST_READ_RE.search(text) is not None
+    """True when ``text`` contains a daily host-read line."""
+    return any(_line_is_host_read(line) for line in text.splitlines())
+
+
+def host_read_lines(text: str) -> list[str]:
+    """Non-rule lines in ``text`` that pair a version with a nearby date."""
+    return [line for line in text.splitlines() if _line_is_host_read(line)]
 
 
 def tracked_text_rels(root: Path) -> list[str]:
@@ -572,8 +633,9 @@ def operator_state_findings(root: Path) -> list[str]:
             findings.append(error)
             continue
         assert text is not None
+        scanned = _without_rule_lines(text)
         for label, cre in _OPERATOR_CLASSES:
-            match = cre.search(text)
+            match = cre.search(scanned)
             if match:
                 findings.append(
                     f"{rel} contains operator state ({label}): {match.group(0)}"
@@ -585,14 +647,16 @@ def host_read_findings(root: Path) -> list[str]:
     """Daily host reads outside ROLLING.md. ROLLING.md itself is exempt."""
     findings: list[str] = []
     for rel in tracked_text_rels(root):
-        if rel == ROLLING_REL:
+        # ROLLING.md is the host-read file. REMOVED-LINES.md quotes the
+        # lines that moved there and is not a second host-read surface.
+        if rel in {ROLLING_REL, REMOVED_LINES_REL}:
             continue
         text, error = _read_tracked(root, rel)
         if error:
             findings.append(error)
             continue
         assert text is not None
-        if _HOST_READ_RE.search(text):
+        if any(_line_is_host_read(line) for line in text.splitlines()):
             findings.append(f"{rel} contains a host read outside {ROLLING_REL}")
     return findings
 
