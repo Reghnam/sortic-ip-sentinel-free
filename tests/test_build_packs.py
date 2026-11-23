@@ -116,6 +116,7 @@ class BuildPackTests(unittest.TestCase):
             "compatibility",
             "metadata",
             "allowed-tools",
+            "when_to_use",
         }
         text = (ROOT / "claude-skill" / "SKILL.md").read_text(encoding="utf-8")
         self.assertTrue(text.startswith("---\n"))
