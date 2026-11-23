@@ -23,6 +23,8 @@ Activation rulings are explicit in the tier text: exposure with no protect ask i
 
 - Claude upload archive is built with the skill folder at the top and named from `name`. Install notes cover claude.ai, Claude Desktop, Claude Code, and the API. `claude-skill/SETUP.md` is the paste-in nudge and is not copied to other packs. The first activation in a conversation says one active line and does not fire on L0. Usage examples name the direct invocation "run IP-sensitive moment". Edition stays 0.5.81-free.
 
+- GitHub Actions checkout and setup-python are pinned to the Node 24 majors, checkout v7.0.1 and setup-python v7.1.0. Edition stays 0.5.81-free.
+
 ### Later read — 2026-11-22 (same edition)
 
 A content-only host read. No edition bump. No pin restamp. **No client / product / infra names.**

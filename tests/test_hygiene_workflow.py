@@ -1066,8 +1066,8 @@ class HygieneWorkflowTests(unittest.TestCase):
     def test_actions_are_pinned_to_full_shas(self) -> None:
         uses = re.findall(r"uses:\s*(\S+)", self.text)
         at = chr(64)
-        checkout = "11d5960a326750d5838078e36cf38b85af677262"
-        setup = "a26af69be951a213d495a4c3e4e4022e16d87065"
+        checkout = "3d3c42e5aac5ba805825da76410c181273ba90b1"
+        setup = "6d4fd22b20465ccc0f7354476588e8df7c9ca0e0"
         self.assertEqual(
             uses,
             ["actions/checkout" + at + checkout, "actions/setup-python" + at + setup],
@@ -1077,8 +1077,8 @@ class HygieneWorkflowTests(unittest.TestCase):
             self.assertNotIn(at + "main", item)
             self.assertNotIn(at + "master", item)
             self.assertNotRegex(item, re.escape(at) + r"v\d")
-        self.assertIn("# v4.4.0", self.text)
-        self.assertIn("# v5.6.0", self.text)
+        self.assertIn("# v7.0.1", self.text)
+        self.assertIn("# v7.1.0", self.text)
         self.assertIn("persist-credentials: false", self.text)
         self.assertNotIn("gitleaks-action", self.text)
 
