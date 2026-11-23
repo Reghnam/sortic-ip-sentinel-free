@@ -6,6 +6,7 @@ import importlib.util
 import os
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -195,6 +196,63 @@ class ChangelogReadRuleTest(unittest.TestCase):
         contributing = (ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
         self.assertIn(f"`{ROLLING}`", changelog)
         self.assertIn(f"`{ROLLING}`", contributing)
+        self.assertEqual(HYGIENE.operator_state_findings(ROOT), [])
+        self.assertEqual(HYGIENE.host_read_findings(ROOT), [])
+        self.assertEqual(HYGIENE.skill_byte_errors(ROOT), [])
+
+    def test_operator_classes_match_run_state_and_not_rulings(self) -> None:
+        positives = {
+            "search": "Mail search this read timed out on token refresh.",
+            "export": "No newer grok-export than W38.",
+            "timeout": "Drive search this read timed out.",
+            "token refresh": "A token-refresh timeout is not a transcript.",
+            "notify": "NOTIFY_BLOCKED is not a publish.",
+            "tool name": "chatroom_send is not in the tool list.",
+            "backup": "A weekly backup marked PARTIAL is not a publish.",
+            "owner note": "No later owner note dated 21 or 22 Nov.",
+            "unfinished mail": "Gmail and Drive did not finish.",
+        }
+        for label, sentence in positives.items():
+            self.assertIn(label, HYGIENE.operator_class_labels(sentence), sentence)
+        self.assertIn("export", HYGIENE.operator_class_labels("The export stays W38."))
+        negatives = (
+            "A backup is not a publish. An export is a paste.",
+            "A timeout deny is not a wipe.",
+            "weekly backup without protect intent",
+            "a memory snapshot is not a grok-export",
+            "A tool list is not a limit.",
+            "Marketplace stays Hold. Evals stay 281. No edition bump.",
+            "is NOTIFY_BLOCKED, not a publish",
+        )
+        # The notify class matches the token wherever it sits, including a ruling
+        # that names it. The negative set below is the wording that must stay.
+        for sentence in negatives[:-1]:
+            self.assertEqual(HYGIENE.operator_class_labels(sentence), [], sentence)
+        self.assertTrue(HYGIENE.is_host_read_text("GitHub Latest this read is still 0.171.0."))
+        self.assertFalse(HYGIENE.is_host_read_text("A later non-prerelease tag is the stable CLI."))
+
+    def test_host_read_rule_exempts_only_rolling(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            rolling = root / "docs" / "host-reads"
+            rolling.mkdir(parents=True)
+            (rolling / "ROLLING.md").write_text(
+                "GitHub Latest this read is still 0.171.0.\nNOTIFY_BLOCKED\n",
+                encoding="utf-8",
+            )
+            (root / "README.md").write_text(
+                "GitHub Latest this read is still 0.171.0.\n",
+                encoding="utf-8",
+            )
+            (root / "EXEC-SUMMARY.md").write_text("Edition stays.\n", encoding="utf-8")
+            (root / "LAUNCH.md").write_text("Public on GitHub.\n", encoding="utf-8")
+            (root / "SKILL.md").write_text("No host log.\n", encoding="utf-8")
+            (root / "references").mkdir()
+            findings = HYGIENE.host_read_findings(root)
+            self.assertTrue(any(item.startswith("README.md") for item in findings))
+            self.assertFalse(any(item.startswith(f"{ROLLING}:") or item.startswith(f"{ROLLING} ") for item in findings))
+            operators = HYGIENE.operator_state_findings(root)
+            self.assertTrue(any("ROLLING.md" in item and "notify" in item for item in operators))
 
 
 if __name__ == "__main__":

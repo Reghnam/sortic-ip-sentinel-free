@@ -120,6 +120,80 @@ CHANGELOG_OPS_PHRASES = (
     "returned no messages",
 )
 CHANGELOG_READ_LINE_CAP = 40
+ROLLING_REL = "docs/host-reads/ROLLING.md"
+# Next 1024-byte boundary above the largest of the five SKILL.md files.
+SKILL_BYTE_CAP = 86016
+SKILL_BYTE_FILES = (
+    "SKILL.md",
+    "chatgpt-skill/SKILL.md",
+    "claude-skill/SKILL.md",
+    "cursor-skill/SKILL.md",
+    "grok-skill/SKILL.md",
+)
+_TEXT_SUFFIXES = {".md", ".txt", ".yaml", ".yml", ".json"}
+# Report-shaped operator state. A ruling that only names the idea
+# ("a timeout deny is not a wipe", "weekly backup" inside an L0 example)
+# does not match.
+_OPERATOR_CLASSES: tuple[tuple[str, re.Pattern[str]], ...] = (
+    (
+        "search",
+        re.compile(
+            r"(?i)(?:"
+            r"\b(?:e-?mail|mailbox|mail|chat)\s+search\b"
+            r"|\bdrive\s+(?:title\s+)?search\b"
+            r"|\bfile-title\s+lookup\b"
+            r"|\bfile[-\s]title\s+lookup\b"
+            r"|\btitle\s+search\s+(?:returned|timed|did|was)\b"
+            r")"
+        ),
+    ),
+    (
+        "export",
+        re.compile(
+            r"(?i)(?:"
+            r"\bgrok-export\s+W\d+"
+            r"|\bgrok-export\s+PARTIAL\b"
+            r"|\bgrok-export\s+coverage\s+is\s+PARTIAL\b"
+            r"|\bno newer grok-export\b"
+            r"|\bchat\s+export\b"
+            r"|\bthe export stays W\d+\b"
+            r")"
+        ),
+    ),
+    (
+        "timeout",
+        re.compile(
+            r"(?i)(?:"
+            r"\btimed\s+out\b"
+            r"|\btoken-refresh\s+timeout\b"
+            r"|\bdrive\s+timeout\b"
+            r"|\ba\s+timeout\s+is\s+not\s+a\s+(?:wipe|transcript)\b"
+            r")"
+        ),
+    ),
+    ("token refresh", re.compile(r"(?i)\btoken[-\s]?refresh\b")),
+    ("notify", re.compile(r"(?i)\bNOTIFY_BLOCKED\b|\bblocked\s+notify\b")),
+    (
+        "tool name",
+        re.compile(
+            r"(?i)\bconversation_search\b"
+            r"|\b[a-z][a-z0-9]*_send\b"
+            r"|\bnot\s+in\s+the\s+tool\s+list\b"
+        ),
+    ),
+    (
+        "backup",
+        re.compile(
+            r"(?i)\bPARTIAL\s+backup\b|\bmarked\s+PARTIAL\b|\bchat-coverage\s+PARTIAL\b"
+        ),
+    ),
+    ("owner note", re.compile(r"(?i)\bowner[-\s]?note\b")),
+    (
+        "unfinished mail",
+        re.compile(r"(?i)\bGmail and Drive did not finish\b"),
+    ),
+)
+_HOST_READ_RE = re.compile(r"(?i)\bthis read\b")
 _SHORT_DESC_EDITION = re.compile(
     r'(?m)^  short-description:\s*"[^\n]*\bv(\d+\.\d+\.\d+-free)(?![A-Za-z0-9+-])'
 )
@@ -457,6 +531,94 @@ def changelog_read_findings(text: str) -> list[str]:
         if phrase in section:
             findings.append(f"current edition contains operator phrase: {phrase}")
     return findings
+
+
+def operator_class_labels(text: str) -> list[str]:
+    """Class labels for operator run-state in ``text``, in pattern order."""
+    return [label for label, cre in _OPERATOR_CLASSES if cre.search(text)]
+
+
+def is_host_read_text(text: str) -> bool:
+    """True when ``text`` is a daily host-read sentence."""
+    return _HOST_READ_RE.search(text) is not None
+
+
+def tracked_text_rels(root: Path) -> list[str]:
+    """Tracked text under docs, the public notes, the root skill, and every pack."""
+    rels: list[str] = []
+
+    def add(path: Path) -> None:
+        if path.is_file() and path.suffix.lower() in _TEXT_SUFFIXES:
+            rels.append(path.relative_to(root).as_posix())
+
+    for name in ("EXEC-SUMMARY.md", "LAUNCH.md", "README.md", "SKILL.md"):
+        add(root / name)
+    for folder in (root / "docs", root / "references"):
+        if folder.is_dir():
+            for path in folder.rglob("*"):
+                add(path)
+    for pack in PACKS:
+        pack_dir = root / pack
+        if pack_dir.is_dir():
+            for path in pack_dir.rglob("*"):
+                add(path)
+    return sorted(set(rels))
+
+
+def _read_tracked(root: Path, rel: str) -> tuple[str | None, str | None]:
+    path = root / rel
+    try:
+        return path.read_text(encoding="utf-8"), None
+    except (OSError, UnicodeError) as exc:
+        return None, f"{rel} is not readable text ({exc.__class__.__name__})"
+
+
+def operator_state_findings(root: Path) -> list[str]:
+    """Operator run-state in every tracked text file, including ROLLING.md."""
+    findings: list[str] = []
+    for rel in tracked_text_rels(root):
+        text, error = _read_tracked(root, rel)
+        if error:
+            findings.append(error)
+            continue
+        assert text is not None
+        for label, cre in _OPERATOR_CLASSES:
+            match = cre.search(text)
+            if match:
+                findings.append(
+                    f"{rel} contains operator state ({label}): {match.group(0)}"
+                )
+    return findings
+
+
+def host_read_findings(root: Path) -> list[str]:
+    """Daily host reads outside ROLLING.md. ROLLING.md itself is exempt."""
+    findings: list[str] = []
+    for rel in tracked_text_rels(root):
+        if rel == ROLLING_REL:
+            continue
+        text, error = _read_tracked(root, rel)
+        if error:
+            findings.append(error)
+            continue
+        assert text is not None
+        if _HOST_READ_RE.search(text):
+            findings.append(f"{rel} contains a host read outside {ROLLING_REL}")
+    return findings
+
+
+def skill_byte_errors(root: Path) -> list[str]:
+    """Fail when a shipped SKILL.md is over the byte cap."""
+    errors: list[str] = []
+    for rel in SKILL_BYTE_FILES:
+        path = root / rel
+        if not path.is_file():
+            errors.append(f"{rel} is missing")
+            continue
+        size = path.stat().st_size
+        if size > SKILL_BYTE_CAP:
+            errors.append(f"{rel} is {size} bytes (cap {SKILL_BYTE_CAP})")
+    return errors
 
 
 def strict_changelog_enabled(flag: bool, env: str | None) -> bool:
@@ -807,6 +969,9 @@ def _hygiene(args: argparse.Namespace) -> int:
     errors.extend(license_version_errors(ROOT))
     errors.extend(edition_pin_errors(ROOT))
     errors.extend(tree_leak_errors(ROOT))
+    errors.extend(operator_state_findings(ROOT))
+    errors.extend(host_read_findings(ROOT))
+    errors.extend(skill_byte_errors(ROOT))
 
     changelog_findings = changelog_read_findings(
         (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")

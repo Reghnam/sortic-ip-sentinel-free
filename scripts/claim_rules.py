@@ -336,7 +336,7 @@ ALLOW_LIST: tuple[AllowEntry, ...] = (
     AllowEntry(
         "guaranteed",
         "references/evals.md",
-        '"A plan is not a build. Does not add a money-back line, a percent, a hosting claim, a compliance claim, or a guarantee, or an unverified public-call date. Not legal advice stays. A renewal notice is not approval to pay. A passkey-added alert is not a rotate. No names. No amounts. No places. No newer grok-export than W38. A bot transcript is not an export. Marketplace stays Hold. chatroom_send unavailable is NOTIFY_BLOCKED, not a publish. Does not claim a scan this tip did not run"',
+        '"A plan is not a build. Does not add a money-back line, a percent, a hosting claim, a compliance claim, or a guarantee, or an unverified public-call date. Not legal advice stays. A renewal notice is not approval to pay. A passkey-added alert is not a rotate. No names. No amounts. No places. A bot transcript is not an export. Marketplace stays Hold. Does not claim a scan this tip did not run"',
         "The line says the result does not add the matched word. Commas end the clause, so the earlier cue does not apply.",
         "false-positive",
     ),
@@ -380,6 +380,7 @@ LEGACY_CORPUS_FILES: frozenset[str] = frozenset(
     {
         ".cursor/skills/README.md",
         "CHANGELOG.md",
+        "docs/host-reads/ROLLING.md",
         "HITL-LUNCH.md",
         "LAUNCH.md",
         "README.md",
