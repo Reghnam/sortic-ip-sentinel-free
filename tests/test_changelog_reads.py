@@ -367,10 +367,15 @@ class ChangelogReadRuleTest(unittest.TestCase):
         listed = _parse_removed_lines((ROOT / "docs/host-reads/REMOVED-LINES.md").read_text(encoding="utf-8"))
         rolling = (ROOT / ROLLING).read_text(encoding="utf-8")
         for path, tag, line in listed:
-            self.assertIn(tag, {"OPERATOR-STATE", "MOVED-TO-ROLLING"})
-            self.assertIsNone(rule.search(line), path)
-            if tag == "MOVED-TO-ROLLING":
+            if tag == "OPERATOR-STATE":
+                self.assertIsNone(rule.search(line), path)
+            elif tag == "MOVED-TO-ROLLING":
                 self.assertIn(line, rolling)
+            elif tag.startswith("MOVED-TO-REF "):
+                ref = tag[len("MOVED-TO-REF ") :]
+                self.assertIn(line, (ROOT / ref).read_text(encoding="utf-8"), path)
+            else:
+                self.fail(f"unknown tag {tag} for {path}")
         base_files = set(_git_paths(base, suffixes))
         current = set(_git_paths("HEAD", suffixes))
         current.update(
@@ -392,6 +397,17 @@ class ChangelogReadRuleTest(unittest.TestCase):
         self.assertEqual(found, removed)
 
 
+def _parse_removed_header(line: str) -> tuple[str, str, int]:
+    """`@ <file> <tag> <length>`, where tag may be `MOVED-TO-REF <path>`."""
+    body = line[2:]
+    path, rest = body.split(" ", 1)
+    if rest.startswith("MOVED-TO-REF "):
+        ref, length = rest[len("MOVED-TO-REF ") :].rsplit(" ", 1)
+        return path, f"MOVED-TO-REF {ref}", int(length)
+    tag, length = rest.rsplit(" ", 1)
+    return path, tag, int(length)
+
+
 def _parse_removed_lines(text: str) -> list[tuple[str, str, str]]:
     records: list[tuple[str, str, str]] = []
     lines = text.splitlines()
@@ -401,10 +417,10 @@ def _parse_removed_lines(text: str) -> list[tuple[str, str, str]]:
         if not line.startswith("@ "):
             index += 1
             continue
-        _at, path, tag, length = line.split(" ", 3)
+        path, tag, length = _parse_removed_header(line)
         index += 1
         body = lines[index]
-        if len(body) != int(length):
+        if len(body) != length:
             raise AssertionError(f"{path} record length {len(body)} != {length}")
         records.append((path, tag, body))
         index += 1

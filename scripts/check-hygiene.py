@@ -122,10 +122,9 @@ CHANGELOG_OPS_PHRASES = (
 CHANGELOG_READ_LINE_CAP = 40
 ROLLING_REL = "docs/host-reads/ROLLING.md"
 REMOVED_LINES_REL = "docs/host-reads/REMOVED-LINES.md"
-# Next 1024-byte boundary above the largest of the five SKILL.md files.
-# The restored skill is the main text (201440 bytes). Rule lines in that
-# file are 149240 bytes, so the split-era 86016 cap cannot hold them.
-SKILL_BYTE_CAP = 201728
+# Next 1024-byte boundary above the largest of the five SKILL.md files
+# after the long rule lines moved into references/.
+SKILL_BYTE_CAP = 86016
 SKILL_BYTE_FILES = (
     "SKILL.md",
     "chatgpt-skill/SKILL.md",

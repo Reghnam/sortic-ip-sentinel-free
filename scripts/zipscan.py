@@ -32,6 +32,9 @@ _COMMON_LEGACY = frozenset(
         "references/public-corpus-rag.md",
         "references/sidecar-retrieve.stub.json",
         "references/v05-lite-prior-art-pointers.md",
+        # The Friedberg callout line moved here from SKILL.md. The mention
+        # was already a legacy warning in that file.
+        "references/l3-callouts.md",
     }
 )
 
