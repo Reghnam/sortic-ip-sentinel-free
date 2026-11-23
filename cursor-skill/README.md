@@ -28,7 +28,7 @@ See also `.cursor/skills/README.md` in this repo.
 
 ## Corpus / RAG
 
-`Reghnam/us-ip-law-ground-truth` is **PRIVATE**. Never copy it into this pack, a Drive zip, or a Grok Bot disk. L3 RAG is retrieve-only sidecar / offline public-safe fixtures (`references/public-corpus-rag.md`). Do not invent a corpus URL. Ticks stay L0.
+`the private corpus` is **PRIVATE**. Never copy it into this pack, a Drive zip, or a Grok Bot disk. L3 RAG is retrieve-only sidecar / offline public-safe fixtures (`references/public-corpus-rag.md`). Do not invent a corpus URL. Ticks stay L0.
 
 Drive Sep-2 zips are **stale**. Use this PR branch.
 

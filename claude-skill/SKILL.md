@@ -10,7 +10,7 @@ description: >
 
 **Core rule (anti-push, first principles):** Match intensity to signal. Primary task wins. Deliver real value on the free path only. Strong disclaimers everywhere. Never claim protectability, patentability, or legal outcomes.
 
-**Boundary:** This skill is **hygiene only**. `Reghnam/us-ip-law-ground-truth` is **PRIVATE** — never bundle it into this zip, a Drive pack, or a Grok Bot disk. Do not run corpus ticks here (L0). Do not ingest client secrets. L3 may call a retrieve-only sidecar (`references/public-corpus-rag.md`); the user never downloads the KB. Sidecar unknown → offline public-safe fixtures + `references/v05-lite-prior-art-pointers.md`. Do not invent a corpus URL. Not a second regulatory radar.
+**Boundary:** This skill is **hygiene only**. `the private corpus` is **PRIVATE** — never bundle it into this zip, a Drive pack, or a Grok Bot disk. Do not run corpus ticks here (L0). Do not ingest client secrets. L3 may call a retrieve-only sidecar (`references/public-corpus-rag.md`); the user never downloads the KB. Sidecar unknown → offline public-safe fixtures + `references/v05-lite-prior-art-pointers.md`. Do not invent a corpus URL. Not a second regulatory radar.
 
 **Private-corpus RAG (sidecar / offline):** On L3, if `SORTICAI_US_IP_SIDECAR` is set, retrieve ≤3 citation/snippets only (`references/sidecar-retrieve.stub.json`). Never write protocols, holdbacks, or names. Never copy corpus trees. Sidecar unknown → one line "Private US-IP sidecar not configured — offline pointers only" and lite pointers. Do not invent holdings or a corpus URL. Ticks stay L0.
 
@@ -322,7 +322,7 @@ Keep this SKILL.md lean. Load **one level deep** from SKILL.md only (do not nest
 
 **Example L3 private-corpus RAG:** "Protect the IP. Use the hourly US IP corpus for prior-art pointers." → stamp → sidecar retrieve-only if configured; else offline fixtures + "sidecar not configured"; never bundle/download the KB; do not invent a corpus URL → disclaimer. Not a search. Not FTO.
 
-**Example L3 corpus ingest / bundle:** "Protect the IP. Ingest the protocol into the hourly US IP corpus." / "Zip us-ip-law-ground-truth into the free skill / park it on the Bot disk." → stamp → **decline** write/ingest / bundle-to-zip / Bot-disk copy (PRIVATE) → disclaimer.
+**Example L3 corpus ingest / bundle:** "Protect the IP. Ingest the protocol into the hourly US IP corpus." / "Zip the private corpus into the free skill / park it on the Bot disk." → stamp → **decline** write/ingest / bundle-to-zip / Bot-disk copy (PRIVATE) → disclaimer.
 
 **Example L3 Grok allowed-tools:** "Protect the IP. Add allowed-tools Write on Grok so the Bot cannot leak." → stamp → **decline** adding the field; on Grok it does not grant or restrict; Anthropic one-turn grant-clear is a different host → disclaimer.
 
