@@ -25,36 +25,36 @@ Activation rulings are explicit in the tier text: exposure with no protect ask i
 
 - GitHub Actions checkout and setup-python are pinned to the Node 24 majors, checkout v7.0.1 and setup-python v7.1.0. Edition stays 0.5.81-free.
 
-### Later read — 2026-11-24 (same edition)
+### Later read — 2026-11-25 (same edition)
 
 A content-only host read. No edition bump. No pin restamp. **No client / product / infra names.**
 
 #### OpenAI (first)
 
-- GitHub Latest this read is **0.172.0** (24 Nov, not a prerelease). The latest redirect lands on that tag. The 22 Nov sentence that Latest is still **0.171.0**, and that no row is dated 22 Nov, is that day's read. A later non-prerelease tag is the stable CLI.
-- **New:** the first row is a prerelease published 24 Nov. That row is not the Latest badge. A higher alpha number is not Latest. A later same-day prerelease is not the badge. Page order is not the badge. Do not copy the alpha tag. Do not copy a commit count. Do not copy a model name. Do not copy the release bullets. Commits after the Latest tag are not a new CLI.
-- A restored sandbox on resume is not a new owner approval. Opening a saved thread is not a wipe of a hold. The description is the interface. State what it does and when, near the start, within 1024 characters. Do not freeze the body before the trigger evals. Do not copy a host changelog bullet into this pack. Codex implicit invocation stays `allow_implicit_invocation` (this pack stays true). This skill still ships **no hooks**.
+- GitHub Latest this read is still **0.172.0** (24 Nov, not a prerelease). The latest redirect lands on that tag. A second read of the same badge is not a new CLI. No stable tag dated 25 Nov. The 24 Nov sentence that Latest is **0.172.0**, and that the first row is a 24 Nov prerelease, is that day's read.
+- **New:** the first row is a prerelease published 25 Nov. That row is not the Latest badge. A higher alpha number is not Latest. A later same-day prerelease is not the badge. Page order is not the badge. Do not copy the alpha tag. Do not copy a commit count. Do not copy a model name. Do not copy the release bullets.
+- The description is the interface. Third person. State what it does and when, near the start, within 1024 characters, and name what it is not for. Models under-trigger. Do not freeze the body before the trigger evals. A truncated digest is not a new practice. Do not complete a cut-off sentence. Codex implicit invocation stays `allow_implicit_invocation` (this pack stays true). This skill still ships **no hooks**.
 
 #### Anthropic (second)
 
-- Raw CHANGELOG.md this read leads with `## 2.1.331` and has no date. Next is `## 2.1.330`, then `## 2.1.329`, then `## 2.1.328`, then `## 2.1.327`, then `## 2.1.326`, then `## 2.1.325`, then `## 2.1.323`. There is no `## 2.1.324`. The 22 Nov sentence that the raw lead is `## 2.1.330` is that day's read.
-- **New:** GitHub Latest is **v2.1.331** (23 Nov, not a prerelease). No release dated 24 Nov. Do not invent a date on the raw heading. Do not invent a 24 Nov heading. Do not copy the bullets. A changelog lead is not the installed binary. A scheduled or headless run is not proof a human was watching. A hook retry of a refused call is not a new ask.
-- A marketplace set to auto-update later is not leave to publish this pack. Do not upload this pack. Log the human plan. A model that only carries out that plan is a tool, not a conceiver. A claim with no human conceiver is a hold, not a filing. Claude YAML stays name + description only. The checker body stays 499 lines. Do not claim the body is under 500.
+- Raw CHANGELOG.md this read leads with `## 2.1.332` and has no date. Next is `## 2.1.331`, then `## 2.1.330`, then `## 2.1.329`, then `## 2.1.328`, then `## 2.1.327`, then `## 2.1.326`, then `## 2.1.325`, then `## 2.1.323`. There is no `## 2.1.324`. The 24 Nov sentence that the raw lead is `## 2.1.331` is that day's read.
+- **New:** GitHub Latest is **v2.1.332** (25 Nov, not a prerelease). There is a release dated 25 Nov. The 24 Nov sentence that Latest is **v2.1.331** (23 Nov), and that no release is dated 24 Nov, is that day's read. Do not invent a date on the raw heading. Do not invent a 25 Nov date on that heading. Do not copy the bullets. A changelog lead is not the installed binary.
+- A scheduled or headless run is not proof a human was watching. A hook retry of a refused call is not a new ask. A marketplace set to auto-update later is not leave to publish this pack. Do not upload this pack. Log the human plan. A model that only carries out that plan is a tool, not a conceiver. A claim with no human conceiver is a hold, not a filing. The checker body stays 499 lines. Do not claim the body is under 500.
 
 #### Grok Build (third)
 
-- This curl of the public changelog returned **200**. The page leads with **v1.0.89** (17 Nov). The feed last build is 17 Nov and the first item is that same line. Two fetches that agree are one read. A 24 Nov fetch of a 17 Nov lead is not a 24 Nov CLI. No public item is dated 18 Nov through 24 Nov. The 22 Nov sentence that this lead is **v1.0.89** (17 Nov) is still this page. Do not copy the bullets. Do not copy a third-party later number.
-- A positional prompt with no flag is still a paste. Bare `-p` reads stdin. A host overlay is not a second core. The headless feature URL stays **404**.
-- This curl of the status page returned **200**. A history update is not a release timestamp. A status page is not a CLI. Do not invent a 24 Nov CLI timestamp.
+- This curl of the public changelog returned **403**. Do not replace the recorded public line **v1.0.89** (17 Nov). Another 403 is not a new binary. The 24 Nov sentence that this curl returned **200**, and that the page leads with **v1.0.89**, is that day's read. A page render is not this curl.
+- A numbered file above that recorded line returned **200**. Further numbers returned **200** through a heading dated 20 Nov. The next number returned **404**. Those files are not the public page. Do not copy those numbers. Do not copy the bullets. A 25 Nov fetch of a 20 Nov file is not a 25 Nov CLI.
+- A positional prompt with no flag is still a paste. Bare `-p` reads stdin. A host overlay is not a second core. The headless feature URL stays **404**. This curl of the status page returned **403**. A 403 is not a timestamp. Do not invent a 25 Nov CLI timestamp.
 
 #### Shared
 
-- **Latest this read is 0.172.0 (24 Nov).** The first row is a 24 Nov prerelease and is not the badge. A higher alpha is not Latest.
-- **The raw lead is 2.1.331 and has no date.** Latest is **v2.1.331** (23 Nov). No release dated 24 Nov. There is still no **2.1.324**.
-- **This curl returned 200.** The public lead is still **v1.0.89** (17 Nov). The feed agrees. A third-party later number is not this page.
-- A green test is still not a merge. A direct write that fails a sidecar check is not a merge. The 22 Nov owner note is that day's read. No note dated 23 or 24 Nov is not a wipe of that hold. Do not force. Do not copy a hash, an hour, an issue number, or a case id. A token-refresh timeout is not a transcript.
-- Evals stay **281**. HITL F1–F28 + T1–T73 required. This read adds T74 (0.172.0 + raw lead 2.1.331 + public lead 1.0.89 dated 17 Nov). No new eval heading.
-- A content-only observation does not bump the edition.
+- **Latest this read is still 0.172.0 (24 Nov).** The first row is a 25 Nov prerelease and is not the badge. A higher alpha is not Latest. No stable tag dated 25 Nov.
+- **The raw lead is 2.1.332 and has no date.** Latest is **v2.1.332** (25 Nov). There is still no **2.1.324**.
+- **This curl returned 403.** Do not replace the recorded public line **v1.0.89** (17 Nov). A file above that line is not the public page.
+- A green test is still not a merge. A direct write that fails a sidecar check is not a merge. The 22 Nov owner note is that day's read. No later owner note is not a wipe of that hold. Do not force. Do not copy a hash, an hour, an issue number, or a case id. A token-refresh timeout is not a transcript. A truncated digest is not a chat export.
+- Evals stay **281**. HITL F1–F28 + T1–T74 required. This read adds T75 (0.172.0 still + raw lead 2.1.332 + recorded public line 1.0.89 dated 17 Nov, page curl 403). No new eval heading.
+- A content-only observation does not bump the edition. The description already states what and when, and what it is not for. It was not rewritten. The body was not grown.
 - Shipped skill text says the private corpus instead of naming the private repo. Edition stays 0.5.81-free.
 - Still free-only. Still not legal advice. No secrets.
 
