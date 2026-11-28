@@ -313,7 +313,7 @@ class RunEvalTests(unittest.TestCase):
         self.assertIn("open-sourcing", folded)
         self.assertNotIn("headless hygiene package", folded)
         self.assertNotIn("sortic-ip-sentinel-free", folded)
-        self.assertNotIn("livestream", folded)
+        self.assertIn("livestream", folded)
 
     def test_activation_fixture_is_byte_identical(self) -> None:
         digest = hashlib.sha256(FIXTURE.read_bytes()).hexdigest()
@@ -356,25 +356,24 @@ class RunEvalTests(unittest.TestCase):
         self.assertIn("summary: false-positive=0 missed-moment=0 excluded=0", generic_root)
         claude_gate = text.split("block: claude-description tests/evals/activation_v0.1.jsonl", 1)[1]
         claude_gate = claude_gate.split("block: root tests/evals/activation_heldout_v0.1.jsonl", 1)[0]
+        for fixture_id in ("act-026", "act-029", "act-030", "act-049"):
+            self.assertIn(f"warning missed-moment: {fixture_id}", claude_gate)
         for fixture_id in (
             "act-023",
             "act-024",
             "act-025",
-            "act-026",
             "act-027",
             "act-028",
-            "act-029",
-            "act-030",
             "act-031",
             "act-036",
             "act-038",
             "act-039",
             "act-043",
             "act-044",
-            "act-049",
             "act-050",
         ):
-            self.assertIn(f"warning missed-moment: {fixture_id}", claude_gate)
+            self.assertNotIn(f"warning missed-moment: {fixture_id}", claude_gate)
+        self.assertIn("summary: false-positive=0 missed-moment=4 excluded=3", claude_gate)
         self.assertNotIn("act-007", claude_gate)
         self.assertTrue(text.endswith("ok"))
         held = text.split("block: root tests/evals/activation_heldout_v0.1.jsonl", 1)[1]

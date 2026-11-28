@@ -22,7 +22,9 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION = "0.5.81-free"
 EXPECTED_EVAL_COUNT = 281
 PACKS = ("chatgpt-skill", "claude-skill", "grok-skill", "cursor-skill")
-ALLOWED_CLAUDE_KEYS = {"name", "description"}
+# Claude Code reads when_to_use (underscore). The root when-to-use
+# hyphen form is ignored by Claude Code and is not a Claude pack key.
+ALLOWED_CLAUDE_KEYS = {"name", "description", "when_to_use"}
 BANNED = (
     "stripe",
     "checkout.stripe",
@@ -522,7 +524,9 @@ def _hygiene(args: argparse.Namespace) -> int:
     if extra:
         errors.append(f"claude-skill frontmatter extra keys: {sorted(extra)}")
     if claude_keys != ALLOWED_CLAUDE_KEYS:
-        errors.append(f"claude-skill frontmatter keys {sorted(claude_keys)} != name+description")
+        errors.append(
+            f"claude-skill frontmatter keys {sorted(claude_keys)} != {sorted(ALLOWED_CLAUDE_KEYS)}"
+        )
 
     body_lines = root_body.lstrip("\n").count("\n") + 1
     if body_lines >= 500:
